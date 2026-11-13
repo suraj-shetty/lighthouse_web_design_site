@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-11-19 Issue Reported</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-11.css">
+</head>
+<body class="t-paragraph-m" data-states="default" data-shell="main" data-nav="marketplace">
+<div class="screen app on-surface" style="--page-bg: var(--home-surface); --page-max: 1120px">
+  <div class="app-main">
+    <main class="done stagger">
+      <div class="done-card" role="status">
+        <div class="done-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path pathLength="1" d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+        <div class="done-text"><h1 class="t-label-xxl">Issue Reported</h1><p class="t-paragraph-l">Your issue has been reported successfully. We will review it and take appropriate action.</p></div>
+        <div class="done-acts"><a class="btn btn-filled btn-full t-label-m press" href="S-11-01-my-orders.html">GO TO MY ORDERS</a></div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375</b> — full screen, vertically centred: success mark, title, body, actions; no header or back control, as the app.</li>
+      <li><b>768</b> — the same stack in a centred raised panel.</li>
+      <li><b>1440</b> — centred confirmation panel beside the menu.</li>
+      <li>One state: a static confirmation with a single action.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Navigation shell (shared)</li>
+      <li>Confirmation block (Empty-state pattern)</li>
+      <li>Button filled L</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Arrive — <code>--page-slide-*</code>; blocks rise with <code>--stagger-*</code></li>
+      <li>Check mark draws once — <code>--check-path-*</code> (off under reduced motion)</li>
+      <li>Button press — <code>--press-*</code></li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li><code>h1</code> "Issue Reported"; the panel is a status region.</li>
+      <li>The single action receives initial focus.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>The app image <code>assets/ic_rfq_sent.png</code> is not in the web kit; a token-coloured check mark stands in. Supply the asset or confirm the mark. The app uses the same success image here.</li>
+      <li>"GO TO MY ORDERS" opens the "Confirmed" filter in the app (F-11-Q1); the mockup opens the default filter.</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

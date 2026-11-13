@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-10-08 Category switcher</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-10.css">
+</head>
+<body class="t-paragraph-m" data-kind="overlay" data-host="S-10-07-product-list.html" data-states="default,empty">
+<div class="screen overlay" data-variant="popover">
+  <button class="scrim" data-close aria-label="Close"></button>
+  <section class="sheet" role="dialog" aria-modal="true" aria-labelledby="st" style="--pop-width: 340px">
+    <span class="sheet-grab" aria-hidden="true"></span>
+    <div class="sheet-head"><div class="txt"><h1 id="st" class="t-label-xl">Categories</h1><p class="t-paragraph-m">Select a category to browse</p></div><button class="ibtn ibtn-44 glass glass-icon press" data-close aria-label="Close"><i class="ic hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></div>
+    <div class="sheet-body flush" data-show="default"><div class="menu"><a class="menu-row t-label-s press" href="S-10-07-product-list.html"><i class="ic hgi hgi-stroke hgi-kettlebell" aria-hidden="true"></i><span>Tiles &amp; Flooring</span><span class="end mp-chev glass glass-icon"><i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></a><a class="menu-row t-label-s press" href="S-10-07-product-list.html" aria-current="true"><i class="ic hgi hgi-stroke hgi-floor-plan" aria-hidden="true"></i><span>Sanitaryware</span><span class="end mp-chev glass glass-icon"><i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></a><a class="menu-row t-label-s press" href="S-10-07-product-list.html"><i class="ic hgi hgi-stroke hgi-shapes" aria-hidden="true"></i><span>Lighting</span><span class="end mp-chev glass glass-icon"><i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></a><a class="menu-row t-label-s press" href="S-10-07-product-list.html"><i class="ic hgi hgi-stroke hgi-paint-board" aria-hidden="true"></i><span>Furniture</span><span class="end mp-chev glass glass-icon"><i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></a><a class="menu-row t-label-s press" href="S-10-07-product-list.html"><i class="ic hgi hgi-stroke hgi-vision" aria-hidden="true"></i><span>Paints &amp; Finishes</span><span class="end mp-chev glass glass-icon"><i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></a><a class="menu-row t-label-s press" href="S-10-07-product-list.html"><i class="ic hgi hgi-stroke hgi-kettlebell" aria-hidden="true"></i><span>Hardware</span><span class="end mp-chev glass glass-icon"><i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></a><a class="menu-row t-label-s press" href="S-10-07-product-list.html"><i class="ic hgi hgi-stroke hgi-floor-plan" aria-hidden="true"></i><span>Modular Kitchen</span><span class="end mp-chev glass glass-icon"><i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></a><a class="menu-row t-label-s press" href="S-10-07-product-list.html"><i class="ic hgi hgi-stroke hgi-shapes" aria-hidden="true"></i><span>Doors &amp; Windows</span><span class="end mp-chev glass glass-icon"><i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></a><a class="menu-row t-label-s press" href="S-10-07-product-list.html"><i class="ic hgi hgi-stroke hgi-paint-board" aria-hidden="true"></i><span>Electricals</span><span class="end mp-chev glass glass-icon"><i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></a></div></div>
+    <div class="sheet-body flush" data-show="empty"></div>
+  </section>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375</b> — glass bottom sheet: title, subtitle, close, category rows (icon, name, chevron chip).</li>
+      <li><b>768 / 1440</b> — dropdown popover under the list title selector; the list scrolls inside.</li>
+      <li>Empty: header only, as the app.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Bottom sheet / popover · IconButton glass (close)</li>
+      <li>Menu row with leading glyph and trailing chevron chip; current category marked</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Open / close — <code>--panel-*</code> (sheet slides up; popover fades and scales from the title)</li>
+      <li>Row press — <code>--press-*</code></li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li>Dialog named "Categories"; focus trapped and returned to the title selector; Esc closes with no change.</li>
+      <li>Rows are links; the current category carries <code>aria-current</code> and a tinted row (the app shows no selected indicator).</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>Picking a category selects its first subcategory, scrolls to top and resets filters and sort — there is no subcategory picker here.</li>
+      <li>Marking the current category is a web addition for accessibility.</li>
+      <li>Opened from a brand, the rows are that brand's categories.</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-04-04 Appearance</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-01-04.css">
+</head>
+<body class="t-paragraph-m" data-kind="overlay" data-host="S-13-05-manage-account.html" data-states="system,light,dark">
+<div class="screen overlay" data-variant="popover">
+  <button class="scrim" data-close aria-label="Close"></button>
+  <section class="sheet pop-mid" role="dialog" aria-modal="true" aria-labelledby="at" aria-describedby="ad">
+    <span class="sheet-grab" aria-hidden="true"></span>
+    <div class="sheet-head"><div class="txt"><h1 id="at" class="t-label-xxl">Appearance</h1><p id="ad" class="t-paragraph-m">Choose how Lighthouse looks on this device.</p></div></div>
+    <div class="sheet-body" data-show="system"><div class="picklist" role="radiogroup" aria-labelledby="at" style="padding:0"><button class="opt" role="radio" data-radio aria-checked="true" aria-describedby="ao-system-0"><span class="txt"><span class="t-label-s">System</span><span class="sub t-paragraph-s" id="ao-system-0">Match your device settings.</span></span><span class="radio"></span></button><button class="opt" role="radio" data-radio aria-checked="false" aria-describedby="ao-system-1"><span class="txt"><span class="t-label-s">Light</span><span class="sub t-paragraph-s" id="ao-system-1">Always use the light theme.</span></span><span class="radio"></span></button><button class="opt" role="radio" data-radio aria-checked="false" aria-describedby="ao-system-2"><span class="txt"><span class="t-label-s">Dark</span><span class="sub t-paragraph-s" id="ao-system-2">Always use the dark theme.</span></span><span class="radio"></span></button></div></div><div class="sheet-body" data-show="light"><div class="picklist" role="radiogroup" aria-labelledby="at" style="padding:0"><button class="opt" role="radio" data-radio aria-checked="false" aria-describedby="ao-light-0"><span class="txt"><span class="t-label-s">System</span><span class="sub t-paragraph-s" id="ao-light-0">Match your device settings.</span></span><span class="radio"></span></button><button class="opt" role="radio" data-radio aria-checked="true" aria-describedby="ao-light-1"><span class="txt"><span class="t-label-s">Light</span><span class="sub t-paragraph-s" id="ao-light-1">Always use the light theme.</span></span><span class="radio"></span></button><button class="opt" role="radio" data-radio aria-checked="false" aria-describedby="ao-light-2"><span class="txt"><span class="t-label-s">Dark</span><span class="sub t-paragraph-s" id="ao-light-2">Always use the dark theme.</span></span><span class="radio"></span></button></div></div><div class="sheet-body" data-show="dark"><div class="picklist" role="radiogroup" aria-labelledby="at" style="padding:0"><button class="opt" role="radio" data-radio aria-checked="false" aria-describedby="ao-dark-0"><span class="txt"><span class="t-label-s">System</span><span class="sub t-paragraph-s" id="ao-dark-0">Match your device settings.</span></span><span class="radio"></span></button><button class="opt" role="radio" data-radio aria-checked="false" aria-describedby="ao-dark-1"><span class="txt"><span class="t-label-s">Light</span><span class="sub t-paragraph-s" id="ao-dark-1">Always use the light theme.</span></span><span class="radio"></span></button><button class="opt" role="radio" data-radio aria-checked="true" aria-describedby="ao-dark-2"><span class="txt"><span class="t-label-s">Dark</span><span class="sub t-paragraph-s" id="ao-dark-2">Always use the dark theme.</span></span><span class="radio"></span></button></div></div>
+    <div class="sheet-foot"><button class="btn btn-filled t-label-m press" data-close>DONE</button></div>
+  </section>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375</b> — glass bottom sheet sized to content, above the safe area: drag handle; title; subtitle; three radio rows (title + explanation); full-width DONE.</li>
+      <li><b>768 / 1440</b> — popover anchored to the Appearance row in Manage Account, same content.</li>
+      <li>States are the stored choice: <b>system</b> (default when nothing is stored), <b>light</b>, <b>dark</b>. No loading, empty or error state (local only).</li>
+      <li>This file is also the design for S-15-01 (the same sheet opened from Settings).</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Bottom sheet / popover</li>
+      <li>Radio rows (title + explanation)</li>
+      <li>Button filled L (DONE)</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Open / close — <code>--panel-*</code>; option — <code>--select-check-*</code>; DONE — <code>--press-*</code>.</li>
+      <li>The whole site re-themes live behind the sheet as an option is tapped; the sheet stays open.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li>Dialog named "Appearance"; the options are a radiogroup, each described by its explanation; the change is announced.</li>
+      <li>Focus returns to the Appearance row; Esc, scrim, drag down and DONE all close (there is no separate save step).</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>"System" follows the browser / OS colour-scheme preference; the choice is stored per browser.</li>
+      <li>Q-25: the app wipes the theme choice on sign-out — should it survive on web?</li>
+      <li>In the mockup, switch the theme with the board's Theme control; tapping an option only moves the radio.</li>
+      <li>Selected radio uses the shared Radio component (inverse fill); the spec names <code>--accent</code>.</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

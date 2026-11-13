@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-15-05 Delete Account — confirmation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-15.css">
+</head>
+<body class="t-paragraph-m"
+      data-kind="overlay" data-host="S-15-04-delete-account-reason.html" data-states="default,loading,error">
+
+<div class="screen overlay del-confirm" data-variant="full">
+  <button class="scrim" data-close aria-label="Close"></button>
+  <section class="sheet" role="alertdialog" aria-modal="true" aria-labelledby="dt" aria-describedby="dd">
+    <div class="sheet-head">
+      <button class="ibtn ibtn-44 ibtn-plain press only-narrow" data-close aria-label="Back"><i class="ic ic-24 hgi hgi-stroke hgi-arrow-left-01" aria-hidden="true"></i></button>
+      <h1 id="dt" class="t-label-xl grow">Delete Account</h1>
+      <a class="ibtn ibtn-44 glass glass-icon press only-narrow" href="S-13-05-manage-account.html" aria-label="Close"><i class="ic hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></a>
+      <button class="ibtn ibtn-44 glass glass-icon press only-wide" data-close aria-label="Close"><i class="ic hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button>
+    </div>
+    <div class="sheet-body">
+      <p id="dd" class="t-paragraph-l">Are you sure you want to delete your account? Deleting your account is permanent. All your data will be removed and cannot be recovered.</p>
+      <div class="stack">
+        <h2 class="t-label-m">What will happen when you delete account</h2>
+        <ul class="del-list t-paragraph-m">
+          <li><i class="ic hgi hgi-stroke hgi-arrow-right-02" aria-hidden="true"></i><span>Your profile and all data will be permanently deleted.</span></li>
+          <li><i class="ic hgi hgi-stroke hgi-arrow-right-02" aria-hidden="true"></i><span>You won’t be able to reactivate or retrieve any of the content you have added.</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="sheet-foot" data-show="default error">
+      <button class="btn btn-danger btn-full t-label-m press" data-go-state="loading">DELETE MY ACCOUNT</button>
+    </div>
+    <div class="sheet-foot" data-show="loading">
+      <button class="btn btn-danger btn-full t-label-m" disabled aria-busy="true"><span class="spinner" aria-hidden="true"></span><span class="sr-only">Deleting your account</span></button>
+    </div>
+  </section>
+  <div class="toast-region" aria-live="polite" data-show="error"><div class="toast toast-danger glass glass-panel" role="status"><i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i><div class="body"><span class="t-label-s">Error</span><p class="t-paragraph-s">Something went wrong. Please try again later.</p></div></div></div>
+</div>
+
+<!-- =====================================================================
+     ANNOTATIONS (shown on the board, hidden inside the frames)
+     ===================================================================== -->
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375</b> — full screen, as the app: back (left), title, close X (right); warning paragraph, sub-heading, two bullet rows with arrow icons; button pinned at the bottom.</li>
+      <li><b>768 / 1440</b> — centred dialog (480 wide) over the reason screen instead of a second page; same copy; one close button.</li>
+      <li>Back returns to the reason screen. Close X on mobile leaves both delete screens and returns to Manage Account.</li>
+      <li>On success the session ends on the device and on the server, and Sign in (S-02-01) is shown.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Modal / Dialog (destructive confirm), full screen under 768</li>
+      <li>IconButton plain (back) · IconButton glass (close)</li>
+      <li>Button destructive L (with loading) · Toast danger</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Open / close — <code>--page-slide-*</code> under 768, <code>--modal-*</code> from 768</li>
+      <li>Button press — <code>--press-*</code>; toast — <code>--toast-*</code></li>
+      <li>After success: no transition (as the app).</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li><code>alertdialog</code> named "Delete Account", described by the warning paragraph; focus trapped; Esc cancels; first focus is not the destructive button.</li>
+      <li>The button states its consequence in its name; while deleting it is disabled and announces "Deleting your account".</li>
+      <li>Bullet arrows are decorative.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li><b>Open (Q-120):</b> the app styles this button with the primary colours. The spec lists the destructive variant, used here — confirm.</li>
+      <li>No typed confirmation or re-authentication step exists in the app.</li>
+      <li><b>Open (Q-122):</b> whether the spinner shows in the app is unverified; the web shows it.</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

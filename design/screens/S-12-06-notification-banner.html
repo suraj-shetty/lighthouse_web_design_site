@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-12-06 In-app notification banner</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-12.css">
+</head>
+<body class="t-paragraph-m" data-kind="overlay" data-host="S-05-01-explore-feed.html" data-states="push,push-title-only,inline">
+<div class="screen">
+  <!-- (1) Foreground push banner: top on phones, toast corner from 768; tappable when the push has a payload -->
+  <div class="toast-region" role="status" aria-live="polite" data-show="push">
+    <a class="toast toast-dark press" href="S-11-03-active-order-detail.html">
+      <i class="ic hgi hgi-stroke hgi-notification-03" aria-hidden="true"></i>
+      <div class="body"><span class="t-label-s">Quote received</span><p class="t-paragraph-s">Shree Krishna Ceramics quoted ₹1,84,500 for 120 boxes of Terra Matte Grey 600×1200.</p></div>
+    </a>
+  </div>
+  <!-- (1) with an empty body: title only (title falls back to "Light House") -->
+  <div class="toast-region" role="status" aria-live="polite" data-show="push-title-only">
+    <div class="toast toast-dark">
+      <i class="ic hgi hgi-stroke hgi-notification-03" aria-hidden="true"></i>
+      <div class="body"><span class="t-label-s">Light House</span></div>
+    </div>
+  </div>
+  <!-- (2) Inline fallback banner: a tapped notification with no destination. Bottom on phones; not tappable -->
+  <div class="toast-region at-bottom" role="status" aria-live="polite" data-show="inline">
+    <div class="toast toast-dark">
+      <i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i>
+      <div class="body"><span class="t-label-s">New on Lighthouse: Saved products</span><p class="t-paragraph-s">Bookmark products in Marketplace and find them again from your profile.</p></div>
+    </div>
+  </div>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li>Two non-blocking banners, shown over whatever screen is open (Home feed here).</li>
+      <li><b>(1) Foreground push banner</b> (states push, push-title-only): a push that arrives while the site is open. <b>375</b>: card at the top, inset from the edges, bold title with the message under it. <b>768 / 1440</b>: the standard toast corner, width capped at 400. Dismisses after 3 s.</li>
+      <li><b>(2) Inline fallback banner</b> (state inline): shown when a tapped notification has no destination (admin announcements, unknown events). <b>375</b>: card at the bottom, above the tab bar. <b>768 / 1440</b>: the toast corner. Dismisses after 4 s.</li>
+      <li>Title fallbacks: "Light House" for a push with no title, "Lighthouse" for a notification with no title. An empty push body shows the title only.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Toast, neutral (dark surface in both themes)</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Enter / leave: <code>--toast-*</code>; the unread dot on the Notifications tab appears with <code>--badge-pop-*</code> at the same moment; tap on banner (1): <code>--press-*</code>, then <code>--page-slide-*</code>.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li>Polite status region; it never takes focus.</li>
+      <li>When the push has a payload, banner (1) is a focusable link named by its title; without one it is plain text. Banner (2) is never interactive.</li>
+      <li>Nothing is lost when a banner times out: the same item is listed in Notifications (S-12-01).</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li><b>Browser push</b> (Q-23): with OneSignal web push the foreground notification event is shown as this in-page banner and the browser's own notification is suppressed, mirroring the app. When the tab is in the background the browser shows its native notification instead (not app-drawn).</li>
+      <li>Both banners keep a dark neutral surface with light text in light and dark themes, as in Flutter (<code>--element-bg-tag-dark</code> / <code>--element-fg-tag-dark</code>; there is no dedicated toast surface token).</li>
+      <li>Leading glyphs (Notification03, InformationCircle) follow the kit's toast layout; the Flutter snackbar has text only.</li>
+      <li>Swipe to dismiss on touch; from 768 the banner only times out (no close button in Flutter).</li>
+      <li>Banner (1) routes with the push payload using the F-12 routing tables; the sample opens the buyer order detail.</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

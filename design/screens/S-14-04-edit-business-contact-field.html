@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-14-04 Edit single-line field</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-14.css">
+</head>
+<body class="t-paragraph-m" data-kind="overlay" data-host="S-13-05-manage-account.html" data-states="default,business-email,key-contact-email,website-url,role-empty,email-empty,email-invalid,website-empty,website-invalid,saving,server-error">
+<div class="screen overlay" data-variant="sheet">
+  <button class="scrim" data-close aria-label="Close"></button>
+  <section class="sheet" role="dialog" aria-modal="true" aria-labelledby="t27" data-show="default role-empty">
+    <span class="sheet-grab" aria-hidden="true"></span>
+    <div class="sheet-head"><div class="txt"><h1 id="t27" class="t-label-xxl">Key Contact Role</h1><p class="t-paragraph-m">Update key contact person designation.</p></div><button class="ibtn ibtn-44 glass glass-icon press" data-close aria-label="Close"><i class="ic hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></div>
+    <div class="sheet-body" data-show="default"><div class="field"><label class="input is-focus"><i class="ic hgi hgi-stroke hgi-manager" aria-hidden="true"></i><input class="t-paragraph-l" type="text" placeholder="Enter Role" value="Head of Sales" aria-label="Key Contact Role"></label></div></div>
+    <div class="sheet-foot" data-show="default"><button class="btn btn-filled t-label-m press" type="button" data-go-state="saving">UPDATE</button></div>
+    <div class="sheet-body" data-show="role-empty"><div class="field"><label class="input is-error"><i class="ic hgi hgi-stroke hgi-manager" aria-hidden="true"></i><input class="t-paragraph-l" type="text" placeholder="Enter Role" value="" aria-label="Key Contact Role" aria-invalid="true" aria-describedby="e20"></label><p class="helper error t-paragraph-s" id="e20" role="alert"><i class="ic ic-16 hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i>Key contact role cannot be empty</p></div></div>
+    <div class="sheet-foot" data-show="role-empty"><button class="btn btn-filled t-label-m press" type="button" data-go-state="saving">UPDATE</button></div>
+  </section>
+  <section class="sheet" role="dialog" aria-modal="true" aria-labelledby="t28" data-show="business-email email-empty email-invalid saving server-error">
+    <span class="sheet-grab" aria-hidden="true"></span>
+    <div class="sheet-head"><div class="txt"><h1 id="t28" class="t-label-xxl">Update Business Email</h1><p class="t-paragraph-m">Update your business email address</p></div><button class="ibtn ibtn-44 glass glass-icon press" data-close aria-label="Close"><i class="ic hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></div>
+    <div class="sheet-body" data-show="business-email"><div class="field"><label class="input is-focus"><i class="ic hgi hgi-stroke hgi-mail-01" aria-hidden="true"></i><input class="t-paragraph-l" type="email" placeholder="Enter Email" value="sales@vistaralighting.in" aria-label="Update Business Email"></label></div></div>
+    <div class="sheet-foot" data-show="business-email"><button class="btn btn-filled t-label-m press" type="button" data-go-state="saving">UPDATE</button></div>
+    <div class="sheet-body" data-show="email-empty"><div class="field"><label class="input is-error"><i class="ic hgi hgi-stroke hgi-mail-01" aria-hidden="true"></i><input class="t-paragraph-l" type="email" placeholder="Enter Email" value="" aria-label="Update Business Email" aria-invalid="true" aria-describedby="e21"></label><p class="helper error t-paragraph-s" id="e21" role="alert"><i class="ic ic-16 hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i>Please enter an email address</p></div></div>
+    <div class="sheet-foot" data-show="email-empty"><button class="btn btn-filled t-label-m press" type="button" data-go-state="saving">UPDATE</button></div>
+    <div class="sheet-body" data-show="email-invalid"><div class="field"><label class="input is-error"><i class="ic hgi hgi-stroke hgi-mail-01" aria-hidden="true"></i><input class="t-paragraph-l" type="email" placeholder="Enter Email" value="sales@vistaralighting" aria-label="Update Business Email" aria-invalid="true" aria-describedby="e22"></label><p class="helper error t-paragraph-s" id="e22" role="alert"><i class="ic ic-16 hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i>Please enter a valid email address</p></div></div>
+    <div class="sheet-foot" data-show="email-invalid"><button class="btn btn-filled t-label-m press" type="button" data-go-state="saving">UPDATE</button></div>
+    <div class="sheet-body" data-show="saving"><div class="field"><label class="input"><i class="ic hgi hgi-stroke hgi-mail-01" aria-hidden="true"></i><input class="t-paragraph-l" type="email" placeholder="Enter Email" value="hello@vistaralighting.in" aria-label="Update Business Email" disabled></label></div></div>
+    <div class="sheet-foot" data-show="saving"><button class="btn btn-filled t-label-m" type="button" disabled aria-busy="true"><span class="spinner" aria-hidden="true"></span><span class="sr-only">Updating</span></button></div>
+    <div class="sheet-body" data-show="server-error"><div class="field"><label class="input"><i class="ic hgi hgi-stroke hgi-mail-01" aria-hidden="true"></i><input class="t-paragraph-l" type="email" placeholder="Enter Email" value="hello@vistaralighting.in" aria-label="Update Business Email"></label></div></div>
+    <div class="sheet-foot" data-show="server-error"><button class="btn btn-filled t-label-m press" type="button" data-go-state="saving">UPDATE</button></div>
+  </section>
+  <section class="sheet" role="dialog" aria-modal="true" aria-labelledby="t29" data-show="key-contact-email">
+    <span class="sheet-grab" aria-hidden="true"></span>
+    <div class="sheet-head"><div class="txt"><h1 id="t29" class="t-label-xxl">Key Contact Email</h1><p class="t-paragraph-m">Update key contact email address.</p></div><button class="ibtn ibtn-44 glass glass-icon press" data-close aria-label="Close"><i class="ic hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></div>
+    <div class="sheet-body" data-show="key-contact-email"><div class="field"><label class="input is-focus"><i class="ic hgi hgi-stroke hgi-mail-01" aria-hidden="true"></i><input class="t-paragraph-l" type="email" placeholder="Enter Email" value="aarav@vistaralighting.in" aria-label="Key Contact Email"></label></div></div>
+    <div class="sheet-foot" data-show="key-contact-email"><button class="btn btn-filled t-label-m press" type="button" data-go-state="saving">UPDATE</button></div>
+  </section>
+  <section class="sheet" role="dialog" aria-modal="true" aria-labelledby="t30" data-show="website-url website-empty website-invalid">
+    <span class="sheet-grab" aria-hidden="true"></span>
+    <div class="sheet-head"><div class="txt"><h1 id="t30" class="t-label-xxl">Update Website URL</h1><p class="t-paragraph-m">Update your website URL</p></div><button class="ibtn ibtn-44 glass glass-icon press" data-close aria-label="Close"><i class="ic hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></div>
+    <div class="sheet-body" data-show="website-url"><div class="field"><label class="input is-focus"><i class="ic hgi hgi-stroke hgi-globe-02" aria-hidden="true"></i><input class="t-paragraph-l" type="url" placeholder="Enter Website URL" value="www.vistaralighting.in" aria-label="Update Website URL"></label></div></div>
+    <div class="sheet-foot" data-show="website-url"><button class="btn btn-filled t-label-m press" type="button" data-go-state="saving">UPDATE</button></div>
+    <div class="sheet-body" data-show="website-empty"><div class="field"><label class="input is-error"><i class="ic hgi hgi-stroke hgi-globe-02" aria-hidden="true"></i><input class="t-paragraph-l" type="url" placeholder="Enter Website URL" value="" aria-label="Update Website URL" aria-invalid="true" aria-describedby="e23"></label><p class="helper error t-paragraph-s" id="e23" role="alert"><i class="ic ic-16 hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i>Please enter a website URL</p></div></div>
+    <div class="sheet-foot" data-show="website-empty"><button class="btn btn-filled t-label-m press" type="button" data-go-state="saving">UPDATE</button></div>
+    <div class="sheet-body" data-show="website-invalid"><div class="field"><label class="input is-error"><i class="ic hgi hgi-stroke hgi-globe-02" aria-hidden="true"></i><input class="t-paragraph-l" type="url" placeholder="Enter Website URL" value="vistara lighting" aria-label="Update Website URL" aria-invalid="true" aria-describedby="e24"></label><p class="helper error t-paragraph-s" id="e24" role="alert"><i class="ic ic-16 hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i>Please enter a valid website URL</p></div></div>
+    <div class="sheet-foot" data-show="website-invalid"><button class="btn btn-filled t-label-m press" type="button" data-go-state="saving">UPDATE</button></div>
+  </section>
+  <div class="toast-region f14-toast" data-show="role-empty" aria-live="polite"><div class="toast toast-danger glass glass-panel" role="status"><i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i><div class="body"><span class="t-label-s">Error</span><p class="t-paragraph-s">Key contact role cannot be empty</p></div></div></div>
+  <div class="toast-region f14-toast" data-show="email-empty" aria-live="polite"><div class="toast toast-danger glass glass-panel" role="status"><i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i><div class="body"><span class="t-label-s">Error</span><p class="t-paragraph-s">Please enter an email address</p></div></div></div>
+  <div class="toast-region f14-toast" data-show="email-invalid" aria-live="polite"><div class="toast toast-danger glass glass-panel" role="status"><i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i><div class="body"><span class="t-label-s">Error</span><p class="t-paragraph-s">Please enter a valid email address</p></div></div></div>
+  <div class="toast-region f14-toast" data-show="website-empty" aria-live="polite"><div class="toast toast-danger glass glass-panel" role="status"><i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i><div class="body"><span class="t-label-s">Error</span><p class="t-paragraph-s">Please enter a website URL</p></div></div></div>
+  <div class="toast-region f14-toast" data-show="website-invalid" aria-live="polite"><div class="toast toast-danger glass glass-panel" role="status"><i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i><div class="body"><span class="t-label-s">Error</span><p class="t-paragraph-s">Please enter a valid website URL</p></div></div></div>
+  <div class="toast-region f14-toast" data-show="server-error" aria-live="polite"><div class="toast toast-danger glass glass-panel" role="status"><i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i><div class="body"><span class="t-label-s">Error</span><p class="t-paragraph-s">Network error occurred</p></div></div></div>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375</b> — glass bottom sheet over the scrim: drag handle, title, subtitle, one pill input with a leading icon, focused on open, "UPDATE".</li>
+      <li><b>768 / 1440</b> — side sheet from the right over Manage Account (440 wide, no drag handle); same order, actions pinned to the bottom.</li>
+      <li>One reusable sheet, four configurations — one state each: <b>default</b> Key Contact Role, <b>business-email</b>, <b>key-contact-email</b>, <b>website-url</b> (Website URL for Brand, Business Website URL for Reseller). Manage Account opens the right one with <code>data-open-state</code>.</li>
+      <li>Every validation message has its own state: <b>role-empty</b>, <b>email-empty</b>, <b>email-invalid</b> (same two messages for Key Contact Email), <b>website-empty</b>, <b>website-invalid</b>. <b>saving</b> and <b>server-error</b> are drawn on Business Email.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Bottom sheet / side sheet</li>
+      <li>IconButton glass (close)</li>
+      <li>Text field (pill, leading icon) — focus, error, disabled</li>
+      <li>Button filled L (UPDATE, with loading)</li>
+      <li>Toast danger</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Open / close — <code>--panel-*</code></li>
+      <li>Button press — <code>--press-*</code></li>
+      <li>Error toast — <code>--toast-*</code></li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li>Dialog named by its title; focus moves into the sheet, is trapped, and returns to the Manage Account row that opened it; Esc or the scrim closes without saving.</li>
+      <li>While saving the primary button is disabled and announces its busy label; toasts are announced through a polite live region.</li>
+      <li>The input is labelled by the sheet title and uses the matching type (<code>email</code>, <code>url</code>) for the right keyboard.</li>
+      <li>Validation shows inline, tied to the field with <code>aria-describedby</code>, as well as in the toast the app uses.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>Inline validation text is a web addition asked for by the spec; the toast (title "Error") is kept so both match the app.</li>
+      <li>Glyph: the app uses UserSettings01 for the role field, which is not in ICONS.md — <code>Manager</code> is used instead.</li>
+      <li>Website accepts anything matching <code>^(https?:\/\/)?([\w-]+(\.[\w-]+)+)(\/[^\s]*)?$</code> (case-insensitive); the value is saved as typed.</li>
+      <li>State <b>server-error</b> shows the sheet as it stays after a failed request, with the "Error" toast (server message, else "Network error occurred" / "Something went wrong. Please try again later."). No retry control, as the app.</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

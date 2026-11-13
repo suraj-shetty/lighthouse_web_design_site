@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-10-09 Sort</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-10.css">
+</head>
+<body class="t-paragraph-m" data-kind="overlay" data-host="S-10-07-product-list.html" data-states="default,selected">
+<div class="screen overlay mp-half" data-variant="popover">
+  <button class="scrim" data-close aria-label="Close"></button>
+  <section class="sheet" role="dialog" aria-modal="true" aria-labelledby="so" style="--pop-width: 320px">
+    <span class="sheet-grab" aria-hidden="true"></span>
+    <div class="sheet-head"><div class="txt"><h1 id="so" class="t-label-xl">Sort</h1><p class="t-paragraph-m">Choose how you’d like to arrange items</p></div></div>
+    <div class="sheet-body flush"><div class="menu" role="radiogroup" aria-labelledby="so" data-show="default"><button class="menu-row mp-sort t-label-m press" role="radio" data-radio data-close aria-checked="true"><span>Latest First</span><span class="end"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></button><button class="menu-row mp-sort t-paragraph-l press" role="radio" data-radio data-close aria-checked="false"><span>Oldest First</span><span class="end"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></button><button class="menu-row mp-sort t-paragraph-l press" role="radio" data-radio data-close aria-checked="false"><span>Top Rated</span><span class="end"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></button><button class="menu-row mp-sort t-paragraph-l press" role="radio" data-radio data-close aria-checked="false"><span>Price Low To High</span><span class="end"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></button><button class="menu-row mp-sort t-paragraph-l press" role="radio" data-radio data-close aria-checked="false"><span>Price High To Low</span><span class="end"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></button></div><div class="menu" role="radiogroup" aria-labelledby="so" data-show="selected"><button class="menu-row mp-sort t-paragraph-l press" role="radio" data-radio data-close aria-checked="false"><span>Latest First</span><span class="end"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></button><button class="menu-row mp-sort t-paragraph-l press" role="radio" data-radio data-close aria-checked="false"><span>Oldest First</span><span class="end"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></button><button class="menu-row mp-sort t-paragraph-l press" role="radio" data-radio data-close aria-checked="false"><span>Top Rated</span><span class="end"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></button><button class="menu-row mp-sort t-label-m press" role="radio" data-radio data-close aria-checked="true"><span>Price Low To High</span><span class="end"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></button><button class="menu-row mp-sort t-paragraph-l press" role="radio" data-radio data-close aria-checked="false"><span>Price High To Low</span><span class="end"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></button></div></div>
+  </section>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375:</b> bottom sheet at half the screen height: handle, title, subtitle, options with hairlines; the current option is bold with a tick on the right.</li>
+      <li><b>768 / 1440:</b> dropdown popover under the sort button.</li>
+      <li>No loading or empty state: the sheet does not open until the option list has at least one value.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Bottom sheet / popover</li>
+      <li>Single-select option row (radio semantics, tick)</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Open / close: <code>--panel-*</code></li>
+      <li>Tick: <code>--select-check-*</code>; row press, <code>--press-*</code></li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li>Dialog named "Sort"; options form a radio group; the checked state is exposed (tick and weight are not the only signals).</li>
+      <li>Arrow keys move between options; Enter selects and closes; focus returns to the sort button.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>Options are the dev backend values (2026-11-12): <code>latest-first</code>, <code>oldest-first</code>, <code>top-rated</code>, <code>price-low-to-high</code>, <code>price-high-to-low</code>, shown with separators replaced by spaces and every word capitalised (so "Price Low To High"). The list is server data.</li>
+      <li>Default is "Latest First". Picking an option closes the sheet and refetches with the current filters.</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

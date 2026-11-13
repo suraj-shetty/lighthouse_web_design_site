@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-10-04 Subcategory / brand category picker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-10.css">
+</head>
+<body class="t-paragraph-m" data-kind="overlay" data-host="S-10-01-marketplace-home.html" data-states="category,application,brand,brand-sub,loading">
+<div class="screen overlay mp-tall" data-variant="sheet">
+  <button class="scrim" data-close aria-label="Close"></button>
+  <section class="sheet" role="dialog" aria-modal="true" aria-label="Browse">
+    <span class="sheet-grab" aria-hidden="true"></span>
+    <div data-show="category"><div class="sheet-head"><div class="txt"><h1 id="p1" class="t-label-xxl" tabindex="-1">Sanitaryware</h1><p class="t-paragraph-m">Select a subcategory to browse</p></div><button class="ibtn ibtn-44 glass glass-icon press" data-close aria-label="Close"><i class="ic hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></div></div>
+    <div data-show="application"><div class="sheet-head"><div class="txt"><h1 id="p2" class="t-label-xxl" tabindex="-1">Bathroom</h1><p class="t-paragraph-m">Select a subcategory to browse</p></div><button class="ibtn ibtn-44 glass glass-icon press" data-close aria-label="Close"><i class="ic hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></div></div>
+    <div data-show="brand loading"><div class="sheet-head"><div class="txt"><h1 id="p3" class="t-label-xxl" tabindex="-1">Aqualine Bath</h1><p class="t-paragraph-m">Select a category to browse</p></div><button class="ibtn ibtn-44 glass glass-icon press" data-close aria-label="Close"><i class="ic hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></div></div>
+    <div data-show="brand-sub"><div class="sheet-head"><button class="ibtn ibtn-44 ibtn-plain press" aria-label="Back" data-go-state="brand"><i class="ic ic-24 hgi hgi-stroke hgi-arrow-left-01" aria-hidden="true"></i></button><div class="txt"><h1 id="p4" class="t-label-xxl" tabindex="-1">Sanitaryware</h1><p class="t-paragraph-m">Select a subcategory to browse</p></div><button class="ibtn ibtn-44 glass glass-icon press" data-close aria-label="Close"><i class="ic hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></div></div>
+    <div class="sheet-body flush" data-show="category brand-sub"><div class="menu"><a href="S-10-07-product-list.html" class="menu-row t-label-s press"><i class="ic hgi hgi-stroke hgi-kettlebell" aria-hidden="true"></i><span>Faucets</span><span class="end mp-chev glass glass-icon"><i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></a><a href="S-10-07-product-list.html" class="menu-row t-label-s press"><i class="ic hgi hgi-stroke hgi-floor-plan" aria-hidden="true"></i><span>Basins</span><span class="end mp-chev glass glass-icon"><i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></a><a href="S-10-07-product-list.html" class="menu-row t-label-s press"><i class="ic hgi hgi-stroke hgi-shapes" aria-hidden="true"></i><span>Showers</span><span class="end mp-chev glass glass-icon"><i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></a><a href="S-10-07-product-list.html" class="menu-row t-label-s press"><i class="ic hgi hgi-stroke hgi-paint-board" aria-hidden="true"></i><span>WCs</span><span class="end mp-chev glass glass-icon"><i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></a><a href="S-10-07-product-list.html" class="menu-row t-label-s press"><i class="ic hgi hgi-stroke hgi-vision" aria-hidden="true"></i><span>Bath Accessories</span><span class="end mp-chev glass glass-icon"><i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></a></div></div>
+    <div class="sheet-body flush" data-show="application"><div class="menu"><a href="S-10-07-product-list.html" class="menu-row t-label-s press"><i class="ic hgi hgi-stroke hgi-kettlebell" aria-hidden="true"></i><span>Faucets</span><span class="end mp-chev glass glass-icon"><i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></a><a href="S-10-07-product-list.html" class="menu-row t-label-s press"><i class="ic hgi hgi-stroke hgi-floor-plan" aria-hidden="true"></i><span>Basins</span><span class="end mp-chev glass glass-icon"><i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></a><a href="S-10-07-product-list.html" class="menu-row t-label-s press"><i class="ic hgi hgi-stroke hgi-shapes" aria-hidden="true"></i><span>Showers</span><span class="end mp-chev glass glass-icon"><i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></a><a href="S-10-07-product-list.html" class="menu-row t-label-s press"><i class="ic hgi hgi-stroke hgi-paint-board" aria-hidden="true"></i><span>Wall Tiles</span><span class="end mp-chev glass glass-icon"><i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></a><a href="S-10-07-product-list.html" class="menu-row t-label-s press"><i class="ic hgi hgi-stroke hgi-vision" aria-hidden="true"></i><span>Mirrors &amp; Vanities</span><span class="end mp-chev glass glass-icon"><i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></a><a href="S-10-07-product-list.html" class="menu-row t-label-s press"><i class="ic hgi hgi-stroke hgi-kettlebell" aria-hidden="true"></i><span>Lighting</span><span class="end mp-chev glass glass-icon"><i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></a></div></div>
+    <div class="sheet-body flush" data-show="brand"><div class="menu"><button data-go-state="brand-sub" class="menu-row t-label-s press"><i class="ic hgi hgi-stroke hgi-kettlebell" aria-hidden="true"></i><span>Sanitaryware</span><span class="end mp-chev glass glass-icon"><i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button><a href="S-10-07-product-list.html" class="menu-row t-label-s press"><i class="ic hgi hgi-stroke hgi-floor-plan" aria-hidden="true"></i><span>Hardware</span><span class="end mp-chev glass glass-icon"><i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></a><a href="S-10-07-product-list.html" class="menu-row t-label-s press"><i class="ic hgi hgi-stroke hgi-shapes" aria-hidden="true"></i><span>Lighting</span><span class="end mp-chev glass glass-icon"><i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></a></div></div>
+    <div class="sheet-body flush" aria-busy="true" data-show="loading"><div class="menu"><div class="menu-row" aria-hidden="true"><span class="skel" style="width:20px;height:20px;flex:none"></span><span class="skel" style="width:55%;height:14px;"></span></div><div class="menu-row" aria-hidden="true"><span class="skel" style="width:20px;height:20px;flex:none"></span><span class="skel" style="width:55%;height:14px;"></span></div><div class="menu-row" aria-hidden="true"><span class="skel" style="width:20px;height:20px;flex:none"></span><span class="skel" style="width:55%;height:14px;"></span></div><div class="menu-row" aria-hidden="true"><span class="skel" style="width:20px;height:20px;flex:none"></span><span class="skel" style="width:55%;height:14px;"></span></div><div class="menu-row" aria-hidden="true"><span class="skel" style="width:20px;height:20px;flex:none"></span><span class="skel" style="width:55%;height:14px;"></span></div><div class="menu-row" aria-hidden="true"><span class="skel" style="width:20px;height:20px;flex:none"></span><span class="skel" style="width:55%;height:14px;"></span></div><div class="menu-row" aria-hidden="true"><span class="skel" style="width:20px;height:20px;flex:none"></span><span class="skel" style="width:55%;height:14px;"></span></div><div class="menu-row" aria-hidden="true"><span class="skel" style="width:20px;height:20px;flex:none"></span><span class="skel" style="width:55%;height:14px;"></span></div></div><span class="sr-only" role="status">Loading categories</span></div>
+  </section>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375</b> — full-height glass sheet: optional back arrow, title, subtitle, close top-right, rows (icon, name, chevron chip).</li>
+      <li><b>768 / 1440</b> — side sheet from the right with the same pages.</li>
+      <li>Three flows: category → its subcategories; application → its subcategories; brand → the brand's categories (page 1), then the tapped category's subcategories (page 2, with back).</li>
+      <li>Loading (brand flow only): the sheet opens at once with 8 shimmer rows. If the brand has no categories the sheet closes itself and the brand's product list opens.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Bottom sheet / side sheet · IconButton glass (close) · IconButton plain (back)</li>
+      <li>Menu row with leading glyph and trailing glass chevron chip</li>
+      <li>Skeleton rows</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Open / close — <code>--panel-*</code></li>
+      <li>Page 1 ⇄ page 2 — <code>--page-slide-*</code> (crossfade only under reduced motion)</li>
+      <li>Skeleton — <code>--skel-*</code>, <code>--shimmer-*</code>; row press — <code>--press-*</code></li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li>Dialog labelled by its title; focus trapped and returned to the tile that opened it.</li>
+      <li>On a page change focus moves to the new title and the change is announced.</li>
+      <li>Back and close buttons are labelled; the loading state sets <code>aria-busy</code> and announces "Loading categories".</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>Names are sample data; fallbacks are "Category", "Subcategory" and "Application".</li>
+      <li>Desktop keeps the two-page drill-down in one side sheet instead of two adjacent columns, so the pattern is the same at every width.</li>
+      <li>A failed brand-category request is treated as empty (as the app): no error is shown.</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

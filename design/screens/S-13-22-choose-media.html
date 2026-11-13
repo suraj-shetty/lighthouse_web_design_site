@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-13-22 Choose Media</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-13b.css">
+</head>
+<body class="t-paragraph-m" data-kind="overlay" data-host="S-13-21-certification-form.html" data-states="default">
+<div class="screen overlay f13-media" data-variant="popover">
+  <button class="scrim" data-close aria-label="Close"></button>
+  <section class="sheet" role="dialog" aria-modal="true" aria-labelledby="t">
+    <span class="sheet-grab" aria-hidden="true"></span>
+<div class="sheet-head"><div class="txt"><h1 id="t" class="t-label-xl">Choose Media</h1></div></div>
+    <div class="sheet-body">
+      <button class="btn glass btn-full t-label-m press" data-open="S-13-23-certificate-image-preview.html" data-replace><i class="ic hgi hgi-stroke hgi-image-02" aria-hidden="true"></i>Select Image</button>
+      <button class="btn glass btn-full t-label-m press" data-open="S-13-24-selected-file.html" data-replace><i class="ic hgi hgi-stroke hgi-file-02" aria-hidden="true"></i>Select File</button>
+    </div>
+  </section>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375</b> — small glass bottom sheet: title and two full-width glass buttons with icons.</li>
+      <li><b>768</b> — popover anchored to "Browse file".</li>
+      <li><b>1440</b> — not shown: "Browse file" opens one system file chooser that accepts images and PDF.</li>
+      <li>Single state; there is nothing to load and a cancelled pick changes nothing.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Bottom sheet / popover</li>
+      <li>Button glass L ×2 with leading icon</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Open / close — <code>--panel-*</code> (sheet under 768, fades and scales from its trigger from 768).</li>
+      <li>Button press — <code>--press-*</code>.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li>Dialog named "Choose Media"; both options are buttons.</li>
+      <li>On web the file input states the accepted types (JPEG, PNG, PDF) in its label.</li>
+      <li>Esc and the scrim close it; focus returns to "Browse file".</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>In this mockup "Select Image" goes straight to S-13-23 and "Select File" to S-13-24; in the product the system picker and (for images) the crop step S-13-07 come in between.</li>
+      <li>Duplicate attachments are ignored silently, as the app.</li>
+      <li>Glyphs: Image02 and File02 (the app uses the same pair).</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

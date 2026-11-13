@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-09-04 Create / edit post</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-09.css">
+</head>
+<body class="t-paragraph-m" data-states="default,empty,edit,edit-empty,loading,error" data-roles="professional,brand,reseller" data-shell="main" data-nav="home">
+<div class="screen app on-surface f09" style="--page-bg: var(--home-surface); --page-max: 1120px">
+  <div class="app-main">
+    <header class="top"><div class="top-inner glass glass-panel"><div class="bar f09-bar"><a class="ibtn ibtn-44 glass glass-icon press" data-back href="S-09-01-create-gallery.html" aria-label="Back"><i class="ic ic-24 hgi hgi-stroke hgi-arrow-left-01" aria-hidden="true"></i></a><h1 class="t-label-xl"><span data-show="default empty loading error">NEW POST</span><span data-show="edit edit-empty">EDIT POST</span></h1></div></div></header>
+
+    <main class="page f09-page-foot stagger">
+      <div class="f09-cols">
+        <div class="stack">
+          <ul class="f09-carousel" aria-label="Post media, in publishing order" data-show="default empty loading error"><li class="f09-tile"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=640&h=800&fit=crop&q=70" alt="Photo 1 of 4"><div class="f09-tile-top"><span></span><button class="ibtn ibtn-36 glass f09-onmedia press" aria-label="Remove photo 1" ><i class="ic ic-16 hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></div><div class="f09-tile-bot"><button class="ibtn ibtn-36 glass f09-onmedia press" aria-label="Move photo 1 earlier" disabled><i class="ic ic-16 hgi hgi-stroke hgi-arrow-left-01" aria-hidden="true"></i></button><button class="ibtn ibtn-36 glass f09-onmedia press" aria-label="Move photo 1 later"><i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></button><span class="grow"></span><span class="f09-grip" aria-hidden="true"><i class="ic hgi hgi-stroke hgi-drag-drop-vertical" aria-hidden="true"></i></span></div></li><li class="f09-tile"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=640&h=800&fit=crop&q=70" alt="Photo 2 of 4"><div class="f09-tile-top"><span></span><button class="ibtn ibtn-36 glass f09-onmedia press" aria-label="Remove photo 2" ><i class="ic ic-16 hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></div><div class="f09-tile-bot"><button class="ibtn ibtn-36 glass f09-onmedia press" aria-label="Move photo 2 earlier"><i class="ic ic-16 hgi hgi-stroke hgi-arrow-left-01" aria-hidden="true"></i></button><button class="ibtn ibtn-36 glass f09-onmedia press" aria-label="Move photo 2 later"><i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></button><span class="grow"></span><span class="f09-grip" aria-hidden="true"><i class="ic hgi hgi-stroke hgi-drag-drop-vertical" aria-hidden="true"></i></span></div></li><li class="f09-tile"><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=640&h=800&fit=crop&q=70" alt="Video 3 of 4"><div class="f09-tile-top"><span></span><button class="ibtn ibtn-36 glass f09-onmedia press" aria-label="Remove video 3" ><i class="ic ic-16 hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></div><button class="ibtn glass f09-onmedia f09-play swap press" data-toggle aria-pressed="false" aria-label="Play video"><span class="off"><i class="ic ic-24 hgi hgi-stroke hgi-play" aria-hidden="true"></i></span><span class="on"><i class="ic ic-24 hgi hgi-stroke hgi-pause" aria-hidden="true"></i></span></button><div class="f09-tile-bot"><button class="ibtn ibtn-36 glass f09-onmedia press" aria-label="Move video 3 earlier"><i class="ic ic-16 hgi hgi-stroke hgi-arrow-left-01" aria-hidden="true"></i></button><button class="ibtn ibtn-36 glass f09-onmedia press" aria-label="Move video 3 later"><i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></button><span class="grow"></span><span class="f09-grip" aria-hidden="true"><i class="ic hgi hgi-stroke hgi-drag-drop-vertical" aria-hidden="true"></i></span></div></li><li class="f09-tile"><img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=640&h=800&fit=crop&q=70" alt="Photo 4 of 4"><div class="f09-tile-top"><span></span><button class="ibtn ibtn-36 glass f09-onmedia press" aria-label="Remove photo 4" ><i class="ic ic-16 hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></div><div class="f09-tile-bot"><button class="ibtn ibtn-36 glass f09-onmedia press" aria-label="Move photo 4 earlier"><i class="ic ic-16 hgi hgi-stroke hgi-arrow-left-01" aria-hidden="true"></i></button><button class="ibtn ibtn-36 glass f09-onmedia press" aria-label="Move photo 4 later" disabled><i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></button><span class="grow"></span><span class="f09-grip" aria-hidden="true"><i class="ic hgi hgi-stroke hgi-drag-drop-vertical" aria-hidden="true"></i></span></div></li></ul>
+          <ul class="f09-carousel" aria-label="Post media, in publishing order" data-show="edit"><li class="f09-tile"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=640&h=800&fit=crop&q=70" alt="Photo 1 of 3"><div class="f09-tile-top"><span></span><button class="ibtn ibtn-36 glass f09-onmedia press" aria-label="Remove photo 1" ><i class="ic ic-16 hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></div><div class="f09-tile-bot"><button class="ibtn ibtn-36 glass f09-onmedia press" aria-label="Move photo 1 earlier" disabled><i class="ic ic-16 hgi hgi-stroke hgi-arrow-left-01" aria-hidden="true"></i></button><button class="ibtn ibtn-36 glass f09-onmedia press" aria-label="Move photo 1 later"><i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></button><span class="grow"></span><span class="f09-grip" aria-hidden="true"><i class="ic hgi hgi-stroke hgi-drag-drop-vertical" aria-hidden="true"></i></span></div></li><li class="f09-tile"><img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=640&h=800&fit=crop&q=70" alt="Video 2 of 3"><div class="f09-tile-top"><span></span><button class="ibtn ibtn-36 glass f09-onmedia press" aria-label="Remove video 2" ><i class="ic ic-16 hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></div><span class="ibtn glass f09-onmedia f09-play" role="img" aria-label="Video"><i class="ic ic-24 hgi hgi-stroke hgi-play" aria-hidden="true"></i></span><div class="f09-tile-bot"><button class="ibtn ibtn-36 glass f09-onmedia press" aria-label="Move video 2 earlier"><i class="ic ic-16 hgi hgi-stroke hgi-arrow-left-01" aria-hidden="true"></i></button><button class="ibtn ibtn-36 glass f09-onmedia press" aria-label="Move video 2 later"><i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></button><span class="grow"></span><span class="f09-grip" aria-hidden="true"><i class="ic hgi hgi-stroke hgi-drag-drop-vertical" aria-hidden="true"></i></span></div></li><li class="f09-tile"><img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=640&h=800&fit=crop&q=70" alt="Photo 3 of 3"><div class="f09-tile-top"><span></span><button class="ibtn ibtn-36 glass f09-onmedia press" aria-label="Remove photo 3" ><i class="ic ic-16 hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></div><div class="f09-tile-bot"><button class="ibtn ibtn-36 glass f09-onmedia press" aria-label="Move photo 3 earlier"><i class="ic ic-16 hgi hgi-stroke hgi-arrow-left-01" aria-hidden="true"></i></button><button class="ibtn ibtn-36 glass f09-onmedia press" aria-label="Move photo 3 later" disabled><i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></button><span class="grow"></span><span class="f09-grip" aria-hidden="true"><i class="ic hgi hgi-stroke hgi-drag-drop-vertical" aria-hidden="true"></i></span></div></li><li class="f09-tile plus"><a class="f09-add t-label-s press" href="S-09-01-create-gallery.html" aria-label="Add media"><i class="ic ic-24 hgi hgi-stroke hgi-plus-sign" aria-hidden="true"></i></a></li></ul>
+          <ul class="f09-carousel" aria-label="Post media" data-show="edit-empty"><li class="f09-tile plus"><a class="f09-add t-label-s press" href="S-09-01-create-gallery.html" aria-label="Add media"><i class="ic ic-24 hgi hgi-stroke hgi-plus-sign" aria-hidden="true"></i></a></li></ul>
+        </div>
+        <div class="stack">
+          <div class="field" data-show="default loading error"><label class="sr-only" for="cap-default">Caption</label><div class="textarea t-paragraph-m"><textarea id="cap-default" rows="6" maxlength="500" required placeholder="Add a caption...">Morning light in the courtyard at the Alibaug house. Lime-plastered walls, Kota stone underfoot and a frangipani that was here long before we were. #courtyardhouse #alibaug</textarea></div><div class="helper t-paragraph-s"><span class="counter tnum" aria-live="polite">172/500</span></div></div>
+          <div class="field" data-show="empty"><label class="sr-only" for="cap-empty">Caption</label><div class="textarea t-paragraph-m"><textarea id="cap-empty" rows="6" maxlength="500" required placeholder="Add a caption..."></textarea></div><div class="helper t-paragraph-s"><span class="counter tnum" aria-live="polite">0/500</span></div></div>
+          <div class="field" data-show="edit edit-empty"><label class="sr-only" for="cap-edit">Caption</label><div class="textarea t-paragraph-m"><textarea id="cap-edit" rows="6" maxlength="500" required placeholder="Add a caption...">Site visit at the Pune duplex, the staircase is finally in. Teak treads on a folded steel stringer. #workinprogress</textarea></div><div class="helper t-paragraph-s"><span class="counter tnum" aria-live="polite">116/500</span></div></div>
+          <div class="card">
+            <div class="f09-rows">
+              <div class="f09-row" data-role="professional"><button class="f09-row-hit" data-open="S-09-05-tag-people.html" data-show="default loading error edit edit-empty"><span class="lbl t-label-s">Tag People</span><span class="val set t-paragraph-m">2 People</span><i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></button><button class="f09-row-hit" data-open="S-09-05-tag-people.html" data-open-state="blank" data-show="empty"><span class="lbl t-label-s">Tag People</span><span class="val t-paragraph-m">Add</span><i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></button></div>
+              <div class="f09-row"><div class="row row-8" data-show="default loading error edit edit-empty"><button class="f09-row-hit" data-open="S-09-06-location-search.html"><span class="lbl t-label-s">Location</span><span class="val set t-paragraph-m"><i class="ic ic-16 hgi hgi-stroke hgi-location-01" aria-hidden="true"></i><span class="truncate">Alibaug, Maharashtra</span></span></button><button class="ibtn ibtn-36 ibtn-plain press" aria-label="Clear location" ><i class="ic ic-16 hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></div><button class="f09-row-hit" data-open="S-09-06-location-search.html" data-show="empty"><span class="lbl t-label-s">Location</span><span class="val t-paragraph-m">Add</span><i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="foot-cta f09-foot"><div class="f09-foot-inner"><button class="btn btn-filled btn-full t-label-m press" data-open="S-09-07-submit-loader.html" data-show="default error">SHARE</button><button class="btn btn-filled btn-full t-label-m" disabled aria-describedby="why" data-show="empty">SHARE</button><button class="btn btn-filled btn-full t-label-m" disabled aria-busy="true" data-show="loading"><span class="spinner" aria-hidden="true"></span><span class="sr-only">Sharing</span></button><button class="btn btn-filled btn-full t-label-m press" data-toast="success|Post updated|" data-show="edit">SAVE</button><button class="btn btn-filled btn-full t-label-m" disabled aria-describedby="why2" data-show="edit-empty">SAVE</button><span id="why" class="sr-only" data-show="empty">Caption required</span><span id="why2" class="sr-only" data-show="edit-empty">A post must keep at least one media item.</span></div></div>
+  </div>
+  <div class="toast-region" aria-live="polite" data-show="error"><div class="toast toast-danger glass glass-panel" role="status"><i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i><div class="body"><span class="t-label-s">Error</span><p class="t-paragraph-s">Network error occurred</p></div></div></div>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375:</b> glass header (back · title). Horizontal media carousel (tiles 60% wide × 30% high, remove chip top-right) → caption with <code>n/500</code> counter → options card (Tag People, Location) → sticky full-width SHARE / SAVE above the tab bar.</li>
+      <li><b>768:</b> one centred column; the carousel shows more tiles.</li>
+      <li><b>1440:</b> two columns: media on the left as a 2-up grid in publishing order, caption + options on the right, primary button right-aligned in the sticky bar.</li>
+      <li>Roles: Tag People only for professionals. Edit adds saved media (video posters with a play glyph, no playback) and a trailing "+" tile.</li>
+      <li>States: default (create, valid), empty (blank caption → SHARE disabled), edit, edit-empty (only the "+" tile → SAVE disabled), loading (button busy; S-09-07 blocks the page), error (toast, form untouched).</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Top header · IconButton glass (back)</li>
+      <li>Carousel tile · IconButton glass on media (remove, move earlier / later, play) · drag grip</li>
+      <li>Textarea + counter · Card with tap-to-edit rows</li>
+      <li>Sticky CTA bar · Button filled L (SHARE / SAVE, disabled, loading) · Toast</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Tile lift on drag and button press: <code>--press-*</code> (no reorder recipe exists, Q-71)</li>
+      <li>Pickers: <code>--panel-*</code>; submit loader, <code>--modal-*</code>; toasts, <code>--toast-*</code></li>
+      <li>Push / pop: <code>--page-slide-*</code> (desktop <code>--panel-*</code>)</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li>Focus order: back → tiles (remove, move earlier, move later) → caption → Tag People → Location → primary button.</li>
+      <li><b>Keyboard reorder:</b> every tile has "Move earlier" / "Move later" buttons; the first and last are disabled at the ends. Drag is an enhancement.</li>
+      <li>Caption is labelled "Caption", required, with the counter in a polite live region. The disabled button is described ("Caption required").</li>
+      <li>Rows are buttons announcing label and value; the location clear button is a separate control named "Clear location".</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>Move earlier / later buttons are a web addition (Q-71).</li>
+      <li>No discard confirmation on back, as in the app (Q-67).</li>
+      <li>SAVE in the mockup shows the "Post updated" toast; in the product it runs S-09-07 and returns to Home.</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

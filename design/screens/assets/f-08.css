@@ -1,0 +1,40 @@
+/* =========================================================================
+   F-08 Discover — location sheet and filter sheet. Tokens only.
+   ========================================================================= */
+@media (max-width: 767.98px) {
+  .sheet-94 { height: 94dvh; max-height: 94dvh; }
+}
+.overlay > .toast-region { z-index: var(--z-toast); }
+
+/* Location rows: icon · title over sub-address · trailing remove */
+.lsearch { flex: none; }
+.lsearch .clear { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; margin-right: calc(var(--spacing-12) * -1); border-radius: var(--radius-full); color: var(--icon-soft); }
+.lsearch:has(input:placeholder-shown) .clear { visibility: hidden; }
+.lrows { display: flex; flex-direction: column; }
+.lrow { display: flex; align-items: center; border-radius: var(--radius-16); margin: 0 calc(var(--spacing-12) * -1); transition: background var(--press-dur) var(--press-ease); }
+.lrow + .lrow { margin-top: var(--spacing-2); }
+.lrow-hit { flex: 1; min-width: 0; display: flex; align-items: center; gap: var(--spacing-12); min-height: 60px; padding: var(--spacing-10) var(--spacing-12); border-radius: inherit; text-align: left; color: var(--text-default); }
+.lrow-hit > .ic { color: var(--icon-soft); }
+.lrow-hit .txt { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: var(--spacing-2); }
+.lrow-hit .txt span + span { color: var(--text-subtle); }
+.lrow:hover { background: var(--bg-weak); }
+.lrow .trash { display: none; color: var(--danger-default); margin-right: var(--spacing-4); }
+.lrow:has(> [aria-checked="true"]):not(:has(> .trash[aria-pressed="true"])) { background: var(--accent-tonal); }
+.lrow:has(> [aria-checked="true"]):not(:has(> .trash[aria-pressed="true"])) .trash { display: inline-flex; }
+.lsec { display: flex; flex-direction: column; gap: var(--spacing-6); }
+.lsec > h2 { padding-top: var(--spacing-8); }
+.lhr { height: 1px; background: var(--stroke-soft); margin: var(--spacing-2) 0; }
+.lnone { display: flex; flex-direction: column; align-items: center; gap: var(--spacing-12); padding: var(--spacing-48) var(--spacing-24); text-align: center; }
+.lnone .ic { font-size: var(--spacing-48); color: var(--icon-soft); }
+.lnone p { color: var(--text-subtle); }
+.lskel { display: flex; flex-direction: column; gap: var(--spacing-20); padding-top: var(--spacing-12); }
+.lskel > span { height: 16px; }
+
+/* Filter panes: each category tab owns one options panel */
+.pane-opts[role="tabpanel"] { animation: pane-in var(--tab-panel-slide-dur) var(--tab-panel-slide-ease) both; }
+@keyframes pane-in { from { opacity: 0; filter: blur(var(--tab-panel-blur)); } }
+.pane-item .ic { visibility: hidden; }
+.pane-item[aria-selected="true"] .ic { visibility: visible; }
+.pane-skel { display: flex; flex-direction: column; }
+.pane-skel > span { height: 16px; margin: var(--spacing-16) 0; width: 70%; }
+.lline { text-align: center; padding: var(--spacing-32) 0; }

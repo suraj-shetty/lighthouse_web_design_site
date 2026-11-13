@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-09-02 Library filter</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-09.css">
+</head>
+<body class="t-paragraph-m" data-kind="overlay" data-host="S-09-01-create-gallery.html" data-states="default,videos,favorites,album">
+<div class="screen overlay f09" data-variant="popover">
+  <button class="scrim" data-close aria-label="Close"></button>
+  <section class="sheet f09-w320 f09-lib" role="dialog" aria-modal="true" aria-labelledby="lt">
+    <span class="sheet-grab" aria-hidden="true"></span>
+    <div class="sheet-head"><div class="txt"><h1 id="lt" class="t-label-xxl">Library</h1><p class="t-paragraph-m">Browse and access your saved media and collections.</p></div></div>
+    <hr class="hr">
+    <div class="menu" role="radiogroup" aria-labelledby="lt" data-show="default"><button class="menu-row t-label-s" role="radio" data-radio data-close aria-checked="true"><i class="ic hgi hgi-stroke hgi-clock-04" aria-hidden="true"></i><span>Recent</span><span class="end f09-tick"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></button><button class="menu-row t-label-s" role="radio" data-radio data-close aria-checked="false"><i class="ic hgi hgi-stroke hgi-play-circle" aria-hidden="true"></i><span>Videos</span><span class="end f09-tick"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></button><button class="menu-row t-label-s" role="radio" data-radio data-close aria-checked="false"><i class="ic hgi hgi-stroke hgi-favourite" aria-hidden="true"></i><span>Favorites</span><span class="end f09-tick"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></button><button class="menu-row t-label-s" role="radio" aria-checked="false" data-open="S-09-03-album-list.html"><i class="ic hgi hgi-stroke hgi-grid-view" aria-hidden="true"></i><span>All Album</span><span class="end"><i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></div>
+    <div class="menu" role="radiogroup" aria-labelledby="lt" data-show="videos"><button class="menu-row t-label-s" role="radio" data-radio data-close aria-checked="false"><i class="ic hgi hgi-stroke hgi-clock-04" aria-hidden="true"></i><span>Recent</span><span class="end f09-tick"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></button><button class="menu-row t-label-s" role="radio" data-radio data-close aria-checked="true"><i class="ic hgi hgi-stroke hgi-play-circle" aria-hidden="true"></i><span>Videos</span><span class="end f09-tick"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></button><button class="menu-row t-label-s" role="radio" data-radio data-close aria-checked="false"><i class="ic hgi hgi-stroke hgi-favourite" aria-hidden="true"></i><span>Favorites</span><span class="end f09-tick"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></button><button class="menu-row t-label-s" role="radio" aria-checked="false" data-open="S-09-03-album-list.html"><i class="ic hgi hgi-stroke hgi-grid-view" aria-hidden="true"></i><span>All Album</span><span class="end"><i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></div>
+    <div class="menu" role="radiogroup" aria-labelledby="lt" data-show="favorites"><button class="menu-row t-label-s" role="radio" data-radio data-close aria-checked="false"><i class="ic hgi hgi-stroke hgi-clock-04" aria-hidden="true"></i><span>Recent</span><span class="end f09-tick"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></button><button class="menu-row t-label-s" role="radio" data-radio data-close aria-checked="false"><i class="ic hgi hgi-stroke hgi-play-circle" aria-hidden="true"></i><span>Videos</span><span class="end f09-tick"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></button><button class="menu-row t-label-s" role="radio" data-radio data-close aria-checked="true"><i class="ic hgi hgi-stroke hgi-favourite" aria-hidden="true"></i><span>Favorites</span><span class="end f09-tick"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></button><button class="menu-row t-label-s" role="radio" aria-checked="false" data-open="S-09-03-album-list.html"><i class="ic hgi hgi-stroke hgi-grid-view" aria-hidden="true"></i><span>All Album</span><span class="end"><i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></div>
+    <div class="menu" role="radiogroup" aria-labelledby="lt" data-show="album"><button class="menu-row t-label-s" role="radio" data-radio data-close aria-checked="false"><i class="ic hgi hgi-stroke hgi-clock-04" aria-hidden="true"></i><span>Recent</span><span class="end f09-tick"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></button><button class="menu-row t-label-s" role="radio" data-radio data-close aria-checked="false"><i class="ic hgi hgi-stroke hgi-play-circle" aria-hidden="true"></i><span>Videos</span><span class="end f09-tick"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></button><button class="menu-row t-label-s" role="radio" data-radio data-close aria-checked="false"><i class="ic hgi hgi-stroke hgi-favourite" aria-hidden="true"></i><span>Favorites</span><span class="end f09-tick"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></button><button class="menu-row t-label-s" role="radio" aria-checked="true" data-open="S-09-03-album-list.html"><i class="ic hgi hgi-stroke hgi-grid-view" aria-hidden="true"></i><span>All Album</span><span class="end"><i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></div>
+  </section>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375</b> — glass bottom sheet sized to content: handle, title, subtitle, divider, four rows (icon · label · tick or chevron).</li>
+      <li><b>768 / 1440</b> — popover anchored to the filter label.</li>
+      <li>States show which filter is current; with an album chosen no row carries a tick and "All Album" keeps its chevron.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Bottom sheet / popover</li>
+      <li>Menu row as a radio (single-select)</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Open / close — <code>--panel-*</code></li>
+      <li>Row press — <code>--press-*</code>; "All Album" opens S-09-03 on top — <code>--panel-*</code></li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li>Dialog named "Library"; rows form a radio group; the current row is conveyed by <code>aria-checked</code> and the tick, not colour alone.</li>
+      <li>Esc, scrim tap and drag down close without change; focus returns to the filter label.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li><b>No entry point on web.</b> Q-08 replaces the device library with a file picker, so there is nothing to filter. Designed for parity with the app; confirm it is dropped.</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

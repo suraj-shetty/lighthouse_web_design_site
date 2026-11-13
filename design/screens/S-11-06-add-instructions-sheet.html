@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-11-06 Add Instructions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-11.css">
+</head>
+<body class="t-paragraph-m" data-kind="overlay" data-host="S-11-03-active-order-detail.html" data-states="default,loading,error">
+<div class="screen overlay" data-variant="sheet">
+  <button class="scrim" data-close aria-label="Close"></button>
+  <section class="sheet" role="dialog" aria-modal="true" aria-labelledby="st" aria-describedby="sd">
+    <span class="sheet-grab" aria-hidden="true"></span>
+    <div class="sheet-head"><div class="txt"><h1 id="st" class="t-label-xxl">Add Instructions</h1><p id="sd" class="t-paragraph-m">Share a note for the dealer before approving this quote.</p></div><button class="ibtn ibtn-44 glass glass-icon press" data-close aria-label="Close"><i class="ic hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></div>
+    <div class="sheet-body"><label class="textarea"><textarea class="t-paragraph-m" rows="4" placeholder="Type your comments here..." aria-label="Instructions for the dealer" aria-describedby="sd"></textarea></label></div>
+    <div class="sheet-foot" data-show="default error"><a class="btn btn-filled t-label-m press" href="S-11-01-my-orders.html">Approve</a></div>
+    <div class="sheet-foot" data-show="loading"><button class="btn btn-filled btn-full t-label-m" disabled aria-busy="true"><span class="spinner" aria-hidden="true"></span>Approve</button></div>
+  </section>
+  <div class="toast-region" aria-live="polite" data-show="error">
+    <div class="toast toast-danger glass glass-panel" role="status">
+      <i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i>
+      <div class="body"><span class="t-label-s">Error</span><p class="t-paragraph-s">Something went wrong. Please try again later.</p></div>
+    </div>
+  </div>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375</b> — glass bottom sheet: handle, title, helper text, 4-line text area, full-width "Approve"; it lifts above the keyboard.</li>
+      <li><b>768 / 1440</b> — side sheet from the right, 440 wide, same stack; the footer stays pinned.</li>
+      <li>States: default (empty optional field, button enabled) · loading (button disabled with spinner) · error (toast, sheet stays open).</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Bottom sheet / side sheet · IconButton glass (close)</li>
+      <li>Textarea</li>
+      <li>Button filled L with loading · Toast danger</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Open / close — <code>--panel-*</code> (bottom sheet under 768, side sheet from 768)</li>
+      <li>Button press — <code>--press-*</code>; toast — <code>--toast-*</code></li>
+      <li>On success the sheet closes and the Active Order screen returns to My Orders — <code>--page-slide-*</code></li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li>Dialog named "Add Instructions"; the text area is labelled and described by the helper text.</li>
+      <li>Focus moves to the text area on open and returns to APPROVE TO PROCEED on close.</li>
+      <li>While approving, the button is busy and disabled.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>The comment is optional with no length limit, as the app.</li>
+      <li>A close button is added in the sheet header for pointer users (web addition).</li>
+      <li>No success message is shown after approval, as the app (F-11-Q2).</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

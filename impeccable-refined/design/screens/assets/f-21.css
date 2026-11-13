@@ -1,0 +1,325 @@
+/* =========================================================================
+   F-21 Needs: question flows. Tokens only; components from lh.css first.
+   This block: S-21-01 need flow step (and what S-21-02 needs on top of the
+   S-10-02 location sheet, which is nothing new).
+   Flutter reference: lib/features/needs/widget/need_*.dart
+   ========================================================================= */
+
+/* ---------- Frame: header, question column, footer pinned to the bottom ---------- */
+.nf .app-main { display: flex; flex-direction: column; min-height: 100dvh; }
+.nf .app-main > main { flex: 1 0 auto; width: 100%; }
+.nf-head { display: flex; flex-direction: column; gap: var(--spacing-8); min-width: 0; }
+.nf-bar { position: relative; justify-content: space-between; }
+
+/* Segmented progress: 48 x 3 segments, 4 apart, the whole bar capped at 230 (need_step_header.dart) */
+.nf-prog { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: flex; gap: var(--spacing-4); width: min(230px, calc(var(--n, 4) * 52px - 4px)); }
+.nf-prog > i { flex: 1; height: 3px; border-radius: var(--radius-full); background: var(--bg-weak); transition: background var(--duration-fast) var(--ease); }
+.nf-prog > i.on { background: var(--bg-inverse); }
+.nf-step { color: var(--text-subtle); white-space: nowrap; margin-left: auto; }
+@media (max-width: 767.98px) { .nf-step { position: absolute; left: 0; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); } }
+
+/* Context line: journey overline + what was chosen so far */
+.nf-ctx { display: flex; flex-direction: column; gap: var(--spacing-4); min-width: 0; padding: 0 var(--spacing-4); }
+.nf-ctx > :first-child { color: var(--text-subtle); }
+.is-embed .nf-ctx { animation: nf-ctx-in var(--text-swap-dur) var(--text-swap-ease) both; }
+@keyframes nf-ctx-in { from { opacity: 0; transform: translateX(var(--distance-medium)); filter: blur(var(--text-swap-blur)); } }
+
+/* Question region */
+.nf-page { gap: var(--spacing-16); padding-bottom: var(--spacing-48); }
+.nf-page.has-foot { padding-bottom: var(--spacing-24); }
+.is-embed .nf-page { animation: nf-step-in var(--page-slide-dur) var(--page-slide-ease) both; }
+@keyframes nf-step-in { from { opacity: 0; transform: translateX(var(--distance-large)); filter: blur(var(--page-blur)); } }
+.nf-q { display: flex; flex-direction: column; gap: var(--spacing-6); max-width: 68ch; }
+.nf-q p { color: var(--text-subtle); }
+.nf-notice { border-radius: var(--radius-12); align-items: flex-start; }
+.nf-notice p { color: var(--text-subtle); max-width: 68ch; }
+.nf-notice > .ic { color: var(--icon-default); }
+
+/* ---------- Photo tile grid ---------- */
+.nf-tiles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--spacing-16) var(--spacing-12); }
+.nf-tile { display: flex; flex-direction: column; gap: var(--spacing-8); min-width: 0; text-align: left; color: var(--text-default); border-radius: var(--radius-16); }
+.nf-tile-img { position: relative; display: block; aspect-ratio: 1; border-radius: var(--radius-16); overflow: hidden; background: var(--element-bg-select-card-card-default); box-shadow: var(--shadow-products-card); transition: box-shadow var(--press-dur) var(--press-ease); }
+.nf-tile-img img { width: 100%; height: 100%; object-fit: cover; }
+.nf-tile-img.mosaic { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: var(--spacing-2); }
+.nf-tile-img.mosaic img { min-height: 0; }
+.nf-tile-label { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden; overflow-wrap: anywhere; }
+/* Selected mark (seen when the user comes back to the step): a check disc cut into the photo corner */
+.nf-tile-check { position: absolute; top: var(--spacing-8); right: var(--spacing-8); display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; border-radius: var(--radius-full); background: var(--bg-inverse); color: var(--icon-inverse); box-shadow: 0 0 0 2px var(--page-bg, var(--home-surface)); opacity: 0; transform: scale(0); transition: opacity var(--select-check-fill) var(--select-check-ease), transform var(--select-check-mark) var(--select-check-dot-ease); }
+.nf-tile[aria-checked="true"] .nf-tile-check { opacity: 1; transform: scale(1); }
+.nf-skel-tile { aspect-ratio: 1; border-radius: var(--radius-16); }
+@media (hover: hover) { .nf-tile:hover .nf-tile-img { box-shadow: var(--shadow-products-card), var(--shadow-shop-card); } }
+@media (max-width: 767.98px) { .nf-wide { display: none; } }
+@media (min-width: 768px) { .nf-tiles { gap: var(--spacing-20) var(--spacing-16); } .nf-tiles.c4 { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+
+/* ---------- Check disc (28): radio dot or tick ---------- */
+.nf-disc { position: relative; display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; margin: var(--spacing-4); flex: none; border-radius: var(--radius-full); background: transparent; border: 1px solid var(--stroke-default); color: var(--icon-inverse); transition: background var(--select-check-fill) var(--select-check-ease), border-color var(--select-check-fill) var(--select-check-ease), box-shadow var(--select-check-fill) var(--select-check-ease); }
+.nf-disc::after { content: ""; width: 12px; height: 12px; border-radius: var(--radius-full); background: var(--icon-inverse); transform: scale(0); transition: transform var(--select-check-clear) var(--select-check-ease); }
+.nf-disc > .ic { position: absolute; clip-path: inset(0 100% 0 0); transition: clip-path var(--select-check-clear) var(--select-check-ease); }
+.nf-disc:has(> .ic)::after { display: none; }
+[aria-checked="true"] > .nf-disc { background: var(--bg-inverse); border-color: var(--bg-inverse); box-shadow: none; }
+[aria-checked="true"] > .nf-disc::after { transform: scale(1); transition: transform var(--select-check-mark) var(--select-check-dot-ease) var(--select-check-delay); }
+[aria-checked="true"] > .nf-disc > .ic { clip-path: inset(0); transition: clip-path var(--select-check-mark) var(--select-check-ease) var(--select-check-delay); }
+@media (hover: hover) { .nf-row:hover > .nf-disc, .nf-pill:hover > .nf-disc { border-color: var(--icon-default); } }
+
+/* ---------- Select rows: a list with hairlines, not cards ---------- */
+.nf-rows { display: flex; flex-direction: column; padding-top: var(--spacing-12); }
+.nf-row { display: flex; align-items: center; gap: var(--spacing-12); width: 100%; min-height: 56px; padding: var(--spacing-10) 0; text-align: left; color: var(--text-default); }
+.nf-row + .nf-row { box-shadow: 0 -1px 0 var(--stroke-weak); }
+.nf-row .txt { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+.nf-row .txt > :nth-child(2) { color: var(--text-subtle); }
+.nf-group-title { text-transform: none; padding: var(--spacing-24) 0 var(--spacing-4); color: var(--text-default); }
+.nf-rows > .nf-group-title:first-child { padding-top: 0; }
+.nf-group-title + .nf-row { box-shadow: none; }
+
+/* ---------- Select pills (54 high, outlined; selected = filled, no border) ---------- */
+.nf-pills { display: flex; flex-direction: column; gap: var(--spacing-12); }
+.nf-pill { display: flex; align-items: center; gap: var(--spacing-8); width: 100%; min-height: 54px; padding: var(--spacing-4) var(--spacing-4) var(--spacing-4) var(--spacing-20); border-radius: var(--radius-full); border: 1px solid var(--stroke-soft); color: var(--text-subtle); text-align: left; transition: background var(--select-check-fill) var(--select-check-ease), border-color var(--select-check-fill) var(--select-check-ease); }
+.nf-pill > :first-child { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.nf-pill[aria-checked="true"] { background: var(--element-bg-select-card-card-default); border-color: transparent; color: var(--text-default); }
+
+/* ---------- Location + details fields ---------- */
+.nf-fields { display: flex; flex-direction: column; gap: var(--spacing-16); }
+.nf-fields .field { gap: var(--spacing-8); }
+.nf-fields .label > span { color: var(--text-subtle); }
+.nf-loc { min-height: 54px; color: var(--text-subtle); }
+.nf-loc > .ic { color: var(--icon-subtle); }
+.nf-chips { display: flex; flex-wrap: wrap; gap: var(--spacing-10); }
+.nf-chip { background: var(--bg-neutral); border: 1px solid var(--bg-weak); transition: background var(--select-check-fill) var(--select-check-ease), color var(--select-check-fill) var(--select-check-ease), border-color var(--select-check-fill) var(--select-check-ease); }
+.on-surface .nf-chip { border: 1px solid var(--stroke-weak); }
+.on-surface .nf-chip[aria-pressed="true"] { border-color: transparent; }
+.nf-photo { display: flex; align-items: center; gap: var(--spacing-12); padding: var(--spacing-12) var(--spacing-16); border-radius: var(--radius-12); background: var(--element-bg-select-card-card-default); }
+.nf-photo .txt { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: var(--spacing-6); color: var(--text-subtle); }
+.nf-photo .txt > :last-child { color: var(--text-soft); }
+.nf-thumbs { display: flex; flex-wrap: wrap; gap: var(--spacing-8); padding-top: var(--spacing-4); }
+.nf-thumbs li { position: relative; }
+.nf-thumbs img { width: 72px; height: 72px; border-radius: var(--radius-8); object-fit: cover; background: var(--element-bg-select-card-card-default); box-shadow: var(--shadow-products-card); }
+.nf-thumb-x { position: absolute; top: var(--spacing-2); right: var(--spacing-2); display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: var(--radius-full); background: var(--bg-inverse); color: var(--icon-inverse); box-shadow: 0 0 0 2px var(--page-bg, var(--home-surface)); }
+.nf-thumb-x::before { content: ""; position: absolute; inset: -11px; } /* 44px hit area */
+.nf-thumb-x .ic { font-size: var(--icon-10); }
+
+/* Inline error row (type step with no options) */
+.nf-err { display: flex; align-items: center; gap: var(--spacing-12); padding: var(--spacing-12) 0; box-shadow: 0 -1px 0 var(--stroke-weak), 0 1px 0 var(--stroke-weak); }
+.nf-err p { flex: 1; min-width: 0; color: var(--text-subtle); }
+
+/* ---------- Footer: solid from 16px down, short fade on top, --blur-footer ---------- */
+.nf-foot { padding-top: var(--spacing-16); background: linear-gradient(to bottom, transparent, var(--page-bg, var(--home-surface)) var(--spacing-16)); -webkit-backdrop-filter: blur(var(--blur-footer)); backdrop-filter: blur(var(--blur-footer)); }
+.nf-foot-in { display: flex; flex-direction: column; gap: var(--spacing-8); width: 100%; max-width: var(--page-max); margin: 0 auto; }
+@media (min-width: 768px) {
+  .nf-foot { padding-bottom: var(--spacing-24); }
+  .nf-foot-in { flex-direction: row; justify-content: flex-end; gap: var(--spacing-12); }
+  .nf-foot-in > .btn { flex: 0 1 280px; width: auto; }
+}
+
+/* =========================================================================
+   Results, review, sent, all requests and the explore list (S-21-03 to S-21-07)
+   ========================================================================= */
+/* =========================================================================
+   F-21 Needs: results, review, sent, all requests, explore list
+   (S-21-03 … S-21-07). Tokens only. To be merged into f-21.css.
+   Reuses from f-20.css: .sec-head .sec-rule .rq-card .pro-card (+ .pro-top
+   .pro-txt .pro-name .pro-line .pro-bio) .prj-card .prj-row .err-row
+   Reuses from f-21.css: .nf-disc (check disc) .nf-foot (footer fade) .nf-notice
+   Reuses from lh.css:   .chip .input .scard .prod .note .foot-cta .skel .btn
+   Flutter reference: lib/features/needs/view/*.dart, widget/need_cards.dart
+   ========================================================================= */
+
+/* ---------- Frame: header, content, footer pinned to the bottom ---------- */
+.nr .app-main { display: flex; flex-direction: column; min-height: 100dvh; }
+.nr .app-main > main { flex: 1 0 auto; width: 100%; }
+.nr-page { gap: var(--spacing-32); padding-bottom: var(--spacing-24); }
+.nr-sec { display: flex; flex-direction: column; gap: var(--spacing-12); min-width: 0; }
+.nr-lead { max-width: 68ch; }
+.nr-clamp2 { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; }
+
+/* Header title block: title + one-line subtitle. Centred under 768 when the bar has no trailing action (project journeys). */
+.nr-title { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: var(--spacing-2); }
+.nr-title p { color: var(--text-subtle); }
+.nr-spacer { width: 44px; flex: none; }
+@media (max-width: 767.98px) { .nr-title.is-centred { text-align: center; } }
+
+/* Footer: buttons stack under 768; from 768 one row inside the content column, helper text at the left. */
+.nr-foot-in { display: flex; flex-direction: column; gap: var(--spacing-8); width: 100%; max-width: var(--page-max); margin: 0 auto; }
+.nr-foot-in > .btn { width: 100%; }
+.nr-foot-row { display: flex; gap: var(--spacing-12); }
+.nr-foot-row > .btn { flex: 1; min-width: 0; }
+.nr-help { color: var(--text-subtle); text-align: center; }
+.nr-count::after { content: counter(nr-sel); }
+@media (min-width: 768px) {
+  .nr-foot { padding-bottom: var(--spacing-24); }
+  .nr-foot-in { flex-direction: row; align-items: center; justify-content: flex-end; gap: var(--spacing-12); }
+  .nr-foot-in > .btn, .nr-foot-row > .btn { flex: none; width: auto; min-width: 200px; }
+  .nr-help { order: -1; margin-right: auto; text-align: start; }
+}
+
+/* Selection drives the footer without script: .nr-some shows once any disc in the visible state is ticked, .nr-none hides. */
+.nr .app-main { counter-reset: nr-sel; }
+.nr-tick[aria-checked="true"] { counter-increment: nr-sel; }
+.nr-some { display: none; }
+.app-main:has(main:not([hidden]) [data-check][aria-checked="true"]) .nr-some { display: inline-flex; }
+.app-main:has(main:not([hidden]) [data-check][aria-checked="true"]) .nr-none { display: none; }
+
+/* ---------- Check disc on results and review: hollow until ticked (need_check_disc.dart, hollow: true) ---------- */
+[aria-checked="false"] > .nf-disc.nr-hollow { background: transparent; box-shadow: none; }
+.nr-tick { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; flex: none; border-radius: var(--radius-full); }
+@media (hover: hover) { .nr-tick:hover > .nf-disc { border-color: var(--icon-default); } }
+
+/* ---------- Professionals, project journeys: a tile grid per group in the Discover card colours, every tile tickable ---------- */
+.nr-group { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--spacing-12); }
+@media (min-width: 768px) { .nr-group, .nr-cards { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); } }
+.nr-row { display: flex; align-items: flex-start; gap: var(--spacing-8); padding: var(--spacing-12) var(--spacing-8) var(--spacing-12) var(--spacing-12); border-radius: var(--radius-24); background: var(--bg-neutral); border: 1px solid var(--stroke-weak); box-shadow: var(--shadow-shop-card); min-width: 0; transition: box-shadow var(--press-dur) var(--press-ease); }
+.nr-row-link { flex: 1; min-width: 0; color: var(--text-default); border-radius: var(--radius-8); }
+.nr-ava { position: relative; flex: none; display: block; border-radius: var(--radius-full); }
+.nr-ava .verified { position: absolute; right: calc(var(--spacing-2) * -1); bottom: calc(var(--spacing-2) * -1); box-shadow: 0 0 0 2px var(--bg-neutral); }
+@media (hover: hover) { .nr-row:hover { box-shadow: var(--shadow-shop-card), var(--shadow-products-card); } }
+
+/* ---------- Professionals, people journeys: one card each (shared .pro-card); the disc shows in select mode ---------- */
+.nr-cards { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--spacing-12); }
+.nr-cards > li { display: flex; min-width: 0; }
+.nr-cards .pro-card { flex: 1; border-radius: var(--radius-24); box-shadow: var(--shadow-shop-card); }
+.nr-pick { position: relative; transition: border-color var(--select-check-fill) var(--select-check-ease); }
+.nr-pick .nr-tick::before { content: ""; position: absolute; inset: 0; border-radius: var(--radius-24); } /* the whole card toggles */
+.nr-pick .nr-ava { z-index: 1; }                                                                         /* the avatar still opens the profile */
+.on-surface .nr-pick:has(.nr-tick[aria-checked="true"]) { border-color: var(--stroke-default); }
+.nr-pick:has(.nr-tick:focus-visible) { outline: 3px solid var(--focus-ring); outline-offset: 2px; }
+.nr-pick .nr-tick:focus-visible { outline: none; }
+
+/* Inline empty card (need_results_screen.dart _Empty) */
+.nr-empty { display: flex; flex-direction: column; gap: var(--spacing-4); padding: var(--spacing-16); border-radius: var(--radius-16); background: var(--bg-neutral); }
+.nr-empty p { color: var(--text-subtle); max-width: 68ch; }
+.on-surface .nr-empty, .on-surface .nw-lh { border: 1px solid var(--stroke-weak); }
+
+/* ---------- Projects: scroller under 768, grid from 768 (modifier on the shared .prj-row) ---------- */
+.prj-count.nr-tr { left: auto; bottom: auto; top: var(--spacing-8); right: var(--spacing-8); }   /* badge sits top right in need_cards.dart */
+@media (min-width: 768px) {
+  .prj-row.nr-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: var(--spacing-20) var(--spacing-16); overflow: visible; margin: 0; padding: 0; }
+  .nr-grid > * { width: auto; }
+}
+
+/* ---------- Brands: 64 avatar + name, 88 wide ---------- */
+.nr-brands { display: flex; gap: var(--spacing-12); overflow-x: auto; scrollbar-width: none; margin: 0 calc(var(--gutter) * -1); padding: var(--spacing-4) var(--gutter); }
+.nr-brands::-webkit-scrollbar { display: none; }
+.nr-brand { display: flex; flex-direction: column; align-items: center; gap: var(--spacing-8); width: 88px; flex: none; text-align: center; color: var(--text-default); border-radius: var(--radius-12); }
+.nr-brand-logo { display: inline-flex; align-items: center; justify-content: center; width: 64px; height: 64px; border-radius: var(--radius-full); background: var(--element-bg-select-card-card-default); border: 1px solid var(--stroke-weak); color: var(--text-subtle); transition: box-shadow var(--press-dur) var(--press-ease); }
+@media (hover: hover) { .nr-brand:hover .nr-brand-logo { box-shadow: var(--shadow-shop-card); } }
+
+/* ---------- Products: lh.css .prod at the app's size (150 square image, radius 12) ---------- */
+.nr-prods { display: flex; gap: var(--spacing-12); overflow-x: auto; scrollbar-width: none; margin: 0 calc(var(--gutter) * -1); padding: var(--spacing-4) var(--gutter) var(--spacing-8); }
+.nr-prods::-webkit-scrollbar { display: none; }
+.nr-prods > * { width: 150px; flex: none; gap: var(--spacing-8); border-radius: var(--radius-12); }
+.nr-prods .prod-img { aspect-ratio: 1; border-radius: var(--radius-12); }
+@media (min-width: 768px) {
+  .nr-brands { flex-wrap: wrap; gap: var(--spacing-16); overflow: visible; margin: 0; padding: 0; }
+  .nr-prods { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: var(--spacing-20) var(--spacing-16); overflow: visible; margin: 0; padding: 0; }
+  .nr-prods > * { width: auto; }
+  .nr-group { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .nr-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--spacing-16); }
+}
+@media (min-width: 1200px) {
+  .nr-group, .nr-cards { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+/* Loading blocks at the app's heights (120 / 240 / 96 / 200) */
+.nr-skel { border-radius: var(--radius-16); }
+.nr-skel.h120 { height: 120px; } .nr-skel.h240 { height: 240px; } .nr-skel.h96 { height: 96px; } .nr-skel.h200 { height: 200px; border-radius: var(--radius-12); }
+
+/* ---------- Summary card: labelled rows with hairlines (S-21-04, S-21-05) ---------- */
+.nw-sum { margin: 0; padding: 0 var(--spacing-16); border-radius: var(--radius-16); background: var(--element-bg-select-card-card-default); }
+.nw-row { position: relative; display: flex; flex-direction: column; gap: var(--spacing-2); padding: var(--spacing-14) 0 var(--spacing-14) calc(var(--icon-20) + var(--spacing-12)); }
+.nw-row + .nw-row { box-shadow: 0 -1px 0 var(--stroke-soft); }
+.nw-row dt .ic { position: absolute; left: 0; top: var(--spacing-16); color: var(--icon-subtle); }
+.nw-row dt { color: var(--text-subtle); }
+.nw-row dd { margin: 0; color: var(--text-default); overflow-wrap: anywhere; max-width: 68ch; }
+
+/* ---------- Review: who receives it ---------- */
+.nw-who-head { display: flex; flex-direction: column; }
+.nw-who-head > p { padding-left: calc(var(--icon-24) + var(--spacing-12)); margin-top: calc(var(--spacing-10) * -1); color: var(--text-subtle); }
+.nw-n { display: none; }
+/* Count line: which of up to three recipients are ticked (no nested :has, so one selector per combination). */
+.nw-who:not(:has(.nw-rcp:nth-child(1) > [aria-checked="true"])):not(:has(.nw-rcp:nth-child(2) > [aria-checked="true"])):not(:has(.nw-rcp:nth-child(3) > [aria-checked="true"])) .nw-n0,
+.nw-who:has(.nw-rcp:nth-child(1) > [aria-checked="true"]):not(:has(.nw-rcp:nth-child(2) > [aria-checked="true"])):not(:has(.nw-rcp:nth-child(3) > [aria-checked="true"])) .nw-n1,
+.nw-who:not(:has(.nw-rcp:nth-child(1) > [aria-checked="true"])):has(.nw-rcp:nth-child(2) > [aria-checked="true"]):not(:has(.nw-rcp:nth-child(3) > [aria-checked="true"])) .nw-n1,
+.nw-who:not(:has(.nw-rcp:nth-child(1) > [aria-checked="true"])):not(:has(.nw-rcp:nth-child(2) > [aria-checked="true"])):has(.nw-rcp:nth-child(3) > [aria-checked="true"]) .nw-n1,
+.nw-who:has(.nw-rcp:nth-child(1) > [aria-checked="true"]):has(.nw-rcp:nth-child(2) > [aria-checked="true"]):not(:has(.nw-rcp:nth-child(3) > [aria-checked="true"])) .nw-n2,
+.nw-who:has(.nw-rcp:nth-child(1) > [aria-checked="true"]):not(:has(.nw-rcp:nth-child(2) > [aria-checked="true"])):has(.nw-rcp:nth-child(3) > [aria-checked="true"]) .nw-n2,
+.nw-who:not(:has(.nw-rcp:nth-child(1) > [aria-checked="true"])):has(.nw-rcp:nth-child(2) > [aria-checked="true"]):has(.nw-rcp:nth-child(3) > [aria-checked="true"]) .nw-n2,
+.nw-who:has(.nw-rcp:nth-child(1) > [aria-checked="true"]):has(.nw-rcp:nth-child(2) > [aria-checked="true"]):has(.nw-rcp:nth-child(3) > [aria-checked="true"]) .nw-n3 { display: inline; }
+/* Recipients are the same tiles as the results screen (S-21-03 .nr-row), one per line beside the summary. */
+.nw-rcps.nr-group { grid-template-columns: minmax(0, 1fr); margin: 0; padding: 0; list-style: none; }
+.nw-text { min-height: 48px; padding: var(--spacing-14) var(--spacing-12); color: var(--text-default); border-radius: var(--radius-full); }
+.nw-text.is-start { align-self: flex-start; margin-left: calc(var(--spacing-12) * -1); }
+.nw-text:disabled, .nw-text[aria-disabled="true"] { background: none; box-shadow: none; color: var(--text-soft); }
+.nw-lh { display: flex; align-items: center; gap: var(--spacing-12); padding: var(--spacing-16); border-radius: var(--radius-16); background: var(--bg-neutral); }
+.nw-lh-disc { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; flex: none; border-radius: var(--radius-full); background: var(--bg-inverse); color: var(--icon-inverse); }
+.nw-lh > div { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: var(--spacing-2); }
+.nw-lh p { color: var(--text-subtle); }
+
+/* Review and View request: one readable column under 1024, summary beside the rest from 1024 */
+.nw-split { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--spacing-32); align-items: start; width: 100%; max-width: 640px; margin: 0 auto; }
+.nw-col { display: flex; flex-direction: column; gap: var(--spacing-12); min-width: 0; }
+.nw-col > .note { margin-top: var(--spacing-4); }
+@media (min-width: 1024px) {
+  .nw-split { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--spacing-48); max-width: none; }
+  .nw-split > .is-sticky { position: sticky; top: 96px; }
+}
+
+/* ---------- Request sent ---------- */
+.ns-page { align-items: center; padding-top: var(--spacing-24); }
+.ns-col { display: flex; flex-direction: column; gap: var(--spacing-24); width: 100%; max-width: 560px; }
+.ns-hero { display: flex; flex-direction: column; align-items: center; gap: var(--spacing-12); text-align: center; }
+.ns-hero p, .ns-status p { color: var(--text-subtle); max-width: 68ch; }
+.ns-mark { display: inline-flex; align-items: center; justify-content: center; width: 52px; height: 52px; margin-bottom: var(--spacing-12); border-radius: var(--radius-full); background: var(--success-default); color: var(--static-white); }
+.ns-status { display: flex; flex-direction: column; gap: var(--spacing-12); }
+.ns-wait { display: flex; flex-direction: column; gap: var(--spacing-8); padding: var(--spacing-16); border-radius: var(--radius-16); background: var(--element-bg-select-card-card-default); }
+.ns-wait p { color: var(--text-subtle); }
+.ns-wait .btn { margin-top: var(--spacing-8); }
+@media (min-width: 768px) {
+  .ns-page { padding-top: var(--spacing-48); }
+  /* From 768 BACK TO HOME is a regular button under the content, not a pinned bar. */
+  .ns-foot { position: static; background: none; -webkit-backdrop-filter: none; backdrop-filter: none; padding-top: 0; padding-bottom: var(--spacing-48); }
+  .ns-foot .nr-foot-in { max-width: 560px; justify-content: center; }
+}
+
+/* ---------- All requests: a list, hairlines from 768 ---------- */
+.na-list { display: flex; flex-direction: column; }
+.na-row { display: grid; grid-template-columns: 90px minmax(0, 1fr) auto; grid-template-areas: "img title status" "img sub sub"; grid-template-rows: auto 1fr; column-gap: var(--spacing-12); row-gap: var(--spacing-2); padding: var(--spacing-8) 0; min-height: 44px; color: var(--text-default); border-radius: var(--radius-12); transition: background var(--press-dur) var(--press-ease); }
+.na-row img { grid-area: img; width: 90px; height: 76px; border-radius: var(--radius-12); object-fit: cover; background: var(--element-bg-select-card-card-default); box-shadow: var(--shadow-products-card); }
+.na-title { grid-area: title; }
+.na-status { grid-area: status; padding-top: var(--spacing-4); white-space: nowrap; }
+.na-sub { grid-area: sub; align-self: start; }
+.na-sub.is-sent { color: var(--text-subtle); }
+.na-none { display: flex; flex-direction: column; gap: var(--spacing-4); padding: var(--spacing-4) 0; }
+.na-none p + p { color: var(--text-subtle); }
+@media (min-width: 768px) {
+  .na-row { grid-template-columns: 90px minmax(0, 5fr) minmax(0, 6fr) minmax(160px, auto); grid-template-areas: "img title sub status"; grid-template-rows: auto; align-items: center; column-gap: var(--spacing-20); padding: var(--spacing-12) var(--spacing-12); margin: 0 calc(var(--spacing-12) * -1); }
+  .na-list > li + li { box-shadow: 0 -1px 0 var(--stroke-weak); }
+  .na-sub { align-self: center; }
+  .na-status { padding-top: 0; text-align: end; }
+  .na-none { padding: var(--spacing-12) 0; }
+}
+@media (hover: hover) { .na-row:hover { background: var(--bg-weak); } }
+
+/* ---------- Explore projects list ---------- */
+.ne-search { order: 3; flex: 1 0 100%; min-height: 54px; }
+.ne-search > .ic { color: var(--icon-subtle); }
+.ne-filter { color: var(--icon-default); }
+.ne-head { display: flex; flex-direction: column; gap: var(--spacing-12); }
+.ne-head .text-subtle { max-width: 68ch; }
+.ne-page { gap: var(--spacing-16); }
+.ne-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--spacing-24); }
+.prj-img.ne-tall { aspect-ratio: 4 / 3; }
+.ne-grid .prj-card { gap: var(--spacing-4); }
+.ne-grid .prj-img { margin-bottom: var(--spacing-4); }
+.ne-skel { aspect-ratio: 4 / 3; max-height: none; border-radius: var(--radius-16); }
+@media (max-width: 767.98px) { .ne-wide { display: none; } }
+@media (min-width: 768px) {
+  .ne-bar h1 { flex: none; margin-right: var(--spacing-12); }
+  .ne-search { order: 0; flex: 1; min-height: 48px; max-width: 420px; margin-left: auto; }
+  .ne-grid { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: var(--spacing-32) var(--spacing-20); }
+}
+
+/* Late additions */
+.nr-foot-row > .btn { padding-inline: var(--spacing-12); }
+.nw-split > .nr-lead { grid-column: 1 / -1; margin-bottom: calc(var(--spacing-8) * -1); }
+.ns-col.is-view { max-width: 640px; }
+@media (max-width: 767.98px) { .ns-page { padding-top: var(--spacing-48); } .ns-page.is-view { padding-top: 0; } }
+@media (min-width: 768px) { .ns-foot.is-view .nr-foot-in { max-width: 640px; justify-content: flex-start; } }

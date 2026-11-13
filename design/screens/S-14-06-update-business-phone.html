@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-14-06 Update Business Phone</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-14.css">
+</head>
+<body class="t-paragraph-m" data-kind="overlay" data-host="S-13-05-manage-account.html" data-states="default,valid,invalid,same-number,sending,send-error,verify,verify-filled,verifying,verify-error,resend,success">
+<div class="screen overlay" data-variant="sheet">
+  <button class="scrim" data-close aria-label="Close"></button>
+  <section class="sheet" role="dialog" aria-modal="true" aria-labelledby="t80" data-show="default valid send-error invalid same-number sending">
+    <span class="sheet-grab" aria-hidden="true"></span>
+    <div class="sheet-head"><div class="txt"><h1 id="t80" class="t-label-xxl">Update Phone Number</h1><p class="t-paragraph-m">Enter your new business phone number to receive an OTP.</p></div><button class="ibtn ibtn-44 glass glass-icon press" data-close aria-label="Close"><i class="ic hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></div>
+    <div class="sheet-body" data-show="default"><div class="f14-step"><div class="field"><div class="input f14-phone"><button class="f14-cc press" type="button" data-open="S-02-02-country-code-sheet.html" aria-haspopup="dialog" aria-label="Country: India, +91. Change country"><span class="f14-flag t-label-xs" aria-hidden="true">IN</span><i class="ic ic-16 hgi hgi-stroke hgi-arrow-down-01" aria-hidden="true"></i><span class="t-paragraph-l tnum">+91</span></button><span class="f14-sep" aria-hidden="true"></span><input class="t-paragraph-l tnum" type="tel" inputmode="numeric" maxlength="10" autocomplete="tel-national" placeholder="000 - 000 - 0000" value="9845012345" aria-label="Business phone number"></div></div><p class="helper t-paragraph-s">You’ll receive a call or a text via phone number. Standard data rates apply.</p></div></div>
+    <div class="sheet-foot" data-show="default"><button class="btn btn-filled t-label-m" type="button" disabled>SEND OTP</button><button class="btn glass t-label-m press" type="button" data-close>CANCEL</button></div>
+    <div class="sheet-body" data-show="valid send-error"><div class="f14-step"><div class="field"><div class="input f14-phone is-focus"><button class="f14-cc press" type="button" data-open="S-02-02-country-code-sheet.html" aria-haspopup="dialog" aria-label="Country: India, +91. Change country"><span class="f14-flag t-label-xs" aria-hidden="true">IN</span><i class="ic ic-16 hgi hgi-stroke hgi-arrow-down-01" aria-hidden="true"></i><span class="t-paragraph-l tnum">+91</span></button><span class="f14-sep" aria-hidden="true"></span><input class="t-paragraph-l tnum" type="tel" inputmode="numeric" maxlength="10" autocomplete="tel-national" placeholder="000 - 000 - 0000" value="9886044721" aria-label="Business phone number"></div></div><p class="helper t-paragraph-s">You’ll receive a call or a text via phone number. Standard data rates apply.</p></div></div>
+    <div class="sheet-foot" data-show="valid send-error"><button class="btn btn-filled t-label-m press" type="button" data-go-state="sending">SEND OTP</button><button class="btn glass t-label-m press" type="button" data-close>CANCEL</button></div>
+    <div class="sheet-body" data-show="invalid"><div class="f14-step"><div class="field"><div class="input f14-phone is-error"><button class="f14-cc press" type="button" data-open="S-02-02-country-code-sheet.html" aria-haspopup="dialog" aria-label="Country: India, +91. Change country"><span class="f14-flag t-label-xs" aria-hidden="true">IN</span><i class="ic ic-16 hgi hgi-stroke hgi-arrow-down-01" aria-hidden="true"></i><span class="t-paragraph-l tnum">+91</span></button><span class="f14-sep" aria-hidden="true"></span><input class="t-paragraph-l tnum" type="tel" inputmode="numeric" maxlength="10" autocomplete="tel-national" placeholder="000 - 000 - 0000" value="98860447" aria-label="Business phone number" aria-invalid="true" aria-describedby="e77"></div><p class="helper error t-paragraph-s" id="e77" role="alert"><i class="ic ic-16 hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i>Please enter a valid phone number</p></div><p class="helper t-paragraph-s">You’ll receive a call or a text via phone number. Standard data rates apply.</p></div></div>
+    <div class="sheet-foot" data-show="invalid"><button class="btn btn-filled t-label-m" type="button" disabled>SEND OTP</button><button class="btn glass t-label-m press" type="button" data-close>CANCEL</button></div>
+    <div class="sheet-body" data-show="same-number"><div class="f14-step"><div class="field"><div class="input f14-phone"><button class="f14-cc press" type="button" data-open="S-02-02-country-code-sheet.html" aria-haspopup="dialog" aria-label="Country: India, +91. Change country"><span class="f14-flag t-label-xs" aria-hidden="true">IN</span><i class="ic ic-16 hgi hgi-stroke hgi-arrow-down-01" aria-hidden="true"></i><span class="t-paragraph-l tnum">+91</span></button><span class="f14-sep" aria-hidden="true"></span><input class="t-paragraph-l tnum" type="tel" inputmode="numeric" maxlength="10" autocomplete="tel-national" placeholder="000 - 000 - 0000" value="9845012345" aria-label="Business phone number"></div></div><p class="helper t-paragraph-s">You’ll receive a call or a text via phone number. Standard data rates apply.</p></div></div>
+    <div class="sheet-foot" data-show="same-number"><button class="btn btn-filled t-label-m" type="button" disabled>SEND OTP</button><button class="btn glass t-label-m press" type="button" data-close>CANCEL</button></div>
+    <div class="sheet-body" data-show="sending"><div class="f14-step"><div class="field"><div class="input f14-phone"><button class="f14-cc press" type="button" data-open="S-02-02-country-code-sheet.html" aria-haspopup="dialog" aria-label="Country: India, +91. Change country" disabled><span class="f14-flag t-label-xs" aria-hidden="true">IN</span><i class="ic ic-16 hgi hgi-stroke hgi-arrow-down-01" aria-hidden="true"></i><span class="t-paragraph-l tnum">+91</span></button><span class="f14-sep" aria-hidden="true"></span><input class="t-paragraph-l tnum" type="tel" inputmode="numeric" maxlength="10" autocomplete="tel-national" placeholder="000 - 000 - 0000" value="9886044721" aria-label="Business phone number" disabled></div></div><p class="helper t-paragraph-s">You’ll receive a call or a text via phone number. Standard data rates apply.</p></div></div>
+    <div class="sheet-foot" data-show="sending"><button class="btn btn-filled t-label-m" type="button" disabled aria-busy="true"><span class="spinner" aria-hidden="true"></span><span class="sr-only">Sending OTP</span></button><button class="btn glass t-label-m" type="button" disabled>CANCEL</button></div>
+  </section>
+  <section class="sheet" role="dialog" aria-modal="true" aria-labelledby="t81" data-show="verify verify-filled verifying verify-error resend">
+    <span class="sheet-grab" aria-hidden="true"></span>
+    <div class="sheet-head"><div class="txt"><h1 id="t81" class="t-label-xxl">Verify Your Number</h1><p class="t-paragraph-m">Enter the 4-digit code sent to your number.</p></div><button class="ibtn ibtn-44 glass glass-icon press" data-close aria-label="Close"><i class="ic hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></div>
+    <div class="sheet-body" data-show="verify"><div class="f14-step"><div class="otp" role="group" aria-label="Verification code"><input class="t-label-xl tnum is-focus" type="text" inputmode="numeric" maxlength="1" value="" aria-label="Digit 1 of 4" autocomplete="one-time-code"><input class="t-label-xl tnum" type="text" inputmode="numeric" maxlength="1" value="" aria-label="Digit 2 of 4"><input class="t-label-xl tnum" type="text" inputmode="numeric" maxlength="1" value="" aria-label="Digit 3 of 4"><input class="t-label-xl tnum" type="text" inputmode="numeric" maxlength="1" value="" aria-label="Digit 4 of 4"></div><p class="t-paragraph-m f14-muted f14-center">We have sent a verification code to<br><span class="t-label-s tnum">+91 9886044721</span></p></div></div>
+    <div class="sheet-foot" data-show="verify"><button class="btn btn-filled t-label-m" type="button" disabled>VERIFY</button><button class="btn glass t-label-m" type="button" disabled>RESEND CODE IN <span class="tnum">00 : 52</span></button></div>
+    <div class="sheet-body" data-show="verify-filled"><div class="f14-step"><div class="otp" role="group" aria-label="Verification code"><input class="t-label-xl tnum" type="text" inputmode="numeric" maxlength="1" value="4" aria-label="Digit 1 of 4" autocomplete="one-time-code"><input class="t-label-xl tnum" type="text" inputmode="numeric" maxlength="1" value="8" aria-label="Digit 2 of 4"><input class="t-label-xl tnum" type="text" inputmode="numeric" maxlength="1" value="2" aria-label="Digit 3 of 4"><input class="t-label-xl tnum is-focus" type="text" inputmode="numeric" maxlength="1" value="7" aria-label="Digit 4 of 4"></div><p class="t-paragraph-m f14-muted f14-center">We have sent a verification code to<br><span class="t-label-s tnum">+91 9886044721</span></p></div></div>
+    <div class="sheet-foot" data-show="verify-filled"><button class="btn btn-filled t-label-m press" type="button" data-go-state="verifying">VERIFY</button><button class="btn glass t-label-m" type="button" disabled>RESEND CODE IN <span class="tnum">00 : 38</span></button></div>
+    <div class="sheet-body" data-show="verifying"><div class="f14-step"><div class="otp" role="group" aria-label="Verification code"><input class="t-label-xl tnum" type="text" inputmode="numeric" maxlength="1" value="4" aria-label="Digit 1 of 4" autocomplete="one-time-code" disabled><input class="t-label-xl tnum" type="text" inputmode="numeric" maxlength="1" value="8" aria-label="Digit 2 of 4" disabled><input class="t-label-xl tnum" type="text" inputmode="numeric" maxlength="1" value="2" aria-label="Digit 3 of 4" disabled><input class="t-label-xl tnum" type="text" inputmode="numeric" maxlength="1" value="7" aria-label="Digit 4 of 4" disabled></div><p class="t-paragraph-m f14-muted f14-center">We have sent a verification code to<br><span class="t-label-s tnum">+91 9886044721</span></p></div></div>
+    <div class="sheet-foot" data-show="verifying"><button class="btn btn-filled t-label-m" type="button" disabled aria-busy="true"><span class="spinner" aria-hidden="true"></span><span class="sr-only">Verifying</span></button><button class="btn glass t-label-m" type="button" disabled>RESEND CODE IN <span class="tnum">00 : 36</span></button></div>
+    <div class="sheet-body" data-show="verify-error"><div class="f14-step"><div class="otp" role="group" aria-label="Verification code"><input class="t-label-xl tnum is-error is-focus" type="text" inputmode="numeric" maxlength="1" value="" aria-label="Digit 1 of 4" autocomplete="one-time-code" aria-invalid="true"><input class="t-label-xl tnum is-error" type="text" inputmode="numeric" maxlength="1" value="" aria-label="Digit 2 of 4" aria-invalid="true"><input class="t-label-xl tnum is-error" type="text" inputmode="numeric" maxlength="1" value="" aria-label="Digit 3 of 4" aria-invalid="true"><input class="t-label-xl tnum is-error" type="text" inputmode="numeric" maxlength="1" value="" aria-label="Digit 4 of 4" aria-invalid="true"></div><p class="t-paragraph-m f14-muted f14-center">We have sent a verification code to<br><span class="t-label-s tnum">+91 9886044721</span></p></div></div>
+    <div class="sheet-foot" data-show="verify-error"><button class="btn btn-filled t-label-m" type="button" disabled>VERIFY</button><button class="btn glass t-label-m" type="button" disabled>RESEND CODE IN <span class="tnum">00 : 31</span></button></div>
+    <div class="sheet-body" data-show="resend"><div class="f14-step"><div class="otp" role="group" aria-label="Verification code"><input class="t-label-xl tnum is-focus" type="text" inputmode="numeric" maxlength="1" value="" aria-label="Digit 1 of 4" autocomplete="one-time-code"><input class="t-label-xl tnum" type="text" inputmode="numeric" maxlength="1" value="" aria-label="Digit 2 of 4"><input class="t-label-xl tnum" type="text" inputmode="numeric" maxlength="1" value="" aria-label="Digit 3 of 4"><input class="t-label-xl tnum" type="text" inputmode="numeric" maxlength="1" value="" aria-label="Digit 4 of 4"></div><p class="t-paragraph-m f14-muted f14-center">We have sent a verification code to<br><span class="t-label-s tnum">+91 9886044721</span></p></div></div>
+    <div class="sheet-foot" data-show="resend"><button class="btn btn-filled t-label-m" type="button" disabled>VERIFY</button><button class="btn glass t-label-m press" type="button" data-go-state="verify">RESEND CODE</button><span class="sr-only" role="status">You can resend the code now</span></div>
+  </section>
+  <section class="sheet" role="dialog" aria-modal="true" aria-labelledby="t82" data-show="success">
+    <span class="sheet-grab" aria-hidden="true"></span>
+    <div class="sheet-head"><div class="txt"><h1 id="t82" class="t-label-xxl">Updated Successfully</h1><p class="t-paragraph-m">Your phone number is now updated.</p></div><button class="ibtn ibtn-44 glass glass-icon press" data-close aria-label="Close"><i class="ic hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></div>
+    <div class="sheet-body" data-show="success"><div class="f14-success"><span class="f14-badge"><i class="ic ic-24 hgi hgi-stroke hgi-checkmark-circle-01" aria-hidden="true"></i></span><p class="t-paragraph-l" role="status">Your phone number has been updated successfully.</p></div></div>
+    <div class="sheet-foot" data-show="success"><a class="btn btn-filled t-label-m press" href="S-02-01-sign-in.html">CLOSE</a></div>
+  </section>
+  <div class="toast-region f14-toast" data-show="send-error" aria-live="polite"><div class="toast toast-danger glass glass-panel" role="status"><i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i><div class="body"><span class="t-label-s">Error</span><p class="t-paragraph-s">Network error occurred</p></div></div></div>
+  <div class="toast-region f14-toast" data-show="verify-error" aria-live="polite"><div class="toast toast-danger glass glass-panel" role="status"><i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i><div class="body"><span class="t-label-s">Error</span><p class="t-paragraph-s">Invalid OTP. Please try again.</p></div></div></div>
+  <div class="toast-region f14-toast" data-show="same-number" aria-live="polite"><div class="toast toast-danger glass glass-panel" role="status"><i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i><div class="body"><span class="t-label-s">Error</span><p class="t-paragraph-s">Please enter a different phone number</p></div></div></div>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375</b> — glass bottom sheet, three steps in one sheet. 1 Enter number: title, subtitle, country selector + number in one pill, inline error, helper, "SEND OTP" + "CANCEL". 2 Verify: title, subtitle, 4 code boxes, "sent to" line, "VERIFY" + resend. 3 Success: title, subtitle, success badge, message, "CLOSE".</li>
+      <li><b>768 / 1440</b> — side sheet from the right over Manage Account; same three steps, actions pinned to the bottom.</li>
+      <li>Step 1 states: <b>default</b> (current number, SEND OTP disabled because unchanged), <b>valid</b>, <b>invalid</b>, <b>same-number</b> (defensive toast), <b>sending</b>, <b>send-error</b>. Step 2: <b>verify</b>, <b>verify-filled</b>, <b>verifying</b>, <b>verify-error</b> (boxes cleared), <b>resend</b> (countdown finished). Step 3: <b>success</b>.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Bottom sheet / side sheet</li>
+      <li>IconButton glass (close)</li>
+      <li>Text field with country Select (opens S-02-02 Country code)</li>
+      <li>One-time-code input (4 boxes, as S-02-03)</li>
+      <li>Button filled L (SEND OTP / VERIFY / CLOSE — loading, disabled) · Button translucent L (CANCEL / RESEND CODE)</li>
+      <li>Toast danger</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Open / close — <code>--panel-*</code></li>
+      <li>Step change — <code>--tab-panel-*</code></li>
+      <li>Countdown digits — <code>--text-swap-*</code></li>
+      <li>Success icon — <code>--check-path-*</code></li>
+      <li>Button press — <code>--press-*</code>; error toast — <code>--toast-*</code></li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li>Dialog named by its title; focus moves into the sheet, is trapped, and returns to the Manage Account row that opened it; Esc or the scrim closes without saving.</li>
+      <li>While saving the primary button is disabled and announces its busy label; toasts are announced through a polite live region.</li>
+      <li>Number input: digits only, max 10, <code>inputmode="numeric"</code>; the inline error is tied to it and announced.</li>
+      <li>Code boxes are a labelled group with one-time-code autofill; on a failed verify they clear and focus returns to the first box.</li>
+      <li>The countdown is not announced every second; "You can resend the code now" is announced once.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li><b>Sign-out on success (Q-17, answered):</b> verifying the OTP updates the number on the server and ends the session, so "CLOSE" (and closing the sheet) lands on Sign in (S-02-01). The success copy says nothing about being signed out — recommend adding a line; none added here because the app has none.</li>
+      <li>The verify-failure message comes from the server; "Invalid OTP. Please try again." is sample text.</li>
+      <li>Country flag: the app draws a circular flag image; the mockup shows the ISO code in a circle until a flag asset set is chosen.</li>
+      <li>Glyph: the app uses CheckmarkBadge04 for the success badge, which is not in ICONS.md — <code>CheckmarkCircle01</code> is used instead.</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

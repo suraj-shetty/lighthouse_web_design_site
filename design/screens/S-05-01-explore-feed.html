@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-05-01 Explore feed</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+</head>
+<body class="t-paragraph-m"
+      data-states="default,loading,empty,empty-filtered,error,uploading,upload-failed"
+      data-roles="professional,reseller,homeowner"
+      data-shell="main" data-nav="explore">
+
+<!-- =====================================================================
+     SCREEN — one responsive page: bottom glass bar < 768, rail 768–1199,
+     sidebar ≥ 1200. State and role blocks are switched by assets/lh.js.
+     ===================================================================== -->
+<div class="screen app on-surface">
+
+
+  <div class="app-main">
+    <!-- Glass top header -->
+    <header class="top">
+      <div class="top-inner glass glass-panel">
+        <div class="top-row only-narrow">
+          <a href="S-13-01-my-profile.html" aria-label="Profile"><img class="avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=96&h=96&fit=crop&q=70" alt=""></a>
+          <h1 class="logo"><img class="logo-light" src="assets/logo_lighthouse_light.png" alt="Lighthouse"><img class="logo-dark" src="assets/logo_lighthouse.png" alt="Lighthouse"></h1>
+          <span class="grow"></span>
+          <button class="ibtn ibtn-44 glass glass-icon press" aria-label="Filters" data-open="S-05-02-feed-filters-sheet.html" data-show="default loading empty error uploading upload-failed"><i class="ic ic-24 hgi hgi-stroke hgi-filter-horizontal" aria-hidden="true"></i></button>
+          <button class="ibtn ibtn-44 glass glass-icon press" aria-label="Filters, filters active" data-open="S-05-02-feed-filters-sheet.html" data-open-state="selected" data-show="empty-filtered"><i class="ic ic-24 hgi hgi-stroke hgi-filter-horizontal" aria-hidden="true"></i><span class="dot"></span></button>
+        </div>
+        <div class="top-row">
+          <h1 class="sr-only only-wide">Explore</h1>
+          <div class="top-tabs chip-row" role="tablist" aria-label="Feed type">
+            <button class="chip glass t-label-s" role="tab" aria-selected="true">All</button>
+            <button class="chip glass t-label-s" role="tab" aria-selected="false">Inspirations</button>
+            <button class="chip glass t-label-s" role="tab" aria-selected="false">Projects</button>
+          </div>
+          <span class="grow only-wide"></span>
+          <button class="ibtn ibtn-44 glass glass-icon press only-wide" aria-label="Refresh"><i class="ic ic-24 hgi hgi-stroke hgi-rotate-01" aria-hidden="true"></i></button>
+          <button class="ibtn ibtn-44 glass glass-icon press only-wide" aria-label="Filters" data-open="S-05-02-feed-filters-sheet.html" data-show="default loading empty error uploading upload-failed"><i class="ic ic-24 hgi hgi-stroke hgi-filter-horizontal" aria-hidden="true"></i></button>
+          <button class="ibtn ibtn-44 glass glass-icon press only-wide" aria-label="Filters, filters active" data-open="S-05-02-feed-filters-sheet.html" data-open-state="selected" data-show="empty-filtered"><i class="ic ic-24 hgi hgi-stroke hgi-filter-horizontal" aria-hidden="true"></i><span class="dot"></span></button>
+        </div>
+
+        <!-- Upload banner -->
+        <div class="banner glass glass-panel" role="status" aria-live="polite" data-show="uploading">
+          <img class="thumb" src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=96&h=96&fit=crop&q=70" alt="">
+          <div class="body"><span class="t-label-s">Posting in progress...</span><div class="progress" role="progressbar" aria-label="Upload progress" aria-valuenow="64" aria-valuemin="0" aria-valuemax="100" style="--pct:64%"><i></i></div></div>
+          <span class="spinner spinner-16" aria-hidden="true"></span>
+        </div>
+        <div class="banner glass glass-panel" role="status" aria-live="polite" data-show="upload-failed">
+          <img class="thumb" src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=96&h=96&fit=crop&q=70" alt="">
+          <div class="body"><span class="t-label-s failed">Upload failed.</span></div>
+          <div class="acts"><button class="btn btn-text t-label-s">Retry</button><button class="btn btn-text t-label-s">Dismiss</button></div>
+        </div>
+      </div>
+    </header>
+
+    <!-- DEFAULT (also behind the upload banner) -->
+    <main class="feed stagger" role="feed" aria-label="Explore feed" data-show="default uploading upload-failed">
+
+      <!-- Project card, author + tagged user, 3 images -->
+      <article class="fcard" aria-labelledby="c1">
+        <div class="fcard-head">
+          <button class="fcard-who" data-open="S-05-09-people-tagged-users-sheet.html" aria-label="Studio Aranya and Meera Kapoor, view people">
+            <span class="avatar-stack">
+              <img class="avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=96&h=96&fit=crop&q=70" alt="">
+              <img class="avatar" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=96&h=96&fit=crop&q=70" alt="">
+            </span>
+            <span class="txt">
+              <span class="fcard-title"><h2 id="c1" class="t-card-title">Studio Aranya &amp; Meera Kapoor</h2><span class="verified" role="img" aria-label="Verified"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></span>
+              <a class="fcard-time t-paragraph-s" href="#">2h ago</a>
+            </span>
+          </button>
+          <button class="ibtn ibtn-44 ibtn-plain press" aria-label="More options" data-open="S-05-03-feed-item-options-sheet.html"><i class="ic ic-24 hgi hgi-stroke hgi-more-horizontal" aria-hidden="true"></i></button>
+        </div>
+        <div class="media" style="--ar: 4/5">
+          <a class="media-hit" href="S-06-01-explore-project.html" aria-label="Explore project"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=75" alt="Two-storey house with a pool at dusk" loading="lazy"></a>
+          <span class="media-count glass t-paragraph-s tnum" aria-label="Image 1 of 3">1/3</span>
+          <button class="ibtn ibtn-36 glass glass-icon media-arrow next" aria-label="Next image"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></button>
+          <a class="btn glass media-cta t-label-m press" href="S-06-01-explore-project.html">EXPLORE PROJECT<i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></a>
+        </div>
+        <div class="fcard-acts">
+          <button class="act like press" data-toggle aria-pressed="true" aria-label="Like"><svg class="ic ic-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 8.69444C2 13.0348 7.58942 17.858 10.4107 19.9677C11.3601 20.6776 12.6399 20.6776 13.5893 19.9677C16.4106 17.858 22 13.0348 22 8.69444C22 5.82563 19.8947 3.5 17 3.5C15.5 3.5 14 4 12 6C10 4 8.5 3.5 7 3.5C4.10526 3.5 2 5.82563 2 8.69444Z"/></svg></button>
+          <button class="act act-count t-label-s tnum" aria-label="1.2k likes, view likes" data-open="S-05-08-likes-sheet.html">1.2k</button>
+          <button class="act act-pair t-label-s tnum press" aria-label="Comments, 48" data-open="S-05-07-comments-sheet.html"><i class="ic ic-24 hgi hgi-stroke hgi-comment-01" aria-hidden="true"></i>48</button>
+          <button class="act press" aria-label="Share, 12 shares" data-toast="neutral|Link copied"><i class="ic ic-24 hgi hgi-stroke hgi-share-03" aria-hidden="true"></i></button>
+          <span class="act-count t-label-s tnum" aria-hidden="true" style="display:inline-flex;align-items:center">12</span>
+          <span class="grow"></span>
+          <button class="act save press" data-toggle aria-pressed="true" aria-label="Save"><svg class="ic ic-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 18.212V8.23515C4.5 5.53157 4.5 4.17979 5.32376 3.33989C6.14752 2.5 7.47335 2.5 10.125 2.5H13.875C16.5267 2.5 17.8525 2.5 18.6762 3.33989C19.5 4.17979 19.5 5.53158 19.5 8.23515V18.212C19.5 20.1274 19.5 21.0852 18.8987 21.4076C18.2975 21.7301 17.5234 21.1875 15.9753 20.1024L14.1245 18.805C13.0964 18.0843 12.5824 17.724 12 17.724C11.4176 17.724 10.9036 18.0843 9.87552 18.805L8.02469 20.1024C6.47657 21.1875 5.70252 21.7301 5.10126 21.4076C4.5 21.0852 4.5 20.1274 4.5 18.212Z"/><path d="M10 7H14"/></svg></button>
+        </div>
+        <div class="fcard-cap"><p class="clamp">Courtyard House, Alibaug</p></div>
+      </article>
+
+      <!-- Post card, single image, long caption with hashtags -->
+      <article class="fcard" aria-labelledby="c2">
+        <div class="fcard-head">
+          <a class="fcard-who" href="S-07-01-public-profile.html">
+            <img class="avatar" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=96&h=96&fit=crop&q=70" alt="">
+            <span class="txt">
+              <span class="fcard-title"><h2 id="c2" class="t-card-title">Meera Kapoor</h2></span>
+              <span class="fcard-time t-paragraph-s">5h ago</span>
+            </span>
+          </a>
+          <button class="ibtn ibtn-44 ibtn-plain press" aria-label="More options" data-open="S-05-03-feed-item-options-sheet.html"><i class="ic ic-24 hgi hgi-stroke hgi-more-horizontal" aria-hidden="true"></i></button>
+        </div>
+        <div class="media" style="--ar: 1">
+          <button class="media-hit" aria-label="Open image" data-open="S-05-10-feed-media-viewer.html"><img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1200&q=75" alt="Living room with a rust sofa and round coffee table" loading="lazy"></button>
+        </div>
+        <div class="fcard-acts">
+          <button class="act like press" data-toggle aria-pressed="false" aria-label="Like"><svg class="ic ic-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 8.69444C2 13.0348 7.58942 17.858 10.4107 19.9677C11.3601 20.6776 12.6399 20.6776 13.5893 19.9677C16.4106 17.858 22 13.0348 22 8.69444C22 5.82563 19.8947 3.5 17 3.5C15.5 3.5 14 4 12 6C10 4 8.5 3.5 7 3.5C4.10526 3.5 2 5.82563 2 8.69444Z"/></svg></button>
+          <button class="act act-count t-label-s tnum" aria-label="86 likes, view likes" data-open="S-05-08-likes-sheet.html">86</button>
+          <button class="act act-pair t-label-s tnum press" aria-label="Comments, 9" data-open="S-05-07-comments-sheet.html"><i class="ic ic-24 hgi hgi-stroke hgi-comment-01" aria-hidden="true"></i>9</button>
+          <button class="act press" aria-label="Share" data-toast="neutral|Link copied"><i class="ic ic-24 hgi hgi-stroke hgi-share-03" aria-hidden="true"></i></button>
+          <span class="grow"></span>
+          <button class="act save press" data-toggle aria-pressed="false" aria-label="Save"><svg class="ic ic-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 18.212V8.23515C4.5 5.53157 4.5 4.17979 5.32376 3.33989C6.14752 2.5 7.47335 2.5 10.125 2.5H13.875C16.5267 2.5 17.8525 2.5 18.6762 3.33989C19.5 4.17979 19.5 5.53158 19.5 8.23515V18.212C19.5 20.1274 19.5 21.0852 18.8987 21.4076C18.2975 21.7301 17.5234 21.1875 15.9753 20.1024L14.1245 18.805C13.0964 18.0843 12.5824 17.724 12 17.724C11.4176 17.724 10.9036 18.0843 9.87552 18.805L8.02469 20.1024C6.47657 21.1875 5.70252 21.7301 5.10126 21.4076C4.5 21.0852 4.5 20.1274 4.5 18.212Z"/><path d="M10 7H14"/></svg></button>
+        </div>
+        <div class="fcard-cap">
+          <p class="clamp">Warm neutrals for a 1,200 sq ft apartment in Bandra. Lime-plastered walls, a reclaimed teak console and linen upholstery keep the room calm through the monsoon light. <span class="hash">#interiors</span> <span class="hash">#limeplaster</span> <span class="hash">#mumbai</span></p>
+          <button class="btn btn-text t-paragraph-m" data-more aria-expanded="false">more</button>
+        </div>
+      </article>
+
+      <!-- Video post from a verified brand -->
+      <article class="fcard" aria-labelledby="c3">
+        <div class="fcard-head">
+          <a class="fcard-who" href="S-07-01-public-profile.html">
+            <img class="avatar" src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=96&h=96&fit=crop&q=70" alt="">
+            <span class="txt">
+              <span class="fcard-title"><h2 id="c3" class="t-card-title">Terra Tiles India</h2><span class="verified" role="img" aria-label="Verified"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></span>
+              <span class="fcard-time t-paragraph-s">1d ago</span>
+            </span>
+          </a>
+          <button class="ibtn ibtn-44 ibtn-plain press" aria-label="More options" data-open="S-05-03-feed-item-options-sheet.html"><i class="ic ic-24 hgi hgi-stroke hgi-more-horizontal" aria-hidden="true"></i></button>
+        </div>
+        <div class="media" style="--ar: 16/10">
+          <button class="media-hit" aria-label="Open video" data-open="S-05-10-feed-media-viewer.html"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&q=75" alt="Open-plan kitchen and dining space" loading="lazy"></button>
+          <div class="media-video">
+            <input class="seek" type="range" min="0" max="100" value="38" aria-label="Seek" style="--pct:38%">
+            <button class="ibtn ibtn-36 glass glass-icon swap press" data-toggle aria-pressed="true" aria-label="Mute">
+              <i class="ic off hgi hgi-stroke hgi-volume-high" aria-hidden="true"></i><i class="ic on hgi hgi-stroke hgi-volume-off" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+        <div class="fcard-acts">
+          <button class="act like press" data-toggle aria-pressed="false" aria-label="Like"><svg class="ic ic-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 8.69444C2 13.0348 7.58942 17.858 10.4107 19.9677C11.3601 20.6776 12.6399 20.6776 13.5893 19.9677C16.4106 17.858 22 13.0348 22 8.69444C22 5.82563 19.8947 3.5 17 3.5C15.5 3.5 14 4 12 6C10 4 8.5 3.5 7 3.5C4.10526 3.5 2 5.82563 2 8.69444Z"/></svg></button>
+          <button class="act act-count t-label-s tnum" aria-label="2.4k likes, view likes" data-open="S-05-08-likes-sheet.html">2.4k</button>
+          <button class="act act-pair t-label-s tnum press" aria-label="Comments, 132" data-open="S-05-07-comments-sheet.html"><i class="ic ic-24 hgi hgi-stroke hgi-comment-01" aria-hidden="true"></i>132</button>
+          <button class="act press" aria-label="Share, 57 shares" data-toast="neutral|Link copied"><i class="ic ic-24 hgi hgi-stroke hgi-share-03" aria-hidden="true"></i></button>
+          <span class="act-count t-label-s tnum" aria-hidden="true" style="display:inline-flex;align-items:center">57</span>
+          <span class="grow"></span>
+          <button class="act save press" data-toggle aria-pressed="false" aria-label="Save"><svg class="ic ic-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 18.212V8.23515C4.5 5.53157 4.5 4.17979 5.32376 3.33989C6.14752 2.5 7.47335 2.5 10.125 2.5H13.875C16.5267 2.5 17.8525 2.5 18.6762 3.33989C19.5 4.17979 19.5 5.53158 19.5 8.23515V18.212C19.5 20.1274 19.5 21.0852 18.8987 21.4076C18.2975 21.7301 17.5234 21.1875 15.9753 20.1024L14.1245 18.805C13.0964 18.0843 12.5824 17.724 12 17.724C11.4176 17.724 10.9036 18.0843 9.87552 18.805L8.02469 20.1024C6.47657 21.1875 5.70252 21.7301 5.10126 21.4076C4.5 21.0852 4.5 20.1274 4.5 18.212Z"/><path d="M10 7H14"/></svg></button>
+        </div>
+        <div class="fcard-cap"><p class="clamp">Large-format porcelain, laid in a single afternoon. <span class="hash">#tiles</span></p></div>
+      </article>
+
+      <!-- Project card, three collaborators, broken image -->
+      <article class="fcard" aria-labelledby="c4">
+        <div class="fcard-head">
+          <button class="fcard-who" data-open="S-05-09-people-tagged-users-sheet.html" aria-label="Ananya Rao, Vikram Shah and 2 others, view people">
+            <span class="avatar-stack">
+              <img class="avatar" src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?w=96&h=96&fit=crop&q=70" alt="">
+              <img class="avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=96&h=96&fit=crop&q=70" alt="">
+            </span>
+            <span class="txt">
+              <span class="fcard-title"><h2 id="c4" class="t-card-title">Ananya Rao, Vikram Shah &amp; 2 others</h2></span>
+              <span class="fcard-time t-paragraph-s">2w ago</span>
+            </span>
+          </button>
+          <button class="ibtn ibtn-44 ibtn-plain press" aria-label="More options" data-open="S-05-03-feed-item-options-sheet.html"><i class="ic ic-24 hgi hgi-stroke hgi-more-horizontal" aria-hidden="true"></i></button>
+        </div>
+        <div class="media" style="--ar: 1.91">
+          <div class="media-broken" role="img" aria-label="Image could not be loaded"><i class="ic ic-24 hgi hgi-stroke hgi-image-02" aria-hidden="true"></i></div>
+          <span class="media-count glass t-paragraph-s tnum" aria-label="Image 1 of 6">1/6</span>
+          <a class="btn glass media-cta t-label-m press" href="S-06-01-explore-project.html">EXPLORE PROJECT<i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></a>
+        </div>
+        <div class="fcard-acts">
+          <button class="act like press" data-toggle aria-pressed="false" aria-label="Like"><svg class="ic ic-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 8.69444C2 13.0348 7.58942 17.858 10.4107 19.9677C11.3601 20.6776 12.6399 20.6776 13.5893 19.9677C16.4106 17.858 22 13.0348 22 8.69444C22 5.82563 19.8947 3.5 17 3.5C15.5 3.5 14 4 12 6C10 4 8.5 3.5 7 3.5C4.10526 3.5 2 5.82563 2 8.69444Z"/></svg></button>
+          <button class="act press" aria-label="Comments" data-open="S-05-07-comments-sheet.html"><i class="ic ic-24 hgi hgi-stroke hgi-comment-01" aria-hidden="true"></i></button>
+          <button class="act press" aria-label="Share" data-toast="neutral|Link copied"><i class="ic ic-24 hgi hgi-stroke hgi-share-03" aria-hidden="true"></i></button>
+          <span class="grow"></span>
+          <button class="act save press" data-toggle aria-pressed="false" aria-label="Save"><svg class="ic ic-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 18.212V8.23515C4.5 5.53157 4.5 4.17979 5.32376 3.33989C6.14752 2.5 7.47335 2.5 10.125 2.5H13.875C16.5267 2.5 17.8525 2.5 18.6762 3.33989C19.5 4.17979 19.5 5.53158 19.5 8.23515V18.212C19.5 20.1274 19.5 21.0852 18.8987 21.4076C18.2975 21.7301 17.5234 21.1875 15.9753 20.1024L14.1245 18.805C13.0964 18.0843 12.5824 17.724 12 17.724C11.4176 17.724 10.9036 18.0843 9.87552 18.805L8.02469 20.1024C6.47657 21.1875 5.70252 21.7301 5.10126 21.4076C4.5 21.0852 4.5 20.1274 4.5 18.212Z"/><path d="M10 7H14"/></svg></button>
+        </div>
+        <div class="fcard-cap"><p class="clamp">Weekend Home, Coorg</p></div>
+      </article>
+
+      <div class="feed-more" role="status" aria-label="Loading more"><span class="spinner"></span></div>
+    </main>
+
+    <!-- LOADING — three short skeleton cards, as FeedShimmerList -->
+    <main class="feed stagger" aria-busy="true" aria-label="Loading feed" data-show="loading">
+      <div class="fcard" aria-hidden="true">
+        <div class="fcard-head"><span class="skel skel-circle" style="width:40px;height:40px"></span><span class="skel" style="width:160px;height:14px"></span></div>
+        <span class="skel skel-media"></span>
+        <div class="fcard-cap" style="display:flex;flex-direction:column;gap:var(--spacing-8);padding-top:var(--spacing-14)"><span class="skel" style="width:80%;height:14px"></span><span class="skel" style="width:50%;height:14px"></span></div>
+      </div>
+      <div class="fcard" aria-hidden="true">
+        <div class="fcard-head"><span class="skel skel-circle" style="width:40px;height:40px"></span><span class="skel" style="width:120px;height:14px"></span></div>
+        <span class="skel skel-media"></span>
+        <div class="fcard-cap" style="display:flex;flex-direction:column;gap:var(--spacing-8);padding-top:var(--spacing-14)"><span class="skel" style="width:70%;height:14px"></span><span class="skel" style="width:40%;height:14px"></span></div>
+      </div>
+      <div class="fcard" aria-hidden="true">
+        <div class="fcard-head"><span class="skel skel-circle" style="width:40px;height:40px"></span><span class="skel" style="width:140px;height:14px"></span></div>
+        <span class="skel skel-media"></span>
+        <div class="fcard-cap" style="display:flex;flex-direction:column;gap:var(--spacing-8);padding-top:var(--spacing-14)"><span class="skel" style="width:60%;height:14px"></span><span class="skel" style="width:45%;height:14px"></span></div>
+      </div>
+    </main>
+
+    <!-- EMPTY — no filter. ERROR reuses it with the toast below (Q-06). -->
+    <main class="feed stagger" data-show="empty error">
+      <div class="empty">
+        <div class="empty-tile" aria-hidden="true"><i class="ic ic-24 hgi hgi-stroke hgi-image-02"></i></div>
+        <div class="empty-text"><h2 class="t-label-xl">It's a little quiet here.</h2><p class="t-paragraph-s">Something inspiring is coming soon.</p></div>
+      </div>
+    </main>
+
+    <!-- EMPTY — filter active -->
+    <main class="feed stagger" data-show="empty-filtered">
+      <div class="empty">
+        <div class="empty-tile" aria-hidden="true"><i class="ic ic-24 hgi hgi-stroke hgi-filter-horizontal"></i></div>
+        <div class="empty-text"><h2 class="t-label-xl">No matches this time.</h2><p class="t-paragraph-s">Try adjusting your filters to discover more.</p></div>
+        <button class="btn btn-s btn-filled t-label-xs press">Clear Filters</button>
+      </div>
+    </main>
+  </div>
+
+
+  <!-- Toast (error state) -->
+  <div class="toast-region" aria-live="polite" data-show="error">
+    <div class="toast toast-danger glass glass-panel" role="status">
+      <i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i>
+      <div class="body"><span class="t-label-s">Error</span><p class="t-paragraph-s">Network error occurred</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- =====================================================================
+     ANNOTATIONS (shown on the board, hidden inside the frames)
+     ===================================================================== -->
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375</b> — mirrors the Flutter screen: glass header (avatar, logo, filter), three equal chips, single column, floating glass tab bar with the separate action button.</li>
+      <li><b>768</b> — floating glass menu, collapsed by default: logo mark on top, icons with a label tooltip on hover / focus, action button, profile at the foot. Tapping the logo mark expands it.</li>
+      <li><b>1440</b> — the same menu, expanded by default: full logo, labels, and a collapse button. The choice is remembered. Recommended over a top header: one pattern from tablet up, and the top stays free for each page's own glass bar.</li>
+      <li>The top bar has no background at rest. Once content scrolls under it, its glass fades in: a floating glass bar from 768, the app's gradient-fade blur on mobile (<code>--duration-fast</code>).</li>
+      <li>The menu keeps its expanded / collapsed state when you move between screens; only the logo mark and the collapse button change it.</li>
+      <li>Feed stays one centred column on every width (cards are not stretched). Refresh button replaces pull-to-refresh from 768.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Nav bar (glass pill, active disc, unread dot) · Sidebar / rail</li>
+      <li>Top header (gradient-fade glass) · IconButton glass / plain</li>
+      <li>Chip (default / selected) as a tablist</li>
+      <li>Avatar, avatar stack, verified badge</li>
+      <li>Media frame: image count, glass button M, carousel arrows (pointer only), seek bar, mute</li>
+      <li>Like / Save buttons, count buttons · Button text (more / less, Retry, Dismiss) · Button filled S (Clear Filters)</li>
+      <li>Banner + Progress bar · Skeleton · Empty state · Toast (danger) · Spinner</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Press on every button and card target — <code>--press-*</code></li>
+      <li><b>Menu tap</b> (try Explore ⇄ Discover): the active pill stretches from the old item over the new one (<code>--duration-quick</code>, <code>--ease-out</code>) while the page fades and blurs out (<code>--blur-large</code>); it then contracts onto the new item (<code>--tabs-*</code>) while the new page rises in sharp, block by block (<code>--stagger-*</code>).</li>
+      <li>Menu expand / collapse — width <code>--resize-*</code>, labels fade <code>--duration-quick</code></li>
+      <li>Chip selection — <code>--tabs-*</code>; feed swap — <code>--tab-panel-*</code></li>
+      <li>Chip row hide on scroll down / show on scroll up (mobile only) — Flutter 200 ms ease-in-out; <code>--home-chips-*</code> is empty (Q-26)</li>
+      <li>Like — <code>--like-*</code> on like only; Save and Mute — <code>--icon-swap-*</code></li>
+      <li>Unread / filter dot — <code>--badge-pop-*</code>; Toast — <code>--toast-*</code></li>
+      <li>Skeleton to content — <code>--shimmer-*</code>, <code>--skel-*</code>, <code>--reveal-*</code>; carousel height — <code>--resize-*</code></li>
+      <li>Sheets opened from here (filters, options, comments, likes, people) — <code>--panel-*</code>; media viewer — <code>--mediaview-open-dur</code></li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li>Landmarks: <code>nav</code> "Primary", <code>header</code>, <code>main</code> as a feed of articles; each card title is an <code>h2</code>.</li>
+      <li>Chips are a tablist; nav uses <code>aria-current</code>; Notifications label says "unread" (not colour alone).</li>
+      <li>Icon buttons are labelled: Profile, Filters (+ "filters active"), Refresh, More options, Like, Comments, Share, Save, Mute, Next image, Create / More actions.</li>
+      <li>Every target is at least 44 × 44 (small visuals carry a larger hit area). Focus ring is <code>--focus-ring</code>.</li>
+      <li>Toast and upload banner are polite live regions; reduced motion collapses all durations.</li>
+      <li>Videos autoplay muted and need a pause control in build; carousel has arrow buttons for pointer and keyboard.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li><b>Glass</b> follows the Flutter widgets (fill, 1px gradient hairline top to bottom, blur, inner shine), using the tokens. Where the app hard-codes a value the tokens differ from (dark fill <code>#505050 → black</code> at 60%, nav blur 7), the token is used.</li>
+      <li>EXPLORE PROJECT mirrors the app: 85% of the card width (capped at 360 on wide screens), 48 high, label + arrow.</li>
+      <li>Collapse button uses ArrowLeft01; <code>ICONS.md</code> has no sidebar glyph.</li>
+      <li>Profile entry moves from the header avatar to the menu foot from 768 (header avatar kept on mobile).</li>
+      <li>Nav labels "Home, Explore, Discover, Marketplace, Notifications, Create, More actions" are web additions (Q-48).</li>
+      <li>Glyphs: spec names Notification01, Menu01 and UserSwitch, which are not in <code>ICONS.md</code>. Used Notification03 and MoreHorizontal from the approved list.</li>
+      <li>Error state = error toast + the app's empty placeholder (Q-06); Refresh retries.</li>
+      <li>Filled button follows the live design system (<code>--bg-inverse</code>), not <code>--element-bg-button-linear-*</code> named in DESIGN_SPEC §8.</li>
+      <li>Liked / saved fill the same Hugeicons stroke-rounded outline (Favourite, Bookmark02) with <code>--like-color</code> / <code>--save-color</code>.</li>
+      <li>Hashtags use <code>--text-link</code> and stay inert (Q-33, Q-52). Image alt text is sample copy (Q-36).</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

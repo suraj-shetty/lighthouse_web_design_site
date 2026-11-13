@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-13-06 Update Photo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-13a.css">
+</head>
+<body class="t-paragraph-m" data-kind="overlay" data-host="S-13-05-manage-account.html" data-states="toggle,profile,cover">
+<div class="screen overlay" data-variant="popover">
+  <button class="scrim" data-close aria-label="Close"></button>
+  <section class="sheet" role="dialog" aria-modal="true" aria-labelledby="pt" style="--pop-width:360px">
+    <span class="sheet-grab" aria-hidden="true"></span>
+    <div class="sheet-head ph-head"><div class="txt"><h1 id="pt" class="t-label-xxl">Update Photo</h1><p class="t-paragraph-m">Update your profile or cover photo.</p></div></div>
+    <div class="sheet-body">
+      <div class="seg" role="group" aria-label="Photo to update" data-show="toggle"><button class="t-label-s" aria-pressed="true">Profile</button><button class="t-label-s" aria-pressed="false">Cover</button></div>
+      <p class="ph-static t-label-m" data-show="profile">Profile</p>
+      <p class="ph-static t-label-m" data-show="cover">Cover</p>
+      <div class="ph-tiles" data-show="toggle profile"><button class="ph-tile press" data-open="S-13-07-crop-image.html" data-open-state="profile" data-replace><i class="ic hgi hgi-stroke hgi-camera-01" aria-hidden="true"></i><span class="t-paragraph-l">Camera</span></button><button class="ph-tile press" data-open="S-13-07-crop-image.html" data-open-state="profile" data-replace><i class="ic hgi hgi-stroke hgi-file-02" aria-hidden="true"></i><span class="t-paragraph-l">Gallery</span></button></div>
+      <div class="ph-tiles" data-show="cover"><button class="ph-tile press" data-open="S-13-07-crop-image.html" data-open-state="cover" data-replace><i class="ic hgi hgi-stroke hgi-camera-01" aria-hidden="true"></i><span class="t-paragraph-l">Camera</span></button><button class="ph-tile press" data-open="S-13-07-crop-image.html" data-open-state="cover" data-replace><i class="ic hgi hgi-stroke hgi-file-02" aria-hidden="true"></i><span class="t-paragraph-l">Gallery</span></button></div>
+    </div>
+    <div class="sheet-foot"><button class="btn btn-full glass t-label-m press" data-open="S-13-09-blocking-loader.html" data-replace>REMOVE PICTURE</button></div>
+  </section>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375</b> — glass bottom sheet: handle, centred title and subtitle, a 48 high pill that is either the Profile / Cover toggle or a static label, two equal tiles (Camera, Gallery) with icon over label, full-width REMOVE PICTURE.</li>
+      <li><b>768 / 1440</b> — the same content as a 360 wide popover anchored to the control that opened it (pencil, cover or avatar on Manage Account).</li>
+      <li>States: <b>toggle</b> (opened from the pencil: Profile / Cover segments, Profile preselected) · <b>profile</b> (opened from the avatar: static "Profile") · <b>cover</b> (opened from the cover: static "Cover").</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Bottom sheet / popover</li>
+      <li>Segmented toggle (<code>.seg</code>) · static label pill</li>
+      <li>Select-card style tiles (Camera, Gallery)</li>
+      <li>Button glass L (REMOVE PICTURE)</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Open / close — <code>--panel-*</code></li>
+      <li>Segment change — <code>--tabs-*</code></li>
+      <li>Tile and button press — <code>--press-*</code></li>
+      <li>Camera / Gallery close the sheet and continue to the cropper S-13-07, preview S-13-08, loader S-13-09; REMOVE PICTURE closes the sheet and shows the loader</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li>Dialog named "Update Photo"; focus trapped and returned to the trigger.</li>
+      <li>The toggle is a labelled group of two pressed-state buttons ("Photo to update"); in build it should behave as a radio group with arrow keys.</li>
+      <li>Tiles are buttons with visible text; Gallery is a native file input in build so it is reachable by keyboard.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>Gallery opens the browser's file chooser (JPEG / PNG); Camera is shown only where a capture device is available — otherwise Gallery takes the full width (web adaptation of <code>image_picker</code>).</li>
+      <li>Camera03 is not in <code>ICONS.md</code>; Camera01 is used. Gallery keeps the app's File02 glyph.</li>
+      <li>In the mockup both tiles of the toggle state continue to the profile cropper regardless of the selected segment.</li>
+      <li>Browser camera permission prompts are not designed (F-13-Q12).</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

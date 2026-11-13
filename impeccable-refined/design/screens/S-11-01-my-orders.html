@@ -1,0 +1,678 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-11-01 My Orders</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-11.css">
+</head>
+<body class="t-paragraph-m" data-states="default,loading-more,cancelled,loading,empty,error" data-shell="main" data-nav="marketplace">
+<div class="screen app on-surface" style="--page-bg: var(--home-surface); --page-max: 1120px">
+  <div class="app-main">
+    <header class="top">
+      <div class="top-inner glass glass-panel">
+        <div class="bar">
+          <a class="ibtn ibtn-44 ibtn-plain press" data-back href="S-10-01-marketplace-home.html" aria-label="Back"><i class="ic ic-24 hgi hgi-stroke hgi-arrow-left-01" aria-hidden="true"></i></a>
+          <h1 class="t-label-xl">My Orders</h1>
+          <button class="ibtn ibtn-44 glass glass-icon press only-wide" aria-label="Refresh" data-go-state="loading"><i class="ic ic-24 hgi hgi-stroke hgi-rotate-01" aria-hidden="true"></i></button>
+        </div>
+        <div class="chip-row chip-scroll" role="tablist" aria-label="Order status" data-show="default loading-more loading"><button class="chip glass t-label-s" role="tab" aria-selected="true" aria-controls="p-requested">Requested</button><button class="chip glass t-label-s" role="tab" aria-selected="false" aria-controls="p-quoted">Quoted</button><button class="chip glass t-label-s" role="tab" aria-selected="false" aria-controls="p-confirmed">Confirmed</button><button class="chip glass t-label-s" role="tab" aria-selected="false" aria-controls="p-delivered">Delivered</button><button class="chip glass t-label-s" role="tab" aria-selected="false" aria-controls="p-rejected">Rejected</button><button class="chip glass t-label-s" role="tab" aria-selected="false" aria-controls="p-completed">Completed</button><button class="chip glass t-label-s" role="tab" aria-selected="false" aria-controls="p-cancelled">Cancelled</button><button class="chip glass t-label-s" role="tab" aria-selected="false" aria-controls="p-declined">Declined</button></div>
+        <div class="chip-row chip-scroll" role="tablist" aria-label="Order status" data-show="cancelled"><button class="chip glass t-label-s" role="tab" aria-selected="false" aria-controls="c-requested">Requested</button><button class="chip glass t-label-s" role="tab" aria-selected="false" aria-controls="c-quoted">Quoted</button><button class="chip glass t-label-s" role="tab" aria-selected="false" aria-controls="c-confirmed">Confirmed</button><button class="chip glass t-label-s" role="tab" aria-selected="false" aria-controls="c-delivered">Delivered</button><button class="chip glass t-label-s" role="tab" aria-selected="false" aria-controls="c-rejected">Rejected</button><button class="chip glass t-label-s" role="tab" aria-selected="false" aria-controls="c-completed">Completed</button><button class="chip glass t-label-s" role="tab" aria-selected="true" aria-controls="c-cancelled">Cancelled</button><button class="chip glass t-label-s" role="tab" aria-selected="false" aria-controls="c-declined">Declined</button></div>
+        <div class="chip-row chip-scroll" role="tablist" aria-label="Order status" data-show="empty error"><button class="chip glass t-label-s" role="tab" aria-selected="true" aria-controls="e-requested">Requested</button><button class="chip glass t-label-s" role="tab" aria-selected="false" aria-controls="e-quoted">Quoted</button><button class="chip glass t-label-s" role="tab" aria-selected="false" aria-controls="e-confirmed">Confirmed</button><button class="chip glass t-label-s" role="tab" aria-selected="false" aria-controls="e-delivered">Delivered</button><button class="chip glass t-label-s" role="tab" aria-selected="false" aria-controls="e-rejected">Rejected</button><button class="chip glass t-label-s" role="tab" aria-selected="false" aria-controls="e-completed">Completed</button><button class="chip glass t-label-s" role="tab" aria-selected="false" aria-controls="e-cancelled">Cancelled</button><button class="chip glass t-label-s" role="tab" aria-selected="false" aria-controls="e-declined">Declined</button></div>
+      </div>
+    </header>
+    <main class="page stagger" data-show="default loading-more">
+      <section role="tabpanel" id="p-requested" aria-label="Requested">
+        <div class="split mo">
+        <ul class="mo-list" aria-label="Requested orders">
+          <li><a class="orow" href="S-11-03-active-order-detail.html" aria-label="Aria Single Lever Basin Mixer with Pop-up Waste, quantity 6, Waiting for quotes" aria-current="true">
+            <img class="orow-img" src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=224&h=224&fit=crop&q=70" alt="" loading="lazy">
+            <div class="orow-body">
+              <div class="orow-txt"><span class="tag t-paragraph-s">Jaquar</span><span class="t-paragraph-s meta">SKU: ARI-CHR-39011B</span><h2 class="t-card-title truncate">Aria Single Lever Basin Mixer with Pop-up Waste</h2><span class="t-paragraph-s meta tnum">Quantity: 06</span></div>
+              <div class="orow-end"><span class="pill warning t-label-xs">Waiting for quotes</span><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></div>
+            </div>
+          </a></li>
+          <li><a class="orow" href="S-11-03-active-order-detail.html" aria-label="Eternity Vitrified Floor Tile 600 × 1200 mm, quantity 48, Waiting for quotes">
+            <img class="orow-img" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=224&h=224&fit=crop&q=70" alt="" loading="lazy">
+            <div class="orow-body">
+              <div class="orow-txt"><span class="tag t-paragraph-s">Kajaria</span><span class="t-paragraph-s meta">SKU: ETR-6012-GRY</span><h2 class="t-card-title truncate">Eternity Vitrified Floor Tile 600 × 1200 mm</h2><span class="t-paragraph-s meta tnum">Quantity: 48</span></div>
+              <div class="orow-end"><span class="pill warning t-label-xs">Waiting for quotes</span><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></div>
+            </div>
+          </a></li>
+          <li><a class="orow" href="S-11-03-active-order-detail.html" aria-label="Crabtree Athena 16 A Switch with Indicator, quantity 24, Waiting for quotes">
+            <span class="orow-img" role="img" aria-label="Image unavailable"><i class="ic ic-24 hgi hgi-stroke hgi-image-02" aria-hidden="true"></i></span>
+            <div class="orow-body">
+              <div class="orow-txt"><span class="tag t-paragraph-s">Havells</span><span class="t-paragraph-s meta">SKU: CRB-ATH-16A</span><h2 class="t-card-title truncate">Crabtree Athena 16 A Switch with Indicator</h2><span class="t-paragraph-s meta tnum">Quantity: 24</span></div>
+              <div class="orow-end"><span class="pill warning t-label-xs">Waiting for quotes</span><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></div>
+            </div>
+          </a></li>
+          <li><a class="orow" href="S-11-03-active-order-detail.html" aria-label="Soft-Close Drawer Channel 500 mm, quantity 12, Waiting for quotes">
+            <img class="orow-img" src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=224&h=224&fit=crop&q=70" alt="" loading="lazy">
+            <div class="orow-body">
+              <div class="orow-txt"><span class="tag t-paragraph-s">Hafele</span><span class="t-paragraph-s meta">SKU: HF-SC-500</span><h2 class="t-card-title truncate">Soft-Close Drawer Channel 500 mm</h2><span class="t-paragraph-s meta tnum">Quantity: 12</span></div>
+              <div class="orow-end"><span class="pill warning t-label-xs">Waiting for quotes</span><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></div>
+            </div>
+          </a></li>
+          <li class="mo-more" data-show="loading-more" role="status"><span class="spinner" aria-hidden="true"></span><span class="sr-only">Loading more orders</span></li>
+        </ul>
+        <aside class="mo-panel sticky card od-card" aria-label="Selected order">
+          <div class="head"><img class="thumb" src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=144&h=144&fit=crop&q=70" alt=""><div class="orow-txt"><span class="tag t-paragraph-s">Jaquar</span><h3 class="t-label-m">Aria Single Lever Basin Mixer with Pop-up Waste</h3><span class="t-paragraph-s meta">SKU: ARI-CHR-39011B</span></div></div>
+          <div class="row between wrap"><span class="t-label-s">Order ORD-2026-00418</span><span class="pill warning t-label-xs">Waiting for quotes</span></div>
+          <dl class="kv t-paragraph-m"><dt>Quantity</dt><dd class="tnum">06</dd><dt>Product MRP</dt><dd class="tnum">₹8,450</dd><dt>Placed on</dt><dd>02 Nov 2026</dd></dl>
+          <hr class="hr">
+          <ol class="steps" aria-label="Order progress"><li class="step now"><span class="mark" aria-hidden="true"></span><span class="txt"><span class="t-label-s">Requested<span class="sr-only">, current</span></span><span class="t-paragraph-s">02 Nov 2026</span></span></li><li class="step "><span class="mark" aria-hidden="true"></span><span class="txt"><span class="t-paragraph-m">Quoted<span class="sr-only">, pending</span></span></span></li><li class="step "><span class="mark" aria-hidden="true"></span><span class="txt"><span class="t-paragraph-m">Confirmed<span class="sr-only">, pending</span></span></span></li><li class="step "><span class="mark" aria-hidden="true"></span><span class="txt"><span class="t-paragraph-m">Delivered<span class="sr-only">, pending</span></span></span></li><li class="step "><span class="mark" aria-hidden="true"></span><span class="txt"><span class="t-paragraph-m">Completed<span class="sr-only">, pending</span></span></span></li></ol>
+          <a class="btn btn-filled btn-full t-label-m press" href="S-11-03-active-order-detail.html">VIEW ORDER</a>
+        </aside>
+        </div>
+      </section>
+      <section role="tabpanel" id="p-quoted" aria-label="Quoted" hidden>
+        <div class="split mo">
+        <ul class="mo-list" aria-label="Quoted orders">
+          <li><a class="orow" href="S-11-03-active-order-detail.html" aria-label="Royale Luxury Emulsion 20 L, Morning Glory, quantity 3, Quotes received" aria-current="true">
+            <img class="orow-img" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=224&h=224&fit=crop&q=70" alt="" loading="lazy">
+            <div class="orow-body">
+              <div class="orow-txt"><span class="tag t-paragraph-s">Asian paints</span><span class="t-paragraph-s meta">SKU: RYL-LUX-20L</span><h2 class="t-card-title truncate">Royale Luxury Emulsion 20 L, Morning Glory</h2><span class="t-paragraph-s meta tnum">Quantity: 03</span></div>
+              <div class="orow-end"><span class="pill success t-label-xs">Quotes received</span><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></div>
+            </div>
+          </a></li>
+          <li><a class="orow" href="S-11-03-active-order-detail.html" aria-label="Recessed LED Downlight 12 W Warm White, quantity 36, Quotes received">
+            <img class="orow-img" src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=224&h=224&fit=crop&q=70" alt="" loading="lazy">
+            <div class="orow-body">
+              <div class="orow-txt"><span class="tag t-paragraph-s">Philips</span><span class="t-paragraph-s meta">SKU: HUE-RD-12W</span><h2 class="t-card-title truncate">Recessed LED Downlight 12 W Warm White</h2><span class="t-paragraph-s meta tnum">Quantity: 36</span></div>
+              <div class="orow-end"><span class="pill success t-label-xs">Quotes received</span><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></div>
+            </div>
+          </a></li>
+          <li><a class="orow" href="S-11-03-active-order-detail.html" aria-label="Club Plus Marine Plywood 19 mm, quantity 20, Quotes received">
+            <img class="orow-img" src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=224&h=224&fit=crop&q=70" alt="" loading="lazy">
+            <div class="orow-body">
+              <div class="orow-txt"><span class="tag t-paragraph-s">Greenply</span><span class="t-paragraph-s meta">SKU: CLB-MR-19</span><h2 class="t-card-title truncate">Club Plus Marine Plywood 19 mm</h2><span class="t-paragraph-s meta tnum">Quantity: 20</span></div>
+              <div class="orow-end"><span class="pill success t-label-xs">Quotes received</span><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></div>
+            </div>
+          </a></li>
+        </ul>
+        <aside class="mo-panel sticky card od-card" aria-label="Selected order">
+          <div class="head"><img class="thumb" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=144&h=144&fit=crop&q=70" alt=""><div class="orow-txt"><span class="tag t-paragraph-s">Asian paints</span><h3 class="t-label-m">Royale Luxury Emulsion 20 L, Morning Glory</h3><span class="t-paragraph-s meta">SKU: RYL-LUX-20L</span></div></div>
+          <div class="row between wrap"><span class="t-label-s">Order ORD-2026-00411</span><span class="pill success t-label-xs">Quotes received</span></div>
+          <dl class="kv t-paragraph-m"><dt>Quantity</dt><dd class="tnum">03</dd><dt>Product MRP</dt><dd class="tnum">₹11,900</dd><dt>Placed on</dt><dd>30 Oct 2026</dd></dl>
+          <hr class="hr">
+          <ol class="steps" aria-label="Order progress"><li class="step done"><span class="mark" aria-hidden="true"><i class="ic ic-16 hgi hgi-stroke hgi-tick-02" aria-hidden="true"></i></span><span class="txt"><span class="t-label-s">Requested<span class="sr-only">, done</span></span><span class="t-paragraph-s">30 Oct 2026</span></span></li><li class="step now"><span class="mark" aria-hidden="true"></span><span class="txt"><span class="t-label-s">Quoted<span class="sr-only">, current</span></span></span></li><li class="step "><span class="mark" aria-hidden="true"></span><span class="txt"><span class="t-paragraph-m">Confirmed<span class="sr-only">, pending</span></span></span></li><li class="step "><span class="mark" aria-hidden="true"></span><span class="txt"><span class="t-paragraph-m">Delivered<span class="sr-only">, pending</span></span></span></li><li class="step "><span class="mark" aria-hidden="true"></span><span class="txt"><span class="t-paragraph-m">Completed<span class="sr-only">, pending</span></span></span></li></ol>
+          <a class="btn btn-filled btn-full t-label-m press" href="S-11-03-active-order-detail.html">VIEW ORDER</a>
+        </aside>
+        </div>
+      </section>
+      <section role="tabpanel" id="p-confirmed" aria-label="Confirmed" hidden>
+        <div class="split mo">
+        <ul class="mo-list" aria-label="Confirmed orders">
+          <li><a class="orow" href="S-11-07-in-progress-order-detail.html" aria-label="Clear Toughened Glass 12 mm, Polished Edge, quantity 8, Confirmed" aria-current="true">
+            <img class="orow-img" src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=224&h=224&fit=crop&q=70" alt="" loading="lazy">
+            <div class="orow-body">
+              <div class="orow-txt"><span class="tag t-paragraph-s">Saint-gobain</span><span class="t-paragraph-s meta">SKU: SGG-CLR-12T</span><h2 class="t-card-title truncate">Clear Toughened Glass 12 mm, Polished Edge</h2><span class="t-paragraph-s meta tnum">Quantity: 08</span></div>
+              <div class="orow-end"><span class="pill success t-label-xs">Confirmed</span><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></div>
+            </div>
+          </a></li>
+          <li><a class="orow" href="S-11-07-in-progress-order-detail.html" aria-label="Rain Shower Head 240 mm Round, quantity 2, Confirmed">
+            <img class="orow-img" src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=224&h=224&fit=crop&q=70" alt="" loading="lazy">
+            <div class="orow-body">
+              <div class="orow-txt"><span class="tag t-paragraph-s">Jaquar</span><span class="t-paragraph-s meta">SKU: OHS-CHR-1989</span><h2 class="t-card-title truncate">Rain Shower Head 240 mm Round</h2><span class="t-paragraph-s meta tnum">Quantity: 02</span></div>
+              <div class="orow-end"><span class="pill success t-label-xs">Confirmed</span><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></div>
+            </div>
+          </a></li>
+          <li><a class="orow" href="S-11-07-in-progress-order-detail.html" aria-label="Arteor Two-Module Plate, Magnesium White, quantity 40, Confirmed">
+            <img class="orow-img" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=224&h=224&fit=crop&q=70" alt="" loading="lazy">
+            <div class="orow-body">
+              <div class="orow-txt"><span class="tag t-paragraph-s">Legrand</span><span class="t-paragraph-s meta">SKU: ARTR-2M-WH</span><h2 class="t-card-title truncate">Arteor Two-Module Plate, Magnesium White</h2><span class="t-paragraph-s meta tnum">Quantity: 40</span></div>
+              <div class="orow-end"><span class="pill success t-label-xs">Confirmed</span><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></div>
+            </div>
+          </a></li>
+        </ul>
+        <aside class="mo-panel sticky card od-card" aria-label="Selected order">
+          <div class="head"><img class="thumb" src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=144&h=144&fit=crop&q=70" alt=""><div class="orow-txt"><span class="tag t-paragraph-s">Saint-gobain</span><h3 class="t-label-m">Clear Toughened Glass 12 mm, Polished Edge</h3><span class="t-paragraph-s meta">SKU: SGG-CLR-12T</span></div></div>
+          <div class="row between wrap"><span class="t-label-s">Order ORD-2026-00397</span><span class="pill success t-label-xs">Confirmed</span></div>
+          <dl class="kv t-paragraph-m"><dt>Quantity</dt><dd class="tnum">08</dd><dt>Product MRP</dt><dd class="tnum">₹6,200</dd><dt>Placed on</dt><dd>24 Oct 2026</dd></dl>
+          <hr class="hr">
+          <ol class="steps" aria-label="Order progress"><li class="step done"><span class="mark" aria-hidden="true"><i class="ic ic-16 hgi hgi-stroke hgi-tick-02" aria-hidden="true"></i></span><span class="txt"><span class="t-label-s">Requested<span class="sr-only">, done</span></span><span class="t-paragraph-s">24 Oct 2026</span></span></li><li class="step done"><span class="mark" aria-hidden="true"><i class="ic ic-16 hgi hgi-stroke hgi-tick-02" aria-hidden="true"></i></span><span class="txt"><span class="t-label-s">Quoted<span class="sr-only">, done</span></span></span></li><li class="step now"><span class="mark" aria-hidden="true"></span><span class="txt"><span class="t-label-s">Confirmed<span class="sr-only">, current</span></span></span></li><li class="step "><span class="mark" aria-hidden="true"></span><span class="txt"><span class="t-paragraph-m">Delivered<span class="sr-only">, pending</span></span></span></li><li class="step "><span class="mark" aria-hidden="true"></span><span class="txt"><span class="t-paragraph-m">Completed<span class="sr-only">, pending</span></span></span></li></ol>
+          <a class="btn btn-filled btn-full t-label-m press" href="S-11-07-in-progress-order-detail.html">VIEW ORDER</a>
+        </aside>
+        </div>
+      </section>
+      <section role="tabpanel" id="p-delivered" aria-label="Delivered" hidden>
+        <div class="split mo">
+        <ul class="mo-list" aria-label="Delivered orders">
+          <li><a class="orow" href="S-11-08-order-verification-detail.html" aria-label="Veil Wall-Hung Toilet with Soft-Close Seat, quantity 2, Delivered" aria-current="true">
+            <img class="orow-img" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=224&h=224&fit=crop&q=70" alt="" loading="lazy">
+            <div class="orow-body">
+              <div class="orow-txt"><span class="tag t-paragraph-s">Kohler</span><span class="t-paragraph-s meta">SKU: K-77780IN</span><h2 class="t-card-title truncate">Veil Wall-Hung Toilet with Soft-Close Seat</h2><span class="t-paragraph-s meta tnum">Quantity: 02</span></div>
+              <div class="orow-end"><span class="pill warning t-label-xs">Delivered</span><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></div>
+            </div>
+          </a></li>
+          <li><a class="orow" href="S-11-08-order-verification-detail.html" aria-label="Sensys 110° Hinge with Integrated Damper, quantity 60, Delivered">
+            <img class="orow-img" src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=224&h=224&fit=crop&q=70" alt="" loading="lazy">
+            <div class="orow-body">
+              <div class="orow-txt"><span class="tag t-paragraph-s">Hettich</span><span class="t-paragraph-s meta">SKU: SEN-110-NI</span><h2 class="t-card-title truncate">Sensys 110° Hinge with Integrated Damper</h2><span class="t-paragraph-s meta tnum">Quantity: 60</span></div>
+              <div class="orow-end"><span class="pill warning t-label-xs">Delivered</span><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></div>
+            </div>
+          </a></li>
+        </ul>
+        <aside class="mo-panel sticky card od-card" aria-label="Selected order">
+          <div class="head"><img class="thumb" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=144&h=144&fit=crop&q=70" alt=""><div class="orow-txt"><span class="tag t-paragraph-s">Kohler</span><h3 class="t-label-m">Veil Wall-Hung Toilet with Soft-Close Seat</h3><span class="t-paragraph-s meta">SKU: K-77780IN</span></div></div>
+          <div class="row between wrap"><span class="t-label-s">Order ORD-2026-00389</span><span class="pill warning t-label-xs">Delivered</span></div>
+          <dl class="kv t-paragraph-m"><dt>Quantity</dt><dd class="tnum">02</dd><dt>Product MRP</dt><dd class="tnum">₹64,500</dd><dt>Placed on</dt><dd>20 Oct 2026</dd></dl>
+          <hr class="hr">
+          <ol class="steps" aria-label="Order progress"><li class="step done"><span class="mark" aria-hidden="true"><i class="ic ic-16 hgi hgi-stroke hgi-tick-02" aria-hidden="true"></i></span><span class="txt"><span class="t-label-s">Requested<span class="sr-only">, done</span></span><span class="t-paragraph-s">20 Oct 2026</span></span></li><li class="step done"><span class="mark" aria-hidden="true"><i class="ic ic-16 hgi hgi-stroke hgi-tick-02" aria-hidden="true"></i></span><span class="txt"><span class="t-label-s">Quoted<span class="sr-only">, done</span></span></span></li><li class="step done"><span class="mark" aria-hidden="true"><i class="ic ic-16 hgi hgi-stroke hgi-tick-02" aria-hidden="true"></i></span><span class="txt"><span class="t-label-s">Confirmed<span class="sr-only">, done</span></span></span></li><li class="step now"><span class="mark" aria-hidden="true"></span><span class="txt"><span class="t-label-s">Delivered<span class="sr-only">, current</span></span></span></li><li class="step "><span class="mark" aria-hidden="true"></span><span class="txt"><span class="t-paragraph-m">Completed<span class="sr-only">, pending</span></span></span></li></ol>
+          <a class="btn btn-filled btn-full t-label-m press" href="S-11-08-order-verification-detail.html">VIEW ORDER</a>
+        </aside>
+        </div>
+      </section>
+      <section role="tabpanel" id="p-rejected" aria-label="Rejected" hidden>
+        <div class="split mo">
+        <ul class="mo-list" aria-label="Rejected orders">
+          <li><a class="orow" href="S-11-07-in-progress-order-detail.html" aria-label="Duragres Wall Tile 300 × 600 mm, Ivory, quantity 30, Delivery rejected" aria-current="true">
+            <img class="orow-img" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=224&h=224&fit=crop&q=70" alt="" loading="lazy">
+            <div class="orow-body">
+              <div class="orow-txt"><span class="tag t-paragraph-s">Somany</span><span class="t-paragraph-s meta">SKU: DRG-3060-IV</span><h2 class="t-card-title truncate">Duragres Wall Tile 300 × 600 mm, Ivory</h2><span class="t-paragraph-s meta tnum">Quantity: 30</span></div>
+              <div class="orow-end"><span class="pill danger t-label-xs">Delivery rejected</span><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></div>
+            </div>
+          </a></li>
+        </ul>
+        <aside class="mo-panel sticky card od-card" aria-label="Selected order">
+          <div class="head"><img class="thumb" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=144&h=144&fit=crop&q=70" alt=""><div class="orow-txt"><span class="tag t-paragraph-s">Somany</span><h3 class="t-label-m">Duragres Wall Tile 300 × 600 mm, Ivory</h3><span class="t-paragraph-s meta">SKU: DRG-3060-IV</span></div></div>
+          <div class="row between wrap"><span class="t-label-s">Order ORD-2026-00372</span><span class="pill danger t-label-xs">Delivery rejected</span></div>
+          <dl class="kv t-paragraph-m"><dt>Quantity</dt><dd class="tnum">30</dd><dt>Product MRP</dt><dd class="tnum">₹1,180</dd><dt>Placed on</dt><dd>14 Oct 2026</dd></dl>
+          <hr class="hr">
+          <ol class="steps" aria-label="Order progress"><li class="step done"><span class="mark" aria-hidden="true"><i class="ic ic-16 hgi hgi-stroke hgi-tick-02" aria-hidden="true"></i></span><span class="txt"><span class="t-label-s">Requested<span class="sr-only">, done</span></span><span class="t-paragraph-s">14 Oct 2026</span></span></li><li class="step done"><span class="mark" aria-hidden="true"><i class="ic ic-16 hgi hgi-stroke hgi-tick-02" aria-hidden="true"></i></span><span class="txt"><span class="t-label-s">Quoted<span class="sr-only">, done</span></span></span></li><li class="step done"><span class="mark" aria-hidden="true"><i class="ic ic-16 hgi hgi-stroke hgi-tick-02" aria-hidden="true"></i></span><span class="txt"><span class="t-label-s">Confirmed<span class="sr-only">, done</span></span></span></li><li class="step done"><span class="mark" aria-hidden="true"><i class="ic ic-16 hgi hgi-stroke hgi-tick-02" aria-hidden="true"></i></span><span class="txt"><span class="t-label-s">Delivered<span class="sr-only">, done</span></span></span></li><li class="step now"><span class="mark" aria-hidden="true"></span><span class="txt"><span class="t-label-s">Rejected<span class="sr-only">, current</span></span></span></li></ol>
+          <a class="btn btn-filled btn-full t-label-m press" href="S-11-07-in-progress-order-detail.html">VIEW ORDER</a>
+        </aside>
+        </div>
+      </section>
+      <section role="tabpanel" id="p-completed" aria-label="Completed" hidden>
+        <div class="split mo">
+        <ul class="mo-list" aria-label="Completed orders">
+          <li><a class="orow" href="S-11-11-completed-order-detail.html" aria-label="uPVC Sliding Window, Two Track 1500 × 1200 mm, quantity 4, Completed" aria-current="true">
+            <img class="orow-img" src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=224&h=224&fit=crop&q=70" alt="" loading="lazy">
+            <div class="orow-body">
+              <div class="orow-txt"><span class="tag t-paragraph-s">Fenesta</span><span class="t-paragraph-s meta">SKU: UPVC-SL-2T</span><h2 class="t-card-title truncate">uPVC Sliding Window, Two Track 1500 × 1200 mm</h2><span class="t-paragraph-s meta tnum">Quantity: 04</span></div>
+              <div class="orow-end"><span class="pill success t-label-xs">Completed</span><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></div>
+            </div>
+          </a></li>
+          <li><a class="orow" href="S-11-11-completed-order-detail.html" aria-label="Apex Ultima Exterior Emulsion 10 L, quantity 5, Completed">
+            <img class="orow-img" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=224&h=224&fit=crop&q=70" alt="" loading="lazy">
+            <div class="orow-body">
+              <div class="orow-txt"><span class="tag t-paragraph-s">Asian paints</span><span class="t-paragraph-s meta">SKU: APX-ULT-10L</span><h2 class="t-card-title truncate">Apex Ultima Exterior Emulsion 10 L</h2><span class="t-paragraph-s meta tnum">Quantity: 05</span></div>
+              <div class="orow-end"><span class="pill success t-label-xs">Completed</span><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></div>
+            </div>
+          </a></li>
+          <li><a class="orow" href="S-11-11-completed-order-detail.html" aria-label="COB LED Strip 5 m, 3000 K, quantity 10, Completed">
+            <img class="orow-img" src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=224&h=224&fit=crop&q=70" alt="" loading="lazy">
+            <div class="orow-body">
+              <div class="orow-txt"><span class="tag t-paragraph-s">Philips</span><span class="t-paragraph-s meta">SKU: LS-COB-5M</span><h2 class="t-card-title truncate">COB LED Strip 5 m, 3000 K</h2><span class="t-paragraph-s meta tnum">Quantity: 10</span></div>
+              <div class="orow-end"><span class="pill success t-label-xs">Completed</span><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></div>
+            </div>
+          </a></li>
+          <li><a class="orow" href="S-11-11-completed-order-detail.html" aria-label="Brushed Steel Pull Handle 320 mm, quantity 18, Completed">
+            <img class="orow-img" src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=224&h=224&fit=crop&q=70" alt="" loading="lazy">
+            <div class="orow-body">
+              <div class="orow-txt"><span class="tag t-paragraph-s">Hafele</span><span class="t-paragraph-s meta">SKU: HF-PH-320</span><h2 class="t-card-title truncate">Brushed Steel Pull Handle 320 mm</h2><span class="t-paragraph-s meta tnum">Quantity: 18</span></div>
+              <div class="orow-end"><span class="pill success t-label-xs">Completed</span><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></div>
+            </div>
+          </a></li>
+        </ul>
+        <aside class="mo-panel sticky card od-card" aria-label="Selected order">
+          <div class="head"><img class="thumb" src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=144&h=144&fit=crop&q=70" alt=""><div class="orow-txt"><span class="tag t-paragraph-s">Fenesta</span><h3 class="t-label-m">uPVC Sliding Window, Two Track 1500 × 1200 mm</h3><span class="t-paragraph-s meta">SKU: UPVC-SL-2T</span></div></div>
+          <div class="row between wrap"><span class="t-label-s">Order ORD-2026-00351</span><span class="pill success t-label-xs">Completed</span></div>
+          <dl class="kv t-paragraph-m"><dt>Quantity</dt><dd class="tnum">04</dd><dt>Product MRP</dt><dd class="tnum">₹24,800</dd><dt>Placed on</dt><dd>06 Oct 2026</dd></dl>
+          <hr class="hr">
+          <ol class="steps" aria-label="Order progress"><li class="step done"><span class="mark" aria-hidden="true"><i class="ic ic-16 hgi hgi-stroke hgi-tick-02" aria-hidden="true"></i></span><span class="txt"><span class="t-label-s">Requested<span class="sr-only">, done</span></span><span class="t-paragraph-s">06 Oct 2026</span></span></li><li class="step done"><span class="mark" aria-hidden="true"><i class="ic ic-16 hgi hgi-stroke hgi-tick-02" aria-hidden="true"></i></span><span class="txt"><span class="t-label-s">Quoted<span class="sr-only">, done</span></span></span></li><li class="step done"><span class="mark" aria-hidden="true"><i class="ic ic-16 hgi hgi-stroke hgi-tick-02" aria-hidden="true"></i></span><span class="txt"><span class="t-label-s">Confirmed<span class="sr-only">, done</span></span></span></li><li class="step done"><span class="mark" aria-hidden="true"><i class="ic ic-16 hgi hgi-stroke hgi-tick-02" aria-hidden="true"></i></span><span class="txt"><span class="t-label-s">Delivered<span class="sr-only">, done</span></span></span></li><li class="step done"><span class="mark" aria-hidden="true"><i class="ic ic-16 hgi hgi-stroke hgi-tick-02" aria-hidden="true"></i></span><span class="txt"><span class="t-label-s">Completed<span class="sr-only">, done</span></span></span></li></ol>
+          <a class="btn btn-filled btn-full t-label-m press" href="S-11-11-completed-order-detail.html">VIEW ORDER</a>
+        </aside>
+        </div>
+      </section>
+      <section role="tabpanel" id="p-cancelled" aria-label="Cancelled" hidden>
+        <div class="split mo">
+        <ul class="mo-list" aria-label="Cancelled orders">
+          <li><a class="orow" href="S-11-11-completed-order-detail.html" aria-label="Green Gold Plywood 12 mm, quantity 15, Cancelled" aria-current="true">
+            <img class="orow-img" src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=224&h=224&fit=crop&q=70" alt="" loading="lazy">
+            <div class="orow-body">
+              <div class="orow-txt"><span class="tag t-paragraph-s">Greenply</span><span class="t-paragraph-s meta">SKU: GRN-GLD-12</span><h2 class="t-card-title truncate">Green Gold Plywood 12 mm</h2><span class="t-paragraph-s meta tnum">Quantity: 15</span></div>
+              <div class="orow-end"><span class="pill t-label-xs">Cancelled</span><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></div>
+            </div>
+          </a></li>
+          <li><a class="orow" href="S-11-11-completed-order-detail.html" aria-label="Wood-Look Plank Tile 200 × 1200 mm, quantity 22, Cancelled">
+            <img class="orow-img" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=224&h=224&fit=crop&q=70" alt="" loading="lazy">
+            <div class="orow-body">
+              <div class="orow-txt"><span class="tag t-paragraph-s">Kajaria</span><span class="t-paragraph-s meta">SKU: KJR-WD-2012</span><h2 class="t-card-title truncate">Wood-Look Plank Tile 200 × 1200 mm</h2><span class="t-paragraph-s meta tnum">Quantity: 22</span></div>
+              <div class="orow-end"><span class="pill t-label-xs">Cancelled</span><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></div>
+            </div>
+          </a></li>
+        </ul>
+        <aside class="mo-panel sticky card od-card" aria-label="Selected order">
+          <div class="head"><img class="thumb" src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=144&h=144&fit=crop&q=70" alt=""><div class="orow-txt"><span class="tag t-paragraph-s">Greenply</span><h3 class="t-label-m">Green Gold Plywood 12 mm</h3><span class="t-paragraph-s meta">SKU: GRN-GLD-12</span></div></div>
+          <div class="row between wrap"><span class="t-label-s">Order ORD-2026-00340</span><span class="pill t-label-xs">Cancelled</span></div>
+          <dl class="kv t-paragraph-m"><dt>Quantity</dt><dd class="tnum">15</dd><dt>Product MRP</dt><dd class="tnum">₹2,950</dd><dt>Placed on</dt><dd>01 Oct 2026</dd></dl>
+          <hr class="hr">
+          <ol class="steps" aria-label="Order progress"><li class="step done"><span class="mark" aria-hidden="true"><i class="ic ic-16 hgi hgi-stroke hgi-tick-02" aria-hidden="true"></i></span><span class="txt"><span class="t-label-s">Requested<span class="sr-only">, done</span></span><span class="t-paragraph-s">01 Oct 2026</span></span></li><li class="step now"><span class="mark" aria-hidden="true"></span><span class="txt"><span class="t-label-s">Cancelled<span class="sr-only">, current</span></span></span></li></ol>
+          <a class="btn btn-filled btn-full t-label-m press" href="S-11-11-completed-order-detail.html">VIEW ORDER</a>
+        </aside>
+        </div>
+      </section>
+      <section role="tabpanel" id="p-declined" aria-label="Declined" hidden>
+        <div class="split mo">
+        <ul class="mo-list" aria-label="Declined orders">
+          <li><a class="orow" href="S-11-11-completed-order-detail.html" aria-label="Vox Rectangle Vessel Basin, quantity 3, Declined by dealers" aria-current="true">
+            <img class="orow-img" src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=224&h=224&fit=crop&q=70" alt="" loading="lazy">
+            <div class="orow-body">
+              <div class="orow-txt"><span class="tag t-paragraph-s">Kohler</span><span class="t-paragraph-s meta">SKU: K-2660IN</span><h2 class="t-card-title truncate">Vox Rectangle Vessel Basin</h2><span class="t-paragraph-s meta tnum">Quantity: 03</span></div>
+              <div class="orow-end"><span class="pill danger t-label-xs">Declined by dealers</span><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></div>
+            </div>
+          </a></li>
+          <li><a class="orow" href="S-11-11-completed-order-detail.html" aria-label="Ventil Air DX Exhaust Fan 250 mm, quantity 6, Declined by dealers">
+            <span class="orow-img" role="img" aria-label="Image unavailable"><i class="ic ic-24 hgi hgi-stroke hgi-image-02" aria-hidden="true"></i></span>
+            <div class="orow-body">
+              <div class="orow-txt"><span class="tag t-paragraph-s">Havells</span><span class="t-paragraph-s meta">SKU: HV-EXH-250</span><h2 class="t-card-title truncate">Ventil Air DX Exhaust Fan 250 mm</h2><span class="t-paragraph-s meta tnum">Quantity: 06</span></div>
+              <div class="orow-end"><span class="pill danger t-label-xs">Declined by dealers</span><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></div>
+            </div>
+          </a></li>
+        </ul>
+        <aside class="mo-panel sticky card od-card" aria-label="Selected order">
+          <div class="head"><img class="thumb" src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=144&h=144&fit=crop&q=70" alt=""><div class="orow-txt"><span class="tag t-paragraph-s">Kohler</span><h3 class="t-label-m">Vox Rectangle Vessel Basin</h3><span class="t-paragraph-s meta">SKU: K-2660IN</span></div></div>
+          <div class="row between wrap"><span class="t-label-s">Order ORD-2026-00328</span><span class="pill danger t-label-xs">Declined by dealers</span></div>
+          <dl class="kv t-paragraph-m"><dt>Quantity</dt><dd class="tnum">03</dd><dt>Product MRP</dt><dd class="tnum">₹18,900</dd><dt>Placed on</dt><dd>26 Sep 2026</dd></dl>
+          <hr class="hr">
+          <ol class="steps" aria-label="Order progress"><li class="step done"><span class="mark" aria-hidden="true"><i class="ic ic-16 hgi hgi-stroke hgi-tick-02" aria-hidden="true"></i></span><span class="txt"><span class="t-label-s">Requested<span class="sr-only">, done</span></span><span class="t-paragraph-s">26 Sep 2026</span></span></li><li class="step now"><span class="mark" aria-hidden="true"></span><span class="txt"><span class="t-label-s">Declined<span class="sr-only">, current</span></span></span></li></ol>
+          <a class="btn btn-filled btn-full t-label-m press" href="S-11-11-completed-order-detail.html">VIEW ORDER</a>
+        </aside>
+        </div>
+      </section>
+    </main>
+    <main class="page stagger" data-show="cancelled">
+      <section role="tabpanel" id="c-requested" aria-label="Requested" hidden>
+        <div class="split mo">
+        <ul class="mo-list" aria-label="Requested orders">
+          <li><a class="orow" href="S-11-03-active-order-detail.html" aria-label="Aria Single Lever Basin Mixer with Pop-up Waste, quantity 6, Waiting for quotes" aria-current="true">
+            <img class="orow-img" src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=224&h=224&fit=crop&q=70" alt="" loading="lazy">
+            <div class="orow-body">
+              <div class="orow-txt"><span class="tag t-paragraph-s">Jaquar</span><span class="t-paragraph-s meta">SKU: ARI-CHR-39011B</span><h2 class="t-card-title truncate">Aria Single Lever Basin Mixer with Pop-up Waste</h2><span class="t-paragraph-s meta tnum">Quantity: 06</span></div>
+              <div class="orow-end"><span class="pill warning t-label-xs">Waiting for quotes</span><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></div>
+            </div>
+          </a></li>
+          <li><a class="orow" href="S-11-03-active-order-detail.html" aria-label="Eternity Vitrified Floor Tile 600 × 1200 mm, quantity 48, Waiting for quotes">
+            <img class="orow-img" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=224&h=224&fit=crop&q=70" alt="" loading="lazy">
+            <div class="orow-body">
+              <div class="orow-txt"><span class="tag t-paragraph-s">Kajaria</span><span class="t-paragraph-s meta">SKU: ETR-6012-GRY</span><h2 class="t-card-title truncate">Eternity Vitrified Floor Tile 600 × 1200 mm</h2><span class="t-paragraph-s meta tnum">Quantity: 48</span></div>
+              <div class="orow-end"><span class="pill warning t-label-xs">Waiting for quotes</span><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></div>
+            </div>
+          </a></li>
+          <li><a class="orow" href="S-11-03-active-order-detail.html" aria-label="Crabtree Athena 16 A Switch with Indicator, quantity 24, Waiting for quotes">
+            <span class="orow-img" role="img" aria-label="Image unavailable"><i class="ic ic-24 hgi hgi-stroke hgi-image-02" aria-hidden="true"></i></span>
+            <div class="orow-body">
+              <div class="orow-txt"><span class="tag t-paragraph-s">Havells</span><span class="t-paragraph-s meta">SKU: CRB-ATH-16A</span><h2 class="t-card-title truncate">Crabtree Athena 16 A Switch with Indicator</h2><span class="t-paragraph-s meta tnum">Quantity: 24</span></div>
+              <div class="orow-end"><span class="pill warning t-label-xs">Waiting for quotes</span><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></div>
+            </div>
+          </a></li>
+          <li><a class="orow" href="S-11-03-active-order-detail.html" aria-label="Soft-Close Drawer Channel 500 mm, quantity 12, Waiting for quotes">
+            <img class="orow-img" src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=224&h=224&fit=crop&q=70" alt="" loading="lazy">
+            <div class="orow-body">
+              <div class="orow-txt"><span class="tag t-paragraph-s">Hafele</span><span class="t-paragraph-s meta">SKU: HF-SC-500</span><h2 class="t-card-title truncate">Soft-Close Drawer Channel 500 mm</h2><span class="t-paragraph-s meta tnum">Quantity: 12</span></div>
+              <div class="orow-end"><span class="pill warning t-label-xs">Waiting for quotes</span><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></div>
+            </div>
+          </a></li>
+        </ul>
+        <aside class="mo-panel sticky card od-card" aria-label="Selected order">
+          <div class="head"><img class="thumb" src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=144&h=144&fit=crop&q=70" alt=""><div class="orow-txt"><span class="tag t-paragraph-s">Jaquar</span><h3 class="t-label-m">Aria Single Lever Basin Mixer with Pop-up Waste</h3><span class="t-paragraph-s meta">SKU: ARI-CHR-39011B</span></div></div>
+          <div class="row between wrap"><span class="t-label-s">Order ORD-2026-00418</span><span class="pill warning t-label-xs">Waiting for quotes</span></div>
+          <dl class="kv t-paragraph-m"><dt>Quantity</dt><dd class="tnum">06</dd><dt>Product MRP</dt><dd class="tnum">₹8,450</dd><dt>Placed on</dt><dd>02 Nov 2026</dd></dl>
+          <hr class="hr">
+          <ol class="steps" aria-label="Order progress"><li class="step now"><span class="mark" aria-hidden="true"></span><span class="txt"><span class="t-label-s">Requested<span class="sr-only">, current</span></span><span class="t-paragraph-s">02 Nov 2026</span></span></li><li class="step "><span class="mark" aria-hidden="true"></span><span class="txt"><span class="t-paragraph-m">Quoted<span class="sr-only">, pending</span></span></span></li><li class="step "><span class="mark" aria-hidden="true"></span><span class="txt"><span class="t-paragraph-m">Confirmed<span class="sr-only">, pending</span></span></span></li><li class="step "><span class="mark" aria-hidden="true"></span><span class="txt"><span class="t-paragraph-m">Delivered<span class="sr-only">, pending</span></span></span></li><li class="step "><span class="mark" aria-hidden="true"></span><span class="txt"><span class="t-paragraph-m">Completed<span class="sr-only">, pending</span></span></span></li></ol>
+          <a class="btn btn-filled btn-full t-label-m press" href="S-11-03-active-order-detail.html">VIEW ORDER</a>
+        </aside>
+        </div>
+      </section>
+      <section role="tabpanel" id="c-quoted" aria-label="Quoted" hidden>
+        <div class="split mo">
+        <ul class="mo-list" aria-label="Quoted orders">
+          <li><a class="orow" href="S-11-03-active-order-detail.html" aria-label="Royale Luxury Emulsion 20 L, Morning Glory, quantity 3, Quotes received" aria-current="true">
+            <img class="orow-img" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=224&h=224&fit=crop&q=70" alt="" loading="lazy">
+            <div class="orow-body">
+              <div class="orow-txt"><span class="tag t-paragraph-s">Asian paints</span><span class="t-paragraph-s meta">SKU: RYL-LUX-20L</span><h2 class="t-card-title truncate">Royale Luxury Emulsion 20 L, Morning Glory</h2><span class="t-paragraph-s meta tnum">Quantity: 03</span></div>
+              <div class="orow-end"><span class="pill success t-label-xs">Quotes received</span><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></div>
+            </div>
+          </a></li>
+          <li><a class="orow" href="S-11-03-active-order-detail.html" aria-label="Recessed LED Downlight 12 W Warm White, quantity 36, Quotes received">
+            <img class="orow-img" src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=224&h=224&fit=crop&q=70" alt="" loading="lazy">
+            <div class="orow-body">
+              <div class="orow-txt"><span class="tag t-paragraph-s">Philips</span><span class="t-paragraph-s meta">SKU: HUE-RD-12W</span><h2 class="t-card-title truncate">Recessed LED Downlight 12 W Warm White</h2><span class="t-paragraph-s meta tnum">Quantity: 36</span></div>
+              <div class="orow-end"><span class="pill success t-label-xs">Quotes received</span><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></div>
+            </div>
+          </a></li>
+          <li><a class="orow" href="S-11-03-active-order-detail.html" aria-label="Club Plus Marine Plywood 19 mm, quantity 20, Quotes received">
+            <img class="orow-img" src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=224&h=224&fit=crop&q=70" alt="" loading="lazy">
+            <div class="orow-body">
+              <div class="orow-txt"><span class="tag t-paragraph-s">Greenply</span><span class="t-paragraph-s meta">SKU: CLB-MR-19</span><h2 class="t-card-title truncate">Club Plus Marine Plywood 19 mm</h2><span class="t-paragraph-s meta tnum">Quantity: 20</span></div>
+              <div class="orow-end"><span class="pill success t-label-xs">Quotes received</span><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></div>
+            </div>
+          </a></li>
+        </ul>
+        <aside class="mo-panel sticky card od-card" aria-label="Selected order">
+          <div class="head"><img class="thumb" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=144&h=144&fit=crop&q=70" alt=""><div class="orow-txt"><span class="tag t-paragraph-s">Asian paints</span><h3 class="t-label-m">Royale Luxury Emulsion 20 L, Morning Glory</h3><span class="t-paragraph-s meta">SKU: RYL-LUX-20L</span></div></div>
+          <div class="row between wrap"><span class="t-label-s">Order ORD-2026-00411</span><span class="pill success t-label-xs">Quotes received</span></div>
+          <dl class="kv t-paragraph-m"><dt>Quantity</dt><dd class="tnum">03</dd><dt>Product MRP</dt><dd class="tnum">₹11,900</dd><dt>Placed on</dt><dd>30 Oct 2026</dd></dl>
+          <hr class="hr">
+          <ol class="steps" aria-label="Order progress"><li class="step done"><span class="mark" aria-hidden="true"><i class="ic ic-16 hgi hgi-stroke hgi-tick-02" aria-hidden="true"></i></span><span class="txt"><span class="t-label-s">Requested<span class="sr-only">, done</span></span><span class="t-paragraph-s">30 Oct 2026</span></span></li><li class="step now"><span class="mark" aria-hidden="true"></span><span class="txt"><span class="t-label-s">Quoted<span class="sr-only">, current</span></span></span></li><li class="step "><span class="mark" aria-hidden="true"></span><span class="txt"><span class="t-paragraph-m">Confirmed<span class="sr-only">, pending</span></span></span></li><li class="step "><span class="mark" aria-hidden="true"></span><span class="txt"><span class="t-paragraph-m">Delivered<span class="sr-only">, pending</span></span></span></li><li class="step "><span class="mark" aria-hidden="true"></span><span class="txt"><span class="t-paragraph-m">Completed<span class="sr-only">, pending</span></span></span></li></ol>
+          <a class="btn btn-filled btn-full t-label-m press" href="S-11-03-active-order-detail.html">VIEW ORDER</a>
+        </aside>
+        </div>
+      </section>
+      <section role="tabpanel" id="c-confirmed" aria-label="Confirmed" hidden>
+        <div class="split mo">
+        <ul class="mo-list" aria-label="Confirmed orders">
+          <li><a class="orow" href="S-11-07-in-progress-order-detail.html" aria-label="Clear Toughened Glass 12 mm, Polished Edge, quantity 8, Confirmed" aria-current="true">
+            <img class="orow-img" src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=224&h=224&fit=crop&q=70" alt="" loading="lazy">
+            <div class="orow-body">
+              <div class="orow-txt"><span class="tag t-paragraph-s">Saint-gobain</span><span class="t-paragraph-s meta">SKU: SGG-CLR-12T</span><h2 class="t-card-title truncate">Clear Toughened Glass 12 mm, Polished Edge</h2><span class="t-paragraph-s meta tnum">Quantity: 08</span></div>
+              <div class="orow-end"><span class="pill success t-label-xs">Confirmed</span><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></div>
+            </div>
+          </a></li>
+          <li><a class="orow" href="S-11-07-in-progress-order-detail.html" aria-label="Rain Shower Head 240 mm Round, quantity 2, Confirmed">
+            <img class="orow-img" src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=224&h=224&fit=crop&q=70" alt="" loading="lazy">
+            <div class="orow-body">
+              <div class="orow-txt"><span class="tag t-paragraph-s">Jaquar</span><span class="t-paragraph-s meta">SKU: OHS-CHR-1989</span><h2 class="t-card-title truncate">Rain Shower Head 240 mm Round</h2><span class="t-paragraph-s meta tnum">Quantity: 02</span></div>
+              <div class="orow-end"><span class="pill success t-label-xs">Confirmed</span><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></div>
+            </div>
+          </a></li>
+          <li><a class="orow" href="S-11-07-in-progress-order-detail.html" aria-label="Arteor Two-Module Plate, Magnesium White, quantity 40, Confirmed">
+            <img class="orow-img" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=224&h=224&fit=crop&q=70" alt="" loading="lazy">
+            <div class="orow-body">
+              <div class="orow-txt"><span class="tag t-paragraph-s">Legrand</span><span class="t-paragraph-s meta">SKU: ARTR-2M-WH</span><h2 class="t-card-title truncate">Arteor Two-Module Plate, Magnesium White</h2><span class="t-paragraph-s meta tnum">Quantity: 40</span></div>
+              <div class="orow-end"><span class="pill success t-label-xs">Confirmed</span><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></div>
+            </div>
+          </a></li>
+        </ul>
+        <aside class="mo-panel sticky card od-card" aria-label="Selected order">
+          <div class="head"><img class="thumb" src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=144&h=144&fit=crop&q=70" alt=""><div class="orow-txt"><span class="tag t-paragraph-s">Saint-gobain</span><h3 class="t-label-m">Clear Toughened Glass 12 mm, Polished Edge</h3><span class="t-paragraph-s meta">SKU: SGG-CLR-12T</span></div></div>
+          <div class="row between wrap"><span class="t-label-s">Order ORD-2026-00397</span><span class="pill success t-label-xs">Confirmed</span></div>
+          <dl class="kv t-paragraph-m"><dt>Quantity</dt><dd class="tnum">08</dd><dt>Product MRP</dt><dd class="tnum">₹6,200</dd><dt>Placed on</dt><dd>24 Oct 2026</dd></dl>
+          <hr class="hr">
+          <ol class="steps" aria-label="Order progress"><li class="step done"><span class="mark" aria-hidden="true"><i class="ic ic-16 hgi hgi-stroke hgi-tick-02" aria-hidden="true"></i></span><span class="txt"><span class="t-label-s">Requested<span class="sr-only">, done</span></span><span class="t-paragraph-s">24 Oct 2026</span></span></li><li class="step done"><span class="mark" aria-hidden="true"><i class="ic ic-16 hgi hgi-stroke hgi-tick-02" aria-hidden="true"></i></span><span class="txt"><span class="t-label-s">Quoted<span class="sr-only">, done</span></span></span></li><li class="step now"><span class="mark" aria-hidden="true"></span><span class="txt"><span class="t-label-s">Confirmed<span class="sr-only">, current</span></span></span></li><li class="step "><span class="mark" aria-hidden="true"></span><span class="txt"><span class="t-paragraph-m">Delivered<span class="sr-only">, pending</span></span></span></li><li class="step "><span class="mark" aria-hidden="true"></span><span class="txt"><span class="t-paragraph-m">Completed<span class="sr-only">, pending</span></span></span></li></ol>
+          <a class="btn btn-filled btn-full t-label-m press" href="S-11-07-in-progress-order-detail.html">VIEW ORDER</a>
+        </aside>
+        </div>
+      </section>
+      <section role="tabpanel" id="c-delivered" aria-label="Delivered" hidden>
+        <div class="split mo">
+        <ul class="mo-list" aria-label="Delivered orders">
+          <li><a class="orow" href="S-11-08-order-verification-detail.html" aria-label="Veil Wall-Hung Toilet with Soft-Close Seat, quantity 2, Delivered" aria-current="true">
+            <img class="orow-img" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=224&h=224&fit=crop&q=70" alt="" loading="lazy">
+            <div class="orow-body">
+              <div class="orow-txt"><span class="tag t-paragraph-s">Kohler</span><span class="t-paragraph-s meta">SKU: K-77780IN</span><h2 class="t-card-title truncate">Veil Wall-Hung Toilet with Soft-Close Seat</h2><span class="t-paragraph-s meta tnum">Quantity: 02</span></div>
+              <div class="orow-end"><span class="pill warning t-label-xs">Delivered</span><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></div>
+            </div>
+          </a></li>
+          <li><a class="orow" href="S-11-08-order-verification-detail.html" aria-label="Sensys 110° Hinge with Integrated Damper, quantity 60, Delivered">
+            <img class="orow-img" src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=224&h=224&fit=crop&q=70" alt="" loading="lazy">
+            <div class="orow-body">
+              <div class="orow-txt"><span class="tag t-paragraph-s">Hettich</span><span class="t-paragraph-s meta">SKU: SEN-110-NI</span><h2 class="t-card-title truncate">Sensys 110° Hinge with Integrated Damper</h2><span class="t-paragraph-s meta tnum">Quantity: 60</span></div>
+              <div class="orow-end"><span class="pill warning t-label-xs">Delivered</span><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></div>
+            </div>
+          </a></li>
+        </ul>
+        <aside class="mo-panel sticky card od-card" aria-label="Selected order">
+          <div class="head"><img class="thumb" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=144&h=144&fit=crop&q=70" alt=""><div class="orow-txt"><span class="tag t-paragraph-s">Kohler</span><h3 class="t-label-m">Veil Wall-Hung Toilet with Soft-Close Seat</h3><span class="t-paragraph-s meta">SKU: K-77780IN</span></div></div>
+          <div class="row between wrap"><span class="t-label-s">Order ORD-2026-00389</span><span class="pill warning t-label-xs">Delivered</span></div>
+          <dl class="kv t-paragraph-m"><dt>Quantity</dt><dd class="tnum">02</dd><dt>Product MRP</dt><dd class="tnum">₹64,500</dd><dt>Placed on</dt><dd>20 Oct 2026</dd></dl>
+          <hr class="hr">
+          <ol class="steps" aria-label="Order progress"><li class="step done"><span class="mark" aria-hidden="true"><i class="ic ic-16 hgi hgi-stroke hgi-tick-02" aria-hidden="true"></i></span><span class="txt"><span class="t-label-s">Requested<span class="sr-only">, done</span></span><span class="t-paragraph-s">20 Oct 2026</span></span></li><li class="step done"><span class="mark" aria-hidden="true"><i class="ic ic-16 hgi hgi-stroke hgi-tick-02" aria-hidden="true"></i></span><span class="txt"><span class="t-label-s">Quoted<span class="sr-only">, done</span></span></span></li><li class="step done"><span class="mark" aria-hidden="true"><i class="ic ic-16 hgi hgi-stroke hgi-tick-02" aria-hidden="true"></i></span><span class="txt"><span class="t-label-s">Confirmed<span class="sr-only">, done</span></span></span></li><li class="step now"><span class="mark" aria-hidden="true"></span><span class="txt"><span class="t-label-s">Delivered<span class="sr-only">, current</span></span></span></li><li class="step "><span class="mark" aria-hidden="true"></span><span class="txt"><span class="t-paragraph-m">Completed<span class="sr-only">, pending</span></span></span></li></ol>
+          <a class="btn btn-filled btn-full t-label-m press" href="S-11-08-order-verification-detail.html">VIEW ORDER</a>
+        </aside>
+        </div>
+      </section>
+      <section role="tabpanel" id="c-rejected" aria-label="Rejected" hidden>
+        <div class="split mo">
+        <ul class="mo-list" aria-label="Rejected orders">
+          <li><a class="orow" href="S-11-07-in-progress-order-detail.html" aria-label="Duragres Wall Tile 300 × 600 mm, Ivory, quantity 30, Delivery rejected" aria-current="true">
+            <img class="orow-img" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=224&h=224&fit=crop&q=70" alt="" loading="lazy">
+            <div class="orow-body">
+              <div class="orow-txt"><span class="tag t-paragraph-s">Somany</span><span class="t-paragraph-s meta">SKU: DRG-3060-IV</span><h2 class="t-card-title truncate">Duragres Wall Tile 300 × 600 mm, Ivory</h2><span class="t-paragraph-s meta tnum">Quantity: 30</span></div>
+              <div class="orow-end"><span class="pill danger t-label-xs">Delivery rejected</span><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></div>
+            </div>
+          </a></li>
+        </ul>
+        <aside class="mo-panel sticky card od-card" aria-label="Selected order">
+          <div class="head"><img class="thumb" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=144&h=144&fit=crop&q=70" alt=""><div class="orow-txt"><span class="tag t-paragraph-s">Somany</span><h3 class="t-label-m">Duragres Wall Tile 300 × 600 mm, Ivory</h3><span class="t-paragraph-s meta">SKU: DRG-3060-IV</span></div></div>
+          <div class="row between wrap"><span class="t-label-s">Order ORD-2026-00372</span><span class="pill danger t-label-xs">Delivery rejected</span></div>
+          <dl class="kv t-paragraph-m"><dt>Quantity</dt><dd class="tnum">30</dd><dt>Product MRP</dt><dd class="tnum">₹1,180</dd><dt>Placed on</dt><dd>14 Oct 2026</dd></dl>
+          <hr class="hr">
+          <ol class="steps" aria-label="Order progress"><li class="step done"><span class="mark" aria-hidden="true"><i class="ic ic-16 hgi hgi-stroke hgi-tick-02" aria-hidden="true"></i></span><span class="txt"><span class="t-label-s">Requested<span class="sr-only">, done</span></span><span class="t-paragraph-s">14 Oct 2026</span></span></li><li class="step done"><span class="mark" aria-hidden="true"><i class="ic ic-16 hgi hgi-stroke hgi-tick-02" aria-hidden="true"></i></span><span class="txt"><span class="t-label-s">Quoted<span class="sr-only">, done</span></span></span></li><li class="step done"><span class="mark" aria-hidden="true"><i class="ic ic-16 hgi hgi-stroke hgi-tick-02" aria-hidden="true"></i></span><span class="txt"><span class="t-label-s">Confirmed<span class="sr-only">, done</span></span></span></li><li class="step done"><span class="mark" aria-hidden="true"><i class="ic ic-16 hgi hgi-stroke hgi-tick-02" aria-hidden="true"></i></span><span class="txt"><span class="t-label-s">Delivered<span class="sr-only">, done</span></span></span></li><li class="step now"><span class="mark" aria-hidden="true"></span><span class="txt"><span class="t-label-s">Rejected<span class="sr-only">, current</span></span></span></li></ol>
+          <a class="btn btn-filled btn-full t-label-m press" href="S-11-07-in-progress-order-detail.html">VIEW ORDER</a>
+        </aside>
+        </div>
+      </section>
+      <section role="tabpanel" id="c-completed" aria-label="Completed" hidden>
+        <div class="split mo">
+        <ul class="mo-list" aria-label="Completed orders">
+          <li><a class="orow" href="S-11-11-completed-order-detail.html" aria-label="uPVC Sliding Window, Two Track 1500 × 1200 mm, quantity 4, Completed" aria-current="true">
+            <img class="orow-img" src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=224&h=224&fit=crop&q=70" alt="" loading="lazy">
+            <div class="orow-body">
+              <div class="orow-txt"><span class="tag t-paragraph-s">Fenesta</span><span class="t-paragraph-s meta">SKU: UPVC-SL-2T</span><h2 class="t-card-title truncate">uPVC Sliding Window, Two Track 1500 × 1200 mm</h2><span class="t-paragraph-s meta tnum">Quantity: 04</span></div>
+              <div class="orow-end"><span class="pill success t-label-xs">Completed</span><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></div>
+            </div>
+          </a></li>
+          <li><a class="orow" href="S-11-11-completed-order-detail.html" aria-label="Apex Ultima Exterior Emulsion 10 L, quantity 5, Completed">
+            <img class="orow-img" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=224&h=224&fit=crop&q=70" alt="" loading="lazy">
+            <div class="orow-body">
+              <div class="orow-txt"><span class="tag t-paragraph-s">Asian paints</span><span class="t-paragraph-s meta">SKU: APX-ULT-10L</span><h2 class="t-card-title truncate">Apex Ultima Exterior Emulsion 10 L</h2><span class="t-paragraph-s meta tnum">Quantity: 05</span></div>
+              <div class="orow-end"><span class="pill success t-label-xs">Completed</span><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></div>
+            </div>
+          </a></li>
+          <li><a class="orow" href="S-11-11-completed-order-detail.html" aria-label="COB LED Strip 5 m, 3000 K, quantity 10, Completed">
+            <img class="orow-img" src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=224&h=224&fit=crop&q=70" alt="" loading="lazy">
+            <div class="orow-body">
+              <div class="orow-txt"><span class="tag t-paragraph-s">Philips</span><span class="t-paragraph-s meta">SKU: LS-COB-5M</span><h2 class="t-card-title truncate">COB LED Strip 5 m, 3000 K</h2><span class="t-paragraph-s meta tnum">Quantity: 10</span></div>
+              <div class="orow-end"><span class="pill success t-label-xs">Completed</span><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></div>
+            </div>
+          </a></li>
+          <li><a class="orow" href="S-11-11-completed-order-detail.html" aria-label="Brushed Steel Pull Handle 320 mm, quantity 18, Completed">
+            <img class="orow-img" src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=224&h=224&fit=crop&q=70" alt="" loading="lazy">
+            <div class="orow-body">
+              <div class="orow-txt"><span class="tag t-paragraph-s">Hafele</span><span class="t-paragraph-s meta">SKU: HF-PH-320</span><h2 class="t-card-title truncate">Brushed Steel Pull Handle 320 mm</h2><span class="t-paragraph-s meta tnum">Quantity: 18</span></div>
+              <div class="orow-end"><span class="pill success t-label-xs">Completed</span><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></div>
+            </div>
+          </a></li>
+        </ul>
+        <aside class="mo-panel sticky card od-card" aria-label="Selected order">
+          <div class="head"><img class="thumb" src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=144&h=144&fit=crop&q=70" alt=""><div class="orow-txt"><span class="tag t-paragraph-s">Fenesta</span><h3 class="t-label-m">uPVC Sliding Window, Two Track 1500 × 1200 mm</h3><span class="t-paragraph-s meta">SKU: UPVC-SL-2T</span></div></div>
+          <div class="row between wrap"><span class="t-label-s">Order ORD-2026-00351</span><span class="pill success t-label-xs">Completed</span></div>
+          <dl class="kv t-paragraph-m"><dt>Quantity</dt><dd class="tnum">04</dd><dt>Product MRP</dt><dd class="tnum">₹24,800</dd><dt>Placed on</dt><dd>06 Oct 2026</dd></dl>
+          <hr class="hr">
+          <ol class="steps" aria-label="Order progress"><li class="step done"><span class="mark" aria-hidden="true"><i class="ic ic-16 hgi hgi-stroke hgi-tick-02" aria-hidden="true"></i></span><span class="txt"><span class="t-label-s">Requested<span class="sr-only">, done</span></span><span class="t-paragraph-s">06 Oct 2026</span></span></li><li class="step done"><span class="mark" aria-hidden="true"><i class="ic ic-16 hgi hgi-stroke hgi-tick-02" aria-hidden="true"></i></span><span class="txt"><span class="t-label-s">Quoted<span class="sr-only">, done</span></span></span></li><li class="step done"><span class="mark" aria-hidden="true"><i class="ic ic-16 hgi hgi-stroke hgi-tick-02" aria-hidden="true"></i></span><span class="txt"><span class="t-label-s">Confirmed<span class="sr-only">, done</span></span></span></li><li class="step done"><span class="mark" aria-hidden="true"><i class="ic ic-16 hgi hgi-stroke hgi-tick-02" aria-hidden="true"></i></span><span class="txt"><span class="t-label-s">Delivered<span class="sr-only">, done</span></span></span></li><li class="step done"><span class="mark" aria-hidden="true"><i class="ic ic-16 hgi hgi-stroke hgi-tick-02" aria-hidden="true"></i></span><span class="txt"><span class="t-label-s">Completed<span class="sr-only">, done</span></span></span></li></ol>
+          <a class="btn btn-filled btn-full t-label-m press" href="S-11-11-completed-order-detail.html">VIEW ORDER</a>
+        </aside>
+        </div>
+      </section>
+      <section role="tabpanel" id="c-cancelled" aria-label="Cancelled">
+        <div class="split mo">
+        <ul class="mo-list" aria-label="Cancelled orders">
+          <li><a class="orow" href="S-11-11-completed-order-detail.html" aria-label="Green Gold Plywood 12 mm, quantity 15, Cancelled" aria-current="true">
+            <img class="orow-img" src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=224&h=224&fit=crop&q=70" alt="" loading="lazy">
+            <div class="orow-body">
+              <div class="orow-txt"><span class="tag t-paragraph-s">Greenply</span><span class="t-paragraph-s meta">SKU: GRN-GLD-12</span><h2 class="t-card-title truncate">Green Gold Plywood 12 mm</h2><span class="t-paragraph-s meta tnum">Quantity: 15</span></div>
+              <div class="orow-end"><span class="pill t-label-xs">Cancelled</span><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></div>
+            </div>
+          </a></li>
+          <li><a class="orow" href="S-11-11-completed-order-detail.html" aria-label="Wood-Look Plank Tile 200 × 1200 mm, quantity 22, Cancelled">
+            <img class="orow-img" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=224&h=224&fit=crop&q=70" alt="" loading="lazy">
+            <div class="orow-body">
+              <div class="orow-txt"><span class="tag t-paragraph-s">Kajaria</span><span class="t-paragraph-s meta">SKU: KJR-WD-2012</span><h2 class="t-card-title truncate">Wood-Look Plank Tile 200 × 1200 mm</h2><span class="t-paragraph-s meta tnum">Quantity: 22</span></div>
+              <div class="orow-end"><span class="pill t-label-xs">Cancelled</span><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></div>
+            </div>
+          </a></li>
+        </ul>
+        <aside class="mo-panel sticky card od-card" aria-label="Selected order">
+          <div class="head"><img class="thumb" src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=144&h=144&fit=crop&q=70" alt=""><div class="orow-txt"><span class="tag t-paragraph-s">Greenply</span><h3 class="t-label-m">Green Gold Plywood 12 mm</h3><span class="t-paragraph-s meta">SKU: GRN-GLD-12</span></div></div>
+          <div class="row between wrap"><span class="t-label-s">Order ORD-2026-00340</span><span class="pill t-label-xs">Cancelled</span></div>
+          <dl class="kv t-paragraph-m"><dt>Quantity</dt><dd class="tnum">15</dd><dt>Product MRP</dt><dd class="tnum">₹2,950</dd><dt>Placed on</dt><dd>01 Oct 2026</dd></dl>
+          <hr class="hr">
+          <ol class="steps" aria-label="Order progress"><li class="step done"><span class="mark" aria-hidden="true"><i class="ic ic-16 hgi hgi-stroke hgi-tick-02" aria-hidden="true"></i></span><span class="txt"><span class="t-label-s">Requested<span class="sr-only">, done</span></span><span class="t-paragraph-s">01 Oct 2026</span></span></li><li class="step now"><span class="mark" aria-hidden="true"></span><span class="txt"><span class="t-label-s">Cancelled<span class="sr-only">, current</span></span></span></li></ol>
+          <a class="btn btn-filled btn-full t-label-m press" href="S-11-11-completed-order-detail.html">VIEW ORDER</a>
+        </aside>
+        </div>
+      </section>
+      <section role="tabpanel" id="c-declined" aria-label="Declined" hidden>
+        <div class="split mo">
+        <ul class="mo-list" aria-label="Declined orders">
+          <li><a class="orow" href="S-11-11-completed-order-detail.html" aria-label="Vox Rectangle Vessel Basin, quantity 3, Declined by dealers" aria-current="true">
+            <img class="orow-img" src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=224&h=224&fit=crop&q=70" alt="" loading="lazy">
+            <div class="orow-body">
+              <div class="orow-txt"><span class="tag t-paragraph-s">Kohler</span><span class="t-paragraph-s meta">SKU: K-2660IN</span><h2 class="t-card-title truncate">Vox Rectangle Vessel Basin</h2><span class="t-paragraph-s meta tnum">Quantity: 03</span></div>
+              <div class="orow-end"><span class="pill danger t-label-xs">Declined by dealers</span><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></div>
+            </div>
+          </a></li>
+          <li><a class="orow" href="S-11-11-completed-order-detail.html" aria-label="Ventil Air DX Exhaust Fan 250 mm, quantity 6, Declined by dealers">
+            <span class="orow-img" role="img" aria-label="Image unavailable"><i class="ic ic-24 hgi hgi-stroke hgi-image-02" aria-hidden="true"></i></span>
+            <div class="orow-body">
+              <div class="orow-txt"><span class="tag t-paragraph-s">Havells</span><span class="t-paragraph-s meta">SKU: HV-EXH-250</span><h2 class="t-card-title truncate">Ventil Air DX Exhaust Fan 250 mm</h2><span class="t-paragraph-s meta tnum">Quantity: 06</span></div>
+              <div class="orow-end"><span class="pill danger t-label-xs">Declined by dealers</span><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></div>
+            </div>
+          </a></li>
+        </ul>
+        <aside class="mo-panel sticky card od-card" aria-label="Selected order">
+          <div class="head"><img class="thumb" src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=144&h=144&fit=crop&q=70" alt=""><div class="orow-txt"><span class="tag t-paragraph-s">Kohler</span><h3 class="t-label-m">Vox Rectangle Vessel Basin</h3><span class="t-paragraph-s meta">SKU: K-2660IN</span></div></div>
+          <div class="row between wrap"><span class="t-label-s">Order ORD-2026-00328</span><span class="pill danger t-label-xs">Declined by dealers</span></div>
+          <dl class="kv t-paragraph-m"><dt>Quantity</dt><dd class="tnum">03</dd><dt>Product MRP</dt><dd class="tnum">₹18,900</dd><dt>Placed on</dt><dd>26 Sep 2026</dd></dl>
+          <hr class="hr">
+          <ol class="steps" aria-label="Order progress"><li class="step done"><span class="mark" aria-hidden="true"><i class="ic ic-16 hgi hgi-stroke hgi-tick-02" aria-hidden="true"></i></span><span class="txt"><span class="t-label-s">Requested<span class="sr-only">, done</span></span><span class="t-paragraph-s">26 Sep 2026</span></span></li><li class="step now"><span class="mark" aria-hidden="true"></span><span class="txt"><span class="t-label-s">Declined<span class="sr-only">, current</span></span></span></li></ol>
+          <a class="btn btn-filled btn-full t-label-m press" href="S-11-11-completed-order-detail.html">VIEW ORDER</a>
+        </aside>
+        </div>
+      </section>
+    </main>
+    <main class="page stagger" data-show="empty error">
+      <section role="tabpanel" id="e-requested" aria-label="Requested">
+        <div class="empty" role="status">
+          <div class="empty-tile" aria-hidden="true"><i class="ic ic-24 hgi hgi-stroke hgi-file-02" aria-hidden="true"></i></div>
+          <div class="empty-text"><h2 class="t-label-xl">No requested Orders found</h2><p class="t-paragraph-s">There are no requested product Orders right now.</p></div>
+        </div>
+      </section>
+      <section role="tabpanel" id="e-quoted" aria-label="Quoted" hidden>
+        <div class="empty" role="status">
+          <div class="empty-tile" aria-hidden="true"><i class="ic ic-24 hgi hgi-stroke hgi-file-02" aria-hidden="true"></i></div>
+          <div class="empty-text"><h2 class="t-label-xl">No quoted Orders found</h2><p class="t-paragraph-s">There are no quoted product Orders right now.</p></div>
+        </div>
+      </section>
+      <section role="tabpanel" id="e-confirmed" aria-label="Confirmed" hidden>
+        <div class="empty" role="status">
+          <div class="empty-tile" aria-hidden="true"><i class="ic ic-24 hgi hgi-stroke hgi-file-02" aria-hidden="true"></i></div>
+          <div class="empty-text"><h2 class="t-label-xl">No confirmed Orders found</h2><p class="t-paragraph-s">There are no confirmed product Orders right now.</p></div>
+        </div>
+      </section>
+      <section role="tabpanel" id="e-delivered" aria-label="Delivered" hidden>
+        <div class="empty" role="status">
+          <div class="empty-tile" aria-hidden="true"><i class="ic ic-24 hgi hgi-stroke hgi-file-02" aria-hidden="true"></i></div>
+          <div class="empty-text"><h2 class="t-label-xl">No delivered Orders found</h2><p class="t-paragraph-s">There are no delivered product Orders right now.</p></div>
+        </div>
+      </section>
+      <section role="tabpanel" id="e-rejected" aria-label="Rejected" hidden>
+        <div class="empty" role="status">
+          <div class="empty-tile" aria-hidden="true"><i class="ic ic-24 hgi hgi-stroke hgi-file-02" aria-hidden="true"></i></div>
+          <div class="empty-text"><h2 class="t-label-xl">No rejected Orders found</h2><p class="t-paragraph-s">There are no rejected product Orders right now.</p></div>
+        </div>
+      </section>
+      <section role="tabpanel" id="e-completed" aria-label="Completed" hidden>
+        <div class="empty" role="status">
+          <div class="empty-tile" aria-hidden="true"><i class="ic ic-24 hgi hgi-stroke hgi-file-02" aria-hidden="true"></i></div>
+          <div class="empty-text"><h2 class="t-label-xl">No completed Orders found</h2><p class="t-paragraph-s">There are no completed product Orders right now.</p></div>
+        </div>
+      </section>
+      <section role="tabpanel" id="e-cancelled" aria-label="Cancelled" hidden>
+        <div class="empty" role="status">
+          <div class="empty-tile" aria-hidden="true"><i class="ic ic-24 hgi hgi-stroke hgi-file-02" aria-hidden="true"></i></div>
+          <div class="empty-text"><h2 class="t-label-xl">No cancelled Orders found</h2><p class="t-paragraph-s">There are no cancelled product Orders right now.</p></div>
+        </div>
+      </section>
+      <section role="tabpanel" id="e-declined" aria-label="Declined" hidden>
+        <div class="empty" role="status">
+          <div class="empty-tile" aria-hidden="true"><i class="ic ic-24 hgi hgi-stroke hgi-file-02" aria-hidden="true"></i></div>
+          <div class="empty-text"><h2 class="t-label-xl">No declined Orders found</h2><p class="t-paragraph-s">There are no declined product Orders right now.</p></div>
+        </div>
+      </section>
+    </main>
+    <main class="page" data-show="loading" aria-busy="true">
+      <p class="sr-only" role="status" aria-live="polite">Loading orders</p>
+      <div class="split mo" aria-hidden="true">
+        <ul class="mo-list"><li><div class="orow"><span class="skel" style="width:30%;max-width:112px;aspect-ratio:1;border-radius:var(--radius-12);flex:none"></span><div class="orow-txt" style="flex:1; gap: var(--spacing-8)"><span class="skel" style="height:24px;width:72px;border-radius:var(--radius-full)"></span><span class="skel" style="height:12px;width:40%"></span><span class="skel" style="height:16px;width:80%"></span><span class="skel" style="height:12px;width:30%"></span></div></div></li><li><div class="orow"><span class="skel" style="width:30%;max-width:112px;aspect-ratio:1;border-radius:var(--radius-12);flex:none"></span><div class="orow-txt" style="flex:1; gap: var(--spacing-8)"><span class="skel" style="height:24px;width:72px;border-radius:var(--radius-full)"></span><span class="skel" style="height:12px;width:40%"></span><span class="skel" style="height:16px;width:80%"></span><span class="skel" style="height:12px;width:30%"></span></div></div></li><li><div class="orow"><span class="skel" style="width:30%;max-width:112px;aspect-ratio:1;border-radius:var(--radius-12);flex:none"></span><div class="orow-txt" style="flex:1; gap: var(--spacing-8)"><span class="skel" style="height:24px;width:72px;border-radius:var(--radius-full)"></span><span class="skel" style="height:12px;width:40%"></span><span class="skel" style="height:16px;width:80%"></span><span class="skel" style="height:12px;width:30%"></span></div></div></li><li><div class="orow"><span class="skel" style="width:30%;max-width:112px;aspect-ratio:1;border-radius:var(--radius-12);flex:none"></span><div class="orow-txt" style="flex:1; gap: var(--spacing-8)"><span class="skel" style="height:24px;width:72px;border-radius:var(--radius-full)"></span><span class="skel" style="height:12px;width:40%"></span><span class="skel" style="height:16px;width:80%"></span><span class="skel" style="height:12px;width:30%"></span></div></div></li><li><div class="orow"><span class="skel" style="width:30%;max-width:112px;aspect-ratio:1;border-radius:var(--radius-12);flex:none"></span><div class="orow-txt" style="flex:1; gap: var(--spacing-8)"><span class="skel" style="height:24px;width:72px;border-radius:var(--radius-full)"></span><span class="skel" style="height:12px;width:40%"></span><span class="skel" style="height:16px;width:80%"></span><span class="skel" style="height:12px;width:30%"></span></div></div></li><li><div class="orow"><span class="skel" style="width:30%;max-width:112px;aspect-ratio:1;border-radius:var(--radius-12);flex:none"></span><div class="orow-txt" style="flex:1; gap: var(--spacing-8)"><span class="skel" style="height:24px;width:72px;border-radius:var(--radius-full)"></span><span class="skel" style="height:12px;width:40%"></span><span class="skel" style="height:16px;width:80%"></span><span class="skel" style="height:12px;width:30%"></span></div></div></li></ul>
+        <div class="mo-panel sticky card od-card"><span class="skel" style="height:72px;width:72px;border-radius:var(--radius-12)"></span><span class="skel" style="height:16px;width:70%"></span><span class="skel" style="height:12px;width:50%"></span><span class="skel" style="height:12px;width:90%"></span><span class="skel" style="height:12px;width:80%"></span><span class="skel" style="height:48px;border-radius:var(--radius-full)"></span></div>
+      </div>
+    </main>
+  </div>
+  <div class="toast-region" aria-live="polite" data-show="cancelled">
+    <div class="toast toast-success glass glass-panel" role="status">
+      <i class="ic hgi hgi-stroke hgi-checkmark-circle-01" aria-hidden="true"></i>
+      <div class="body"><span class="t-label-s">Cancelled</span><p class="t-paragraph-s">Your order has been cancelled.</p></div>
+    </div>
+  </div>
+  <div class="toast-region" aria-live="polite" data-show="error">
+    <div class="toast toast-danger glass glass-panel" role="status">
+      <i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i>
+      <div class="body"><span class="t-label-s">Error</span><p class="t-paragraph-s">Network error occurred</p></div>
+    </div>
+  </div>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375:</b> as the app: back and title, a scrolling row of eight status chips, then rows separated by hairlines: thumbnail (30% width), brand tag, SKU, title on one line, quantity, status.</li>
+      <li><b>768:</b> the list becomes one raised card; each row puts the status pill and a chevron at the right end; a Refresh button replaces pull-to-refresh.</li>
+      <li><b>1440:</b> master–detail: the list on the left, a sticky summary of the selected order on the right (product, order number, status, quantity, MRP, placed date, progress timeline, VIEW ORDER).</li>
+      <li>States: <b>default</b> "Requested" selected · <b>loading-more</b> spinner row at the end of the list · <b>cancelled</b> arriving after a cancel: "Cancelled" chip + toast · <b>loading</b> six skeleton rows · <b>empty</b> per-status empty text · <b>error</b> the empty placeholder + toast.</li>
+      <li>The chips work in the mockup: each status has its own sample rows and its own empty text.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Navigation shell (shared) · Top header (glass)</li>
+      <li>Chip as status tabs (scrolling tablist) · IconButton glass (Refresh, from 768)</li>
+      <li>Order row · Tag (brand) · Status pill</li>
+      <li>Card with key / value list · Steps (1440 panel) · Button filled L</li>
+      <li>Skeleton · Empty state · Spinner (next page) · Toast</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Chip select: <code>--tabs-*</code>; list swap, <code>--tab-panel-*</code></li>
+      <li>Rows entrance and next page: <code>--stagger-*</code>; skeleton, <code>--skel-*</code>, <code>--shimmer-*</code>, <code>--reveal-*</code></li>
+      <li>Row to detail: <code>--page-slide-*</code> under 768, <code>--panel-*</code> from 768; toast, <code>--toast-*</code></li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li><code>h1</code> "My Orders"; chips are a tablist named "Order status" with the selected state announced.</li>
+      <li>Each row is one link named "{title}, quantity {n}, {status}"; thumbnails are decorative; a missing thumbnail is announced as "Image unavailable".</li>
+      <li>Loading and empty are polite status regions. Focus order: back, chips, rows.</li>
+      <li>Status is text in a pill, not colour alone.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>Error (F-11-Q7): the app swallows the failure and shows the empty state. Following Q-06, web shows the same placeholder plus the toast "Error / Network error occurred"; Refresh retries.</li>
+      <li>The 1440 summary panel, its progress timeline and the label "VIEW ORDER" are web additions; the spec asks for the selected order's detail in the right panel. Confirm the summary, or embed the full detail.</li>
+      <li>Glyph: the empty state uses <code>File02</code> for the app's draft-document icon.</li>
+      <li>Brand tags are capitalised as the app does (first letter only), e.g. "Asian paints".</li>
+      <li>"GO TO MY ORDERS" opens stale filters in the app (F-11-Q1); the mockup links open the default filter.</li>
+      <li>Under 768 the glass tab bar stays visible here because the screen has no bottom action bar; the app hides it on pushed screens.</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

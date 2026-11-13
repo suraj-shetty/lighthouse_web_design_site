@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-09-12 Completion Year</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-09.css">
+</head>
+<body class="t-paragraph-m" data-kind="overlay" data-host="S-09-08-create-project.html" data-states="default,min,max">
+<div class="screen overlay f09" data-variant="popover">
+  <button class="scrim" data-close aria-label="Close"></button>
+  <section class="sheet f09-w320" role="dialog" aria-modal="true" aria-labelledby="yt" aria-describedby="yt-d">
+    <span class="sheet-grab" aria-hidden="true"></span>
+    <div class="sheet-head"><div class="txt"><h1 id="yt" class="t-label-xxl"><span data-show="default min max">Completion Year</span></h1><p id="yt-d" class="t-paragraph-m"><span data-show="default min max">The year this project was completed.</span></p></div></div>
+    <div class="sheet-body"><div class="qty f09-year" role="group" aria-label="Completion year" data-show="default"><button class="press" aria-label="Previous year"><i class="ic hgi hgi-stroke hgi-minus-sign" aria-hidden="true"></i></button><output class="t-label-xxl tnum" role="spinbutton" tabindex="0" aria-label="Completion year" aria-valuemin="2016" aria-valuemax="2031" aria-valuenow="2026">2026</output><button class="press" aria-label="Next year"><i class="ic hgi hgi-stroke hgi-plus-sign" aria-hidden="true"></i></button></div><div class="qty f09-year" role="group" aria-label="Completion year" data-show="min"><button class="press" aria-label="Previous year" disabled><i class="ic hgi hgi-stroke hgi-minus-sign" aria-hidden="true"></i></button><output class="t-label-xxl tnum" role="spinbutton" tabindex="0" aria-label="Completion year" aria-valuemin="2016" aria-valuemax="2031" aria-valuenow="2016">2016</output><button class="press" aria-label="Next year"><i class="ic hgi hgi-stroke hgi-plus-sign" aria-hidden="true"></i></button></div><div class="qty f09-year" role="group" aria-label="Completion year" data-show="max"><button class="press" aria-label="Previous year"><i class="ic hgi hgi-stroke hgi-minus-sign" aria-hidden="true"></i></button><output class="t-label-xxl tnum" role="spinbutton" tabindex="0" aria-label="Completion year" aria-valuemin="2016" aria-valuemax="2031" aria-valuenow="2031">2031</output><button class="press" aria-label="Next year" disabled><i class="ic hgi hgi-stroke hgi-plus-sign" aria-hidden="true"></i></button></div></div>
+    <div class="sheet-foot"><button class="btn btn-filled btn-full t-label-m press" data-close>Done</button></div>
+  </section>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375</b> — short glass sheet: handle → title → subtitle → stepper (minus · year · plus) → full-width Done.</li>
+      <li><b>768 / 1440</b> — popover anchored to the Completion Year row.</li>
+      <li>Opens on the saved year, or the current year (2026). Range is the current year −10 … +5 (2016 – 2031); minus is disabled at the lower end, plus at the upper end.</li>
+      <li>Loading, empty and error do not apply — nothing is fetched.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Bottom sheet / popover</li>
+      <li>Qty stepper (year) · Button filled L (Done)</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Open / close — <code>--panel-*</code></li>
+      <li>Year change — <code>--text-swap-*</code>; button press — <code>--press-*</code></li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li>Dialog labelled by its title. The year is a spin button with min, max and current value; arrow keys change it.</li>
+      <li>Disabled ends are exposed as disabled; focus returns to the row.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>Mockup: the stepper value is static; use the min / max states to see the ends.</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

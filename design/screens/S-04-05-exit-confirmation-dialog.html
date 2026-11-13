@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-04-05 Exit confirmation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-01-04.css">
+</head>
+<body class="t-paragraph-m" data-kind="overlay" data-host="S-03-01-onboarding-user-type.html" data-states="default">
+<div class="screen overlay" data-variant="dialog">
+  <div class="scrim" data-modal></div>
+  <section class="sheet" role="alertdialog" aria-modal="true" aria-labelledby="xt" aria-describedby="xd">
+    <div class="sheet-head"><div class="txt"><h1 id="xt" class="t-label-xl">Exit Onboarding</h1><p id="xd" class="t-paragraph-m">Your onboarding progress will be lost. Do you want to exit?</p></div></div>
+    <div class="sheet-foot">
+      <button class="btn btn-m btn-weak t-label-s press" data-close>No</button>
+      <a class="btn btn-m btn-filled t-label-s press" href="S-02-01-sign-in.html">Yes</a>
+    </div>
+  </section>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li>Centred dialog at every width (fixed maximum width): title, message, two equal buttons side by side — "No" left, "Yes" right.</li>
+      <li>Only the <b>Exit Onboarding</b> variant exists on web; the "Exit App" variant is dropped (no app to close).</li>
+      <li>Not dismissible by tapping outside (as the app). One state; no loading indicator after "Yes" (as the app).</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Modal / Dialog (confirm)</li>
+      <li>Button translucent M ("No") · Button filled M ("Yes")</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Open / close — <code>--modal-*</code> (scale + fade); press — <code>--press-*</code>.</li>
+      <li>"Yes" ends the session and replaces everything with Sign in — no transition in the app; <code>--panel-*</code> crossfade on web.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li><code>alertdialog</code> named by its title and described by its message; focus is trapped; initial focus on "No".</li>
+      <li>Esc behaves as "No"; focus is restored to the back button.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>"Yes" signs the user out (clears stored user data) and returns to Sign in — confirm this is still wanted on web, where a browser back would otherwise just leave the page.</li>
+      <li>The spec names <code>--radius-12</code> for the surface; the shared dialog shape (<code>--radius-28</code>) is used for consistency with every other dialog.</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

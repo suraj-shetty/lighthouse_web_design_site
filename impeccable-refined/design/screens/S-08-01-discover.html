@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-08-01 Discover</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+</head>
+<body class="t-paragraph-m"
+      data-states="architects,interior-designers,contractors,landscape-architects,brands,resellers,filtered,loading,empty,error"
+      data-roles="professional,reseller,homeowner"
+      data-shell="main" data-nav="discover">
+
+<!-- =====================================================================
+     SCREEN - one responsive page. The navigation shell (glass tab bar under
+     768, collapsible glass menu from 768) is injected by assets/lh.js.
+     ===================================================================== -->
+<div class="screen app on-surface" style="--page-bg: var(--home-surface); --page-max: 1120px">
+  <div class="app-main">
+
+    <header class="top">
+      <div class="top-inner glass glass-panel">
+        <div class="top-row wrap-narrow">
+          <h1 class="sr-only">Discover</h1>
+          <button class="loc press" data-open="S-08-02-discover-location-sheet.html" aria-label="Location: Bengaluru, change"><i class="ic hgi hgi-stroke hgi-location-01" aria-hidden="true"></i><span class="t-label-m truncate">Bengaluru</span><i class="ic ic-16 hgi hgi-stroke hgi-arrow-down-01" aria-hidden="true"></i></button>
+          <span class="grow only-narrow"></span>
+          <label class="search" role="search"><i class="ic hgi hgi-stroke hgi-search-01" aria-hidden="true"></i><input class="t-paragraph-l" type="search" placeholder="Search for professionals..." aria-label="Search for professionals"></label>
+          <button class="ibtn ibtn-44 glass glass-icon press" aria-label="Filters" data-open="S-08-03-discover-filter-sheet.html" data-show="architects interior-designers contractors landscape-architects brands resellers loading empty error"><i class="ic ic-24 hgi hgi-stroke hgi-filter-horizontal" aria-hidden="true"></i></button>
+          <button class="ibtn ibtn-44 glass glass-icon press" aria-label="Filters, 2 applied" data-open="S-08-03-discover-filter-sheet.html" data-show="filtered"><i class="ic ic-24 hgi hgi-stroke hgi-filter-horizontal" aria-hidden="true"></i><span class="dot"></span></button>
+        </div>
+        <div class="chip-row chip-scroll" role="tablist" aria-label="Role" data-show="architects interior-designers contractors landscape-architects brands resellers filtered empty error"><button class="chip glass t-label-s" role="tab" aria-selected="true" data-go-state="architects">Architects</button><button class="chip glass t-label-s" role="tab" aria-selected="false" data-go-state="interior-designers">Interior Designers</button><button class="chip glass t-label-s" role="tab" aria-selected="false" data-go-state="contractors">Contractors</button><button class="chip glass t-label-s" role="tab" aria-selected="false" data-go-state="landscape-architects">Landscape Architects</button><button class="chip glass t-label-s" role="tab" aria-selected="false" data-go-state="brands">Brands</button><button class="chip glass t-label-s" role="tab" aria-selected="false" data-go-state="resellers">Resellers</button></div>
+        <div class="chip-row chip-scroll" aria-hidden="true" data-show="loading"><span class="skel" style="width:112px;height:36px;border-radius:var(--radius-full);flex:none"></span><span class="skel" style="width:112px;height:36px;border-radius:var(--radius-full);flex:none"></span><span class="skel" style="width:112px;height:36px;border-radius:var(--radius-full);flex:none"></span><span class="skel" style="width:112px;height:36px;border-radius:var(--radius-full);flex:none"></span><span class="skel" style="width:112px;height:36px;border-radius:var(--radius-full);flex:none"></span></div>
+      </div>
+    </header>
+
+    <!-- ARCHITECTS tab: professional cards -->
+    <main class="grid stagger" aria-label="Architects" data-show="architects filtered">
+      <a class="pcard press" href="S-07-01-public-profile.html" data-as="architect">
+        <img class="pcard-img" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=240&h=320&fit=crop&q=70" alt="" loading="lazy">
+        <div class="pcard-body">
+          <div class="pcard-name"><h2 class="t-card-title truncate">Vikram Shah</h2><span class="verified" role="img" aria-label="Verified"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></div>
+          <span class="t-paragraph-s text-soft truncate">@vikramshah.arch</span>
+          <p class="pcard-sub t-paragraph-s">Commercial | Institutional | Urban Design</p>
+          <div class="pcard-tags"><span class="tag t-paragraph-s">Architects</span></div>
+          <div class="stats"><div class="stat"><span class="t-label-xs tnum">63</span><span class="t-paragraph-xs">Projects</span></div><div class="stat"><span class="t-label-xs tnum">15 Years</span><span class="t-paragraph-xs">Experience</span></div><div class="stat"><span class="t-label-xs tnum">32</span><span class="t-paragraph-xs">Team Size</span></div></div>
+        </div>
+      </a>
+      <a class="pcard press" href="S-07-01-public-profile.html" data-as="architect">
+        <img class="pcard-img" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=240&h=320&fit=crop&q=70" alt="" loading="lazy">
+        <div class="pcard-body">
+          <div class="pcard-name"><h2 class="t-card-title truncate">Studio Aranya</h2><span class="verified" role="img" aria-label="Verified"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></div>
+          <span class="t-paragraph-s text-soft truncate">@studio.aranya</span>
+          <p class="pcard-sub t-paragraph-s">Residential | Hospitality | Adaptive Reuse | +3</p>
+          <div class="pcard-tags"><span class="tag t-paragraph-s">Architects</span></div>
+          <div class="stats"><div class="stat"><span class="t-label-xs tnum">42</span><span class="t-paragraph-xs">Projects</span></div><div class="stat"><span class="t-label-xs tnum">12 Years</span><span class="t-paragraph-xs">Experience</span></div><div class="stat"><span class="t-label-xs tnum">18</span><span class="t-paragraph-xs">Team Size</span></div></div>
+        </div>
+      </a>
+      <a class="pcard press" href="S-07-01-public-profile.html" data-as="architect">
+        <img class="pcard-img" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=240&h=320&fit=crop&q=70" alt="" loading="lazy">
+        <div class="pcard-body">
+          <div class="pcard-name"><h2 class="t-card-title truncate">Meera Kapoor</h2></div>
+          <span class="t-paragraph-s text-soft truncate">@meera.kapoor</span>
+          <p class="pcard-sub t-paragraph-s">Residential | Retail</p>
+          <div class="pcard-tags"><span class="tag tag-dark t-paragraph-s">New</span><span class="tag t-paragraph-s">Architects</span></div>
+          <div class="stats"><div class="stat"><span class="t-label-xs tnum">17</span><span class="t-paragraph-xs">Projects</span></div><div class="stat"><span class="t-label-xs tnum">6 Years</span><span class="t-paragraph-xs">Experience</span></div><div class="stat"><span class="t-label-xs tnum">4</span><span class="t-paragraph-xs">Team Size</span></div></div>
+        </div>
+      </a>
+      <a class="pcard press" href="S-07-01-public-profile.html" data-as="architect">
+        <img class="pcard-img" src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=240&h=320&fit=crop&q=70" alt="" loading="lazy">
+        <div class="pcard-body">
+          <div class="pcard-name"><h2 class="t-card-title truncate">Ananya Rao</h2></div>
+          <span class="t-paragraph-s text-soft truncate">@ananya.rao.arch</span>
+          <p class="pcard-sub t-paragraph-s">Residential | Sustainable Design | Landscape | +2</p>
+          <div class="pcard-tags"><span class="tag tag-dark t-paragraph-s">New</span><span class="tag t-paragraph-s">Architects</span></div>
+          <div class="stats"><div class="stat"><span class="t-label-xs tnum">9</span><span class="t-paragraph-xs">Projects</span></div><div class="stat"><span class="t-label-xs tnum">3 Years</span><span class="t-paragraph-xs">Experience</span></div><div class="stat"><span class="t-label-xs tnum">-</span><span class="t-paragraph-xs">Team Size</span></div></div>
+        </div>
+      </a>
+      <a class="pcard press" href="S-07-01-public-profile.html" data-as="architect">
+        <img class="pcard-img" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=240&h=320&fit=crop&q=70" alt="" loading="lazy">
+        <div class="pcard-body">
+          <div class="pcard-name"><h2 class="t-card-title truncate">Aarav Sharma</h2></div>
+          <span class="t-paragraph-s text-soft truncate">@aarav.designs</span>
+          <p class="pcard-sub t-paragraph-s">Hospitality | Residential</p>
+          <div class="pcard-tags"><span class="tag t-paragraph-s">Architects</span></div>
+          <div class="stats"><div class="stat"><span class="t-label-xs tnum">28</span><span class="t-paragraph-xs">Projects</span></div><div class="stat"><span class="t-label-xs tnum">9 Years</span><span class="t-paragraph-xs">Experience</span></div><div class="stat"><span class="t-label-xs tnum">7</span><span class="t-paragraph-xs">Team Size</span></div></div>
+        </div>
+      </a>
+      <a class="pcard press" href="S-07-01-public-profile.html" data-as="architect">
+        <img class="pcard-img" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=240&h=320&fit=crop&q=70" alt="" loading="lazy">
+        <div class="pcard-body">
+          <div class="pcard-name"><h2 class="t-card-title truncate">Form &amp; Field Collective</h2><span class="verified" role="img" aria-label="Verified"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></div>
+          <span class="t-paragraph-s text-soft truncate">@formandfield</span>
+          <p class="pcard-sub t-paragraph-s">Residential | Workplace | Renovation | +4</p>
+          <div class="pcard-tags"><span class="tag t-paragraph-s">Architects</span></div>
+          <div class="stats"><div class="stat"><span class="t-label-xs tnum">51</span><span class="t-paragraph-xs">Projects</span></div><div class="stat"><span class="t-label-xs tnum">11 Years</span><span class="t-paragraph-xs">Experience</span></div><div class="stat"><span class="t-label-xs tnum">14</span><span class="t-paragraph-xs">Team Size</span></div></div>
+        </div>
+      </a>
+    </main>
+
+    <!-- INTERIOR DESIGNERS tab: professional cards -->
+    <main class="grid stagger" aria-label="Interior Designers" data-show="interior-designers">
+      <a class="pcard press" href="S-07-01-public-profile.html" data-as="interior-designer">
+        <img class="pcard-img" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=240&h=320&fit=crop&q=70" alt="" loading="lazy">
+        <div class="pcard-body">
+          <div class="pcard-name"><h2 class="t-card-title truncate">Ishita Menon</h2><span class="verified" role="img" aria-label="Verified"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></div>
+          <span class="t-paragraph-s text-soft truncate">@ishita.interiors</span>
+          <p class="pcard-sub t-paragraph-s">Residential | Hospitality | Turnkey | +2</p>
+          <div class="pcard-tags"><span class="tag t-paragraph-s">Interior Designers</span></div>
+          <div class="stats"><div class="stat"><span class="t-label-xs tnum">86</span><span class="t-paragraph-xs">Projects</span></div><div class="stat"><span class="t-label-xs tnum">9 Years</span><span class="t-paragraph-xs">Experience</span></div><div class="stat"><span class="t-label-xs tnum">14</span><span class="t-paragraph-xs">Team Size</span></div></div>
+        </div>
+      </a>
+      <a class="pcard press" href="S-07-01-public-profile.html" data-as="interior-designer">
+        <img class="pcard-img" src="https://images.unsplash.com/photo-1615873968403-89e068629265?w=240&h=320&fit=crop&q=70" alt="" loading="lazy">
+        <div class="pcard-body">
+          <div class="pcard-name"><h2 class="t-card-title truncate">Studio Lumen</h2></div>
+          <span class="t-paragraph-s text-soft truncate">@studiolumen</span>
+          <p class="pcard-sub t-paragraph-s">Residential | Retail</p>
+          <div class="pcard-tags"><span class="tag tag-dark t-paragraph-s">New</span><span class="tag t-paragraph-s">Interior Designers</span></div>
+          <div class="stats"><div class="stat"><span class="t-label-xs tnum">12</span><span class="t-paragraph-xs">Projects</span></div><div class="stat"><span class="t-label-xs tnum">2 Years</span><span class="t-paragraph-xs">Experience</span></div><div class="stat"><span class="t-label-xs tnum">5</span><span class="t-paragraph-xs">Team Size</span></div></div>
+        </div>
+      </a>
+      <a class="pcard press" href="S-07-01-public-profile.html" data-as="interior-designer">
+        <img class="pcard-img" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=240&h=320&fit=crop&q=70" alt="" loading="lazy">
+        <div class="pcard-body">
+          <div class="pcard-name"><h2 class="t-card-title truncate">Rohan Bedi</h2><span class="verified" role="img" aria-label="Verified"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></div>
+          <span class="t-paragraph-s text-soft truncate">@rohanbedi.design</span>
+          <p class="pcard-sub t-paragraph-s">Workplace | Hospitality | Lighting Design</p>
+          <div class="pcard-tags"><span class="tag t-paragraph-s">Interior Designers</span></div>
+          <div class="stats"><div class="stat"><span class="t-label-xs tnum">54</span><span class="t-paragraph-xs">Projects</span></div><div class="stat"><span class="t-label-xs tnum">12 Years</span><span class="t-paragraph-xs">Experience</span></div><div class="stat"><span class="t-label-xs tnum">21</span><span class="t-paragraph-xs">Team Size</span></div></div>
+        </div>
+      </a>
+      <a class="pcard press" href="S-07-01-public-profile.html" data-as="interior-designer">
+        <img class="pcard-img" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=240&h=320&fit=crop&q=70" alt="" loading="lazy">
+        <div class="pcard-body">
+          <div class="pcard-name"><h2 class="t-card-title truncate">Aditi Deshmukh</h2></div>
+          <span class="t-paragraph-s text-soft truncate">@aditi.deshmukh</span>
+          <p class="pcard-sub t-paragraph-s">Residential | Modular Kitchens</p>
+          <div class="pcard-tags"><span class="tag t-paragraph-s">Interior Designers</span></div>
+          <div class="stats"><div class="stat"><span class="t-label-xs tnum">31</span><span class="t-paragraph-xs">Projects</span></div><div class="stat"><span class="t-label-xs tnum">7 Years</span><span class="t-paragraph-xs">Experience</span></div><div class="stat"><span class="t-label-xs tnum">6</span><span class="t-paragraph-xs">Team Size</span></div></div>
+        </div>
+      </a>
+      <a class="pcard press" href="S-07-01-public-profile.html" data-as="interior-designer">
+        <img class="pcard-img" src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=240&h=320&fit=crop&q=70" alt="" loading="lazy">
+        <div class="pcard-body">
+          <div class="pcard-name"><h2 class="t-card-title truncate">Casa Nomad Design</h2></div>
+          <span class="t-paragraph-s text-soft truncate">@casanomad</span>
+          <p class="pcard-sub t-paragraph-s">Residential | Styling | Furniture Design | +1</p>
+          <div class="pcard-tags"><span class="tag t-paragraph-s">Interior Designers</span></div>
+          <div class="stats"><div class="stat"><span class="t-label-xs tnum">47</span><span class="t-paragraph-xs">Projects</span></div><div class="stat"><span class="t-label-xs tnum">8 Years</span><span class="t-paragraph-xs">Experience</span></div><div class="stat"><span class="t-label-xs tnum">11</span><span class="t-paragraph-xs">Team Size</span></div></div>
+        </div>
+      </a>
+      <a class="pcard press" href="S-07-01-public-profile.html" data-as="interior-designer">
+        <img class="pcard-img" src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=240&h=320&fit=crop&q=70" alt="" loading="lazy">
+        <div class="pcard-body">
+          <div class="pcard-name"><h2 class="t-card-title truncate">Farah Qureshi</h2></div>
+          <span class="t-paragraph-s text-soft truncate">@farahq.spaces</span>
+          <p class="pcard-sub t-paragraph-s">Residential | Renovation</p>
+          <div class="pcard-tags"><span class="tag tag-dark t-paragraph-s">New</span><span class="tag t-paragraph-s">Interior Designers</span></div>
+          <div class="stats"><div class="stat"><span class="t-label-xs tnum">8</span><span class="t-paragraph-xs">Projects</span></div><div class="stat"><span class="t-label-xs tnum">3 Years</span><span class="t-paragraph-xs">Experience</span></div><div class="stat"><span class="t-label-xs tnum">-</span><span class="t-paragraph-xs">Team Size</span></div></div>
+        </div>
+      </a>
+    </main>
+
+    <!-- CONTRACTORS tab: professional cards -->
+    <main class="grid stagger" aria-label="Contractors" data-show="contractors">
+      <a class="pcard press" href="S-07-01-public-profile.html" data-as="contractor">
+        <img class="pcard-img" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=240&h=320&fit=crop&q=70" alt="" loading="lazy">
+        <div class="pcard-body">
+          <div class="pcard-name"><h2 class="t-card-title truncate">Rajesh Patil</h2><span class="verified" role="img" aria-label="Verified"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></div>
+          <span class="t-paragraph-s text-soft truncate">@patil.buildcon</span>
+          <p class="pcard-sub t-paragraph-s">Civil Construction | Turnkey | Structural | +2</p>
+          <div class="pcard-tags"><span class="tag t-paragraph-s">Contractors</span></div>
+          <div class="stats"><div class="stat"><span class="t-label-xs tnum">140</span><span class="t-paragraph-xs">Projects</span></div><div class="stat"><span class="t-label-xs tnum">22 Years</span><span class="t-paragraph-xs">Experience</span></div><div class="stat"><span class="t-label-xs tnum">85</span><span class="t-paragraph-xs">Team Size</span></div></div>
+        </div>
+      </a>
+      <a class="pcard press" href="S-07-01-public-profile.html" data-as="contractor">
+        <img class="pcard-img" src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=240&h=320&fit=crop&q=70" alt="" loading="lazy">
+        <div class="pcard-body">
+          <div class="pcard-name"><h2 class="t-card-title truncate">Keystone Constructions</h2><span class="verified" role="img" aria-label="Verified"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></div>
+          <span class="t-paragraph-s text-soft truncate">@keystone.build</span>
+          <p class="pcard-sub t-paragraph-s">Commercial | Industrial | Interior Fit-Out</p>
+          <div class="pcard-tags"><span class="tag t-paragraph-s">Contractors</span></div>
+          <div class="stats"><div class="stat"><span class="t-label-xs tnum">96</span><span class="t-paragraph-xs">Projects</span></div><div class="stat"><span class="t-label-xs tnum">18 Years</span><span class="t-paragraph-xs">Experience</span></div><div class="stat"><span class="t-label-xs tnum">120</span><span class="t-paragraph-xs">Team Size</span></div></div>
+        </div>
+      </a>
+      <a class="pcard press" href="S-07-01-public-profile.html" data-as="contractor">
+        <img class="pcard-img" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=240&h=320&fit=crop&q=70" alt="" loading="lazy">
+        <div class="pcard-body">
+          <div class="pcard-name"><h2 class="t-card-title truncate">Imran Sheikh</h2></div>
+          <span class="t-paragraph-s text-soft truncate">@imran.sheikh.works</span>
+          <p class="pcard-sub t-paragraph-s">Renovation | Waterproofing</p>
+          <div class="pcard-tags"><span class="tag t-paragraph-s">Contractors</span></div>
+          <div class="stats"><div class="stat"><span class="t-label-xs tnum">64</span><span class="t-paragraph-xs">Projects</span></div><div class="stat"><span class="t-label-xs tnum">10 Years</span><span class="t-paragraph-xs">Experience</span></div><div class="stat"><span class="t-label-xs tnum">16</span><span class="t-paragraph-xs">Team Size</span></div></div>
+        </div>
+      </a>
+      <a class="pcard press" href="S-07-01-public-profile.html" data-as="contractor">
+        <img class="pcard-img" src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=240&h=320&fit=crop&q=70" alt="" loading="lazy">
+        <div class="pcard-body">
+          <div class="pcard-name"><h2 class="t-card-title truncate">BuildRight Projects</h2></div>
+          <span class="t-paragraph-s text-soft truncate">@buildright</span>
+          <p class="pcard-sub t-paragraph-s">Residential | Carpentry | Flooring</p>
+          <div class="pcard-tags"><span class="tag tag-dark t-paragraph-s">New</span><span class="tag t-paragraph-s">Contractors</span></div>
+          <div class="stats"><div class="stat"><span class="t-label-xs tnum">14</span><span class="t-paragraph-xs">Projects</span></div><div class="stat"><span class="t-label-xs tnum">2 Years</span><span class="t-paragraph-xs">Experience</span></div><div class="stat"><span class="t-label-xs tnum">9</span><span class="t-paragraph-xs">Team Size</span></div></div>
+        </div>
+      </a>
+      <a class="pcard press" href="S-07-01-public-profile.html" data-as="contractor">
+        <img class="pcard-img" src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=240&h=320&fit=crop&q=70" alt="" loading="lazy">
+        <div class="pcard-body">
+          <div class="pcard-name"><h2 class="t-card-title truncate">Sunil Yadav</h2></div>
+          <span class="t-paragraph-s text-soft truncate">@sunilyadav.civil</span>
+          <p class="pcard-sub t-paragraph-s">Residential | Plumbing | Electrical | +1</p>
+          <div class="pcard-tags"><span class="tag t-paragraph-s">Contractors</span></div>
+          <div class="stats"><div class="stat"><span class="t-label-xs tnum">37</span><span class="t-paragraph-xs">Projects</span></div><div class="stat"><span class="t-label-xs tnum">14 Years</span><span class="t-paragraph-xs">Experience</span></div><div class="stat"><span class="t-label-xs tnum">22</span><span class="t-paragraph-xs">Team Size</span></div></div>
+        </div>
+      </a>
+      <a class="pcard press" href="S-07-01-public-profile.html" data-as="contractor">
+        <img class="pcard-img" src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=240&h=320&fit=crop&q=70" alt="" loading="lazy">
+        <div class="pcard-body">
+          <div class="pcard-name"><h2 class="t-card-title truncate">Deccan Infra Works</h2></div>
+          <span class="t-paragraph-s text-soft truncate">@deccaninfra</span>
+          <p class="pcard-sub t-paragraph-s">Commercial Fit-Out | MEP</p>
+          <div class="pcard-tags"><span class="tag t-paragraph-s">Contractors</span></div>
+          <div class="stats"><div class="stat"><span class="t-label-xs tnum">58</span><span class="t-paragraph-xs">Projects</span></div><div class="stat"><span class="t-label-xs tnum">9 Years</span><span class="t-paragraph-xs">Experience</span></div><div class="stat"><span class="t-label-xs tnum">40</span><span class="t-paragraph-xs">Team Size</span></div></div>
+        </div>
+      </a>
+    </main>
+
+    <!-- LANDSCAPE ARCHITECTS tab: professional cards -->
+    <main class="grid stagger" aria-label="Landscape Architects" data-show="landscape-architects">
+      <a class="pcard press" href="S-07-01-public-profile.html" data-as="landscape-architect">
+        <img class="pcard-img" src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=240&h=320&fit=crop&q=70" alt="" loading="lazy">
+        <div class="pcard-body">
+          <div class="pcard-name"><h2 class="t-card-title truncate">Kavya Nair</h2><span class="verified" role="img" aria-label="Verified"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></div>
+          <span class="t-paragraph-s text-soft truncate">@kavya.landscapes</span>
+          <p class="pcard-sub t-paragraph-s">Residential | Hospitality | Planting Design | +2</p>
+          <div class="pcard-tags"><span class="tag t-paragraph-s">Landscape Architects</span></div>
+          <div class="stats"><div class="stat"><span class="t-label-xs tnum">38</span><span class="t-paragraph-xs">Projects</span></div><div class="stat"><span class="t-label-xs tnum">11 Years</span><span class="t-paragraph-xs">Experience</span></div><div class="stat"><span class="t-label-xs tnum">9</span><span class="t-paragraph-xs">Team Size</span></div></div>
+        </div>
+      </a>
+      <a class="pcard press" href="S-07-01-public-profile.html" data-as="landscape-architect">
+        <img class="pcard-img" src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=240&h=320&fit=crop&q=70" alt="" loading="lazy">
+        <div class="pcard-body">
+          <div class="pcard-name"><h2 class="t-card-title truncate">Terrain Studio</h2><span class="verified" role="img" aria-label="Verified"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></div>
+          <span class="t-paragraph-s text-soft truncate">@terrainstudio</span>
+          <p class="pcard-sub t-paragraph-s">Campus | Public Parks | Urban Design</p>
+          <div class="pcard-tags"><span class="tag t-paragraph-s">Landscape Architects</span></div>
+          <div class="stats"><div class="stat"><span class="t-label-xs tnum">27</span><span class="t-paragraph-xs">Projects</span></div><div class="stat"><span class="t-label-xs tnum">13 Years</span><span class="t-paragraph-xs">Experience</span></div><div class="stat"><span class="t-label-xs tnum">15</span><span class="t-paragraph-xs">Team Size</span></div></div>
+        </div>
+      </a>
+      <a class="pcard press" href="S-07-01-public-profile.html" data-as="landscape-architect">
+        <img class="pcard-img" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=240&h=320&fit=crop&q=70" alt="" loading="lazy">
+        <div class="pcard-body">
+          <div class="pcard-name"><h2 class="t-card-title truncate">Neel Fernandes</h2></div>
+          <span class="t-paragraph-s text-soft truncate">@neel.fernandes</span>
+          <p class="pcard-sub t-paragraph-s">Terrace Gardens | Residential</p>
+          <div class="pcard-tags"><span class="tag t-paragraph-s">Landscape Architects</span></div>
+          <div class="stats"><div class="stat"><span class="t-label-xs tnum">44</span><span class="t-paragraph-xs">Projects</span></div><div class="stat"><span class="t-label-xs tnum">8 Years</span><span class="t-paragraph-xs">Experience</span></div><div class="stat"><span class="t-label-xs tnum">5</span><span class="t-paragraph-xs">Team Size</span></div></div>
+        </div>
+      </a>
+      <a class="pcard press" href="S-07-01-public-profile.html" data-as="landscape-architect">
+        <img class="pcard-img" src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=240&h=320&fit=crop&q=70" alt="" loading="lazy">
+        <div class="pcard-body">
+          <div class="pcard-name"><h2 class="t-card-title truncate">Leaf &amp; Loam</h2></div>
+          <span class="t-paragraph-s text-soft truncate">@leafandloam</span>
+          <p class="pcard-sub t-paragraph-s">Planting Design | Maintenance</p>
+          <div class="pcard-tags"><span class="tag tag-dark t-paragraph-s">New</span><span class="tag t-paragraph-s">Landscape Architects</span></div>
+          <div class="stats"><div class="stat"><span class="t-label-xs tnum">6</span><span class="t-paragraph-xs">Projects</span></div><div class="stat"><span class="t-label-xs tnum">2 Years</span><span class="t-paragraph-xs">Experience</span></div><div class="stat"><span class="t-label-xs tnum">3</span><span class="t-paragraph-xs">Team Size</span></div></div>
+        </div>
+      </a>
+      <a class="pcard press" href="S-07-01-public-profile.html" data-as="landscape-architect">
+        <img class="pcard-img" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=240&h=320&fit=crop&q=70" alt="" loading="lazy">
+        <div class="pcard-body">
+          <div class="pcard-name"><h2 class="t-card-title truncate">Tara Iyer</h2></div>
+          <span class="t-paragraph-s text-soft truncate">@tara.iyer</span>
+          <p class="pcard-sub t-paragraph-s">Hospitality | Water Features | Lighting</p>
+          <div class="pcard-tags"><span class="tag t-paragraph-s">Landscape Architects</span></div>
+          <div class="stats"><div class="stat"><span class="t-label-xs tnum">19</span><span class="t-paragraph-xs">Projects</span></div><div class="stat"><span class="t-label-xs tnum">6 Years</span><span class="t-paragraph-xs">Experience</span></div><div class="stat"><span class="t-label-xs tnum">4</span><span class="t-paragraph-xs">Team Size</span></div></div>
+        </div>
+      </a>
+      <a class="pcard press" href="S-07-01-public-profile.html" data-as="landscape-architect">
+        <img class="pcard-img" src="https://images.unsplash.com/photo-1558904541-efa843a96f01?w=240&h=320&fit=crop&q=70" alt="" loading="lazy">
+        <div class="pcard-body">
+          <div class="pcard-name"><h2 class="t-card-title truncate">Verdant Works</h2></div>
+          <span class="t-paragraph-s text-soft truncate">@verdantworks</span>
+          <p class="pcard-sub t-paragraph-s">Residential | Irrigation | Hardscape | +1</p>
+          <div class="pcard-tags"><span class="tag t-paragraph-s">Landscape Architects</span></div>
+          <div class="stats"><div class="stat"><span class="t-label-xs tnum">52</span><span class="t-paragraph-xs">Projects</span></div><div class="stat"><span class="t-label-xs tnum">15 Years</span><span class="t-paragraph-xs">Experience</span></div><div class="stat"><span class="t-label-xs tnum">18</span><span class="t-paragraph-xs">Team Size</span></div></div>
+        </div>
+      </a>
+    </main>
+
+    <!-- BRANDS tab: business cards: landscape logo image, no chips, no stats -->
+    <main class="grid stagger" aria-label="Brands" data-show="brands">
+      <a class="pcard pcard-biz press" href="S-07-01-public-profile.html" data-as="brand">
+        <img class="pcard-img" src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=396&h=264&fit=crop&q=70" alt="" loading="lazy">
+        <div class="pcard-body">
+          <div class="pcard-name"><h2 class="t-card-title truncate">Terra Tiles India</h2><span class="verified" role="img" aria-label="Verified"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></div>
+          <span class="t-paragraph-s text-soft truncate">@terratiles.india</span>
+          <p class="pcard-sub t-paragraph-s">Tiles | Stone | Flooring</p>
+        </div>
+      </a>
+      <a class="pcard pcard-biz press" href="S-07-01-public-profile.html" data-as="brand">
+        <img class="pcard-img" src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?w=396&h=264&fit=crop&q=70" alt="" loading="lazy">
+        <div class="pcard-body">
+          <div class="pcard-name"><h2 class="t-card-title truncate">Northlight Fixtures</h2></div>
+          <span class="t-paragraph-s text-soft truncate">@northlight</span>
+          <p class="pcard-sub t-paragraph-s">Lighting | Electrical</p>
+        </div>
+      </a>
+      <a class="pcard pcard-biz press" href="S-07-01-public-profile.html" data-as="brand">
+        <img class="pcard-img" src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=396&h=264&fit=crop&q=70" alt="" loading="lazy">
+        <div class="pcard-body">
+          <div class="pcard-name"><h2 class="t-card-title truncate">Oakline Furniture</h2><span class="verified" role="img" aria-label="Verified"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></div>
+          <span class="t-paragraph-s text-soft truncate">@oakline</span>
+          <p class="pcard-sub t-paragraph-s">Furniture | Modular Kitchens | Wardrobes | +2</p>
+        </div>
+      </a>
+      <a class="pcard pcard-biz press" href="S-07-01-public-profile.html" data-as="brand">
+        <img class="pcard-img" src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=396&h=264&fit=crop&q=70" alt="" loading="lazy">
+        <div class="pcard-body">
+          <div class="pcard-name"><h2 class="t-card-title truncate">Aqualine Bath</h2></div>
+          <span class="t-paragraph-s text-soft truncate">@aqualine.bath</span>
+          <p class="pcard-sub t-paragraph-s">Sanitaryware | Bath Fittings</p>
+        </div>
+      </a>
+      <a class="pcard pcard-biz press" href="S-07-01-public-profile.html" data-as="brand">
+        <img class="pcard-img" src="https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?w=396&h=264&fit=crop&q=70" alt="" loading="lazy">
+        <div class="pcard-body">
+          <div class="pcard-name"><h2 class="t-card-title truncate">Stonecraft Surfaces</h2><span class="verified" role="img" aria-label="Verified"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></div>
+          <span class="t-paragraph-s text-soft truncate">@stonecraft</span>
+          <p class="pcard-sub t-paragraph-s">Marble | Granite | Quartz</p>
+        </div>
+      </a>
+      <a class="pcard pcard-biz press" href="S-07-01-public-profile.html" data-as="brand">
+        <img class="pcard-img" src="https://images.unsplash.com/photo-1615873968403-89e068629265?w=396&h=264&fit=crop&q=70" alt="" loading="lazy">
+        <div class="pcard-body">
+          <div class="pcard-name"><h2 class="t-card-title truncate">Verde Paints</h2></div>
+          <span class="t-paragraph-s text-soft truncate">@verdepaints</span>
+          <p class="pcard-sub t-paragraph-s">Paints | Wall Finishes</p>
+        </div>
+      </a>
+    </main>
+
+    <!-- RESELLERS tab: business cards: landscape logo image, no chips, no stats -->
+    <main class="grid stagger" aria-label="Resellers" data-show="resellers">
+      <a class="pcard pcard-biz press" href="S-07-01-public-profile.html" data-as="reseller">
+        <img class="pcard-img" src="https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?w=396&h=264&fit=crop&q=70" alt="" loading="lazy">
+        <div class="pcard-body">
+          <div class="pcard-name"><h2 class="t-card-title truncate">Shree Krishna Ceramics</h2><span class="verified" role="img" aria-label="Verified"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></div>
+          <span class="t-paragraph-s text-soft truncate">@shreekrishna.ceramics</span>
+          <p class="pcard-sub t-paragraph-s">Tiles | Sanitaryware | Adhesives</p>
+        </div>
+      </a>
+      <a class="pcard pcard-biz press" href="S-07-01-public-profile.html" data-as="reseller">
+        <img class="pcard-img" src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?w=396&h=264&fit=crop&q=70" alt="" loading="lazy">
+        <div class="pcard-body">
+          <div class="pcard-name"><h2 class="t-card-title truncate">Mehta Lighting House</h2></div>
+          <span class="t-paragraph-s text-soft truncate">@mehtalighting</span>
+          <p class="pcard-sub t-paragraph-s">Lighting | Fans | Switches</p>
+        </div>
+      </a>
+      <a class="pcard pcard-biz press" href="S-07-01-public-profile.html" data-as="reseller">
+        <img class="pcard-img" src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=396&h=264&fit=crop&q=70" alt="" loading="lazy">
+        <div class="pcard-body">
+          <div class="pcard-name"><h2 class="t-card-title truncate">Bengaluru Tile Depot</h2><span class="verified" role="img" aria-label="Verified"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></div>
+          <span class="t-paragraph-s text-soft truncate">@blrtiledepot</span>
+          <p class="pcard-sub t-paragraph-s">Tiles | Stone | Grout</p>
+        </div>
+      </a>
+      <a class="pcard pcard-biz press" href="S-07-01-public-profile.html" data-as="reseller">
+        <img class="pcard-img" src="https://images.unsplash.com/photo-1524634126442-357e0eac3c14?w=396&h=264&fit=crop&q=70" alt="" loading="lazy">
+        <div class="pcard-body">
+          <div class="pcard-name"><h2 class="t-card-title truncate">Home Square Mart</h2></div>
+          <span class="t-paragraph-s text-soft truncate">@homesquare</span>
+          <p class="pcard-sub t-paragraph-s">Furniture | Decor | Furnishings</p>
+        </div>
+      </a>
+      <a class="pcard pcard-biz press" href="S-07-01-public-profile.html" data-as="reseller">
+        <img class="pcard-img" src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=396&h=264&fit=crop&q=70" alt="" loading="lazy">
+        <div class="pcard-body">
+          <div class="pcard-name"><h2 class="t-card-title truncate">Sai Hardware &amp; Sanitary</h2></div>
+          <span class="t-paragraph-s text-soft truncate">@saihardware</span>
+          <p class="pcard-sub t-paragraph-s">Bath Fittings | Hardware | Plumbing</p>
+        </div>
+      </a>
+      <a class="pcard pcard-biz press" href="S-07-01-public-profile.html" data-as="reseller">
+        <img class="pcard-img" src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?w=396&h=264&fit=crop&q=70" alt="" loading="lazy">
+        <div class="pcard-body">
+          <div class="pcard-name"><h2 class="t-card-title truncate">Urban Kitchen Studio</h2><span class="verified" role="img" aria-label="Verified"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></div>
+          <span class="t-paragraph-s text-soft truncate">@urbankitchen</span>
+          <p class="pcard-sub t-paragraph-s">Modular Kitchens | Appliances</p>
+        </div>
+      </a>
+    </main>
+
+    <!-- LOADING - 6 skeleton cards -->
+    <main class="grid" aria-busy="true" aria-label="Loading results" data-show="loading">
+      <div class="pcard" aria-hidden="true">
+        <span class="skel pcard-img" style="border-radius:var(--radius-16)"></span>
+        <div class="pcard-body" style="gap:var(--spacing-10)"><span class="skel" style="width:70%;height:16px"></span><span class="skel" style="width:40%;height:12px"></span><span class="skel" style="width:90%;height:12px"></span><span class="skel" style="width:50%;height:24px;border-radius:var(--radius-full)"></span><span class="skel" style="margin-top:auto;height:44px;border-radius:var(--radius-12)"></span></div>
+      </div>
+      <div class="pcard" aria-hidden="true">
+        <span class="skel pcard-img" style="border-radius:var(--radius-16)"></span>
+        <div class="pcard-body" style="gap:var(--spacing-10)"><span class="skel" style="width:70%;height:16px"></span><span class="skel" style="width:40%;height:12px"></span><span class="skel" style="width:90%;height:12px"></span><span class="skel" style="width:50%;height:24px;border-radius:var(--radius-full)"></span><span class="skel" style="margin-top:auto;height:44px;border-radius:var(--radius-12)"></span></div>
+      </div>
+      <div class="pcard" aria-hidden="true">
+        <span class="skel pcard-img" style="border-radius:var(--radius-16)"></span>
+        <div class="pcard-body" style="gap:var(--spacing-10)"><span class="skel" style="width:70%;height:16px"></span><span class="skel" style="width:40%;height:12px"></span><span class="skel" style="width:90%;height:12px"></span><span class="skel" style="width:50%;height:24px;border-radius:var(--radius-full)"></span><span class="skel" style="margin-top:auto;height:44px;border-radius:var(--radius-12)"></span></div>
+      </div>
+      <div class="pcard" aria-hidden="true">
+        <span class="skel pcard-img" style="border-radius:var(--radius-16)"></span>
+        <div class="pcard-body" style="gap:var(--spacing-10)"><span class="skel" style="width:70%;height:16px"></span><span class="skel" style="width:40%;height:12px"></span><span class="skel" style="width:90%;height:12px"></span><span class="skel" style="width:50%;height:24px;border-radius:var(--radius-full)"></span><span class="skel" style="margin-top:auto;height:44px;border-radius:var(--radius-12)"></span></div>
+      </div>
+      <div class="pcard" aria-hidden="true">
+        <span class="skel pcard-img" style="border-radius:var(--radius-16)"></span>
+        <div class="pcard-body" style="gap:var(--spacing-10)"><span class="skel" style="width:70%;height:16px"></span><span class="skel" style="width:40%;height:12px"></span><span class="skel" style="width:90%;height:12px"></span><span class="skel" style="width:50%;height:24px;border-radius:var(--radius-full)"></span><span class="skel" style="margin-top:auto;height:44px;border-radius:var(--radius-12)"></span></div>
+      </div>
+      <div class="pcard" aria-hidden="true">
+        <span class="skel pcard-img" style="border-radius:var(--radius-16)"></span>
+        <div class="pcard-body" style="gap:var(--spacing-10)"><span class="skel" style="width:70%;height:16px"></span><span class="skel" style="width:40%;height:12px"></span><span class="skel" style="width:90%;height:12px"></span><span class="skel" style="width:50%;height:24px;border-radius:var(--radius-full)"></span><span class="skel" style="margin-top:auto;height:44px;border-radius:var(--radius-12)"></span></div>
+      </div>
+    </main>
+
+    <!-- EMPTY, and ERROR (toast, then the same line - Q-06) -->
+    <main class="grid" data-show="empty error">
+      <p class="line-empty t-paragraph-m" role="status">No professionals found.</p>
+    </main>
+  </div>
+
+  <div class="toast-region" aria-live="polite" data-show="error">
+    <div class="toast toast-danger glass glass-panel" role="status">
+      <i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i>
+      <div class="body"><span class="t-label-s">Error</span><p class="t-paragraph-s">Network error occurred</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- ANNOTATIONS (shown on the board, hidden inside the frames) -->
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375:</b> as the app: location selector and filter on row 1, search on row 2, scrolling role tabs on row 3, one column of cards, glass tab bar.</li>
+      <li><b>768:</b> floating glass bar: location, search and filter in one row, tabs beneath; cards in 2 columns; collapsed menu.</li>
+      <li><b>1440:</b> same bar; cards in 3 columns (2 or 4 as the menu collapses or the window grows), content capped at 1120.</li>
+      <li>Each role tab is its own state with its own results; tapping a tab reloads the list, and a card opens that category's profile (S-07-01).</li>
+      <li>Business tabs (names containing brand, reseller, retailer, distributor) use the landscape 3:2 image and drop chips and stats.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Navigation shell (shared) · Top header (glass)</li>
+      <li>Search input · IconButton glass with dot badge · Location selector</li>
+      <li>Chip as role tabs (scrolling tablist)</li>
+      <li>Result card (Shop card, list layout) · Avatar image · Verified badge · Tag (New = dark, role = neutral) · Metric cells</li>
+      <li>Skeleton (pills + cards) · Empty line · Toast (danger)</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Menu tap (Home ⇄ Discover): pill stretch + content blur out, then pill settle + staggered rise: see S-05-01 notes.</li>
+      <li>Results entrance and next page: <code>--stagger-*</code>; skeleton, <code>--shimmer-*</code>, <code>--skel-*</code>, <code>--reveal-*</code></li>
+      <li>Tab select: <code>--tabs-*</code>; card and button press, <code>--press-*</code>; filter dot, <code>--badge-pop-*</code>; toast, <code>--toast-*</code></li>
+      <li>Location and filter sheets (S-08-02, S-08-03): <code>--panel-*</code></li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li>Visually hidden <code>h1</code> "Discover"; search landmark with a labelled input; tabs are a tablist.</li>
+      <li>Filter button says "Filters, 2 applied" when the dot shows. Each card is one link; verified is announced in text.</li>
+      <li>Empty line is a polite status; toast is a polite live region. Targets are 44 or larger.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>Tab names, people and brands are sample data; the real tabs come from the backend.</li>
+      <li>Error = toast then the empty line (Q-06); no retry control exists in the app for this screen.</li>
+      <li>Card images have empty alt text because the card link is named by the heading (Q-36).</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

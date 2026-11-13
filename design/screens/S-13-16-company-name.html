@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-13-16 Studio / Company Name</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-13a.css">
+</head>
+<body class="t-paragraph-m" data-kind="overlay" data-host="S-13-05-manage-account.html" data-states="default,editing,limit,empty,loading,error">
+<div class="screen overlay" data-variant="sheet">
+  <button class="scrim" data-close aria-label="Close" data-show="default editing limit empty loading"></button>
+  <section class="sheet" role="dialog" aria-modal="true" aria-labelledby="et" data-show="default editing limit empty loading">
+    <span class="sheet-grab" aria-hidden="true"></span>
+    <div class="sheet-head"><div class="txt"><h1 id="et" class="t-label-xxl">Studio / Company Name</h1><p class="t-paragraph-m">Update your studio / company name.</p></div><button class="ibtn ibtn-44 glass glass-icon press" data-close aria-label="Close"><i class="ic hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></div>
+    <div class="sheet-body">
+      <button class="ed-pill press" data-go-state="editing" data-show="default"><span class="ed-pill-label t-label-s">Name</span><span class="ed-pill-val t-paragraph-m">Studio Aarav</span><span class="sr-only">Edit</span></button>
+      <div class="ed-pill" data-show="loading"><span class="ed-pill-label t-label-s">Name</span><span class="ed-pill-val t-paragraph-m">Studio Aarav</span></div>
+      <div class="ed-pill is-focus" data-show="editing"><label for="cn" class="ed-pill-label t-label-s">Name</label><input id="cn" class="t-paragraph-m" type="text" value="Studio Aarav" placeholder="Enter Name" maxlength="40" autocomplete="organization"></div>
+      <div class="ed-pill is-focus is-error" data-show="limit"><label for="cn40" class="ed-pill-label t-label-s">Name</label><input id="cn40" class="t-paragraph-m" type="text" value="Studio Aarav Architecture &amp; Interior Co." placeholder="Enter Name" maxlength="40" aria-describedby="cn40e"></div>
+      <p class="helper error t-paragraph-s" id="cn40e" role="alert" data-show="limit"><i class="ic ic-16 hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i>Studio/Firm name must be less than 40 characters.</p>
+      <div class="ed-pill is-error" data-show="empty"><label for="cn0" class="ed-pill-label t-label-s">Name</label><input id="cn0" class="t-paragraph-m" type="text" value="" placeholder="Enter Name" maxlength="40" aria-invalid="true" aria-describedby="cn0e"></div>
+      <p class="helper error t-paragraph-s" id="cn0e" role="alert" data-show="empty"><i class="ic ic-16 hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i>Company name cannot be empty</p>
+    </div>
+    <div class="sheet-foot" data-show="default"><button class="btn btn-filled btn-full t-label-m press" data-close>UPDATE</button></div>
+    <div class="sheet-foot" data-show="editing limit"><button class="btn btn-filled btn-full t-label-m press" data-go-state="loading">UPDATE</button></div>
+    <div class="sheet-foot" data-show="empty"><button class="btn btn-filled btn-full t-label-m press" >UPDATE</button></div>
+    <div class="sheet-foot" data-show="loading"><button class="btn btn-filled btn-full t-label-m" disabled aria-busy="true"><span class="spinner" aria-hidden="true"></span><span class="sr-only">Saving</span></button></div>
+  </section>
+  <div class="toast-region" aria-live="polite" data-show="error">
+  <div class="toast toast-danger glass glass-panel" role="status"><i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i><div class="body"><span class="t-label-s">Error</span><p class="t-paragraph-s">Something went wrong. Please try again later.</p></div></div>
+</div>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375</b> — glass bottom sheet: handle, title, subtitle, one pill row (label "Name" left, value right), an inline message line under it, full-width UPDATE pinned above the safe area.</li>
+      <li><b>768 / 1440</b> — 440 wide side sheet from the right with the same content; the primary button sits in the sheet footer.</li>
+      <li>States: <b>default</b> (read-only value; tap to edit) · <b>editing</b> · <b>limit</b> (40 characters typed: red message under the field) · <b>empty</b> (hint "Enter Name" + inline message) · <b>loading</b> · <b>error</b> (toast).</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Bottom sheet / side sheet · IconButton glass (close)</li>
+      <li>Text field (label-left pill) with helper / error line</li>
+      <li>Button filled L (UPDATE, loading) · Toast (danger)</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Open / close — <code>--panel-*</code> (slides up on mobile, slides in from the right from 768)</li>
+      <li>Button and row press — <code>--press-*</code></li>
+      <li>Error toast — <code>--toast-*</code></li>
+      <li>Read-only value to input — <code>--reveal-*</code></li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li>Dialog named by its title; focus moves into the sheet, is trapped, and returns to the row that opened it.</li>
+      <li>Esc, the close button, scrim tap and (mobile) drag down close it; the primary button is last in tab order.</li>
+      <li>While saving the button is disabled and announces "Saving"; errors are announced in a polite live region.</li>
+      <li>The input is labelled "Name"; the length and empty messages are linked with <code>aria-describedby</code>.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>The field label is "Name" as rendered in the app (the passed label "Full Name" is not used).</li>
+      <li>The 40-character message appears while the length is exactly 40, as the app; input stops at 40.</li>
+      <li>"Company name cannot be empty" is shown inline on web (never shown in the app — Q-105).</li>
+      <li>Error state mirrors the app: the sheet closes and only the toast shows (Q-106 — keep, or hold the sheet open on failure?).</li>
+      <li>A close button is added in the header (the app closes by drag or tapping outside only).</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

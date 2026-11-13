@@ -1,0 +1,108 @@
+/* =========================================================================
+   F-13b — My profile, second half (S-13-18 … S-13-34)
+   Edit sheets opened from Manage Account, Awards & Certificates and its
+   certification form, the issue-date calendar and the currency list.
+   Tokens only; everything else comes from lh.css.
+   ========================================================================= */
+
+/* ---------- Option pill (single choice, radio on the right) ---------- */
+.f13-pills { display: flex; flex-direction: column; gap: var(--spacing-12); }
+.f13-pill { min-height: 56px; padding: var(--spacing-8) var(--spacing-20); border-radius: var(--radius-full); border: 1px solid var(--stroke-soft); background: var(--element-bg-select-card-card-default); transition: border-color var(--select-check-fill) var(--select-check-ease), background-color var(--press-dur) var(--press-ease); }
+.f13-pill:hover { background: var(--bg-weak); }
+.f13-pill[aria-checked="true"] { border-color: var(--stroke-default); }
+.f13-pill[aria-disabled="true"], .f13-list .opt[aria-disabled="true"] { color: var(--text-muted); cursor: not-allowed; pointer-events: none; }
+.f13-flag { display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; flex: none; border-radius: var(--radius-full); background: var(--element-bg-select-card-card-default); overflow: hidden; }
+
+/* ---------- Option list (label, optional description, control on the right, hairline) ---------- */
+.f13-list { display: flex; flex-direction: column; }
+.f13-list .opt { min-height: 56px; padding: var(--spacing-12) 0; }
+.f13-list .opt + .opt { box-shadow: 0 -1px 0 var(--stroke-weak); }
+
+/* ---------- Section caption ("SELECTED LOCATION", "SEARCH RESULTS") ---------- */
+.f13-cap { color: var(--text-subtle); }
+.f13-txt { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: var(--spacing-2); }
+.f13-txt > :last-child:not(:first-child) { color: var(--text-subtle); }
+.f13-line { color: var(--text-subtle); padding: var(--spacing-16) 0; }
+
+/* ---------- Removable chips ---------- */
+.f13-chips { display: flex; flex-wrap: wrap; gap: var(--spacing-8); }
+.f13-chip { gap: var(--spacing-4); padding-right: var(--spacing-6); }
+.f13-chip::before { display: none; }
+.f13-x { position: relative; display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; flex: none; border-radius: var(--radius-full); color: var(--icon-soft); }
+.f13-x::before { content: ""; position: absolute; inset: -10px -6px; } /* 44px hit area */
+.f13-x:hover { background: var(--bg-weak); color: var(--icon-default); }
+
+/* ---------- Result list (skills, places) ---------- */
+.f13-results { display: flex; flex-direction: column; padding: var(--spacing-4) var(--spacing-8); border-radius: var(--radius-20); background: var(--bg-neutral); border: 1px solid var(--stroke-weak); }
+.f13-results .menu-row { min-height: 56px; padding-top: var(--spacing-8); padding-bottom: var(--spacing-8); }
+.f13-results .menu-row > .ic { color: var(--icon-soft); }
+.f13-results .skel { height: 16px; margin: var(--spacing-20) var(--spacing-12); }
+
+/* ---------- Selected location tile ---------- */
+.f13-tiles { display: flex; flex-direction: column; gap: var(--spacing-8); }
+.f13-tile { display: flex; align-items: center; gap: var(--spacing-12); padding: var(--spacing-8) var(--spacing-8) var(--spacing-8) var(--spacing-12); border-radius: var(--radius-20); background: var(--bg-neutral); border: 1px solid var(--stroke-weak); }
+.f13-ico { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; flex: none; border-radius: var(--radius-full); background: var(--element-bg-select-card-card-default); color: var(--icon-default); }
+.f13-danger { color: var(--danger-default); }
+
+/* Empty prompt inside a sheet or a card */
+.sheet .empty, .card .empty { min-height: 0; padding: var(--spacing-32) var(--spacing-16); }
+
+/* ---------- Toast drawn inside an overlay (error states) ---------- */
+@media (min-width: 768px) { [data-variant="sheet"] .f13-toast { padding-right: calc(440px + var(--shell-inset) + var(--spacing-16)); } }
+
+/* ---------- Awards & Certificates (S-13-20) ---------- */
+.f13-narrow, .f13-awards { width: 100%; max-width: 720px; margin: 0 auto; }
+.f13-intro { display: flex; align-items: center; gap: var(--spacing-16); }
+.f13-certs { padding: var(--spacing-4) var(--spacing-16); }
+.f13-certs .srow { min-height: 72px; }
+.f13-certs .srow:hover .end { color: var(--icon-default); }
+@media (min-width: 1200px) { .f13-awards { max-width: none; } .f13-intro { order: 2; } }
+
+/* ---------- Certification form (S-13-21): grouped label / value rows ---------- */
+.f13-group { padding: 0 var(--spacing-16); border-radius: var(--radius-20); background: var(--bg-neutral); border: 1px solid var(--stroke-weak); }
+.f13-frow { display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; column-gap: var(--spacing-16); min-height: 56px; padding: var(--spacing-6) 0; }
+.f13-frow + .f13-frow { box-shadow: 0 -1px 0 var(--stroke-weak); }
+.f13-frow:focus-within { box-shadow: 0 -1px 0 var(--stroke-weak), 0 1px 0 var(--stroke-default); }
+.f13-frow input, .f13-frow .val { width: 100%; min-height: 44px; padding: 0; border: 0; outline: 0; background: none; text-align: right; color: var(--text-default); }
+.f13-frow input::placeholder, .f13-frow .val.is-empty { color: var(--text-soft); opacity: 1; }
+.f13-frow input:disabled, .f13-frow .val:disabled { color: var(--text-muted); cursor: not-allowed; }
+.f13-frow .val { display: flex; align-items: center; justify-content: flex-end; gap: var(--spacing-8); }
+.f13-frow .val > .ic { color: var(--icon-soft); }
+.f13-frow .helper { grid-column: 1 / -1; justify-content: flex-end; padding-bottom: var(--spacing-6); }
+.f13-files { display: flex; flex-direction: column; gap: var(--spacing-8); }
+.f13-files .file { padding: var(--spacing-8) var(--spacing-8) var(--spacing-8) var(--spacing-12); border-radius: var(--radius-16); }
+.f13-fopen { display: flex; align-items: center; gap: var(--spacing-12); flex: 1; min-width: 0; min-height: 44px; text-align: left; border-radius: var(--radius-8); }
+.f13-fopen + .ic { color: var(--icon-soft); margin-right: var(--spacing-8); }
+.f13-preview { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--radius-16); border: 1px solid var(--stroke-weak); }
+.f13-break { overflow-wrap: anywhere; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 4; overflow: hidden; color: var(--text-subtle); }
+
+/* ---------- Popover placement when a file is viewed on its own ----------
+   (opened from a trigger, lh.js sets the same properties inline) */
+@media (min-width: 768px) {
+  .f13-media .sheet { --pop-top: 452px; --pop-right: calc(var(--shell-inset) + var(--spacing-20)); }
+  .f13-cal .sheet { --pop-width: 344px; --pop-top: 148px; --pop-right: calc(var(--shell-inset) + var(--spacing-20)); max-height: none; }
+  .f13-cur .sheet { --pop-width: 400px; --pop-top: 252px; --pop-right: calc(var(--shell-inset) + var(--spacing-20)); max-height: 60dvh; }
+}
+
+/* A popover that is a centred dialog under 768 (issue-date picker) */
+@media (max-width: 767.98px) {
+  .overlay.f13-center { align-items: center; padding: var(--spacing-24); }
+  .f13-center .sheet { max-width: 360px; border-radius: var(--radius-28); border: 1px solid var(--element-stroke-translucent-button-linear-start); animation: modal-in var(--modal-open-dur) var(--modal-ease) both; }
+  .is-closing .f13-center .sheet { animation: modal-out var(--modal-close-dur) var(--modal-ease) both; }
+  .f13-center .sheet-grab { display: none; }
+  .f13-center .sheet-head { padding-top: var(--spacing-24); }
+}
+
+/* ---------- Calendar grid (S-13-26) ---------- */
+.f13-days { display: grid; grid-template-columns: repeat(7, 1fr); row-gap: var(--spacing-2); justify-items: center; }
+.f13-days > * { position: relative; display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: var(--radius-full); }
+.f13-days > span { color: var(--text-soft); }
+.f13-days button::before { content: ""; position: absolute; inset: -2px; } /* 44px hit area */
+.f13-days button:hover { background: var(--bg-weak); }
+.f13-days .is-today { box-shadow: inset 0 0 0 1px var(--stroke-default); }
+.f13-days [aria-checked="true"], .f13-days [aria-checked="true"]:hover { background: var(--accent); color: var(--static-white); box-shadow: none; }
+.f13-days button:disabled { color: var(--text-muted); cursor: not-allowed; background: none; }
+.f13-years { grid-template-columns: repeat(4, 1fr); row-gap: var(--spacing-8); column-gap: var(--spacing-8); }
+.f13-years > * { width: 100%; }
+.f13-month { min-height: 44px; padding: 0 var(--spacing-8); margin-left: calc(var(--spacing-8) * -1); border-radius: var(--radius-full); display: inline-flex; align-items: center; gap: var(--spacing-4); }
+.f13-month:hover { background: var(--bg-weak); }

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-15-08 Terms &amp; Conditions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-15.css">
+</head>
+<body class="t-paragraph-m no-tabbar"
+      data-states="default,loading,error,open-failed"
+      data-shell="main" data-nav="home">
+
+<div class="screen app on-surface policy" style="--page-bg: var(--home-surface); --page-max: 760px">
+  <div class="app-main">
+    <header class="top"><div class="top-inner glass glass-panel">
+      <div class="bar bar-center"><a class="ibtn ibtn-44 ibtn-plain press" data-back href="S-13-05-manage-account.html" aria-label="Back"><i class="ic ic-24 hgi hgi-stroke hgi-arrow-left-01" aria-hidden="true"></i></a><h1 class="t-label-xl">Terms &amp; Conditions</h1><span class="ibtn ibtn-44 only-narrow" aria-hidden="true"></span></div>
+    </div></header>
+    <!-- DEFAULT - the remote page inside the embedded web frame -->
+    <main class="page" data-show="default">
+      <div class="webframe policy-frame" role="region" aria-label="Terms &amp; Conditions" tabindex="0">
+        <div class="wf-bar t-paragraph-s"><i class="ic ic-16 hgi hgi-stroke hgi-lock" aria-hidden="true"></i><span>lighthouseinfra.com/terms-of-service/</span></div>
+        <div class="wf-ph">
+          <span class="empty-tile" aria-hidden="true"><i class="ic ic-24 hgi hgi-stroke hgi-globe-02" aria-hidden="true"></i></span>
+          <h2 class="t-label-xl">Terms &amp; Conditions</h2>
+          <p class="t-paragraph-s">Embedded web page · https://lighthouseinfra.com/terms-of-service/</p>
+        </div>
+        <div class="wf-doc" aria-hidden="true"><span class="wf-line h" style="--w:38%"></span><span class="wf-line" style="--w:100%"></span><span class="wf-line" style="--w:96%"></span><span class="wf-line" style="--w:88%"></span><span class="wf-line" style="--w:62%"></span><span class="wf-line h" style="--w:38%"></span><span class="wf-line" style="--w:100%"></span><span class="wf-line" style="--w:92%"></span><span class="wf-line" style="--w:97%"></span><span class="wf-line" style="--w:74%"></span><span class="wf-line h" style="--w:38%"></span><span class="wf-line" style="--w:98%"></span><span class="wf-line" style="--w:90%"></span><span class="wf-line" style="--w:45%"></span></div>
+      </div>
+    </main>
+    <!-- LOADING - detail skeleton over the frame -->
+    <main class="page" data-show="loading" aria-busy="true" aria-label="Loading Terms &amp; Conditions">
+      <div class="webframe policy-frame"><div class="stack" aria-hidden="true"><span class="skel" style="width:56%;height:24px"></span><span class="skel" style="width:100%;height:14px"></span><span class="skel" style="width:100%;height:14px"></span><span class="skel" style="width:82%;height:14px"></span><span class="skel" style="width:40%;height:20px"></span><span class="skel" style="width:100%;height:14px"></span><span class="skel" style="width:94%;height:14px"></span><span class="skel" style="width:100%;height:14px"></span><span class="skel" style="width:60%;height:14px"></span><span class="skel" style="width:46%;height:20px"></span><span class="skel" style="width:100%;height:14px"></span><span class="skel" style="width:88%;height:14px"></span></div></div>
+    </main>
+    <!-- ERROR - the frame could not be created -->
+    <main class="page" data-show="error open-failed">
+      <div class="empty">
+        <div class="empty-tile" aria-hidden="true"><i class="ic ic-24 hgi hgi-stroke hgi-globe-02" aria-hidden="true"></i></div>
+        <div class="empty-text"><p class="t-paragraph-m" role="alert">Could not initialize embedded web view.</p></div>
+        <a class="btn btn-m btn-filled t-label-s press" href="https://lighthouseinfra.com/terms-of-service/" target="_blank" rel="noopener">Open In In-App Browser</a>
+      </div>
+    </main>
+  </div>
+  <div class="toast-region" aria-live="polite" data-show="open-failed"><div class="toast toast-danger glass glass-panel" role="status"><i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i><div class="body"><span class="t-label-s">Error</span><p class="t-paragraph-s">Unable to open Terms &amp; Conditions right now.</p></div></div></div>
+</div>
+
+<!-- =====================================================================
+     ANNOTATIONS (shown on the board, hidden inside the frames)
+     ===================================================================== -->
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375:</b> mirrors the app: centred title with back, then the embedded web page filling the rest of the screen with rounded top corners.</li>
+      <li><b>768 / 1440:</b> the frame sits in a reading-width column (760) inside the app shell, with all four corners rounded.</li>
+      <li>The frame loads <code>https://lighthouseinfra.com/terms-of-service/</code>. The policy text is not in the app, so the mockup shows the frame, its address and neutral lines in place of the remote content.</li>
+      <li>Reached from "Terms &amp; Conditions" in Manage Account → MORE, and from the terms link on Sign in (signed-out: same page without the menu).</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Top header (back) · Embedded web frame</li>
+      <li>Skeleton (detail) · Empty state tile · Button filled M (fallback) · Toast danger</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Route push: <code>--page-slide-*</code> under 768, <code>--panel-*</code> crossfade from 768</li>
+      <li>Skeleton to page: <code>--skel-*</code>, <code>--shimmer-*</code>, <code>--reveal-*</code></li>
+      <li>Button press: <code>--press-*</code>; toast, <code>--toast-*</code></li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li>The frame carries the title "Terms &amp; Conditions", the same as the <code>h1</code>; links inside it stay keyboard reachable.</li>
+      <li>Back is labelled "Back"; the fallback message is announced; the fallback button is a real link to the public page.</li>
+      <li>While loading the region is marked busy.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li><b>Open (Q-121):</b> embed the public page (designed here, as the app), render the text natively, or link out?</li>
+      <li>The remote page chooses its own colours, so it may not follow dark mode.</li>
+      <li>Fallback button copy "Open In In-App Browser" is kept verbatim; on web it opens the page in a new tab.</li>
+      <li>A page load error in the app only removes the skeleton: no message and no retry.</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

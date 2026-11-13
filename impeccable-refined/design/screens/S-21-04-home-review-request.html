@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-21-04 Review request</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-20.css">
+<link rel="stylesheet" href="assets/f-21.css">
+</head>
+<body class="t-paragraph-m"
+      data-states="default,repair,professional,lighthouse,empty,loading"
+      data-shell="main" data-nav="home">
+
+<!-- =====================================================================
+     SCREEN: review before sending. Summary of the answers beside the
+     recipients. States cover the three recipient journeys, the Lighthouse
+     variant, nobody ticked, and the busy moment while send or save runs.
+     ===================================================================== -->
+<div class="screen app on-surface nr" style="--page-bg: var(--home-surface); --page-max: 1120px">
+  <div class="app-main">
+
+    <header class="top">
+      <div class="top-inner glass glass-panel">
+        <div class="bar" data-show="default empty loading"><a class="ibtn ibtn-44 ibtn-plain press" data-back href="S-21-03-home-need-results.html" aria-label="Back"><i class="ic ic-24 hgi hgi-stroke hgi-arrow-left-01" aria-hidden="true"></i></a><div class="nr-title is-centred"><h1 class="t-label-xl">Review request</h1><p class="t-paragraph-s truncate">New construction · Indiranagar</p></div><span class="nr-spacer only-narrow" aria-hidden="true"></span></div>
+        <div class="bar" data-show="repair"><a class="ibtn ibtn-44 ibtn-plain press" data-back href="S-21-03-home-need-results.html" aria-label="Back"><i class="ic ic-24 hgi hgi-stroke hgi-arrow-left-01" aria-hidden="true"></i></a><div class="nr-title is-centred"><h1 class="t-label-xl">Review request</h1><p class="t-paragraph-s truncate">Repairs &amp; maintenance · HSR Layout</p></div><span class="nr-spacer only-narrow" aria-hidden="true"></span></div>
+        <div class="bar" data-show="professional"><a class="ibtn ibtn-44 ibtn-plain press" data-back href="S-21-03-home-need-results.html" aria-label="Back"><i class="ic ic-24 hgi hgi-stroke hgi-arrow-left-01" aria-hidden="true"></i></a><div class="nr-title is-centred"><h1 class="t-label-xl">Review request</h1><p class="t-paragraph-s truncate">Find professionals · Indiranagar</p></div><span class="nr-spacer only-narrow" aria-hidden="true"></span></div>
+        <div class="bar" data-show="lighthouse"><a class="ibtn ibtn-44 ibtn-plain press" data-back href="S-20-01-home-tab.html" aria-label="Back"><i class="ic ic-24 hgi hgi-stroke hgi-arrow-left-01" aria-hidden="true"></i></a><div class="nr-title is-centred"><h1 class="t-label-xl">Review request</h1><p class="t-paragraph-s truncate">Get started · Whitefield</p></div><span class="nr-spacer only-narrow" aria-hidden="true"></span></div>
+      </div>
+    </header>
+
+    <main class="page nr-page" data-show="default">
+      <div class="nw-split">
+        <p class="nr-lead t-paragraph-m">Check what you are sharing and who gets it. Nothing is sent until you tap Send request.</p>
+        <section class="nw-col" aria-labelledby="d-share">
+          <div class="sec-head"><i class="ic ic-24 hgi hgi-stroke hgi-file-02" aria-hidden="true"></i><h2 id="d-share" class="t-sublabel-m">WHAT YOU ARE SHARING</h2></div>
+          <dl class="nw-sum"><div class="nw-row"><dt class="t-paragraph-m"><i class="ic hgi hgi-stroke hgi-home-09" aria-hidden="true"></i>What</dt><dd class="t-paragraph-l">Residential</dd></div><div class="nw-row"><dt class="t-paragraph-m"><i class="ic hgi hgi-stroke hgi-flag-02" aria-hidden="true"></i>Stage</dt><dd class="t-paragraph-l">Need design help</dd></div><div class="nw-row"><dt class="t-paragraph-m"><i class="ic hgi hgi-stroke hgi-location-01" aria-hidden="true"></i>Location</dt><dd class="t-paragraph-l">Indiranagar</dd></div><div class="nw-row"><dt class="t-paragraph-m"><i class="ic hgi hgi-stroke hgi-layers-01" aria-hidden="true"></i>Budget</dt><dd class="t-paragraph-l tnum">Rs 1 Crore - Rs 2 Crore</dd></div><div class="nw-row"><dt class="t-paragraph-m"><i class="ic hgi hgi-stroke hgi-calendar-03" aria-hidden="true"></i>Start</dt><dd class="t-paragraph-l">Within 3-6 months</dd></div><div class="nw-row"><dt class="t-paragraph-m"><i class="ic hgi hgi-stroke hgi-briefcase-02" aria-hidden="true"></i>Help with</dt><dd class="t-paragraph-l">Guide me through everything</dd></div><div class="nw-row"><dt class="t-paragraph-m"><i class="ic hgi hgi-stroke hgi-user-multiple" aria-hidden="true"></i>Professionals</dt><dd class="t-paragraph-l">Architects, Interior designers</dd></div></dl>
+        </section>
+        <section class="nw-col nw-who is-sticky" aria-labelledby="d-who">
+          <div class="nw-who-head"><div class="sec-head"><i class="ic ic-24 hgi hgi-stroke hgi-user-multiple" aria-hidden="true"></i><h2 id="d-who" class="t-sublabel-m">WHO RECEIVES IT</h2></div><p class="t-paragraph-m tnum" role="status" aria-live="polite"><span class="nw-n nw-n0">0 professionals</span><span class="nw-n nw-n1">1 professional</span><span class="nw-n nw-n2">2 professionals</span><span class="nw-n nw-n3">3 professionals</span></p></div>
+          <ul class="nw-rcps nr-group" role="group" aria-labelledby="d-who"><li class="nr-row nw-rcp"><a class="nr-row-link pro-top press" href="S-07-01-public-profile.html" data-as="architect" aria-label="View profile, Meera Krishnan"><span class="nr-ava"><img class="avatar" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=96&h=96&fit=crop&q=70" alt="" loading="lazy"><span class="verified" role="img" aria-label="Verified"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></span><div class="pro-txt"><span class="pro-name"><h3 class="t-label-s truncate">Meera Krishnan</h3></span><p class="pro-line t-paragraph-s"><span class="truncate">Architect · Residential</span></p><p class="pro-line t-paragraph-s"><span class="rating" aria-label="Rating 4.8 out of 5"><b class="tnum">4.8</b><i class="ic ic-16 hgi hgi-stroke hgi-star" aria-hidden="true"></i></span><span aria-hidden="true">·</span><span><b class="tnum">42</b> projects</span></p><p class="pro-line t-paragraph-s"><span class="tnum">2.4 km away</span></p></div></a><button class="nr-tick" role="checkbox" data-check aria-checked="true" aria-label="Send the requirement to Meera Krishnan"><span class="nf-disc nr-hollow"><i class="ic ic-16 hgi hgi-stroke hgi-tick-02" aria-hidden="true"></i></span></button></li><li class="nr-row nw-rcp"><a class="nr-row-link pro-top press" href="S-07-01-public-profile.html" data-as="interior-designer" aria-label="View profile, Kavya Menon"><span class="nr-ava"><img class="avatar" src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=96&h=96&fit=crop&q=70" alt="" loading="lazy"><span class="verified" role="img" aria-label="Verified"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></span><div class="pro-txt"><span class="pro-name"><h3 class="t-label-s truncate">Kavya Menon</h3></span><p class="pro-line t-paragraph-s"><span class="truncate">Interior Designer · Residential Interiors</span></p><p class="pro-line t-paragraph-s"><span class="rating" aria-label="Rating 4.9 out of 5"><b class="tnum">4.9</b><i class="ic ic-16 hgi hgi-stroke hgi-star" aria-hidden="true"></i></span><span aria-hidden="true">·</span><span><b class="tnum">56</b> projects</span></p><p class="pro-line t-paragraph-s"><span class="tnum">3.2 km away</span></p></div></a><button class="nr-tick" role="checkbox" data-check aria-checked="true" aria-label="Send the requirement to Kavya Menon"><span class="nf-disc nr-hollow"><i class="ic ic-16 hgi hgi-stroke hgi-tick-02" aria-hidden="true"></i></span></button></li></ul>
+          <a class="btn btn-text nw-text is-start t-label-m press" data-back href="S-21-03-home-need-results.html">ADD MORE PROFESSIONALS</a>
+          <div class="note nf-notice" role="note"><i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i><p class="t-paragraph-s">Sending shares this with the people above only. It is not hiring, booking or paying, and nothing is posted publicly.</p></div>
+          <a class="btn btn-text nw-text t-label-m press only-narrow" href="S-20-01-home-tab.html" data-toast="success|Saved|Saved as a private draft. Only you can see it.">SAVE AS PRIVATE DRAFT</a>
+        </section>
+      </div>
+    </main>
+
+    <main class="page nr-page" data-show="repair">
+      <div class="nw-split">
+        <p class="nr-lead t-paragraph-m">Check what you are sharing and who gets it. Nothing is sent until you tap Send request.</p>
+        <section class="nw-col" aria-labelledby="rp-share">
+          <div class="sec-head"><i class="ic ic-24 hgi hgi-stroke hgi-file-02" aria-hidden="true"></i><h2 id="rp-share" class="t-sublabel-m">WHAT YOU ARE SHARING</h2></div>
+          <dl class="nw-sum"><div class="nw-row"><dt class="t-paragraph-m"><i class="ic hgi hgi-stroke hgi-wrench-01" aria-hidden="true"></i>What needs fixing</dt><dd class="t-paragraph-l">Plumbing</dd></div><div class="nw-row"><dt class="t-paragraph-m"><i class="ic hgi hgi-stroke hgi-idea-01" aria-hidden="true"></i>Problem</dt><dd class="t-paragraph-l">Leak detection &amp; repairs</dd></div><div class="nw-row"><dt class="t-paragraph-m"><i class="ic hgi hgi-stroke hgi-clock-01" aria-hidden="true"></i>Preferred time</dt><dd class="t-paragraph-l">Within 2 to 3 days</dd></div><div class="nw-row"><dt class="t-paragraph-m"><i class="ic hgi hgi-stroke hgi-location-01" aria-hidden="true"></i>Location</dt><dd class="t-paragraph-l">HSR Layout</dd></div><div class="nw-row"><dt class="t-paragraph-m"><i class="ic hgi hgi-stroke hgi-pencil-edit-01" aria-hidden="true"></i>Details</dt><dd class="t-paragraph-l">The kitchen sink trap leaks into the cabinet whenever the tap runs.</dd></div><div class="nw-row"><dt class="t-paragraph-m"><i class="ic hgi hgi-stroke hgi-image-02" aria-hidden="true"></i>Photos</dt><dd class="t-paragraph-l tnum">2 attached</dd></div></dl>
+        </section>
+        <section class="nw-col nw-who is-sticky" aria-labelledby="rp-who">
+          <div class="nw-who-head"><div class="sec-head"><i class="ic ic-24 hgi hgi-stroke hgi-user-multiple" aria-hidden="true"></i><h2 id="rp-who" class="t-sublabel-m">WHO RECEIVES IT</h2></div><p class="t-paragraph-m tnum" role="status" aria-live="polite"><span class="nw-n nw-n0">0 professionals</span><span class="nw-n nw-n1">1 professional</span><span class="nw-n nw-n2">2 professionals</span><span class="nw-n nw-n3">3 professionals</span></p></div>
+          <ul class="nw-rcps nr-group" role="group" aria-labelledby="rp-who"><li class="nr-row nw-rcp"><a class="nr-row-link pro-top press" href="S-07-01-public-profile.html" data-as="contractor" aria-label="View profile, Ravi Plumbing Works"><span class="nr-ava"><img class="avatar" src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=96&h=96&fit=crop&q=70" alt="" loading="lazy"><span class="verified" role="img" aria-label="Verified"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></span><div class="pro-txt"><span class="pro-name"><h3 class="t-label-s truncate">Ravi Plumbing Works</h3></span><p class="pro-line t-paragraph-s"><span class="truncate">Plumber · Leak Detection</span></p><p class="pro-line t-paragraph-s"><span class="rating" aria-label="Rating 4.7 out of 5"><b class="tnum">4.7</b><i class="ic ic-16 hgi hgi-stroke hgi-star" aria-hidden="true"></i></span><span aria-hidden="true">·</span><span><b class="tnum">120</b> projects</span></p><p class="pro-line t-paragraph-s"><span class="tnum">1.8 km away</span></p></div></a><button class="nr-tick" role="checkbox" data-check aria-checked="true" aria-label="Send the requirement to Ravi Plumbing Works"><span class="nf-disc nr-hollow"><i class="ic ic-16 hgi hgi-stroke hgi-tick-02" aria-hidden="true"></i></span></button></li><li class="nr-row nw-rcp"><a class="nr-row-link pro-top press" href="S-07-01-public-profile.html" data-as="contractor" aria-label="View profile, AquaFix Services"><span class="nr-ava"><img class="avatar" src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=96&h=96&fit=crop&q=70" alt="" loading="lazy"><span class="verified" role="img" aria-label="Verified"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></span><div class="pro-txt"><span class="pro-name"><h3 class="t-label-s truncate">AquaFix Services</h3></span><p class="pro-line t-paragraph-s"><span class="truncate">Plumber · Bathroom Plumbing</span></p><p class="pro-line t-paragraph-s"><span class="rating" aria-label="Rating 4.4 out of 5"><b class="tnum">4.4</b><i class="ic ic-16 hgi hgi-stroke hgi-star" aria-hidden="true"></i></span><span aria-hidden="true">·</span><span><b class="tnum">86</b> projects</span></p><p class="pro-line t-paragraph-s"><span class="tnum">3.5 km away</span></p></div></a><button class="nr-tick" role="checkbox" data-check aria-checked="true" aria-label="Send the requirement to AquaFix Services"><span class="nf-disc nr-hollow"><i class="ic ic-16 hgi hgi-stroke hgi-tick-02" aria-hidden="true"></i></span></button></li></ul>
+          <a class="btn btn-text nw-text is-start t-label-m press" data-back href="S-21-03-home-need-results.html">ADD MORE CONTRACTORS</a>
+          <div class="note nf-notice" role="note"><i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i><p class="t-paragraph-s">Sending shares this with the people above only. It is not hiring, booking or paying, and nothing is posted publicly. Your preferred time is not a booked visit.</p></div>
+          <a class="btn btn-text nw-text t-label-m press only-narrow" href="S-20-01-home-tab.html" data-toast="success|Saved|Saved as a private draft. Only you can see it.">SAVE AS PRIVATE DRAFT</a>
+        </section>
+      </div>
+    </main>
+
+    <main class="page nr-page" data-show="professional">
+      <div class="nw-split">
+        <p class="nr-lead t-paragraph-m">Check what you are sharing and who gets it. Nothing is sent until you tap Send request.</p>
+        <section class="nw-col" aria-labelledby="pf-share">
+          <div class="sec-head"><i class="ic ic-24 hgi hgi-stroke hgi-file-02" aria-hidden="true"></i><h2 id="pf-share" class="t-sublabel-m">WHAT YOU ARE SHARING</h2></div>
+          <dl class="nw-sum"><div class="nw-row"><dt class="t-paragraph-m"><i class="ic hgi hgi-stroke hgi-user-search-01" aria-hidden="true"></i>Looking for</dt><dd class="t-paragraph-l">Architects</dd></div><div class="nw-row"><dt class="t-paragraph-m"><i class="ic hgi hgi-stroke hgi-briefcase-02" aria-hidden="true"></i>Help with</dt><dd class="t-paragraph-l">New construction</dd></div><div class="nw-row"><dt class="t-paragraph-m"><i class="ic hgi hgi-stroke hgi-location-01" aria-hidden="true"></i>Location</dt><dd class="t-paragraph-l">Indiranagar</dd></div><div class="nw-row"><dt class="t-paragraph-m"><i class="ic hgi hgi-stroke hgi-invoice-01" aria-hidden="true"></i>Budget</dt><dd class="t-paragraph-l tnum">Rs 50 Lakh - Rs 1 Crore</dd></div><div class="nw-row"><dt class="t-paragraph-m"><i class="ic hgi hgi-stroke hgi-pencil-edit-01" aria-hidden="true"></i>Details</dt><dd class="t-paragraph-l">Corner plot of 2,400 sq ft. Looking for a firm that has built ground plus two homes.</dd></div></dl>
+        </section>
+        <section class="nw-col nw-who is-sticky" aria-labelledby="pf-who">
+          <div class="nw-who-head"><div class="sec-head"><i class="ic ic-24 hgi hgi-stroke hgi-user-multiple" aria-hidden="true"></i><h2 id="pf-who" class="t-sublabel-m">WHO RECEIVES IT</h2></div><p class="t-paragraph-m tnum" role="status" aria-live="polite"><span class="nw-n nw-n0">0 professionals</span><span class="nw-n nw-n1">1 professional</span><span class="nw-n nw-n2">2 professionals</span><span class="nw-n nw-n3">3 professionals</span></p></div>
+          <ul class="nw-rcps nr-group" role="group" aria-labelledby="pf-who"><li class="nr-row nw-rcp"><a class="nr-row-link pro-top press" href="S-07-01-public-profile.html" data-as="architect" aria-label="View profile, Meera Krishnan"><span class="nr-ava"><img class="avatar" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=96&h=96&fit=crop&q=70" alt="" loading="lazy"><span class="verified" role="img" aria-label="Verified"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></span><div class="pro-txt"><span class="pro-name"><h3 class="t-label-s truncate">Meera Krishnan</h3></span><p class="pro-line t-paragraph-s"><span class="truncate">Architect · Residential</span></p><p class="pro-line t-paragraph-s"><span class="rating" aria-label="Rating 4.8 out of 5"><b class="tnum">4.8</b><i class="ic ic-16 hgi hgi-stroke hgi-star" aria-hidden="true"></i></span><span aria-hidden="true">·</span><span><b class="tnum">42</b> projects</span></p><p class="pro-line t-paragraph-s"><span class="tnum">2.4 km away</span></p></div></a><button class="nr-tick" role="checkbox" data-check aria-checked="true" aria-label="Send the requirement to Meera Krishnan"><span class="nf-disc nr-hollow"><i class="ic ic-16 hgi hgi-stroke hgi-tick-02" aria-hidden="true"></i></span></button></li><li class="nr-row nw-rcp"><a class="nr-row-link pro-top press" href="S-07-01-public-profile.html" data-as="architect" aria-label="View profile, Rohan Iyer"><span class="nr-ava"><img class="avatar" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=96&h=96&fit=crop&q=70" alt="" loading="lazy"><span class="verified" role="img" aria-label="Verified"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></span><div class="pro-txt"><span class="pro-name"><h3 class="t-label-s truncate">Rohan Iyer</h3></span><p class="pro-line t-paragraph-s"><span class="truncate">Architect · Sustainable Design</span></p><p class="pro-line t-paragraph-s"><span class="rating" aria-label="Rating 4.6 out of 5"><b class="tnum">4.6</b><i class="ic ic-16 hgi hgi-stroke hgi-star" aria-hidden="true"></i></span><span aria-hidden="true">·</span><span><b class="tnum">31</b> projects</span></p><p class="pro-line t-paragraph-s"><span class="tnum">5.1 km away</span></p></div></a><button class="nr-tick" role="checkbox" data-check aria-checked="true" aria-label="Send the requirement to Rohan Iyer"><span class="nf-disc nr-hollow"><i class="ic ic-16 hgi hgi-stroke hgi-tick-02" aria-hidden="true"></i></span></button></li><li class="nr-row nw-rcp"><a class="nr-row-link pro-top press" href="S-07-01-public-profile.html" data-as="architect" aria-label="View profile, Ananya Rao"><span class="nr-ava"><img class="avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=96&h=96&fit=crop&q=70" alt="" loading="lazy"></span><div class="pro-txt"><span class="pro-name"><h3 class="t-label-s truncate">Ananya Rao</h3></span><p class="pro-line t-paragraph-s"><span class="truncate">Architect · Hospitality</span></p><p class="pro-line t-paragraph-s"><span><b class="tnum">1</b> project</span></p><p class="pro-line t-paragraph-s"><span class="tnum">12 km away</span></p></div></a><button class="nr-tick" role="checkbox" data-check aria-checked="true" aria-label="Send the requirement to Ananya Rao"><span class="nf-disc nr-hollow"><i class="ic ic-16 hgi hgi-stroke hgi-tick-02" aria-hidden="true"></i></span></button></li></ul>
+          <a class="btn btn-text nw-text is-start t-label-m press" data-back href="S-21-03-home-need-results.html">ADD MORE PROFESSIONALS</a>
+          <div class="note nf-notice" role="note"><i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i><p class="t-paragraph-s">Sending shares this with the people above only. It is not hiring, booking or paying, and nothing is posted publicly.</p></div>
+          <a class="btn btn-text nw-text t-label-m press only-narrow" href="S-20-01-home-tab.html" data-toast="success|Saved|Saved as a private draft. Only you can see it.">SAVE AS PRIVATE DRAFT</a>
+        </section>
+      </div>
+    </main>
+
+    <main class="page nr-page" data-show="lighthouse">
+      <div class="nw-split">
+        <p class="nr-lead t-paragraph-m">Check what you are sharing and who gets it. Nothing is sent until you tap Send request.</p>
+        <section class="nw-col" aria-labelledby="lh-share">
+          <div class="sec-head"><i class="ic ic-24 hgi hgi-stroke hgi-file-02" aria-hidden="true"></i><h2 id="lh-share" class="t-sublabel-m">WHAT YOU ARE SHARING</h2></div>
+          <dl class="nw-sum"><div class="nw-row"><dt class="t-paragraph-m"><i class="ic hgi hgi-stroke hgi-home-09" aria-hidden="true"></i>What</dt><dd class="t-paragraph-l">Commercial and Workplace</dd></div><div class="nw-row"><dt class="t-paragraph-m"><i class="ic hgi hgi-stroke hgi-grid-view" aria-hidden="true"></i>Kind</dt><dd class="t-paragraph-l">Co-working Space</dd></div><div class="nw-row"><dt class="t-paragraph-m"><i class="ic hgi hgi-stroke hgi-flag-02" aria-hidden="true"></i>Stage</dt><dd class="t-paragraph-l">Just exploring</dd></div><div class="nw-row"><dt class="t-paragraph-m"><i class="ic hgi hgi-stroke hgi-location-01" aria-hidden="true"></i>Location</dt><dd class="t-paragraph-l">Whitefield</dd></div><div class="nw-row"><dt class="t-paragraph-m"><i class="ic hgi hgi-stroke hgi-layers-01" aria-hidden="true"></i>Budget</dt><dd class="t-paragraph-l tnum">Not sure yet</dd></div><div class="nw-row"><dt class="t-paragraph-m"><i class="ic hgi hgi-stroke hgi-briefcase-02" aria-hidden="true"></i>Help with</dt><dd class="t-paragraph-l">Planning, Find professionals</dd></div></dl>
+        </section>
+        <section class="nw-col nw-who is-sticky" aria-labelledby="lh-who">
+          <div class="sec-head"><i class="ic ic-24 hgi hgi-stroke hgi-user-multiple" aria-hidden="true"></i><h2 id="lh-who" class="t-sublabel-m">WHO RECEIVES IT</h2></div>
+          <div class="nw-lh"><span class="nw-lh-disc" aria-hidden="true"><i class="ic hgi hgi-stroke hgi-call-02" aria-hidden="true"></i></span><div><h3 class="t-label-s">Lighthouse</h3><p class="t-paragraph-s">A Lighthouse manager</p><p class="t-paragraph-s">Calls the number you signed in with</p></div></div>
+          <div class="note nf-notice" role="note"><i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i><p class="t-paragraph-s">Sending shares this with Lighthouse only. A Lighthouse manager calls you to plan the next steps. It is not hiring, booking or paying, and nothing is posted publicly.</p></div>
+          <a class="btn btn-text nw-text t-label-m press only-narrow" href="S-20-01-home-tab.html" data-toast="success|Saved|Saved as a private draft. Only you can see it.">SAVE AS PRIVATE DRAFT</a>
+        </section>
+      </div>
+    </main>
+
+    <main class="page nr-page" data-show="empty">
+      <div class="nw-split">
+        <p class="nr-lead t-paragraph-m">Check what you are sharing and who gets it. Nothing is sent until you tap Send request.</p>
+        <section class="nw-col" aria-labelledby="e-share">
+          <div class="sec-head"><i class="ic ic-24 hgi hgi-stroke hgi-file-02" aria-hidden="true"></i><h2 id="e-share" class="t-sublabel-m">WHAT YOU ARE SHARING</h2></div>
+          <dl class="nw-sum"><div class="nw-row"><dt class="t-paragraph-m"><i class="ic hgi hgi-stroke hgi-home-09" aria-hidden="true"></i>What</dt><dd class="t-paragraph-l">Residential</dd></div><div class="nw-row"><dt class="t-paragraph-m"><i class="ic hgi hgi-stroke hgi-flag-02" aria-hidden="true"></i>Stage</dt><dd class="t-paragraph-l">Need design help</dd></div><div class="nw-row"><dt class="t-paragraph-m"><i class="ic hgi hgi-stroke hgi-location-01" aria-hidden="true"></i>Location</dt><dd class="t-paragraph-l">Indiranagar</dd></div><div class="nw-row"><dt class="t-paragraph-m"><i class="ic hgi hgi-stroke hgi-layers-01" aria-hidden="true"></i>Budget</dt><dd class="t-paragraph-l tnum">Rs 1 Crore - Rs 2 Crore</dd></div><div class="nw-row"><dt class="t-paragraph-m"><i class="ic hgi hgi-stroke hgi-calendar-03" aria-hidden="true"></i>Start</dt><dd class="t-paragraph-l">Within 3-6 months</dd></div><div class="nw-row"><dt class="t-paragraph-m"><i class="ic hgi hgi-stroke hgi-briefcase-02" aria-hidden="true"></i>Help with</dt><dd class="t-paragraph-l">Guide me through everything</dd></div><div class="nw-row"><dt class="t-paragraph-m"><i class="ic hgi hgi-stroke hgi-user-multiple" aria-hidden="true"></i>Professionals</dt><dd class="t-paragraph-l">Architects, Interior designers</dd></div></dl>
+        </section>
+        <section class="nw-col nw-who is-sticky" aria-labelledby="e-who">
+          <div class="nw-who-head"><div class="sec-head"><i class="ic ic-24 hgi hgi-stroke hgi-user-multiple" aria-hidden="true"></i><h2 id="e-who" class="t-sublabel-m">WHO RECEIVES IT</h2></div><p class="t-paragraph-m tnum" role="status" aria-live="polite"><span class="nw-n nw-n0">0 professionals</span><span class="nw-n nw-n1">1 professional</span><span class="nw-n nw-n2">2 professionals</span><span class="nw-n nw-n3">3 professionals</span></p></div>
+          <ul class="nw-rcps nr-group" role="group" aria-labelledby="e-who"><li class="nr-row nw-rcp"><a class="nr-row-link pro-top press" href="S-07-01-public-profile.html" data-as="architect" aria-label="View profile, Meera Krishnan"><span class="nr-ava"><img class="avatar" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=96&h=96&fit=crop&q=70" alt="" loading="lazy"><span class="verified" role="img" aria-label="Verified"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></span><div class="pro-txt"><span class="pro-name"><h3 class="t-label-s truncate">Meera Krishnan</h3></span><p class="pro-line t-paragraph-s"><span class="truncate">Architect · Residential</span></p><p class="pro-line t-paragraph-s"><span class="rating" aria-label="Rating 4.8 out of 5"><b class="tnum">4.8</b><i class="ic ic-16 hgi hgi-stroke hgi-star" aria-hidden="true"></i></span><span aria-hidden="true">·</span><span><b class="tnum">42</b> projects</span></p><p class="pro-line t-paragraph-s"><span class="tnum">2.4 km away</span></p></div></a><button class="nr-tick" role="checkbox" data-check aria-checked="false" aria-label="Send the requirement to Meera Krishnan"><span class="nf-disc nr-hollow"><i class="ic ic-16 hgi hgi-stroke hgi-tick-02" aria-hidden="true"></i></span></button></li><li class="nr-row nw-rcp"><a class="nr-row-link pro-top press" href="S-07-01-public-profile.html" data-as="interior-designer" aria-label="View profile, Kavya Menon"><span class="nr-ava"><img class="avatar" src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=96&h=96&fit=crop&q=70" alt="" loading="lazy"><span class="verified" role="img" aria-label="Verified"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></span><div class="pro-txt"><span class="pro-name"><h3 class="t-label-s truncate">Kavya Menon</h3></span><p class="pro-line t-paragraph-s"><span class="truncate">Interior Designer · Residential Interiors</span></p><p class="pro-line t-paragraph-s"><span class="rating" aria-label="Rating 4.9 out of 5"><b class="tnum">4.9</b><i class="ic ic-16 hgi hgi-stroke hgi-star" aria-hidden="true"></i></span><span aria-hidden="true">·</span><span><b class="tnum">56</b> projects</span></p><p class="pro-line t-paragraph-s"><span class="tnum">3.2 km away</span></p></div></a><button class="nr-tick" role="checkbox" data-check aria-checked="false" aria-label="Send the requirement to Kavya Menon"><span class="nf-disc nr-hollow"><i class="ic ic-16 hgi hgi-stroke hgi-tick-02" aria-hidden="true"></i></span></button></li></ul>
+          <a class="btn btn-text nw-text is-start t-label-m press" data-back href="S-21-03-home-need-results.html">ADD MORE PROFESSIONALS</a>
+          <div class="note nf-notice" role="note"><i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i><p class="t-paragraph-s">Sending shares this with the people above only. It is not hiring, booking or paying, and nothing is posted publicly.</p></div>
+          <a class="btn btn-text nw-text t-label-m press only-narrow" href="S-20-01-home-tab.html" data-toast="success|Saved|Saved as a private draft. Only you can see it.">SAVE AS PRIVATE DRAFT</a>
+        </section>
+      </div>
+    </main>
+
+    <main class="page nr-page" data-show="loading" aria-busy="true">
+      <div class="nw-split">
+        <p class="nr-lead t-paragraph-m">Check what you are sharing and who gets it. Nothing is sent until you tap Send request.</p>
+        <section class="nw-col" aria-labelledby="l-share">
+          <div class="sec-head"><i class="ic ic-24 hgi hgi-stroke hgi-file-02" aria-hidden="true"></i><h2 id="l-share" class="t-sublabel-m">WHAT YOU ARE SHARING</h2></div>
+          <dl class="nw-sum"><div class="nw-row"><dt class="t-paragraph-m"><i class="ic hgi hgi-stroke hgi-home-09" aria-hidden="true"></i>What</dt><dd class="t-paragraph-l">Residential</dd></div><div class="nw-row"><dt class="t-paragraph-m"><i class="ic hgi hgi-stroke hgi-flag-02" aria-hidden="true"></i>Stage</dt><dd class="t-paragraph-l">Need design help</dd></div><div class="nw-row"><dt class="t-paragraph-m"><i class="ic hgi hgi-stroke hgi-location-01" aria-hidden="true"></i>Location</dt><dd class="t-paragraph-l">Indiranagar</dd></div><div class="nw-row"><dt class="t-paragraph-m"><i class="ic hgi hgi-stroke hgi-layers-01" aria-hidden="true"></i>Budget</dt><dd class="t-paragraph-l tnum">Rs 1 Crore - Rs 2 Crore</dd></div><div class="nw-row"><dt class="t-paragraph-m"><i class="ic hgi hgi-stroke hgi-calendar-03" aria-hidden="true"></i>Start</dt><dd class="t-paragraph-l">Within 3-6 months</dd></div><div class="nw-row"><dt class="t-paragraph-m"><i class="ic hgi hgi-stroke hgi-briefcase-02" aria-hidden="true"></i>Help with</dt><dd class="t-paragraph-l">Guide me through everything</dd></div><div class="nw-row"><dt class="t-paragraph-m"><i class="ic hgi hgi-stroke hgi-user-multiple" aria-hidden="true"></i>Professionals</dt><dd class="t-paragraph-l">Architects, Interior designers</dd></div></dl>
+        </section>
+        <section class="nw-col nw-who is-sticky" aria-labelledby="l-who">
+          <div class="nw-who-head"><div class="sec-head"><i class="ic ic-24 hgi hgi-stroke hgi-user-multiple" aria-hidden="true"></i><h2 id="l-who" class="t-sublabel-m">WHO RECEIVES IT</h2></div><p class="t-paragraph-m tnum" role="status" aria-live="polite"><span class="nw-n nw-n0">0 professionals</span><span class="nw-n nw-n1">1 professional</span><span class="nw-n nw-n2">2 professionals</span><span class="nw-n nw-n3">3 professionals</span></p></div>
+          <ul class="nw-rcps nr-group" role="group" aria-labelledby="l-who"><li class="nr-row nw-rcp"><a class="nr-row-link pro-top press" href="S-07-01-public-profile.html" data-as="architect" aria-label="View profile, Meera Krishnan"><span class="nr-ava"><img class="avatar" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=96&h=96&fit=crop&q=70" alt="" loading="lazy"><span class="verified" role="img" aria-label="Verified"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></span><div class="pro-txt"><span class="pro-name"><h3 class="t-label-s truncate">Meera Krishnan</h3></span><p class="pro-line t-paragraph-s"><span class="truncate">Architect · Residential</span></p><p class="pro-line t-paragraph-s"><span class="rating" aria-label="Rating 4.8 out of 5"><b class="tnum">4.8</b><i class="ic ic-16 hgi hgi-stroke hgi-star" aria-hidden="true"></i></span><span aria-hidden="true">·</span><span><b class="tnum">42</b> projects</span></p><p class="pro-line t-paragraph-s"><span class="tnum">2.4 km away</span></p></div></a><button class="nr-tick" role="checkbox" data-check aria-checked="true" aria-label="Send the requirement to Meera Krishnan" disabled><span class="nf-disc nr-hollow"><i class="ic ic-16 hgi hgi-stroke hgi-tick-02" aria-hidden="true"></i></span></button></li><li class="nr-row nw-rcp"><a class="nr-row-link pro-top press" href="S-07-01-public-profile.html" data-as="interior-designer" aria-label="View profile, Kavya Menon"><span class="nr-ava"><img class="avatar" src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=96&h=96&fit=crop&q=70" alt="" loading="lazy"><span class="verified" role="img" aria-label="Verified"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></span><div class="pro-txt"><span class="pro-name"><h3 class="t-label-s truncate">Kavya Menon</h3></span><p class="pro-line t-paragraph-s"><span class="truncate">Interior Designer · Residential Interiors</span></p><p class="pro-line t-paragraph-s"><span class="rating" aria-label="Rating 4.9 out of 5"><b class="tnum">4.9</b><i class="ic ic-16 hgi hgi-stroke hgi-star" aria-hidden="true"></i></span><span aria-hidden="true">·</span><span><b class="tnum">56</b> projects</span></p><p class="pro-line t-paragraph-s"><span class="tnum">3.2 km away</span></p></div></a><button class="nr-tick" role="checkbox" data-check aria-checked="true" aria-label="Send the requirement to Kavya Menon" disabled><span class="nf-disc nr-hollow"><i class="ic ic-16 hgi hgi-stroke hgi-tick-02" aria-hidden="true"></i></span></button></li></ul>
+          <a class="btn btn-text nw-text is-start t-label-m press" data-back href="S-21-03-home-need-results.html">ADD MORE PROFESSIONALS</a>
+          <div class="note nf-notice" role="note"><i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i><p class="t-paragraph-s">Sending shares this with the people above only. It is not hiring, booking or paying, and nothing is posted publicly.</p></div>
+          <a class="btn btn-text nw-text t-label-m press only-narrow" href="S-20-01-home-tab.html" data-toast="success|Saved|Saved as a private draft. Only you can see it." aria-disabled="true">SAVE AS PRIVATE DRAFT</a>
+        </section>
+      </div>
+    </main>
+
+    <div class="foot-cta nf-foot nr-foot" data-show="default empty"><div class="nr-foot-in">
+      <a class="btn glass t-label-m press only-wide" href="S-20-01-home-tab.html" data-toast="success|Saved|Saved as a private draft. Only you can see it.">SAVE AS PRIVATE DRAFT</a>
+      <a class="btn btn-filled t-label-m press nr-some" href="S-21-05-home-request-sent.html">SEND REQUEST</a>
+      <button class="btn btn-filled t-label-m nr-none" disabled aria-describedby="wf-help">SEND REQUEST</button>
+      <p id="wf-help" class="nr-help nr-none t-paragraph-s" role="status" aria-live="polite">Choose at least one professional to send this to.</p>
+    </div></div>
+    <div class="foot-cta nf-foot nr-foot" data-show="repair"><div class="nr-foot-in">
+      <a class="btn glass t-label-m press only-wide" href="S-20-01-home-tab.html" data-toast="success|Saved|Saved as a private draft. Only you can see it.">SAVE AS PRIVATE DRAFT</a>
+      <a class="btn btn-filled t-label-m press nr-some" href="S-21-05-home-request-sent.html" data-state="sent-repair">SEND REQUEST</a>
+      <button class="btn btn-filled t-label-m nr-none" disabled aria-describedby="wf-help-repair">SEND REQUEST</button>
+      <p id="wf-help-repair" class="nr-help nr-none t-paragraph-s" role="status" aria-live="polite">Choose at least one professional to send this to.</p>
+    </div></div>
+    <div class="foot-cta nf-foot nr-foot" data-show="professional"><div class="nr-foot-in">
+      <a class="btn glass t-label-m press only-wide" href="S-20-01-home-tab.html" data-toast="success|Saved|Saved as a private draft. Only you can see it.">SAVE AS PRIVATE DRAFT</a>
+      <a class="btn btn-filled t-label-m press nr-some" href="S-21-05-home-request-sent.html">SEND REQUEST</a>
+      <button class="btn btn-filled t-label-m nr-none" disabled aria-describedby="wf-help-pro">SEND REQUEST</button>
+      <p id="wf-help-pro" class="nr-help nr-none t-paragraph-s" role="status" aria-live="polite">Choose at least one professional to send this to.</p>
+    </div></div>
+    <div class="foot-cta nf-foot nr-foot" data-show="lighthouse"><div class="nr-foot-in">
+      <a class="btn glass t-label-m press only-wide" href="S-20-01-home-tab.html" data-toast="success|Saved|Saved as a private draft. Only you can see it.">SAVE AS PRIVATE DRAFT</a>
+      <a class="btn btn-filled t-label-m press" href="S-21-05-home-request-sent.html" data-state="sent-lighthouse">SEND REQUEST</a>
+    </div></div>
+    <div class="foot-cta nf-foot nr-foot" data-show="loading"><div class="nr-foot-in">
+      <button class="btn glass t-label-m only-wide" disabled>SAVE AS PRIVATE DRAFT</button>
+      <button class="btn btn-filled t-label-m" disabled aria-busy="true">SEND REQUEST</button>
+      <span class="sr-only" role="status">Sending request</span>
+    </div></div>
+  </div>
+</div>
+
+<!-- ANNOTATIONS (shown on the board, hidden inside the frames) -->
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375:</b> as the app. Back, centred title and subtitle. Intro line, "WHAT YOU ARE SHARING" with the summary card, "WHO RECEIVES IT" with the count under it, recipient cards 8 apart, ADD MORE, the notice, SAVE AS PRIVATE DRAFT as a centred text button. SEND REQUEST is pinned with its helper when disabled. No bottom tab bar.</li>
+      <li><b>768:</b> the same single column, centred at 640.</li>
+      <li><b>1024 and up:</b> a split. The summary on the left, recipients, notice and ADD MORE on the right in a sticky column. SAVE AS PRIVATE DRAFT moves into the bottom bar as the secondary button beside SEND REQUEST.</li>
+      <li>States: <b>default</b> build request, two recipients ticked · <b>repair</b> repair rows, "ADD MORE CONTRACTORS", the longer notice · <b>professional</b> find-professionals rows, three recipients · <b>lighthouse</b> Get started: the Lighthouse card, no count, no ADD MORE, always enabled · <b>empty</b> nobody ticked: "0 professionals", disabled button with the helper · <b>loading</b> while send or save runs: every control disabled, no spinner as in the app.</li>
+      <li>There is no error state: writes are local in the app.</li>
+      <li>In the mockup the recipient cards toggle, the count line follows, and the footer swaps between enabled and disabled.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Navigation shell · Top header (glass) with Back · Section header (shared, f-20.css)</li>
+      <li>New: labelled summary row card (<code>.nw-sum</code>, a description list with hairlines), shared with S-21-05 · Lighthouse recipient row (<code>.nw-lh</code>)</li>
+      <li>Recipient tile: the results-screen tile (<code>.nr-row</code> from S-21-03) with avatar, role, rating, projects, distance and the check disc</li>
+      <li>Info banner (<code>.note</code>) · Button text, translucent, filled · Sticky footer CTA bar · Toast</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Arrival and Back: <code>--page-slide-*</code>.</li>
+      <li>Recipient tick: <code>--select-check-*</code> (Flutter 150 ms fill, tick after 80 ms over 250 ms). Card and button press: <code>--press-*</code>.</li>
+      <li>Save toast: <code>--toast-*</code>. Nothing else moves.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li><code>h1</code> "Review request", the subtitle follows it. <code>h2</code> for both uppercase section labels.</li>
+      <li>The summary is a description list: label as term, value as definition, icons hidden.</li>
+      <li>Recipients are a group of checkboxes "Send the requirement to name", ticked by default. The count is a polite status.</li>
+      <li>The notice is a note placed before the actions. The disabled SEND REQUEST is described by the helper line, which is also a polite status.</li>
+      <li>While busy the page sets <code>aria-busy</code> and a status says "Sending request". SEND REQUEST is never focused automatically.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>Glyph swaps (Q-162): File01 to File02 (section header), UserGroup to UserMultiple, Note01 to PencilEdit01 (Details), Image01 to Image02 (Photos), Wallet01 to Invoice01 (Budget, find professionals), Briefcase01 to Briefcase02 (Help with), LayoutGrid to FloorPlan (Spaces), Call to Call02 (Lighthouse).</li>
+      <li>Colour mapping (Q-161): the lavender notice gradient becomes the info banner on <code>--accent-tonal</code>; recipient cards use the select-card surface <code>--element-bg-select-card-card-default</code>; the Lighthouse card is the neutral surface with a hairline.</li>
+      <li>Web difference, asked for in review: recipients use the S-21-03 tile, so the avatar and text open the profile and the disc toggles the tick. In the app the whole card toggles and "View profile" is text only (Q-180).</li>
+      <li>The "Edit" action on "WHAT YOU ARE SHARING" is not shown: the app never enables it (Q-180).</li>
+      <li>The spec shows the split at desktop only; here it starts at 1024 so the two columns keep a readable width.</li>
+      <li>After SEND REQUEST, Back from the confirmation returns to results with the ticks still on (Q-180).</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

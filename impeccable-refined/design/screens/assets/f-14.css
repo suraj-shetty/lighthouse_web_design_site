@@ -1,0 +1,75 @@
+/* =========================================================================
+   F-14 — Brand / business profile editing (S-14-01 … S-14-21)
+   Feature styles on top of lh.css. Tokens only.
+   ========================================================================= */
+
+/* ---------- Option rows (radio / checkbox): glass pill, label left, control right — as the app ---------- */
+.f14-opts { display: flex; flex-direction: column; gap: var(--spacing-10); }
+.f14-opt { min-height: 56px; padding: var(--spacing-10) var(--spacing-16) var(--spacing-10) var(--spacing-20); border-radius: var(--radius-28); background: var(--element-bg-select-card-card-default); border: 1px solid var(--stroke-weak); transition: border-color var(--select-check-fill) var(--select-check-ease), transform var(--press-dur) var(--press-ease); }
+.f14-opt:hover { border-color: var(--stroke-soft); }
+.f14-opt[aria-checked="true"] { border-color: var(--stroke-subtle); }
+.f14-opt:disabled { opacity: .6; cursor: not-allowed; }
+.f14-opt .avatar { width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center; color: var(--text-subtle); }
+
+/* ---------- Section eyebrow ("SEARCH RESULTS", "SELECTED ADDRESS" …) ---------- */
+.f14-eyebrow { color: var(--text-subtle); }
+.f14-group { display: flex; flex-direction: column; gap: var(--spacing-10); }
+.f14-center { justify-content: center; text-align: center; }
+.f14-muted { color: var(--text-subtle); }
+
+/* ---------- Place tile (selected address / location, search result) ---------- */
+.f14-place { display: flex; align-items: center; gap: var(--spacing-12); width: 100%; min-height: 64px; padding: var(--spacing-12) var(--spacing-12) var(--spacing-12) var(--spacing-16); border-radius: var(--radius-20); background: var(--element-bg-select-card-card-default); border: 1px solid var(--stroke-weak); color: var(--text-default); text-align: left; }
+button.f14-place:hover { border-color: var(--stroke-soft); background: var(--bg-weak); }
+.f14-place > .ic { color: var(--icon-default); }
+.f14-place .txt { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: var(--spacing-2); }
+.f14-place .txt span + span { color: var(--text-subtle); }
+.f14-remove { color: var(--danger-default); }
+.f14-place:has(.f14-remove[aria-pressed="true"]) { display: none; }   /* remove = data-toggle on the trash button */
+.sheet .f14-empty { min-height: 0; padding: var(--spacing-32) var(--spacing-16); }
+.f14-line-empty { color: var(--text-subtle); text-align: center; padding: var(--spacing-32) var(--spacing-16); }
+
+/* ---------- Inline labelled input (name sheets): fixed label left, value right ---------- */
+.f14-inline > span { flex: none; color: var(--text-subtle); }
+.f14-inline input { text-align: right; }
+
+/* ---------- Phone field: country selector + number in one pill ---------- */
+.f14-phone { padding: var(--spacing-2) var(--spacing-16) var(--spacing-2) var(--spacing-6); }
+.f14-cc { display: inline-flex; align-items: center; gap: var(--spacing-6); flex: none; min-height: 44px; padding: 0 var(--spacing-8); border-radius: var(--radius-full); color: var(--text-default); }
+.f14-cc:hover { background: var(--bg-weak); }
+.f14-flag { display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; flex: none; border-radius: var(--radius-full); background: var(--element-bg-select-card-card-default); border: 1px solid var(--stroke-soft); color: var(--text-subtle); }
+.f14-sep { width: 1px; height: 24px; flex: none; background: var(--stroke-soft); }
+
+/* ---------- Year stepper (Qty stepper, large, typable) ---------- */
+.f14-year { align-self: center; gap: var(--spacing-8); padding: var(--spacing-6); margin: var(--spacing-24) 0; }
+.f14-year button { width: 48px; height: 48px; }
+.f14-year input { width: 112px; border: 0; outline: 0; background: none; padding: 0; text-align: center; color: var(--text-default); }
+.f14-year:focus-within { outline: 3px solid var(--focus-ring); outline-offset: 2px; }
+
+/* ---------- OTP step + success step ---------- */
+.f14-step { display: flex; flex-direction: column; gap: var(--spacing-20); padding-top: var(--spacing-16); animation: f14-step var(--tab-panel-slide-dur) var(--tab-panel-slide-ease) both; }
+@keyframes f14-step { from { opacity: 0; transform: translateX(var(--tab-panel-slide-distance)); filter: blur(var(--tab-panel-blur)); } }
+.f14-success { display: flex; flex-direction: column; align-items: center; gap: var(--spacing-20); padding: var(--spacing-32) var(--spacing-16); text-align: center; }
+.f14-badge { display: flex; align-items: center; justify-content: center; width: 72px; height: 72px; border-radius: var(--radius-24); background: var(--success-weak); color: var(--success-default); }
+
+/* ---------- Two-up fields inside a side sheet ---------- */
+.f14-two { display: grid; gap: var(--spacing-16); grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 768px) { .f14-two { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* ---------- Static toast for the error states (the live one is injected by lh.js) ---------- */
+.f14-toast { z-index: 120; }
+@media (min-width: 768px) { .overlay .f14-toast { padding-right: calc(440px + var(--shell-inset) + var(--spacing-16)); } }
+
+/* ---------- Pushed screens: Product Categories / Sub Categories ---------- */
+.f14-screen .app-main { display: flex; flex-direction: column; min-height: 100dvh; }
+.f14-screen .page { flex: 1; width: 100%; padding-bottom: var(--spacing-24); }
+.f14-grid { display: grid; gap: var(--spacing-10); grid-template-columns: minmax(0, 1fr); }
+.f14-foot { padding-bottom: calc(var(--spacing-48) * 2); }               /* clears the floating tab bar */
+.f14-foot-inner { display: flex; flex-direction: column; gap: var(--spacing-10); width: 100%; max-width: var(--page-max); margin: 0 auto; }
+@media (min-width: 768px) {
+  .f14-grid { gap: var(--spacing-12); grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .f14-foot { padding-bottom: var(--spacing-24); }
+  .f14-foot-inner { flex-direction: row-reverse; justify-content: flex-start; gap: var(--spacing-12); }
+  .f14-foot-inner .btn { min-width: 160px; }
+}
+
+@media (prefers-reduced-motion: reduce) { .f14-step { animation: none; } }

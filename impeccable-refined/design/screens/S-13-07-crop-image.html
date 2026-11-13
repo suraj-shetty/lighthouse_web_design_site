@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-13-07 Crop image</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-13a.css">
+</head>
+<body class="t-paragraph-m" data-kind="overlay" data-host="S-13-05-manage-account.html" data-states="profile,cover,certificate,loading">
+<div class="screen overlay crop" data-variant="full">
+  <button class="scrim" data-close aria-label="Close"></button>
+  <section class="sheet" role="dialog" aria-modal="true" aria-labelledby="ct">
+    <div class="sheet-head"><div class="txt"><h1 id="ct" class="t-label-xxl"><span data-show="profile loading">Crop Profile Picture</span><span data-show="cover">Crop Cover Picture</span><span data-show="certificate">Crop Image</span></h1></div><button class="ibtn ibtn-44 glass glass-icon press" data-close aria-label="Close"><i class="ic hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></div>
+    <div class="crop-stage" data-show="profile loading"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&h=900&fit=crop&q=70" alt="Photo being cropped"><div class="crop-frame " tabindex="0" role="group" aria-label="Crop area, circle, 1 to 1. Arrow keys move the photo, plus and minus zoom."></div></div>
+    <div class="crop-stage" data-show="cover"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&h=900&fit=crop&q=70" alt="Photo being cropped"><div class="crop-frame cover" tabindex="0" role="group" aria-label="Crop area, rectangle, 16 to 9. Arrow keys move the photo, plus and minus zoom."></div></div>
+    <div class="crop-stage" data-show="certificate"><img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1200&h=900&fit=crop&q=70" alt="Photo being cropped"><div class="crop-frame free" tabindex="0" role="group" aria-label="Crop area, free rectangle with four corner handles. Arrow keys move the photo, plus and minus zoom."><i></i><i></i><i></i><i></i></div></div>
+    <div class="crop-tools"><div class="crop-zoom"><button class="ibtn ibtn-44 ibtn-plain press" aria-label="Zoom out"><i class="ic hgi hgi-stroke hgi-minus-sign" aria-hidden="true"></i></button><input class="range" type="range" min="1" max="4" step="0.1" value="1.6" aria-label="Zoom" style="--lo:0%;--hi:20%"><button class="ibtn ibtn-44 ibtn-plain press" aria-label="Zoom in"><i class="ic hgi hgi-stroke hgi-plus-sign" aria-hidden="true"></i></button></div><p class="t-paragraph-s">Drag to reposition. Use the slider or + / − to zoom.</p></div>
+    <div class="sheet-foot row" data-show="profile"><button class="btn btn-stroke t-label-m press" data-close>Cancel</button><button class="btn btn-filled t-label-m press" data-open="S-13-08-preview-photo.html" data-open-state="profile" data-replace>Crop</button></div>
+    <div class="sheet-foot row" data-show="cover"><button class="btn btn-stroke t-label-m press" data-close>Cancel</button><button class="btn btn-filled t-label-m press" data-open="S-13-08-preview-photo.html" data-open-state="cover" data-replace>Crop</button></div>
+    <div class="sheet-foot row" data-show="certificate"><button class="btn btn-stroke t-label-m press" data-close>Cancel</button><button class="btn btn-filled t-label-m press" data-open="S-13-23-certificate-image-preview.html" data-replace>Crop</button></div>
+    <div class="sheet-foot row" data-show="loading"><button class="btn btn-stroke t-label-m" disabled>Cancel</button><button class="btn btn-filled t-label-m" disabled aria-busy="true"><span class="spinner" aria-hidden="true"></span><span class="sr-only">Cropping</span></button></div>
+  </section>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li>In-page cropper replacing the app's native crop screen.</li>
+      <li><b>375:</b> full screen: title bar with close, dark canvas with the photo and the crop frame, zoom row with hint, Cancel and Crop side by side.</li>
+      <li><b>768 / 1440:</b> centred 640 × 720 dialog with the same parts over the scrim.</li>
+      <li>States: <b>profile</b> (1:1 frame with circular mask; output up to 1080 × 1080) · <b>cover</b> (16:9 rectangle; up to 1600 × 900) · <b>certificate</b> ("Crop Image", free rectangle with corner handles) · <b>loading</b> (Crop shows a spinner while the image is produced). Aspect is locked for profile and cover.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Modal / Dialog (full on mobile)</li>
+      <li>IconButton glass (close) / plain (zoom out, zoom in)</li>
+      <li>Range slider (zoom 1× – 4×)</li>
+      <li>Button stroke L (Cancel) · Button filled L (Crop, loading)</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Open / close: <code>--modal-*</code></li>
+      <li>Button press: <code>--press-*</code></li>
+      <li>Crop continues to the preview (S-13-08, or S-13-23 for certificates): <code>--modal-*</code></li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li>Dialog named by its title; focus trapped; Esc and Cancel abort with no change.</li>
+      <li>The crop frame is focusable: arrow keys move the photo, + / − zoom; the slider and both zoom buttons are labelled.</li>
+      <li>The dimmed area outside the frame is decorative; the result is confirmed again in the preview dialog.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>All labels except the three titles are new web copy (the app's come from the native plugin): "Cancel", "Crop", "Drag to reposition. Use the slider or + / − to zoom." (Q-115).</li>
+      <li>No rotate control: iOS hides it and the aspect is locked; Android's extra bottom controls are not carried over.</li>
+      <li>Certificate crop is shown with a free rectangle; its exact crop settings are in <code>add_edit_certifications_bottomsheet.dart:407-421</code> and the flow belongs to S-13-21/22.</li>
+      <li>Output: JPEG quality 75 (profile, cover) / 80 (certificate), as the app.</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

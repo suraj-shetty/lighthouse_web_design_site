@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-18-02 Reseller analytics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-18.css">
+</head>
+<body class="t-paragraph-m" data-states="default,tooltip,loading,empty,error"
+      data-shell="reseller" data-nav="analytics">
+<div class="screen app on-surface" style="--page-bg: var(--home-surface); --page-max: 1120px">
+  <div class="app-main">
+    <header class="top">
+      <div class="top-inner glass glass-panel">
+        <div class="bar">
+          <h1 class="t-label-xxl">Analytics</h1>
+          <button class="ibtn ibtn-44 glass glass-icon press only-wide" aria-label="Refresh" data-go-state="loading"><i class="ic ic-24 hgi hgi-stroke hgi-rotate-01" aria-hidden="true"></i></button>
+        </div>
+      </div>
+    </header>
+
+    <!-- DEFAULT: every period starts on Monthly -->
+    <main class="page stagger" data-show="default">
+      <div class="an-intro">
+        <h2 class="t-label-xl">Track Performance &amp; Growth</h2>
+        <p class="t-paragraph-m">Your order activity across recent periods.</p>
+      </div>
+      <div class="an-cards">
+        <article class="metric an-card" aria-labelledby="m-rec">
+          <div class="an-head">
+            <div class="txt" aria-live="polite"><h3 id="m-rec" class="cap t-paragraph-m">Orders Received</h3><span class="t-title-h6 tnum">148</span>
+              <span class="kpi-trend up t-paragraph-s"><i class="ic ic-16 hgi hgi-stroke hgi-trade-up" aria-hidden="true"></i><span class="sr-only">Up: </span>+12 vs previous month</span></div>
+            <div class="an-side"><button class="chip an-pill t-label-xs press" data-open="S-18-03-select-timeframe-sheet.html" data-open-state="monthly" aria-haspopup="dialog" aria-label="Orders Received period: Monthly">Monthly<i class="ic ic-16 hgi hgi-stroke hgi-arrow-down-01" aria-hidden="true"></i></button><span class="kpi-ico" aria-hidden="true"><i class="ic hgi hgi-stroke hgi-package" aria-hidden="true"></i></span></div>
+          </div>
+          <figure class="an-mini">
+            <svg class="chart" viewBox="0 0 100 40" preserveAspectRatio="none" aria-hidden="true"><path class="line s2" d="M0,10.6 C50,10.6 50,8 100,8"/></svg>
+            <figcaption class="sr-only">Line chart. Previous month 136, current month 148.</figcaption>
+          </figure>
+        </article>
+        <article class="metric an-card" aria-labelledby="m-res">
+          <div class="an-head">
+            <div class="txt" aria-live="polite"><h3 id="m-res" class="cap t-paragraph-m">Orders Responded</h3><span class="t-title-h6 tnum">124</span>
+              <span class="kpi-trend down t-paragraph-s"><i class="ic ic-16 hgi hgi-stroke hgi-trade-down" aria-hidden="true"></i><span class="sr-only">Down: </span>-7 vs previous month</span></div>
+            <div class="an-side"><button class="chip an-pill t-label-xs press" data-open="S-18-03-select-timeframe-sheet.html" data-open-state="monthly" aria-haspopup="dialog" aria-label="Orders Responded period: Monthly">Monthly<i class="ic ic-16 hgi hgi-stroke hgi-arrow-down-01" aria-hidden="true"></i></button><span class="kpi-ico" aria-hidden="true"><i class="ic hgi hgi-stroke hgi-file-02" aria-hidden="true"></i></span></div>
+          </div>
+          <figure class="an-mini">
+            <svg class="chart" viewBox="0 0 100 40" preserveAspectRatio="none" aria-hidden="true"><rect class="bar muted" x="34" y="8" width="12" height="32"/><rect class="bar" x="54" y="9.7" width="12" height="30.3"/></svg>
+            <figcaption class="sr-only">Bar chart. Previous month 131, current month 124.</figcaption>
+          </figure>
+        </article>
+        <article class="metric an-card" aria-labelledby="m-acc">
+          <div class="an-head">
+            <div class="txt" aria-live="polite"><h3 id="m-acc" class="cap t-paragraph-m">Orders Accepted</h3><span class="t-title-h6 tnum">58</span>
+              <span class="kpi-trend up t-paragraph-s"><i class="ic ic-16 hgi hgi-stroke hgi-trade-up" aria-hidden="true"></i><span class="sr-only">Up: </span>No change vs previous month</span></div>
+            <div class="an-side"><button class="chip an-pill t-label-xs press" data-open="S-18-03-select-timeframe-sheet.html" data-open-state="monthly" aria-haspopup="dialog" aria-label="Orders Accepted period: Monthly">Monthly<i class="ic ic-16 hgi hgi-stroke hgi-arrow-down-01" aria-hidden="true"></i></button><span class="kpi-ico" aria-hidden="true"><i class="ic hgi hgi-stroke hgi-user-multiple" aria-hidden="true"></i></span></div>
+          </div>
+          <figure class="an-mini">
+            <svg class="chart" viewBox="0 0 100 40" preserveAspectRatio="none" aria-hidden="true"><path class="area s3" d="M0,8 L100,8 L100,40 L0,40Z"/><path class="line s3" d="M0,8 L100,8"/></svg>
+            <figcaption class="sr-only">Area chart. Previous month 58, current month 58.</figcaption>
+          </figure>
+        </article>
+      </div>
+      <section class="card act-card" aria-labelledby="act-t">
+        <figure class="act-chart">
+          <div class="an-head">
+            <div class="txt"><h2 id="act-t" class="t-label-xl">Order Activity Trend</h2><p class="t-paragraph-s text-subtle">Previous vs current by month</p></div>
+            <button class="chip an-pill t-label-xs press" data-open="S-18-03-select-timeframe-sheet.html" data-open-state="monthly" aria-haspopup="dialog" aria-label="Order Activity Trend period: Monthly">Monthly<i class="ic ic-16 hgi hgi-stroke hgi-arrow-down-01" aria-hidden="true"></i></button>
+          </div>
+          <div class="act-plot">
+            <div class="act-y t-paragraph-xs tnum" aria-hidden="true"><span>150</span><span>100</span><span>50</span><span>0</span></div>
+            <div class="act-area" role="group" aria-label="Order activity chart. Focus a point to read its values.">
+              <svg class="chart" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                <line class="grid-line" x1="0" x2="100" y1="0" y2="0"/><line class="grid-line" x1="0" x2="100" y1="33.33" y2="33.33"/><line class="grid-line" x1="0" x2="100" y1="66.67" y2="66.67"/><line class="grid-line" x1="0" x2="100" y1="100" y2="100"/>
+                <path class="area" d="M8,9.33 C50,9.33 50,1.33 92,1.33 L92,100 L8,100Z"/>
+                <path class="area s3" d="M8,61.33 L92,61.33 L92,100 L8,100Z"/>
+                <path class="line s3" d="M8,61.33 L92,61.33"/>
+                <path class="line s2" d="M8,9.33 C50,9.33 50,1.33 92,1.33"/>
+                <path class="line dash" d="M8,12.67 C50,12.67 50,17.33 92,17.33"/>
+              </svg>
+              <button class="act-col" style="--x:8%" aria-label="Previous month: Accepted 58, Received 136, Responded 131">
+                <span class="pt k-received" style="--y:9.33"></span><span class="pt sq k-responded" style="--y:12.67"></span><span class="pt di k-accepted" style="--y:61.33"></span>
+                <span class="act-tip t-paragraph-s tnum" aria-hidden="true"><span><i class="di k-accepted"></i>Accepted: 58</span><span><i class="k-received"></i>Received: 136</span><span><i class="sq k-responded"></i>Responded: 131</span></span>
+              </button>
+              <button class="act-col end" style="--x:92%" aria-label="Current month: Accepted 58, Received 148, Responded 124">
+                <span class="pt k-received" style="--y:1.33"></span><span class="pt sq k-responded" style="--y:17.33"></span><span class="pt di k-accepted" style="--y:61.33"></span>
+                <span class="act-tip t-paragraph-s tnum" aria-hidden="true"><span><i class="di k-accepted"></i>Accepted: 58</span><span><i class="k-received"></i>Received: 148</span><span><i class="sq k-responded"></i>Responded: 124</span></span>
+              </button>
+            </div>
+            <div class="act-x t-paragraph-xs" aria-hidden="true"><span style="--x:8%">Previous</span><span style="--x:92%">Current</span></div>
+          </div>
+          <ul class="legend t-paragraph-s"><li><i class="k-received"></i>Received</li><li><i class="di k-accepted"></i>Accepted</li><li><i class="sq k-responded"></i>Responded</li></ul>
+          <figcaption class="sr-only">Line chart of three series, previous month against current month. Received rose from 136 to 148. Responded fell from 131 to 124. Accepted stayed at 58.</figcaption>
+        </figure>
+      </section>
+    </main>
+
+    <!-- TOOLTIP: a point on the activity chart is selected (also shown on hover and keyboard focus) -->
+    <main class="page" data-show="tooltip">
+      <div class="an-intro">
+        <h2 class="t-label-xl">Track Performance &amp; Growth</h2>
+        <p class="t-paragraph-m">Your order activity across recent periods.</p>
+      </div>
+      <div class="an-cards">
+        <article class="metric an-card" aria-labelledby="t-rec">
+          <div class="an-head">
+            <div class="txt" aria-live="polite"><h3 id="t-rec" class="cap t-paragraph-m">Orders Received</h3><span class="t-title-h6 tnum">148</span>
+              <span class="kpi-trend up t-paragraph-s"><i class="ic ic-16 hgi hgi-stroke hgi-trade-up" aria-hidden="true"></i><span class="sr-only">Up: </span>+12 vs previous month</span></div>
+            <div class="an-side"><button class="chip an-pill t-label-xs press" data-open="S-18-03-select-timeframe-sheet.html" data-open-state="monthly" aria-haspopup="dialog" aria-label="Orders Received period: Monthly">Monthly<i class="ic ic-16 hgi hgi-stroke hgi-arrow-down-01" aria-hidden="true"></i></button><span class="kpi-ico" aria-hidden="true"><i class="ic hgi hgi-stroke hgi-package" aria-hidden="true"></i></span></div>
+          </div>
+          <figure class="an-mini">
+            <svg class="chart" viewBox="0 0 100 40" preserveAspectRatio="none" aria-hidden="true"><path class="line s2" d="M0,10.6 C50,10.6 50,8 100,8"/></svg>
+            <figcaption class="sr-only">Line chart. Previous month 136, current month 148.</figcaption>
+          </figure>
+        </article>
+        <article class="metric an-card" aria-labelledby="t-res">
+          <div class="an-head">
+            <div class="txt" aria-live="polite"><h3 id="t-res" class="cap t-paragraph-m">Orders Responded</h3><span class="t-title-h6 tnum">124</span>
+              <span class="kpi-trend down t-paragraph-s"><i class="ic ic-16 hgi hgi-stroke hgi-trade-down" aria-hidden="true"></i><span class="sr-only">Down: </span>-7 vs previous month</span></div>
+            <div class="an-side"><button class="chip an-pill t-label-xs press" data-open="S-18-03-select-timeframe-sheet.html" data-open-state="monthly" aria-haspopup="dialog" aria-label="Orders Responded period: Monthly">Monthly<i class="ic ic-16 hgi hgi-stroke hgi-arrow-down-01" aria-hidden="true"></i></button><span class="kpi-ico" aria-hidden="true"><i class="ic hgi hgi-stroke hgi-file-02" aria-hidden="true"></i></span></div>
+          </div>
+          <figure class="an-mini">
+            <svg class="chart" viewBox="0 0 100 40" preserveAspectRatio="none" aria-hidden="true"><rect class="bar muted" x="34" y="8" width="12" height="32"/><rect class="bar" x="54" y="9.7" width="12" height="30.3"/></svg>
+            <figcaption class="sr-only">Bar chart. Previous month 131, current month 124.</figcaption>
+          </figure>
+        </article>
+        <article class="metric an-card" aria-labelledby="t-acc">
+          <div class="an-head">
+            <div class="txt" aria-live="polite"><h3 id="t-acc" class="cap t-paragraph-m">Orders Accepted</h3><span class="t-title-h6 tnum">58</span>
+              <span class="kpi-trend up t-paragraph-s"><i class="ic ic-16 hgi hgi-stroke hgi-trade-up" aria-hidden="true"></i><span class="sr-only">Up: </span>No change vs previous month</span></div>
+            <div class="an-side"><button class="chip an-pill t-label-xs press" data-open="S-18-03-select-timeframe-sheet.html" data-open-state="monthly" aria-haspopup="dialog" aria-label="Orders Accepted period: Monthly">Monthly<i class="ic ic-16 hgi hgi-stroke hgi-arrow-down-01" aria-hidden="true"></i></button><span class="kpi-ico" aria-hidden="true"><i class="ic hgi hgi-stroke hgi-user-multiple" aria-hidden="true"></i></span></div>
+          </div>
+          <figure class="an-mini">
+            <svg class="chart" viewBox="0 0 100 40" preserveAspectRatio="none" aria-hidden="true"><path class="area s3" d="M0,8 L100,8 L100,40 L0,40Z"/><path class="line s3" d="M0,8 L100,8"/></svg>
+            <figcaption class="sr-only">Area chart. Previous month 58, current month 58.</figcaption>
+          </figure>
+        </article>
+      </div>
+      <section class="card act-card" aria-labelledby="act-t2">
+        <figure class="act-chart">
+          <div class="an-head">
+            <div class="txt"><h2 id="act-t2" class="t-label-xl">Order Activity Trend</h2><p class="t-paragraph-s text-subtle">Previous vs current by month</p></div>
+            <button class="chip an-pill t-label-xs press" data-open="S-18-03-select-timeframe-sheet.html" data-open-state="monthly" aria-haspopup="dialog" aria-label="Order Activity Trend period: Monthly">Monthly<i class="ic ic-16 hgi hgi-stroke hgi-arrow-down-01" aria-hidden="true"></i></button>
+          </div>
+          <div class="act-plot">
+            <div class="act-y t-paragraph-xs tnum" aria-hidden="true"><span>150</span><span>100</span><span>50</span><span>0</span></div>
+            <div class="act-area" role="group" aria-label="Order activity chart. Focus a point to read its values.">
+              <svg class="chart" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                <line class="grid-line" x1="0" x2="100" y1="0" y2="0"/><line class="grid-line" x1="0" x2="100" y1="33.33" y2="33.33"/><line class="grid-line" x1="0" x2="100" y1="66.67" y2="66.67"/><line class="grid-line" x1="0" x2="100" y1="100" y2="100"/>
+                <path class="area" d="M8,9.33 C50,9.33 50,1.33 92,1.33 L92,100 L8,100Z"/>
+                <path class="area s3" d="M8,61.33 L92,61.33 L92,100 L8,100Z"/>
+                <path class="line s3" d="M8,61.33 L92,61.33"/>
+                <path class="line s2" d="M8,9.33 C50,9.33 50,1.33 92,1.33"/>
+                <path class="line dash" d="M8,12.67 C50,12.67 50,17.33 92,17.33"/>
+              </svg>
+              <button class="act-col" style="--x:8%" aria-label="Previous month: Accepted 58, Received 136, Responded 131">
+                <span class="pt k-received" style="--y:9.33"></span><span class="pt sq k-responded" style="--y:12.67"></span><span class="pt di k-accepted" style="--y:61.33"></span>
+                <span class="act-tip t-paragraph-s tnum" aria-hidden="true"><span><i class="di k-accepted"></i>Accepted: 58</span><span><i class="k-received"></i>Received: 136</span><span><i class="sq k-responded"></i>Responded: 131</span></span>
+              </button>
+              <button class="act-col end is-on" style="--x:92%" aria-label="Current month: Accepted 58, Received 148, Responded 124">
+                <span class="pt k-received" style="--y:1.33"></span><span class="pt sq k-responded" style="--y:17.33"></span><span class="pt di k-accepted" style="--y:61.33"></span>
+                <span class="act-tip t-paragraph-s tnum" aria-hidden="true"><span><i class="di k-accepted"></i>Accepted: 58</span><span><i class="k-received"></i>Received: 148</span><span><i class="sq k-responded"></i>Responded: 124</span></span>
+              </button>
+            </div>
+            <div class="act-x t-paragraph-xs" aria-hidden="true"><span style="--x:8%">Previous</span><span style="--x:92%">Current</span></div>
+          </div>
+          <ul class="legend t-paragraph-s"><li><i class="k-received"></i>Received</li><li><i class="di k-accepted"></i>Accepted</li><li><i class="sq k-responded"></i>Responded</li></ul>
+          <figcaption class="sr-only">Line chart of three series, previous month against current month. Received rose from 136 to 148. Responded fell from 131 to 124. Accepted stayed at 58.</figcaption>
+        </figure>
+      </section>
+    </main>
+
+    <!-- LOADING: intro stays; 3 card blocks + 1 taller block (only when no stats are in memory) -->
+    <main class="page" aria-busy="true" data-show="loading">
+      <div class="an-intro">
+        <h2 class="t-label-xl">Track Performance &amp; Growth</h2>
+        <p class="t-paragraph-m">Your order activity across recent periods.</p>
+      </div>
+      <div class="an-cards" aria-hidden="true"><span class="skel" style="height:196px;border-radius:var(--radius-20)"></span><span class="skel" style="height:196px;border-radius:var(--radius-20)"></span><span class="skel" style="height:196px;border-radius:var(--radius-20)"></span></div>
+      <div aria-hidden="true"><span class="skel" style="height:380px;border-radius:var(--radius-20)"></span></div>
+    </main>
+
+    <!-- EMPTY, and ERROR (a failed stats call is not told apart in Flutter; the web adds the toast) -->
+    <main class="page" data-show="empty error">
+      <div class="an-intro">
+        <h2 class="t-label-xl">Track Performance &amp; Growth</h2>
+        <p class="t-paragraph-m">Your order activity across recent periods.</p>
+      </div>
+      <div class="empty" role="status">
+        <div class="empty-tile" aria-hidden="true"><i class="ic ic-24 hgi hgi-stroke hgi-analytics-up" aria-hidden="true"></i></div>
+        <div class="empty-text"><p class="t-paragraph-m">No analytics available right now.</p></div>
+      </div>
+    </main>
+  </div>
+
+  <div class="toast-region" aria-live="polite" data-show="error"><div class="toast toast-danger glass glass-panel" role="status"><i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i><div class="body"><span class="t-label-s">Error</span><p class="t-paragraph-s">Network error occurred</p></div></div></div>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375</b> mirrors the Flutter screen: blurred header "Analytics" over one column: intro title + subtitle, 3 stacked metric cards (label, big value, trend on the left; timeframe pill and icon on the right; mini chart underneath), then the "Order Activity Trend" card (title, subtitle, pill, chart with a Y axis, centred legend).</li>
+      <li><b>768</b>: the same beside the reseller rail; metric cards stay stacked at full width until there is room for three (960).</li>
+      <li><b>1440</b>: 3 metric cards in one row and the activity card full width below, inside the content column. The timeframe picker opens as a popover from the pill.</li>
+      <li>Mini charts: Orders Received is a line, Orders Responded two bars (previous muted, current solid), Orders Accepted a filled line. Each plots two points, previous and current, on a 0 to max × 1.25 scale.</li>
+      <li>Activity chart: 3 series with a point at previous and current; integer Y labels at a "nice" step (here 50, top 150); horizontal grid lines only.</li>
+      <li>States: default (all periods Monthly), tooltip, loading, empty, error (same as empty plus a toast).</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Top header · IconButton glass (Refresh, from 768) · Metric card · Filter tag / chip (timeframe pill)</li>
+      <li>Chart (inline SVG, <code>.chart</code>): line, bar, area, multi-line with grid, HTML axis labels, legend, tooltip and a text summary</li>
+      <li>Skeleton · Empty state · Toast (danger) · S-18-03 timeframe sheet / popover</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Blocks rise in: <code>--stagger-*</code>; skeleton: <code>--shimmer-*</code>, <code>--skel-*</code>, <code>--reveal-*</code></li>
+      <li>Applying a period swaps that card's value, trend and chart with <code>--text-swap-*</code> (no network call); pill press: <code>--press-*</code>; sheet: <code>--panel-*</code></li>
+      <li>Chart points grow on hover / focus with <code>--duration-quick</code>.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li>Heading order: "Analytics" (<code>h1</code>) → "Track Performance &amp; Growth" (<code>h2</code>) → card labels (<code>h3</code>) → "Order Activity Trend" (<code>h2</code>).</li>
+      <li>Every chart has a text summary with the previous and current value of each series (visually hidden <code>figcaption</code>); the SVG itself is hidden from assistive technology.</li>
+      <li>The two chart positions are buttons reachable by keyboard: focus, hover or tap shows the tooltip, and the button name reads all three values.</li>
+      <li>Series differ by more than colour: line style (solid / dashed) and point shape (circle, square, diamond), repeated in the legend and tooltip. Trends say "Up" / "Down" in text.</li>
+      <li>Each pill is a button named with its card and period ("Orders Received period: Monthly"); value changes after Apply are announced by a polite live region.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li><b>Series colours</b>: there is no chart token (Flutter uses a fixed blue / purple / green). The kit's chart classes are used: Received <code>--accent</code>, Accepted <code>--success-default</code>, Responded <code>--text-default</code> (dashed) in place of purple. Dedicated series tokens are still needed (F-18 open question).</li>
+      <li><b>Chart component</b> is not in DESIGN_SPEC §8; it is built on the shared <code>.chart</code> classes in <code>lh.css</code>.</li>
+      <li><b>X-axis labels</b> "Previous" and "Current" are a web addition; Flutter leaves the two ticks unlabelled.</li>
+      <li><b>Error</b> is not told apart from empty in Flutter. Following Q-06 the web keeps the empty placeholder and adds the error toast; from 768 the Refresh button retries.</li>
+      <li>Every chart has only two points (previous, current), as the API returns today.</li>
+      <li>Zero change is drawn as positive (up icon, success colour), as in Flutter.</li>
+      <li>Glyphs: UserGroup → UserMultiple (not in <code>ICONS.md</code>); Material trending and chevron icons → TradeUp / TradeDown and ArrowDown01 (Q-34).</li>
+      <li>The mockup opens every pill on "Monthly" and cannot apply a new period; the other periods read "+{n} vs previous week / quarter / year".</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

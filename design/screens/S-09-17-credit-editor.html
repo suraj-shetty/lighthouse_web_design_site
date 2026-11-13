@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-09-17 Add / Edit Credit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-09.css">
+</head>
+<body class="t-paragraph-m" data-kind="overlay" data-host="S-09-08-create-project.html" data-states="default,filled,edit">
+<div class="screen overlay f09" data-variant="sheet">
+  <button class="scrim" data-close aria-label="Close"></button>
+  <section class="sheet" role="dialog" aria-modal="true" aria-labelledby="crt">
+    <span class="sheet-grab" aria-hidden="true"></span>
+    <div class="sheet-head"><div class="txt"><h1 id="crt" class="t-label-xxl"><span data-show="default filled">Add Credit</span><span data-show="edit">Edit Credit</span></h1></div><button class="ibtn ibtn-44 glass glass-icon press" aria-label="Close" data-close><i class="ic ic-24 hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></div>
+    <div class="sheet-body" data-show="default"><div class="field"><label class="t-label-small" for="r1">Role <span class="req" aria-hidden="true">*</span></label><button class="select is-empty t-paragraph-m" id="r1" aria-required="true" data-open="S-09-11-category-select.html" data-open-state="role"><span>Select</span><i class="ic ic-16 hgi hgi-stroke hgi-arrow-down-01" aria-hidden="true"></i></button></div><div class="field"><label class="t-label-small" for="n1">Name <span class="req" aria-hidden="true">*</span></label><div class="input t-paragraph-m"><input id="n1" type="text" maxlength="100" required placeholder="Full name" value=""></div></div><div class="field"><label class="t-label-small" for="c1">Company</label><div class="input t-paragraph-m"><input id="c1" type="text" maxlength="100" placeholder="Company (optional)" value=""></div></div><div class="field"><label class="t-label-small" for="p1">Lighthouse Profile</label><button class="select is-empty t-paragraph-m" id="p1" data-open="S-09-18-link-profile.html"><span>Link (optional)</span><i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></button></div></div>
+    <div class="sheet-body" data-show="filled"><div class="field"><label class="t-label-small" for="r2">Role <span class="req" aria-hidden="true">*</span></label><button class="select t-paragraph-m" id="r2" aria-required="true" data-open="S-09-11-category-select.html" data-open-state="role"><span>Photographer</span><i class="ic ic-16 hgi hgi-stroke hgi-arrow-down-01" aria-hidden="true"></i></button></div><div class="field"><label class="t-label-small" for="n2">Name <span class="req" aria-hidden="true">*</span></label><div class="input t-paragraph-m"><input id="n2" type="text" maxlength="100" required placeholder="Full name" value="Ananya Iyer"></div></div><div class="field"><label class="t-label-small" for="c2">Company</label><div class="input t-paragraph-m"><input id="c2" type="text" maxlength="100" placeholder="Company (optional)" value=""></div></div><div class="field"><label class="t-label-small" for="p2">Lighthouse Profile</label><button class="select is-empty t-paragraph-m" id="p2" data-open="S-09-18-link-profile.html"><span>Link (optional)</span><i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></button></div></div>
+    <div class="sheet-body" data-show="edit"><div class="field"><label class="t-label-small" for="r3">Role <span class="req" aria-hidden="true">*</span></label><button class="select t-paragraph-m" id="r3" aria-required="true" data-open="S-09-11-category-select.html" data-open-state="role"><span>Structural Engineer</span><i class="ic ic-16 hgi hgi-stroke hgi-arrow-down-01" aria-hidden="true"></i></button></div><div class="field"><label class="t-label-small" for="n3">Name <span class="req" aria-hidden="true">*</span></label><div class="input t-paragraph-m"><input id="n3" type="text" maxlength="100" required placeholder="Full name" value="Rohan Mehta"></div></div><div class="field"><label class="t-label-small" for="c3">Company</label><div class="input t-paragraph-m"><input id="c3" type="text" maxlength="100" placeholder="Company (optional)" value="Mehta Structures"></div></div><div class="field"><label class="t-label-small" for="p3">Lighthouse Profile</label><div class="row row-8"><button class="select grow t-paragraph-m" id="p3" data-open="S-09-18-link-profile.html"><span>@rohan.builds</span></button><button class="ibtn ibtn-36 ibtn-plain press" aria-label="Clear linked profile" ><i class="ic ic-16 hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></div></div></div>
+    <div class="sheet-foot" data-show="default"><button class="btn btn-filled btn-full t-label-m" disabled aria-describedby="cr-why">SAVE</button><span id="cr-why" class="sr-only">Role and name are required</span></div>
+    <div class="sheet-foot" data-show="filled edit"><button class="btn btn-filled btn-full t-label-m press" data-close>SAVE</button></div>
+  </section>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375</b> — glass sheet (opens at 75%): handle → title → Role picker → Name → Company → Lighthouse Profile picker → full-width SAVE.</li>
+      <li><b>768 / 1440</b> — side sheet, same order.</li>
+      <li>States: default (Add Credit, blank → SAVE disabled), filled (Role and Name set → SAVE enabled), edit (Edit Credit with the tapped credit, a linked profile shown as @username with a clear button).</li>
+      <li>Role opens S-09-11 (Role); Lighthouse Profile opens S-09-18. Linking a profile does not fill Name. Loading, empty and error do not apply.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Side / bottom sheet · IconButton glass (close)</li>
+      <li>Select (picker rows) · Text field · Button filled L (SAVE, disabled)</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Open / close — <code>--panel-*</code>; nested pickers — <code>--panel-*</code></li>
+      <li>Button press — <code>--press-*</code></li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li>Dialog labelled by its title. Every input has a visible label; Role and Name are marked required.</li>
+      <li>Picker rows are buttons announcing label and value. Disabled SAVE is described ("Role and name are required"). Focus is trapped and restored.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>The required mark (*) on Role and Name is a web addition — the app shows no marker.</li>
+      <li>No validation messages; Name and Company are capped at 100 characters with no counter.</li>
+      <li>Close button is a web addition.</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-13-09 Blocking loader</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-13a.css">
+</head>
+<body class="t-paragraph-m" data-kind="overlay" data-host="S-13-05-manage-account.html" data-states="default,loading-options,error">
+<div class="screen overlay" data-variant="dialog">
+  <button class="scrim" data-close aria-label="Mockup only: press to finish the action" data-show="default loading-options"></button>
+  <div class="bl" role="status" aria-live="polite" data-show="default"><span class="spinner" aria-hidden="true"></span><span class="sr-only">Saving…</span></div>
+  <div class="bl" role="status" aria-live="polite" data-show="loading-options"><span class="spinner" aria-hidden="true"></span><span class="sr-only">Loading…</span></div>
+  <div class="toast-region" aria-live="polite" data-show="error">
+  <div class="toast toast-danger glass glass-panel" role="status"><i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i><div class="body"><span class="t-label-s">Error</span><p class="t-paragraph-s">Something went wrong. Please try again.</p></div></div>
+</div>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li>Full-screen scrim with a centred white spinner and no text, at every width.</li>
+      <li>States: <b>default</b> (saving: photo upload / remove, Work Mode save) · <b>loading-options</b> (Specializations, Service Type and Collaboration options loading before their sheet opens) · <b>error</b> (loader gone, error toast).</li>
+      <li>From 768 the control that started the action may show inline progress instead (spec allows either); the scrim version is drawn here.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Modal scrim</li>
+      <li>Spinner (40, white on scrim)</li>
+      <li>Toast (danger)</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Scrim in / out — <code>--modal-*</code></li>
+      <li>Spinner — linear rotation</li>
+      <li>Error toast — <code>--toast-*</code></li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li><code>role="status"</code> with the text alternative "Saving…" or "Loading…"; the page behind is <code>aria-busy</code> in build.</li>
+      <li>Not dismissible; focus stays on the control that started the action and is not lost when the loader closes.</li>
+      <li>Reduced motion: the spinner keeps turning (it is the only progress signal).</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>In this mockup, pressing the scrim closes the loader so the flow can continue; in the product it cannot be dismissed.</li>
+      <li>"Saving…" / "Loading…" are screen-reader text only (the app has no copy).</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

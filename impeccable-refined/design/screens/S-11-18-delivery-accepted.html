@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-11-18 Delivery Accepted</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-11.css">
+</head>
+<body class="t-paragraph-m" data-states="default,downloading,error" data-shell="main" data-nav="marketplace">
+<div class="screen app on-surface" style="--page-bg: var(--home-surface); --page-max: 1120px">
+  <div class="app-main">
+    <main class="done stagger">
+      <div class="done-card" role="status">
+        <div class="done-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path pathLength="1" d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+        <div class="done-text"><h1 class="t-label-xxl">Delivery Accepted</h1><p class="t-paragraph-l">Delivery accepted successfully. RFQ <br>status updated to Completed.</p></div>
+        <div class="done-acts"><button class="btn btn-filled btn-full t-label-m press" data-toast="success|Download complete|Saved 2 invoices." data-show="default error">Download Invoice (PDF)</button><button class="btn btn-filled btn-full t-label-m" disabled aria-busy="true" data-show="downloading"><span class="spinner" aria-hidden="true"></span><span aria-live="polite">DOWNLOADING 1/2</span></button><a class="btn btn-stroke glass btn-full t-label-m press" href="S-11-01-my-orders.html">GO TO MY ORDERS</a></div>
+      </div>
+    </main>
+  </div>
+  <div class="toast-region" aria-live="polite" data-show="error">
+    <div class="toast toast-danger glass glass-panel" role="status">
+      <i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i>
+      <div class="body"><span class="t-label-s">Download Failed</span><p class="t-paragraph-s">Unable to download all invoice files. Please try again.</p></div>
+    </div>
+  </div>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375:</b> full screen, vertically centred: success mark, title, body, actions; no header or back control, as the app.</li>
+      <li><b>768:</b> the same stack in a centred raised panel.</li>
+      <li><b>1440:</b> centred confirmation panel beside the menu.</li>
+      <li>States: default · <b>downloading</b> (button shows "DOWNLOADING 1/2") · <b>error</b> (toast "Download Failed").</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Navigation shell (shared)</li>
+      <li>Confirmation block (Empty-state pattern, success use)</li>
+      <li>Button filled L with loading · Button translucent L · Toast</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Arrive: <code>--page-slide-*</code>; blocks rise with <code>--stagger-*</code></li>
+      <li>Check mark draws once: <code>--check-path-*</code> (off under reduced motion)</li>
+      <li>Button press: <code>--press-*</code></li>
+      <li>Toast: <code>--toast-*</code></li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li><code>h1</code> "Delivery Accepted"; the panel is a status region.</li>
+      <li>Download progress is a polite live region; completion is announced by the toast.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>The app image <code>assets/ic_rfq_sent.png</code> is not in the web kit; a token-coloured check mark stands in. Supply the asset or confirm the mark.</li>
+      <li>Copy kept as the app writes it, including "RFQ" and the line break (F-11-Q4 is unanswered).</li>
+      <li>The app shows no progress on this button; web shows "DOWNLOADING 1/2" as on the detail screens (web addition).</li>
+      <li>Completion is the toast from S-11-20; "Open Folder" is dropped.</li>
+      <li>"GO TO MY ORDERS" opens the "Delivered" filter in the app (F-11-Q1); the mockup opens the default filter.</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

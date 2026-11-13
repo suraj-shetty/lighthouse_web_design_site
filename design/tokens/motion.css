@@ -1,0 +1,52 @@
+/* =========================================================================
+   Lighthouse — motion scale + recipes (app/app.css)
+   Source: https://lighthouse-nine-delta.vercel.app/foundations
+   RULE: no literal durations or easings at call sites. Always a token.
+   Pick duration by what the motion DOES, never by taste.
+   ========================================================================= */
+
+:root {
+  /* Duration */
+  --duration-stagger: 40ms; --duration-micro: 80ms; --duration-quick: .15s; --duration-fast: .25s;
+  --duration-medium: .35s; --duration-slow: .4s; --duration-very-slow: .5s;
+
+  /* Easing — --ease is the default (= smooth-out) */
+  --ease-smooth-out: cubic-bezier(.22,1,.36,1); --ease-in-out: ease-in-out; --ease-out: ease-out;
+  --ease-linear: linear; --ease-bounce: cubic-bezier(.34,1.36,.64,1); --ease: var(--ease-smooth-out);
+
+  /* Distance / motion blur / scale */
+  --distance-micro: 4px; --distance-small: 6px; --distance-base: 8px; --distance-medium: 12px; --distance-large: 30px;
+  --blur-small: 2px; --blur-medium: 3px; --blur-large: 8px;
+  --scale-large: .96; --scale-medium: .97; --scale-small: .98; --scale-tiny: .99;
+
+  /* ---------- Recipes ---------- */
+  --modal-open-dur: var(--duration-fast); --modal-close-dur: var(--duration-quick); --modal-ease: var(--ease); --modal-scale: var(--scale-large); --modal-scale-close: var(--scale-large);
+  --mediaview-open-dur: var(--duration-very-slow);
+  --icon-swap-dur: var(--duration-fast); --icon-swap-blur: var(--blur-small); --icon-swap-ease: var(--ease-in-out); --icon-swap-start-scale: .25;
+  --toast-open: var(--duration-medium); --toast-close: var(--duration-fast); --toast-distance: 16px; --toast-blur: var(--blur-small); --toast-scale: var(--scale-medium); --toast-ease: var(--ease);
+  --tabs-dur: var(--duration-fast); --tabs-ease: var(--ease);
+  --page-slide-dur: var(--duration-fast); --page-slide-distance: 100%; --page-parallax: 25%; --page-blur: var(--blur-medium); --page-slide-ease: var(--ease);
+  --tab-panel-slide-dur: var(--duration-fast); --tab-panel-slide-distance: var(--distance-base); --tab-panel-blur: var(--blur-medium); --tab-panel-slide-ease: var(--ease);
+  --resize-dur: var(--duration-fast); --resize-ease: var(--ease);
+  --text-swap-dur: var(--duration-quick); --text-swap-translate-y: var(--distance-micro); --text-swap-blur: var(--blur-small); --text-swap-ease: var(--ease-in-out);
+  --search-example-hold: 3s; --search-example-hold-calm: 5s;
+  --skel-hold: 1.5s; --skel-hold-filter: .75s; --reveal-dur: var(--duration-slow); --reveal-blur: var(--blur-small); --reveal-ease: var(--ease-in-out);
+  --shimmer-dur: 2s; --shimmer-band: 400%; --shimmer-ease: var(--ease-linear);
+  --stagger-dur: var(--duration-very-slow); --stagger-distance: var(--distance-medium); --stagger-stagger: var(--duration-micro); --stagger-blur: var(--blur-medium); --stagger-ease: var(--ease);
+  --check-path-dur: var(--duration-very-slow); --check-path-delay: var(--duration-micro); --check-ease-path: var(--ease);
+  --badge-pop-dur: var(--duration-very-slow); --badge-pop-ease: var(--ease-bounce); --badge-blur: var(--blur-small);
+  --select-check-fill: var(--duration-quick); --select-check-mark: var(--duration-fast); --select-check-delay: var(--duration-micro); --select-check-clear: var(--duration-quick); --select-check-ease: var(--ease); --select-check-hold: var(--duration-quick); --select-check-dot-ease: var(--ease-bounce); --select-check-len: 21;
+  --press-scale: var(--scale-small); --press-dur: var(--duration-quick); --press-ease: var(--ease);
+  --panel-open-dur: var(--duration-slow); --panel-close-dur: var(--duration-medium); --panel-translate-y: var(--distance-base); --panel-blur: var(--blur-small); --panel-ease: var(--ease);
+  --like-fill: var(--duration-quick); --like-burst-lead: var(--duration-micro); --like-pop: var(--duration-medium); --like-pop-ease: var(--ease-bounce);
+  --like-bubble-dur: var(--duration-medium); --like-bubble-opacity: .55; --like-particle-dur: var(--duration-very-slow); --like-particle-dist: var(--distance-large); --like-particle-size: 2.5px;
+  --like-particle-hue-1: #74d4ff; --like-particle-hue-2: #8eabff; --like-particle-hue-3: #dab2ff; --like-particle-hue-4: #fda5d5; --like-particle-hue-5: #7bf1a8; --like-ease: var(--ease);
+  /* --home-chips-* are declared but EMPTY on the foundations page — confirm values in the Flutter code before use. */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-stagger: 0ms; --duration-micro: 0ms; --duration-quick: 0ms; --duration-fast: 0ms;
+    --duration-medium: 0ms; --duration-slow: 0ms; --duration-very-slow: 0ms;
+  }
+}

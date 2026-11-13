@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-12-01 Notifications</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-12.css">
+</head>
+<body class="t-paragraph-m" data-states="default,loading,loading-more,empty,error"
+      data-shell="main" data-nav="notifications">
+<div class="screen app on-surface ntf-page" style="--page-bg: var(--home-surface); --page-max: 720px">
+  <div class="app-main">
+    <header class="top">
+      <div class="top-inner glass glass-panel">
+        <div class="bar">
+          <h1 class="t-label-xxl">Notifications</h1>
+          <button class="ibtn ibtn-44 glass glass-icon press only-wide" aria-label="Refresh" data-go-state="loading"><i class="ic ic-24 hgi hgi-stroke hgi-rotate-01" aria-hidden="true"></i></button>
+        </div>
+      </div>
+    </header>
+
+    <!-- DEFAULT (and LOADING MORE: spinner after the last row) -->
+    <main class="page stagger" data-show="default loading-more">
+      <section class="ntf-sec" aria-labelledby="n-today">
+        <h2 id="n-today" class="t-sublabel-s">TODAY</h2>
+        <ul class="ntf-list"><li><div class="ntf unread"><img class="lead avatar" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=96&h=96&fit=crop&q=70" alt=""><span class="txt"><span class="ttl t-label-s"><span class="sr-only">Unread. </span>Meera Kapoor liked your post</span><span class="msg t-paragraph-s">Warm neutrals for a 1,200 sq ft apartment in Bandra.</span><time class="when t-paragraph-xs" datetime="2026-11-13T10:18" title="13 Nov 2026, 10:18 am"><i aria-hidden="true"></i>12m</time></span><div class="acts"><a class="btn btn-s btn-filled t-label-xs press" href="S-12-03-post-detail.html" aria-label="View: Meera Kapoor liked your post">View</a></div></div></li><li><div class="ntf unread"><span class="lead" aria-hidden="true"><i class="ic hgi hgi-stroke hgi-invoice-01" aria-hidden="true"></i></span><span class="txt"><span class="ttl t-label-s"><span class="sr-only">Unread. </span>Quote received</span><span class="msg t-paragraph-s">Shree Krishna Ceramics quoted ₹1,84,500 for 120 boxes of Terra Matte Grey 600×1200.</span><time class="when t-paragraph-xs" datetime="2026-11-13T09:24" title="13 Nov 2026, 9:24 am"><i aria-hidden="true"></i>1h</time></span><div class="acts"><a class="btn btn-s btn-filled t-label-xs press" href="S-11-03-active-order-detail.html" aria-label="View Quote: Quote received">View Quote</a></div></div></li><li><div class="ntf unread"><span class="lead" aria-hidden="true"><i class="ic hgi hgi-stroke hgi-invoice-01" aria-hidden="true"></i></span><span class="txt"><span class="ttl t-label-s"><span class="sr-only">Unread. </span>New order request</span><span class="msg t-paragraph-s">Order LH-24817: 40 units of Aquaform Rain Shower Set, deliver to Baner, Pune.</span><time class="when t-paragraph-xs" datetime="2026-11-13T07:02" title="13 Nov 2026, 7:02 am"><i aria-hidden="true"></i>3h</time></span><div class="acts"><a class="btn btn-s btn-stroke t-label-xs press" href="S-19-06-reject-order.html" aria-label="Decline: New order request">Decline</a><a class="btn btn-s btn-filled t-label-xs press" href="S-19-04-submit-quote.html" aria-label="Submit Quote: New order request">Submit Quote</a></div></div></li><li><a class="ntf press" href="S-07-01-public-profile.html"><img class="lead avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=96&h=96&fit=crop&q=70" alt=""><span class="txt"><span class="ttl t-label-s">Vikram Shah started following you</span><span class="msg t-paragraph-s">@vikramshah.arch</span><time class="when t-paragraph-xs" datetime="2026-11-13T05:11" title="13 Nov 2026, 5:11 am">5h</time></span></a></li></ul>
+      </section>
+      <section class="ntf-sec" aria-labelledby="n-yest">
+        <h2 id="n-yest" class="t-sublabel-s">YESTERDAY</h2>
+        <ul class="ntf-list"><li><div class="ntf"><span class="lead" aria-hidden="true"><i class="ic hgi hgi-stroke hgi-invoice-01" aria-hidden="true"></i></span><span class="txt"><span class="ttl t-label-s">Delivery proof uploaded</span><span class="msg t-paragraph-s">Review the delivery for order LH-24790 to complete it.</span><time class="when t-paragraph-xs" datetime="2026-11-12T18:40" title="12 Nov 2026, 6:40 pm">1d</time></span><div class="acts"><a class="btn btn-s btn-filled t-label-xs press" href="S-11-08-order-verification-detail.html" aria-label="Review Delivery: Delivery proof uploaded">Review Delivery</a></div></div></li><li><div class="ntf"><img class="lead avatar" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=96&h=96&fit=crop&q=70" alt=""><span class="txt"><span class="ttl t-label-s">Ananya Rao commented on your project</span><span class="msg t-paragraph-s">“Love the courtyard detail. Which stone is that?”</span><time class="when t-paragraph-xs" datetime="2026-11-12T14:15" title="12 Nov 2026, 2:15 pm">1d</time></span><div class="acts"><a class="btn btn-s btn-filled t-label-xs press" href="S-06-01-explore-project.html" aria-label="View: Ananya Rao commented on your project">View</a></div></div></li><li><div class="ntf"><span class="lead" aria-hidden="true"><i class="ic hgi hgi-stroke hgi-favourite" aria-hidden="true"></i></span><span class="txt"><span class="ttl t-label-s">Review requested</span><span class="msg t-paragraph-s">Studio Aranya asked you to review your work together on Courtyard House, Alibaug.</span><time class="when t-paragraph-xs" datetime="2026-11-12T11:02" title="12 Nov 2026, 11:02 am">1d</time></span><div class="acts"><button class="btn btn-s btn-stroke t-label-xs press" aria-label="Deny: Review requested">Deny</button><button class="btn btn-s btn-filled t-label-xs press" aria-label="Review: Review requested">Review</button></div></div></li></ul>
+      </section>
+      <section class="ntf-sec" aria-labelledby="n-week">
+        <h2 id="n-week" class="t-sublabel-s">THIS WEEK</h2>
+        <ul class="ntf-list"><li><div class="ntf"><span class="lead" aria-hidden="true"><i class="ic hgi hgi-stroke hgi-user" aria-hidden="true"></i></span><span class="txt"><span class="ttl t-label-s">Complete your profile</span><span class="msg t-paragraph-s">Add your services and work locations so clients can find you.</span><time class="when t-paragraph-xs" datetime="2026-11-10T09:00" title="10 Nov 2026, 9:00 am">3d</time></span><div class="acts"><a class="btn btn-s btn-filled t-label-xs press" href="S-13-01-my-profile.html" aria-label="Complete Profile: Complete your profile">Complete Profile</a></div></div></li><li><button class="ntf press" data-toast="neutral|New on Lighthouse: Saved products|Bookmark products in Marketplace and find them again from your profile."><span class="lead" aria-hidden="true"><i class="ic hgi hgi-stroke hgi-notification-03" aria-hidden="true"></i></span><span class="txt"><span class="ttl t-label-s">New on Lighthouse: Saved products</span><span class="msg t-paragraph-s">Bookmark products in Marketplace and find them again from your profile.</span><time class="when t-paragraph-xs" datetime="2026-11-09T16:30" title="9 Nov 2026, 4:30 pm">4d</time></span></button></li><li><div class="ntf"><span class="lead" aria-hidden="true"><i class="ic hgi hgi-stroke hgi-invoice-01" aria-hidden="true"></i></span><span class="txt"><span class="ttl t-label-s">Order completed</span><span class="msg t-paragraph-s">Order LH-24712 is complete. Your invoice is ready.</span><time class="when t-paragraph-xs" datetime="2026-11-08T13:12" title="8 Nov 2026, 1:12 pm">5d</time></span><div class="acts"><a class="btn btn-s btn-filled t-label-xs press" href="S-11-11-completed-order-detail.html" aria-label="Download Invoice: Order completed">Download Invoice</a></div></div></li></ul>
+      </section>
+      <section class="ntf-sec" aria-labelledby="n-early">
+        <h2 id="n-early" class="t-sublabel-s">EARLIER</h2>
+        <ul class="ntf-list"><li><div class="ntf"><span class="lead" aria-hidden="true"><i class="ic hgi hgi-stroke hgi-user" aria-hidden="true"></i></span><span class="txt"><span class="ttl t-label-s">Profile approved</span><span class="msg t-paragraph-s">Your professional profile is now verified.</span><time class="when t-paragraph-xs" datetime="2026-10-28T10:05" title="28 Oct 2026, 10:05 am">2w</time></span><div class="acts"><a class="btn btn-s btn-filled t-label-xs press" href="S-13-01-my-profile.html" aria-label="View Profile: Profile approved">View Profile</a></div></div></li><li><div class="ntf"><span class="lead" aria-hidden="true"><i class="ic hgi hgi-stroke hgi-invoice-01" aria-hidden="true"></i></span><span class="txt"><span class="ttl t-label-s">Order rejected by seller</span><span class="msg t-paragraph-s">Stonecraft Surfaces could not fulfil order LH-24480.</span><time class="when t-paragraph-xs" datetime="2026-10-09T15:48" title="9 Oct 2026, 3:48 pm">1mo</time></span><div class="acts"><a class="btn btn-s btn-filled t-label-xs press" href="S-11-11-completed-order-detail.html" aria-label="View Order: Order rejected by seller">View Order</a></div></div></li></ul>
+      </section>
+      <div class="feed-more" role="status" aria-live="polite" aria-label="Loading more notifications" data-show="loading-more"><span class="spinner"></span></div>
+    </main>
+
+    <!-- LOADING: skeleton rows on the first load -->
+    <main class="page" aria-busy="true" aria-label="Loading notifications" data-show="loading">
+      <div class="ntf-sec" aria-hidden="true">
+        <span class="skel" style="width:64px;height:12px;margin-left:var(--spacing-12)"></span>
+        <ul class="ntf-list"><li><div class="ntf"><span class="skel skel-circle lead"></span><span class="txt" style="gap:var(--spacing-8)"><span class="skel" style="width:62%;height:14px"></span><span class="skel" style="width:88%;height:12px"></span><span class="skel" style="width:48px;height:10px"></span></span></div></li><li><div class="ntf"><span class="skel skel-circle lead"></span><span class="txt" style="gap:var(--spacing-8)"><span class="skel" style="width:62%;height:14px"></span><span class="skel" style="width:88%;height:12px"></span><span class="skel" style="width:48px;height:10px"></span></span></div></li><li><div class="ntf"><span class="skel skel-circle lead"></span><span class="txt" style="gap:var(--spacing-8)"><span class="skel" style="width:62%;height:14px"></span><span class="skel" style="width:88%;height:12px"></span><span class="skel" style="width:48px;height:10px"></span></span></div></li><li><div class="ntf"><span class="skel skel-circle lead"></span><span class="txt" style="gap:var(--spacing-8)"><span class="skel" style="width:62%;height:14px"></span><span class="skel" style="width:88%;height:12px"></span><span class="skel" style="width:48px;height:10px"></span></span></div></li><li><div class="ntf"><span class="skel skel-circle lead"></span><span class="txt" style="gap:var(--spacing-8)"><span class="skel" style="width:62%;height:14px"></span><span class="skel" style="width:88%;height:12px"></span><span class="skel" style="width:48px;height:10px"></span></span></div></li><li><div class="ntf"><span class="skel skel-circle lead"></span><span class="txt" style="gap:var(--spacing-8)"><span class="skel" style="width:62%;height:14px"></span><span class="skel" style="width:88%;height:12px"></span><span class="skel" style="width:48px;height:10px"></span></span></div></li><li><div class="ntf"><span class="skel skel-circle lead"></span><span class="txt" style="gap:var(--spacing-8)"><span class="skel" style="width:62%;height:14px"></span><span class="skel" style="width:88%;height:12px"></span><span class="skel" style="width:48px;height:10px"></span></span></div></li><li><div class="ntf"><span class="skel skel-circle lead"></span><span class="txt" style="gap:var(--spacing-8)"><span class="skel" style="width:62%;height:14px"></span><span class="skel" style="width:88%;height:12px"></span><span class="skel" style="width:48px;height:10px"></span></span></div></li></ul>
+      </div>
+    </main>
+
+    <!-- EMPTY: one centred line, no illustration or CTA -->
+    <main class="page" data-show="empty">
+      <p class="line-empty t-paragraph-m" role="status">No notifications yet</p>
+    </main>
+
+    <!-- ERROR: the message takes the place of the empty line; the list refetches when the tab is shown again -->
+    <main class="page" data-show="error">
+      <p class="line-empty t-paragraph-m" role="alert">Network error occurred</p>
+    </main>
+  </div>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375</b>: glass header with the title only, list grouped under TODAY / YESTERDAY / THIS WEEK / EARLIER (empty groups are left out). Row: 38 round leading image (actor avatar, or a group icon for orders, profile, social, admin), title (2 lines max), message, relative time; action buttons on their own line under the text, outlined secondary first and filled primary last. Unread rows are tinted. The Notifications tab carries the red dot.</li>
+      <li><b>768</b>: the same list in a centred column beside the rail; buttons move to the right of the row.</li>
+      <li><b>1440</b>: centred single column at reading width, buttons right-aligned, and a Refresh button in the header instead of pull-to-refresh.</li>
+      <li>The same screen is the Notifications tab of the reseller shell; the spec does not differ by role, so there is no role variant.</li>
+      <li>States: default, loading (skeleton rows), loading-more (spinner after the last row), empty, error.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Top header · IconButton glass (Refresh, from 768)</li>
+      <li>Avatar (38) or group icon tile · Button filled S (primary) · Button stroke S (secondary)</li>
+      <li>Skeleton · Spinner · single-line empty / error text · Nav badge dot · Toast (inline banner for notifications with no destination)</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Rows rise in by section: <code>--stagger-*</code>; next 20 when within 200 px of the end: <code>--stagger-*</code></li>
+      <li>Skeleton to content: <code>--shimmer-*</code>, <code>--skel-*</code>, <code>--reveal-*</code>; press: <code>--press-*</code>; navigation: <code>--page-slide-*</code></li>
+      <li>Unread dot on the tab: <code>--badge-pop-*</code>. A push that arrives while this is open shows the dot at once, the banner S-12-06 (<code>--toast-*</code>), and refreshes the list after 3 s.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li><code>h1</code> "Notifications"; each section label is an <code>h2</code> with its rows as a list.</li>
+      <li>Unread is exposed as text ("Unread.") and a dot beside the time, not only by the tint.</li>
+      <li>A row without buttons is one link; a row with buttons is a plain container, and each button is labelled with its notification ("View Quote: Quote received").</li>
+      <li>Times carry the full date in <code>title</code> / <code>datetime</code>; new items and "Loading more notifications" use polite live regions; the tab badge reads ", unread".</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li><b>Error</b> shows the server message in the empty-line slot with no retry, as in Flutter. From 768 the header Refresh button doubles as the retry (F-12 open question: add a retry on web?).</li>
+      <li><b>Review requested</b>: "Review" has no destination and "Deny" does nothing in Flutter (TODO in code). Both buttons are drawn inert.</li>
+      <li><b>Download Invoice</b> only opens the order detail, as in Flutter.</li>
+      <li>Post and project notifications pass through the loaders S-12-04 / S-12-05 before the post (S-12-03) or project screen; the mockup links straight to the loaded screen.</li>
+      <li>Admin announcements have no destination: tapping the row shows the inline banner (S-12-06).</li>
+      <li>Submit Quote and Decline open the reseller screens S-19-04 and S-19-06.</li>
+      <li>Group icons: Flutter uses Material icons (Q-34). Used Invoice01 (orders), User (profile), Favourite (social), Notification03 (admin and default).</li>
+      <li>No "mark all as read", no delete, and no link to Manage Notification from this screen, as in Flutter.</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

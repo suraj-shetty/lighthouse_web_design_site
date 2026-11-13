@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-13-21 Add / Update / view Certification</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-13b.css">
+</head>
+<body class="t-paragraph-m" data-kind="overlay" data-host="S-13-20-awards-certificates.html" data-states="add,validation,existing,editing,loading,view,error">
+<div class="screen overlay" data-variant="sheet">
+  <button class="scrim" data-close aria-label="Close"></button>
+  <section class="sheet" role="dialog" aria-modal="true" aria-labelledby="t">
+    <span class="sheet-grab" aria-hidden="true"></span>
+<div class="sheet-head"><div class="txt"><h1 id="t" class="t-label-xxl"><span data-show="add validation">Add Certification</span><span data-show="existing editing loading error">Update Certification</span><span data-show="view">IGBC Accredited Professional</span></h1><p class="t-paragraph-m" data-show="add validation">Add your certification details.</p><p class="t-paragraph-m" data-show="existing editing loading error">Update your certification details.</p></div><button class="ibtn ibtn-44 glass glass-icon press" data-close aria-label="Close"><i class="ic hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></div>
+    <div class="sheet-body">
+      <div class="f13-group" data-show="add">
+        <div class="f13-frow"><label class="t-label-s" for="an">Name</label><input id="an" class="t-paragraph-m" type="text" autocapitalize="sentences" placeholder="Enter Name"></div>
+        <div class="f13-frow"><label class="t-label-s" for="ao">Issuing Organisation</label><input id="ao" class="t-paragraph-m" type="text" autocapitalize="sentences" placeholder="Enter Organisation"></div>
+        <div class="f13-frow"><span class="t-label-s" id="ad-l">Issue Date</span><button class="val t-paragraph-m is-empty" id="ad" aria-labelledby="ad-l ad" aria-haspopup="dialog" data-open="S-13-26-issue-date-picker.html" data-open-state="today"><span>Select Date</span><i class="ic hgi hgi-stroke hgi-calendar-03" aria-hidden="true"></i></button></div>
+      </div>
+      <div class="f13-group" data-show="validation">
+        <div class="f13-frow"><label class="t-label-s" for="vn">Name</label><input id="vn" class="t-paragraph-m" type="text" autocapitalize="sentences" placeholder="Enter Name" aria-invalid="true" aria-describedby="vn-e"><p class="helper error t-paragraph-s" id="vn-e">Name is required</p></div>
+        <div class="f13-frow"><label class="t-label-s" for="vo">Issuing Organisation</label><input id="vo" class="t-paragraph-m" type="text" autocapitalize="sentences" placeholder="Enter Organisation" aria-invalid="true" aria-describedby="vo-e"><p class="helper error t-paragraph-s" id="vo-e">Issuing organization is required</p></div>
+        <div class="f13-frow"><span class="t-label-s" id="vd-l">Issue Date</span><button class="val t-paragraph-m is-empty" id="vd" aria-labelledby="vd-l vd" aria-haspopup="dialog" aria-describedby="vd-e" data-open="S-13-26-issue-date-picker.html" data-open-state="today"><span>Select Date</span><i class="ic hgi hgi-stroke hgi-calendar-03" aria-hidden="true"></i></button><p class="helper error t-paragraph-s" id="vd-e">Issue date is required</p></div>
+      </div>
+      <div class="f13-group" data-show="existing view">
+        <div class="f13-frow"><span class="t-label-s">Name</span><span class="val t-paragraph-m">IGBC Accredited Professional</span></div>
+        <div class="f13-frow"><span class="t-label-s">Issuing Organisation</span><span class="val t-paragraph-m">Indian Green Building Council</span></div>
+        <div class="f13-frow"><span class="t-label-s">Issue Date</span><span class="val t-paragraph-m">Jan 5, 2025</span></div>
+      </div>
+      <div class="f13-group" data-show="editing error">
+        <div class="f13-frow"><label class="t-label-s" for="en">Name</label><input id="en" class="t-paragraph-m" type="text" autocapitalize="sentences" placeholder="Enter Name" value="IGBC Accredited Professional"></div>
+        <div class="f13-frow"><label class="t-label-s" for="eo">Issuing Organisation</label><input id="eo" class="t-paragraph-m" type="text" autocapitalize="sentences" placeholder="Enter Organisation" value="Indian Green Building Council"></div>
+        <div class="f13-frow"><span class="t-label-s" id="ed-l">Issue Date</span><button class="val t-paragraph-m" id="ed" aria-labelledby="ed-l ed" aria-haspopup="dialog" data-open="S-13-26-issue-date-picker.html" data-open-state="default"><span>Jan 5, 2025</span><i class="ic hgi hgi-stroke hgi-calendar-03" aria-hidden="true"></i></button></div>
+      </div>
+      <div class="f13-group" data-show="loading">
+        <div class="f13-frow"><label class="t-label-s" for="ln">Name</label><input id="ln" class="t-paragraph-m" type="text" autocapitalize="sentences" placeholder="Enter Name" value="IGBC Accredited Professional" disabled></div>
+        <div class="f13-frow"><label class="t-label-s" for="lo">Issuing Organisation</label><input id="lo" class="t-paragraph-m" type="text" autocapitalize="sentences" placeholder="Enter Organisation" value="Indian Green Building Council" disabled></div>
+        <div class="f13-frow"><span class="t-label-s" id="ld-l">Issue Date</span><button class="val t-paragraph-m" id="ld" aria-labelledby="ld-l ld" aria-haspopup="dialog" disabled><span>Jan 5, 2025</span><i class="ic hgi hgi-stroke hgi-calendar-03" aria-hidden="true"></i></button></div>
+      </div>
+      <div class="drop" data-show="add validation editing error">
+        <i class="ic ic-24 hgi hgi-stroke hgi-upload-01" aria-hidden="true"></i>
+        <span class="t-label-s text-default">Choose a file</span>
+        <span class="t-paragraph-s">JPEG, PNG, PDF formats.</span>
+        <button class="btn btn-m btn-filled t-label-s press" data-open="S-13-22-choose-media.html">Browse file</button>
+      </div>
+      <div class="drop" data-show="loading">
+        <i class="ic ic-24 hgi hgi-stroke hgi-upload-01" aria-hidden="true"></i>
+        <span class="t-label-s text-default">Choose a file</span>
+        <span class="t-paragraph-s">JPEG, PNG, PDF formats.</span>
+        <button class="btn btn-m btn-filled t-label-s" disabled>Browse file</button>
+      </div>
+      <div class="drop" data-show="existing">
+        <i class="ic ic-24 hgi hgi-stroke hgi-upload-01" aria-hidden="true"></i>
+        <span class="t-label-s text-default">Choose a file</span>
+        <span class="t-paragraph-s">JPEG, PNG, PDF formats.</span>
+        <button class="btn btn-m btn-filled t-label-s" disabled>Browse file</button>
+      </div>
+      <ul class="f13-files" aria-label="Attached files" data-show="editing error"><li class="file"><button class="f13-fopen" data-open="S-05-11-image-preview.html" aria-label="Preview igbc-ap-certificate.jpg"><i class="ic hgi hgi-stroke hgi-image-02" aria-hidden="true"></i><span class="txt"><span class="t-label-s truncate">igbc-ap-certificate</span><span class="t-paragraph-s">JPG</span></span></button><button class="ibtn ibtn-36 ibtn-plain press" aria-label="Remove igbc-ap-certificate.jpg"><i class="ic hgi hgi-stroke hgi-delete-02" aria-hidden="true"></i></button></li><li class="file"><button class="f13-fopen" data-open="S-05-13-pdf-preview.html" aria-label="Preview igbc-ap-scorecard.pdf"><i class="ic hgi hgi-stroke hgi-file-02" aria-hidden="true"></i><span class="txt"><span class="t-label-s truncate">igbc-ap-scorecard</span><span class="t-paragraph-s">PDF</span></span></button><button class="ibtn ibtn-36 ibtn-plain press" aria-label="Remove igbc-ap-scorecard.pdf"><i class="ic hgi hgi-stroke hgi-delete-02" aria-hidden="true"></i></button></li></ul>
+      <ul class="f13-files" aria-label="Attached files" data-show="existing view"><li class="file"><button class="f13-fopen" data-open="S-05-11-image-preview.html" aria-label="Preview igbc-ap-certificate.jpg"><i class="ic hgi hgi-stroke hgi-image-02" aria-hidden="true"></i><span class="txt"><span class="t-label-s truncate">igbc-ap-certificate</span><span class="t-paragraph-s">JPG</span></span></button><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></li><li class="file"><button class="f13-fopen" data-open="S-05-13-pdf-preview.html" aria-label="Preview igbc-ap-scorecard.pdf"><i class="ic hgi hgi-stroke hgi-file-02" aria-hidden="true"></i><span class="txt"><span class="t-label-s truncate">igbc-ap-scorecard</span><span class="t-paragraph-s">PDF</span></span></button><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></li></ul>
+      <ul class="f13-files" aria-label="Attached files" data-show="loading"><li class="file"><button class="f13-fopen" data-open="S-05-11-image-preview.html" aria-label="Preview igbc-ap-certificate.jpg"><i class="ic hgi hgi-stroke hgi-image-02" aria-hidden="true"></i><span class="txt"><span class="t-label-s truncate">igbc-ap-certificate</span><span class="t-paragraph-s">JPG</span></span></button><span class="spinner spinner-16" aria-hidden="true"></span></li><li class="file"><button class="f13-fopen" data-open="S-05-13-pdf-preview.html" aria-label="Preview igbc-ap-scorecard.pdf"><i class="ic hgi hgi-stroke hgi-file-02" aria-hidden="true"></i><span class="txt"><span class="t-label-s truncate">igbc-ap-scorecard</span><span class="t-paragraph-s">PDF</span></span></button><span class="spinner spinner-16" aria-hidden="true"></span></li></ul>
+    </div>
+    <div class="sheet-foot" data-show="add"><button class="btn btn-filled btn-full t-label-m press" data-go-state="validation">ADD</button></div>
+    <div class="sheet-foot" data-show="validation"><button class="btn btn-filled btn-full t-label-m press" data-go-state="validation">ADD</button></div>
+    <div class="sheet-foot" data-show="existing"><button class="btn btn-filled btn-full t-label-m press" data-go-state="editing">EDIT</button><button class="btn btn-stroke f13-danger btn-full t-label-m press" data-go-state="loading" aria-label="Remove certification">REMOVE</button></div>
+    <div class="sheet-foot" data-show="editing error"><button class="btn btn-filled btn-full t-label-m press" data-go-state="loading">UPDATE</button><button class="btn btn-stroke btn-full t-label-m press" data-go-state="existing">CANCEL</button></div>
+    <div class="sheet-foot" data-show="loading"><button class="btn btn-filled btn-full t-label-m" disabled aria-busy="true"><span class="spinner" aria-hidden="true"></span><span class="sr-only">Saving</span></button><button class="btn btn-stroke btn-full t-label-m" disabled>CANCEL</button></div>
+  </section>
+  <div class="toast-region f13-toast" aria-live="polite" data-show="error"><div class="toast toast-danger glass glass-panel" role="status"><i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i><div class="body"><span class="t-label-s">Error</span><p class="t-paragraph-s">Failed to update certification</p></div></div></div>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375:</b> glass bottom sheet (up to 90% height): handle, title and subtitle, content, full-width button pinned above the safe area.</li>
+      <li><b>768 / 1440:</b> side sheet from the right over Awards &amp; Certificates.</li>
+      <li>Grouped card of three rows (label left, value right): Name, Issuing Organisation, Issue Date; the error line sits under its row. Then the dashed upload box, the attached files, and one or two stacked buttons.</li>
+      <li>States: <b>add</b> empty form, "ADD" · <b>validation</b> the three required messages · <b>existing</b> read-only values, "EDIT" + "REMOVE" · <b>editing</b> "UPDATE" + "CANCEL" · <b>loading</b> uploading and saving, everything disabled · <b>view</b> title is the certificate name, no subtitle, no upload box, no buttons · <b>error</b> toast, sheet stays open.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Bottom sheet / side sheet · IconButton glass (close)</li>
+      <li>Grouped form rows (text field, date trigger)</li>
+      <li>File drop zone · Button filled M ("Browse file")</li>
+      <li>Uploaded-file row with remove IconButton or chevron</li>
+      <li>Button filled L (with loading) · Button stroke L · Toast (danger)</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Open / close: <code>--panel-*</code> (slides up under 768, slides in from the right from 768).</li>
+      <li>Read ⇄ edit: <code>--reveal-*</code>; attachment remove, <code>--icon-swap-*</code>.</li>
+      <li>Issue Date opens S-13-26: <code>--modal-*</code>; "Browse file" opens S-13-22, <code>--panel-*</code>; attachment preview, <code>--mediaview-open-dur</code>.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li>Dialog named by the sheet title; focus moves into the sheet, is trapped, and returns to the row it was opened from; Esc and the scrim close it.</li>
+      <li>Every field has a visible label; each error is linked with <code>aria-describedby</code> and the field is marked invalid.</li>
+      <li>Attachments are a list; preview and remove buttons carry the file name.</li>
+      <li>REMOVE is named "Remove certification" and marked by colour and label.</li>
+      <li>While saving, controls are disabled and the primary button announces "Saving".</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>Q-112: "REMOVE" saves immediately, with no confirmation dialog (as the app). Add one?</li>
+      <li>Q-111: Credential URL is not shown (commented out in the app, never sent).</li>
+      <li>Validation copy is verbatim, including the spelling "organization" next to the label "Issuing Organisation".</li>
+      <li>Image and PDF attachments open the shared viewers (S-05-11 / S-05-13); S-13-25 is only for other file types.</li>
+      <li>In the read state the upload box is shown but disabled (the app shows it inert until EDIT). Hide it instead?</li>
+      <li>From 1440 "Browse file" should open the system file chooser directly (S-13-22 web adaptation).</li>
+      <li>Name and organisation wrap to two lines in the app; here they are single-line inputs.</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

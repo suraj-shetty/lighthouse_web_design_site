@@ -1,0 +1,20 @@
+/* =========================================================================
+   Lighthouse — spacing ladder + corner radii
+   Source: https://lighthouse-nine-delta.vercel.app/foundations
+   Only these steps exist. Do not invent 7px, 15px, 40px etc.
+   ========================================================================= */
+
+:root {
+  --spacing-none: 0px;
+  --spacing-2: 2px;   --spacing-4: 4px;   --spacing-6: 6px;   --spacing-8: 8px;
+  --spacing-9: 9px;   --spacing-10: 10px; --spacing-12: 12px; --spacing-14: 14px;
+  --spacing-16: 16px; --spacing-18: 18px; --spacing-20: 20px; --spacing-24: 24px;
+  --spacing-32: 32px; --spacing-48: 48px;
+
+  --radius-none: 0px;
+  --radius-4: 4px;   --radius-5: 5px;   --radius-6: 6px;   --radius-8: 8px;
+  --radius-10: 10px; --radius-12: 12px; --radius-16: 16px; --radius-20: 20px;
+  --radius-24: 24px; --radius-26: 26px; --radius-28: 28px; --radius-32: 32px;
+  --radius-36: 36px; --radius-38: 38px; --radius-45: 45px; --radius-51: 51px;
+  --radius-full: 999px; /* capsule at any size */
+}

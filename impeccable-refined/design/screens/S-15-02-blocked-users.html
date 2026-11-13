@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-15-02 Blocked Users</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-15.css">
+</head>
+<body class="t-paragraph-m"
+      data-kind="overlay" data-host="S-13-05-manage-account.html" data-states="default,loading,empty,error,unblocking,unblock-failed">
+
+<div class="screen overlay" data-variant="sheet">
+  <button class="scrim" data-close aria-label="Close"></button>
+  <section class="sheet" role="dialog" aria-modal="true" aria-labelledby="bt">
+    <span class="sheet-grab" aria-hidden="true"></span>
+    <div class="sheet-head">
+      <div class="txt"><h1 id="bt" class="t-label-xxl">Blocked Users</h1><p class="t-paragraph-m">People you have blocked.</p></div>
+      <button class="ibtn ibtn-44 glass glass-icon press" data-close aria-label="Close"><i class="ic hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button>
+    </div>
+    <hr class="hr">
+    <div class="sheet-body" data-show="default unblock-failed"><ul class="srows blocked"><li class="srow"><img class="avatar" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=96&h=96&fit=crop&q=70" alt=""><span class="txt"><span class="t-label-s">Meera Kapoor</span><span class="t-paragraph-s text-soft">@meera.kapoor</span></span><button class="btn btn-s glass t-label-xs press" aria-label="Unblock Meera Kapoor" data-toast="success|Unblocked|Meera Kapoor has been unblocked.">Unblock</button></li><li class="srow"><img class="avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=96&h=96&fit=crop&q=70" alt=""><span class="txt"><span class="t-label-s">Rohan Verma</span><span class="t-paragraph-s text-soft">@rohan.builds</span></span><button class="btn btn-s glass t-label-xs press" aria-label="Unblock Rohan Verma" data-toast="success|Unblocked|Rohan Verma has been unblocked.">Unblock</button></li><li class="srow"><span class="avatar avatar-init t-label-s" aria-hidden="true">S</span><span class="txt"><span class="t-label-s">Studio Kiln</span><span class="t-paragraph-s text-soft">@studiokiln</span></span><button class="btn btn-s glass t-label-xs press" aria-label="Unblock Studio Kiln" data-toast="success|Unblocked|Studio Kiln has been unblocked.">Unblock</button></li><li class="srow"><span class="avatar avatar-init t-label-s" aria-hidden="true">V</span><span class="txt"><span class="t-label-s">vikram_tiles</span><span class="t-paragraph-s text-soft">@vikram_tiles</span></span><button class="btn btn-s glass t-label-xs press" aria-label="Unblock vikram_tiles" data-toast="success|Unblocked|vikram_tiles has been unblocked.">Unblock</button></li><li class="srow"><span class="avatar avatar-init t-label-s" aria-hidden="true">?</span><span class="txt"><span class="t-label-s">User</span></span><button class="btn btn-s glass t-label-xs press" aria-label="Unblock User" data-toast="success|Unblocked|User has been unblocked.">Unblock</button></li></ul></div>
+    <div class="sheet-body" data-show="unblocking"><ul class="srows blocked"><li class="srow"><img class="avatar" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=96&h=96&fit=crop&q=70" alt=""><span class="txt"><span class="t-label-s">Meera Kapoor</span><span class="t-paragraph-s text-soft">@meera.kapoor</span></span><button class="btn btn-s glass t-label-xs" disabled aria-busy="true"><span class="spinner" aria-hidden="true"></span><span class="sr-only">Unblocking Meera Kapoor</span></button></li><li class="srow"><img class="avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=96&h=96&fit=crop&q=70" alt=""><span class="txt"><span class="t-label-s">Rohan Verma</span><span class="t-paragraph-s text-soft">@rohan.builds</span></span><button class="btn btn-s glass t-label-xs" disabled aria-label="Unblock Rohan Verma">Unblock</button></li><li class="srow"><span class="avatar avatar-init t-label-s" aria-hidden="true">S</span><span class="txt"><span class="t-label-s">Studio Kiln</span><span class="t-paragraph-s text-soft">@studiokiln</span></span><button class="btn btn-s glass t-label-xs" disabled aria-label="Unblock Studio Kiln">Unblock</button></li><li class="srow"><span class="avatar avatar-init t-label-s" aria-hidden="true">V</span><span class="txt"><span class="t-label-s">vikram_tiles</span><span class="t-paragraph-s text-soft">@vikram_tiles</span></span><button class="btn btn-s glass t-label-xs" disabled aria-label="Unblock vikram_tiles">Unblock</button></li><li class="srow"><span class="avatar avatar-init t-label-s" aria-hidden="true">?</span><span class="txt"><span class="t-label-s">User</span></span><button class="btn btn-s glass t-label-xs" disabled aria-label="Unblock User">Unblock</button></li></ul></div>
+    <div class="sheet-body" data-show="loading" aria-busy="true"><ul class="srows blocked" aria-hidden="true"><li class="srow"><span class="skel skel-circle" style="width:40px;height:40px;flex:none"></span><span class="txt"><span class="skel" style="width:150px;height:14px"></span><span class="skel" style="width:96px;height:12px"></span></span><span class="skel" style="width:84px;height:32px;border-radius:var(--radius-full);flex:none"></span></li><li class="srow"><span class="skel skel-circle" style="width:40px;height:40px;flex:none"></span><span class="txt"><span class="skel" style="width:120px;height:14px"></span><span class="skel" style="width:96px;height:12px"></span></span><span class="skel" style="width:84px;height:32px;border-radius:var(--radius-full);flex:none"></span></li><li class="srow"><span class="skel skel-circle" style="width:40px;height:40px;flex:none"></span><span class="txt"><span class="skel" style="width:170px;height:14px"></span><span class="skel" style="width:96px;height:12px"></span></span><span class="skel" style="width:84px;height:32px;border-radius:var(--radius-full);flex:none"></span></li><li class="srow"><span class="skel skel-circle" style="width:40px;height:40px;flex:none"></span><span class="txt"><span class="skel" style="width:110px;height:14px"></span><span class="skel" style="width:96px;height:12px"></span></span><span class="skel" style="width:84px;height:32px;border-radius:var(--radius-full);flex:none"></span></li><li class="srow"><span class="skel skel-circle" style="width:40px;height:40px;flex:none"></span><span class="txt"><span class="skel" style="width:140px;height:14px"></span><span class="skel" style="width:96px;height:12px"></span></span><span class="skel" style="width:84px;height:32px;border-radius:var(--radius-full);flex:none"></span></li></ul></div>
+    <div class="sheet-body" data-show="empty"><p class="sheet-msg t-paragraph-m">You haven't blocked anyone.</p></div>
+    <div class="sheet-body" data-show="error"><p class="sheet-msg t-paragraph-m" role="alert">Network error occurred</p></div>
+  </section>
+  <div class="toast-region" aria-live="polite" data-show="unblock-failed"><div class="toast toast-danger glass glass-panel" role="status"><i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i><div class="body"><span class="t-label-s">Error</span><p class="t-paragraph-s">Something went wrong. Please try again later.</p></div></div></div>
+</div>
+
+<!-- =====================================================================
+     ANNOTATIONS (shown on the board, hidden inside the frames)
+     ===================================================================== -->
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375:</b> glass bottom sheet (95% height): handle, title, subtitle, scrolling list. Each row: avatar, name, @handle, "Unblock".</li>
+      <li><b>768 / 1440:</b> side sheet from the right over Manage Account, same rows. No pinned button: every action is in its row.</li>
+      <li>Rows show every name fallback: full name, handle only, and "User" with a "?" avatar.</li>
+      <li>Close button in the header is a web addition (the app closes by drag or scrim tap only).</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Bottom sheet / side sheet · IconButton glass (close)</li>
+      <li>Settings row (avatar, two text lines, trailing button) · Avatar with initial fallback</li>
+      <li>Button translucent S ("Unblock", with spinner) · Skeleton rows (5) · Toast success / danger</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Open / close: <code>--panel-*</code>; skeleton to rows, <code>--skel-*</code>, <code>--stagger-*</code></li>
+      <li>Button press: <code>--press-*</code>; toast, <code>--toast-*</code></li>
+      <li>Row removal after a successful unblock: <code>--reveal-*</code> reversed (the mockup keeps the row and shows the toast)</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li>Dialog named "Blocked Users"; focus trapped and returned to the "Blocked Users" row; Esc and scrim close.</li>
+      <li>Each button is named "Unblock {name}"; while one unblock runs all buttons are disabled and the busy one announces "Unblocking {name}".</li>
+      <li>Removal is announced through the toast live region. Load error text has <code>role="alert"</code>.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>Load error has no retry control in the app (text only). Add a retry on web?</li>
+      <li>The list has no paging in the app.</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

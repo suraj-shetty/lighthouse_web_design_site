@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-20-02 Select location (sheet)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-10.css">
+</head>
+<body class="t-paragraph-m" data-kind="overlay" data-host="S-20-01-home-tab.html" data-states="default,current-selected,searching,results,no-results,empty,saving,error">
+<div class="screen overlay mp-most" data-variant="sheet">
+  <button class="scrim" data-close aria-label="Close"></button>
+  <section class="sheet" role="dialog" aria-modal="true" aria-labelledby="lt">
+    <span class="sheet-grab" aria-hidden="true"></span>
+    <div class="sheet-head">
+      <div class="txt"><h1 id="lt" class="t-label-xxl">Select your location</h1><p class="t-paragraph-m">Choose the area you want to explore</p></div>
+      <span class="only-wide"><button class="ibtn ibtn-44 glass glass-icon press" data-close aria-label="Close"><i class="ic hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></span>
+    </div>
+    <div class="sheet-body stack-8">
+      <label class="search " role="search" data-show="default current-selected empty saving error"><i class="ic hgi hgi-stroke hgi-search-01" aria-hidden="true"></i><input class="t-paragraph-l" type="search" placeholder="Search for area, street name..." aria-label="Search location"></label>
+      <label class="search " role="search" data-show="searching results"><i class="ic hgi hgi-stroke hgi-search-01" aria-hidden="true"></i><input class="t-paragraph-l" type="search" placeholder="Search for area, street name..." aria-label="Search location" value="Koramangala"><button class="ibtn ibtn-36 ibtn-plain press" type="button" aria-label="Clear search" data-go-state="default"><i class="ic hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></label>
+      <label class="search " role="search" data-show="no-results"><i class="ic hgi hgi-stroke hgi-search-01" aria-hidden="true"></i><input class="t-paragraph-l" type="search" placeholder="Search for area, street name..." aria-label="Search location" value="Xanadu"><button class="ibtn ibtn-36 ibtn-plain press" type="button" aria-label="Clear search" data-go-state="default"><i class="ic hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></label>
+      <div data-show="default saving error"><button class="mp-loc-row press" data-go-state="current-selected"><i class="ic hgi hgi-stroke hgi-navigation-03" aria-hidden="true"></i><span class="txt"><span class="t-label-s truncate">Use Current Location</span><span class="t-paragraph-s truncate">12th Main Road, Indiranagar, Bengaluru, Karnataka 560038</span></span></button><h2 class="mp-group-title t-sublabel-s">Saved Addresses</h2><button class="mp-loc-row press" data-close><i class="ic hgi hgi-stroke hgi-location-01" aria-hidden="true"></i><span class="txt"><span class="t-label-s truncate">Studio: HSR Layout</span><span class="t-paragraph-s truncate">27th Main, Sector 1, HSR Layout, Bengaluru, Karnataka 560102</span></span></button><button class="mp-loc-row press" data-close><i class="ic hgi hgi-stroke hgi-location-01" aria-hidden="true"></i><span class="txt"><span class="t-label-s truncate">Site: Whitefield Villa</span><span class="t-paragraph-s truncate">Prestige Lakeside Habitat, Varthur Road, Whitefield, Bengaluru 560066</span></span></button><h2 class="mp-group-title t-sublabel-s">Last Used Locations</h2><button class="mp-loc-row press" data-close><i class="ic hgi hgi-stroke hgi-clock-01" aria-hidden="true"></i><span class="txt"><span class="t-label-s truncate">Koramangala</span><span class="t-paragraph-s truncate">5th Block, Koramangala, Bengaluru, Karnataka 560095</span></span></button><button class="mp-loc-row press" data-close><i class="ic hgi hgi-stroke hgi-clock-01" aria-hidden="true"></i><span class="txt"><span class="t-label-s truncate">Jubilee Hills</span><span class="t-paragraph-s truncate">Road No. 36, Jubilee Hills, Hyderabad, Telangana 500033</span></span></button><button class="mp-loc-row press" data-close><i class="ic hgi hgi-stroke hgi-clock-01" aria-hidden="true"></i><span class="txt"><span class="t-label-s truncate">Bandra West</span><span class="t-paragraph-s truncate">Linking Road, Bandra West, Mumbai, Maharashtra 400050</span></span></button></div>
+      <div data-show="current-selected"><div class="mp-loc-wrap"><button class="mp-loc-row press is-on" aria-pressed=true><i class="ic hgi hgi-stroke hgi-navigation-03" aria-hidden="true"></i><span class="txt"><span class="t-label-s truncate">Use Current Location</span><span class="t-paragraph-s truncate">12th Main Road, Indiranagar, Bengaluru, Karnataka 560038</span></span></button><button class="ibtn ibtn-44 ibtn-plain mp-danger press" aria-label="Clear selected location" data-go-state="empty"><i class="ic hgi hgi-stroke hgi-delete-02" aria-hidden="true"></i></button></div><h2 class="mp-group-title t-sublabel-s">Saved Addresses</h2><button class="mp-loc-row press" data-close><i class="ic hgi hgi-stroke hgi-location-01" aria-hidden="true"></i><span class="txt"><span class="t-label-s truncate">Studio: HSR Layout</span><span class="t-paragraph-s truncate">27th Main, Sector 1, HSR Layout, Bengaluru, Karnataka 560102</span></span></button><button class="mp-loc-row press" data-close><i class="ic hgi hgi-stroke hgi-location-01" aria-hidden="true"></i><span class="txt"><span class="t-label-s truncate">Site: Whitefield Villa</span><span class="t-paragraph-s truncate">Prestige Lakeside Habitat, Varthur Road, Whitefield, Bengaluru 560066</span></span></button><h2 class="mp-group-title t-sublabel-s">Last Used Locations</h2><button class="mp-loc-row press" data-close><i class="ic hgi hgi-stroke hgi-clock-01" aria-hidden="true"></i><span class="txt"><span class="t-label-s truncate">Koramangala</span><span class="t-paragraph-s truncate">5th Block, Koramangala, Bengaluru, Karnataka 560095</span></span></button><button class="mp-loc-row press" data-close><i class="ic hgi hgi-stroke hgi-clock-01" aria-hidden="true"></i><span class="txt"><span class="t-label-s truncate">Jubilee Hills</span><span class="t-paragraph-s truncate">Road No. 36, Jubilee Hills, Hyderabad, Telangana 500033</span></span></button><button class="mp-loc-row press" data-close><i class="ic hgi hgi-stroke hgi-clock-01" aria-hidden="true"></i><span class="txt"><span class="t-label-s truncate">Bandra West</span><span class="t-paragraph-s truncate">Linking Road, Bandra West, Mumbai, Maharashtra 400050</span></span></button></div>
+      <div aria-busy="true" data-show="searching"><button class="mp-loc-row press" data-go-state="current-selected"><i class="ic hgi hgi-stroke hgi-navigation-03" aria-hidden="true"></i><span class="txt"><span class="t-label-s truncate">Use Current Location</span><span class="t-paragraph-s truncate">12th Main Road, Indiranagar, Bengaluru, Karnataka 560038</span></span></button><div class="mp-loc-row" aria-hidden="true"><span class="skel" style="width:20px;height:20px;border-radius:var(--radius-full);flex:none"></span><span class="txt"><span class="skel" style="width:45%;height:14px;"></span><span class="skel" style="width:80%;height:12px;"></span></span></div><div class="mp-loc-row" aria-hidden="true"><span class="skel" style="width:20px;height:20px;border-radius:var(--radius-full);flex:none"></span><span class="txt"><span class="skel" style="width:45%;height:14px;"></span><span class="skel" style="width:80%;height:12px;"></span></span></div><div class="mp-loc-row" aria-hidden="true"><span class="skel" style="width:20px;height:20px;border-radius:var(--radius-full);flex:none"></span><span class="txt"><span class="skel" style="width:45%;height:14px;"></span><span class="skel" style="width:80%;height:12px;"></span></span></div><div class="mp-loc-row" aria-hidden="true"><span class="skel" style="width:20px;height:20px;border-radius:var(--radius-full);flex:none"></span><span class="txt"><span class="skel" style="width:45%;height:14px;"></span><span class="skel" style="width:80%;height:12px;"></span></span></div><div class="mp-loc-row" aria-hidden="true"><span class="skel" style="width:20px;height:20px;border-radius:var(--radius-full);flex:none"></span><span class="txt"><span class="skel" style="width:45%;height:14px;"></span><span class="skel" style="width:80%;height:12px;"></span></span></div><span class="sr-only" role="status">Searching</span></div>
+      <div data-show="results"><button class="mp-loc-row press" data-go-state="current-selected"><i class="ic hgi hgi-stroke hgi-navigation-03" aria-hidden="true"></i><span class="txt"><span class="t-label-s truncate">Use Current Location</span><span class="t-paragraph-s truncate">12th Main Road, Indiranagar, Bengaluru, Karnataka 560038</span></span></button><div role="group" aria-label="Search results"><button class="mp-loc-row press" data-go-state="default"><i class="ic hgi hgi-stroke hgi-location-01" aria-hidden="true"></i><span class="txt"><span class="t-label-s truncate">Koramangala</span><span class="t-paragraph-s truncate">Bengaluru, Karnataka, India</span></span></button><button class="mp-loc-row press" data-go-state="default"><i class="ic hgi hgi-stroke hgi-location-01" aria-hidden="true"></i><span class="txt"><span class="t-label-s truncate">Koramangala 4th Block</span><span class="t-paragraph-s truncate">Koramangala, Bengaluru, Karnataka, India</span></span></button><button class="mp-loc-row press" data-go-state="default"><i class="ic hgi hgi-stroke hgi-location-01" aria-hidden="true"></i><span class="txt"><span class="t-label-s truncate">Koramangala Club Road</span><span class="t-paragraph-s truncate">6th Block, Koramangala, Bengaluru, Karnataka, India</span></span></button><button class="mp-loc-row press" data-go-state="default"><i class="ic hgi hgi-stroke hgi-location-01" aria-hidden="true"></i><span class="txt"><span class="t-label-s truncate">Koramangala BDA Complex</span><span class="t-paragraph-s truncate">3rd Block, Koramangala, Bengaluru, Karnataka, India</span></span></button></div><h2 class="mp-group-title t-sublabel-s">Last Used Locations</h2><button class="mp-loc-row press" data-close><i class="ic hgi hgi-stroke hgi-clock-01" aria-hidden="true"></i><span class="txt"><span class="t-label-s truncate">Koramangala</span><span class="t-paragraph-s truncate">5th Block, Koramangala, Bengaluru, Karnataka 560095</span></span></button><button class="mp-loc-row press" data-close><i class="ic hgi hgi-stroke hgi-clock-01" aria-hidden="true"></i><span class="txt"><span class="t-label-s truncate">Jubilee Hills</span><span class="t-paragraph-s truncate">Road No. 36, Jubilee Hills, Hyderabad, Telangana 500033</span></span></button><button class="mp-loc-row press" data-close><i class="ic hgi hgi-stroke hgi-clock-01" aria-hidden="true"></i><span class="txt"><span class="t-label-s truncate">Bandra West</span><span class="t-paragraph-s truncate">Linking Road, Bandra West, Mumbai, Maharashtra 400050</span></span></button></div>
+      <div data-show="no-results"><button class="mp-loc-row press" data-go-state="current-selected"><i class="ic hgi hgi-stroke hgi-navigation-03" aria-hidden="true"></i><span class="txt"><span class="t-label-s truncate">Use Current Location</span><span class="t-paragraph-s truncate">12th Main Road, Indiranagar, Bengaluru, Karnataka 560038</span></span></button><p class="line-empty mp-block t-paragraph-m" role="status">No results found</p></div>
+      <div class="empty mp-block" data-show="empty">
+        <span class="empty-tile"><i class="ic ic-24 hgi hgi-stroke hgi-location-offline-01" aria-hidden="true"></i></span>
+        <div class="empty-text"><h2 class="t-label-l">No City Selected</h2><p class="t-paragraph-m">Search and select your city.</p></div>
+      </div>
+    </div>
+    <div class="sheet-foot" data-show="default current-selected searching results no-results error"><button class="btn btn-filled btn-full t-label-m press" data-close>SAVE</button></div>
+    <div class="sheet-foot" data-show="empty"><button class="btn btn-filled btn-full t-label-m press" data-toast="danger|Error|Please select a city">SAVE</button></div>
+    <div class="sheet-foot" data-show="saving"><button class="btn btn-filled btn-full t-label-m" disabled aria-busy="true"><span class="spinner" aria-hidden="true"></span><span class="sr-only">Saving</span></button></div>
+  </section>
+  <div class="toast-region" aria-live="polite" data-show="error"><div class="toast toast-danger glass glass-panel" role="status"><i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i><div class="body"><span class="t-label-s">Error</span><p class="t-paragraph-s">Unable to fetch place details</p></div></div></div>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li>The same sheet as S-10-02 (the app reuses its Marketplace city sheet), opened from the city button in the Home header, with this screen's title and subtitle.</li>
+      <li><b>375:</b> glass bottom sheet opening at 94% height: handle, title, subtitle, search field, scrolling list, SAVE pinned at the bottom.</li>
+      <li><b>768 / 1440:</b> side sheet from the right; the list scrolls inside and SAVE stays pinned. A close button replaces the drag handle.</li>
+      <li>List order: "Use Current Location" (when a device location is known), search results while typing, Saved Addresses, Last Used Locations. Saved Addresses hide while there is search text.</li>
+      <li>States: default, current-selected, searching (5 skeleton rows), results, no-results, empty ("No City Selected"), saving (SAVE shows a spinner), error (toast only).</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Bottom sheet / side sheet, Search input with clear</li>
+      <li>Location row and group headings from F-10 (the sheet links f-10.css for them)</li>
+      <li>Button filled L (SAVE, with loading), IconButton (clear selection), Skeleton rows, Empty state, Toast (danger)</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Sheet open and close: <code>--panel-*</code>; results: <code>--reveal-*</code>, <code>--skel-*</code>; press: <code>--press-*</code>; toast: <code>--toast-*</code>.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li>Dialog labelled by its title; the search field is labelled "Search location"; the clear and delete icon buttons are labelled.</li>
+      <li>The selected current-location row is a pressed button, not colour alone. "No results found" and the empty block are status text; the toast is a polite live region.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>SAVE is always enabled, as in the app: with no city chosen it shows the toast "Please select a city". The prototype showed "ADD", disabled until a choice is made.</li>
+      <li>The saved city is shared with Marketplace (one store on the device) and becomes the default location of flows started from Home.</li>
+      <li>Addresses are sample data.</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

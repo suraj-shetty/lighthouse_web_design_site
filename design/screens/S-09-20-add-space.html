@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-09-20 Add / edit space</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-09.css">
+</head>
+<body class="t-paragraph-m" data-kind="overlay" data-host="S-09-08-create-project.html" data-states="default,filled,existing,existing-empty,loading">
+<div class="screen overlay f09" data-variant="full">
+  <button class="scrim" data-close aria-label="Close"></button>
+  <section class="sheet" role="dialog" aria-modal="true" aria-labelledby="spt">
+    <div class="sheet-head f09-head"><div class="bar grow">
+      <button class="ibtn ibtn-44 glass glass-icon press" aria-label="Back" data-close><i class="ic ic-24 hgi hgi-stroke hgi-arrow-left-01" aria-hidden="true"></i></button>
+      <h1 id="spt" class="t-label-xl"><span data-show="default filled loading">ADD SPACES</span><span data-show="existing existing-empty">EDIT SPACE</span></h1>
+      <button class="btn btn-s btn-filled t-label-xs" disabled aria-describedby="sp-why" data-show="default">SAVE</button><span id="sp-why" class="sr-only" data-show="default">Title required</span>
+      <button class="btn btn-s btn-filled t-label-xs press" data-close data-show="filled loading existing existing-empty">SAVE</button>
+    </div></div>
+    <div class="sheet-body"><div class="f09-space">
+      <div class="stack">
+        <div class="field" data-show="default"><label class="sr-only" for="s-title-default">Title</label><div class="textarea f09-short t-paragraph-m"><textarea id="s-title-default" rows="2" maxlength="100" required placeholder="Add title..."></textarea></div></div>
+        <div class="field" data-show="filled loading"><label class="sr-only" for="s-title-filled">Title</label><div class="textarea f09-short t-paragraph-m"><textarea id="s-title-filled" rows="2" maxlength="100" required placeholder="Add title...">Courtyard &amp; Verandah</textarea></div></div>
+        <div class="field" data-show="existing existing-empty"><label class="sr-only" for="s-title-existing">Title</label><div class="textarea f09-short t-paragraph-m"><textarea id="s-title-existing" rows="2" maxlength="100" required placeholder="Add title...">Living Pavilion</textarea></div></div>
+        <div class="field" data-show="default"><label class="sr-only" for="s-description-default">Description</label><div class="textarea  t-paragraph-m"><textarea id="s-description-default" rows="5" maxlength="600" placeholder="Add Description..."></textarea></div></div>
+        <div class="field" data-show="filled loading"><label class="sr-only" for="s-description-filled">Description</label><div class="textarea  t-paragraph-m"><textarea id="s-description-filled" rows="5" maxlength="600" placeholder="Add Description...">The heart of the house — a shaded verandah wraps the old frangipani and connects all four pavilions. Kota stone runs from the rooms straight out into the court.</textarea></div></div>
+        <div class="field" data-show="existing existing-empty"><label class="sr-only" for="s-description-existing">Description</label><div class="textarea  t-paragraph-m"><textarea id="s-description-existing" rows="5" maxlength="600" placeholder="Add Description...">Double-height living room with a teak rafter ceiling and full-height shutters on both sides.</textarea></div></div>
+      </div>
+      <div class="stack">
+        <div class="card" data-show="default filled loading"><div class="row"><div class="stack stack-8 grow"><h2 class="t-label-m">Add Media &amp; Tag Materials</h2><p class="t-paragraph-s text-subtle">Upload images or videos, and tag the materials used in each image</p></div>
+          <button class="btn btn-s btn-filled t-label-xs press" data-open="S-09-21-space-media-picker.html" aria-label="Add media">Add</button></div></div>
+        <div class="card" data-show="existing existing-empty"><div class="stack stack-8"><h2 class="t-label-m">Images &amp; Materials</h2><p class="t-paragraph-s text-subtle">Media on an existing space can't be edited. Tap a tile to view its tagged products.</p></div></div>
+        <ul class="f09-sgrid" aria-label="Space media" data-show="filled"><li class="f09-stile"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=480&h=480&fit=crop&q=70" alt="Space media 1"><button class="ibtn ibtn-36 glass f09-onmedia press" aria-label="Remove space media 1" ><i class="ic ic-16 hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button><button class="f09-pill glass f09-onmedia t-label-xs press" data-open="S-09-22-tag-materials.html"><i class="ic ic-16 hgi hgi-stroke hgi-tag-01" aria-hidden="true"></i>3 Products</button></li><li class="f09-stile"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=480&h=480&fit=crop&q=70" alt="Space media 2"><button class="ibtn ibtn-36 glass f09-onmedia press" aria-label="Remove space media 2" ><i class="ic ic-16 hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button><button class="f09-pill glass f09-onmedia t-label-xs press" data-open="S-09-22-tag-materials.html" data-open-state="empty"><i class="ic ic-16 hgi hgi-stroke hgi-tag-01" aria-hidden="true"></i>Tag materials in images</button></li><li class="f09-stile"><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=480&h=480&fit=crop&q=70" alt="Space media 3"><button class="ibtn ibtn-36 glass f09-onmedia press" aria-label="Remove space media 3" ><i class="ic ic-16 hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button><span class="ibtn glass f09-onmedia f09-play" role="img" aria-label="Video"><i class="ic ic-24 hgi hgi-stroke hgi-play" aria-hidden="true"></i></span></li><li class="f09-stile"><img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=480&h=480&fit=crop&q=70" alt="Space media 4"><button class="ibtn ibtn-36 glass f09-onmedia press" aria-label="Remove space media 4" ><i class="ic ic-16 hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button><button class="f09-pill glass f09-onmedia t-label-xs press" data-open="S-09-22-tag-materials.html"><i class="ic ic-16 hgi hgi-stroke hgi-tag-01" aria-hidden="true"></i>1 Product</button></li><li class="f09-stile"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=480&h=480&fit=crop&q=70" alt="Space media 5"><button class="ibtn ibtn-36 glass f09-onmedia press" aria-label="Remove space media 5" ><i class="ic ic-16 hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button><button class="f09-pill glass f09-onmedia t-label-xs press" data-open="S-09-22-tag-materials.html" data-open-state="empty"><i class="ic ic-16 hgi hgi-stroke hgi-tag-01" aria-hidden="true"></i>Tag materials in images</button></li></ul>
+        <ul class="f09-sgrid" aria-hidden="true" data-show="loading"><li class="f09-stile"></li><li class="f09-stile"></li><li class="f09-stile"></li><li class="f09-stile"></li><li class="f09-stile"></li></ul>
+        <ul class="f09-sgrid" aria-label="Space media" data-show="existing"><li class="f09-stile"><a href="S-06-03-space-media-tags-viewer.html" aria-label="Space media 1, 2 products"><img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=480&h=480&fit=crop&q=70" alt="Space media 1"></a><span class="f09-pill glass f09-onmedia t-label-xs">2 Products</span></li><li class="f09-stile"><a href="S-06-03-space-media-tags-viewer.html" aria-label="Space media 2, no tagged products"><img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=480&h=480&fit=crop&q=70" alt="Space media 2"></a><span class="f09-pill glass f09-onmedia t-label-xs">No tagged products</span></li><li class="f09-stile"><img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=480&h=480&fit=crop&q=70" alt="Space media 3"><span class="ibtn glass f09-onmedia f09-play" role="img" aria-label="Video"><i class="ic ic-24 hgi hgi-stroke hgi-play" aria-hidden="true"></i></span></li><li class="f09-stile"><a href="S-06-03-space-media-tags-viewer.html" aria-label="Space media 4, 1 product"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=480&h=480&fit=crop&q=70" alt="Space media 4"></a><span class="f09-pill glass f09-onmedia t-label-xs">1 Product</span></li></ul>
+        <p class="f09-none t-paragraph-m" data-show="existing-empty">No media attached to this space.</p>
+      </div>
+    </div></div>
+  </section>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375</b> — full screen, as the app's pushed screen: header (back · title · SAVE pill) → title → description → info card (with an "Add" pill in add mode) → 2-column grid of square tiles (remove chip top-right, tag pill bottom-left).</li>
+      <li><b>768</b> — large modal over the project form; media grid in 3 columns.</li>
+      <li><b>1440</b> — the same modal in two columns: title and description on the left, info card and media grid on the right. The project form stays visible behind it.</li>
+      <li>States: default (new space, blank → SAVE disabled, no grid), filled (media added; images carry a tag pill, videos none), existing (EDIT SPACE: only title and description editable, media read-only with a play glyph on videos), existing-empty ("No media attached to this space."), loading (flat tile blocks until thumbnails resolve — no skeleton, as the app).</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Full-screen / modal panel · IconButton glass (back) · Button filled S (SAVE, Add)</li>
+      <li>Textarea (title, description) · Card (info)</li>
+      <li>Media tile · IconButton glass on media (remove) · tag-count pill</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Open / close — <code>--page-slide-*</code> under 768, <code>--modal-*</code> from 768</li>
+      <li>Media picker — <code>--panel-*</code>; tag screen and viewer — <code>--mediaview-open-dur</code></li>
+      <li>Button press — <code>--press-*</code></li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li>Heading = title. Title is labelled "Title" and required; Description is labelled "Description". Disabled SAVE is described ("Title required").</li>
+      <li>Tiles: image alt "Space media n"; remove buttons are named; the tag pill is a button announcing the count.</li>
+      <li>Focus order: back → SAVE → title → description → Add → tiles.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>Header reads "ADD SPACES" even for one space, kept verbatim (Q-69).</li>
+      <li>Back discards without confirmation (Q-67). A new space may be saved with no media in create mode but not in edit mode (Q-65).</li>
+      <li>Existing-space tiles open S-06-03 (tagged-products viewer, Home feature).</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

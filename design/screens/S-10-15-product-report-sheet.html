@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-10-15 Report this Product</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-10.css">
+</head>
+<body class="t-paragraph-m" data-kind="overlay" data-host="S-10-12-product-detail.html" data-states="default,other,loading,error">
+<div class="screen overlay mp-modal" data-variant="sheet">
+  <button class="scrim" data-close aria-label="Close"></button>
+  <section class="sheet" role="dialog" aria-modal="true" aria-labelledby="rt">
+    <span class="sheet-grab" aria-hidden="true"></span>
+    <div class="sheet-head"><div class="txt"><h1 id="rt" class="t-label-xxl">Report this Product</h1><p class="t-paragraph-m">Select a reason for reporting</p></div><span class="only-wide"><button class="ibtn ibtn-44 glass glass-icon press" data-close aria-label="Close"><i class="ic hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></span></div>
+    <div class="gate" data-show="default error"><div class="sheet-body stack-8"><div class="gate-group" role="radiogroup" aria-labelledby="rt"><button class="opt t-paragraph-m" role="radio" data-radio aria-checked="false"><span class="txt">Incorrect or misleading price</span><span class="radio"></span></button><button class="opt t-paragraph-m" role="radio" data-radio aria-checked="false"><span class="txt">Wrong specifications / details</span><span class="radio"></span></button><button class="opt t-paragraph-m" role="radio" data-radio aria-checked="false"><span class="txt">Misleading or unrelated images</span><span class="radio"></span></button><button class="opt t-paragraph-m" role="radio" data-radio aria-checked="false"><span class="txt">Suspected counterfeit product</span><span class="radio"></span></button><button class="opt t-paragraph-m" role="radio" data-radio aria-checked="false"><span class="txt">Spam or duplicate listing</span><span class="radio"></span></button><button class="opt t-paragraph-m gate-other" role="radio" data-radio aria-checked="false"><span class="txt">Other</span><span class="radio"></span></button></div><label class="textarea mp-report-text gate-more"><textarea class="t-paragraph-m gate-text" rows="5" placeholder="Briefly describe the issue..." aria-label="Describe the issue" aria-required="true"></textarea></label></div>
+      <div class="sheet-foot"><button class="btn btn-filled btn-full t-label-m press gate-on" data-go-state="loading">SUBMIT</button><button class="btn btn-filled btn-full t-label-m gate-off" disabled aria-disabled="true">SUBMIT</button></div></div>
+    <div class="gate" data-show="other"><div class="sheet-body stack-8"><div class="gate-group" role="radiogroup" aria-labelledby="rt"><button class="opt t-paragraph-m" role="radio" data-radio aria-checked="false"><span class="txt">Incorrect or misleading price</span><span class="radio"></span></button><button class="opt t-paragraph-m" role="radio" data-radio aria-checked="false"><span class="txt">Wrong specifications / details</span><span class="radio"></span></button><button class="opt t-paragraph-m" role="radio" data-radio aria-checked="false"><span class="txt">Misleading or unrelated images</span><span class="radio"></span></button><button class="opt t-paragraph-m" role="radio" data-radio aria-checked="false"><span class="txt">Suspected counterfeit product</span><span class="radio"></span></button><button class="opt t-paragraph-m" role="radio" data-radio aria-checked="false"><span class="txt">Spam or duplicate listing</span><span class="radio"></span></button><button class="opt t-paragraph-m gate-other" role="radio" data-radio aria-checked="true"><span class="txt">Other</span><span class="radio"></span></button></div><label class="textarea mp-report-text gate-more"><textarea class="t-paragraph-m gate-text" rows="5" placeholder="Briefly describe the issue..." aria-label="Describe the issue" aria-required="true"></textarea></label></div>
+      <div class="sheet-foot"><button class="btn btn-filled btn-full t-label-m press gate-on" data-go-state="loading">SUBMIT</button><button class="btn btn-filled btn-full t-label-m gate-off" disabled aria-disabled="true">SUBMIT</button></div></div>
+    <div class="gate" data-show="loading"><div class="sheet-body stack-8"><div class="gate-group is-locked" role="radiogroup" aria-labelledby="rt" aria-disabled="true"><button class="opt t-paragraph-m" role="radio" data-radio aria-checked="false"><span class="txt">Incorrect or misleading price</span><span class="radio"></span></button><button class="opt t-paragraph-m" role="radio" data-radio aria-checked="false"><span class="txt">Wrong specifications / details</span><span class="radio"></span></button><button class="opt t-paragraph-m" role="radio" data-radio aria-checked="false"><span class="txt">Misleading or unrelated images</span><span class="radio"></span></button><button class="opt t-paragraph-m" role="radio" data-radio aria-checked="false"><span class="txt">Suspected counterfeit product</span><span class="radio"></span></button><button class="opt t-paragraph-m" role="radio" data-radio aria-checked="false"><span class="txt">Spam or duplicate listing</span><span class="radio"></span></button><button class="opt t-paragraph-m gate-other" role="radio" data-radio aria-checked="true"><span class="txt">Other</span><span class="radio"></span></button></div><label class="textarea mp-report-text gate-more is-locked"><textarea class="t-paragraph-m gate-text" rows="5" placeholder="Briefly describe the issue..." aria-label="Describe the issue" aria-required="true" readonly>The listing shows the Rose Gold finish but the SKU and price are for Polished Chrome.</textarea></label></div>
+      <div class="sheet-foot"><button class="btn btn-filled btn-full t-label-m" disabled aria-busy="true"><span class="spinner" aria-hidden="true"></span><span class="sr-only">Submitting</span></button></div></div>
+  </section>
+  <div class="toast-region" aria-live="polite" data-show="error"><div class="toast toast-danger glass glass-panel" role="status"><i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i><div class="body"><span class="t-label-s">Report</span><p class="t-paragraph-s">Something went wrong. Please try again later.</p></div></div></div>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375</b> — content-height bottom sheet that rises above the keyboard: handle, title, subtitle, six reason rows, a text box only when "Other" is chosen, full-width SUBMIT.</li>
+      <li><b>768 / 1440</b> — centred modal dialog with the same content and a close button.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Bottom sheet (under 768) / Modal dialog (from 768)</li>
+      <li>Radio rows (reasons) · Textarea</li>
+      <li>Button filled L (SUBMIT: disabled, enabled, loading) · Toast (success, danger)</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Open / close — <code>--panel-*</code> under 768, <code>--modal-*</code> from 768</li>
+      <li>Reason select — <code>--select-check-*</code>; textarea reveal — <code>--reveal-*</code></li>
+      <li>Toast — <code>--toast-*</code></li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li>Dialog named "Report this Product". Reasons are a radio group (one at a time).</li>
+      <li>The textarea is labelled "Describe the issue" and required when "Other" is chosen.</li>
+      <li>SUBMIT exposes <code>aria-disabled</code> and <code>aria-busy</code>; the result is announced by the toast; focus returns to the "…" button.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>SUBMIT is enabled once a reason is chosen and, for "Other", once the text is not blank. In the mockup this works live: pick a reason in the default state.</li>
+      <li>Success closes the sheet and shows "Reported" / "Thanks for helping us keep the marketplace accurate." Failure keeps the sheet open with the selection and shows "Report" / {server message}.</li>
+      <li>While submitting, the reasons and the text box are locked.</li>
+      <li>The app draws the reasons with its multi-select row style; web uses radios because only one can be chosen.</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

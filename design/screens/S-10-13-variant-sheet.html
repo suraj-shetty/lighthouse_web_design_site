@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-10-13 Variant</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-10.css">
+</head>
+<body class="t-paragraph-m" data-kind="overlay" data-host="S-10-12-product-detail.html" data-states="default,disabled">
+<div class="screen overlay" data-variant="sheet">
+  <button class="scrim" data-close aria-label="Close"></button>
+  <section class="sheet" role="dialog" aria-modal="true" aria-labelledby="vt">
+    <span class="sheet-grab" aria-hidden="true"></span>
+    <div class="sheet-head"><div class="txt"><h1 id="vt" class="t-label-xxl">Variant</h1><p class="t-paragraph-m">Choose one option from each group</p></div><span class="only-wide"><button class="ibtn ibtn-44 glass glass-icon press" data-close aria-label="Close"><i class="ic hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></span></div>
+    <div class="gate" data-show="default"><div class="sheet-body" style="gap: 0"><fieldset class="mp-filter gate-group" role="radiogroup" aria-label="Finish" aria-required="true"><legend class="t-label-m">Finish<span class="req" aria-hidden="true"> *</span></legend><div class="fchips"><button class="fchip t-paragraph-m press" role="radio" data-radio aria-checked="true">Polished Chrome</button><button class="fchip t-paragraph-m press" role="radio" data-radio aria-checked="false">Rose Gold</button><button class="fchip t-paragraph-m press" role="radio" data-radio aria-checked="false">Gun Metal</button><button class="fchip t-paragraph-m press" role="radio" data-radio aria-checked="false">Brushed Stainless Steel</button></div></fieldset><fieldset class="mp-filter gate-group" role="radiogroup" aria-label="Cartridge" aria-required="true"><legend class="t-label-m">Cartridge<span class="req" aria-hidden="true"> *</span></legend><div class="fchips"><button class="fchip t-paragraph-m press" role="radio" data-radio aria-checked="true">Ceramic 35 mm</button><button class="fchip t-paragraph-m press" role="radio" data-radio aria-checked="false">Ceramic 40 mm</button></div></fieldset><fieldset class="mp-filter" role="radiogroup" aria-label="Waste Coupling"><legend class="t-label-m">Waste Coupling</legend><div class="fchips"><button class="fchip t-paragraph-m press" role="radio" data-radio aria-checked="true">Without Waste</button><button class="fchip t-paragraph-m press" role="radio" data-radio aria-checked="false">Pop-up Waste</button><button class="fchip t-paragraph-m press" role="radio" data-radio aria-checked="false">Click-clack Waste</button></div></fieldset></div><div class="sheet-foot"><button class="btn btn-filled btn-full t-label-m press gate-on" data-close>DONE</button><button class="btn btn-filled btn-full t-label-m gate-off" disabled>DONE</button></div></div>
+    <div class="gate" data-show="disabled"><div class="sheet-body" style="gap: 0"><fieldset class="mp-filter gate-group" role="radiogroup" aria-label="Finish" aria-required="true"><legend class="t-label-m">Finish<span class="req" aria-hidden="true"> *</span></legend><div class="fchips"><button class="fchip t-paragraph-m press" role="radio" data-radio aria-checked="false">Polished Chrome</button><button class="fchip t-paragraph-m press" role="radio" data-radio aria-checked="false">Rose Gold</button><button class="fchip t-paragraph-m press" role="radio" data-radio aria-checked="false">Gun Metal</button><button class="fchip t-paragraph-m press" role="radio" data-radio aria-checked="false">Brushed Stainless Steel</button></div></fieldset><fieldset class="mp-filter gate-group" role="radiogroup" aria-label="Cartridge" aria-required="true"><legend class="t-label-m">Cartridge<span class="req" aria-hidden="true"> *</span></legend><div class="fchips"><button class="fchip t-paragraph-m press" role="radio" data-radio aria-checked="true">Ceramic 35 mm</button><button class="fchip t-paragraph-m press" role="radio" data-radio aria-checked="false">Ceramic 40 mm</button></div></fieldset><fieldset class="mp-filter" role="radiogroup" aria-label="Waste Coupling"><legend class="t-label-m">Waste Coupling</legend><div class="fchips"><button class="fchip t-paragraph-m press" role="radio" data-radio aria-checked="true">Without Waste</button><button class="fchip t-paragraph-m press" role="radio" data-radio aria-checked="false">Pop-up Waste</button><button class="fchip t-paragraph-m press" role="radio" data-radio aria-checked="false">Click-clack Waste</button></div></fieldset></div><div class="sheet-foot"><button class="btn btn-filled btn-full t-label-m press gate-on" data-close>DONE</button><button class="btn btn-filled btn-full t-label-m gate-off" disabled>DONE</button></div></div>
+  </section>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375</b> — bottom sheet opening at 60% height: handle, title, subtitle, groups (name, red "*" when required, wrapping option chips), DONE pinned.</li>
+      <li><b>768 / 1440</b> — side sheet from the right beside the purchase column; a close button replaces the drag handle.</li>
+      <li>Groups are ordered by group index, options by option index.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Bottom sheet / side sheet</li>
+      <li>Filter chip (single-select per group)</li>
+      <li>Button filled L (DONE, disabled state)</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Open / close — <code>--panel-*</code></li>
+      <li>Option select — <code>--select-check-*</code>; press — <code>--press-*</code></li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li>Dialog named "Variant". Each group is a radio group with its name as legend; required groups set <code>aria-required</code> (the "*" alone is not enough).</li>
+      <li>Selected state is exposed, not colour alone. Focus returns to the Variant selector.</li>
+      <li>DONE is disabled until every required group has a selection.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>Group and option names are sample data from the product's variant rows.</li>
+      <li>Closing by scrim, Esc or drag discards changes; DONE returns the selection and the product page updates title, images, SKU and price.</li>
+      <li>Desktop keeps the side sheet instead of inline groups in the purchase column, so DONE applies everything at once as in the app.</li>
+      <li>In the mockup, the disabled state enables DONE as soon as a Finish is picked.</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

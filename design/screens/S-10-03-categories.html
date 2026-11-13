@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-10-03 Categories</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-10.css">
+</head>
+<body class="t-paragraph-m" data-kind="overlay" data-host="S-10-01-marketplace-home.html" data-states="default,empty">
+<div class="screen overlay mp-tall" data-variant="sheet">
+  <button class="scrim" data-close aria-label="Close"></button>
+  <section class="sheet" role="dialog" aria-modal="true" aria-labelledby="ct">
+    <span class="sheet-grab" aria-hidden="true"></span>
+    <div class="sheet-head"><div class="txt"><h1 id="ct" class="t-label-xxl">Categories</h1><p class="t-paragraph-m">Select a category to browse</p></div><button class="ibtn ibtn-44 glass glass-icon press" data-close aria-label="Close"><i class="ic hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></div>
+    <div class="sheet-body flush" data-show="default"><div class="menu"><button data-open="S-10-04-browse-picker-sheet.html" data-replace class="menu-row t-label-s press"><i class="ic hgi hgi-stroke hgi-kettlebell" aria-hidden="true"></i><span>Tiles &amp; Flooring</span><span class="end mp-chev glass glass-icon"><i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button><button data-open="S-10-04-browse-picker-sheet.html" data-replace class="menu-row t-label-s press"><i class="ic hgi hgi-stroke hgi-floor-plan" aria-hidden="true"></i><span>Sanitaryware</span><span class="end mp-chev glass glass-icon"><i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button><button data-open="S-10-04-browse-picker-sheet.html" data-replace class="menu-row t-label-s press"><i class="ic hgi hgi-stroke hgi-shapes" aria-hidden="true"></i><span>Lighting</span><span class="end mp-chev glass glass-icon"><i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button><button data-open="S-10-04-browse-picker-sheet.html" data-replace class="menu-row t-label-s press"><i class="ic hgi hgi-stroke hgi-paint-board" aria-hidden="true"></i><span>Furniture</span><span class="end mp-chev glass glass-icon"><i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button><a href="S-10-07-product-list.html" class="menu-row t-label-s press"><i class="ic hgi hgi-stroke hgi-vision" aria-hidden="true"></i><span>Paints &amp; Finishes</span><span class="end mp-chev glass glass-icon"><i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></a><button data-open="S-10-04-browse-picker-sheet.html" data-replace class="menu-row t-label-s press"><i class="ic hgi hgi-stroke hgi-kettlebell" aria-hidden="true"></i><span>Hardware</span><span class="end mp-chev glass glass-icon"><i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button><button data-open="S-10-04-browse-picker-sheet.html" data-replace class="menu-row t-label-s press"><i class="ic hgi hgi-stroke hgi-floor-plan" aria-hidden="true"></i><span>Modular Kitchen</span><span class="end mp-chev glass glass-icon"><i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button><button data-open="S-10-04-browse-picker-sheet.html" data-replace class="menu-row t-label-s press"><i class="ic hgi hgi-stroke hgi-shapes" aria-hidden="true"></i><span>Doors &amp; Windows</span><span class="end mp-chev glass glass-icon"><i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button><button data-open="S-10-04-browse-picker-sheet.html" data-replace class="menu-row t-label-s press"><i class="ic hgi hgi-stroke hgi-paint-board" aria-hidden="true"></i><span>Electricals</span><span class="end mp-chev glass glass-icon"><i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></div></div>
+    <div class="sheet-body flush" data-show="empty"></div>
+  </section>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375</b> — full-screen glass layer over the Marketplace home: title and subtitle top-left, round close top-right, rows (icon, name, chevron chip) with hairlines.</li>
+      <li><b>768 / 1440</b> — side sheet from the right with the same list (up to 500 categories scroll inside).</li>
+      <li>Empty: header only, as the app (no empty text exists).</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Full-screen layer / side sheet · IconButton glass (close)</li>
+      <li>Menu row with leading glyph and trailing glass chevron chip</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Open / close — <code>--modal-*</code> fade under 768, <code>--panel-*</code> from 768</li>
+      <li>Row press — <code>--press-*</code>; a row closes this layer, then opens S-10-04 (<code>--panel-*</code>) or pushes S-10-07</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li>Dialog named "Categories"; focus trapped and returned to the "View All Categories" tile; Esc closes.</li>
+      <li>Rows are buttons (or links when the category has no subcategories); glyphs and chevrons are decorative.</li>
+      <li>Close button is labelled "Close".</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>Category names are sample data. Glyphs cycle through the app's five fixed icons by index.</li>
+      <li>No loading or error state: the list is passed in already loaded.</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

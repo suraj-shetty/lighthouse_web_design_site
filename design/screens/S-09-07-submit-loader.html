@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-09-07 Submit loader</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-09.css">
+</head>
+<body class="t-paragraph-m" data-kind="overlay" data-host="S-09-04-create-post.html" data-states="default">
+<div class="screen overlay f09" data-variant="dialog">
+  <a class="scrim" data-modal href="S-05-01-explore-feed.html" tabindex="-1" aria-hidden="true"></a>
+  <section class="sheet f09-loader" role="alertdialog" aria-modal="true" aria-label="Submitting" aria-busy="true">
+    <span class="spinner" aria-hidden="true"></span>
+    <p class="sr-only" role="status" aria-live="polite">Sharing</p>
+  </section>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li>Every width — full-screen scrim with one centred spinner. No card, no text, no buttons, as in the app.</li>
+      <li>Blocks all input and cannot be dismissed. Create: closes once upload URLs are fetched and the app returns to Home, where the upload banner takes over. Edit: stays until the PATCH finishes or fails.</li>
+      <li>The composer also carries an in-button loading state (S-09-04 / S-09-08 "loading") — the same blocking behaviour for wide screens.</li>
+      <li>This dialog is the loading state; empty and error do not apply (an error closes it and raises a toast on the form).</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Modal scrim · Spinner</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Open / close — <code>--modal-*</code></li>
+      <li>Spinner — continuous linear rotation; under reduced motion it stays still and the status text carries the meaning</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li>The form is <code>aria-busy</code>; a polite live region announces "Sharing" because the dialog has no visible text.</li>
+      <li>Focus is trapped while shown and returns to the primary button on failure. Esc does nothing.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>Mockup only: tapping the scrim continues to Home so the flow can be clicked through; the product has no such action.</li>
+      <li>During an edit this covers compression and upload with no progress indication (as in the app).</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

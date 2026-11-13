@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-11-05 Cancel in progress loader</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-11.css">
+</head>
+<body class="t-paragraph-m" data-kind="overlay" data-host="S-11-03-active-order-detail.html" data-states="default,error">
+<div class="screen overlay is-loader" data-variant="dialog">
+  <a class="scrim" data-modal href="S-11-01-my-orders.html" aria-label="Cancelling order. In this mockup, click to finish the request." data-show="default"></a>
+  <span class="spinner" aria-hidden="true" data-show="default"></span>
+  <p class="sr-only" role="status" aria-live="polite" data-show="default">Cancelling order…</p>
+  <div class="toast-region" aria-live="polite" data-show="error">
+    <div class="toast toast-danger glass glass-panel" role="status">
+      <i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i>
+      <div class="body"><span class="t-label-s">Error</span><p class="t-paragraph-s">Something went wrong. Please try again later.</p></div>
+    </div>
+  </div>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li>Scrim over the whole screen with a centred spinner and no text, at every width. It cannot be dismissed.</li>
+      <li><b>default</b> — shown from confirming S-11-04 until <code>DELETE /v1/rfqs/{id}</code> and the list reload finish.</li>
+      <li><b>error</b> — the loader has closed; the user is back on S-11-03 with the toast "Error" and the server message.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Modal scrim · Progress (spinner, on-scrim colour)</li>
+      <li>Toast danger (error state)</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Scrim in / out — <code>--modal-*</code></li>
+      <li>Toast — <code>--toast-*</code>; return to the list — <code>--page-slide-*</code></li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li>The page is busy while the loader shows; a polite status says "Cancelling order…" (web addition, the app shows a spinner only).</li>
+      <li>Focus is held until the request completes; Esc and outside taps do nothing.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>Mockup only: clicking the loader stands in for the request finishing and goes to My Orders.</li>
+      <li>"Cancelling order…" is screen-reader text added for web; it is not visible.</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

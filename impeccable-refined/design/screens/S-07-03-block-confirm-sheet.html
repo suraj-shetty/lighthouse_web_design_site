@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-07-03 Block confirmation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-07.css">
+</head>
+<body class="t-paragraph-m" data-kind="overlay" data-host="S-07-01-public-profile.html" data-states="default,loading,error" data-roles="architect,interior-designer,contractor,landscape-architect,brand,reseller,homeowner">
+<div class="screen overlay blk" data-variant="dialog">
+  <button class="scrim" data-close aria-label="Close"></button>
+  <section class="sheet" role="alertdialog" aria-modal="true" aria-labelledby="bt" aria-describedby="bd">
+    <span class="sheet-grab" aria-hidden="true"></span>
+    <div class="sheet-head"><div class="txt"><h1 id="bt" class="t-label-xl">Block <span data-role="architect">Vikram Shah</span><span data-role="interior-designer">Ishita Menon</span><span data-role="contractor">Rajesh Patil</span><span data-role="landscape-architect">Kavya Nair</span><span data-role="brand">Terra Tiles India</span><span data-role="reseller">Shree Krishna Ceramics</span><span data-role="homeowner">Ananya Rao</span>?</h1><p id="bd" class="t-paragraph-m">They won’t be able to find your profile or content, and you won’t see theirs. They won’t be notified.</p></div></div>
+    <div class="sheet-foot row" data-show="default error">
+      <button class="btn btn-m btn-stroke t-label-s press" data-close>Cancel</button>
+      <button class="btn btn-m btn-danger t-label-s press" data-go-state="loading">Block</button>
+    </div>
+    <div class="sheet-foot row" data-show="loading">
+      <button class="btn btn-m btn-stroke t-label-s" disabled>Cancel</button>
+      <button class="btn btn-m btn-danger t-label-s" disabled aria-busy="true"><span class="spinner" aria-hidden="true"></span><span class="sr-only">Blocking</span></button>
+    </div>
+  </section>
+  <div class="toast-region over" aria-live="polite" data-show="error"><div class="toast toast-danger glass glass-panel" role="status"><i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i><div class="body"><span class="t-label-s">Error</span><p class="t-paragraph-s">Something went wrong. Please try again later.</p></div></div></div>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375</b>: glass bottom sheet with drag handle, title, body and two equal buttons (Cancel left, Block right).</li>
+      <li><b>768 / 1440</b>: centred destructive confirm dialog with the same content.</li>
+      <li>Title reads "Block {name}?" with the full name, else the username; with neither, "Block this user?".</li>
+      <li>States: default, loading (Block shows a spinner, both buttons disabled), error (sheet stays open, error toast).</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Bottom sheet (mobile) / Modal dialog (from 768)</li>
+      <li>Button stroke M (Cancel) · Button destructive M (Block, with loading)</li>
+      <li>Toast (danger on failure; success after blocking)</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Sheet: <code>--panel-*</code>; dialog: <code>--modal-*</code>; button press: <code>--press-*</code></li>
+      <li>On success the sheet closes, the profile pops back to its caller (<code>--page-slide-*</code>) and the toast "Blocked / You will no longer see their content." shows (<code>--toast-*</code>). If the server answers unblocked: "Unblocked / You can see their content again.".</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li><code>alertdialog</code> labelled by its title and described by its body; initial focus on Cancel; focus is trapped and restored to the More button.</li>
+      <li>While submitting, both buttons are disabled and Block announces "Blocking".</li>
+      <li>The destructive action is told apart by its label as well as colour; toasts are polite live regions.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>Cancel uses the stroke button (spec: translucent with a <code>--stroke-soft</code> outline); Block uses <code>--danger-default</code>.</li>
+      <li>The mockup cannot finish the request: the loading state stands in for the submit, and the success toast copy is listed under Motion.</li>
+      <li>Failure toast message is the server message; the sample uses "Something went wrong. Please try again later.".</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

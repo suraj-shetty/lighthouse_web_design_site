@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lighthouse · design board</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<style>
+  /* Board chrome only · every frame is the real screen file, rendered live. */
+  html, body { height: 100%; }
+  body { display: grid; grid-template: auto minmax(0, 1fr) / 280px minmax(0, 1fr); overflow: hidden; }
+  .bd-bar { grid-column: 1 / -1; display: flex; flex-direction: column; background: var(--bg-neutral); border-bottom: 1px solid var(--stroke-weak); z-index: 2; }
+  /* Same two fixed rows as demo.html: logo + title, then the controls. */
+  .bd-row { display: flex; align-items: center; gap: var(--spacing-16); min-height: 52px; padding: 0 var(--spacing-16); overflow-x: auto; scrollbar-width: none; }
+  .bd-row > * { flex: none; }
+  .bd-row + .bd-row { border-top: 1px solid var(--stroke-weak); }
+  .bd-bar .logo img { height: 18px; }
+  .bd-bar .meta { color: var(--text-subtle); }
+  .bd-side { overflow-y: auto; padding: var(--spacing-12); background: var(--bg-neutral); border-right: 1px solid var(--stroke-weak); display: flex; flex-direction: column; gap: var(--spacing-4); }
+  .bd-side details > summary { list-style: none; cursor: pointer; display: flex; gap: var(--spacing-8); padding: var(--spacing-8); border-radius: var(--radius-8); }
+  .bd-side details > summary::-webkit-details-marker { display: none; }
+  .bd-side details > summary:hover, .bd-side a:hover { background: var(--bg-weak); }
+  .bd-side summary small { color: var(--text-soft); margin-left: auto; }
+  .bd-side a { display: flex; gap: var(--spacing-8); padding: var(--spacing-6) var(--spacing-8) var(--spacing-6) var(--spacing-20); border-radius: var(--radius-8); color: var(--text-subtle); }
+  .bd-side a b { color: var(--text-soft); font-weight: inherit; flex: none; }
+  .bd-view { overflow: auto; background: var(--bg-default); cursor: grab; }
+  .bd-view.is-panning { cursor: grabbing; user-select: none; }
+  /* the canvas: one board, two theme canvases side by side */
+  .bd-canvas { display: flex; align-items: flex-start; gap: 400px; padding: 200px; width: max-content; transform-origin: 0 0; }
+  .bd-theme { display: flex; flex-direction: column; gap: 160px; padding: 120px; border-radius: 96px; width: 11600px; }
+  .bd-theme[data-theme="light"] { background: var(--palette-gray-light-50); color: var(--palette-gray-light-950); }
+  .bd-theme[data-theme="dark"] { background: var(--palette-gray-dark-900); color: var(--palette-white); }
+  .bd-theme > h2 { opacity: .9; }
+  .bd-feature { display: flex; flex-direction: column; gap: 64px; }
+  .bd-feature > h3 { padding-bottom: 24px; border-bottom: 4px solid currentColor; }
+  .bd-groups { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 120px 160px; }
+  .bd-group { display: flex; flex-direction: column; gap: 24px; scroll-margin: 120px; }
+  .bd-group > header { display: flex; align-items: baseline; gap: 20px; }
+  .bd-group > header span { opacity: .6; }
+  .bd-frames { display: flex; align-items: flex-start; gap: 48px; }
+  .bd-frame { display: flex; flex-direction: column; gap: 12px; }
+  .bd-frame > span { opacity: .6; }
+  .bd-shot { position: relative; display: block; overflow: hidden; border-radius: 28px; box-shadow: var(--shadow-card); background: var(--stroke-weak); cursor: pointer; }
+  .bd-shot[data-w="375"] { width: 375px; height: 812px; border-radius: 44px; }
+  .bd-shot[data-w="1440"] { width: 1440px; height: 900px; }
+  .bd-shot[data-w="768"] { width: 768px; height: 1024px; border-radius: 36px; }
+  .bd-shot iframe { width: 100%; height: 100%; border: 0; pointer-events: none; display: block; }
+  .bd-shot:hover { outline: 6px solid var(--accent); outline-offset: 6px; }
+  .bd-group.is-target > header { color: var(--accent); }
+</style>
+</head>
+<body class="t-paragraph-m">
+
+<header class="bd-bar">
+  <div class="bd-row">
+    <a class="logo" href="index.html" aria-label="Lighthouse design index"><img class="logo-light" src="assets/logo_lighthouse_light.png" alt=""><img class="logo-dark" src="assets/logo_lighthouse.png" alt=""></a>
+    <h1 class="t-label-m">Design board</h1>
+    <span class="meta t-paragraph-s" id="meta"></span>
+  </div>
+  <div class="bd-row">
+    <div class="mk-seg" role="group" aria-label="Zoom">
+    <button class="t-label-xs" data-zoom="out" aria-label="Zoom out">−</button>
+    <button class="t-label-xs" id="zoom-label" data-zoom="fit" aria-label="Fit board">fit</button>
+    <button class="t-label-xs" data-zoom="in" aria-label="Zoom in">+</button>
+    <button class="t-label-xs" data-zoom="100">100%</button>
+  </div>
+    <a class="btn btn-s btn-filled t-label-xs" href="demo.html">Interactive demo</a>
+    <span class="meta t-paragraph-s">Drag to pan · ⌘ / Ctrl + scroll to zoom · click a frame to open it live</span>
+  </div>
+</header>
+
+<nav class="bd-side t-paragraph-s" id="side" aria-label="Screens"></nav>
+
+<main class="bd-view" id="view" aria-label="Design canvas">
+  <div class="bd-canvas" id="canvas"></div>
+</main>
+
+<script src="assets/screens.js"></script>
+<script>
+(function () {
+  var data = window.LH_SCREENS || [], view = document.getElementById('view'), canvas = document.getElementById('canvas'), side = document.getElementById('side');
+  var esc = function (s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;'); };
+  var total = 0, frames = 0;
+  function shot(s, theme, w, state, label, role) {
+    role = role || s.roles[0];
+    frames++;
+    var q = 'embed=1&theme=' + theme + '&state=' + state + (role ? '&role=' + role : '') + '&board=1';
+    return '<div class="bd-frame"><span class="t-label-xl">' + label + '</span>' +
+      '<a class="bd-shot" data-w="' + w + '" data-src="' + s.file + '?' + q + '" href="demo.html#s=' + s.id + '&state=' + state + (role ? '&role=' + role : '') + '&theme=' + theme + '&device=' + (w === 375 ? 'mobile' : w === 768 ? 'tablet' : 'desktop') + '" target="_blank" rel="noopener" aria-label="' + esc(s.id + ' ' + s.title + ', ' + label + ', ' + theme) + '"></a></div>';
+  }
+  function themeCanvas(theme) {
+    return '<section class="bd-theme" data-theme="' + theme + '" aria-label="' + theme + ' theme"><h2 class="t-title-h1">' + (theme === 'light' ? 'Light theme' : 'Dark theme') + '</h2>' +
+      data.map(function (f) {
+        return '<div class="bd-feature"><h3 class="t-title-h3">' + esc(f.id + ' · ' + f.name) + '</h3><div class="bd-groups">' +
+          f.screens.map(function (s) {
+            if (theme === 'light') total++;
+            return '<article class="bd-group" id="' + theme + '-' + s.id + '"><header><h4 class="t-title-h5">' + esc(s.id + ' · ' + s.title) + '</h4><span class="t-label-xxl">' + esc(s.type) + '</span></header><div class="bd-frames">' +
+              shot(s, theme, 1440, s.states[0], 'Desktop 1440') + shot(s, theme, 768, s.states[0], 'Tablet 768') + shot(s, theme, 375, s.states[0], 'Mobile 375') +
+              s.states.slice(1).map(function (st) { return shot(s, theme, 375, st, 'Mobile · ' + st.replace(/-/g, ' ')); }).join('') +
+              s.roles.slice(1).map(function (r) { var n = r.replace(/-/g, ' '); return shot(s, theme, 1440, s.states[0], 'Desktop · ' + n, r) + shot(s, theme, 375, s.states[0], 'Mobile · ' + n, r); }).join('') +
+              '</div></article>';
+          }).join('') + '</div></div>';
+      }).join('') + '</section>';
+  }
+  canvas.innerHTML = themeCanvas('light') + themeCanvas('dark');
+  side.innerHTML = data.map(function (f) {
+    return '<details open><summary class="t-label-s">' + esc(f.id + ' ' + f.name) + '<small>' + f.screens.length + '</small></summary>' +
+      f.screens.map(function (s) { return '<a href="#light-' + s.id + '" data-id="' + s.id + '"><b>' + s.id.slice(2) + '</b><span>' + esc(s.title) + '</span></a>'; }).join('') + '</details>';
+  }).join('');
+  document.getElementById('meta').textContent = total + ' designs · ' + frames + ' frames · light and dark';
+
+  /* zoom + pan */
+  var zoom = 1, MIN = 0.03, MAX = 1, LIVE = 0.1;           // below LIVE frames stay as labelled placeholders
+  var label = document.getElementById('zoom-label');
+  function setZoom(z, cx, cy) {
+    z = Math.max(MIN, Math.min(MAX, z));
+    var r = view.getBoundingClientRect(); cx = cx == null ? r.width / 2 : cx; cy = cy == null ? r.height / 2 : cy;
+    var px = (view.scrollLeft + cx) / zoom, py = (view.scrollTop + cy) / zoom;
+    zoom = z; canvas.style.zoom = z; label.textContent = Math.round(z * 100) + '%';
+    view.scrollLeft = px * z - cx; view.scrollTop = py * z - cy;
+    schedule();
+  }
+  function fit() { canvas.style.zoom = 1; setZoom((view.clientWidth - 16) / canvas.scrollWidth, 0, 0); view.scrollTo(0, 0); }
+  document.querySelector('.bd-bar').addEventListener('click', function (e) {
+    var b = e.target.closest('[data-zoom]'); if (!b) return;
+    var k = b.dataset.zoom; if (k === 'fit') fit(); else setZoom(k === 'in' ? zoom * 1.4 : k === 'out' ? zoom / 1.4 : 1);
+  });
+  view.addEventListener('wheel', function (e) {
+    if (!(e.ctrlKey || e.metaKey)) return; e.preventDefault();
+    var r = view.getBoundingClientRect(); setZoom(zoom * Math.exp(-e.deltaY * 0.01), e.clientX - r.left, e.clientY - r.top);
+  }, { passive: false });
+  var drag = null;
+  view.addEventListener('pointerdown', function (e) { if (e.button) return; drag = { x: e.clientX, y: e.clientY, l: view.scrollLeft, t: view.scrollTop, moved: false }; });
+  addEventListener('pointermove', function (e) {
+    if (!drag) return; var dx = e.clientX - drag.x, dy = e.clientY - drag.y;
+    if (!drag.moved && Math.abs(dx) + Math.abs(dy) < 6) return;
+    drag.moved = true; view.classList.add('is-panning'); view.scrollLeft = drag.l - dx; view.scrollTop = drag.t - dy;
+  });
+  addEventListener('pointerup', function () { if (drag && drag.moved) { view.addEventListener('click', function stop(e) { e.preventDefault(); e.stopPropagation(); view.removeEventListener('click', stop, true); }, true); } drag = null; view.classList.remove('is-panning'); });
+
+  /* only frames near the viewport are live documents */
+  var shots = [].slice.call(canvas.querySelectorAll('.bd-shot')), timer;
+  function update() {
+    var vr = view.getBoundingClientRect(), m = 300;
+    shots.forEach(function (a) {
+      var r = a.getBoundingClientRect();
+      var on = zoom >= LIVE && r.right > vr.left - m && r.left < vr.right + m && r.bottom > vr.top - m && r.top < vr.bottom + m;
+      if (on && !a.firstChild) { var f = document.createElement('iframe'); f.tabIndex = -1; f.setAttribute('aria-hidden', 'true'); f.src = a.dataset.src; a.appendChild(f); }
+      else if (!on && a.firstChild) a.textContent = '';
+    });
+  }
+  function schedule() { clearTimeout(timer); timer = setTimeout(update, 120); }
+  view.addEventListener('scroll', schedule, { passive: true }); addEventListener('resize', schedule);
+
+  /* outline → jump to the group, in the theme canvas nearest the viewport centre */
+  side.addEventListener('click', function (e) {
+    var a = e.target.closest('a[data-id]'); if (!a) return; e.preventDefault();
+    var dark = document.querySelector('.bd-theme[data-theme="dark"]').getBoundingClientRect();
+    var theme = dark.left < view.getBoundingClientRect().left + view.clientWidth / 2 ? 'dark' : 'light';
+    var g = document.getElementById(theme + '-' + a.dataset.id); if (!g) return;
+    if (zoom < 0.3) setZoom(0.3);
+    var gr = g.getBoundingClientRect(), vr = view.getBoundingClientRect();
+    view.scrollTo({ left: view.scrollLeft + gr.left - vr.left - 40, top: view.scrollTop + gr.top - vr.top - 40, behavior: 'smooth' });
+    canvas.querySelectorAll('.is-target').forEach(function (x) { x.classList.remove('is-target'); }); g.classList.add('is-target');
+  });
+  fit();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-09-06 Location search</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-09.css">
+</head>
+<body class="t-paragraph-m" data-kind="overlay" data-host="S-09-04-create-post.html" data-states="default,results,loading,empty,error">
+<div class="screen overlay f09" data-variant="sheet">
+  <button class="scrim" data-close aria-label="Close"></button>
+  <section class="sheet" role="dialog" aria-modal="true" aria-labelledby="lt">
+    <span class="sheet-grab" aria-hidden="true"></span>
+    <h1 id="lt" class="sr-only">Location</h1>
+    <div class="sheet-head f09-head" data-show="default"><div class="grow"><label class="search t-paragraph-m"><i class="ic hgi hgi-stroke hgi-search-01" aria-hidden="true"></i><span class="sr-only">Search for location</span><input type="search" placeholder="Search for Location..." value="" autocomplete="off"></label></div><button class="ibtn ibtn-44 glass glass-icon press" aria-label="Close" data-close><i class="ic ic-24 hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></div>
+    <div class="sheet-head f09-head" data-show="results loading empty error"><div class="grow"><label class="search t-paragraph-m"><i class="ic hgi hgi-stroke hgi-search-01" aria-hidden="true"></i><span class="sr-only">Search for location</span><input type="search" placeholder="Search for Location..." value="alib" autocomplete="off"></label></div><button class="ibtn ibtn-44 glass glass-icon press" aria-label="Close" data-close><i class="ic ic-24 hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></div>
+    <div class="sheet-body">
+      <div class="f09-opts" role="listbox" aria-label="Suggestions" data-show="results"><button class="opt t-paragraph-m" role="option" data-close><i class="ic hgi hgi-stroke hgi-location-01" aria-hidden="true"></i><span class="txt"><span>Alibaug, Maharashtra, India</span></span></button><button class="opt t-paragraph-m" role="option" data-close><i class="ic hgi hgi-stroke hgi-location-01" aria-hidden="true"></i><span class="txt"><span>Alibaug Beach, Alibag, Maharashtra, India</span></span></button><button class="opt t-paragraph-m" role="option" data-close><i class="ic hgi hgi-stroke hgi-location-01" aria-hidden="true"></i><span class="txt"><span>Alibaug–Rewas Road, Zirad, Alibag, Maharashtra 402201, India</span></span></button><button class="opt t-paragraph-m" role="option" data-close><i class="ic hgi hgi-stroke hgi-location-01" aria-hidden="true"></i><span class="txt"><span>Kolaba Fort (Alibaug Fort), Alibag, Maharashtra, India</span></span></button><button class="opt t-paragraph-m" role="option" data-close><i class="ic hgi hgi-stroke hgi-location-01" aria-hidden="true"></i><span class="txt"><span>Alibaug ST Bus Stand, Chendhare, Alibag, Maharashtra 402201, India</span></span></button></div>
+      <div class="f09-opts" data-show="loading" aria-busy="true"><div class="opt" aria-hidden="true"><span class="skel" style="width:20px;height:20px;flex:none"></span><span class="skel" style="width:70%;height:14px;"></span></div><div class="opt" aria-hidden="true"><span class="skel" style="width:20px;height:20px;flex:none"></span><span class="skel" style="width:55%;height:14px;"></span></div><div class="opt" aria-hidden="true"><span class="skel" style="width:20px;height:20px;flex:none"></span><span class="skel" style="width:82%;height:14px;"></span></div><div class="opt" aria-hidden="true"><span class="skel" style="width:20px;height:20px;flex:none"></span><span class="skel" style="width:60%;height:14px;"></span></div><div class="opt" aria-hidden="true"><span class="skel" style="width:20px;height:20px;flex:none"></span><span class="skel" style="width:74%;height:14px;"></span></div><div class="opt" aria-hidden="true"><span class="skel" style="width:20px;height:20px;flex:none"></span><span class="skel" style="width:48%;height:14px;"></span></div></div>
+      <p class="f09-none t-paragraph-m" role="status" data-show="empty error">No results found</p>
+    </div>
+  </section>
+  <div class="toast-region" aria-live="polite" data-show="error"><div class="toast toast-danger glass glass-panel" role="status"><i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i><div class="body"><span class="t-label-s">Error</span><p class="t-paragraph-s">Something went wrong. Please try again later.</p></div></div></div>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375</b> — tall glass sheet: handle → pill search → suggestions (location icon + description, up to 3 lines) with hairlines. No visible title, no confirm button.</li>
+      <li><b>768 / 1440</b> — side sheet with the same content.</li>
+      <li>Default is an empty list until a query is typed. Picking a suggestion loads the place, fills the Location row and closes.</li>
+      <li>Loading rows are also shown while place details load after a tap.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Side / bottom sheet · IconButton glass (close)</li>
+      <li>Search input · suggestion row · Skeleton rows · Toast</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Open / close — <code>--panel-*</code></li>
+      <li>Suggestions — <code>--skel-*</code> → <code>--reveal-*</code> (400 ms debounce)</li>
+      <li>Row press — <code>--press-*</code></li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li>Dialog named "Location" (visually hidden heading — the app shows none).</li>
+      <li>Combobox pattern: the input controls a listbox; arrow keys move, Enter selects.</li>
+      <li>Loading and "No results found" are announced politely; focus returns to the Location row.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>Close button is a web addition.</li>
+      <li>The row label uses the place premise and may render "null" (Q-69, unverified).</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

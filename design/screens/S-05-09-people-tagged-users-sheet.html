@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-05-09 People</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-05.css">
+</head>
+<body class="t-paragraph-m" data-kind="overlay" data-host="S-05-01-explore-feed.html" data-states="default,many">
+<div class="screen overlay" data-variant="popover">
+  <button class="scrim" data-close aria-label="Close"></button>
+  <section class="sheet sheet-half" role="dialog" aria-modal="true" aria-labelledby="pt" aria-describedby="ps" style="--pop-width: 360px">
+    <span class="sheet-grab" aria-hidden="true"></span>
+    <div class="sheet-head"><div class="txt"><h1 id="pt" class="t-label-xxl">People</h1><p id="ps" class="t-paragraph-m">Author and people tagged in this post</p></div><button class="ibtn ibtn-44 glass glass-icon press" data-close aria-label="Close"><i class="ic hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></div>
+    <div class="sheet-body flush" data-show="default"><ul class="urows"><li><a class="urow press" href="S-07-01-public-profile.html" aria-label="Studio Aranya, @studio.aranya, Author"><img class="avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=96&h=96&fit=crop&q=70" alt=""><span class="txt"><span class="t-label-s truncate">Studio Aranya</span><span class="t-paragraph-s truncate">@studio.aranya</span></span><span class="mark t-paragraph-s">Author</span></a></li><li><a class="urow press" href="S-07-01-public-profile.html" aria-label="Meera Kapoor, @meera.kapoor"><img class="avatar" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=96&h=96&fit=crop&q=70" alt=""><span class="txt"><span class="t-label-s truncate">Meera Kapoor</span><span class="t-paragraph-s truncate">@meera.kapoor</span></span></a></li></ul></div>
+    <div class="sheet-body flush" data-show="many"><ul class="urows"><li><a class="urow press" href="S-07-01-public-profile.html" aria-label="Studio Aranya, @studio.aranya, Author"><img class="avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=96&h=96&fit=crop&q=70" alt=""><span class="txt"><span class="t-label-s truncate">Studio Aranya</span><span class="t-paragraph-s truncate">@studio.aranya</span></span><span class="mark t-paragraph-s">Author</span></a></li><li><a class="urow press" href="S-07-01-public-profile.html" aria-label="Meera Kapoor, @meera.kapoor"><img class="avatar" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=96&h=96&fit=crop&q=70" alt=""><span class="txt"><span class="t-label-s truncate">Meera Kapoor</span><span class="t-paragraph-s truncate">@meera.kapoor</span></span></a></li><li><a class="urow press" href="S-07-01-public-profile.html" aria-label="Vikram Shah, @vikram.shah"><img class="avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=96&h=96&fit=crop&q=70" alt=""><span class="txt"><span class="t-label-s truncate">Vikram Shah</span><span class="t-paragraph-s truncate">@vikram.shah</span></span></a></li><li><a class="urow press" href="S-07-01-public-profile.html" aria-label="Greenroots Landscape, @greenroots"><img class="avatar" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=96&h=96&fit=crop&q=70" alt=""><span class="txt"><span class="t-label-s truncate">Greenroots Landscape</span><span class="t-paragraph-s truncate">@greenroots</span></span></a></li><li><a class="urow press" href="S-07-01-public-profile.html" aria-label="Rohan Mehta, @rohan.mehta"><img class="avatar" src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?w=96&h=96&fit=crop&q=70" alt=""><span class="txt"><span class="t-label-s truncate">Rohan Mehta</span><span class="t-paragraph-s truncate">@rohan.mehta</span></span></a></li><li><a class="urow press" href="S-07-01-public-profile.html" aria-label="Devika Iyer"><img class="avatar" src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?w=96&h=96&fit=crop&q=70" alt=""><span class="txt"><span class="t-label-s truncate">Devika Iyer</span><span class="t-paragraph-s"></span></span></a></li></ul></div>
+  </section>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375</b> — glass bottom sheet capped at half the screen height: drag handle, title row with a round glass close button, subtitle, scrolling list of rows (avatar · display name over "@username"), hairline between rows.</li>
+      <li><b>768 / 1440</b> — popover (360 wide) anchored to the card header it was opened from.</li>
+      <li>The author is always first and carries a trailing "Author" label; a tagged entry equal to the author is not repeated.</li>
+      <li>State <i>many</i> shows the list scrolling inside the height cap, including a row with no user name.</li>
+      <li>No loading, empty or error state: the data is already in the feed item and the sheet only opens when someone is tagged.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Bottom sheet / Popover</li>
+      <li>IconButton glass (close)</li>
+      <li>Avatar</li>
+      <li>List row (link to profile) with trailing text label</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Open / close — <code>--panel-*</code></li>
+      <li>Row press — <code>--press-*</code>; row tap closes the sheet, then <code>--page-slide-*</code> to the profile</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li>Dialog named "People", described by the subtitle.</li>
+      <li>Rows are links named by display name and handle; the first also announces "Author".</li>
+      <li>Close button label "Close"; Esc closes; focus is trapped and returns to the card header.</li>
+      <li>Rows without a user id are not links.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>A missing or broken avatar shows the default profile image (asset to be supplied).</li>
+      <li>Verified badges are not shown here (avatar only, as the app).</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

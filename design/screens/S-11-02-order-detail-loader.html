@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-11-02 Order detail loader</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-11.css">
+</head>
+<body class="t-paragraph-m" data-states="default,loading,error,missing-id,unknown-error" data-shell="main" data-nav="marketplace">
+<div class="screen app on-surface od-app" style="--page-bg: var(--home-surface); --page-max: 1120px">
+  <div class="app-main">
+    <header class="top">
+      <div class="top-inner glass glass-panel">
+        <div class="bar">
+          <a class="ibtn ibtn-44 ibtn-plain press" data-back href="S-11-01-my-orders.html" aria-label="Back"><i class="ic ic-24 hgi hgi-stroke hgi-arrow-left-01" aria-hidden="true"></i></a>
+          <div class="od-title"><h1 class="sr-only">Order details</h1><span class="skel" style="height:20px;width:160px" data-show="default loading" aria-hidden="true"></span><span class="skel" style="height:12px;width:120px" data-show="default loading" aria-hidden="true"></span></div>
+        </div>
+      </div>
+    </header>
+    <main class="page" data-show="default loading" aria-busy="true">
+      <p class="sr-only" role="status" aria-live="polite">Loading order</p>
+      <div class="split od" aria-hidden="true">
+        <div class="od-col">
+          <div class="od-prod"><span class="skel od-hero"></span><div class="od-info"><span class="skel" style="height:24px;width:96px;border-radius:var(--radius-full)"></span><span class="skel" style="height:24px;width:80%"></span><span class="skel" style="height:14px;width:55%"></span><span class="skel" style="height:14px;width:40%"></span><span class="skel" style="height:14px;width:48%"></span></div></div>
+          <div class="od-pair"><div class="card od-card"><span class="skel" style="height:12px;width:120px"></span><span class="skel" style="height:14px;width:90%"></span><span class="skel" style="height:14px;width:70%"></span><span class="skel" style="height:14px;width:80%"></span></div><div class="card od-card"><span class="skel" style="height:12px;width:120px"></span><span class="skel" style="height:14px;width:90%"></span><span class="skel" style="height:14px;width:70%"></span><span class="skel" style="height:14px;width:80%"></span></div></div>
+          <div class="card od-card"><span class="skel" style="height:12px;width:120px"></span><span class="skel" style="height:14px;width:90%"></span><span class="skel" style="height:14px;width:70%"></span><span class="skel" style="height:14px;width:80%"></span></div>
+        </div>
+        <div class="od-side"><div class="card od-card"><span class="skel" style="height:12px;width:120px"></span><span class="skel" style="height:14px;width:90%"></span><span class="skel" style="height:14px;width:70%"></span><span class="skel" style="height:14px;width:80%"></span></div></div>
+      </div>
+    </main>
+    <main class="page" data-show="error">
+      <div class="empty" role="alert">
+        <div class="empty-tile" aria-hidden="true"><i class="ic ic-24 hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i></div>
+        <div class="empty-text"><p class="t-paragraph-m">Could not load order details</p></div>
+        <button class="btn btn-s btn-filled t-label-xs press" data-go-state="loading">RETRY</button><a class="btn btn-text t-label-s" style="min-height:44px" href="S-11-01-my-orders.html">View My Orders</a>
+      </div>
+    </main>
+    <main class="page" data-show="missing-id">
+      <div class="empty" role="alert">
+        <div class="empty-tile" aria-hidden="true"><i class="ic ic-24 hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i></div>
+        <div class="empty-text"><p class="t-paragraph-m">Order id is missing</p></div>
+        <button class="btn btn-s btn-filled t-label-xs press" data-go-state="loading">RETRY</button><a class="btn btn-text t-label-s" style="min-height:44px" href="S-11-01-my-orders.html">View My Orders</a>
+      </div>
+    </main>
+    <main class="page" data-show="unknown-error">
+      <div class="empty" role="alert">
+        <div class="empty-tile" aria-hidden="true"><i class="ic ic-24 hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i></div>
+        <div class="empty-text"><p class="t-paragraph-m">Something went wrong</p></div>
+        <button class="btn btn-s btn-filled t-label-xs press" data-go-state="loading">RETRY</button><a class="btn btn-text t-label-s" style="min-height:44px" href="S-11-01-my-orders.html">View My Orders</a>
+      </div>
+    </main>
+  </div>
+  <div class="toast-region" aria-live="polite" data-show="error">
+    <div class="toast toast-danger glass glass-panel" role="status">
+      <i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i>
+      <div class="body"><span class="t-label-s">Load failed</span><p class="t-paragraph-s">Order details not found</p></div>
+    </div>
+  </div>
+  <div class="toast-region" aria-live="polite" data-show="unknown-error">
+    <div class="toast toast-danger glass glass-panel" role="status">
+      <i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i>
+      <div class="body"><span class="t-label-s">Load failed</span><p class="t-paragraph-s">Something went wrong. Please try again later.</p></div>
+    </div>
+  </div>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li>This screen has no content of its own. It shows the detail skeleton while <code>GET /v1/rfqs/{id}</code> runs, then is replaced by the screen for the order status.</li>
+      <li>Routing: requested / quoted / unknown → S-11-03 · quote_accepted / delivery_rejected → S-11-07 · delivery_submitted → S-11-08 · completed / cancelled / declined → S-11-11.</li>
+      <li><b>375</b> — full-screen skeleton, or a centred error block. <b>768</b> — same, centred. <b>1440</b> — skeleton in the two-column detail layout.</li>
+      <li>States: <b>default</b> and <b>loading</b> are the same skeleton · <b>error</b> "Could not load order details" + toast · <b>missing-id</b> "Order id is missing" · <b>unknown-error</b> "Something went wrong" + toast.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Navigation shell (shared) · Top header (back only)</li>
+      <li>Skeleton (detail)</li>
+      <li>Empty state, error variant · Button filled S (RETRY) · Button text (View My Orders)</li>
+      <li>Toast danger ("Load failed")</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Skeleton to the status screen — <code>--skel-*</code>, <code>--shimmer-*</code>, <code>--reveal-*</code></li>
+      <li>RETRY press — <code>--press-*</code>; "View My Orders" — <code>--page-slide-*</code>; toast — <code>--toast-*</code></li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li>A polite status says "Loading order" while the skeleton shows.</li>
+      <li>The error block is an alert; RETRY is the first focus target, then "View My Orders".</li>
+      <li>The page keeps a visually hidden <code>h1</code> "Order details" until the status screen supplies its own.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>The app shows no header or back control in the error state; web keeps a Back button in the bar (web addition).</li>
+      <li>In the mockups, list rows link straight to the status screen (S-11-03 / 07 / 08 / 11) so the flow can be clicked through; in the product they pass through this loader.</li>
+      <li>Offline is not handled in the app; it surfaces as "Load failed / Network error occurred".</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

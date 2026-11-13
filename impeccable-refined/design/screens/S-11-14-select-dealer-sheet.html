@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-11-14 Select Dealer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-11.css">
+</head>
+<body class="t-paragraph-m" data-kind="overlay" data-host="S-10-12-product-detail.html" data-states="default,selected,empty,error">
+<div class="screen overlay" data-variant="sheet">
+  <button class="scrim" data-close aria-label="Close"></button>
+  <section class="sheet" role="dialog" aria-modal="true" aria-labelledby="st" aria-describedby="sd">
+    <span class="sheet-grab" aria-hidden="true"></span>
+    <div class="sheet-head"><div class="txt"><h1 id="st" class="t-label-xxl">Select Dealer</h1><p id="sd" class="t-paragraph-m">Choose a dealer(s) to send your order request to.</p></div><button class="ibtn ibtn-44 glass glass-icon press" data-close aria-label="Close"><i class="ic hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></div>
+    <div class="gate gate-wrap" data-show="default error">
+    <div class="sheet-body">
+      <div class="stack" role="group" aria-label="Dealers" style="gap: var(--spacing-12)">
+        <button class="scard" role="checkbox" data-check data-gate aria-checked="false">
+          <span class="tile"><i class="ic ic-24 hgi hgi-stroke hgi-store-02" aria-hidden="true"></i></span>
+          <span class="txt"><span class="name"><span class="t-label-m">Sri Lakshmi Sanitaryware</span><span class="pill open-now plain t-label-xs">Open Now</span></span><span class="t-paragraph-s sub">Bengaluru</span><span class="t-paragraph-s">No. 48, 80 Feet Road, Koramangala 4th Block</span></span>
+          <span class="check" aria-hidden="true"><i class="ic ic-16 hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span>
+        </button>
+        <button class="scard" role="checkbox" data-check data-gate aria-checked="false">
+          <span class="tile"><i class="ic ic-24 hgi hgi-stroke hgi-store-02" aria-hidden="true"></i></span>
+          <span class="txt"><span class="name"><span class="t-label-m">Prestige Bath Studio</span><span class="pill open-now plain t-label-xs">Open Now</span></span><span class="t-paragraph-s sub">Bengaluru</span><span class="t-paragraph-s">17, CMH Road, Indiranagar</span></span>
+          <span class="check" aria-hidden="true"><i class="ic ic-16 hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span>
+        </button>
+        <button class="scard" role="checkbox" data-check data-gate aria-checked="false">
+          <span class="tile"><i class="ic ic-24 hgi hgi-stroke hgi-store-02" aria-hidden="true"></i></span>
+          <span class="txt"><span class="name"><span class="t-label-m">Kaveri Tiles &amp; Sanitary</span><span class="pill open-now plain t-label-xs">Open Now</span></span><span class="t-paragraph-s sub">Hosur</span><span class="t-paragraph-s">221, Bagalur Road, Hosur</span></span>
+          <span class="check" aria-hidden="true"><i class="ic ic-16 hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span>
+        </button>
+        <button class="scard" role="checkbox" data-check data-gate aria-checked="false">
+          <span class="tile"><i class="ic ic-24 hgi hgi-stroke hgi-store-02" aria-hidden="true"></i></span>
+          <span class="txt"><span class="name"><span class="t-label-m">Seller</span><span class="pill open-now plain t-label-xs">Open Now</span></span><span class="t-paragraph-s sub">City not available</span><span class="t-paragraph-s">Address not available</span></span>
+          <span class="check" aria-hidden="true"><i class="ic ic-16 hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span>
+        </button>
+      </div>
+    </div>
+    <div class="sheet-foot">
+      <button class="btn btn-filled t-label-m press gate-off" data-toast="danger|Dealer|Please select at least one dealer">SEND ORDER REQUEST</button>
+      <button class="btn btn-filled t-label-m press gate-on" data-open="S-11-15-order-confirmation-sheet.html" data-open-state="dealers" data-replace>SEND ORDER REQUEST</button>
+    </div>
+    </div>
+    <div class="gate gate-wrap" data-show="selected">
+    <div class="sheet-body">
+      <div class="stack" role="group" aria-label="Dealers" style="gap: var(--spacing-12)">
+        <button class="scard" role="checkbox" data-check data-gate aria-checked="true">
+          <span class="tile"><i class="ic ic-24 hgi hgi-stroke hgi-store-02" aria-hidden="true"></i></span>
+          <span class="txt"><span class="name"><span class="t-label-m">Sri Lakshmi Sanitaryware</span><span class="pill open-now plain t-label-xs">Open Now</span></span><span class="t-paragraph-s sub">Bengaluru</span><span class="t-paragraph-s">No. 48, 80 Feet Road, Koramangala 4th Block</span></span>
+          <span class="check" aria-hidden="true"><i class="ic ic-16 hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span>
+        </button>
+        <button class="scard" role="checkbox" data-check data-gate aria-checked="true">
+          <span class="tile"><i class="ic ic-24 hgi hgi-stroke hgi-store-02" aria-hidden="true"></i></span>
+          <span class="txt"><span class="name"><span class="t-label-m">Prestige Bath Studio</span><span class="pill open-now plain t-label-xs">Open Now</span></span><span class="t-paragraph-s sub">Bengaluru</span><span class="t-paragraph-s">17, CMH Road, Indiranagar</span></span>
+          <span class="check" aria-hidden="true"><i class="ic ic-16 hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span>
+        </button>
+        <button class="scard" role="checkbox" data-check data-gate aria-checked="false">
+          <span class="tile"><i class="ic ic-24 hgi hgi-stroke hgi-store-02" aria-hidden="true"></i></span>
+          <span class="txt"><span class="name"><span class="t-label-m">Kaveri Tiles &amp; Sanitary</span><span class="pill open-now plain t-label-xs">Open Now</span></span><span class="t-paragraph-s sub">Hosur</span><span class="t-paragraph-s">221, Bagalur Road, Hosur</span></span>
+          <span class="check" aria-hidden="true"><i class="ic ic-16 hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span>
+        </button>
+        <button class="scard" role="checkbox" data-check data-gate aria-checked="false">
+          <span class="tile"><i class="ic ic-24 hgi hgi-stroke hgi-store-02" aria-hidden="true"></i></span>
+          <span class="txt"><span class="name"><span class="t-label-m">Seller</span><span class="pill open-now plain t-label-xs">Open Now</span></span><span class="t-paragraph-s sub">City not available</span><span class="t-paragraph-s">Address not available</span></span>
+          <span class="check" aria-hidden="true"><i class="ic ic-16 hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span>
+        </button>
+      </div>
+    </div>
+    <div class="sheet-foot">
+      <button class="btn btn-filled t-label-m press gate-off" data-toast="danger|Dealer|Please select at least one dealer">SEND ORDER REQUEST</button>
+      <button class="btn btn-filled t-label-m press gate-on" data-open="S-11-15-order-confirmation-sheet.html" data-open-state="dealers" data-replace>SEND ORDER REQUEST</button>
+    </div>
+    </div>
+    <div class="sheet-body" data-show="empty"><p class="card-weak proof-empty t-paragraph-m" role="status">No dealers available for this product.</p></div>
+  </section>
+  <div class="toast-region" aria-live="polite" data-show="error">
+    <div class="toast toast-danger glass glass-panel" role="status">
+      <i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i>
+      <div class="body"><span class="t-label-s">Dealer</span><p class="t-paragraph-s">Please select at least one dealer</p></div>
+    </div>
+  </div>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375:</b> content-height glass bottom sheet: handle, title, subtitle, scrolling dealer cards (name + "Open Now", city, address, checkbox), pinned "SEND ORDER REQUEST".</li>
+      <li><b>768 / 1440:</b> side sheet from the right, 440 wide, same stack; the footer stays pinned. Dealer cards stay in one column.</li>
+      <li>States: <b>default</b> none selected · <b>selected</b> two selected · <b>empty</b> "No dealers available for this product.", no CTA · <b>error</b> toast "Dealer / Please select at least one dealer".</li>
+      <li>Multi-select with no maximum. The last card shows the fallbacks "Seller", "City not available", "Address not available".</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Bottom sheet / side sheet · IconButton glass (close)</li>
+      <li>Select card with Checkbox (default / selected) · Status pill "Open Now"</li>
+      <li>Button filled L · Toast danger · Empty line</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Open / close: <code>--panel-*</code> (bottom sheet under 768, side sheet from 768)</li>
+      <li>Button press: <code>--press-*</code>; toast, <code>--toast-*</code></li>
+      <li>Card select: <code>--select-check-*</code>; continue to S-11-15, <code>--panel-*</code></li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li>Dialog named by the title; dealers are a group of checkboxes whose names include name, "Open Now", city and address.</li>
+      <li>Selection shows a filled checkbox and a darker border, not colour alone.</li>
+      <li>The toast is a polite live region; focus returns to SELECT DEALER on close.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>"Open Now" is a fixed string in the app, not data (F-11-Q9); kept as is.</li>
+      <li>The toast appears at the top under 768 and bottom-right from 768 (the app shows this one at the bottom).</li>
+      <li>Selection is cleared whenever the sheet opens or closes.</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

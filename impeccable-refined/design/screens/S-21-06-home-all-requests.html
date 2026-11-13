@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-21-06 All requests</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-20.css">
+<link rel="stylesheet" href="assets/f-21.css">
+</head>
+<body class="t-paragraph-m"
+      data-states="default,empty"
+      data-shell="main" data-nav="home">
+
+<!-- =====================================================================
+     SCREEN: every request stored on this device, newest first, filtered by
+     six status chips. Each chip is a tab with its own panel.
+     ===================================================================== -->
+<div class="screen app on-surface" style="--page-bg: var(--home-surface); --page-max: 960px">
+  <div class="app-main">
+
+    <header class="top">
+      <div class="top-inner glass glass-panel">
+        <div class="bar"><a class="ibtn ibtn-44 ibtn-plain press" data-back href="S-20-01-home-tab.html" aria-label="Back"><i class="ic ic-24 hgi hgi-stroke hgi-arrow-left-01" aria-hidden="true"></i></a><h1 class="t-label-xl">All requests</h1></div>
+        <div class="chip-row chip-scroll" role="tablist" aria-label="Request status" data-show="default"><button class="chip glass t-label-s tnum" role="tab" aria-selected="true" aria-controls="q-all" aria-label="All, 6">All (6)</button><button class="chip glass t-label-s tnum" role="tab" aria-selected="false" aria-controls="q-drafts" aria-label="Drafts, 2">Drafts (2)</button><button class="chip glass t-label-s tnum" role="tab" aria-selected="false" aria-controls="q-browsing" aria-label="Browsing, 2">Browsing (2)</button><button class="chip glass t-label-s tnum" role="tab" aria-selected="false" aria-controls="q-waiting" aria-label="Waiting, 2">Waiting (2)</button><button class="chip glass t-label-s tnum" role="tab" aria-selected="false" aria-controls="q-responses" aria-label="Responses, 0">Responses (0)</button><button class="chip glass t-label-s tnum" role="tab" aria-selected="false" aria-controls="q-confirmed" aria-label="Confirmed, 0">Confirmed (0)</button></div>
+        <div class="chip-row chip-scroll" role="tablist" aria-label="Request status" data-show="empty"><button class="chip glass t-label-s tnum" role="tab" aria-selected="true" aria-controls="z-all" aria-label="All, 0">All (0)</button><button class="chip glass t-label-s tnum" role="tab" aria-selected="false" aria-controls="z-drafts" aria-label="Drafts, 0">Drafts (0)</button><button class="chip glass t-label-s tnum" role="tab" aria-selected="false" aria-controls="z-browsing" aria-label="Browsing, 0">Browsing (0)</button><button class="chip glass t-label-s tnum" role="tab" aria-selected="false" aria-controls="z-waiting" aria-label="Waiting, 0">Waiting (0)</button><button class="chip glass t-label-s tnum" role="tab" aria-selected="false" aria-controls="z-responses" aria-label="Responses, 0">Responses (0)</button><button class="chip glass t-label-s tnum" role="tab" aria-selected="false" aria-controls="z-confirmed" aria-label="Confirmed, 0">Confirmed (0)</button></div>
+      </div>
+    </header>
+
+    <main class="page" data-show="default">
+      <div role="tabpanel" id="q-all" aria-label="All">
+        <ul class="na-list">
+          <li><a class="na-row press" href="S-21-03-home-need-results.html" data-state="renovate" aria-label="Kitchen renovation, Browsing, Koramangala"><img src="assets/home/type_residential.jpg" alt="" loading="lazy"><span class="na-title t-paragraph-l nr-clamp2">Kitchen renovation</span><span class="na-status t-paragraph-s">Browsing</span><span class="na-sub t-paragraph-s truncate">Koramangala</span></a></li>
+          <li><a class="na-row press" href="S-21-05-home-request-sent.html" data-state="viewing" aria-label="Architects · New construction, Waiting for responses, Sent to: Meera Krishnan, Rohan Iyer and 1 more"><img src="assets/home/who_architect.jpg" alt="" loading="lazy"><span class="na-title t-paragraph-l nr-clamp2">Architects · New construction</span><span class="na-status t-paragraph-s">Waiting for responses</span><span class="na-sub t-paragraph-s truncate is-sent">Sent to: Meera Krishnan, Rohan Iyer and 1 more</span></a></li>
+          <li><a class="na-row press" href="S-21-05-home-request-sent.html" data-state="viewing" aria-label="Plumbing repair, Waiting for responses, Sent to: Ravi Plumbing Works and AquaFix Services"><img src="assets/home/repair_plumbing.jpg" alt="" loading="lazy"><span class="na-title t-paragraph-l nr-clamp2">Plumbing repair</span><span class="na-status t-paragraph-s">Waiting for responses</span><span class="na-sub t-paragraph-s truncate is-sent">Sent to: Ravi Plumbing Works and AquaFix Services</span></a></li>
+          <li><a class="na-row press" href="S-21-03-home-need-results.html" data-state="saved" aria-label="Residential, Private draft, Indiranagar"><img src="assets/home/type_residential.jpg" alt="" loading="lazy"><span class="na-title t-paragraph-l nr-clamp2">Residential</span><span class="na-status t-paragraph-s">Private draft</span><span class="na-sub t-paragraph-s truncate">Indiranagar</span></a></li>
+          <li><a class="na-row press" href="S-21-04-home-review-request.html" data-state="lighthouse" aria-label="Co-working Space, Private draft, Whitefield"><img src="assets/home/type_commercial_workplace.jpg" alt="" loading="lazy"><span class="na-title t-paragraph-l nr-clamp2">Co-working Space</span><span class="na-status t-paragraph-s">Private draft</span><span class="na-sub t-paragraph-s truncate">Whitefield</span></a></li>
+          <li><a class="na-row press" href="S-21-07-home-explore-projects-list.html" data-state="type" aria-label="Hospitality projects, Browsing"><img src="assets/home/type_hospitality.jpg" alt="" loading="lazy"><span class="na-title t-paragraph-l nr-clamp2">Hospitality projects</span><span class="na-status t-paragraph-s">Browsing</span><span class="na-sub t-paragraph-s truncate"></span></a></li>
+        </ul>
+      </div>
+      <div role="tabpanel" id="q-drafts" aria-label="Drafts" hidden>
+        <ul class="na-list">
+          <li><a class="na-row press" href="S-21-03-home-need-results.html" data-state="saved" aria-label="Residential, Private draft, Indiranagar"><img src="assets/home/type_residential.jpg" alt="" loading="lazy"><span class="na-title t-paragraph-l nr-clamp2">Residential</span><span class="na-status t-paragraph-s">Private draft</span><span class="na-sub t-paragraph-s truncate">Indiranagar</span></a></li>
+          <li><a class="na-row press" href="S-21-04-home-review-request.html" data-state="lighthouse" aria-label="Co-working Space, Private draft, Whitefield"><img src="assets/home/type_commercial_workplace.jpg" alt="" loading="lazy"><span class="na-title t-paragraph-l nr-clamp2">Co-working Space</span><span class="na-status t-paragraph-s">Private draft</span><span class="na-sub t-paragraph-s truncate">Whitefield</span></a></li>
+        </ul>
+      </div>
+      <div role="tabpanel" id="q-browsing" aria-label="Browsing" hidden>
+        <ul class="na-list">
+          <li><a class="na-row press" href="S-21-03-home-need-results.html" data-state="renovate" aria-label="Kitchen renovation, Browsing, Koramangala"><img src="assets/home/type_residential.jpg" alt="" loading="lazy"><span class="na-title t-paragraph-l nr-clamp2">Kitchen renovation</span><span class="na-status t-paragraph-s">Browsing</span><span class="na-sub t-paragraph-s truncate">Koramangala</span></a></li>
+          <li><a class="na-row press" href="S-21-07-home-explore-projects-list.html" data-state="type" aria-label="Hospitality projects, Browsing"><img src="assets/home/type_hospitality.jpg" alt="" loading="lazy"><span class="na-title t-paragraph-l nr-clamp2">Hospitality projects</span><span class="na-status t-paragraph-s">Browsing</span><span class="na-sub t-paragraph-s truncate"></span></a></li>
+        </ul>
+      </div>
+      <div role="tabpanel" id="q-waiting" aria-label="Waiting" hidden>
+        <ul class="na-list">
+          <li><a class="na-row press" href="S-21-05-home-request-sent.html" data-state="viewing" aria-label="Architects · New construction, Waiting for responses, Sent to: Meera Krishnan, Rohan Iyer and 1 more"><img src="assets/home/who_architect.jpg" alt="" loading="lazy"><span class="na-title t-paragraph-l nr-clamp2">Architects · New construction</span><span class="na-status t-paragraph-s">Waiting for responses</span><span class="na-sub t-paragraph-s truncate is-sent">Sent to: Meera Krishnan, Rohan Iyer and 1 more</span></a></li>
+          <li><a class="na-row press" href="S-21-05-home-request-sent.html" data-state="viewing" aria-label="Plumbing repair, Waiting for responses, Sent to: Ravi Plumbing Works and AquaFix Services"><img src="assets/home/repair_plumbing.jpg" alt="" loading="lazy"><span class="na-title t-paragraph-l nr-clamp2">Plumbing repair</span><span class="na-status t-paragraph-s">Waiting for responses</span><span class="na-sub t-paragraph-s truncate is-sent">Sent to: Ravi Plumbing Works and AquaFix Services</span></a></li>
+        </ul>
+      </div>
+      <div role="tabpanel" id="q-responses" aria-label="Responses" hidden>
+        <div class="na-none" role="status" aria-live="polite"><p class="t-label-m">No requests yet</p><p class="t-paragraph-s">A request you send will appear here.</p></div>
+      </div>
+      <div role="tabpanel" id="q-confirmed" aria-label="Confirmed" hidden>
+        <div class="na-none" role="status" aria-live="polite"><p class="t-label-m">No requests yet</p><p class="t-paragraph-s">A request you send will appear here.</p></div>
+      </div>
+    </main>
+
+    <main class="page" data-show="empty">
+      <div role="tabpanel" id="z-all" aria-label="All">
+        <div class="na-none" role="status" aria-live="polite"><p class="t-label-m">No requests yet</p><p class="t-paragraph-s">A request you send will appear here.</p></div>
+      </div>
+      <div role="tabpanel" id="z-drafts" aria-label="Drafts" hidden>
+        <div class="na-none" role="status" aria-live="polite"><p class="t-label-m">No requests yet</p><p class="t-paragraph-s">A request you send will appear here.</p></div>
+      </div>
+      <div role="tabpanel" id="z-browsing" aria-label="Browsing" hidden>
+        <div class="na-none" role="status" aria-live="polite"><p class="t-label-m">No requests yet</p><p class="t-paragraph-s">A request you send will appear here.</p></div>
+      </div>
+      <div role="tabpanel" id="z-waiting" aria-label="Waiting" hidden>
+        <div class="na-none" role="status" aria-live="polite"><p class="t-label-m">No requests yet</p><p class="t-paragraph-s">A request you send will appear here.</p></div>
+      </div>
+      <div role="tabpanel" id="z-responses" aria-label="Responses" hidden>
+        <div class="na-none" role="status" aria-live="polite"><p class="t-label-m">No requests yet</p><p class="t-paragraph-s">A request you send will appear here.</p></div>
+      </div>
+      <div role="tabpanel" id="z-confirmed" aria-label="Confirmed" hidden>
+        <div class="na-none" role="status" aria-live="polite"><p class="t-label-m">No requests yet</p><p class="t-paragraph-s">A request you send will appear here.</p></div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<!-- ANNOTATIONS (shown on the board, hidden inside the frames) -->
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375:</b> as the app. Back and a left-aligned title, a scrolling row of six status chips with counts, then rows: 90 by 76 thumbnail, title over two lines with the status text at its right, one line under it. No hairlines, no footer, no bottom tab bar.</li>
+      <li><b>768:</b> a list with hairlines between rows. Each row is one line: thumbnail, title, the "Sent to" or location line, status at the right end.</li>
+      <li><b>1440:</b> the same list capped at 960 so the columns stay close enough to scan. Rows are not turned into cards.</li>
+      <li>States: <b>default</b> six requests, "All" selected. The chips work: Responses and Confirmed are empty and show the empty text. <b>empty</b> no requests at all: every chip reads 0 and shows the same text.</li>
+      <li>Loading and error do not apply: the app reads the list from memory and has neither.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Navigation shell · Top header (glass) with Back · Chip as tabs with counts</li>
+      <li>New: request list row (<code>.na-row</code>: thumbnail, title, status text, one line), text-only empty lines (<code>.na-none</code>)</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Arrival and Back: <code>--page-slide-*</code>. Chip change: <code>--tabs-*</code>. Row press: <code>--press-*</code>.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li><code>h1</code> "All requests". Chips are a tablist "Request status" with the count in the name ("Drafts, 2"). Counts use tabular figures.</li>
+      <li>Each row is one link named "title, status, second line"; the thumbnail is decorative. Rows are at least 44 high.</li>
+      <li>The empty text is a polite status, so a chip change announces it. Status is text, not colour.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>Responses and Confirmed always read 0: the app never produces those statuses (Q-178). Keep the chips on web?</li>
+      <li>There is no delete, dismiss or edit here, as in the app. A row opens results, review, the explore list or the read-only view depending on its journey and status.</li>
+      <li>An explore request has no location, so its second line is blank, as the app shows it.</li>
+      <li>Thumbnails follow <code>need_request_text.dart</code> (type, trade or who image). The Home card for the kitchen renovation uses the renovation intent photo instead.</li>
+      <li>From 768 the rows gain hairlines; under 768 they are 16 apart with none, as in the app.</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

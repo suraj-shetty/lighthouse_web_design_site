@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-15-03 Update Phone Number</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-15.css">
+</head>
+<body class="t-paragraph-m"
+      data-kind="overlay" data-host="S-13-05-manage-account.html" data-states="default,valid,invalid,sending,send-failed,verify,code-partial,code-entered,verifying,verify-failed,resend,success">
+
+<div class="screen overlay" data-variant="sheet">
+  <button class="scrim" data-close aria-label="Close"></button>
+  <section class="sheet" role="dialog" aria-modal="true" aria-label="Update Phone Number">
+    <span class="sheet-grab" aria-hidden="true"></span>
+    <!-- Step 1 — enter number -->
+    <div class="step" data-show="default">
+      <div class="sheet-head"><div class="txt"><h1 id="pt-default" class="t-label-xxl">Update Phone Number</h1><p class="t-paragraph-m">Enter your new mobile number to receive an OTP.</p></div><button class="ibtn ibtn-44 glass glass-icon press" data-close aria-label="Close"><i class="ic hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></div>
+      <div class="sheet-body"><div class="field">
+        <span class="label t-label-small" id="pl-default">New mobile number</span>
+        <div class="phone-row">
+          <button class="select t-paragraph-m" data-open="S-02-02-country-code-sheet.html" aria-haspopup="dialog" aria-label="Country code: India +91, change"><span>+91</span><i class="ic ic-16 hgi hgi-stroke hgi-arrow-down-01" aria-hidden="true"></i></button>
+          <div class="input grow"><input class="t-paragraph-m tnum" type="tel" inputmode="numeric" maxlength="10" autocomplete="tel-national" placeholder="000 - 000 - 0000" value="9876543210" aria-labelledby="pl-default"></div>
+        </div>
+        
+        <p class="helper t-paragraph-s">You’ll receive a call or a text via phone number. Standard data rates apply.</p>
+      </div></div>
+      <div class="sheet-foot"><button class="btn btn-filled t-label-m" disabled>SEND OTP</button><button class="btn glass t-label-m press" data-close>CANCEL</button></div>
+    </div>
+    <div class="step" data-show="valid">
+      <div class="sheet-head"><div class="txt"><h1 id="pt-valid" class="t-label-xxl">Update Phone Number</h1><p class="t-paragraph-m">Enter your new mobile number to receive an OTP.</p></div><button class="ibtn ibtn-44 glass glass-icon press" data-close aria-label="Close"><i class="ic hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></div>
+      <div class="sheet-body"><div class="field">
+        <span class="label t-label-small" id="pl-valid">New mobile number</span>
+        <div class="phone-row">
+          <button class="select t-paragraph-m" data-open="S-02-02-country-code-sheet.html" aria-haspopup="dialog" aria-label="Country code: India +91, change"><span>+91</span><i class="ic ic-16 hgi hgi-stroke hgi-arrow-down-01" aria-hidden="true"></i></button>
+          <div class="input grow"><input class="t-paragraph-m tnum" type="tel" inputmode="numeric" maxlength="10" autocomplete="tel-national" placeholder="000 - 000 - 0000" value="9123456780" aria-labelledby="pl-valid"></div>
+        </div>
+        
+        <p class="helper t-paragraph-s">You’ll receive a call or a text via phone number. Standard data rates apply.</p>
+      </div></div>
+      <div class="sheet-foot"><button class="btn btn-filled t-label-m press" data-go-state="verify">SEND OTP</button><button class="btn glass t-label-m press" data-close>CANCEL</button></div>
+    </div>
+    <div class="step" data-show="invalid">
+      <div class="sheet-head"><div class="txt"><h1 id="pt-invalid" class="t-label-xxl">Update Phone Number</h1><p class="t-paragraph-m">Enter your new mobile number to receive an OTP.</p></div><button class="ibtn ibtn-44 glass glass-icon press" data-close aria-label="Close"><i class="ic hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></div>
+      <div class="sheet-body"><div class="field">
+        <span class="label t-label-small" id="pl-invalid">New mobile number</span>
+        <div class="phone-row">
+          <button class="select t-paragraph-m" data-open="S-02-02-country-code-sheet.html" aria-haspopup="dialog" aria-label="Country code: India +91, change"><span>+91</span><i class="ic ic-16 hgi hgi-stroke hgi-arrow-down-01" aria-hidden="true"></i></button>
+          <div class="input grow is-error"><input class="t-paragraph-m tnum" type="tel" inputmode="numeric" maxlength="10" autocomplete="tel-national" placeholder="000 - 000 - 0000" value="98765" aria-labelledby="pl-invalid" aria-invalid="true" aria-describedby="pe-{state}"></div>
+        </div>
+        <p id="pe-{state}" class="helper error t-paragraph-s" role="alert">Please enter a valid phone number</p>
+        <p class="helper t-paragraph-s">You’ll receive a call or a text via phone number. Standard data rates apply.</p>
+      </div></div>
+      <div class="sheet-foot"><button class="btn btn-filled t-label-m" disabled>SEND OTP</button><button class="btn glass t-label-m press" data-close>CANCEL</button></div>
+    </div>
+    <div class="step" data-show="sending">
+      <div class="sheet-head"><div class="txt"><h1 id="pt-sending" class="t-label-xxl">Update Phone Number</h1><p class="t-paragraph-m">Enter your new mobile number to receive an OTP.</p></div><button class="ibtn ibtn-44 glass glass-icon press" data-close aria-label="Close"><i class="ic hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></div>
+      <div class="sheet-body"><div class="field">
+        <span class="label t-label-small" id="pl-sending">New mobile number</span>
+        <div class="phone-row">
+          <button class="select t-paragraph-m" data-open="S-02-02-country-code-sheet.html" aria-haspopup="dialog" aria-label="Country code: India +91, change"><span>+91</span><i class="ic ic-16 hgi hgi-stroke hgi-arrow-down-01" aria-hidden="true"></i></button>
+          <div class="input grow"><input class="t-paragraph-m tnum" type="tel" inputmode="numeric" maxlength="10" autocomplete="tel-national" placeholder="000 - 000 - 0000" value="9123456780" aria-labelledby="pl-sending"></div>
+        </div>
+        
+        <p class="helper t-paragraph-s">You’ll receive a call or a text via phone number. Standard data rates apply.</p>
+      </div></div>
+      <div class="sheet-foot"><button class="btn btn-filled t-label-m" disabled aria-busy="true"><span class="spinner" aria-hidden="true"></span><span class="sr-only">Sending OTP</span></button><button class="btn glass t-label-m press" data-close>CANCEL</button></div>
+    </div>
+    <div class="step" data-show="send-failed">
+      <div class="sheet-head"><div class="txt"><h1 id="pt-send-failed" class="t-label-xxl">Update Phone Number</h1><p class="t-paragraph-m">Enter your new mobile number to receive an OTP.</p></div><button class="ibtn ibtn-44 glass glass-icon press" data-close aria-label="Close"><i class="ic hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></div>
+      <div class="sheet-body"><div class="field">
+        <span class="label t-label-small" id="pl-send-failed">New mobile number</span>
+        <div class="phone-row">
+          <button class="select t-paragraph-m" data-open="S-02-02-country-code-sheet.html" aria-haspopup="dialog" aria-label="Country code: India +91, change"><span>+91</span><i class="ic ic-16 hgi hgi-stroke hgi-arrow-down-01" aria-hidden="true"></i></button>
+          <div class="input grow"><input class="t-paragraph-m tnum" type="tel" inputmode="numeric" maxlength="10" autocomplete="tel-national" placeholder="000 - 000 - 0000" value="9123456780" aria-labelledby="pl-send-failed"></div>
+        </div>
+        
+        <p class="helper t-paragraph-s">You’ll receive a call or a text via phone number. Standard data rates apply.</p>
+      </div></div>
+      <div class="sheet-foot"><button class="btn btn-filled t-label-m press" data-go-state="verify">SEND OTP</button><button class="btn glass t-label-m press" data-close>CANCEL</button></div>
+    </div>
+    <!-- Step 2 — verify -->
+    <div class="step" data-show="verify">
+      <div class="sheet-head"><div class="txt"><h1 class="t-label-xxl">Verify Your Number</h1><p class="t-paragraph-m">Enter the 4-digit code sent to your number.</p></div><button class="ibtn ibtn-44 glass glass-icon press" data-close aria-label="Close"><i class="ic hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></div>
+      <div class="sheet-body"><div class="step-block">
+        <div class="otp" role="group" aria-label="Verification code"><input class="t-label-xl tnum is-focus" type="text" inputmode="numeric" maxlength="1" autocomplete="one-time-code" aria-label="Digit 1 of 4" value=""><input class="t-label-xl tnum" type="text" inputmode="numeric" maxlength="1" autocomplete="one-time-code" aria-label="Digit 2 of 4" value=""><input class="t-label-xl tnum" type="text" inputmode="numeric" maxlength="1" autocomplete="one-time-code" aria-label="Digit 3 of 4" value=""><input class="t-label-xl tnum" type="text" inputmode="numeric" maxlength="1" autocomplete="one-time-code" aria-label="Digit 4 of 4" value=""></div>
+        <p class="t-paragraph-m">We have sent a verification code to<br><span class="t-label-s tnum" style="color:var(--text-default)">+91 9123456780</span></p>
+      </div></div>
+      <div class="sheet-foot"><button class="btn btn-filled t-label-m" disabled>VERIFY</button><button class="btn glass t-label-m tnum" disabled>RESEND CODE IN 00 : 42</button></div>
+    </div>
+    <div class="step" data-show="code-partial">
+      <div class="sheet-head"><div class="txt"><h1 class="t-label-xxl">Verify Your Number</h1><p class="t-paragraph-m">Enter the 4-digit code sent to your number.</p></div><button class="ibtn ibtn-44 glass glass-icon press" data-close aria-label="Close"><i class="ic hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></div>
+      <div class="sheet-body"><div class="step-block">
+        <div class="otp" role="group" aria-label="Verification code"><input class="t-label-xl tnum is-error" type="text" inputmode="numeric" maxlength="1" autocomplete="one-time-code" aria-label="Digit 1 of 4" value="4"><input class="t-label-xl tnum is-error" type="text" inputmode="numeric" maxlength="1" autocomplete="one-time-code" aria-label="Digit 2 of 4" value="8"><input class="t-label-xl tnum is-error is-focus" type="text" inputmode="numeric" maxlength="1" autocomplete="one-time-code" aria-label="Digit 3 of 4" value=""><input class="t-label-xl tnum is-error" type="text" inputmode="numeric" maxlength="1" autocomplete="one-time-code" aria-label="Digit 4 of 4" value=""></div>
+        <p class="t-paragraph-m">We have sent a verification code to<br><span class="t-label-s tnum" style="color:var(--text-default)">+91 9123456780</span></p>
+      </div></div>
+      <div class="sheet-foot"><button class="btn btn-filled t-label-m" disabled>VERIFY</button><button class="btn glass t-label-m tnum" disabled>RESEND CODE IN 00 : 31</button></div>
+    </div>
+    <div class="step" data-show="code-entered">
+      <div class="sheet-head"><div class="txt"><h1 class="t-label-xxl">Verify Your Number</h1><p class="t-paragraph-m">Enter the 4-digit code sent to your number.</p></div><button class="ibtn ibtn-44 glass glass-icon press" data-close aria-label="Close"><i class="ic hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></div>
+      <div class="sheet-body"><div class="step-block">
+        <div class="otp" role="group" aria-label="Verification code"><input class="t-label-xl tnum" type="text" inputmode="numeric" maxlength="1" autocomplete="one-time-code" aria-label="Digit 1 of 4" value="4"><input class="t-label-xl tnum" type="text" inputmode="numeric" maxlength="1" autocomplete="one-time-code" aria-label="Digit 2 of 4" value="8"><input class="t-label-xl tnum" type="text" inputmode="numeric" maxlength="1" autocomplete="one-time-code" aria-label="Digit 3 of 4" value="2"><input class="t-label-xl tnum" type="text" inputmode="numeric" maxlength="1" autocomplete="one-time-code" aria-label="Digit 4 of 4" value="7"></div>
+        <p class="t-paragraph-m">We have sent a verification code to<br><span class="t-label-s tnum" style="color:var(--text-default)">+91 9123456780</span></p>
+      </div></div>
+      <div class="sheet-foot"><button class="btn btn-filled t-label-m press" data-go-state="verifying">VERIFY</button><button class="btn glass t-label-m tnum" disabled>RESEND CODE IN 00 : 18</button></div>
+    </div>
+    <div class="step" data-show="verifying">
+      <div class="sheet-head"><div class="txt"><h1 class="t-label-xxl">Verify Your Number</h1><p class="t-paragraph-m">Enter the 4-digit code sent to your number.</p></div><button class="ibtn ibtn-44 glass glass-icon press" data-close aria-label="Close"><i class="ic hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></div>
+      <div class="sheet-body"><div class="step-block">
+        <div class="otp" role="group" aria-label="Verification code"><input class="t-label-xl tnum" type="text" inputmode="numeric" maxlength="1" autocomplete="one-time-code" aria-label="Digit 1 of 4" value="4" disabled><input class="t-label-xl tnum" type="text" inputmode="numeric" maxlength="1" autocomplete="one-time-code" aria-label="Digit 2 of 4" value="8" disabled><input class="t-label-xl tnum" type="text" inputmode="numeric" maxlength="1" autocomplete="one-time-code" aria-label="Digit 3 of 4" value="2" disabled><input class="t-label-xl tnum" type="text" inputmode="numeric" maxlength="1" autocomplete="one-time-code" aria-label="Digit 4 of 4" value="7" disabled></div>
+        <p class="t-paragraph-m">We have sent a verification code to<br><span class="t-label-s tnum" style="color:var(--text-default)">+91 9123456780</span></p>
+      </div></div>
+      <div class="sheet-foot"><button class="btn btn-filled t-label-m" disabled aria-busy="true"><span class="spinner" aria-hidden="true"></span><span class="sr-only">Verifying</span></button><button class="btn glass t-label-m tnum" disabled>RESEND CODE IN 00 : 18</button></div>
+    </div>
+    <div class="step" data-show="verify-failed">
+      <div class="sheet-head"><div class="txt"><h1 class="t-label-xxl">Verify Your Number</h1><p class="t-paragraph-m">Enter the 4-digit code sent to your number.</p></div><button class="ibtn ibtn-44 glass glass-icon press" data-close aria-label="Close"><i class="ic hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></div>
+      <div class="sheet-body"><div class="step-block">
+        <div class="otp" role="group" aria-label="Verification code"><input class="t-label-xl tnum is-focus" type="text" inputmode="numeric" maxlength="1" autocomplete="one-time-code" aria-label="Digit 1 of 4" value=""><input class="t-label-xl tnum" type="text" inputmode="numeric" maxlength="1" autocomplete="one-time-code" aria-label="Digit 2 of 4" value=""><input class="t-label-xl tnum" type="text" inputmode="numeric" maxlength="1" autocomplete="one-time-code" aria-label="Digit 3 of 4" value=""><input class="t-label-xl tnum" type="text" inputmode="numeric" maxlength="1" autocomplete="one-time-code" aria-label="Digit 4 of 4" value=""></div>
+        <p class="t-paragraph-m">We have sent a verification code to<br><span class="t-label-s tnum" style="color:var(--text-default)">+91 9123456780</span></p>
+      </div></div>
+      <div class="sheet-foot"><button class="btn btn-filled t-label-m" disabled>VERIFY</button><button class="btn glass t-label-m tnum" disabled>RESEND CODE IN 00 : 09</button></div>
+    </div>
+    <div class="step" data-show="resend">
+      <div class="sheet-head"><div class="txt"><h1 class="t-label-xxl">Verify Your Number</h1><p class="t-paragraph-m">Enter the 4-digit code sent to your number.</p></div><button class="ibtn ibtn-44 glass glass-icon press" data-close aria-label="Close"><i class="ic hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></div>
+      <div class="sheet-body"><div class="step-block">
+        <div class="otp" role="group" aria-label="Verification code"><input class="t-label-xl tnum is-focus" type="text" inputmode="numeric" maxlength="1" autocomplete="one-time-code" aria-label="Digit 1 of 4" value=""><input class="t-label-xl tnum" type="text" inputmode="numeric" maxlength="1" autocomplete="one-time-code" aria-label="Digit 2 of 4" value=""><input class="t-label-xl tnum" type="text" inputmode="numeric" maxlength="1" autocomplete="one-time-code" aria-label="Digit 3 of 4" value=""><input class="t-label-xl tnum" type="text" inputmode="numeric" maxlength="1" autocomplete="one-time-code" aria-label="Digit 4 of 4" value=""></div>
+        <p class="t-paragraph-m">We have sent a verification code to<br><span class="t-label-s tnum" style="color:var(--text-default)">+91 9123456780</span></p>
+      </div></div>
+      <div class="sheet-foot"><button class="btn btn-filled t-label-m" disabled>VERIFY</button><button class="btn glass t-label-m press" data-go-state="verify">RESEND CODE</button></div>
+    </div>
+    <!-- Step 3 — success -->
+    <div class="step" data-show="success">
+      <div class="sheet-head"><div class="txt"><h1 class="t-label-xxl">Updated Successfully</h1><p class="t-paragraph-m">Your phone number is now updated.</p></div></div>
+      <div class="sheet-body"><div class="step-block" role="status">
+        <span class="done-badge"><i class="ic ic-24 hgi hgi-stroke hgi-checkmark-circle-01" aria-hidden="true"></i></span>
+        <p class="t-paragraph-l">Your phone number has been updated successfully.</p>
+      </div></div>
+      <div class="sheet-foot"><a class="btn btn-filled t-label-m press" href="S-02-01-sign-in.html">CLOSE</a></div>
+    </div>
+  </section>
+  <div class="toast-region" aria-live="polite" data-show="send-failed"><div class="toast toast-danger glass glass-panel" role="status"><i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i><div class="body"><span class="t-label-s">Error</span><p class="t-paragraph-s">Something went wrong. Please try again later.</p></div></div></div>
+  <div class="toast-region" aria-live="polite" data-show="verify-failed"><div class="toast toast-danger glass glass-panel" role="status"><i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i><div class="body"><span class="t-label-s">Error</span><p class="t-paragraph-s">Invalid or expired code</p></div></div></div>
+</div>
+
+<!-- =====================================================================
+     ANNOTATIONS (shown on the board, hidden inside the frames)
+     ===================================================================== -->
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375</b> — glass bottom sheet (90% height), three steps in one sheet: enter number → verify code → success. Buttons stacked at the bottom.</li>
+      <li><b>768 / 1440</b> — side sheet from the right over Manage Account; primary button pinned in the footer; no drag handle.</li>
+      <li>Step 1 opens with the current number (last 10 digits) and India (+91). "SEND OTP" stays disabled until the number is valid and different.</li>
+      <li>Shown to Homeowner and Professional only. Business roles use S-14-06.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Bottom sheet / side sheet · IconButton glass (close)</li>
+      <li>Select (country code, opens S-02-02) · Text field (numeric, error) · helper text</li>
+      <li>One-time-code input (4 boxes: empty, focus, error) · Button filled L (disabled, loading) · Button translucent L</li>
+      <li>Success badge · Toast danger</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Open / close — <code>--panel-*</code>; step change — <code>--tab-panel-*</code></li>
+      <li>Success icon — <code>--check-path-*</code>; countdown text — <code>--text-swap-*</code></li>
+      <li>Button press — <code>--press-*</code>; toast — <code>--toast-*</code></li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li>Dialog named by the step title; focus trapped; returns to the "Phone Number" row; Esc and scrim close.</li>
+      <li>Number field: numeric keyboard, 10 characters, inline error linked with <code>aria-describedby</code> and announced.</li>
+      <li>Code boxes are one group with <code>autocomplete="one-time-code"</code>; each box is labelled "Digit n of 4". The countdown is not announced every second.</li>
+      <li>Busy buttons announce "Sending OTP" / "Verifying". Error border on a partial code is paired with the toast text.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li><b>Answered (Q-19):</b> a successful verify ends the session. The success step shows, then "CLOSE" goes to Sign in (S-02-01).</li>
+      <li>Toast "Error" / "Please enter a different phone number" exists in the app but cannot appear while the button is disabled for an unchanged number.</li>
+      <li>The verify failure message is the server message; "Invalid or expired code" is sample text.</li>
+      <li>Glyph: the app uses CheckmarkBadge04 (not in ICONS.md); CheckmarkCircle01 is used here.</li>
+      <li>The field has no visible label in the app; "New mobile number" is added for accessibility.</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

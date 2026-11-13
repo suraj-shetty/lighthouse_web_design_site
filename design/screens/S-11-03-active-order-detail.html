@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-11-03 Active Order detail</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-11.css">
+</head>
+<body class="t-paragraph-m" data-states="default,all-responded,empty,loading,error" data-shell="main" data-nav="marketplace">
+<div class="screen app on-surface od-app" style="--page-bg: var(--home-surface); --page-max: 1120px">
+  <div class="app-main">
+    <header class="top">
+      <div class="top-inner glass glass-panel">
+        <div class="bar">
+          <a class="ibtn ibtn-44 ibtn-plain press" data-back href="S-11-01-my-orders.html" aria-label="Back"><i class="ic ic-24 hgi hgi-stroke hgi-arrow-left-01" aria-hidden="true"></i></a>
+          <div class="od-title"><h1 class="t-label-xl truncate">Active Order</h1><p class="t-paragraph-s">Order ORD-2026-00418</p></div>
+          <button class="btn btn-text od-danger t-label-s press" data-open="S-11-04-cancel-order-dialog.html" aria-label="Cancel order" data-show="default all-responded empty">Cancel</button>
+        </div>
+      </div>
+    </header>
+    <main class="page stagger" data-show="default all-responded empty">
+      <div class="split od">
+        <div class="od-col">
+          <section class="od-prod od-lead" aria-label="Product">
+            <a class="od-hero press" href="S-10-12-product-detail.html" aria-label="View product: Aria Single Lever Basin Mixer with Pop-up Waste"><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=720&h=720&fit=crop&q=70" alt=""></a>
+            <div class="od-info">
+              <div class="row between wrap"><span class="tag t-paragraph-s">Jaquar</span><span class="pill success t-label-xs" data-show="default all-responded">Dealer Responded</span><span class="pill warning t-label-xs" data-show="empty">Waiting for Quotation</span></div>
+              <h2 class="t-label-xl"><a href="S-10-12-product-detail.html">Aria Single Lever Basin Mixer with Pop-up Waste</a></h2>
+              <ul class="od-facts t-paragraph-m"><li>SKU: <span class="t-label-s tnum">ARI-CHR-39011B</span></li><li>Quantity: <span class="t-label-s tnum">06</span></li><li>Product MRP: <span class="t-label-s tnum">₹8,450</span></li><li>Placed on <span class="t-label-s tnum">02 Nov 2026</span></li></ul>
+            </div>
+          </section>
+          <div class="od-pair">
+            <section class="card od-card" aria-labelledby="h-req">
+              <h2 id="h-req" class="t-sublabel-s">YOUR REQUEST</h2>
+              <dl class="kv t-paragraph-m"><dt>Size</dt><dd>Standard, 15 mm inlet</dd><dt>Color</dt><dd>Chrome</dd><dt>Variant</dt><dd>With 450 mm braided hoses</dd></dl>
+              <hr class="hr">
+              <p class="t-paragraph-m"><span class="od-quiet">Note:</span> Need all six pieces from the same batch. Site delivery before 11 AM, please.</p>
+            </section>
+            <section class="card od-card" aria-labelledby="h-del">
+              <h2 id="h-del" class="t-sublabel-s">DELIVERY LOCATION</h2>
+              <div class="od-addr"><span class="t-label-s">Indiranagar Site</span><p class="t-paragraph-m">No. 214, 2nd Floor, 12th Main Road, HAL 2nd Stage, Indiranagar, Bengaluru, Karnataka 560038</p></div>
+              <hr class="hr">
+              <dl class="kv t-paragraph-m"><dt>Flat / House No.</dt><dd>214</dd><dt>Floor</dt><dd>2nd Floor</dd><dt>Landmark</dt><dd>Opposite Sony Signal</dd><dt>Postal Code</dt><dd class="tnum">560038</dd><dt>Address Lines</dt><dd>12th Main Road, HAL 2nd Stage</dd><dt>Area</dt><dd>Indiranagar</dd></dl>
+            </section>
+          </div>
+          <section class="stack od-up" data-show="default all-responded">
+            <h2 id="h-quotes" class="sr-only">Dealer quotes</h2>
+            <div class="stack" role="radiogroup" aria-labelledby="h-quotes">
+              <button class="quote" role="radio" data-radio aria-checked="false">
+                <span class="radio" aria-hidden="true"></span>
+                <span class="txt">
+                  <span class="t-label-m">Authorized Dealer 1</span>
+                  <span class="t-label-l tnum price">Final Price: ₹44,700</span>
+                  <span class="t-paragraph-m meta tnum">Price per Unit: ₹7,450</span>
+                  <span class="t-paragraph-s meta">Delivery Time: 09 Nov 2026&nbsp; •&nbsp; Valid Till: 16 Nov 2026</span>
+                  <span class="t-paragraph-s meta">Additional Charges: Packing ₹300, Transport ₹600</span><span class="t-paragraph-s">Note: Stock available. Dispatch within 2 working days of approval.</span>
+                </span>
+              </button>
+              <button class="quote" role="radio" data-radio aria-checked="false">
+                <span class="radio" aria-hidden="true"></span>
+                <span class="txt">
+                  <span class="t-label-m">Authorized Dealer 2</span>
+                  <span class="t-label-l tnum price">Final Price: ₹45,900</span>
+                  <span class="t-paragraph-m meta tnum">Price per Unit: ₹7,650</span>
+                  <span class="t-paragraph-s meta">Delivery Time: 07 Nov 2026&nbsp; •&nbsp; Valid Till: 14 Nov 2026</span>
+                  
+                </span>
+              </button>
+              <h3 class="t-sublabel-s od-eyebrow">OTHER DEALERS</h3>
+              <button class="quote" role="radio" data-radio aria-checked="false">
+                <span class="radio" aria-hidden="true"></span>
+                <span class="txt">
+                  <span class="t-label-m">Authorized Dealer 3</span>
+                  <span class="t-label-l tnum price">Final Price: ₹46,800</span>
+                  <span class="t-paragraph-m meta tnum">Price per Unit: ₹7,800</span>
+                  <span class="t-paragraph-s meta">Delivery Time: 12 Nov 2026&nbsp; •&nbsp; Valid Till: 20 Nov 2026</span>
+                  <span class="t-paragraph-s meta">Additional Charges: Transport ₹450</span><span class="t-paragraph-s">Price includes the brand installation kit.</span>
+                </span>
+              </button>
+            </div>
+            <div class="note" data-show="default"><i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i><div class="txt"><span class="t-label-s">3 of 5 quotes received</span><p class="t-paragraph-s">The remaining dealers are still reviewing your order request. You can proceed with the available quote or wait for more responses.</p></div></div>
+            <div class="note success" data-show="all-responded"><i class="ic hgi hgi-stroke hgi-checkmark-circle-01" aria-hidden="true"></i><div class="txt"><span class="t-label-s">3 of 3 quotes received</span><p class="t-paragraph-s">Every dealer approached has responded. Compare the quotes above and proceed with the one you want.</p></div></div>
+          </section>
+          <section class="card wait od-up" data-show="empty">
+            <div class="empty-tile" aria-hidden="true"><i class="ic ic-24 hgi hgi-stroke hgi-clock-01" aria-hidden="true"></i></div>
+            <div class="stack stack-8 center"><h2 class="t-label-xl">dealers to respond</h2><p class="t-paragraph-m">You'll be able to compare quotes here once dealers submit their prices.</p></div>
+          </section>
+        </div>
+        <aside class="od-side sticky" aria-label="Order summary">
+          <section class="card od-card" data-show="default all-responded">
+            <div class="row between wrap"><h2 class="t-label-m">Order ORD-2026-00418</h2><span class="pill success t-label-xs">Dealer Responded</span></div>
+            <ol class="steps" aria-label="Order progress"><li class="step done"><span class="mark" aria-hidden="true"><i class="ic ic-16 hgi hgi-stroke hgi-tick-02" aria-hidden="true"></i></span><span class="txt"><span class="t-label-s">Requested<span class="sr-only">, done</span></span><span class="t-paragraph-s">02 Nov 2026</span></span></li><li class="step now"><span class="mark" aria-hidden="true"></span><span class="txt"><span class="t-label-s">Quoted<span class="sr-only">, current</span></span><span class="t-paragraph-s">03 Nov 2026</span></span></li><li class="step "><span class="mark" aria-hidden="true"></span><span class="txt"><span class="t-paragraph-m">Confirmed<span class="sr-only">, pending</span></span></span></li><li class="step "><span class="mark" aria-hidden="true"></span><span class="txt"><span class="t-paragraph-m">Delivered<span class="sr-only">, pending</span></span></span></li><li class="step "><span class="mark" aria-hidden="true"></span><span class="txt"><span class="t-paragraph-m">Completed<span class="sr-only">, pending</span></span></span></li></ol>
+            <hr class="hr">
+            <div class="od-acts"><p class="t-paragraph-s">Final taxes and charges will be as per dealer invoice</p><button class="btn btn-filled btn-full t-label-m gate-off" disabled>APPROVE TO PROCEED</button><button class="btn btn-filled btn-full t-label-m press gate-on" data-open="S-11-06-add-instructions-sheet.html">APPROVE TO PROCEED</button><span class="sr-only gate-off">Select a quote to approve</span></div>
+          </section>
+          <section class="card od-card" data-show="empty">
+            <div class="row between wrap"><h2 class="t-label-m">Order ORD-2026-00418</h2><span class="pill warning t-label-xs">Waiting for Quotation</span></div>
+            <ol class="steps" aria-label="Order progress"><li class="step now"><span class="mark" aria-hidden="true"></span><span class="txt"><span class="t-label-s">Requested<span class="sr-only">, current</span></span><span class="t-paragraph-s">02 Nov 2026</span></span></li><li class="step "><span class="mark" aria-hidden="true"></span><span class="txt"><span class="t-paragraph-m">Quoted<span class="sr-only">, pending</span></span></span></li><li class="step "><span class="mark" aria-hidden="true"></span><span class="txt"><span class="t-paragraph-m">Confirmed<span class="sr-only">, pending</span></span></span></li><li class="step "><span class="mark" aria-hidden="true"></span><span class="txt"><span class="t-paragraph-m">Delivered<span class="sr-only">, pending</span></span></span></li><li class="step "><span class="mark" aria-hidden="true"></span><span class="txt"><span class="t-paragraph-m">Completed<span class="sr-only">, pending</span></span></span></li></ol>
+          </section>
+        </aside>
+      </div>
+    </main>
+    <main class="page" data-show="loading" aria-busy="true">
+      <p class="sr-only" role="status" aria-live="polite">Loading order</p>
+      <div class="split od" aria-hidden="true">
+        <div class="od-col">
+          <div class="od-prod"><span class="skel od-hero"></span><div class="od-info"><span class="skel" style="height:24px;width:96px;border-radius:var(--radius-full)"></span><span class="skel" style="height:24px;width:80%"></span><span class="skel" style="height:14px;width:55%"></span><span class="skel" style="height:14px;width:40%"></span><span class="skel" style="height:14px;width:48%"></span></div></div>
+          <div class="od-pair"><div class="card od-card"><span class="skel" style="height:12px;width:120px"></span><span class="skel" style="height:14px;width:90%"></span><span class="skel" style="height:14px;width:70%"></span><span class="skel" style="height:14px;width:80%"></span></div><div class="card od-card"><span class="skel" style="height:12px;width:120px"></span><span class="skel" style="height:14px;width:90%"></span><span class="skel" style="height:14px;width:70%"></span><span class="skel" style="height:14px;width:80%"></span></div></div>
+          <div class="card od-card"><span class="skel" style="height:12px;width:120px"></span><span class="skel" style="height:14px;width:90%"></span><span class="skel" style="height:14px;width:70%"></span><span class="skel" style="height:14px;width:80%"></span></div>
+        </div>
+        <div class="od-side"><div class="card od-card"><span class="skel" style="height:12px;width:120px"></span><span class="skel" style="height:14px;width:90%"></span><span class="skel" style="height:14px;width:70%"></span><span class="skel" style="height:14px;width:80%"></span></div></div>
+      </div>
+    </main>
+    <main class="page" data-show="error">
+      <div class="empty" role="alert">
+        <div class="empty-tile" aria-hidden="true"><i class="ic ic-24 hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i></div>
+        <div class="empty-text"><p class="t-paragraph-m">Could not load order details</p></div>
+        <button class="btn btn-s btn-filled t-label-xs press" data-go-state="loading">RETRY</button>
+      </div>
+    </main>
+    <div class="foot-cta od-foot" data-show="default all-responded"><div class="od-foot-in"><p class="t-paragraph-s">Final taxes and charges will be as per dealer invoice</p><button class="btn btn-filled btn-full t-label-m gate-off" disabled>APPROVE TO PROCEED</button><button class="btn btn-filled btn-full t-label-m press gate-on" data-open="S-11-06-add-instructions-sheet.html">APPROVE TO PROCEED</button><span class="sr-only gate-off">Select a quote to approve</span></div></div>
+  </div>
+  <div class="toast-region" aria-live="polite" data-show="error">
+    <div class="toast toast-danger glass glass-panel" role="status">
+      <i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i>
+      <div class="body"><span class="t-label-s">Load failed</span><p class="t-paragraph-s">Network error occurred</p></div>
+    </div>
+  </div>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375</b> — as the app: back, title with order number and "Cancel"; hero image, product header, YOUR REQUEST, DELIVERY LOCATION, then the waiting card or the quote list; a sticky bar (tax line + APPROVE TO PROCEED) appears only when quotes exist.</li>
+      <li><b>768</b> — one centred column; hero sits beside the product header in one card, request and delivery cards side by side.</li>
+      <li><b>1440</b> — two columns. Left: product, the quote list (moved above the request cards), request and delivery. Right, sticky: order number, status, progress timeline, tax line and APPROVE TO PROCEED.</li>
+      <li>States: <b>default</b> quoted, 3 of 5 received · <b>all-responded</b> · <b>empty</b> requested with no quotes (waiting card, no action bar) · loading · error.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Navigation shell (shared) · Top header (glass, back + title + order number) · Button text, destructive (Cancel)</li>
+      <li>Tag (brand) · Status pill · Card with key / value list</li>
+      <li>Quote option = select card with Radio · Banner info / success (quote progress)</li>
+      <li>Sticky CTA bar · Button filled L (disabled until a quote is picked) · Steps (1440 only) · Skeleton · Empty state (waiting, error) · Toast</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Arrive from the list / leave — <code>--page-slide-*</code> under 768, <code>--panel-*</code> from 768</li>
+      <li>Skeleton to content — <code>--skel-*</code>, <code>--shimmer-*</code>, <code>--reveal-*</code>; blocks rise with <code>--stagger-*</code></li>
+      <li>Button and card press — <code>--press-*</code>; toast — <code>--toast-*</code></li>
+      <li>Quote select — <code>--select-check-*</code>; Cancel dialog — <code>--modal-*</code>; Add Instructions sheet — <code>--panel-*</code></li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li><code>h1</code> "Active Order" with the order number beneath it; "Cancel" is named "Cancel order".</li>
+      <li>Quotes are one radiogroup named "Dealer quotes"; each option reads dealer label, final price, unit price, delivery and validity.</li>
+      <li>APPROVE TO PROCEED is disabled until a quote is selected, with the hint "Select a quote to approve" for screen readers.</li>
+      <li>Status is text in a pill, never colour alone. The sticky bar leaves room so focused content is not covered.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>"dealers to respond" is kept exactly as the app writes it (F-11-Q3 is unanswered).</li>
+      <li>The order-progress timeline in the 1440 summary card is a web addition built from <code>statusHistory</code>; the app shows only the status text. It is not shown under 1200.</li>
+      <li>Under 768 the glass tab bar is hidden on this pushed screen, as in the app, so the sticky action bar owns the bottom edge.</li>
+      <li>At 1440 the quote list sits above the request cards so the decision is on screen without scrolling; under 1200 the app order is kept.</li>
+      <li>Approving returns to My Orders with no success message, as the app does (F-11-Q2).</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

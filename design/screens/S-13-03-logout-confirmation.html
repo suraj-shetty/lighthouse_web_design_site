@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-13-03 Logout confirmation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-13a.css">
+</head>
+<body class="t-paragraph-m" data-kind="overlay" data-host="S-13-01-my-profile.html" data-states="default,loading">
+<div class="screen overlay" data-variant="dialog">
+  <button class="scrim" data-close aria-label="Close"></button>
+  <section class="sheet" role="alertdialog" aria-modal="true" aria-labelledby="lt" aria-describedby="ld">
+    <div class="sheet-head"><div class="txt"><h1 id="lt" class="t-label-xl">Logout Confirmation</h1><p id="ld" class="t-paragraph-m">Are you sure you want to logout?</p></div></div>
+    <div class="sheet-foot" data-show="default">
+      <button class="btn btn-m btn-filled t-label-s press" data-close>Cancel</button>
+      <a class="btn btn-m btn-filled t-label-s press" href="S-02-01-sign-in.html">Logout</a>
+    </div>
+    <div class="sheet-foot" data-show="loading">
+      <button class="btn btn-m btn-filled t-label-s" disabled>Cancel</button>
+      <button class="btn btn-m btn-filled t-label-s" disabled aria-busy="true"><span class="spinner" aria-hidden="true"></span><span class="sr-only">Logging out</span></button>
+    </div>
+  </section>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li>Centred dialog at every width (max 400): title, one line of body, two equal buttons side by side.</li>
+      <li>Tapping outside dismisses it, as in the app.</li>
+      <li>Opened from Logout in the My Account menu (S-13-02) and from the MORE card on Manage Account (S-13-05).</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Modal / Dialog (confirm)</li>
+      <li>Button filled M ×2 — both buttons use the same inverse fill, as in the app</li>
+      <li>Spinner (loading)</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Open / close — <code>--modal-*</code></li>
+      <li>Button press — <code>--press-*</code></li>
+      <li>After logout the sign-in screen replaces everything with no transition (as the app).</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li><code>alertdialog</code> named by its title and described by its body; focus trapped; initial focus on Cancel; Esc = Cancel; focus restored on close.</li>
+      <li>While the session ends both buttons are disabled and Logout announces "Logging out".</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>Loading state is a web addition: per Q-20 the website also ends the session on the server (<code>POST v1/auth/logout</code>), so Logout shows a spinner until it returns. The app has no spinner.</li>
+      <li>No error handling is defined for a failed server logout (not in the app).</li>
+      <li>Logout is not styled as destructive because the app uses the same fill for both buttons.</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lighthouse — interactive demo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<style>
+  /* Demo chrome only — the product UI lives in the screen files it loads. */
+  html, body { height: 100%; }
+  body { display: flex; flex-direction: column; overflow: hidden; }
+  .dm-bar { flex: none; display: flex; flex-direction: column; background: var(--bg-neutral); border-bottom: 1px solid var(--stroke-weak); }
+  /* Two fixed rows: logo + screen navigation, then the controls. Fixed-width controls come first so nothing shifts between screens. */
+  .dm-row { display: flex; align-items: center; gap: var(--spacing-16); min-height: 52px; padding: 0 var(--spacing-16); overflow-x: auto; scrollbar-width: none; }
+  .dm-row > * { flex: none; }
+  .dm-row + .dm-row { border-top: 1px solid var(--stroke-weak); }
+  .dm-group[hidden] { display: none; }
+  .dm-row > .grow { flex: 1; }
+  /* Hide controls: the header goes away and the screen fills the window; a small button (or the H key) brings it back. */
+  .is-bare .dm-bar { display: none; }
+  .is-bare .dm-stage { padding: 0; }
+  .is-bare .dm-stage[data-device="desktop"] .dm-device { border: 0; border-radius: 0; }
+  .dm-show { display: none; position: fixed; bottom: var(--spacing-8); right: var(--spacing-8); z-index: var(--z-header); opacity: .55; }
+  .dm-show:hover, .dm-show:focus-visible { opacity: 1; }
+  .is-bare .dm-show { display: inline-flex; }
+  .dm-bar .logo img { height: 18px; }
+  .dm-group { display: flex; align-items: center; gap: var(--spacing-6); min-width: 0; }
+  .dm-group > span { color: var(--text-subtle); }
+  .dm-select { height: 36px; max-width: 320px; padding: 0 var(--spacing-12); border-radius: var(--radius-full); border: 1px solid var(--stroke-soft); background: var(--bg-neutral); color: var(--text-default); }
+  .dm-stage { flex: 1; min-height: 0; display: flex; align-items: center; justify-content: center; padding: var(--spacing-16); background: var(--bg-default); overflow: hidden; }
+  .dm-device { width: 100%; height: 100%; border: 1px solid var(--stroke-soft); border-radius: var(--radius-20); overflow: hidden; background: var(--bg-default); box-shadow: var(--shadow-shop-card); transform-origin: center; flex: none; }
+  .dm-device iframe { display: block; width: 100%; height: 100%; border: 0; }
+  .dm-stage[data-device="mobile"] .dm-device { box-sizing: content-box; width: 375px; height: 812px; border-radius: var(--radius-38); }
+  .dm-stage[data-device="tablet"] .dm-device { box-sizing: content-box; width: 768px; height: 1024px; border-radius: var(--radius-28); }
+  .dm-count { color: var(--text-soft); }
+</style>
+</head>
+<body class="t-paragraph-m">
+
+<header class="dm-bar">
+  <div class="dm-row">
+    <a class="logo" href="index.html" aria-label="Lighthouse design index"><img class="logo-light" src="assets/logo_lighthouse_light.png" alt=""><img class="logo-dark" src="assets/logo_lighthouse.png" alt=""></a>
+    <div class="dm-group t-paragraph-s">
+    <button class="ibtn ibtn-36 ibtn-plain" id="prev" aria-label="Previous screen"><i class="ic hgi hgi-stroke hgi-arrow-left-01" aria-hidden="true"></i></button>
+    <label class="sr-only" for="screen">Screen</label>
+    <select class="dm-select t-label-s" id="screen"></select>
+    <button class="ibtn ibtn-36 ibtn-plain" id="next" aria-label="Next screen"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></button>
+    <span class="dm-count t-paragraph-s tnum" id="count"></span>
+  </div>
+    <span class="grow"></span>
+    <button class="btn btn-s btn-stroke t-label-xs" id="bar-hide" title="Hide controls (H)">Hide controls</button>
+  </div>
+  <div class="dm-row">
+    <div class="dm-group t-paragraph-s"><span>Device</span><div class="mk-seg" id="device" role="group" aria-label="Device"></div></div>
+    <div class="dm-group t-paragraph-s"><span>Theme</span><div class="mk-seg" id="theme" role="group" aria-label="Theme"></div></div>
+    <a class="btn btn-s btn-filled t-label-xs" href="board.html">Design board</a>
+    <div class="dm-group t-paragraph-s"><span>State</span><div class="mk-seg" id="state" role="group" aria-label="State"></div></div>
+    <div class="dm-group t-paragraph-s" id="role-group"><span>Role</span><div class="mk-seg" id="role" role="group" aria-label="Role"></div></div>
+  </div>
+</header>
+<button class="btn btn-s btn-filled t-label-xs dm-show" id="bar-show" title="Show controls (H)">Show controls</button>
+
+<main class="dm-stage" id="stage" data-device="desktop">
+  <div class="dm-device" id="device-frame"><iframe id="view" title="Lighthouse screen"></iframe></div>
+</main>
+
+<script src="assets/screens.js"></script>
+<script>
+(function () {
+  var all = [];
+  (window.LH_SCREENS || []).forEach(function (f) { f.screens.forEach(function (s) { all.push(Object.assign({ feature: f.id + ' — ' + f.name }, s)); }); });
+  var $ = function (id) { return document.getElementById(id); };
+  var h = new URLSearchParams(location.hash.slice(1));
+  var cur = { s: h.get('s') || (all[0] && all[0].id), state: h.get('state') || '', role: h.get('role') || '', theme: h.get('theme') || 'light', device: h.get('device') || 'desktop', bar: h.get('bar') === 'hide' ? 'hide' : 'show' };
+  var find = function (id) { return all.filter(function (x) { return x.id === id; })[0] || all[0]; };
+
+  // screen picker, grouped by feature
+  var sel = $('screen'), groups = {};
+  all.forEach(function (s) {
+    var g = groups[s.feature] || (groups[s.feature] = sel.appendChild(Object.assign(document.createElement('optgroup'), { label: s.feature })));
+    g.appendChild(Object.assign(document.createElement('option'), { value: s.id, textContent: s.id + '  ' + s.title + (s.overlay ? '  (' + (s.type) + ')' : '') }));
+  });
+  function seg(id, values, key) {
+    $(id).innerHTML = values.map(function (v) { return '<button class="t-label-xs" data-k="' + key + '" data-v="' + v + '" aria-pressed="' + (cur[key] === v) + '">' + v.replace(/-/g, ' ') + '</button>'; }).join('');
+  }
+  function fit() {                                         // scale phone / tablet frames to the stage
+    var st = $('stage'), d = $('device-frame'); d.style.transform = '';
+    if (cur.device === 'desktop') return;
+    var k = Math.min(1, (st.clientHeight - 32) / d.offsetHeight, (st.clientWidth - 32) / d.offsetWidth);
+    d.style.transform = 'scale(' + k + ')';
+  }
+  function render(reload) {
+    var s = find(cur.s); cur.s = s.id;
+    if (s.states.indexOf(cur.state) < 0) cur.state = s.states[0];
+    if (s.roles.length && s.roles.indexOf(cur.role) < 0) cur.role = s.roles[0];
+    document.documentElement.dataset.theme = cur.theme;
+    sel.value = s.id; $('count').textContent = (all.indexOf(s) + 1) + ' / ' + all.length;
+    seg('state', s.states, 'state'); seg('role', s.roles, 'role'); $('role-group').hidden = !s.roles.length;
+    seg('theme', ['light', 'dark'], 'theme'); seg('device', ['mobile', 'tablet', 'desktop'], 'device');
+    document.body.classList.toggle('is-bare', cur.bar === 'hide');
+    $('stage').dataset.device = cur.device; fit();
+    if (reload !== false) $('view').src = s.file + '?embed=1&theme=' + cur.theme + '&state=' + cur.state + (cur.role ? '&role=' + cur.role : '');
+    history.replaceState(null, '', '#' + new URLSearchParams(cur));
+  }
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest('button[data-k]'); if (!b) return;
+    cur[b.dataset.k] = b.dataset.v; render(b.dataset.k !== 'device');
+  });
+  sel.addEventListener('change', function () { cur.s = sel.value; cur.state = ''; render(); });
+  function step(d) { var i = all.indexOf(find(cur.s)) + d; cur.s = all[(i + all.length) % all.length].id; cur.state = ''; render(); }
+  function bar(v) { cur.bar = v; render(false); (v === 'hide' ? $('bar-show') : $('bar-hide')).focus(); }
+  $('bar-hide').onclick = function () { bar('hide'); }; $('bar-show').onclick = function () { bar('show'); };
+  $('prev').onclick = function () { step(-1); }; $('next').onclick = function () { step(1); };
+  addEventListener('keydown', function (e) { if (e.target.tagName === 'SELECT') return; if (e.key === 'h' || e.key === 'H') bar(cur.bar === 'hide' ? 'show' : 'hide'); if (e.key === '[') step(-1); if (e.key === ']') step(1); });
+  // the screen tells us when the user navigates inside it (menu taps, links)
+  addEventListener('message', function (e) {
+    var d = e.data || {}; if (d.lh !== 'page' || e.source !== $('view').contentWindow) return;
+    var s = all.filter(function (x) { return x.file === d.file; })[0];
+    if (s && (s.id !== cur.s || d.state !== cur.state)) { cur.s = s.id; cur.state = d.state; render(false); }
+  });
+  addEventListener('resize', fit);
+  if (!all.length) { $('stage').innerHTML = '<p class="t-paragraph-l">No screens found. Run <code>python3 design/tools/build_manifest.py</code>.</p>'; return; }
+  render();
+})();
+</script>
+</body>
+</html>

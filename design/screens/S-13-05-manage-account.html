@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-13-05 Manage Account</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-13a.css">
+</head>
+<body class="t-paragraph-m" data-states="default,empty,loading,saving,deleting,error" data-roles="professional,reseller,homeowner,brand" data-shell="main" data-nav="home">
+<div class="screen app on-surface" style="--page-bg: var(--home-surface); --page-max: 1120px">
+  <div class="app-main">
+    <header class="top">
+      <div class="top-inner glass glass-panel">
+        <div class="bar ma-bar">
+          <a class="ibtn ibtn-44 glass glass-icon press" data-back href="S-13-01-my-profile.html" aria-label="Back"><i class="ic ic-24 hgi hgi-stroke hgi-arrow-left-01" aria-hidden="true"></i></a>
+          <h1 class="t-label-xl">Manage Account</h1>
+          <button class="ibtn ibtn-44 glass glass-icon press" aria-label="Update profile or cover photo" data-open="S-13-06-update-photo.html"><i class="ic ic-24 hgi hgi-stroke hgi-pencil-edit-01" aria-hidden="true"></i></button>
+        </div>
+      </div>
+    </header>
+
+    <!-- One block per role; values swap between the filled and the empty state -->
+    <main class="page">
+      <div class="ma-grid" data-role="professional">
+        <div class="ma-aside">
+          <section class="ma-id" aria-label="Photos and name">
+            <button class="ma-cover press" aria-label="Change cover photo" data-open="S-13-06-update-photo.html" data-open-state="cover"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&h=480&fit=crop&q=70" alt="" data-show="default loading saving deleting error"><span class="pf-default" style="width:100%;height:100%" data-show="empty"><i class="ic ic-24 hgi hgi-stroke hgi-image-02" aria-hidden="true"></i></span><span class="ma-cam" aria-hidden="true"><i class="ic ic-24 hgi hgi-stroke hgi-camera-01" aria-hidden="true"></i></span></button>
+            <button class="ma-avatar press" aria-label="Change profile photo" data-open="S-13-06-update-photo.html" data-open-state="profile"><span data-show="default loading saving deleting error"><img class="pf-avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=224&h=224&fit=crop&q=70" alt=""><span class="verified" role="img" aria-label="Verified"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></span><span class="pf-avatar pf-default" data-show="empty"><i class="ic ic-24 hgi hgi-stroke hgi-user" aria-hidden="true"></i></span><span class="ma-cam" aria-hidden="true"><i class="ic ic-24 hgi hgi-stroke hgi-camera-01" aria-hidden="true"></i></span></button>
+            <p class="t-label-xl">Aarav Sharma</p>
+            <p class="t-paragraph-m text-subtle">@aarav.designs</p>
+            <p class="t-paragraph-m text-subtle">Architects</p>
+          </section>
+          <div class="card ma-switch"><span class="t-label-s" id="sw-professional-top">Availability</span><button class="switch" role="switch" aria-checked="true" aria-labelledby="sw-professional-top" data-show="default empty loading deleting error"></button><span class="ibtn ibtn-36" role="status" data-show="saving"><span class="spinner spinner-16" aria-hidden="true"></span><span class="sr-only">Saving</span></span></div>
+          <nav class="card ma-nav" aria-label="Sections"><a class="t-label-s" href="#sec-professional-personal"><i class="ic hgi hgi-stroke hgi-user" aria-hidden="true"></i><span>Personal Information</span></a><a class="t-label-s" href="#sec-professional-overview"><i class="ic hgi hgi-stroke hgi-file-02" aria-hidden="true"></i><span>Professional Overview</span></a><a class="t-label-s" href="#sec-professional-work"><i class="ic hgi hgi-stroke hgi-briefcase-02" aria-hidden="true"></i><span>Work Preferences</span></a><a class="t-label-s" href="#sec-professional-visibility"><i class="ic hgi hgi-stroke hgi-view" aria-hidden="true"></i><span>Profile Visibility</span></a><a class="t-label-s" href="#sec-professional-delivery"><i class="ic hgi hgi-stroke hgi-location-01" aria-hidden="true"></i><span>Delivery Locations</span></a><a class="t-label-s" href="#sec-professional-more"><i class="ic hgi hgi-stroke hgi-more-horizontal" aria-hidden="true"></i><span>More</span></a></nav>
+        </div>
+        <div class="ma-main stagger">
+        <section class="ma-sec" id="sec-professional-personal" aria-labelledby="sec-professional-personal-h">
+          <div class="section-head"><h2 id="sec-professional-personal-h" class="t-sublabel-s">PERSONAL INFORMATION</h2><i class="ic ic-24 hgi hgi-stroke hgi-user" aria-hidden="true"></i></div>
+          <ul class="card ma-card">
+            <li><button class="srow press" data-open="S-13-12-update-name.html"><span class="txt"><span class="t-label-s">Name</span></span><span class="val t-paragraph-m">Aarav Sharma</span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+            <li><button class="srow press" data-open="S-15-03-update-phone-number.html"><span class="txt"><span class="t-label-s">Phone Number</span></span><span class="val t-paragraph-m" data-show="default loading saving deleting error">+91 98450 12345</span><span class="val t-paragraph-m" data-show="empty">Add</span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+            <li><button class="srow press" data-open="S-13-13-update-bio.html"><span class="txt"><span class="t-label-s">Bio</span><span class="sub t-paragraph-m" data-show="default loading saving deleting error">Architect and founder of Studio Aarav, Bengaluru. We design calm, climate-responsive homes and workplaces across South India.</span></span><span class="val t-paragraph-m" data-show="empty">Add</span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+          </ul>
+        </section>
+        <section class="ma-sec" id="sec-professional-overview" aria-labelledby="sec-professional-overview-h">
+          <div class="section-head"><h2 id="sec-professional-overview-h" class="t-sublabel-s">PROFESSIONAL OVERVIEW</h2><i class="ic ic-24 hgi hgi-stroke hgi-file-02" aria-hidden="true"></i></div>
+          <ul class="card ma-card">
+            <li><button class="srow press" data-open="S-13-14-specializations.html"><span class="txt"><span class="t-label-s">Specializations</span></span><span class="val t-paragraph-m" data-show="default loading saving deleting error">3 Selected</span><span class="val t-paragraph-m" data-show="empty">Select</span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+            <li><button class="srow press" data-open="S-13-15-years-of-experience.html"><span class="txt"><span class="t-label-s">Years of Experience</span></span><span class="val t-paragraph-m" data-show="default loading saving deleting error">12</span><span class="val t-paragraph-m" data-show="empty">Select</span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+            <li><button class="srow press" data-open="S-13-16-company-name.html"><span class="txt"><span class="t-label-s">Studio/Company Name</span></span><span class="val t-paragraph-m" data-show="default loading saving deleting error">Studio Aarav</span><span class="val t-paragraph-m" data-show="empty">Add</span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+            <li><button class="srow press" data-open="S-13-17-firm-type.html"><span class="txt"><span class="t-label-s">Firm Type</span></span><span class="val t-paragraph-m" data-show="default loading saving deleting error">Studio</span><span class="val t-paragraph-m" data-show="empty">Select</span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+            <li><button class="srow press" data-open="S-13-18-team-size.html"><span class="txt"><span class="t-label-s">Team Size</span></span><span class="val t-paragraph-m" data-show="default loading saving deleting error">6-15</span><span class="val t-paragraph-m" data-show="empty">Select</span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+            <li><button class="srow press" data-open="S-13-19-skills.html"><span class="txt"><span class="t-label-s">Skills</span><span class="ma-chips" data-show="default loading saving deleting error"><span class="tag t-label-xs">Revit</span><span class="tag t-label-xs">AutoCAD</span><span class="tag t-label-xs">SketchUp</span><span class="tag t-label-xs">Lumion</span><span class="tag t-label-xs">Passive Cooling</span><span class="tag t-label-xs">Site Supervision</span></span></span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+            <li><a class="srow press" href="S-13-20-awards-certificates.html"><span class="txt"><span class="t-label-s">Awards &amp; Certificates</span></span><span class="val t-paragraph-m" data-show="default loading saving deleting error">2 Added</span><span class="val t-paragraph-m" data-show="empty">Add</span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></a></li>
+          </ul>
+        </section>
+        <section class="ma-sec" id="sec-professional-work" aria-labelledby="sec-professional-work-h">
+          <div class="section-head"><h2 id="sec-professional-work-h" class="t-sublabel-s">WORK PREFERENCES</h2><i class="ic ic-24 hgi hgi-stroke hgi-briefcase-02" aria-hidden="true"></i></div>
+          <ul class="card ma-card">
+            <li><button class="srow press" data-open="S-13-27-service-type.html"><span class="txt"><span class="t-label-s">Service Type Offered</span></span><span class="val t-paragraph-m" data-show="default loading saving deleting error">4 Selected</span><span class="val t-paragraph-m" data-show="empty">Select</span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+            <li><button class="srow press" data-open="S-13-28-starting-project-budget.html"><span class="txt"><span class="t-label-s">Starting Project Budget</span></span><span class="val t-paragraph-m" data-show="default loading saving deleting error">INR 2500000</span><span class="val t-paragraph-m" data-show="empty">Add</span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+            <li><button class="srow press" data-open="S-13-30-current-location.html"><span class="txt"><span class="t-label-s">Current Location</span><span class="sub t-paragraph-m" data-show="default loading saving deleting error">Bengaluru, Karnataka, India</span></span><span class="val t-paragraph-m" data-show="empty">Add</span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+            <li><button class="srow press" data-open="S-13-31-preferred-project-locations.html"><span class="txt"><span class="t-label-s">Preferred Project Locations</span></span><span class="val t-paragraph-m" data-show="default loading saving deleting error">3 Added</span><span class="val t-paragraph-m" data-show="empty">Add</span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+            <li><button class="srow press" data-open="S-13-32-work-mode.html"><span class="txt"><span class="t-label-s">Work Mode</span></span><span class="val t-paragraph-m" data-show="default loading saving deleting error">Hybrid</span><span class="val t-paragraph-m" data-show="empty">Select</span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+            <li><button class="srow press" data-open="S-13-33-collaboration-preferences.html"><span class="txt"><span class="t-label-s">Collaboration Preferences</span></span><span class="val t-paragraph-m" data-show="default loading saving deleting error">2 Selected</span><span class="val t-paragraph-m" data-show="empty">Select</span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+          </ul>
+        </section>
+        <section class="ma-sec" id="sec-professional-visibility" aria-label="Profile Visibility">
+          <ul class="card ma-card">
+            <li><button class="srow press" data-open="S-13-34-profile-visibility.html"><span class="txt"><span class="t-label-s">Profile Visibility</span></span><span class="val t-paragraph-m">Everyone</span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+          </ul>
+        </section>
+        <section class="ma-sec" id="sec-professional-delivery" aria-labelledby="sec-professional-delivery-h">
+          <div class="section-head"><h2 id="sec-professional-delivery-h" class="t-sublabel-s">DELIVERY LOCATIONS</h2><i class="ic ic-24 hgi hgi-stroke hgi-location-01" aria-hidden="true"></i></div>
+          <ul class="card ma-card">
+            <li data-show="default saving deleting error"><button class="srow press" data-open="S-14-21-delivery-location.html" data-open-state="edit"><i class="ic hgi hgi-stroke hgi-location-01" aria-hidden="true"></i><span class="txt"><span class="t-label-s">Home</span><span class="t-paragraph-s text-subtle">12th Main Road, Indiranagar, Bengaluru, Karnataka 560038</span><span class="t-paragraph-xs text-soft">Flat 402, Prestige Garden</span></span></button><button class="ibtn ibtn-44 ibtn-plain press" aria-label="Delete Home" data-open="S-13-10-delete-delivery-location.html" data-show="default saving error"><i class="ic hgi hgi-stroke hgi-delete-02" aria-hidden="true"></i></button><span class="ibtn ibtn-44" role="status" data-show="deleting"><span class="spinner spinner-16" aria-hidden="true"></span><span class="sr-only">Deleting</span></span></li>
+            <li data-show="default saving deleting error"><button class="srow press" data-open="S-14-21-delivery-location.html" data-open-state="edit"><i class="ic hgi hgi-stroke hgi-location-01" aria-hidden="true"></i><span class="txt"><span class="t-label-s">Delivery Location</span><span class="t-paragraph-s text-subtle">Sarjapur Main Road, Bellandur, Bengaluru, Karnataka 560103</span><span class="t-paragraph-xs text-soft">Site office, Plot 27</span></span></button><button class="ibtn ibtn-44 ibtn-plain press" aria-label="Delete Delivery Location" data-open="S-13-10-delete-delivery-location.html" data-show="default saving error deleting"><i class="ic hgi hgi-stroke hgi-delete-02" aria-hidden="true"></i></button></li>
+            <li data-show="loading" aria-hidden="true"><span class="ma-skel"><span class="skel skel-circle" style="width:20px;height:20px;flex:none"></span><span class="grow stack stack-8"><span class="skel" style="width:40%;height:14px"></span><span class="skel" style="width:80%;height:12px"></span></span></span></li>
+            <li data-show="loading" aria-hidden="true"><span class="ma-skel"><span class="skel skel-circle" style="width:20px;height:20px;flex:none"></span><span class="grow stack stack-8"><span class="skel" style="width:40%;height:14px"></span><span class="skel" style="width:80%;height:12px"></span></span></span></li>
+            <li><button class="srow press" data-open="S-14-21-delivery-location.html"><i class="ic hgi hgi-stroke hgi-plus-sign" aria-hidden="true"></i><span class="txt"><span class="t-label-s">Add Delivery Location</span></span></button></li>
+          </ul>
+        </section>
+        <section class="ma-sec" id="sec-professional-more" aria-labelledby="sec-professional-more-h">
+          <div class="section-head"><h2 id="sec-professional-more-h" class="t-sublabel-s">MORE</h2><i class="ic ic-24 hgi hgi-stroke hgi-more-horizontal" aria-hidden="true"></i></div>
+          <ul class="card ma-card">
+            <li><a class="srow press" href="S-15-06-faq-help-center.html"><span class="txt"><span class="t-label-s">FAQ / Help Center</span></span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></a></li>
+            <li><a class="srow press" href="S-15-08-terms-and-conditions.html"><span class="txt"><span class="t-label-s">Terms &amp; Conditions</span></span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></a></li>
+            <li><a class="srow press" href="S-15-09-privacy-policy.html"><span class="txt"><span class="t-label-s">Privacy Policy</span></span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></a></li>
+            <li><a class="srow press" href="S-15-10-refund-policy.html"><span class="txt"><span class="t-label-s">Refund &amp; Cancellation Policy</span></span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></a></li>
+            <li><a class="srow press" href="S-15-11-dispute-policy.html"><span class="txt"><span class="t-label-s">Dispute Resolution Policy</span></span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></a></li>
+            <li><button class="srow press" data-open="S-04-04-appearance-sheet.html"><span class="txt"><span class="t-label-s">Appearance</span></span><span class="val t-paragraph-m">System</span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+            <li><button class="srow press" data-open="S-15-02-blocked-users.html"><span class="txt"><span class="t-label-s">Blocked Users</span></span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+            <li><a class="srow press danger" href="S-15-04-delete-account-reason.html"><span class="txt"><span class="t-label-s">Delete Account</span></span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></a></li>
+            <li><button class="srow press" data-open="S-13-03-logout-confirmation.html"><span class="txt"><span class="t-label-s">Logout</span></span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+          </ul>
+        </section>
+        </div>
+      </div>
+      <div class="ma-grid" data-role="reseller">
+        <div class="ma-aside">
+          <section class="ma-id" aria-label="Photos and name">
+            <button class="ma-cover press" aria-label="Change cover photo" data-open="S-13-06-update-photo.html" data-open-state="cover"><img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1200&h=480&fit=crop&q=70" alt="" data-show="default loading saving deleting error"><span class="pf-default" style="width:100%;height:100%" data-show="empty"><i class="ic ic-24 hgi hgi-stroke hgi-image-02" aria-hidden="true"></i></span><span class="ma-cam" aria-hidden="true"><i class="ic ic-24 hgi hgi-stroke hgi-camera-01" aria-hidden="true"></i></span></button>
+            <button class="ma-avatar logo press" aria-label="Change profile photo" data-open="S-13-06-update-photo.html" data-open-state="profile"><span data-show="default loading saving deleting error"><span class="pf-avatar logo pf-mono t-label-xxl">SB</span><span class="verified" role="img" aria-label="Verified"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></span><span class="pf-avatar logo pf-default" data-show="empty"><i class="ic ic-24 hgi hgi-stroke hgi-user" aria-hidden="true"></i></span><span class="ma-cam" aria-hidden="true"><i class="ic ic-24 hgi hgi-stroke hgi-camera-01" aria-hidden="true"></i></span></button>
+            <p class="t-label-xl">Sharma Build Mart</p>
+            <p class="t-paragraph-m text-subtle">@sharmabuildmart</p>
+            <p class="t-paragraph-m text-subtle">Resellers &amp; Retailers</p>
+          </section>
+          <nav class="card ma-nav" aria-label="Sections"><a class="t-label-s" href="#sec-reseller-personal"><i class="ic hgi hgi-stroke hgi-user" aria-hidden="true"></i><span>Business Information</span></a><a class="t-label-s" href="#sec-reseller-overview"><i class="ic hgi hgi-stroke hgi-file-02" aria-hidden="true"></i><span>Business Overview</span></a><a class="t-label-s" href="#sec-reseller-work"><i class="ic hgi hgi-stroke hgi-briefcase-02" aria-hidden="true"></i><span>Work Preferences</span></a><a class="t-label-s" href="#sec-reseller-visibility"><i class="ic hgi hgi-stroke hgi-view" aria-hidden="true"></i><span>Profile Visibility</span></a><a class="t-label-s" href="#sec-reseller-more"><i class="ic hgi hgi-stroke hgi-more-horizontal" aria-hidden="true"></i><span>More</span></a></nav>
+        </div>
+        <div class="ma-main stagger">
+        <section class="ma-sec" id="sec-reseller-personal" aria-labelledby="sec-reseller-personal-h">
+          <div class="section-head"><h2 id="sec-reseller-personal-h" class="t-sublabel-s">BUSINESS INFORMATION</h2><i class="ic ic-24 hgi hgi-stroke hgi-user" aria-hidden="true"></i></div>
+          <ul class="card ma-card">
+            <li><button class="srow press" data-open="S-14-03-edit-business-name.html" data-open-state="company-name"><span class="txt"><span class="t-label-s">Company Name</span></span><span class="val t-paragraph-m">Sharma Build Mart</span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+            <li><button class="srow press" data-open="S-14-03-edit-business-name.html" data-open-state="reseller-handle"><span class="txt"><span class="t-label-s">Reseller Handle</span></span><span class="val t-paragraph-m">@sharmabuildmart</span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+            <li><button class="srow press" data-open="S-14-06-update-business-phone.html"><span class="txt"><span class="t-label-s">Primary Business Phone</span></span><span class="val t-paragraph-m" data-show="default loading saving deleting error">+91 80 4123 7788</span><span class="val t-paragraph-m" data-show="empty">Add</span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+            <li><button class="srow press" data-open="S-14-08-secondary-business-phone.html"><span class="txt"><span class="t-label-s">Secondary Business Phone</span></span><span class="val t-paragraph-m">Add</span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+            <li><button class="srow press" data-open="S-14-04-edit-business-contact-field.html" data-open-state="business-email"><span class="txt"><span class="t-label-s">Business Email</span></span><span class="val t-paragraph-m" data-show="default loading saving deleting error">sales@sharmabuildmart.in</span><span class="val t-paragraph-m" data-show="empty">Add</span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+            <li><button class="srow press" data-open="S-14-04-edit-business-contact-field.html" data-open-state="website-url"><span class="txt"><span class="t-label-s">Business Website URL</span></span><span class="val t-paragraph-m" data-show="default loading saving deleting error">www.sharmabuildmart.in</span><span class="val t-paragraph-m" data-show="empty">Add</span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+            <li><button class="srow press" data-open="S-14-09-primary-business-address.html"><span class="txt"><span class="t-label-s">Primary Business Address</span><span class="sub t-paragraph-m" data-show="default loading saving deleting error">14, Hosur Road, Adugodi, Bengaluru, Karnataka 560030</span></span><span class="val t-paragraph-m" data-show="empty">Add</span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+            <li><button class="srow press" data-open="S-14-03-edit-business-name.html" data-open-state="key-contact-person"><span class="txt"><span class="t-label-s">Key Contact Person</span></span><span class="val t-paragraph-m" data-show="default loading saving deleting error">Rohan Sharma</span><span class="val t-paragraph-m" data-show="empty">Add</span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+            <li><button class="srow press" data-open="S-14-04-edit-business-contact-field.html"><span class="txt"><span class="t-label-s">Key Contact Role</span></span><span class="val t-paragraph-m" data-show="default loading saving deleting error">Managing Partner</span><span class="val t-paragraph-m" data-show="empty">Add</span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+            <li><button class="srow press" data-open="S-14-07-key-contact-phone.html"><span class="txt"><span class="t-label-s">Key Contact Phone</span></span><span class="val t-paragraph-m" data-show="default loading saving deleting error">+91 98450 67890</span><span class="val t-paragraph-m" data-show="empty">Add</span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+            <li><button class="srow press" data-open="S-14-04-edit-business-contact-field.html" data-open-state="key-contact-email"><span class="txt"><span class="t-label-s">Key Contact Email</span></span><span class="val t-paragraph-m" data-show="default loading saving deleting error">rohan@sharmabuildmart.in</span><span class="val t-paragraph-m" data-show="empty">Add</span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+            <li><button class="srow press" data-open="S-14-05-about-the-brand.html"><span class="txt"><span class="t-label-s">About the Business</span><span class="sub t-paragraph-m" data-show="default loading saving deleting error">Tiles, sanitaryware and architectural hardware from 14 brands, delivered across Bengaluru and Mysuru since 1996.</span></span><span class="val t-paragraph-m" data-show="empty">Add</span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+          </ul>
+        </section>
+        <section class="ma-sec" id="sec-reseller-overview" aria-labelledby="sec-reseller-overview-h">
+          <div class="section-head"><h2 id="sec-reseller-overview-h" class="t-sublabel-s">BUSINESS OVERVIEW</h2><i class="ic ic-24 hgi hgi-stroke hgi-file-02" aria-hidden="true"></i></div>
+          <ul class="card ma-card">
+            <li><button class="srow press" data-open="S-14-13-brands-represented.html"><span class="txt"><span class="t-label-s">Brands Represented</span></span><span class="val t-paragraph-m" data-show="default loading saving deleting error">14 Selected</span><span class="val t-paragraph-m" data-show="empty">Select</span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+            <li><button class="srow press" data-open="S-14-10-year-established.html"><span class="txt"><span class="t-label-s">Year Established</span></span><span class="val t-paragraph-m" data-show="default loading saving deleting error">1996</span><span class="val t-paragraph-m" data-show="empty">Select</span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+            <li><button class="srow press" data-open="S-14-03-edit-business-name.html" data-open-state="legal-business-name"><span class="txt"><span class="t-label-s">Legal Business Name</span></span><span class="val t-paragraph-m" data-show="default loading saving deleting error">Sharma Build Mart Pvt Ltd</span><span class="val t-paragraph-m" data-show="empty">Add</span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+            <li><button class="srow press" data-open="S-14-12-legal-entity-type.html"><span class="txt"><span class="t-label-s">Legal Entity Type</span></span><span class="val t-paragraph-m" data-show="default loading saving deleting error">Private Limited</span><span class="val t-paragraph-m" data-show="empty">Select</span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+            <li><button class="srow press" data-open="S-14-14-preferred-reseller-model.html"><span class="txt"><span class="t-label-s">Preferred Reseller Model</span></span><span class="val t-paragraph-m" data-show="default loading saving deleting error">Hybrid</span><span class="val t-paragraph-m" data-show="empty">Select</span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+            <li><a class="srow press" href="S-13-20-awards-certificates.html"><span class="txt"><span class="t-label-s">Awards &amp; Certificates</span></span><span class="val t-paragraph-m" data-show="default loading saving deleting error">1 Added</span><span class="val t-paragraph-m" data-show="empty">Add</span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></a></li>
+          </ul>
+        </section>
+        <section class="ma-sec" id="sec-reseller-work" aria-labelledby="sec-reseller-work-h">
+          <div class="section-head"><h2 id="sec-reseller-work-h" class="t-sublabel-s">WORK PREFERENCES</h2><i class="ic ic-24 hgi hgi-stroke hgi-briefcase-02" aria-hidden="true"></i></div>
+          <ul class="card ma-card">
+            <li><button class="srow press" data-open="S-14-19-serviceable-locations.html"><span class="txt"><span class="t-label-s">Serviceable Locations</span></span><span class="val t-paragraph-m" data-show="default loading saving deleting error">6 Added</span><span class="val t-paragraph-m" data-show="empty">Add</span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+            <li><button class="srow press" data-open="S-14-15-lead-handling-preference.html"><span class="txt"><span class="t-label-s">Lead Handling Preference</span></span><span class="val t-paragraph-m" data-show="default loading saving deleting error">Direct</span><span class="val t-paragraph-m" data-show="empty">Select</span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+            <li><div class="srow"><span class="txt"><span class="t-label-s" id="sw-reseller-pricing">Supports Project-Based Pricing</span></span><button class="switch" role="switch" aria-checked="true" aria-labelledby="sw-reseller-pricing"></button></div></li>
+            <li><div class="srow"><span class="txt"><span class="t-label-s" id="sw-reseller-credit">Credit Support</span></span><button class="switch" role="switch" aria-checked="false" aria-labelledby="sw-reseller-credit"></button></div></li>
+          </ul>
+        </section>
+        <section class="ma-sec" id="sec-reseller-visibility" aria-label="Profile Visibility">
+          <ul class="card ma-card">
+            <li><button class="srow press" data-open="S-14-20-brand-profile-visibility.html"><span class="txt"><span class="t-label-s">Profile Visibility</span></span><span class="val t-paragraph-m">Public</span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+          </ul>
+        </section>
+        <section class="ma-sec" id="sec-reseller-more" aria-labelledby="sec-reseller-more-h">
+          <div class="section-head"><h2 id="sec-reseller-more-h" class="t-sublabel-s">MORE</h2><i class="ic ic-24 hgi hgi-stroke hgi-more-horizontal" aria-hidden="true"></i></div>
+          <ul class="card ma-card">
+            <li><a class="srow press" href="S-15-06-faq-help-center.html"><span class="txt"><span class="t-label-s">FAQ / Help Center</span></span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></a></li>
+            <li><a class="srow press" href="S-15-08-terms-and-conditions.html"><span class="txt"><span class="t-label-s">Terms &amp; Conditions</span></span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></a></li>
+            <li><a class="srow press" href="S-15-09-privacy-policy.html"><span class="txt"><span class="t-label-s">Privacy Policy</span></span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></a></li>
+            <li><a class="srow press" href="S-15-10-refund-policy.html"><span class="txt"><span class="t-label-s">Refund &amp; Cancellation Policy</span></span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></a></li>
+            <li><a class="srow press" href="S-15-11-dispute-policy.html"><span class="txt"><span class="t-label-s">Dispute Resolution Policy</span></span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></a></li>
+            <li><button class="srow press" data-open="S-04-04-appearance-sheet.html"><span class="txt"><span class="t-label-s">Appearance</span></span><span class="val t-paragraph-m">System</span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+            <li><button class="srow press" data-open="S-15-02-blocked-users.html"><span class="txt"><span class="t-label-s">Blocked Users</span></span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+            <li><a class="srow press danger" href="S-15-04-delete-account-reason.html"><span class="txt"><span class="t-label-s">Delete Account</span></span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></a></li>
+            <li><button class="srow press" data-open="S-13-03-logout-confirmation.html"><span class="txt"><span class="t-label-s">Logout</span></span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+          </ul>
+        </section>
+        </div>
+      </div>
+      <div class="ma-grid" data-role="homeowner">
+        <div class="ma-aside">
+          <section class="ma-id" aria-label="Photos and name">
+            <button class="ma-cover press" aria-label="Change cover photo" data-open="S-13-06-update-photo.html" data-open-state="cover"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1200&h=480&fit=crop&q=70" alt="" data-show="default loading saving deleting error"><span class="pf-default" style="width:100%;height:100%" data-show="empty"><i class="ic ic-24 hgi hgi-stroke hgi-image-02" aria-hidden="true"></i></span><span class="ma-cam" aria-hidden="true"><i class="ic ic-24 hgi hgi-stroke hgi-camera-01" aria-hidden="true"></i></span></button>
+            <button class="ma-avatar press" aria-label="Change profile photo" data-open="S-13-06-update-photo.html" data-open-state="profile"><span data-show="default loading saving deleting error"><img class="pf-avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=224&h=224&fit=crop&q=70" alt=""></span><span class="pf-avatar pf-default" data-show="empty"><i class="ic ic-24 hgi hgi-stroke hgi-user" aria-hidden="true"></i></span><span class="ma-cam" aria-hidden="true"><i class="ic ic-24 hgi hgi-stroke hgi-camera-01" aria-hidden="true"></i></span></button>
+            <p class="t-label-xl">Aarav Sharma</p>
+            <p class="t-paragraph-m text-subtle">@aarav.designs</p>
+            <p class="t-paragraph-m text-subtle">Homeowners</p>
+          </section>
+          <nav class="card ma-nav" aria-label="Sections"><a class="t-label-s" href="#sec-homeowner-personal"><i class="ic hgi hgi-stroke hgi-user" aria-hidden="true"></i><span>Personal Information</span></a><a class="t-label-s" href="#sec-homeowner-visibility"><i class="ic hgi hgi-stroke hgi-view" aria-hidden="true"></i><span>Profile Visibility</span></a><a class="t-label-s" href="#sec-homeowner-delivery"><i class="ic hgi hgi-stroke hgi-location-01" aria-hidden="true"></i><span>Delivery Locations</span></a><a class="t-label-s" href="#sec-homeowner-more"><i class="ic hgi hgi-stroke hgi-more-horizontal" aria-hidden="true"></i><span>More</span></a></nav>
+        </div>
+        <div class="ma-main stagger">
+        <section class="ma-sec" id="sec-homeowner-personal" aria-labelledby="sec-homeowner-personal-h">
+          <div class="section-head"><h2 id="sec-homeowner-personal-h" class="t-sublabel-s">PERSONAL INFORMATION</h2><i class="ic ic-24 hgi hgi-stroke hgi-user" aria-hidden="true"></i></div>
+          <ul class="card ma-card">
+            <li><button class="srow press" data-open="S-13-12-update-name.html"><span class="txt"><span class="t-label-s">Name</span></span><span class="val t-paragraph-m">Aarav Sharma</span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+            <li><button class="srow press" data-open="S-15-03-update-phone-number.html"><span class="txt"><span class="t-label-s">Phone Number</span></span><span class="val t-paragraph-m" data-show="default loading saving deleting error">+91 98450 12345</span><span class="val t-paragraph-m" data-show="empty">Add</span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+            <li><button class="srow press" data-open="S-13-13-update-bio.html"><span class="txt"><span class="t-label-s">Bio</span><span class="sub t-paragraph-m" data-show="default loading saving deleting error">Architect and founder of Studio Aarav, Bengaluru. We design calm, climate-responsive homes and workplaces across South India.</span></span><span class="val t-paragraph-m" data-show="empty">Add</span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+          </ul>
+        </section>
+        <section class="ma-sec" id="sec-homeowner-visibility" aria-label="Profile Visibility">
+          <ul class="card ma-card">
+            <li><button class="srow press" data-open="S-13-34-profile-visibility.html"><span class="txt"><span class="t-label-s">Profile Visibility</span></span><span class="val t-paragraph-m">Everyone</span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+          </ul>
+        </section>
+        <section class="ma-sec" id="sec-homeowner-delivery" aria-labelledby="sec-homeowner-delivery-h">
+          <div class="section-head"><h2 id="sec-homeowner-delivery-h" class="t-sublabel-s">DELIVERY LOCATIONS</h2><i class="ic ic-24 hgi hgi-stroke hgi-location-01" aria-hidden="true"></i></div>
+          <ul class="card ma-card">
+            <li data-show="default saving deleting error"><button class="srow press" data-open="S-14-21-delivery-location.html" data-open-state="edit"><i class="ic hgi hgi-stroke hgi-location-01" aria-hidden="true"></i><span class="txt"><span class="t-label-s">Home</span><span class="t-paragraph-s text-subtle">12th Main Road, Indiranagar, Bengaluru, Karnataka 560038</span><span class="t-paragraph-xs text-soft">Flat 402, Prestige Garden</span></span></button><button class="ibtn ibtn-44 ibtn-plain press" aria-label="Delete Home" data-open="S-13-10-delete-delivery-location.html" data-show="default saving error"><i class="ic hgi hgi-stroke hgi-delete-02" aria-hidden="true"></i></button><span class="ibtn ibtn-44" role="status" data-show="deleting"><span class="spinner spinner-16" aria-hidden="true"></span><span class="sr-only">Deleting</span></span></li>
+            <li data-show="default saving deleting error"><button class="srow press" data-open="S-14-21-delivery-location.html" data-open-state="edit"><i class="ic hgi hgi-stroke hgi-location-01" aria-hidden="true"></i><span class="txt"><span class="t-label-s">Delivery Location</span><span class="t-paragraph-s text-subtle">Sarjapur Main Road, Bellandur, Bengaluru, Karnataka 560103</span><span class="t-paragraph-xs text-soft">Site office, Plot 27</span></span></button><button class="ibtn ibtn-44 ibtn-plain press" aria-label="Delete Delivery Location" data-open="S-13-10-delete-delivery-location.html" data-show="default saving error deleting"><i class="ic hgi hgi-stroke hgi-delete-02" aria-hidden="true"></i></button></li>
+            <li data-show="loading" aria-hidden="true"><span class="ma-skel"><span class="skel skel-circle" style="width:20px;height:20px;flex:none"></span><span class="grow stack stack-8"><span class="skel" style="width:40%;height:14px"></span><span class="skel" style="width:80%;height:12px"></span></span></span></li>
+            <li data-show="loading" aria-hidden="true"><span class="ma-skel"><span class="skel skel-circle" style="width:20px;height:20px;flex:none"></span><span class="grow stack stack-8"><span class="skel" style="width:40%;height:14px"></span><span class="skel" style="width:80%;height:12px"></span></span></span></li>
+            <li><button class="srow press" data-open="S-14-21-delivery-location.html"><i class="ic hgi hgi-stroke hgi-plus-sign" aria-hidden="true"></i><span class="txt"><span class="t-label-s">Add Delivery Location</span></span></button></li>
+          </ul>
+        </section>
+        <section class="ma-sec" id="sec-homeowner-more" aria-labelledby="sec-homeowner-more-h">
+          <div class="section-head"><h2 id="sec-homeowner-more-h" class="t-sublabel-s">MORE</h2><i class="ic ic-24 hgi hgi-stroke hgi-more-horizontal" aria-hidden="true"></i></div>
+          <ul class="card ma-card">
+            <li><a class="srow press" href="S-15-06-faq-help-center.html"><span class="txt"><span class="t-label-s">FAQ / Help Center</span></span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></a></li>
+            <li><a class="srow press" href="S-15-08-terms-and-conditions.html"><span class="txt"><span class="t-label-s">Terms &amp; Conditions</span></span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></a></li>
+            <li><a class="srow press" href="S-15-09-privacy-policy.html"><span class="txt"><span class="t-label-s">Privacy Policy</span></span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></a></li>
+            <li><a class="srow press" href="S-15-10-refund-policy.html"><span class="txt"><span class="t-label-s">Refund &amp; Cancellation Policy</span></span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></a></li>
+            <li><a class="srow press" href="S-15-11-dispute-policy.html"><span class="txt"><span class="t-label-s">Dispute Resolution Policy</span></span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></a></li>
+            <li><button class="srow press" data-open="S-04-04-appearance-sheet.html"><span class="txt"><span class="t-label-s">Appearance</span></span><span class="val t-paragraph-m">System</span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+            <li><button class="srow press" data-open="S-15-02-blocked-users.html"><span class="txt"><span class="t-label-s">Blocked Users</span></span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+            <li><a class="srow press danger" href="S-15-04-delete-account-reason.html"><span class="txt"><span class="t-label-s">Delete Account</span></span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></a></li>
+            <li><button class="srow press" data-open="S-13-03-logout-confirmation.html"><span class="txt"><span class="t-label-s">Logout</span></span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+          </ul>
+        </section>
+        </div>
+      </div>
+      <div class="ma-grid" data-role="brand">
+        <div class="ma-aside">
+          <section class="ma-id" aria-label="Photos and name">
+            <button class="ma-cover press" aria-label="Change cover photo" data-open="S-13-06-update-photo.html" data-open-state="cover"><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1200&h=480&fit=crop&q=70" alt="" data-show="default loading saving deleting error"><span class="pf-default" style="width:100%;height:100%" data-show="empty"><i class="ic ic-24 hgi hgi-stroke hgi-image-02" aria-hidden="true"></i></span><span class="ma-cam" aria-hidden="true"><i class="ic ic-24 hgi hgi-stroke hgi-camera-01" aria-hidden="true"></i></span></button>
+            <button class="ma-avatar logo press" aria-label="Change profile photo" data-open="S-13-06-update-photo.html" data-open-state="profile"><span data-show="default loading saving deleting error"><span class="pf-avatar logo pf-mono t-label-xxl">TC</span><span class="verified" role="img" aria-label="Verified"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></span><span class="pf-avatar logo pf-default" data-show="empty"><i class="ic ic-24 hgi hgi-stroke hgi-user" aria-hidden="true"></i></span><span class="ma-cam" aria-hidden="true"><i class="ic ic-24 hgi hgi-stroke hgi-camera-01" aria-hidden="true"></i></span></button>
+            <p class="t-label-xl">Terra Ceramics</p>
+            <p class="t-paragraph-m text-subtle">@terraceramics</p>
+            <p class="t-paragraph-m text-subtle">Brands &amp; Manufacturers</p>
+          </section>
+          <div class="card ma-switch"><span class="t-label-s" id="sw-brand-top">Open to New Resellers</span><button class="switch" role="switch" aria-checked="true" aria-labelledby="sw-brand-top" data-show="default empty loading deleting error"></button><span class="ibtn ibtn-36" role="status" data-show="saving"><span class="spinner spinner-16" aria-hidden="true"></span><span class="sr-only">Saving</span></span></div>
+          <nav class="card ma-nav" aria-label="Sections"><a class="t-label-s" href="#sec-brand-personal"><i class="ic hgi hgi-stroke hgi-user" aria-hidden="true"></i><span>Business Information</span></a><a class="t-label-s" href="#sec-brand-overview"><i class="ic hgi hgi-stroke hgi-file-02" aria-hidden="true"></i><span>Business Overview</span></a><a class="t-label-s" href="#sec-brand-work"><i class="ic hgi hgi-stroke hgi-briefcase-02" aria-hidden="true"></i><span>Work Preferences</span></a><a class="t-label-s" href="#sec-brand-visibility"><i class="ic hgi hgi-stroke hgi-view" aria-hidden="true"></i><span>Profile Visibility</span></a><a class="t-label-s" href="#sec-brand-delivery"><i class="ic hgi hgi-stroke hgi-location-01" aria-hidden="true"></i><span>Delivery Locations</span></a><a class="t-label-s" href="#sec-brand-more"><i class="ic hgi hgi-stroke hgi-more-horizontal" aria-hidden="true"></i><span>More</span></a></nav>
+        </div>
+        <div class="ma-main stagger">
+        <section class="ma-sec" id="sec-brand-personal" aria-labelledby="sec-brand-personal-h">
+          <div class="section-head"><h2 id="sec-brand-personal-h" class="t-sublabel-s">BUSINESS INFORMATION</h2><i class="ic ic-24 hgi hgi-stroke hgi-user" aria-hidden="true"></i></div>
+          <ul class="card ma-card">
+            <li><button class="srow press" data-open="S-14-03-edit-business-name.html"><span class="txt"><span class="t-label-s">Brand/Company Name</span></span><span class="val t-paragraph-m">Terra Ceramics</span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+            <li><button class="srow press" data-open="S-14-06-update-business-phone.html"><span class="txt"><span class="t-label-s">Business Phone</span></span><span class="val t-paragraph-m" data-show="default loading saving deleting error">+91 80 4123 5566</span><span class="val t-paragraph-m" data-show="empty">Add</span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+            <li><button class="srow press" data-open="S-14-04-edit-business-contact-field.html" data-open-state="business-email"><span class="txt"><span class="t-label-s">Business Email</span></span><span class="val t-paragraph-m" data-show="default loading saving deleting error">hello@terraceramics.in</span><span class="val t-paragraph-m" data-show="empty">Add</span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+            <li><button class="srow press" data-open="S-14-04-edit-business-contact-field.html" data-open-state="website-url"><span class="txt"><span class="t-label-s">Website URL</span></span><span class="val t-paragraph-m" data-show="default loading saving deleting error">www.terraceramics.in</span><span class="val t-paragraph-m" data-show="empty">Add</span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+            <li><button class="srow press" data-open="S-14-09-primary-business-address.html"><span class="txt"><span class="t-label-s">Primary Business Address</span><span class="sub t-paragraph-m" data-show="default loading saving deleting error">Plot 18, KIADB Industrial Area, Hoskote, Bengaluru, Karnataka 562114</span></span><span class="val t-paragraph-m" data-show="empty">Add</span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+            <li><button class="srow press" data-open="S-14-03-edit-business-name.html" data-open-state="key-contact-person"><span class="txt"><span class="t-label-s">Key Contact Person</span></span><span class="val t-paragraph-m" data-show="default loading saving deleting error">Meera Nair</span><span class="val t-paragraph-m" data-show="empty">Add</span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+            <li><button class="srow press" data-open="S-14-04-edit-business-contact-field.html"><span class="txt"><span class="t-label-s">Key Contact Role</span></span><span class="val t-paragraph-m" data-show="default loading saving deleting error">Head of Sales</span><span class="val t-paragraph-m" data-show="empty">Add</span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+            <li><button class="srow press" data-open="S-14-07-key-contact-phone.html"><span class="txt"><span class="t-label-s">Key Contact Phone</span></span><span class="val t-paragraph-m" data-show="default loading saving deleting error">+91 98860 44321</span><span class="val t-paragraph-m" data-show="empty">Add</span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+            <li><button class="srow press" data-open="S-14-04-edit-business-contact-field.html" data-open-state="key-contact-email"><span class="txt"><span class="t-label-s">Key Contact Email</span></span><span class="val t-paragraph-m" data-show="default loading saving deleting error">meera@terraceramics.in</span><span class="val t-paragraph-m" data-show="empty">Add</span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+            <li><button class="srow press" data-open="S-14-05-about-the-brand.html"><span class="txt"><span class="t-label-s">About the Brand</span><span class="sub t-paragraph-m" data-show="default loading saving deleting error">Vitrified and handmade ceramic tiles, made in Karnataka since 2008. Project pricing and samples for architects and resellers.</span></span><span class="val t-paragraph-m" data-show="empty">Add</span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+          </ul>
+        </section>
+        <section class="ma-sec" id="sec-brand-overview" aria-labelledby="sec-brand-overview-h">
+          <div class="section-head"><h2 id="sec-brand-overview-h" class="t-sublabel-s">BUSINESS OVERVIEW</h2><i class="ic ic-24 hgi hgi-stroke hgi-file-02" aria-hidden="true"></i></div>
+          <ul class="card ma-card">
+            <li><a class="srow press" href="S-14-01-product-categories.html"><span class="txt"><span class="t-label-s">Product Categories</span></span><span class="val t-paragraph-m" data-show="default loading saving deleting error">4 Selected</span><span class="val t-paragraph-m" data-show="empty">Select</span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></a></li>
+            <li><a class="srow press" href="S-14-02-product-sub-categories.html"><span class="txt"><span class="t-label-s">Product Sub Category</span></span><span class="val t-paragraph-m" data-show="default loading saving deleting error">9 Selected</span><span class="val t-paragraph-m" data-show="empty">Select</span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></a></li>
+            <li><button class="srow press" data-open="S-14-10-year-established.html"><span class="txt"><span class="t-label-s">Year Established</span></span><span class="val t-paragraph-m" data-show="default loading saving deleting error">2008</span><span class="val t-paragraph-m" data-show="empty">Select</span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+            <li><button class="srow press" data-open="S-14-11-business-type.html"><span class="txt"><span class="t-label-s">Business Type</span></span><span class="val t-paragraph-m" data-show="default loading saving deleting error">Manufacturer</span><span class="val t-paragraph-m" data-show="empty">Select</span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+            <li><button class="srow press" data-open="S-14-12-legal-entity-type.html"><span class="txt"><span class="t-label-s">Legal Entity Type</span></span><span class="val t-paragraph-m" data-show="default loading saving deleting error">Private Limited</span><span class="val t-paragraph-m" data-show="empty">Select</span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+          </ul>
+        </section>
+        <section class="ma-sec" id="sec-brand-work" aria-labelledby="sec-brand-work-h">
+          <div class="section-head"><h2 id="sec-brand-work-h" class="t-sublabel-s">WORK PREFERENCES</h2><i class="ic ic-24 hgi hgi-stroke hgi-briefcase-02" aria-hidden="true"></i></div>
+          <ul class="card ma-card">
+            <li><button class="srow press" data-open="S-14-14-preferred-reseller-model.html"><span class="txt"><span class="t-label-s">Preferred Reseller Model</span></span><span class="val t-paragraph-m" data-show="default loading saving deleting error">Distributor</span><span class="val t-paragraph-m" data-show="empty">Select</span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+            <li><button class="srow press" data-open="S-14-17-serviceable-regions.html"><span class="txt"><span class="t-label-s">Serviceable Regions</span></span><span class="val t-paragraph-m" data-show="default loading saving deleting error">5 Added</span><span class="val t-paragraph-m" data-show="empty">Add</span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+            <li><button class="srow press" data-open="S-14-15-lead-handling-preference.html"><span class="txt"><span class="t-label-s">Lead Handling Preference</span></span><span class="val t-paragraph-m" data-show="default loading saving deleting error">Both</span><span class="val t-paragraph-m" data-show="empty">Select</span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+            <li><button class="srow press" data-open="S-14-16-supports-project-pricing.html"><span class="txt"><span class="t-label-s">Supports Project-Based Pricing</span></span><span class="val t-paragraph-m" data-show="default loading saving deleting error">Yes</span><span class="val t-paragraph-m" data-show="empty">Select</span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+            <li><button class="srow press" data-open="S-14-18-manufacturing-locations.html"><span class="txt"><span class="t-label-s">Manufacturing Locations</span></span><span class="val t-paragraph-m" data-show="default loading saving deleting error">2 Added</span><span class="val t-paragraph-m" data-show="empty">Add</span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+          </ul>
+        </section>
+        <section class="ma-sec" id="sec-brand-visibility" aria-label="Profile Visibility">
+          <ul class="card ma-card">
+            <li><button class="srow press" data-open="S-14-20-brand-profile-visibility.html"><span class="txt"><span class="t-label-s">Profile Visibility</span></span><span class="val t-paragraph-m">Public</span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+          </ul>
+        </section>
+        <section class="ma-sec" id="sec-brand-delivery" aria-labelledby="sec-brand-delivery-h">
+          <div class="section-head"><h2 id="sec-brand-delivery-h" class="t-sublabel-s">DELIVERY LOCATIONS</h2><i class="ic ic-24 hgi hgi-stroke hgi-location-01" aria-hidden="true"></i></div>
+          <ul class="card ma-card">
+            <li data-show="default saving deleting error"><button class="srow press" data-open="S-14-21-delivery-location.html" data-open-state="edit"><i class="ic hgi hgi-stroke hgi-location-01" aria-hidden="true"></i><span class="txt"><span class="t-label-s">Home</span><span class="t-paragraph-s text-subtle">12th Main Road, Indiranagar, Bengaluru, Karnataka 560038</span><span class="t-paragraph-xs text-soft">Flat 402, Prestige Garden</span></span></button><button class="ibtn ibtn-44 ibtn-plain press" aria-label="Delete Home" data-open="S-13-10-delete-delivery-location.html" data-show="default saving error"><i class="ic hgi hgi-stroke hgi-delete-02" aria-hidden="true"></i></button><span class="ibtn ibtn-44" role="status" data-show="deleting"><span class="spinner spinner-16" aria-hidden="true"></span><span class="sr-only">Deleting</span></span></li>
+            <li data-show="default saving deleting error"><button class="srow press" data-open="S-14-21-delivery-location.html" data-open-state="edit"><i class="ic hgi hgi-stroke hgi-location-01" aria-hidden="true"></i><span class="txt"><span class="t-label-s">Delivery Location</span><span class="t-paragraph-s text-subtle">Sarjapur Main Road, Bellandur, Bengaluru, Karnataka 560103</span><span class="t-paragraph-xs text-soft">Site office, Plot 27</span></span></button><button class="ibtn ibtn-44 ibtn-plain press" aria-label="Delete Delivery Location" data-open="S-13-10-delete-delivery-location.html" data-show="default saving error deleting"><i class="ic hgi hgi-stroke hgi-delete-02" aria-hidden="true"></i></button></li>
+            <li data-show="loading" aria-hidden="true"><span class="ma-skel"><span class="skel skel-circle" style="width:20px;height:20px;flex:none"></span><span class="grow stack stack-8"><span class="skel" style="width:40%;height:14px"></span><span class="skel" style="width:80%;height:12px"></span></span></span></li>
+            <li data-show="loading" aria-hidden="true"><span class="ma-skel"><span class="skel skel-circle" style="width:20px;height:20px;flex:none"></span><span class="grow stack stack-8"><span class="skel" style="width:40%;height:14px"></span><span class="skel" style="width:80%;height:12px"></span></span></span></li>
+            <li><button class="srow press" data-open="S-14-21-delivery-location.html"><i class="ic hgi hgi-stroke hgi-plus-sign" aria-hidden="true"></i><span class="txt"><span class="t-label-s">Add Delivery Location</span></span></button></li>
+          </ul>
+        </section>
+        <section class="ma-sec" id="sec-brand-more" aria-labelledby="sec-brand-more-h">
+          <div class="section-head"><h2 id="sec-brand-more-h" class="t-sublabel-s">MORE</h2><i class="ic ic-24 hgi hgi-stroke hgi-more-horizontal" aria-hidden="true"></i></div>
+          <ul class="card ma-card">
+            <li><a class="srow press" href="S-15-06-faq-help-center.html"><span class="txt"><span class="t-label-s">FAQ / Help Center</span></span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></a></li>
+            <li><a class="srow press" href="S-15-08-terms-and-conditions.html"><span class="txt"><span class="t-label-s">Terms &amp; Conditions</span></span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></a></li>
+            <li><a class="srow press" href="S-15-09-privacy-policy.html"><span class="txt"><span class="t-label-s">Privacy Policy</span></span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></a></li>
+            <li><a class="srow press" href="S-15-10-refund-policy.html"><span class="txt"><span class="t-label-s">Refund &amp; Cancellation Policy</span></span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></a></li>
+            <li><a class="srow press" href="S-15-11-dispute-policy.html"><span class="txt"><span class="t-label-s">Dispute Resolution Policy</span></span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></a></li>
+            <li><button class="srow press" data-open="S-04-04-appearance-sheet.html"><span class="txt"><span class="t-label-s">Appearance</span></span><span class="val t-paragraph-m">System</span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+            <li><button class="srow press" data-open="S-15-02-blocked-users.html"><span class="txt"><span class="t-label-s">Blocked Users</span></span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+            <li><a class="srow press danger" href="S-15-04-delete-account-reason.html"><span class="txt"><span class="t-label-s">Delete Account</span></span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></a></li>
+            <li><button class="srow press" data-open="S-13-03-logout-confirmation.html"><span class="txt"><span class="t-label-s">Logout</span></span><span class="end"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button></li>
+          </ul>
+        </section>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div class="toast-region" aria-live="polite" data-show="error">
+  <div class="toast toast-danger glass glass-panel" role="status"><i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i><div class="body"><span class="t-label-s">Error</span><p class="t-paragraph-s">Something went wrong. Please try again.</p></div></div>
+</div>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375</b> — mirrors the app: floating glass bar (Back, centred title, pencil), cover, avatar over its lower edge with the verified tick, name, @username, category, optional switch tile, then section header (uppercase title, icon right) + rounded card of rows (label left, value and chevron right; Bio, addresses and Current Location stack the value under the label), Profile Visibility card, Delivery Locations, MORE.</li>
+      <li><b>768</b> — the same single column at a comfortable form width beside the rail; every edit opens as a side sheet.</li>
+      <li><b>1440</b> — two-pane settings: a sticky left column (photos, name, switch tile, section list with anchors) and the section cards on the right inside a 1120 content width. Edits open in a side sheet; photo picker and menus as popovers.</li>
+      <li>Roles: Homeowner (Personal Information only), Professional (+ Professional Overview, Work Preferences, Availability), Brand (Business Information / Overview / Work Preferences, Open to New Resellers), Reseller (business rows, two inline switches, no Delivery Locations).</li>
+      <li>States: default · empty (rows read Add / Select, Skills shows only its label, default cover and avatar art, delivery card has only Add Delivery Location) · loading (2-row delivery skeleton) · saving (switch tile shows a spinner) · deleting (row's trash becomes a spinner) · error (toast; switch reverts).</li>
+      <li>Subscription &amp; billing is not shown anywhere (Q-21).</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Top header · IconButton glass (Back, pencil) / plain (trash)</li>
+      <li>Avatar + verified badge · Switch · Tag (skills)</li>
+      <li>Section header (<code>.section-head</code>) · Settings row (<code>.srow</code>) inside a card</li>
+      <li>Skeleton · Spinner · Toast (danger)</li>
+      <li>Section list (desktop anchors) — plain links in a card</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Back and rows that push a screen — <code>--page-slide-*</code> (mobile), <code>--panel-*</code> crossfade from 768</li>
+      <li>Rows that open a sheet — <code>--panel-*</code>; delete dialog — <code>--modal-*</code></li>
+      <li>Switch — <code>--duration-fast</code> thumb slide; row / button press — <code>--press-*</code></li>
+      <li>Section cards enter with <code>--stagger-*</code>; delivery skeleton — <code>--shimmer-*</code>; toast — <code>--toast-*</code></li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li><code>h1</code> "Manage Account"; every section title is an <code>h2</code>; each card is a list and each row a button or link named by its label and value.</li>
+      <li>Cover and avatar are buttons labelled "Change cover photo" / "Change profile photo"; the pencil is "Update profile or cover photo".</li>
+      <li>Switches use <code>role="switch"</code> with a visible label; the saving and deleting spinners are status text.</li>
+      <li>Delete Account is marked by its label as well as the danger colour.</li>
+      <li>Toasts are announced in a polite live region; focus returns to the row after its sheet closes. Trash buttons are named with the location ("Delete Home").</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>Specializations, Service Type Offered and Collaboration Preferences open their sheet directly here; in build the blocking loader (S-13-09) shows first while options load.</li>
+      <li>Brand and Reseller rows open the F-14 sheets by spec file name; rows that share a sheet (S-14-03, S-14-04) open its first state.</li>
+      <li>Secondary Business Phone is shown for Resellers (Q-18: include on web; the backend must accept the field first).</li>
+      <li>A camera overlay appears on hover / focus of the cover and avatar from 768 (pointer hint only; not in the app).</li>
+      <li>Desktop section list (anchors) is a web addition; its labels are the section titles in title case.</li>
+      <li>Glyphs not in <code>ICONS.md</code>: UserCircle → User, NewJob → Briefcase02, More → MoreHorizontal, AddCircle → PlusSign, CheckmarkCircle03 (verified tick) → the shared verified badge. Profile Visibility uses View in the section list.</li>
+      <li>Cards use <code>--bg-neutral</code> (spec tokens); the app uses the weak surface. The app's debug label under Logout is left out.</li>
+      <li>Budget row shows the app's raw "CUR amount" format ("INR 2500000"), no digit grouping.</li>
+      <li>Appearance row shows the current mode ("System") as its value and opens S-15-01.</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

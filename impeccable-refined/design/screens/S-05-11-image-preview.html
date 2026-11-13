@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-05-11 Image preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-05.css">
+</head>
+<body class="t-paragraph-m" data-kind="overlay" data-host="S-19-03-reseller-order-details.html" data-states="default,loading,error">
+<div class="screen overlay" data-variant="full">
+  <button class="scrim" data-close aria-label="Close"></button>
+  <section class="sheet pv" role="dialog" aria-modal="true" aria-labelledby="ipt">
+    <header class="pv-head"><button class="ibtn ibtn-44 glass glass-icon press only-narrow" data-back aria-label="Back"><i class="ic ic-24 hgi hgi-stroke hgi-arrow-left-01" aria-hidden="true"></i></button><h1 id="ipt" class="t-label-xxl clamp2">Statuario Vitrified Floor Tile, 600 × 1200 mm, Polished</h1><button class="ibtn ibtn-44 glass glass-icon press only-wide" data-close aria-label="Close"><i class="ic hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></header>
+    <div class="pv-body" data-show="default"><figure class="pv-stage"><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1600&h=1200&fit=crop&q=70" alt="Statuario Vitrified Floor Tile, 600 × 1200 mm, Polished"></figure><button class="ibtn glass glass-icon swap press zoom only-wide" data-toggle aria-pressed="false" aria-label="Zoom"><i class="ic off hgi hgi-stroke hgi-plus-sign" aria-hidden="true"></i><i class="ic on hgi hgi-stroke hgi-minus-sign" aria-hidden="true"></i></button></div>
+    <div class="pv-body" data-show="loading" aria-busy="true"><div class="pv-stage" role="status" aria-label="Loading image"><span class="spinner" aria-hidden="true"></span></div></div>
+    <div class="pv-body" data-show="error"><div class="pv-stage"><p class="t-paragraph-m" role="alert">Unable to load image preview</p></div></div>
+  </section>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375:</b> full screen on the page background: glass gradient header (round back button, title up to 2 lines) over a single image fitted (contain) to the remaining area.</li>
+      <li><b>768:</b> large modal, image centred, title and close (×) in the header.</li>
+      <li><b>1440:</b> lightbox modal (up to 1120 × 820) with title, close and a zoom toggle bottom-right; the image is centred, never stretched.</li>
+      <li>Shared widget: opened from an order's invoice tile and from a certificate file, never from the feed. The title comes from the caller (here the product title of the order).</li>
+      <li>Loading: centred spinner (remote images). Error: "Unable to load image preview" centred, no retry.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Top header (gradient glass)</li>
+      <li>IconButton glass: back (under 768), close (from 768), zoom</li>
+      <li>Image gallery / Media viewer</li>
+      <li>Spinner</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Open / close: <code>--page-slide-*</code> under 768 · <code>--mediaview-open-dur</code> from 768</li>
+      <li>Zoom 1× ↔ 2×: <code>--resize-dur</code></li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li>The title is the dialog heading; the image alt text is the title.</li>
+      <li>Back / Close labelled; Esc closes; focus returns to the opener.</li>
+      <li>Zoom is reachable by keyboard through the zoom toggle; the error text is announced.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>The zoom toggle is a web addition (the app has pinch and double-tap).</li>
+      <li>The source may be a just-picked local file before upload; on web that is a file chosen in the browser.</li>
+      <li>Host screen shown behind is the reseller order details; the same viewer opens from the certification form.</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

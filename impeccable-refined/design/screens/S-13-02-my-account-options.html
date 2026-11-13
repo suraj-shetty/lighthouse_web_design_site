@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-13-02 My Account options</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-13a.css">
+</head>
+<body class="t-paragraph-m" data-kind="overlay" data-host="S-13-01-my-profile.html" data-states="default">
+<div class="screen overlay" data-variant="popover">
+  <button class="scrim" data-close aria-label="Close"></button>
+  <section class="sheet" role="dialog" aria-modal="true" aria-labelledby="at" style="--pop-width:320px">
+    <span class="sheet-grab" aria-hidden="true"></span>
+    <div class="sheet-head acct-head"><div class="txt"><h1 id="at" class="t-label-xl">My Account</h1><p class="t-paragraph-m">Manage your profile and account settings</p></div></div>
+    <div class="menu">
+      <a class="menu-row t-label-s" href="S-13-05-manage-account.html"><i class="ic hgi hgi-stroke hgi-pencil-edit-01" aria-hidden="true"></i><span>Manage Account</span><span class="acct-go glass glass-icon"><i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-02" aria-hidden="true"></i></span></a>
+      <a class="menu-row t-label-s" href="S-12-02-manage-notifications.html"><i class="ic hgi hgi-stroke hgi-notification-03" aria-hidden="true"></i><span>Manage Notification</span><span class="acct-go glass glass-icon"><i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-02" aria-hidden="true"></i></span></a>
+      <button class="menu-row t-label-s" data-open="S-13-03-logout-confirmation.html"><i class="ic hgi hgi-stroke hgi-logout-circle-02" aria-hidden="true"></i><span>Logout</span></button>
+    </div>
+  </section>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375:</b> glass bottom sheet sized to its content: drag handle, title, subtitle, three rows divided by hairlines. The first two rows end in a round glass arrow; Logout has none.</li>
+      <li><b>768 / 1440:</b> the same content as a 320 wide menu anchored under the More button of My profile; no scrim tint.</li>
+      <li>One state only (the app's sheet is static).</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Bottom sheet / popover menu</li>
+      <li>Menu row (leading icon, label, trailing round arrow)</li>
+      <li>IconButton glass (row arrow, decorative)</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Open / close: <code>--panel-*</code> (slides up on mobile; fades and scales from the trigger from 768)</li>
+      <li>Row press: <code>--press-*</code></li>
+      <li>Manage Account / Manage Notification close the menu and change route: <code>--page-slide-*</code>; Logout opens S-13-03 on top, <code>--modal-*</code></li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li>Dialog named by its title "My Account"; focus moves to the first row, is trapped, and returns to More on close.</li>
+      <li>Esc, scrim tap and (mobile) drag down close it.</li>
+      <li>Rows are links (navigation) or a button (Logout), each with a text label; arrows are decorative.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>The app's debug / build label under the rows is not user copy and is left out.</li>
+      <li>The commented-out "Saved" row is not shown.</li>
+      <li>PencilEdit02 is not in <code>ICONS.md</code>; PencilEdit01 is used.</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

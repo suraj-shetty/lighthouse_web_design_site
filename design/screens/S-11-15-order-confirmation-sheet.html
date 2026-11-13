@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-11-15 Order Confirmation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-11.css">
+</head>
+<body class="t-paragraph-m" data-kind="overlay" data-host="S-10-12-product-detail.html" data-states="default,dealers,empty,loading,error">
+<div class="screen overlay" data-variant="sheet">
+  <button class="scrim" data-close aria-label="Close"></button>
+  <section class="sheet" role="dialog" aria-modal="true" aria-labelledby="st" aria-describedby="sd">
+    <span class="sheet-grab" aria-hidden="true"></span>
+    <div class="sheet-head"><div class="txt"><h1 id="st" class="t-label-xxl">Order Confirmation</h1><p id="sd" class="t-paragraph-m" data-show="default empty loading error">Are you sure you want to send this Order Confirmation via lighthouse?</p><p class="t-paragraph-m" data-show="dealers">Are you sure you want to send this Order Confirmation to selected Dealer(s)?</p></div><button class="ibtn ibtn-44 glass glass-icon press" data-close aria-label="Close"><i class="ic hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></div>
+    <div class="sheet-body">
+      <section class="pick" aria-labelledby="c1" data-show="default empty loading error"><div class="pick-head"><span class="logo" aria-hidden="true"><img class="logo-light" src="assets/logo_mark_light.png" alt=""><img class="logo-dark" src="assets/logo_mark.png" alt=""></span><h2 id="c1" class="t-label-l">Let Lighthouse handle it</h2></div><p class="t-paragraph-m">We compare quotes from multiple verified dealers and help you get the best available price.</p><ul class="chk-tags"><li class="tag t-paragraph-s"><i class="ic ic-16 hgi hgi-stroke hgi-tick-02" aria-hidden="true"></i>Competitive Pricing</li><li class="tag t-paragraph-s"><i class="ic ic-16 hgi hgi-stroke hgi-tick-02" aria-hidden="true"></i>Verified Dealers</li><li class="tag t-paragraph-s"><i class="ic ic-16 hgi hgi-stroke hgi-tick-02" aria-hidden="true"></i>Best Available Quote</li></ul></section>
+      <ul class="stack" style="gap: var(--spacing-12)" aria-label="Selected dealers" data-show="dealers"><li class="scard"><span class="tile"><i class="ic ic-24 hgi hgi-stroke hgi-store-02" aria-hidden="true"></i></span><span class="txt"><span class="name"><span class="t-label-m">Sri Lakshmi Sanitaryware</span><span class="pill open-now plain t-label-xs">Open Now</span></span><span class="t-paragraph-s sub">Bengaluru</span><span class="t-paragraph-s">No. 48, 80 Feet Road, Koramangala 4th Block</span></span></li><li class="scard"><span class="tile"><i class="ic ic-24 hgi hgi-stroke hgi-store-02" aria-hidden="true"></i></span><span class="txt"><span class="name"><span class="t-label-m">Prestige Bath Studio</span><span class="pill open-now plain t-label-xs">Open Now</span></span><span class="t-paragraph-s sub">Bengaluru</span><span class="t-paragraph-s">17, CMH Road, Indiranagar</span></span></li></ul>
+      <div class="stack stack-8">
+        <div class="loc-head"><span class="t-label-s">Delivery Location <span class="req" aria-hidden="true">*</span><span class="sr-only">(required)</span></span>
+          <button class="btn btn-text t-label-s" data-open="S-11-16-delivery-location-picker-sheet.html" data-show="default dealers loading error">Change</button>
+          <button class="btn btn-text t-label-s" data-open="S-11-16-delivery-location-picker-sheet.html" data-open-state="empty" data-show="empty">Select</button></div>
+        <div data-show="default dealers loading error"><div class="scard"><span class="tile"><i class="ic ic-24 hgi hgi-stroke hgi-location-01" aria-hidden="true"></i></span><span class="txt"><span class="t-label-m">Indiranagar Site</span><span class="t-paragraph-s sub">HAL 2nd Stage, Indiranagar, Bengaluru, Karnataka 560038</span><span class="t-paragraph-s">No. 214, 2nd Floor, 12th Main Road</span></span></div></div>
+        <button class="scard scard-dashed" data-open="S-11-16-delivery-location-picker-sheet.html" data-open-state="empty" data-show="empty"><span class="tile"><i class="ic ic-24 hgi hgi-stroke hgi-location-01" aria-hidden="true"></i></span><span class="txt"><span class="t-paragraph-m">Tap to select delivery location</span></span></button>
+      </div>
+      <div class="field"><span class="label t-label-small">Add a note <span class="od-quiet">(Optional)</span></span><label class="textarea"><textarea class="t-paragraph-m" rows="4" placeholder="Add any special instructions or requirements..." aria-label="Add a note (Optional)"></textarea></label></div>
+    </div>
+    <div class="sheet-foot" data-show="default dealers error"><a class="btn btn-filled t-label-m press" href="S-11-17-order-request-sent.html">SEND REQUEST</a></div>
+    <div class="sheet-foot" data-show="empty"><button class="btn btn-filled t-label-m" disabled aria-describedby="why">SEND REQUEST</button><span id="why" class="sr-only">Select a delivery location to send the request</span></div>
+    <div class="sheet-foot" data-show="loading"><button class="btn btn-filled t-label-m" disabled aria-busy="true"><span class="spinner" aria-hidden="true"></span>SEND REQUEST</button></div>
+  </section>
+  <div class="toast-region" aria-live="polite" data-show="error">
+    <div class="toast toast-danger glass glass-panel" role="status">
+      <i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i>
+      <div class="body"><span class="t-label-s">Error</span><p class="t-paragraph-s">Something went wrong. Please try again later.</p></div>
+    </div>
+  </div>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375</b> — content-height scrolling glass sheet: handle, title, question, recipient block (Lighthouse card or the selected dealer cards), "Delivery Location *" with Select / Change and the location card, "Add a note (Optional)" with a text area, pinned "SEND REQUEST".</li>
+      <li><b>768 / 1440</b> — side sheet from the right, 440 wide, same stack; the footer stays pinned. Recipient block and form stay stacked.</li>
+      <li>States: <b>default</b> via Lighthouse, first saved location preselected · <b>dealers</b> two dealers selected · <b>empty</b> no saved location: dashed "Tap to select delivery location", action "Select", SEND REQUEST disabled · loading · error (toast, sheet stays open).</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Bottom sheet / side sheet · IconButton glass (close)</li>
+      <li>Option card (Lighthouse) · Select card (dealer, location) · Status pill "Open Now" · Tag with check</li>
+      <li>Button text (Select / Change) · Textarea</li>
+      <li>Button filled L (disabled, loading) · Toast danger</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Open / close — <code>--panel-*</code> (bottom sheet under 768, side sheet from 768)</li>
+      <li>Button press — <code>--press-*</code>; toast — <code>--toast-*</code></li>
+      <li>Location picker (S-11-16) opens over this sheet — <code>--panel-*</code>; on success, push Order Request Sent (S-11-17) — <code>--page-slide-*</code></li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li>Dialog named by the title and described by the question.</li>
+      <li>"Delivery Location" is marked required in text for screen readers, not only with "*".</li>
+      <li>A disabled SEND REQUEST says a delivery location is needed; while sending, the button is busy.</li>
+      <li>The note field is labelled "Add a note (Optional)"; focus returns to the trigger on close.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>"via lighthouse" keeps the lowercase spelling from the app (F-11-Q12 is unanswered).</li>
+      <li>While saved locations load, the card shows the empty prompt (no skeleton), as the app.</li>
+      <li>When seller ids arrive without seller objects the app shows "2 dealer(s) selected" instead of cards; not drawn separately.</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

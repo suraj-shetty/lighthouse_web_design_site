@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-14-20 Profile Visibility (business)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-14.css">
+</head>
+<body class="t-paragraph-m" data-kind="overlay" data-host="S-13-05-manage-account.html" data-states="default,saving,server-error">
+<div class="screen overlay" data-variant="sheet">
+  <button class="scrim" data-close aria-label="Close"></button>
+  <section class="sheet" role="dialog" aria-modal="true" aria-labelledby="t101">
+    <span class="sheet-grab" aria-hidden="true"></span>
+    <div class="sheet-head"><div class="txt"><h1 id="t101" class="t-label-xxl">Profile Visibility</h1><p class="t-paragraph-m">Choose flow type based on your needs</p></div><button class="ibtn ibtn-44 glass glass-icon press" data-close aria-label="Close"><i class="ic hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></div>
+    <div class="sheet-body" data-show="default server-error"><div class="f14-opts" role="radiogroup" aria-label="Profile Visibility"><button class="opt f14-opt t-paragraph-m press" type="button" role="radio" data-radio aria-checked="true"><span class="txt"><span class="t-label-s">Public</span><span class="sub t-paragraph-s">Visible to all users</span></span><span class="radio"></span></button><button class="opt f14-opt t-paragraph-m press" type="button" role="radio" data-radio aria-checked="false"><span class="txt"><span class="t-label-s">Anyone with link</span><span class="sub t-paragraph-s">Visible to anyone with the profile link</span></span><span class="radio"></span></button><button class="opt f14-opt t-paragraph-m press" type="button" role="radio" data-radio aria-checked="false"><span class="txt"><span class="t-label-s">Private</span><span class="sub t-paragraph-s">Not discoverable in search</span></span><span class="radio"></span></button></div></div>
+    <div class="sheet-foot" data-show="default server-error"><button class="btn btn-filled t-label-m press" type="button" data-go-state="saving">SAVE</button></div>
+    <div class="sheet-body" data-show="saving"><div class="f14-opts" role="radiogroup" aria-label="Profile Visibility"><button class="opt f14-opt t-paragraph-m press" type="button" role="radio" disabled aria-checked="true"><span class="txt"><span class="t-label-s">Public</span><span class="sub t-paragraph-s">Visible to all users</span></span><span class="radio"></span></button><button class="opt f14-opt t-paragraph-m press" type="button" role="radio" disabled aria-checked="false"><span class="txt"><span class="t-label-s">Anyone with link</span><span class="sub t-paragraph-s">Visible to anyone with the profile link</span></span><span class="radio"></span></button><button class="opt f14-opt t-paragraph-m press" type="button" role="radio" disabled aria-checked="false"><span class="txt"><span class="t-label-s">Private</span><span class="sub t-paragraph-s">Not discoverable in search</span></span><span class="radio"></span></button></div></div>
+    <div class="sheet-foot" data-show="saving"><button class="btn btn-filled t-label-m" type="button" disabled aria-busy="true"><span class="spinner" aria-hidden="true"></span><span class="sr-only">Saving</span></button></div>
+  </section>
+  <div class="toast-region f14-toast" data-show="server-error" aria-live="polite"><div class="toast toast-danger glass glass-panel" role="status"><i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i><div class="body"><span class="t-label-s">Error</span><p class="t-paragraph-s">Something went wrong. Please try again later.</p></div></div></div>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375</b> — glass bottom sheet over the scrim: drag handle, title, subtitle, three radio rows, each a title with a description, "SAVE".</li>
+      <li><b>768 / 1440</b> — side sheet from the right over Manage Account (440 wide, no drag handle); same order, actions pinned to the bottom.</li>
+      <li><b>default</b> saved value pre-selected · <b>saving</b> options locked, spinner in the button · <b>server-error</b>.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Bottom sheet / side sheet</li>
+      <li>IconButton glass (close)</li>
+      <li>Radio option rows (glass pill, label left, control right)</li>
+      <li>Button filled L (SAVE, with loading)</li>
+      <li>Toast danger</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Open / close — <code>--panel-*</code></li>
+      <li>Button press — <code>--press-*</code></li>
+      <li>Error toast — <code>--toast-*</code></li>
+      <li>Option select — <code>--select-check-*</code></li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li>Dialog named by its title; focus moves into the sheet, is trapped, and returns to the Manage Account row that opened it; Esc or the scrim closes without saving.</li>
+      <li>While saving the primary button is disabled and announces its busy label; toasts are announced through a polite live region.</li>
+      <li>Options are a radio group (arrow keys move the choice) labelled "Profile Visibility"; the selected row also gets a stronger border, so colour is not the only signal.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>Subtitle "Choose flow type based on your needs" looks like placeholder copy — kept verbatim, confirm.</li>
+      <li>If the saved value is not one of the three enums, "Public" is pre-selected (as the app).</li>
+      <li>Business accounts (Brand, Reseller) only; other roles use S-13-34.</li>
+      <li>State <b>server-error</b> shows the sheet as it stays after a failed request, with the "Error" toast (server message, else "Network error occurred" / "Something went wrong. Please try again later."). No retry control, as the app.</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-13-10 Delete delivery location</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-13a.css">
+</head>
+<body class="t-paragraph-m" data-kind="overlay" data-host="S-13-05-manage-account.html" data-states="default">
+<div class="screen overlay" data-variant="dialog">
+  <button class="scrim" data-close aria-label="Close"></button>
+  <section class="sheet" role="alertdialog" aria-modal="true" aria-labelledby="dt" aria-describedby="dd">
+    <div class="sheet-head"><div class="txt"><h1 id="dt" class="t-label-xl">Delete Location</h1><p id="dd" class="t-paragraph-m">Are you sure you want to delete this delivery location?</p></div></div>
+    <div class="sheet-foot"><button class="btn btn-m btn-filled t-label-s press" data-close>Cancel</button><button class="btn btn-m btn-danger t-label-s press" data-close="all">Delete</button></div>
+  </section>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li>Centred dialog at every width (max 400): title, one line of body, Cancel and a red Delete side by side.</li>
+      <li>Opened from the trash button of a row in DELIVERY LOCATIONS on Manage Account.</li>
+      <li>One state: after Delete the dialog closes and that row's trash becomes a small spinner (drawn as the "deleting" state of S-13-05).</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Modal / Dialog (destructive confirm)</li>
+      <li>Button filled M (Cancel) · Button destructive M (Delete)</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Open / close — <code>--modal-*</code></li>
+      <li>Button press — <code>--press-*</code></li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li><code>alertdialog</code> named by its title and described by its body; focus trapped; initial focus on Cancel; Esc = Cancel.</li>
+      <li>Delete is marked by its label as well as colour; focus returns to the delivery list on close.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>Buttons are drawn at size M to match the other confirm dialogs (spec says S).</li>
+      <li>Delete errors are handled by the delivery-location feature (F-14).</li>
+      <li>The dialog can be dismissed by tapping outside, as the app's default dialog.</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

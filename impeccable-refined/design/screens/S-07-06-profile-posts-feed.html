@@ -1,0 +1,592 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-07-06 Profile posts feed</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-07.css">
+</head>
+<body class="t-paragraph-m" data-states="default,loading,empty"
+      data-roles="architect,interior-designer,contractor,landscape-architect,brand,reseller,homeowner"
+      data-shell="main" data-nav="discover">
+<div class="screen app on-surface">
+  <div class="app-main">
+    <header class="top">
+      <div class="top-inner glass glass-panel">
+        <div class="bar centre">
+          <a class="ibtn ibtn-44 glass glass-icon press" data-back href="S-07-01-public-profile.html" aria-label="Back"><i class="ic ic-24 hgi hgi-stroke hgi-arrow-left-01" aria-hidden="true"></i></a>
+          <h1 data-role="architect" class="t-label-xl">@vikramshah.arch</h1>
+          <h1 data-role="interior-designer" class="t-label-xl">@ishita.interiors</h1>
+          <h1 data-role="contractor" class="t-label-xl">@patil.buildcon</h1>
+          <h1 data-role="landscape-architect" class="t-label-xl">@kavya.landscapes</h1>
+          <h1 data-role="brand" class="t-label-xl">@terratiles.india</h1>
+          <h1 data-role="reseller" class="t-label-xl">@shreekrishna.ceramics</h1>
+          <h1 data-role="homeowner" class="t-label-xl">@ananya.rao</h1>
+        </div>
+      </div>
+    </header>
+
+    <!-- DEFAULT / LOADING MORE: full feed cards for the grid that was tapped, opened at the tapped item -->
+    <main class="feed stagger" data-role="architect" role="feed" aria-label="Posts by Vikram Shah" data-show="default loading">
+      <article class="fcard" aria-labelledby="f1">
+        <div class="fcard-head">
+          <a class="fcard-who" href="S-07-01-public-profile.html">
+            <img class="avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=96&h=96&fit=crop&q=70" alt="">
+            <span class="txt">
+              <span class="fcard-title"><h2 id="f1" class="t-card-title">Vikram Shah</h2><span class="verified" role="img" aria-label="Verified"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></span>
+              <span class="fcard-time t-paragraph-s">3d ago</span>
+            </span>
+          </a>
+          <button class="ibtn ibtn-44 ibtn-plain press" aria-label="More options" data-open="S-05-03-feed-item-options-sheet.html"><i class="ic ic-24 hgi hgi-stroke hgi-more-horizontal" aria-hidden="true"></i></button>
+        </div>
+        <div class="media" style="--ar: 4/5"><a class="media-hit" href="S-06-01-explore-project.html" aria-label="Explore project"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=75" alt="Two-storey house with a pool at dusk" loading="lazy"></a><span class="media-count glass t-paragraph-s tnum" aria-label="Image 1 of 5">1/5</span><button class="ibtn ibtn-36 glass glass-icon media-arrow next" aria-label="Next image"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></button><a class="btn glass media-cta t-label-m press" href="S-06-01-explore-project.html">EXPLORE PROJECT<i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></a></div>
+        <div class="fcard-acts">
+          <button class="act like press" data-toggle aria-pressed="true" aria-label="Like"><svg class="ic ic-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 8.69444C2 13.0348 7.58942 17.858 10.4107 19.9677C11.3601 20.6776 12.6399 20.6776 13.5893 19.9677C16.4106 17.858 22 13.0348 22 8.69444C22 5.82563 19.8947 3.5 17 3.5C15.5 3.5 14 4 12 6C10 4 8.5 3.5 7 3.5C4.10526 3.5 2 5.82563 2 8.69444Z"/></svg></button>
+          <button class="act act-count t-label-s tnum" aria-label="1.2k likes, view likes" data-open="S-05-08-likes-sheet.html">1.2k</button>
+          <button class="act act-pair t-label-s tnum press" aria-label="Comments, 48" data-open="S-05-07-comments-sheet.html"><i class="ic ic-24 hgi hgi-stroke hgi-comment-01" aria-hidden="true"></i>48</button>
+          <button class="act press" aria-label="Share, 12 shares" data-toast="neutral|Link copied"><i class="ic ic-24 hgi hgi-stroke hgi-share-03" aria-hidden="true"></i></button>
+          <span class="act-count t-label-s tnum" aria-hidden="true" style="display:inline-flex;align-items:center">12</span>
+          <span class="grow"></span>
+          <button class="act save press" data-toggle aria-pressed="false" aria-label="Save"><svg class="ic ic-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 18.212V8.23515C4.5 5.53157 4.5 4.17979 5.32376 3.33989C6.14752 2.5 7.47335 2.5 10.125 2.5H13.875C16.5267 2.5 17.8525 2.5 18.6762 3.33989C19.5 4.17979 19.5 5.53158 19.5 8.23515V18.212C19.5 20.1274 19.5 21.0852 18.8987 21.4076C18.2975 21.7301 17.5234 21.1875 15.9753 20.1024L14.1245 18.805C13.0964 18.0843 12.5824 17.724 12 17.724C11.4176 17.724 10.9036 18.0843 9.87552 18.805L8.02469 20.1024C6.47657 21.1875 5.70252 21.7301 5.10126 21.4076C4.5 21.0852 4.5 20.1274 4.5 18.212Z"/><path d="M10 7H14"/></svg></button>
+        </div>
+        <div class="fcard-cap"><p class="clamp">Courtyard House, Alibaug</p></div>
+      </article>
+      <article class="fcard" aria-labelledby="f2">
+        <div class="fcard-head">
+          <a class="fcard-who" href="S-07-01-public-profile.html">
+            <img class="avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=96&h=96&fit=crop&q=70" alt="">
+            <span class="txt">
+              <span class="fcard-title"><h2 id="f2" class="t-card-title">Vikram Shah</h2><span class="verified" role="img" aria-label="Verified"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></span>
+              <span class="fcard-time t-paragraph-s">1w ago</span>
+            </span>
+          </a>
+          <button class="ibtn ibtn-44 ibtn-plain press" aria-label="More options" data-open="S-05-03-feed-item-options-sheet.html"><i class="ic ic-24 hgi hgi-stroke hgi-more-horizontal" aria-hidden="true"></i></button>
+        </div>
+        <div class="media" style="--ar: 4/5"><button class="media-hit" aria-label="Open image" data-open="S-05-10-feed-media-viewer.html"><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1200&q=75" alt="Exposed brick pavilion with a deep verandah" loading="lazy"></button></div>
+        <div class="fcard-acts">
+          <button class="act like press" data-toggle aria-pressed="false" aria-label="Like"><svg class="ic ic-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 8.69444C2 13.0348 7.58942 17.858 10.4107 19.9677C11.3601 20.6776 12.6399 20.6776 13.5893 19.9677C16.4106 17.858 22 13.0348 22 8.69444C22 5.82563 19.8947 3.5 17 3.5C15.5 3.5 14 4 12 6C10 4 8.5 3.5 7 3.5C4.10526 3.5 2 5.82563 2 8.69444Z"/></svg></button>
+          <button class="act act-count t-label-s tnum" aria-label="342 likes, view likes" data-open="S-05-08-likes-sheet.html">342</button>
+          <button class="act act-pair t-label-s tnum press" aria-label="Comments, 21" data-open="S-05-07-comments-sheet.html"><i class="ic ic-24 hgi hgi-stroke hgi-comment-01" aria-hidden="true"></i>21</button>
+          <button class="act press" aria-label="Share" data-toast="neutral|Link copied"><i class="ic ic-24 hgi hgi-stroke hgi-share-03" aria-hidden="true"></i></button>
+          
+          <span class="grow"></span>
+          <button class="act save press" data-toggle aria-pressed="true" aria-label="Save"><svg class="ic ic-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 18.212V8.23515C4.5 5.53157 4.5 4.17979 5.32376 3.33989C6.14752 2.5 7.47335 2.5 10.125 2.5H13.875C16.5267 2.5 17.8525 2.5 18.6762 3.33989C19.5 4.17979 19.5 5.53158 19.5 8.23515V18.212C19.5 20.1274 19.5 21.0852 18.8987 21.4076C18.2975 21.7301 17.5234 21.1875 15.9753 20.1024L14.1245 18.805C13.0964 18.0843 12.5824 17.724 12 17.724C11.4176 17.724 10.9036 18.0843 9.87552 18.805L8.02469 20.1024C6.47657 21.1875 5.70252 21.7301 5.10126 21.4076C4.5 21.0852 4.5 20.1274 4.5 18.212Z"/><path d="M10 7H14"/></svg></button>
+        </div>
+        <div class="fcard-cap"><p class="clamp">Brick does the cooling here. A double-skin wall on the west side, a 2.4 m verandah on the south, and the courtyard pulls air through every room by evening. <span class="hash">#passivecooling</span> <span class="hash">#brick</span> <span class="hash">#ahmedabad</span></p><button class="btn btn-text t-paragraph-m" data-more aria-expanded="false">more</button></div>
+      </article>
+      <article class="fcard" aria-labelledby="f3">
+        <div class="fcard-head">
+          <a class="fcard-who" href="S-07-01-public-profile.html">
+            <img class="avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=96&h=96&fit=crop&q=70" alt="">
+            <span class="txt">
+              <span class="fcard-title"><h2 id="f3" class="t-card-title">Vikram Shah</h2><span class="verified" role="img" aria-label="Verified"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></span>
+              <span class="fcard-time t-paragraph-s">2w ago</span>
+            </span>
+          </a>
+          <button class="ibtn ibtn-44 ibtn-plain press" aria-label="More options" data-open="S-05-03-feed-item-options-sheet.html"><i class="ic ic-24 hgi hgi-stroke hgi-more-horizontal" aria-hidden="true"></i></button>
+        </div>
+        <div class="media" style="--ar: 16/10"><button class="media-hit" aria-label="Open video" data-open="S-05-10-feed-media-viewer.html"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&q=75" alt="Open-plan kitchen and dining space" loading="lazy"></button><div class="media-video"><input class="seek" type="range" min="0" max="100" value="38" aria-label="Seek" style="--pct:38%"><button class="ibtn ibtn-36 glass glass-icon swap press" data-toggle aria-pressed="true" aria-label="Mute"><i class="ic off hgi hgi-stroke hgi-volume-high" aria-hidden="true"></i><i class="ic on hgi hgi-stroke hgi-volume-off" aria-hidden="true"></i></button></div></div>
+        <div class="fcard-acts">
+          <button class="act like press" data-toggle aria-pressed="false" aria-label="Like"><svg class="ic ic-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 8.69444C2 13.0348 7.58942 17.858 10.4107 19.9677C11.3601 20.6776 12.6399 20.6776 13.5893 19.9677C16.4106 17.858 22 13.0348 22 8.69444C22 5.82563 19.8947 3.5 17 3.5C15.5 3.5 14 4 12 6C10 4 8.5 3.5 7 3.5C4.10526 3.5 2 5.82563 2 8.69444Z"/></svg></button>
+          <button class="act act-count t-label-s tnum" aria-label="96 likes, view likes" data-open="S-05-08-likes-sheet.html">96</button>
+          <button class="act act-pair t-label-s tnum press" aria-label="Comments, 7" data-open="S-05-07-comments-sheet.html"><i class="ic ic-24 hgi hgi-stroke hgi-comment-01" aria-hidden="true"></i>7</button>
+          <button class="act press" aria-label="Share, 3 shares" data-toast="neutral|Link copied"><i class="ic ic-24 hgi hgi-stroke hgi-share-03" aria-hidden="true"></i></button>
+          <span class="act-count t-label-s tnum" aria-hidden="true" style="display:inline-flex;align-items:center">3</span>
+          <span class="grow"></span>
+          <button class="act save press" data-toggle aria-pressed="false" aria-label="Save"><svg class="ic ic-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 18.212V8.23515C4.5 5.53157 4.5 4.17979 5.32376 3.33989C6.14752 2.5 7.47335 2.5 10.125 2.5H13.875C16.5267 2.5 17.8525 2.5 18.6762 3.33989C19.5 4.17979 19.5 5.53158 19.5 8.23515V18.212C19.5 20.1274 19.5 21.0852 18.8987 21.4076C18.2975 21.7301 17.5234 21.1875 15.9753 20.1024L14.1245 18.805C13.0964 18.0843 12.5824 17.724 12 17.724C11.4176 17.724 10.9036 18.0843 9.87552 18.805L8.02469 20.1024C6.47657 21.1875 5.70252 21.7301 5.10126 21.4076C4.5 21.0852 4.5 20.1274 4.5 18.212Z"/><path d="M10 7H14"/></svg></button>
+        </div>
+        <div class="fcard-cap"><p class="clamp">Walkthrough of the kitchen at Verandah House. <span class="hash">#sitevisit</span></p></div>
+      </article>
+      <div class="feed-more" role="status" aria-live="polite" aria-label="Loading more posts" data-show="loading"><span class="spinner"></span></div>
+    </main>
+    <main class="feed stagger" data-role="interior-designer" role="feed" aria-label="Posts by Ishita Menon" data-show="default loading">
+      <article class="fcard" aria-labelledby="finterior-designer-1">
+        <div class="fcard-head">
+          <a class="fcard-who" href="S-07-01-public-profile.html">
+            <img class="avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=96&h=96&fit=crop&q=70" alt="">
+            <span class="txt">
+              <span class="fcard-title"><h2 id="finterior-designer-1" class="t-card-title">Ishita Menon</h2><span class="verified" role="img" aria-label="Verified"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></span>
+              <span class="fcard-time t-paragraph-s">3d ago</span>
+            </span>
+          </a>
+          <button class="ibtn ibtn-44 ibtn-plain press" aria-label="More options" data-open="S-05-03-feed-item-options-sheet.html"><i class="ic ic-24 hgi hgi-stroke hgi-more-horizontal" aria-hidden="true"></i></button>
+        </div>
+        <div class="media" style="--ar: 4/5"><a class="media-hit" href="S-06-01-explore-project.html" aria-label="Explore project"><img src="https://images.unsplash.com/photo-1615873968403-89e068629265?w=1200&q=75" alt="Living room with a green wall and framed prints" loading="lazy"></a><span class="media-count glass t-paragraph-s tnum" aria-label="Image 1 of 5">1/5</span><button class="ibtn ibtn-36 glass glass-icon media-arrow next" aria-label="Next image"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></button><a class="btn glass media-cta t-label-m press" href="S-06-01-explore-project.html">EXPLORE PROJECT<i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></a></div>
+        <div class="fcard-acts">
+          <button class="act like press" data-toggle aria-pressed="true" aria-label="Like"><svg class="ic ic-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 8.69444C2 13.0348 7.58942 17.858 10.4107 19.9677C11.3601 20.6776 12.6399 20.6776 13.5893 19.9677C16.4106 17.858 22 13.0348 22 8.69444C22 5.82563 19.8947 3.5 17 3.5C15.5 3.5 14 4 12 6C10 4 8.5 3.5 7 3.5C4.10526 3.5 2 5.82563 2 8.69444Z"/></svg></button>
+          <button class="act act-count t-label-s tnum" aria-label="1.2k likes, view likes" data-open="S-05-08-likes-sheet.html">1.2k</button>
+          <button class="act act-pair t-label-s tnum press" aria-label="Comments, 48" data-open="S-05-07-comments-sheet.html"><i class="ic ic-24 hgi hgi-stroke hgi-comment-01" aria-hidden="true"></i>48</button>
+          <button class="act press" aria-label="Share, 12 shares" data-toast="neutral|Link copied"><i class="ic ic-24 hgi hgi-stroke hgi-share-03" aria-hidden="true"></i></button>
+          <span class="act-count t-label-s tnum" aria-hidden="true" style="display:inline-flex;align-items:center">12</span>
+          <span class="grow"></span>
+          <button class="act save press" data-toggle aria-pressed="false" aria-label="Save"><svg class="ic ic-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 18.212V8.23515C4.5 5.53157 4.5 4.17979 5.32376 3.33989C6.14752 2.5 7.47335 2.5 10.125 2.5H13.875C16.5267 2.5 17.8525 2.5 18.6762 3.33989C19.5 4.17979 19.5 5.53158 19.5 8.23515V18.212C19.5 20.1274 19.5 21.0852 18.8987 21.4076C18.2975 21.7301 17.5234 21.1875 15.9753 20.1024L14.1245 18.805C13.0964 18.0843 12.5824 17.724 12 17.724C11.4176 17.724 10.9036 18.0843 9.87552 18.805L8.02469 20.1024C6.47657 21.1875 5.70252 21.7301 5.10126 21.4076C4.5 21.0852 4.5 20.1274 4.5 18.212Z"/><path d="M10 7H14"/></svg></button>
+        </div>
+        <div class="fcard-cap"><p class="clamp">Indiranagar Apartment, Bengaluru</p></div>
+      </article>
+      <article class="fcard" aria-labelledby="finterior-designer-2">
+        <div class="fcard-head">
+          <a class="fcard-who" href="S-07-01-public-profile.html">
+            <img class="avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=96&h=96&fit=crop&q=70" alt="">
+            <span class="txt">
+              <span class="fcard-title"><h2 id="finterior-designer-2" class="t-card-title">Ishita Menon</h2><span class="verified" role="img" aria-label="Verified"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></span>
+              <span class="fcard-time t-paragraph-s">1w ago</span>
+            </span>
+          </a>
+          <button class="ibtn ibtn-44 ibtn-plain press" aria-label="More options" data-open="S-05-03-feed-item-options-sheet.html"><i class="ic ic-24 hgi hgi-stroke hgi-more-horizontal" aria-hidden="true"></i></button>
+        </div>
+        <div class="media" style="--ar: 4/5"><button class="media-hit" aria-label="Open image" data-open="S-05-10-feed-media-viewer.html"><img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=1200&q=75" alt="Lounge with armchairs and an arc floor lamp" loading="lazy"></button></div>
+        <div class="fcard-acts">
+          <button class="act like press" data-toggle aria-pressed="false" aria-label="Like"><svg class="ic ic-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 8.69444C2 13.0348 7.58942 17.858 10.4107 19.9677C11.3601 20.6776 12.6399 20.6776 13.5893 19.9677C16.4106 17.858 22 13.0348 22 8.69444C22 5.82563 19.8947 3.5 17 3.5C15.5 3.5 14 4 12 6C10 4 8.5 3.5 7 3.5C4.10526 3.5 2 5.82563 2 8.69444Z"/></svg></button>
+          <button class="act act-count t-label-s tnum" aria-label="342 likes, view likes" data-open="S-05-08-likes-sheet.html">342</button>
+          <button class="act act-pair t-label-s tnum press" aria-label="Comments, 21" data-open="S-05-07-comments-sheet.html"><i class="ic ic-24 hgi hgi-stroke hgi-comment-01" aria-hidden="true"></i>21</button>
+          <button class="act press" aria-label="Share" data-toast="neutral|Link copied"><i class="ic ic-24 hgi hgi-stroke hgi-share-03" aria-hidden="true"></i></button>
+          
+          <span class="grow"></span>
+          <button class="act save press" data-toggle aria-pressed="true" aria-label="Save"><svg class="ic ic-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 18.212V8.23515C4.5 5.53157 4.5 4.17979 5.32376 3.33989C6.14752 2.5 7.47335 2.5 10.125 2.5H13.875C16.5267 2.5 17.8525 2.5 18.6762 3.33989C19.5 4.17979 19.5 5.53158 19.5 8.23515V18.212C19.5 20.1274 19.5 21.0852 18.8987 21.4076C18.2975 21.7301 17.5234 21.1875 15.9753 20.1024L14.1245 18.805C13.0964 18.0843 12.5824 17.724 12 17.724C11.4176 17.724 10.9036 18.0843 9.87552 18.805L8.02469 20.1024C6.47657 21.1875 5.70252 21.7301 5.10126 21.4076C4.5 21.0852 4.5 20.1274 4.5 18.212Z"/><path d="M10 7H14"/></svg></button>
+        </div>
+        <div class="fcard-cap"><p class="clamp">Cane, lime plaster and one very good lamp. The client asked for a room that looks better at 6 pm than at noon, so every surface is matte and every light sits below eye level. <span class="hash">#interiordesign</span> <span class="hash">#limeplaster</span> <span class="hash">#bengaluru</span></p><button class="btn btn-text t-paragraph-m" data-more aria-expanded="false">more</button></div>
+      </article>
+      <article class="fcard" aria-labelledby="finterior-designer-3">
+        <div class="fcard-head">
+          <a class="fcard-who" href="S-07-01-public-profile.html">
+            <img class="avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=96&h=96&fit=crop&q=70" alt="">
+            <span class="txt">
+              <span class="fcard-title"><h2 id="finterior-designer-3" class="t-card-title">Ishita Menon</h2><span class="verified" role="img" aria-label="Verified"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></span>
+              <span class="fcard-time t-paragraph-s">2w ago</span>
+            </span>
+          </a>
+          <button class="ibtn ibtn-44 ibtn-plain press" aria-label="More options" data-open="S-05-03-feed-item-options-sheet.html"><i class="ic ic-24 hgi hgi-stroke hgi-more-horizontal" aria-hidden="true"></i></button>
+        </div>
+        <div class="media" style="--ar: 16/10"><button class="media-hit" aria-label="Open video" data-open="S-05-10-feed-media-viewer.html"><img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=1200&q=75" alt="Kitchen with white cabinets and an island" loading="lazy"></button><div class="media-video"><input class="seek" type="range" min="0" max="100" value="38" aria-label="Seek" style="--pct:38%"><button class="ibtn ibtn-36 glass glass-icon swap press" data-toggle aria-pressed="true" aria-label="Mute"><i class="ic off hgi hgi-stroke hgi-volume-high" aria-hidden="true"></i><i class="ic on hgi hgi-stroke hgi-volume-off" aria-hidden="true"></i></button></div></div>
+        <div class="fcard-acts">
+          <button class="act like press" data-toggle aria-pressed="false" aria-label="Like"><svg class="ic ic-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 8.69444C2 13.0348 7.58942 17.858 10.4107 19.9677C11.3601 20.6776 12.6399 20.6776 13.5893 19.9677C16.4106 17.858 22 13.0348 22 8.69444C22 5.82563 19.8947 3.5 17 3.5C15.5 3.5 14 4 12 6C10 4 8.5 3.5 7 3.5C4.10526 3.5 2 5.82563 2 8.69444Z"/></svg></button>
+          <button class="act act-count t-label-s tnum" aria-label="96 likes, view likes" data-open="S-05-08-likes-sheet.html">96</button>
+          <button class="act act-pair t-label-s tnum press" aria-label="Comments, 7" data-open="S-05-07-comments-sheet.html"><i class="ic ic-24 hgi hgi-stroke hgi-comment-01" aria-hidden="true"></i>7</button>
+          <button class="act press" aria-label="Share, 3 shares" data-toast="neutral|Link copied"><i class="ic ic-24 hgi hgi-stroke hgi-share-03" aria-hidden="true"></i></button>
+          <span class="act-count t-label-s tnum" aria-hidden="true" style="display:inline-flex;align-items:center">3</span>
+          <span class="grow"></span>
+          <button class="act save press" data-toggle aria-pressed="false" aria-label="Save"><svg class="ic ic-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 18.212V8.23515C4.5 5.53157 4.5 4.17979 5.32376 3.33989C6.14752 2.5 7.47335 2.5 10.125 2.5H13.875C16.5267 2.5 17.8525 2.5 18.6762 3.33989C19.5 4.17979 19.5 5.53158 19.5 8.23515V18.212C19.5 20.1274 19.5 21.0852 18.8987 21.4076C18.2975 21.7301 17.5234 21.1875 15.9753 20.1024L14.1245 18.805C13.0964 18.0843 12.5824 17.724 12 17.724C11.4176 17.724 10.9036 18.0843 9.87552 18.805L8.02469 20.1024C6.47657 21.1875 5.70252 21.7301 5.10126 21.4076C4.5 21.0852 4.5 20.1274 4.5 18.212Z"/><path d="M10 7H14"/></svg></button>
+        </div>
+        <div class="fcard-cap"><p class="clamp">Walkthrough of the kitchen at Whitefield Villa. <span class="hash">#sitevisit</span></p></div>
+      </article>
+      <div class="feed-more" role="status" aria-live="polite" aria-label="Loading more posts" data-show="loading"><span class="spinner"></span></div>
+    </main>
+    <main class="feed stagger" data-role="contractor" role="feed" aria-label="Posts by Rajesh Patil" data-show="default loading">
+      <article class="fcard" aria-labelledby="fcontractor-1">
+        <div class="fcard-head">
+          <a class="fcard-who" href="S-07-01-public-profile.html">
+            <img class="avatar" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=96&h=96&fit=crop&q=70" alt="">
+            <span class="txt">
+              <span class="fcard-title"><h2 id="fcontractor-1" class="t-card-title">Rajesh Patil</h2><span class="verified" role="img" aria-label="Verified"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></span>
+              <span class="fcard-time t-paragraph-s">3d ago</span>
+            </span>
+          </a>
+          <button class="ibtn ibtn-44 ibtn-plain press" aria-label="More options" data-open="S-05-03-feed-item-options-sheet.html"><i class="ic ic-24 hgi hgi-stroke hgi-more-horizontal" aria-hidden="true"></i></button>
+        </div>
+        <div class="media" style="--ar: 4/5"><a class="media-hit" href="S-06-01-explore-project.html" aria-label="Explore project"><img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1200&q=75" alt="Two-storey villa with a pool" loading="lazy"></a><span class="media-count glass t-paragraph-s tnum" aria-label="Image 1 of 5">1/5</span><button class="ibtn ibtn-36 glass glass-icon media-arrow next" aria-label="Next image"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></button><a class="btn glass media-cta t-label-m press" href="S-06-01-explore-project.html">EXPLORE PROJECT<i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></a></div>
+        <div class="fcard-acts">
+          <button class="act like press" data-toggle aria-pressed="true" aria-label="Like"><svg class="ic ic-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 8.69444C2 13.0348 7.58942 17.858 10.4107 19.9677C11.3601 20.6776 12.6399 20.6776 13.5893 19.9677C16.4106 17.858 22 13.0348 22 8.69444C22 5.82563 19.8947 3.5 17 3.5C15.5 3.5 14 4 12 6C10 4 8.5 3.5 7 3.5C4.10526 3.5 2 5.82563 2 8.69444Z"/></svg></button>
+          <button class="act act-count t-label-s tnum" aria-label="1.2k likes, view likes" data-open="S-05-08-likes-sheet.html">1.2k</button>
+          <button class="act act-pair t-label-s tnum press" aria-label="Comments, 48" data-open="S-05-07-comments-sheet.html"><i class="ic ic-24 hgi hgi-stroke hgi-comment-01" aria-hidden="true"></i>48</button>
+          <button class="act press" aria-label="Share, 12 shares" data-toast="neutral|Link copied"><i class="ic ic-24 hgi hgi-stroke hgi-share-03" aria-hidden="true"></i></button>
+          <span class="act-count t-label-s tnum" aria-hidden="true" style="display:inline-flex;align-items:center">12</span>
+          <span class="grow"></span>
+          <button class="act save press" data-toggle aria-pressed="false" aria-label="Save"><svg class="ic ic-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 18.212V8.23515C4.5 5.53157 4.5 4.17979 5.32376 3.33989C6.14752 2.5 7.47335 2.5 10.125 2.5H13.875C16.5267 2.5 17.8525 2.5 18.6762 3.33989C19.5 4.17979 19.5 5.53158 19.5 8.23515V18.212C19.5 20.1274 19.5 21.0852 18.8987 21.4076C18.2975 21.7301 17.5234 21.1875 15.9753 20.1024L14.1245 18.805C13.0964 18.0843 12.5824 17.724 12 17.724C11.4176 17.724 10.9036 18.0843 9.87552 18.805L8.02469 20.1024C6.47657 21.1875 5.70252 21.7301 5.10126 21.4076C4.5 21.0852 4.5 20.1274 4.5 18.212Z"/><path d="M10 7H14"/></svg></button>
+        </div>
+        <div class="fcard-cap"><p class="clamp">Hillside Villa, Lonavala</p></div>
+      </article>
+      <article class="fcard" aria-labelledby="fcontractor-2">
+        <div class="fcard-head">
+          <a class="fcard-who" href="S-07-01-public-profile.html">
+            <img class="avatar" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=96&h=96&fit=crop&q=70" alt="">
+            <span class="txt">
+              <span class="fcard-title"><h2 id="fcontractor-2" class="t-card-title">Rajesh Patil</h2><span class="verified" role="img" aria-label="Verified"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></span>
+              <span class="fcard-time t-paragraph-s">1w ago</span>
+            </span>
+          </a>
+          <button class="ibtn ibtn-44 ibtn-plain press" aria-label="More options" data-open="S-05-03-feed-item-options-sheet.html"><i class="ic ic-24 hgi hgi-stroke hgi-more-horizontal" aria-hidden="true"></i></button>
+        </div>
+        <div class="media" style="--ar: 4/5"><button class="media-hit" aria-label="Open image" data-open="S-05-10-feed-media-viewer.html"><img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&q=75" alt="Workers tying reinforcement steel on a slab" loading="lazy"></button></div>
+        <div class="fcard-acts">
+          <button class="act like press" data-toggle aria-pressed="false" aria-label="Like"><svg class="ic ic-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 8.69444C2 13.0348 7.58942 17.858 10.4107 19.9677C11.3601 20.6776 12.6399 20.6776 13.5893 19.9677C16.4106 17.858 22 13.0348 22 8.69444C22 5.82563 19.8947 3.5 17 3.5C15.5 3.5 14 4 12 6C10 4 8.5 3.5 7 3.5C4.10526 3.5 2 5.82563 2 8.69444Z"/></svg></button>
+          <button class="act act-count t-label-s tnum" aria-label="342 likes, view likes" data-open="S-05-08-likes-sheet.html">342</button>
+          <button class="act act-pair t-label-s tnum press" aria-label="Comments, 21" data-open="S-05-07-comments-sheet.html"><i class="ic ic-24 hgi hgi-stroke hgi-comment-01" aria-hidden="true"></i>21</button>
+          <button class="act press" aria-label="Share" data-toast="neutral|Link copied"><i class="ic ic-24 hgi hgi-stroke hgi-share-03" aria-hidden="true"></i></button>
+          
+          <span class="grow"></span>
+          <button class="act save press" data-toggle aria-pressed="true" aria-label="Save"><svg class="ic ic-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 18.212V8.23515C4.5 5.53157 4.5 4.17979 5.32376 3.33989C6.14752 2.5 7.47335 2.5 10.125 2.5H13.875C16.5267 2.5 17.8525 2.5 18.6762 3.33989C19.5 4.17979 19.5 5.53158 19.5 8.23515V18.212C19.5 20.1274 19.5 21.0852 18.8987 21.4076C18.2975 21.7301 17.5234 21.1875 15.9753 20.1024L14.1245 18.805C13.0964 18.0843 12.5824 17.724 12 17.724C11.4176 17.724 10.9036 18.0843 9.87552 18.805L8.02469 20.1024C6.47657 21.1875 5.70252 21.7301 5.10126 21.4076C4.5 21.0852 4.5 20.1274 4.5 18.212Z"/><path d="M10 7H14"/></svg></button>
+        </div>
+        <div class="fcard-cap"><p class="clamp">Slab day at Baner Residences. 420 cubic metres poured in one shift, cube samples taken every 50, and curing starts tonight. <span class="hash">#construction</span> <span class="hash">#rcc</span> <span class="hash">#pune</span></p><button class="btn btn-text t-paragraph-m" data-more aria-expanded="false">more</button></div>
+      </article>
+      <article class="fcard" aria-labelledby="fcontractor-3">
+        <div class="fcard-head">
+          <a class="fcard-who" href="S-07-01-public-profile.html">
+            <img class="avatar" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=96&h=96&fit=crop&q=70" alt="">
+            <span class="txt">
+              <span class="fcard-title"><h2 id="fcontractor-3" class="t-card-title">Rajesh Patil</h2><span class="verified" role="img" aria-label="Verified"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></span>
+              <span class="fcard-time t-paragraph-s">2w ago</span>
+            </span>
+          </a>
+          <button class="ibtn ibtn-44 ibtn-plain press" aria-label="More options" data-open="S-05-03-feed-item-options-sheet.html"><i class="ic ic-24 hgi hgi-stroke hgi-more-horizontal" aria-hidden="true"></i></button>
+        </div>
+        <div class="media" style="--ar: 16/10"><button class="media-hit" aria-label="Open video" data-open="S-05-10-feed-media-viewer.html"><img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=1200&q=75" alt="Carpenter cutting timber on site" loading="lazy"></button><div class="media-video"><input class="seek" type="range" min="0" max="100" value="38" aria-label="Seek" style="--pct:38%"><button class="ibtn ibtn-36 glass glass-icon swap press" data-toggle aria-pressed="true" aria-label="Mute"><i class="ic off hgi hgi-stroke hgi-volume-high" aria-hidden="true"></i><i class="ic on hgi hgi-stroke hgi-volume-off" aria-hidden="true"></i></button></div></div>
+        <div class="fcard-acts">
+          <button class="act like press" data-toggle aria-pressed="false" aria-label="Like"><svg class="ic ic-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 8.69444C2 13.0348 7.58942 17.858 10.4107 19.9677C11.3601 20.6776 12.6399 20.6776 13.5893 19.9677C16.4106 17.858 22 13.0348 22 8.69444C22 5.82563 19.8947 3.5 17 3.5C15.5 3.5 14 4 12 6C10 4 8.5 3.5 7 3.5C4.10526 3.5 2 5.82563 2 8.69444Z"/></svg></button>
+          <button class="act act-count t-label-s tnum" aria-label="96 likes, view likes" data-open="S-05-08-likes-sheet.html">96</button>
+          <button class="act act-pair t-label-s tnum press" aria-label="Comments, 7" data-open="S-05-07-comments-sheet.html"><i class="ic ic-24 hgi hgi-stroke hgi-comment-01" aria-hidden="true"></i>7</button>
+          <button class="act press" aria-label="Share, 3 shares" data-toast="neutral|Link copied"><i class="ic ic-24 hgi hgi-stroke hgi-share-03" aria-hidden="true"></i></button>
+          <span class="act-count t-label-s tnum" aria-hidden="true" style="display:inline-flex;align-items:center">3</span>
+          <span class="grow"></span>
+          <button class="act save press" data-toggle aria-pressed="false" aria-label="Save"><svg class="ic ic-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 18.212V8.23515C4.5 5.53157 4.5 4.17979 5.32376 3.33989C6.14752 2.5 7.47335 2.5 10.125 2.5H13.875C16.5267 2.5 17.8525 2.5 18.6762 3.33989C19.5 4.17979 19.5 5.53158 19.5 8.23515V18.212C19.5 20.1274 19.5 21.0852 18.8987 21.4076C18.2975 21.7301 17.5234 21.1875 15.9753 20.1024L14.1245 18.805C13.0964 18.0843 12.5824 17.724 12 17.724C11.4176 17.724 10.9036 18.0843 9.87552 18.805L8.02469 20.1024C6.47657 21.1875 5.70252 21.7301 5.10126 21.4076C4.5 21.0852 4.5 20.1274 4.5 18.212Z"/><path d="M10 7H14"/></svg></button>
+        </div>
+        <div class="fcard-cap"><p class="clamp">Roof framing at Kothrud Bungalow. <span class="hash">#sitevisit</span></p></div>
+      </article>
+      <div class="feed-more" role="status" aria-live="polite" aria-label="Loading more posts" data-show="loading"><span class="spinner"></span></div>
+    </main>
+    <main class="feed stagger" data-role="landscape-architect" role="feed" aria-label="Posts by Kavya Nair" data-show="default loading">
+      <article class="fcard" aria-labelledby="flandscape-architect-1">
+        <div class="fcard-head">
+          <a class="fcard-who" href="S-07-01-public-profile.html">
+            <img class="avatar" src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=96&h=96&fit=crop&q=70" alt="">
+            <span class="txt">
+              <span class="fcard-title"><h2 id="flandscape-architect-1" class="t-card-title">Kavya Nair</h2><span class="verified" role="img" aria-label="Verified"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></span>
+              <span class="fcard-time t-paragraph-s">3d ago</span>
+            </span>
+          </a>
+          <button class="ibtn ibtn-44 ibtn-plain press" aria-label="More options" data-open="S-05-03-feed-item-options-sheet.html"><i class="ic ic-24 hgi hgi-stroke hgi-more-horizontal" aria-hidden="true"></i></button>
+        </div>
+        <div class="media" style="--ar: 4/5"><a class="media-hit" href="S-06-01-explore-project.html" aria-label="Explore project"><img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=1200&q=75" alt="Gravel path between flowering shrubs" loading="lazy"></a><span class="media-count glass t-paragraph-s tnum" aria-label="Image 1 of 5">1/5</span><button class="ibtn ibtn-36 glass glass-icon media-arrow next" aria-label="Next image"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></button><a class="btn glass media-cta t-label-m press" href="S-06-01-explore-project.html">EXPLORE PROJECT<i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></a></div>
+        <div class="fcard-acts">
+          <button class="act like press" data-toggle aria-pressed="true" aria-label="Like"><svg class="ic ic-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 8.69444C2 13.0348 7.58942 17.858 10.4107 19.9677C11.3601 20.6776 12.6399 20.6776 13.5893 19.9677C16.4106 17.858 22 13.0348 22 8.69444C22 5.82563 19.8947 3.5 17 3.5C15.5 3.5 14 4 12 6C10 4 8.5 3.5 7 3.5C4.10526 3.5 2 5.82563 2 8.69444Z"/></svg></button>
+          <button class="act act-count t-label-s tnum" aria-label="1.2k likes, view likes" data-open="S-05-08-likes-sheet.html">1.2k</button>
+          <button class="act act-pair t-label-s tnum press" aria-label="Comments, 48" data-open="S-05-07-comments-sheet.html"><i class="ic ic-24 hgi hgi-stroke hgi-comment-01" aria-hidden="true"></i>48</button>
+          <button class="act press" aria-label="Share, 12 shares" data-toast="neutral|Link copied"><i class="ic ic-24 hgi hgi-stroke hgi-share-03" aria-hidden="true"></i></button>
+          <span class="act-count t-label-s tnum" aria-hidden="true" style="display:inline-flex;align-items:center">12</span>
+          <span class="grow"></span>
+          <button class="act save press" data-toggle aria-pressed="false" aria-label="Save"><svg class="ic ic-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 18.212V8.23515C4.5 5.53157 4.5 4.17979 5.32376 3.33989C6.14752 2.5 7.47335 2.5 10.125 2.5H13.875C16.5267 2.5 17.8525 2.5 18.6762 3.33989C19.5 4.17979 19.5 5.53158 19.5 8.23515V18.212C19.5 20.1274 19.5 21.0852 18.8987 21.4076C18.2975 21.7301 17.5234 21.1875 15.9753 20.1024L14.1245 18.805C13.0964 18.0843 12.5824 17.724 12 17.724C11.4176 17.724 10.9036 18.0843 9.87552 18.805L8.02469 20.1024C6.47657 21.1875 5.70252 21.7301 5.10126 21.4076C4.5 21.0852 4.5 20.1274 4.5 18.212Z"/><path d="M10 7H14"/></svg></button>
+        </div>
+        <div class="fcard-cap"><p class="clamp">Rose Walk, Fort Kochi Residence</p></div>
+      </article>
+      <article class="fcard" aria-labelledby="flandscape-architect-2">
+        <div class="fcard-head">
+          <a class="fcard-who" href="S-07-01-public-profile.html">
+            <img class="avatar" src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=96&h=96&fit=crop&q=70" alt="">
+            <span class="txt">
+              <span class="fcard-title"><h2 id="flandscape-architect-2" class="t-card-title">Kavya Nair</h2><span class="verified" role="img" aria-label="Verified"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></span>
+              <span class="fcard-time t-paragraph-s">1w ago</span>
+            </span>
+          </a>
+          <button class="ibtn ibtn-44 ibtn-plain press" aria-label="More options" data-open="S-05-03-feed-item-options-sheet.html"><i class="ic ic-24 hgi hgi-stroke hgi-more-horizontal" aria-hidden="true"></i></button>
+        </div>
+        <div class="media" style="--ar: 4/5"><button class="media-hit" aria-label="Open image" data-open="S-05-10-feed-media-viewer.html"><img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=1200&q=75" alt="Seedlings in rows of dark soil" loading="lazy"></button></div>
+        <div class="fcard-acts">
+          <button class="act like press" data-toggle aria-pressed="false" aria-label="Like"><svg class="ic ic-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 8.69444C2 13.0348 7.58942 17.858 10.4107 19.9677C11.3601 20.6776 12.6399 20.6776 13.5893 19.9677C16.4106 17.858 22 13.0348 22 8.69444C22 5.82563 19.8947 3.5 17 3.5C15.5 3.5 14 4 12 6C10 4 8.5 3.5 7 3.5C4.10526 3.5 2 5.82563 2 8.69444Z"/></svg></button>
+          <button class="act act-count t-label-s tnum" aria-label="342 likes, view likes" data-open="S-05-08-likes-sheet.html">342</button>
+          <button class="act act-pair t-label-s tnum press" aria-label="Comments, 21" data-open="S-05-07-comments-sheet.html"><i class="ic ic-24 hgi hgi-stroke hgi-comment-01" aria-hidden="true"></i>21</button>
+          <button class="act press" aria-label="Share" data-toast="neutral|Link copied"><i class="ic ic-24 hgi hgi-stroke hgi-share-03" aria-hidden="true"></i></button>
+          
+          <span class="grow"></span>
+          <button class="act save press" data-toggle aria-pressed="true" aria-label="Save"><svg class="ic ic-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 18.212V8.23515C4.5 5.53157 4.5 4.17979 5.32376 3.33989C6.14752 2.5 7.47335 2.5 10.125 2.5H13.875C16.5267 2.5 17.8525 2.5 18.6762 3.33989C19.5 4.17979 19.5 5.53158 19.5 8.23515V18.212C19.5 20.1274 19.5 21.0852 18.8987 21.4076C18.2975 21.7301 17.5234 21.1875 15.9753 20.1024L14.1245 18.805C13.0964 18.0843 12.5824 17.724 12 17.724C11.4176 17.724 10.9036 18.0843 9.87552 18.805L8.02469 20.1024C6.47657 21.1875 5.70252 21.7301 5.10126 21.4076C4.5 21.0852 4.5 20.1274 4.5 18.212Z"/><path d="M10 7H14"/></svg></button>
+        </div>
+        <div class="fcard-cap"><p class="clamp">Every project starts in our nursery. These are native grasses and groundcovers raised for a rain garden in Alappuzha; they go in after the first monsoon showers. <span class="hash">#nativeplanting</span> <span class="hash">#raingarden</span> <span class="hash">#kochi</span></p><button class="btn btn-text t-paragraph-m" data-more aria-expanded="false">more</button></div>
+      </article>
+      <article class="fcard" aria-labelledby="flandscape-architect-3">
+        <div class="fcard-head">
+          <a class="fcard-who" href="S-07-01-public-profile.html">
+            <img class="avatar" src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=96&h=96&fit=crop&q=70" alt="">
+            <span class="txt">
+              <span class="fcard-title"><h2 id="flandscape-architect-3" class="t-card-title">Kavya Nair</h2><span class="verified" role="img" aria-label="Verified"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></span>
+              <span class="fcard-time t-paragraph-s">2w ago</span>
+            </span>
+          </a>
+          <button class="ibtn ibtn-44 ibtn-plain press" aria-label="More options" data-open="S-05-03-feed-item-options-sheet.html"><i class="ic ic-24 hgi hgi-stroke hgi-more-horizontal" aria-hidden="true"></i></button>
+        </div>
+        <div class="media" style="--ar: 16/10"><button class="media-hit" aria-label="Open video" data-open="S-05-10-feed-media-viewer.html"><img src="https://images.unsplash.com/photo-1558904541-efa843a96f01?w=1200&q=75" alt="Close view of a clipped lawn in front of a building" loading="lazy"></button><div class="media-video"><input class="seek" type="range" min="0" max="100" value="38" aria-label="Seek" style="--pct:38%"><button class="ibtn ibtn-36 glass glass-icon swap press" data-toggle aria-pressed="true" aria-label="Mute"><i class="ic off hgi hgi-stroke hgi-volume-high" aria-hidden="true"></i><i class="ic on hgi hgi-stroke hgi-volume-off" aria-hidden="true"></i></button></div></div>
+        <div class="fcard-acts">
+          <button class="act like press" data-toggle aria-pressed="false" aria-label="Like"><svg class="ic ic-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 8.69444C2 13.0348 7.58942 17.858 10.4107 19.9677C11.3601 20.6776 12.6399 20.6776 13.5893 19.9677C16.4106 17.858 22 13.0348 22 8.69444C22 5.82563 19.8947 3.5 17 3.5C15.5 3.5 14 4 12 6C10 4 8.5 3.5 7 3.5C4.10526 3.5 2 5.82563 2 8.69444Z"/></svg></button>
+          <button class="act act-count t-label-s tnum" aria-label="96 likes, view likes" data-open="S-05-08-likes-sheet.html">96</button>
+          <button class="act act-pair t-label-s tnum press" aria-label="Comments, 7" data-open="S-05-07-comments-sheet.html"><i class="ic ic-24 hgi hgi-stroke hgi-comment-01" aria-hidden="true"></i>7</button>
+          <button class="act press" aria-label="Share, 3 shares" data-toast="neutral|Link copied"><i class="ic ic-24 hgi hgi-stroke hgi-share-03" aria-hidden="true"></i></button>
+          <span class="act-count t-label-s tnum" aria-hidden="true" style="display:inline-flex;align-items:center">3</span>
+          <span class="grow"></span>
+          <button class="act save press" data-toggle aria-pressed="false" aria-label="Save"><svg class="ic ic-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 18.212V8.23515C4.5 5.53157 4.5 4.17979 5.32376 3.33989C6.14752 2.5 7.47335 2.5 10.125 2.5H13.875C16.5267 2.5 17.8525 2.5 18.6762 3.33989C19.5 4.17979 19.5 5.53158 19.5 8.23515V18.212C19.5 20.1274 19.5 21.0852 18.8987 21.4076C18.2975 21.7301 17.5234 21.1875 15.9753 20.1024L14.1245 18.805C13.0964 18.0843 12.5824 17.724 12 17.724C11.4176 17.724 10.9036 18.0843 9.87552 18.805L8.02469 20.1024C6.47657 21.1875 5.70252 21.7301 5.10126 21.4076C4.5 21.0852 4.5 20.1274 4.5 18.212Z"/><path d="M10 7H14"/></svg></button>
+        </div>
+        <div class="fcard-cap"><p class="clamp">Lawn levelling at Kakkanad Campus. <span class="hash">#sitevisit</span></p></div>
+      </article>
+      <div class="feed-more" role="status" aria-live="polite" aria-label="Loading more posts" data-show="loading"><span class="spinner"></span></div>
+    </main>
+    <main class="feed stagger" data-role="brand" role="feed" aria-label="Posts by Terra Tiles India" data-show="default loading">
+      <article class="fcard" aria-labelledby="fbrand-1">
+        <div class="fcard-head">
+          <a class="fcard-who" href="S-07-01-public-profile.html">
+            <img class="avatar sq" src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=96&h=96&fit=crop&q=70" alt="">
+            <span class="txt">
+              <span class="fcard-title"><h2 id="fbrand-1" class="t-card-title">Terra Tiles India</h2><span class="verified" role="img" aria-label="Verified"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></span>
+              <span class="fcard-time t-paragraph-s">3d ago</span>
+            </span>
+          </a>
+          <button class="ibtn ibtn-44 ibtn-plain press" aria-label="More options" data-open="S-05-03-feed-item-options-sheet.html"><i class="ic ic-24 hgi hgi-stroke hgi-more-horizontal" aria-hidden="true"></i></button>
+        </div>
+        <div class="media" style="--ar: 4/5"><a class="media-hit" href="S-06-01-explore-project.html" aria-label="Explore project"><img src="https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?w=1200&q=75" alt="White tiled backsplash behind a sink" loading="lazy"></a><span class="media-count glass t-paragraph-s tnum" aria-label="Image 1 of 5">1/5</span><button class="ibtn ibtn-36 glass glass-icon media-arrow next" aria-label="Next image"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></button><a class="btn glass media-cta t-label-m press" href="S-06-01-explore-project.html">EXPLORE PROJECT<i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></a></div>
+        <div class="fcard-acts">
+          <button class="act like press" data-toggle aria-pressed="true" aria-label="Like"><svg class="ic ic-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 8.69444C2 13.0348 7.58942 17.858 10.4107 19.9677C11.3601 20.6776 12.6399 20.6776 13.5893 19.9677C16.4106 17.858 22 13.0348 22 8.69444C22 5.82563 19.8947 3.5 17 3.5C15.5 3.5 14 4 12 6C10 4 8.5 3.5 7 3.5C4.10526 3.5 2 5.82563 2 8.69444Z"/></svg></button>
+          <button class="act act-count t-label-s tnum" aria-label="1.2k likes, view likes" data-open="S-05-08-likes-sheet.html">1.2k</button>
+          <button class="act act-pair t-label-s tnum press" aria-label="Comments, 48" data-open="S-05-07-comments-sheet.html"><i class="ic ic-24 hgi hgi-stroke hgi-comment-01" aria-hidden="true"></i>48</button>
+          <button class="act press" aria-label="Share, 12 shares" data-toast="neutral|Link copied"><i class="ic ic-24 hgi hgi-stroke hgi-share-03" aria-hidden="true"></i></button>
+          <span class="act-count t-label-s tnum" aria-hidden="true" style="display:inline-flex;align-items:center">12</span>
+          <span class="grow"></span>
+          <button class="act save press" data-toggle aria-pressed="false" aria-label="Save"><svg class="ic ic-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 18.212V8.23515C4.5 5.53157 4.5 4.17979 5.32376 3.33989C6.14752 2.5 7.47335 2.5 10.125 2.5H13.875C16.5267 2.5 17.8525 2.5 18.6762 3.33989C19.5 4.17979 19.5 5.53158 19.5 8.23515V18.212C19.5 20.1274 19.5 21.0852 18.8987 21.4076C18.2975 21.7301 17.5234 21.1875 15.9753 20.1024L14.1245 18.805C13.0964 18.0843 12.5824 17.724 12 17.724C11.4176 17.724 10.9036 18.0843 9.87552 18.805L8.02469 20.1024C6.47657 21.1875 5.70252 21.7301 5.10126 21.4076C4.5 21.0852 4.5 20.1274 4.5 18.212Z"/><path d="M10 7H14"/></svg></button>
+        </div>
+        <div class="fcard-cap"><p class="clamp">Sahara Matte collection in a Pune apartment</p></div>
+      </article>
+      <article class="fcard" aria-labelledby="fbrand-2">
+        <div class="fcard-head">
+          <a class="fcard-who" href="S-07-01-public-profile.html">
+            <img class="avatar sq" src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=96&h=96&fit=crop&q=70" alt="">
+            <span class="txt">
+              <span class="fcard-title"><h2 id="fbrand-2" class="t-card-title">Terra Tiles India</h2><span class="verified" role="img" aria-label="Verified"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></span>
+              <span class="fcard-time t-paragraph-s">1w ago</span>
+            </span>
+          </a>
+          <button class="ibtn ibtn-44 ibtn-plain press" aria-label="More options" data-open="S-05-03-feed-item-options-sheet.html"><i class="ic ic-24 hgi hgi-stroke hgi-more-horizontal" aria-hidden="true"></i></button>
+        </div>
+        <div class="media" style="--ar: 4/5"><button class="media-hit" aria-label="Open image" data-open="S-05-10-feed-media-viewer.html"><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1200&q=75" alt="Brick facade in evening light" loading="lazy"></button></div>
+        <div class="fcard-acts">
+          <button class="act like press" data-toggle aria-pressed="false" aria-label="Like"><svg class="ic ic-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 8.69444C2 13.0348 7.58942 17.858 10.4107 19.9677C11.3601 20.6776 12.6399 20.6776 13.5893 19.9677C16.4106 17.858 22 13.0348 22 8.69444C22 5.82563 19.8947 3.5 17 3.5C15.5 3.5 14 4 12 6C10 4 8.5 3.5 7 3.5C4.10526 3.5 2 5.82563 2 8.69444Z"/></svg></button>
+          <button class="act act-count t-label-s tnum" aria-label="342 likes, view likes" data-open="S-05-08-likes-sheet.html">342</button>
+          <button class="act act-pair t-label-s tnum press" aria-label="Comments, 21" data-open="S-05-07-comments-sheet.html"><i class="ic ic-24 hgi hgi-stroke hgi-comment-01" aria-hidden="true"></i>21</button>
+          <button class="act press" aria-label="Share" data-toast="neutral|Link copied"><i class="ic ic-24 hgi hgi-stroke hgi-share-03" aria-hidden="true"></i></button>
+          
+          <span class="grow"></span>
+          <button class="act save press" data-toggle aria-pressed="true" aria-label="Save"><svg class="ic ic-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 18.212V8.23515C4.5 5.53157 4.5 4.17979 5.32376 3.33989C6.14752 2.5 7.47335 2.5 10.125 2.5H13.875C16.5267 2.5 17.8525 2.5 18.6762 3.33989C19.5 4.17979 19.5 5.53158 19.5 8.23515V18.212C19.5 20.1274 19.5 21.0852 18.8987 21.4076C18.2975 21.7301 17.5234 21.1875 15.9753 20.1024L14.1245 18.805C13.0964 18.0843 12.5824 17.724 12 17.724C11.4176 17.724 10.9036 18.0843 9.87552 18.805L8.02469 20.1024C6.47657 21.1875 5.70252 21.7301 5.10126 21.4076C4.5 21.0852 4.5 20.1274 4.5 18.212Z"/><path d="M10 7H14"/></svg></button>
+        </div>
+        <div class="fcard-cap"><p class="clamp">Terracotta cladding, fired in our Morbi kiln and laid dry-stacked on site. Available in four tones and two sizes. <span class="hash">#terracotta</span> <span class="hash">#cladding</span> <span class="hash">#madeinindia</span></p><button class="btn btn-text t-paragraph-m" data-more aria-expanded="false">more</button></div>
+      </article>
+      <article class="fcard" aria-labelledby="fbrand-3">
+        <div class="fcard-head">
+          <a class="fcard-who" href="S-07-01-public-profile.html">
+            <img class="avatar sq" src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=96&h=96&fit=crop&q=70" alt="">
+            <span class="txt">
+              <span class="fcard-title"><h2 id="fbrand-3" class="t-card-title">Terra Tiles India</h2><span class="verified" role="img" aria-label="Verified"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></span>
+              <span class="fcard-time t-paragraph-s">2w ago</span>
+            </span>
+          </a>
+          <button class="ibtn ibtn-44 ibtn-plain press" aria-label="More options" data-open="S-05-03-feed-item-options-sheet.html"><i class="ic ic-24 hgi hgi-stroke hgi-more-horizontal" aria-hidden="true"></i></button>
+        </div>
+        <div class="media" style="--ar: 16/10"><button class="media-hit" aria-label="Open video" data-open="S-05-10-feed-media-viewer.html"><img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=1200&q=75" alt="White bathroom with a pedestal basin" loading="lazy"></button><div class="media-video"><input class="seek" type="range" min="0" max="100" value="38" aria-label="Seek" style="--pct:38%"><button class="ibtn ibtn-36 glass glass-icon swap press" data-toggle aria-pressed="true" aria-label="Mute"><i class="ic off hgi hgi-stroke hgi-volume-high" aria-hidden="true"></i><i class="ic on hgi hgi-stroke hgi-volume-off" aria-hidden="true"></i></button></div></div>
+        <div class="fcard-acts">
+          <button class="act like press" data-toggle aria-pressed="false" aria-label="Like"><svg class="ic ic-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 8.69444C2 13.0348 7.58942 17.858 10.4107 19.9677C11.3601 20.6776 12.6399 20.6776 13.5893 19.9677C16.4106 17.858 22 13.0348 22 8.69444C22 5.82563 19.8947 3.5 17 3.5C15.5 3.5 14 4 12 6C10 4 8.5 3.5 7 3.5C4.10526 3.5 2 5.82563 2 8.69444Z"/></svg></button>
+          <button class="act act-count t-label-s tnum" aria-label="96 likes, view likes" data-open="S-05-08-likes-sheet.html">96</button>
+          <button class="act act-pair t-label-s tnum press" aria-label="Comments, 7" data-open="S-05-07-comments-sheet.html"><i class="ic ic-24 hgi hgi-stroke hgi-comment-01" aria-hidden="true"></i>7</button>
+          <button class="act press" aria-label="Share, 3 shares" data-toast="neutral|Link copied"><i class="ic ic-24 hgi hgi-stroke hgi-share-03" aria-hidden="true"></i></button>
+          <span class="act-count t-label-s tnum" aria-hidden="true" style="display:inline-flex;align-items:center">3</span>
+          <span class="grow"></span>
+          <button class="act save press" data-toggle aria-pressed="false" aria-label="Save"><svg class="ic ic-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 18.212V8.23515C4.5 5.53157 4.5 4.17979 5.32376 3.33989C6.14752 2.5 7.47335 2.5 10.125 2.5H13.875C16.5267 2.5 17.8525 2.5 18.6762 3.33989C19.5 4.17979 19.5 5.53158 19.5 8.23515V18.212C19.5 20.1274 19.5 21.0852 18.8987 21.4076C18.2975 21.7301 17.5234 21.1875 15.9753 20.1024L14.1245 18.805C13.0964 18.0843 12.5824 17.724 12 17.724C11.4176 17.724 10.9036 18.0843 9.87552 18.805L8.02469 20.1024C6.47657 21.1875 5.70252 21.7301 5.10126 21.4076C4.5 21.0852 4.5 20.1274 4.5 18.212Z"/><path d="M10 7H14"/></svg></button>
+        </div>
+        <div class="fcard-cap"><p class="clamp">How we check every batch for shade variation. <span class="hash">#factory</span></p></div>
+      </article>
+      <div class="feed-more" role="status" aria-live="polite" aria-label="Loading more posts" data-show="loading"><span class="spinner"></span></div>
+    </main>
+    <main class="feed stagger" data-role="reseller" role="feed" aria-label="Posts by Shree Krishna Ceramics" data-show="default loading">
+      <article class="fcard" aria-labelledby="freseller-1">
+        <div class="fcard-head">
+          <a class="fcard-who" href="S-07-01-public-profile.html">
+            <img class="avatar sq" src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=96&h=96&fit=crop&q=70" alt="">
+            <span class="txt">
+              <span class="fcard-title"><h2 id="freseller-1" class="t-card-title">Shree Krishna Ceramics</h2><span class="verified" role="img" aria-label="Verified"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></span>
+              <span class="fcard-time t-paragraph-s">3d ago</span>
+            </span>
+          </a>
+          <button class="ibtn ibtn-44 ibtn-plain press" aria-label="More options" data-open="S-05-03-feed-item-options-sheet.html"><i class="ic ic-24 hgi hgi-stroke hgi-more-horizontal" aria-hidden="true"></i></button>
+        </div>
+        <div class="media" style="--ar: 4/5"><a class="media-hit" href="S-06-01-explore-project.html" aria-label="Explore project"><img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=1200&q=75" alt="White bathroom with a pedestal basin" loading="lazy"></a><span class="media-count glass t-paragraph-s tnum" aria-label="Image 1 of 5">1/5</span><button class="ibtn ibtn-36 glass glass-icon media-arrow next" aria-label="Next image"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></button><a class="btn glass media-cta t-label-m press" href="S-06-01-explore-project.html">EXPLORE PROJECT<i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></a></div>
+        <div class="fcard-acts">
+          <button class="act like press" data-toggle aria-pressed="true" aria-label="Like"><svg class="ic ic-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 8.69444C2 13.0348 7.58942 17.858 10.4107 19.9677C11.3601 20.6776 12.6399 20.6776 13.5893 19.9677C16.4106 17.858 22 13.0348 22 8.69444C22 5.82563 19.8947 3.5 17 3.5C15.5 3.5 14 4 12 6C10 4 8.5 3.5 7 3.5C4.10526 3.5 2 5.82563 2 8.69444Z"/></svg></button>
+          <button class="act act-count t-label-s tnum" aria-label="1.2k likes, view likes" data-open="S-05-08-likes-sheet.html">1.2k</button>
+          <button class="act act-pair t-label-s tnum press" aria-label="Comments, 48" data-open="S-05-07-comments-sheet.html"><i class="ic ic-24 hgi hgi-stroke hgi-comment-01" aria-hidden="true"></i>48</button>
+          <button class="act press" aria-label="Share, 12 shares" data-toast="neutral|Link copied"><i class="ic ic-24 hgi hgi-stroke hgi-share-03" aria-hidden="true"></i></button>
+          <span class="act-count t-label-s tnum" aria-hidden="true" style="display:inline-flex;align-items:center">12</span>
+          <span class="grow"></span>
+          <button class="act save press" data-toggle aria-pressed="false" aria-label="Save"><svg class="ic ic-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 18.212V8.23515C4.5 5.53157 4.5 4.17979 5.32376 3.33989C6.14752 2.5 7.47335 2.5 10.125 2.5H13.875C16.5267 2.5 17.8525 2.5 18.6762 3.33989C19.5 4.17979 19.5 5.53158 19.5 8.23515V18.212C19.5 20.1274 19.5 21.0852 18.8987 21.4076C18.2975 21.7301 17.5234 21.1875 15.9753 20.1024L14.1245 18.805C13.0964 18.0843 12.5824 17.724 12 17.724C11.4176 17.724 10.9036 18.0843 9.87552 18.805L8.02469 20.1024C6.47657 21.1875 5.70252 21.7301 5.10126 21.4076C4.5 21.0852 4.5 20.1274 4.5 18.212Z"/><path d="M10 7H14"/></svg></button>
+        </div>
+        <div class="fcard-cap"><p class="clamp">Display bathroom at our Baner Road showroom</p></div>
+      </article>
+      <article class="fcard" aria-labelledby="freseller-2">
+        <div class="fcard-head">
+          <a class="fcard-who" href="S-07-01-public-profile.html">
+            <img class="avatar sq" src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=96&h=96&fit=crop&q=70" alt="">
+            <span class="txt">
+              <span class="fcard-title"><h2 id="freseller-2" class="t-card-title">Shree Krishna Ceramics</h2><span class="verified" role="img" aria-label="Verified"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></span>
+              <span class="fcard-time t-paragraph-s">1w ago</span>
+            </span>
+          </a>
+          <button class="ibtn ibtn-44 ibtn-plain press" aria-label="More options" data-open="S-05-03-feed-item-options-sheet.html"><i class="ic ic-24 hgi hgi-stroke hgi-more-horizontal" aria-hidden="true"></i></button>
+        </div>
+        <div class="media" style="--ar: 4/5"><button class="media-hit" aria-label="Open image" data-open="S-05-10-feed-media-viewer.html"><img src="https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?w=1200&q=75" alt="White tiled backsplash behind a sink" loading="lazy"></button></div>
+        <div class="fcard-acts">
+          <button class="act like press" data-toggle aria-pressed="false" aria-label="Like"><svg class="ic ic-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 8.69444C2 13.0348 7.58942 17.858 10.4107 19.9677C11.3601 20.6776 12.6399 20.6776 13.5893 19.9677C16.4106 17.858 22 13.0348 22 8.69444C22 5.82563 19.8947 3.5 17 3.5C15.5 3.5 14 4 12 6C10 4 8.5 3.5 7 3.5C4.10526 3.5 2 5.82563 2 8.69444Z"/></svg></button>
+          <button class="act act-count t-label-s tnum" aria-label="342 likes, view likes" data-open="S-05-08-likes-sheet.html">342</button>
+          <button class="act act-pair t-label-s tnum press" aria-label="Comments, 21" data-open="S-05-07-comments-sheet.html"><i class="ic ic-24 hgi hgi-stroke hgi-comment-01" aria-hidden="true"></i>21</button>
+          <button class="act press" aria-label="Share" data-toast="neutral|Link copied"><i class="ic ic-24 hgi hgi-stroke hgi-share-03" aria-hidden="true"></i></button>
+          
+          <span class="grow"></span>
+          <button class="act save press" data-toggle aria-pressed="true" aria-label="Save"><svg class="ic ic-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 18.212V8.23515C4.5 5.53157 4.5 4.17979 5.32376 3.33989C6.14752 2.5 7.47335 2.5 10.125 2.5H13.875C16.5267 2.5 17.8525 2.5 18.6762 3.33989C19.5 4.17979 19.5 5.53158 19.5 8.23515V18.212C19.5 20.1274 19.5 21.0852 18.8987 21.4076C18.2975 21.7301 17.5234 21.1875 15.9753 20.1024L14.1245 18.805C13.0964 18.0843 12.5824 17.724 12 17.724C11.4176 17.724 10.9036 18.0843 9.87552 18.805L8.02469 20.1024C6.47657 21.1875 5.70252 21.7301 5.10126 21.4076C4.5 21.0852 4.5 20.1274 4.5 18.212Z"/><path d="M10 7H14"/></svg></button>
+        </div>
+        <div class="fcard-cap"><p class="clamp">New stock in: glossy subway tiles in three sizes, with matching trims and epoxy grout. Same-week delivery across Pune. <span class="hash">#tiles</span> <span class="hash">#showroom</span> <span class="hash">#pune</span></p><button class="btn btn-text t-paragraph-m" data-more aria-expanded="false">more</button></div>
+      </article>
+      <article class="fcard" aria-labelledby="freseller-3">
+        <div class="fcard-head">
+          <a class="fcard-who" href="S-07-01-public-profile.html">
+            <img class="avatar sq" src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=96&h=96&fit=crop&q=70" alt="">
+            <span class="txt">
+              <span class="fcard-title"><h2 id="freseller-3" class="t-card-title">Shree Krishna Ceramics</h2><span class="verified" role="img" aria-label="Verified"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></span>
+              <span class="fcard-time t-paragraph-s">2w ago</span>
+            </span>
+          </a>
+          <button class="ibtn ibtn-44 ibtn-plain press" aria-label="More options" data-open="S-05-03-feed-item-options-sheet.html"><i class="ic ic-24 hgi hgi-stroke hgi-more-horizontal" aria-hidden="true"></i></button>
+        </div>
+        <div class="media" style="--ar: 16/10"><button class="media-hit" aria-label="Open video" data-open="S-05-10-feed-media-viewer.html"><img src="https://images.unsplash.com/photo-1524634126442-357e0eac3c14?w=1200&q=75" alt="Shelves with decor pieces in a white room" loading="lazy"></button><div class="media-video"><input class="seek" type="range" min="0" max="100" value="38" aria-label="Seek" style="--pct:38%"><button class="ibtn ibtn-36 glass glass-icon swap press" data-toggle aria-pressed="true" aria-label="Mute"><i class="ic off hgi hgi-stroke hgi-volume-high" aria-hidden="true"></i><i class="ic on hgi hgi-stroke hgi-volume-off" aria-hidden="true"></i></button></div></div>
+        <div class="fcard-acts">
+          <button class="act like press" data-toggle aria-pressed="false" aria-label="Like"><svg class="ic ic-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 8.69444C2 13.0348 7.58942 17.858 10.4107 19.9677C11.3601 20.6776 12.6399 20.6776 13.5893 19.9677C16.4106 17.858 22 13.0348 22 8.69444C22 5.82563 19.8947 3.5 17 3.5C15.5 3.5 14 4 12 6C10 4 8.5 3.5 7 3.5C4.10526 3.5 2 5.82563 2 8.69444Z"/></svg></button>
+          <button class="act act-count t-label-s tnum" aria-label="96 likes, view likes" data-open="S-05-08-likes-sheet.html">96</button>
+          <button class="act act-pair t-label-s tnum press" aria-label="Comments, 7" data-open="S-05-07-comments-sheet.html"><i class="ic ic-24 hgi hgi-stroke hgi-comment-01" aria-hidden="true"></i>7</button>
+          <button class="act press" aria-label="Share, 3 shares" data-toast="neutral|Link copied"><i class="ic ic-24 hgi hgi-stroke hgi-share-03" aria-hidden="true"></i></button>
+          <span class="act-count t-label-s tnum" aria-hidden="true" style="display:inline-flex;align-items:center">3</span>
+          <span class="grow"></span>
+          <button class="act save press" data-toggle aria-pressed="false" aria-label="Save"><svg class="ic ic-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 18.212V8.23515C4.5 5.53157 4.5 4.17979 5.32376 3.33989C6.14752 2.5 7.47335 2.5 10.125 2.5H13.875C16.5267 2.5 17.8525 2.5 18.6762 3.33989C19.5 4.17979 19.5 5.53158 19.5 8.23515V18.212C19.5 20.1274 19.5 21.0852 18.8987 21.4076C18.2975 21.7301 17.5234 21.1875 15.9753 20.1024L14.1245 18.805C13.0964 18.0843 12.5824 17.724 12 17.724C11.4176 17.724 10.9036 18.0843 9.87552 18.805L8.02469 20.1024C6.47657 21.1875 5.70252 21.7301 5.10126 21.4076C4.5 21.0852 4.5 20.1274 4.5 18.212Z"/><path d="M10 7H14"/></svg></button>
+        </div>
+        <div class="fcard-cap"><p class="clamp">A walk through the showroom. <span class="hash">#newarrivals</span></p></div>
+      </article>
+      <div class="feed-more" role="status" aria-live="polite" aria-label="Loading more posts" data-show="loading"><span class="spinner"></span></div>
+    </main>
+    <main class="feed stagger" data-role="homeowner" role="feed" aria-label="Posts by Ananya Rao" data-show="default loading">
+      <article class="fcard" aria-labelledby="fhomeowner-1">
+        <div class="fcard-head">
+          <a class="fcard-who" href="S-07-01-public-profile.html">
+            <img class="avatar" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=96&h=96&fit=crop&q=70" alt="">
+            <span class="txt">
+              <span class="fcard-title"><h2 id="fhomeowner-1" class="t-card-title">Ananya Rao</h2><span class="verified" role="img" aria-label="Verified"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></span>
+              <span class="fcard-time t-paragraph-s">3d ago</span>
+            </span>
+          </a>
+          <button class="ibtn ibtn-44 ibtn-plain press" aria-label="More options" data-open="S-05-03-feed-item-options-sheet.html"><i class="ic ic-24 hgi hgi-stroke hgi-more-horizontal" aria-hidden="true"></i></button>
+        </div>
+        <div class="media" style="--ar: 4/5"><a class="media-hit" href="S-06-01-explore-project.html" aria-label="Explore project"><img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1200&q=75" alt="Living room with a rust sofa and round coffee table" loading="lazy"></a><span class="media-count glass t-paragraph-s tnum" aria-label="Image 1 of 5">1/5</span><button class="ibtn ibtn-36 glass glass-icon media-arrow next" aria-label="Next image"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></button><a class="btn glass media-cta t-label-m press" href="S-06-01-explore-project.html">EXPLORE PROJECT<i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></a></div>
+        <div class="fcard-acts">
+          <button class="act like press" data-toggle aria-pressed="true" aria-label="Like"><svg class="ic ic-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 8.69444C2 13.0348 7.58942 17.858 10.4107 19.9677C11.3601 20.6776 12.6399 20.6776 13.5893 19.9677C16.4106 17.858 22 13.0348 22 8.69444C22 5.82563 19.8947 3.5 17 3.5C15.5 3.5 14 4 12 6C10 4 8.5 3.5 7 3.5C4.10526 3.5 2 5.82563 2 8.69444Z"/></svg></button>
+          <button class="act act-count t-label-s tnum" aria-label="1.2k likes, view likes" data-open="S-05-08-likes-sheet.html">1.2k</button>
+          <button class="act act-pair t-label-s tnum press" aria-label="Comments, 48" data-open="S-05-07-comments-sheet.html"><i class="ic ic-24 hgi hgi-stroke hgi-comment-01" aria-hidden="true"></i>48</button>
+          <button class="act press" aria-label="Share, 12 shares" data-toast="neutral|Link copied"><i class="ic ic-24 hgi hgi-stroke hgi-share-03" aria-hidden="true"></i></button>
+          <span class="act-count t-label-s tnum" aria-hidden="true" style="display:inline-flex;align-items:center">12</span>
+          <span class="grow"></span>
+          <button class="act save press" data-toggle aria-pressed="false" aria-label="Save"><svg class="ic ic-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 18.212V8.23515C4.5 5.53157 4.5 4.17979 5.32376 3.33989C6.14752 2.5 7.47335 2.5 10.125 2.5H13.875C16.5267 2.5 17.8525 2.5 18.6762 3.33989C19.5 4.17979 19.5 5.53158 19.5 8.23515V18.212C19.5 20.1274 19.5 21.0852 18.8987 21.4076C18.2975 21.7301 17.5234 21.1875 15.9753 20.1024L14.1245 18.805C13.0964 18.0843 12.5824 17.724 12 17.724C11.4176 17.724 10.9036 18.0843 9.87552 18.805L8.02469 20.1024C6.47657 21.1875 5.70252 21.7301 5.10126 21.4076C4.5 21.0852 4.5 20.1274 4.5 18.212Z"/><path d="M10 7H14"/></svg></button>
+        </div>
+        <div class="fcard-cap"><p class="clamp">Our living room, finally done</p></div>
+      </article>
+      <article class="fcard" aria-labelledby="fhomeowner-2">
+        <div class="fcard-head">
+          <a class="fcard-who" href="S-07-01-public-profile.html">
+            <img class="avatar" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=96&h=96&fit=crop&q=70" alt="">
+            <span class="txt">
+              <span class="fcard-title"><h2 id="fhomeowner-2" class="t-card-title">Ananya Rao</h2><span class="verified" role="img" aria-label="Verified"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></span>
+              <span class="fcard-time t-paragraph-s">1w ago</span>
+            </span>
+          </a>
+          <button class="ibtn ibtn-44 ibtn-plain press" aria-label="More options" data-open="S-05-03-feed-item-options-sheet.html"><i class="ic ic-24 hgi hgi-stroke hgi-more-horizontal" aria-hidden="true"></i></button>
+        </div>
+        <div class="media" style="--ar: 4/5"><button class="media-hit" aria-label="Open image" data-open="S-05-10-feed-media-viewer.html"><img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=1200&q=75" alt="Bedroom with a teak four-poster bed" loading="lazy"></button></div>
+        <div class="fcard-acts">
+          <button class="act like press" data-toggle aria-pressed="false" aria-label="Like"><svg class="ic ic-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 8.69444C2 13.0348 7.58942 17.858 10.4107 19.9677C11.3601 20.6776 12.6399 20.6776 13.5893 19.9677C16.4106 17.858 22 13.0348 22 8.69444C22 5.82563 19.8947 3.5 17 3.5C15.5 3.5 14 4 12 6C10 4 8.5 3.5 7 3.5C4.10526 3.5 2 5.82563 2 8.69444Z"/></svg></button>
+          <button class="act act-count t-label-s tnum" aria-label="342 likes, view likes" data-open="S-05-08-likes-sheet.html">342</button>
+          <button class="act act-pair t-label-s tnum press" aria-label="Comments, 21" data-open="S-05-07-comments-sheet.html"><i class="ic ic-24 hgi hgi-stroke hgi-comment-01" aria-hidden="true"></i>21</button>
+          <button class="act press" aria-label="Share" data-toast="neutral|Link copied"><i class="ic ic-24 hgi hgi-stroke hgi-share-03" aria-hidden="true"></i></button>
+          
+          <span class="grow"></span>
+          <button class="act save press" data-toggle aria-pressed="true" aria-label="Save"><svg class="ic ic-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 18.212V8.23515C4.5 5.53157 4.5 4.17979 5.32376 3.33989C6.14752 2.5 7.47335 2.5 10.125 2.5H13.875C16.5267 2.5 17.8525 2.5 18.6762 3.33989C19.5 4.17979 19.5 5.53158 19.5 8.23515V18.212C19.5 20.1274 19.5 21.0852 18.8987 21.4076C18.2975 21.7301 17.5234 21.1875 15.9753 20.1024L14.1245 18.805C13.0964 18.0843 12.5824 17.724 12 17.724C11.4176 17.724 10.9036 18.0843 9.87552 18.805L8.02469 20.1024C6.47657 21.1875 5.70252 21.7301 5.10126 21.4076C4.5 21.0852 4.5 20.1274 4.5 18.212Z"/><path d="M10 7H14"/></svg></button>
+        </div>
+        <div class="fcard-cap"><p class="clamp">Six months of renovation and the bedroom is the first room that feels finished. Teak bed from a workshop in Mysuru, lime-washed walls. <span class="hash">#homerenovation</span> <span class="hash">#bedroom</span></p><button class="btn btn-text t-paragraph-m" data-more aria-expanded="false">more</button></div>
+      </article>
+      <article class="fcard" aria-labelledby="fhomeowner-3">
+        <div class="fcard-head">
+          <a class="fcard-who" href="S-07-01-public-profile.html">
+            <img class="avatar" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=96&h=96&fit=crop&q=70" alt="">
+            <span class="txt">
+              <span class="fcard-title"><h2 id="fhomeowner-3" class="t-card-title">Ananya Rao</h2><span class="verified" role="img" aria-label="Verified"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></span>
+              <span class="fcard-time t-paragraph-s">2w ago</span>
+            </span>
+          </a>
+          <button class="ibtn ibtn-44 ibtn-plain press" aria-label="More options" data-open="S-05-03-feed-item-options-sheet.html"><i class="ic ic-24 hgi hgi-stroke hgi-more-horizontal" aria-hidden="true"></i></button>
+        </div>
+        <div class="media" style="--ar: 16/10"><button class="media-hit" aria-label="Open video" data-open="S-05-10-feed-media-viewer.html"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&q=75" alt="Open-plan kitchen and dining space" loading="lazy"></button><div class="media-video"><input class="seek" type="range" min="0" max="100" value="38" aria-label="Seek" style="--pct:38%"><button class="ibtn ibtn-36 glass glass-icon swap press" data-toggle aria-pressed="true" aria-label="Mute"><i class="ic off hgi hgi-stroke hgi-volume-high" aria-hidden="true"></i><i class="ic on hgi hgi-stroke hgi-volume-off" aria-hidden="true"></i></button></div></div>
+        <div class="fcard-acts">
+          <button class="act like press" data-toggle aria-pressed="false" aria-label="Like"><svg class="ic ic-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 8.69444C2 13.0348 7.58942 17.858 10.4107 19.9677C11.3601 20.6776 12.6399 20.6776 13.5893 19.9677C16.4106 17.858 22 13.0348 22 8.69444C22 5.82563 19.8947 3.5 17 3.5C15.5 3.5 14 4 12 6C10 4 8.5 3.5 7 3.5C4.10526 3.5 2 5.82563 2 8.69444Z"/></svg></button>
+          <button class="act act-count t-label-s tnum" aria-label="96 likes, view likes" data-open="S-05-08-likes-sheet.html">96</button>
+          <button class="act act-pair t-label-s tnum press" aria-label="Comments, 7" data-open="S-05-07-comments-sheet.html"><i class="ic ic-24 hgi hgi-stroke hgi-comment-01" aria-hidden="true"></i>7</button>
+          <button class="act press" aria-label="Share, 3 shares" data-toast="neutral|Link copied"><i class="ic ic-24 hgi hgi-stroke hgi-share-03" aria-hidden="true"></i></button>
+          <span class="act-count t-label-s tnum" aria-hidden="true" style="display:inline-flex;align-items:center">3</span>
+          <span class="grow"></span>
+          <button class="act save press" data-toggle aria-pressed="false" aria-label="Save"><svg class="ic ic-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 18.212V8.23515C4.5 5.53157 4.5 4.17979 5.32376 3.33989C6.14752 2.5 7.47335 2.5 10.125 2.5H13.875C16.5267 2.5 17.8525 2.5 18.6762 3.33989C19.5 4.17979 19.5 5.53158 19.5 8.23515V18.212C19.5 20.1274 19.5 21.0852 18.8987 21.4076C18.2975 21.7301 17.5234 21.1875 15.9753 20.1024L14.1245 18.805C13.0964 18.0843 12.5824 17.724 12 17.724C11.4176 17.724 10.9036 18.0843 9.87552 18.805L8.02469 20.1024C6.47657 21.1875 5.70252 21.7301 5.10126 21.4076C4.5 21.0852 4.5 20.1274 4.5 18.212Z"/><path d="M10 7H14"/></svg></button>
+        </div>
+        <div class="fcard-cap"><p class="clamp">A quick tour of the new kitchen. <span class="hash">#beforeandafter</span></p></div>
+      </article>
+      <div class="feed-more" role="status" aria-live="polite" aria-label="Loading more posts" data-show="loading"><span class="spinner"></span></div>
+    </main>
+
+    <!-- EMPTY -->
+    <main class="feed" data-show="empty">
+      <p class="line-empty t-paragraph-m" role="status">No posts</p>
+    </main>
+  </div>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375</b>: full feed cards (the Home feed card, F-05) for the list the tapped tile belongs to: posts, projects, videos or tagged. Floating glass header with back and the centred title.</li>
+      <li><b>768 / 1440</b>: one centred feed column at reading width; cards are not stretched.</li>
+      <li>Role switch = whose posts these are, matching the profile categories of S-07-01.</li>
+      <li>Title is "@{userName}" of the profile owner; "Posts" when there is no username.</li>
+      <li>States: default, loading (spinner footer while the next page loads; there is no first-load skeleton because the grid already holds the list), empty ("No posts").</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Top header · IconButton glass (back)</li>
+      <li>Feed card from Home feed: media frame, Like / Save, count buttons, avatar + verified badge</li>
+      <li>Spinner footer · single-line empty text</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Open: jumps near the tapped post, then settles it just under the header (Flutter: 250 ms ease-in-out; <code>--reveal-*</code>).</li>
+      <li>Next page when within 700 px of the end: <code>--stagger-*</code>; back: <code>--page-slide-*</code>; card actions as on Home (<code>--like-*</code>, <code>--icon-swap-*</code>).</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li>Banner with the title as <code>h1</code>; the list is a feed of articles, each titled by its author heading.</li>
+      <li>Back is labelled; the targeted post receives the scroll position and focus; "Loading more posts" is announced politely.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li><b>Error</b>: not handled in Flutter (a failed next page is silent), so no error state is drawn here.</li>
+      <li>Card copy, actions and their sheets belong to the Home feed (F-05).</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

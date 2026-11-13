@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-05-02 Feed filters</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+</head>
+<body class="t-paragraph-m" data-kind="overlay" data-host="S-05-01-explore-feed.html" data-states="default,selected,loading">
+<div class="screen overlay" data-variant="sheet">
+  <button class="scrim" data-close aria-label="Close"></button>
+  <section class="sheet" role="dialog" aria-modal="true" aria-labelledby="ft">
+    <span class="sheet-grab" aria-hidden="true"></span>
+    <div class="sheet-head">
+      <i class="ic ic-24 hgi hgi-stroke hgi-filter-horizontal" aria-hidden="true"></i>
+      <div class="txt"><h1 id="ft" class="t-label-xxl">Filters</h1><p class="t-paragraph-m">Select filter options to apply</p></div>
+      <button class="ibtn ibtn-44 glass glass-icon press" data-close aria-label="Close"><i class="ic  hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button>
+    </div>
+    <hr class="hr">
+    <div class="sheet-body flush" data-show="default"><div class="panes"><div class="pane-list" role="tablist" aria-label="Category" aria-orientation="vertical"><button class="pane-item t-label-s" role="tab" aria-selected="true">Architects<i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></button><button class="pane-item t-label-s" role="tab" aria-selected="false">Interior Designers</button><button class="pane-item t-label-s" role="tab" aria-selected="false">Contractors</button><button class="pane-item t-label-s" role="tab" aria-selected="false">Brands</button><button class="pane-item t-label-s" role="tab" aria-selected="false">Resellers</button></div><div class="pane-opts" role="group" aria-label="Options"><button class="opt t-paragraph-m" role="checkbox" data-check aria-checked="true"><span class="check"><i class="ic ic-16 hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span><span class="txt">All</span></button><button class="opt t-paragraph-m" role="checkbox" data-check aria-checked="false"><span class="check"><i class="ic ic-16 hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span><span class="txt">Residential</span></button><button class="opt t-paragraph-m" role="checkbox" data-check aria-checked="false"><span class="check"><i class="ic ic-16 hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span><span class="txt">Commercial</span></button><button class="opt t-paragraph-m" role="checkbox" data-check aria-checked="false"><span class="check"><i class="ic ic-16 hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span><span class="txt">Hospitality</span></button><button class="opt t-paragraph-m" role="checkbox" data-check aria-checked="false"><span class="check"><i class="ic ic-16 hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span><span class="txt">Landscape</span></button><button class="opt t-paragraph-m" role="checkbox" data-check aria-checked="false"><span class="check"><i class="ic ic-16 hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span><span class="txt">Urban Design</span></button><button class="opt t-paragraph-m" role="checkbox" data-check aria-checked="false"><span class="check"><i class="ic ic-16 hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span><span class="txt">Sustainable Design</span></button></div></div></div>
+    <div class="sheet-body flush" data-show="selected"><div class="panes"><div class="pane-list" role="tablist" aria-label="Category" aria-orientation="vertical"><button class="pane-item t-label-s" role="tab" aria-selected="true">Architects<i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></button><button class="pane-item t-label-s" role="tab" aria-selected="false">Interior Designers</button><button class="pane-item t-label-s" role="tab" aria-selected="false">Contractors</button><button class="pane-item t-label-s" role="tab" aria-selected="false">Brands</button><button class="pane-item t-label-s" role="tab" aria-selected="false">Resellers</button></div><div class="pane-opts" role="group" aria-label="Options"><button class="opt t-paragraph-m" role="checkbox" data-check aria-checked="false"><span class="check"><i class="ic ic-16 hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span><span class="txt">All</span></button><button class="opt t-paragraph-m" role="checkbox" data-check aria-checked="true"><span class="check"><i class="ic ic-16 hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span><span class="txt">Residential</span></button><button class="opt t-paragraph-m" role="checkbox" data-check aria-checked="false"><span class="check"><i class="ic ic-16 hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span><span class="txt">Commercial</span></button><button class="opt t-paragraph-m" role="checkbox" data-check aria-checked="true"><span class="check"><i class="ic ic-16 hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span><span class="txt">Hospitality</span></button><button class="opt t-paragraph-m" role="checkbox" data-check aria-checked="false"><span class="check"><i class="ic ic-16 hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span><span class="txt">Landscape</span></button><button class="opt t-paragraph-m" role="checkbox" data-check aria-checked="false"><span class="check"><i class="ic ic-16 hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span><span class="txt">Urban Design</span></button><button class="opt t-paragraph-m" role="checkbox" data-check aria-checked="false"><span class="check"><i class="ic ic-16 hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span><span class="txt">Sustainable Design</span></button></div></div></div>
+    <div class="sheet-body flush" data-show="loading" aria-busy="true"><div class="panes" aria-hidden="true"><div class="pane-list"><span class="skel" style="height:16px;margin:var(--spacing-16)"></span><span class="skel" style="height:16px;margin:var(--spacing-16)"></span><span class="skel" style="height:16px;margin:var(--spacing-16)"></span><span class="skel" style="height:16px;margin:var(--spacing-16)"></span><span class="skel" style="height:16px;margin:var(--spacing-16)"></span></div><div class="pane-opts"><span class="skel" style="height:16px;margin:var(--spacing-16) 0;width:70%"></span><span class="skel" style="height:16px;margin:var(--spacing-16) 0;width:70%"></span><span class="skel" style="height:16px;margin:var(--spacing-16) 0;width:70%"></span><span class="skel" style="height:16px;margin:var(--spacing-16) 0;width:70%"></span><span class="skel" style="height:16px;margin:var(--spacing-16) 0;width:70%"></span><span class="skel" style="height:16px;margin:var(--spacing-16) 0;width:70%"></span><span class="skel" style="height:16px;margin:var(--spacing-16) 0;width:70%"></span></div></div></div>
+    <div data-show="default loading"><div class="sheet-foot"><button class="btn btn-stroke t-label-m press">RESET</button><button class="btn btn-filled t-label-m press" data-close>APPLY</button></div></div>
+    <div data-show="selected"><div class="sheet-foot"><button class="btn btn-stroke t-label-m press">RESET</button><button class="btn btn-filled t-label-m press" data-close>APPLY (2)</button></div></div>
+  </section>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375</b> — glass bottom sheet (up to 90% height): handle, header with close, two panes (categories left, options right), RESET above APPLY.</li>
+      <li><b>768 / 1440</b> — side sheet from the right with the same header, panes and footer.</li>
+      <li>One parent category at a time; "All" and specific options are mutually exclusive.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Bottom sheet / side sheet</li>
+      <li>IconButton glass (close)</li>
+      <li>Two-pane list: category tabs + checkbox option rows</li>
+      <li>Button stroke L (RESET) · Button filled L (APPLY / APPLY (n))</li>
+      <li>Skeleton · Toast (error)</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Open / close — <code>--panel-*</code></li>
+      <li>Category change — <code>--tabs-*</code>; option check — <code>--select-check-*</code></li>
+      <li>Button press — <code>--press-*</code></li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li>Dialog named "Filters"; focus trapped and returned to the filter button; Esc closes without applying.</li>
+      <li>Categories are a vertical tablist; options are checkboxes with visible labels.</li>
+      <li>APPLY announces the count when options are selected.</li>
+      <li>Category and option names are sample data; the real ones come from the API.</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

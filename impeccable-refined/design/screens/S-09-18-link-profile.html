@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-09-18 Link Profile</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-09.css">
+</head>
+<body class="t-paragraph-m" data-kind="overlay" data-host="S-09-17-credit-editor.html" data-states="default,results,loading,empty,error">
+<div class="screen overlay f09" data-variant="sheet">
+  <button class="scrim" data-close aria-label="Close"></button>
+  <section class="sheet" role="dialog" aria-modal="true" aria-labelledby="lpt">
+    <span class="sheet-grab" aria-hidden="true"></span>
+    <div class="sheet-head"><div class="txt"><h1 id="lpt" class="t-label-xxl"><span data-show="default results loading empty error">Link Profile</span></h1></div><button class="ibtn ibtn-44 glass glass-icon press" aria-label="Close" data-close><i class="ic ic-24 hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></div>
+    <div class="sheet-body">
+      <div data-show="default"><label class="search t-paragraph-m"><i class="ic hgi hgi-stroke hgi-search-01" aria-hidden="true"></i><span class="sr-only">Search people</span><input type="search" placeholder="Search People..." value="" autocomplete="off"></label></div>
+      <div data-show="results loading empty error"><label class="search t-paragraph-m"><i class="ic hgi hgi-stroke hgi-search-01" aria-hidden="true"></i><span class="sr-only">Search people</span><input type="search" placeholder="Search People..." value="roh" autocomplete="off"></label></div>
+      <div class="f09-opts" role="listbox" aria-label="People" data-show="results"><button class="opt t-paragraph-m" role="option" data-close><img class="avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=96&h=96&fit=crop&q=70" alt=""><span class="txt"><span class="t-label-s">Rohan Mehta</span><span class="sub t-paragraph-s">@rohan.builds</span></span></button><button class="opt t-paragraph-m" role="option" data-close><img class="avatar" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=96&h=96&fit=crop&q=70" alt=""><span class="txt"><span class="t-label-s">Rohini Mehta</span><span class="sub t-paragraph-s">@rohini.mehta</span></span></button><button class="opt t-paragraph-m" role="option" data-close><img class="avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=96&h=96&fit=crop&q=70" alt=""><span class="txt"><span class="t-label-s">Rohan Kulkarni</span><span class="sub t-paragraph-s">@rk.studio</span></span></button><button class="opt t-paragraph-m" role="option" data-close><img class="avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=96&h=96&fit=crop&q=70" alt=""><span class="txt"><span class="t-label-s">Roha Design Collective</span><span class="sub t-paragraph-s">@roha.collective</span></span></button></div>
+      <div class="f09-opts" data-show="loading" aria-busy="true"><div class="opt" aria-hidden="true"><span class="skel skel-circle" style="width:44px;height:44px;flex:none"></span><span class="txt"><span class="skel" style="width:55%;height:14px;"></span><span class="skel" style="width:35%;height:12px;"></span></span></div><div class="opt" aria-hidden="true"><span class="skel skel-circle" style="width:44px;height:44px;flex:none"></span><span class="txt"><span class="skel" style="width:55%;height:14px;"></span><span class="skel" style="width:35%;height:12px;"></span></span></div><div class="opt" aria-hidden="true"><span class="skel skel-circle" style="width:44px;height:44px;flex:none"></span><span class="txt"><span class="skel" style="width:55%;height:14px;"></span><span class="skel" style="width:35%;height:12px;"></span></span></div><div class="opt" aria-hidden="true"><span class="skel skel-circle" style="width:44px;height:44px;flex:none"></span><span class="txt"><span class="skel" style="width:55%;height:14px;"></span><span class="skel" style="width:35%;height:12px;"></span></span></div><div class="opt" aria-hidden="true"><span class="skel skel-circle" style="width:44px;height:44px;flex:none"></span><span class="txt"><span class="skel" style="width:55%;height:14px;"></span><span class="skel" style="width:35%;height:12px;"></span></span></div><div class="opt" aria-hidden="true"><span class="skel skel-circle" style="width:44px;height:44px;flex:none"></span><span class="txt"><span class="skel" style="width:55%;height:14px;"></span><span class="skel" style="width:35%;height:12px;"></span></span></div></div>
+      <p class="f09-none t-paragraph-m" role="status" data-show="empty error">No results found</p>
+    </div>
+  </section>
+  <div class="toast-region" aria-live="polite" data-show="error"><div class="toast toast-danger glass glass-panel" role="status"><i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i><div class="body"><span class="t-label-s">Error</span><p class="t-paragraph-s">Network error occurred</p></div></div></div>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375:</b> tall glass sheet: handle → title → pill search → results (avatar, full name, @username) with hairlines.</li>
+      <li><b>768 / 1440:</b> side sheet over the credit editor.</li>
+      <li>Single select: tapping a row returns that person and closes; the credit then shows @username (or the full name).</li>
+      <li>States: default (blank until a query is typed), results, loading, empty, error (toast).</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Side / bottom sheet · IconButton glass (close)</li>
+      <li>Search input · person row · Skeleton rows · Toast</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Open / close: <code>--panel-*</code></li>
+      <li>Results: <code>--skel-*</code> → <code>--reveal-*</code> (400 ms debounce)</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li>Dialog labelled by its title; search labelled "Search people".</li>
+      <li>Combobox with a single-select listbox; results and "No results found" are announced politely.</li>
+      <li>Focus is trapped and returns to the Lighthouse Profile row.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>"No results found" is added for parity with S-09-05: the app leaves the list blank.</li>
+      <li>Close button is a web addition. First 30 matches only.</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

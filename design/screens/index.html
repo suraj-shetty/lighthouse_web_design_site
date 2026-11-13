@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lighthouse web designs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<style>
+  .ix { max-width: 1120px; margin: 0 auto; padding: var(--spacing-48) var(--spacing-24); display: flex; flex-direction: column; gap: var(--spacing-32); }
+  .ix-hero { display: grid; gap: var(--spacing-16); grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+  .ix-hero a { display: flex; flex-direction: column; gap: var(--spacing-8); padding: var(--spacing-24); border-radius: var(--radius-28); }
+  .ix-hero p, .ix li span, .ix-count { color: var(--text-subtle); }
+  .ix-list { display: grid; gap: var(--spacing-2) var(--spacing-24); grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
+  .ix-list a { display: flex; gap: var(--spacing-10); padding: var(--spacing-8); border-radius: var(--radius-8); }
+  .ix-list a:hover { background: var(--bg-weak); }
+  .ix-list b { color: var(--text-soft); flex: none; font-weight: inherit; }
+</style>
+</head>
+<body class="t-paragraph-m">
+<main class="ix">
+  <header class="stack">
+    <span class="logo"><img class="logo-light" src="assets/logo_lighthouse_light.png" alt="Lighthouse"><img class="logo-dark" src="assets/logo_lighthouse.png" alt="Lighthouse"></span>
+    <h1 class="t-title-h5">Web designs</h1>
+    <p class="ix-count t-paragraph-l" id="count"></p>
+  </header>
+  <div class="ix-hero">
+    <a class="glass glass-panel press" href="demo.html"><h2 class="t-label-xl">Interactive demo</h2><p class="t-paragraph-m">One page that runs the whole product: every screen, sheet and dialog, with live transitions. Switch screen, state, role, device and theme from the top bar.</p></a>
+    <a class="glass glass-panel press" href="board.html"><h2 class="t-label-xl">Design board</h2><p class="t-paragraph-m">One canvas with every design, labelled, at desktop, tablet and mobile, in a light canvas and a dark canvas. Pan, zoom, and click any frame to open it live.</p></a>
+  </div>
+  <div id="list" class="stack-24 stack"></div>
+</main>
+<script src="assets/screens.js"></script>
+<script>
+(function () {
+  var all = window.LH_SCREENS || [], n = 0,
+      d = all, esc = function (s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;'); };
+  document.getElementById('list').innerHTML = d.map(function (f) {
+    n += f.screens.length;
+    return '<section class="stack"><h2 class="t-sublabel-m">' + esc(f.id + ' — ' + f.name) + '</h2><ul class="ix-list">' + f.screens.map(function (s) {
+      return '<li><a href="' + s.file + '"><b class="tnum">' + s.id + '</b><span class="grow" style="color:var(--text-default)">' + esc(s.title) + '</span><span class="t-paragraph-s">' + esc(s.type) + '</span></a></li>';
+    }).join('') + '</ul></section>';
+  }).join('');
+  document.getElementById('count').textContent = n + ' designs across ' + d.length + ' features. Each link opens that design at 375, 768 and 1440 with its annotations.';
+})();
+</script>
+</body>
+</html>

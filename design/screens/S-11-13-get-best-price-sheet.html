@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-11-13 Get best price</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-11.css">
+</head>
+<body class="t-paragraph-m" data-kind="overlay" data-host="S-10-12-product-detail.html" data-states="default">
+<div class="screen overlay" data-variant="sheet">
+  <button class="scrim" data-close aria-label="Close"></button>
+  <section class="sheet" role="dialog" aria-modal="true" aria-labelledby="st">
+    <span class="sheet-grab" aria-hidden="true"></span>
+    <div class="sheet-head"><div class="txt"><h1 id="st" class="t-label-xl">Get the best available price from trusted dealers near you.</h1></div><button class="ibtn ibtn-44 glass glass-icon press" data-close aria-label="Close"><i class="ic hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></div>
+    <div class="sheet-body">
+      <section class="pick" aria-labelledby="c1">
+        <span class="ribbon t-label-xs"><i class="ic ic-16 hgi hgi-stroke hgi-star" aria-hidden="true"></i>Recommended</span>
+        <div class="pick-head"><span class="logo" aria-hidden="true"><img class="logo-light" src="assets/logo_mark_light.png" alt=""><img class="logo-dark" src="assets/logo_mark.png" alt=""></span><h2 id="c1" class="t-label-l">Let Lighthouse handle it</h2></div>
+        <p class="t-paragraph-m">We compare quotes from multiple verified dealers and help you get the best available price.</p>
+        <ul class="chk-tags"><li class="tag t-paragraph-s"><i class="ic ic-16 hgi hgi-stroke hgi-tick-02" aria-hidden="true"></i>Competitive Pricing</li><li class="tag t-paragraph-s"><i class="ic ic-16 hgi hgi-stroke hgi-tick-02" aria-hidden="true"></i>Verified Dealers</li><li class="tag t-paragraph-s"><i class="ic ic-16 hgi hgi-stroke hgi-tick-02" aria-hidden="true"></i>Best Available Quote</li></ul>
+        <button class="btn btn-filled btn-full t-label-m press" data-open="S-11-15-order-confirmation-sheet.html" data-replace>GET BEST PRICE</button>
+      </section>
+      <section class="pick" aria-labelledby="c2">
+        <h2 id="c2" class="t-label-l">Order through your preferred dealer</h2>
+        <p class="t-paragraph-m">Choose a dealer you already know. We’ll send the order request and help you track it in Lighthouse.</p>
+        <button class="btn btn-stroke glass btn-full t-label-m press" data-open="S-11-14-select-dealer-sheet.html" data-replace>SELECT DEALER</button>
+      </section>
+    </div>
+  </section>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375</b> — content-height glass bottom sheet: handle, headline, the "Recommended" card (ribbon, Lighthouse mark + title, description, three check chips, filled CTA) and the second card (title, description, outlined CTA).</li>
+      <li><b>768 / 1440</b> — side sheet from the right, 440 wide, same stack; the footer stays pinned.</li>
+      <li>One state only: both cards always show; there is no data fetch. An empty dealer list is handled in S-11-14.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Bottom sheet / side sheet · IconButton glass (close)</li>
+      <li>Option card · Label "Recommended" · Tag with check (static)</li>
+      <li>Button filled L · Button translucent L</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Open / close — <code>--panel-*</code> (bottom sheet under 768, side sheet from 768)</li>
+      <li>Button press — <code>--press-*</code>; toast — <code>--toast-*</code></li>
+      <li>Each CTA closes this sheet and opens the next one (S-11-15 or S-11-14) — <code>--panel-*</code></li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li>Dialog named by the headline; each card is a group with a heading.</li>
+      <li>"Recommended" is text, not colour alone; the chips are a plain list, not controls.</li>
+      <li>Focus order: GET BEST PRICE, then SELECT DEALER; focus returns to the product CTA on close.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>Cards stay stacked in the side sheet at 1440 (the spec allows side by side in a modal).</li>
+      <li>The caller (product detail, F-10) blocks opening until every variant group is selected.</li>
+      <li>The ribbon text uses the default text colour on the recommended tint for contrast; the star carries the recommended colour.</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

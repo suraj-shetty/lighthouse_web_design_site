@@ -1,0 +1,9 @@
+/* Lighthouse design tokens — import this once at the app root. */
+@import "./colors.css";
+@import "./typography.css";
+@import "./spacing.css";
+@import "./effects.css";
+@import "./motion.css";
+
+html { font-family: var(--font-sans); color: var(--text-default); background: var(--bg-default); -webkit-font-smoothing: antialiased; }
+:focus-visible { outline: 3px solid var(--focus-ring); outline-offset: 2px; }

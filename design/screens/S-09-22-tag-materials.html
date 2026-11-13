@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-09-22 Tag materials on image</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-09.css">
+</head>
+<body class="t-paragraph-m" data-kind="overlay" data-host="S-09-20-add-space.html" data-states="default,empty,loading">
+<div class="screen overlay f09" data-variant="full">
+  <button class="scrim" data-close aria-label="Close"></button>
+  <section class="sheet" role="dialog" aria-modal="true" aria-labelledby="tgt">
+    <div class="sheet-head f09-head"><div class="bar grow">
+      <button class="ibtn ibtn-44 glass glass-icon press" aria-label="Close" data-close><i class="ic ic-24 hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button>
+      <h1 id="tgt" class="sr-only">Tag materials</h1><span class="grow"></span>
+      <button class="btn btn-s btn-filled t-label-xs press" data-close>SAVE</button>
+    </div></div>
+    <div class="f09-tagger">
+      <div class="f09-stage">
+        <p class="f09-hint glass glass-panel t-paragraph-s" data-show="empty">Tap anywhere on the image to tag a material</p>
+        <button class="f09-canvas" data-open="S-09-23-product-picker.html" aria-label="Image with 3 product tags. Activate to add a product at the pointer or crosshair position" data-show="default"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&h=900&fit=crop&q=70" alt="Space media 1: courtyard verandah with stone floor and pendant light"><span class="f09-marker" style="--x:28%;--y:62%" aria-hidden="true"></span><span class="f09-marker" style="--x:61%;--y:34%" aria-hidden="true"></span><span class="f09-marker" style="--x:74%;--y:78%" aria-hidden="true"></span></button>
+        <button class="f09-canvas" data-open="S-09-23-product-picker.html" aria-label="Image with no product tags. Activate to add a product at the pointer or crosshair position" data-show="empty"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&h=900&fit=crop&q=70" alt="Space media 1: courtyard verandah with stone floor and pendant light"></button>
+        <div class="f09-canvas" data-show="loading" aria-busy="true"><span class="skel"></span></div>
+        <div class="f09-zoom glass glass-icon" role="group" aria-label="Zoom"><button class="ibtn ibtn-36 ibtn-plain press" aria-label="Zoom out" disabled><i class="ic hgi hgi-stroke hgi-minus-sign" aria-hidden="true"></i></button><button class="ibtn ibtn-36 ibtn-plain press" aria-label="Zoom in" ><i class="ic hgi hgi-stroke hgi-plus-sign" aria-hidden="true"></i></button></div>
+      </div>
+      <div class="f09-used" data-show="default">
+        <div class="txt"><h2 class="t-label-m" aria-live="polite">Products Used (3)</h2><p class="t-paragraph-s">Tap anywhere on the image to add more products</p></div>
+        <ul><li><div class="f09-prow press" ><img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=160&h=160&fit=crop&q=70" alt=""><span class="txt"><span class="tag t-label-xs">Kalinga Stone</span><span class="ttl one t-label-s">Kota Blue Limestone Tile, Honed, 600 × 600 mm</span><span class="price t-paragraph-s"><span>Price</span><span class="t-label-s tnum">₹145</span></span></span><button class="ibtn f09-x press" aria-label="Remove Kota Blue Limestone Tile, Honed, 600 × 600 mm"><i class="ic ic-16 hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></div></li><li><div class="f09-prow press" ><img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=160&h=160&fit=crop&q=70" alt=""><span class="txt"><span class="tag t-label-xs">Vayu Lighting</span><span class="ttl one t-label-s">Dome 300 Brass Pendant Light</span><span class="price t-paragraph-s"><span>Price</span><span class="t-label-s tnum">₹12,400</span></span></span><button class="ibtn f09-x press" aria-label="Remove Dome 300 Brass Pendant Light"><i class="ic ic-16 hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></div></li><li><div class="f09-prow press" ><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=160&h=160&fit=crop&q=70" alt=""><span class="txt"><span class="tag t-label-xs">Nilaya Woodworks</span><span class="ttl one t-label-s">Courtyard Three-seater Sofa, Solid Teak</span><span class="price t-paragraph-s"><span>Price</span><span class="t-label-s tnum">₹1,24,500</span></span></span><button class="ibtn f09-x press" aria-label="Remove Courtyard Three-seater Sofa, Solid Teak"><i class="ic ic-16 hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></div></li></ul>
+      </div>
+    </div>
+  </section>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375</b> — full screen: the image at its real aspect ratio, a round marker at each tagged point; header overlay with close (left) and SAVE (right). No tags: a small glass hint card top-left. With tags: a bottom panel with the heading, helper line and a horizontal row of product cards (thumbnail, brand chip, title, Price + amount, remove badge on the corner).</li>
+      <li><b>768</b> — modal; image constrained to the viewport, wider card row.</li>
+      <li><b>1440</b> — modal media view: image on the left, "Products Used" as a right-hand list panel.</li>
+      <li>States: default (3 tags), empty (hint card, no panel), loading (shimmer until the image resolves). Error does not apply — no request is made here.</li>
+      <li>Tapping anywhere on the image — including on a marker — records the point and opens S-09-23; a returned product adds a marker and a card.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Full-screen / modal media view · IconButton glass (close) · Button filled S (SAVE)</li>
+      <li>Tag marker · glass hint card · zoom control</li>
+      <li>Product card (compact) · Tag (brand chip) · remove badge · Skeleton</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Open — <code>--mediaview-open-dur</code>; product picker — <code>--page-slide-*</code> (desktop <code>--modal-*</code>)</li>
+      <li>New marker — <code>--badge-pop-*</code>; remove — <code>--press-*</code></li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li>The image has alt text. The "Products Used" list is the accessible representation of the markers; every card has a "Remove" button.</li>
+      <li><b>Keyboard:</b> the image is one focusable control; arrow keys move a crosshair and Enter opens the product picker for that point.</li>
+      <li>Zoom in / out buttons are keyboard reachable (the app uses pinch, 1×–5×). The tag count heading is a polite live region.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>Keyboard tagging (crosshair) and the zoom buttons are web additions — not in the app; confirm the pattern.</li>
+      <li>Markers use <code>--success-default</code> with a white ring. Background is <code>--bg-default</code> (the app uses pure black in dark mode).</li>
+      <li>Close discards unsaved tags without confirmation (Q-67). Cards are not links to the marketplace (Q-62).</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

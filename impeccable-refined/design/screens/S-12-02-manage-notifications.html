@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-12-02 Manage Notification</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-12.css">
+</head>
+<body class="t-paragraph-m" data-states="default,search,push-blocked,loading,empty,error"
+      data-shell="main" data-nav="home">
+<div class="screen app on-surface" style="--page-bg: var(--home-surface); --page-max: 960px">
+  <div class="app-main">
+    <header class="top">
+      <div class="top-inner glass glass-panel">
+        <div class="bar">
+          <a class="ibtn ibtn-44 glass glass-icon press" data-back href="S-13-01-my-profile.html" aria-label="Back"><i class="ic ic-24 hgi hgi-stroke hgi-arrow-left-01" aria-hidden="true"></i></a>
+          <h1 class="t-label-xl">Manage Notification</h1>
+        </div>
+      </div>
+    </header>
+
+    <!-- DEFAULT: channels open, categories collapsed · PUSH-BLOCKED: browser permission not granted, Push stays off -->
+    <main class="page" data-show="default push-blocked">
+      <label class="search mn-search" role="search"><i class="ic hgi hgi-stroke hgi-search-01" aria-hidden="true"></i><input class="t-paragraph-l" type="search" placeholder="Search..." aria-label="Search notification settings"></label>
+      <div class="split mn-split">
+        <div class="mn sticky" data-show="default">
+          <details class="acc" open>
+            <summary><span class="hd"><i class="ic lead-ic hgi hgi-stroke hgi-notification-03" aria-hidden="true"></i><h2 class="t-sublabel-s">NOTIFICATION CHANNELS</h2></span><i class="ic hgi hgi-stroke hgi-arrow-down-01" aria-hidden="true"></i></summary>
+            <div class="acc-body"><ul class="card mn-card srows"><li class="srow"><span class="txt"><span class="t-paragraph-l">Push notifications</span></span><button class="switch" role="switch" aria-checked="true" aria-label="Push notifications"></button></li><li class="srow"><span class="txt"><span class="t-paragraph-l">Email</span></span><button class="switch" role="switch" aria-checked="true" aria-label="Email"></button></li><li class="srow"><span class="txt"><span class="t-paragraph-l">SMS</span></span><button class="switch" role="switch" aria-checked="false" aria-label="SMS"></button></li><li class="srow"><span class="txt"><span class="t-paragraph-l">WhatsApp</span></span><button class="switch" role="switch" aria-checked="true" aria-label="WhatsApp"></button></li><li class="srow"><span class="txt"><span class="t-paragraph-l">In-app</span></span><span class="lock" title="This setting is always on"><i class="ic ic-16 hgi hgi-stroke hgi-lock" aria-hidden="true"></i><span class="sr-only">Always on. This setting cannot be changed.</span></span><button class="switch" role="switch" aria-checked="true" aria-label="In-app" aria-disabled="true" tabindex="-1"></button></li></ul></div>
+          </details>
+        </div>
+        <div class="mn sticky" data-show="push-blocked">
+          <details class="acc" open>
+            <summary><span class="hd"><i class="ic lead-ic hgi hgi-stroke hgi-notification-03" aria-hidden="true"></i><h2 class="t-sublabel-s">NOTIFICATION CHANNELS</h2></span><i class="ic hgi hgi-stroke hgi-arrow-down-01" aria-hidden="true"></i></summary>
+            <div class="acc-body"><p class="note warning mn-note t-paragraph-s" role="status"><i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i><span>Notifications are blocked for this site. Allow them in your browser settings, then turn Push on again.</span></p><ul class="card mn-card srows"><li class="srow"><span class="txt"><span class="t-paragraph-l">Push notifications</span></span><button class="switch" role="switch" aria-checked="false" aria-label="Push notifications"></button></li><li class="srow"><span class="txt"><span class="t-paragraph-l">Email</span></span><button class="switch" role="switch" aria-checked="true" aria-label="Email"></button></li><li class="srow"><span class="txt"><span class="t-paragraph-l">SMS</span></span><button class="switch" role="switch" aria-checked="false" aria-label="SMS"></button></li><li class="srow"><span class="txt"><span class="t-paragraph-l">WhatsApp</span></span><button class="switch" role="switch" aria-checked="true" aria-label="WhatsApp"></button></li><li class="srow"><span class="txt"><span class="t-paragraph-l">In-app</span></span><span class="lock" title="This setting is always on"><i class="ic ic-16 hgi hgi-stroke hgi-lock" aria-hidden="true"></i><span class="sr-only">Always on. This setting cannot be changed.</span></span><button class="switch" role="switch" aria-checked="true" aria-label="In-app" aria-disabled="true" tabindex="-1"></button></li></ul></div>
+          </details>
+        </div>
+        <div class="mn">
+          <details class="acc">
+            <summary><span class="hd"><i class="ic lead-ic hgi hgi-stroke hgi-settings-02" aria-hidden="true"></i><h2 class="t-sublabel-s">ACCOUNT &AMP; SECURITY</h2></span><i class="ic hgi hgi-stroke hgi-arrow-down-01" aria-hidden="true"></i></summary>
+            <div class="acc-body"><ul class="card mn-card srows"><li class="srow"><span class="txt"><span class="t-paragraph-l">Security alerts</span></span><span class="lock" title="This setting is always on"><i class="ic ic-16 hgi hgi-stroke hgi-lock" aria-hidden="true"></i><span class="sr-only">Always on. This setting cannot be changed.</span></span><button class="switch" role="switch" aria-checked="true" aria-label="Security alerts" aria-disabled="true" tabindex="-1"></button></li><li class="srow"><span class="txt"><span class="t-paragraph-l">Sign-in from a new device</span></span><button class="switch" role="switch" aria-checked="true" aria-label="Sign-in from a new device"></button></li><li class="srow"><span class="txt"><span class="t-paragraph-l">Profile completion reminders</span></span><button class="switch" role="switch" aria-checked="false" aria-label="Profile completion reminders"></button></li></ul></div>
+          </details>
+          <details class="acc">
+            <summary><span class="hd"><i class="ic lead-ic hgi hgi-stroke hgi-checkmark-circle-01" aria-hidden="true"></i><h2 class="t-sublabel-s">PROFILE APPROVALS</h2></span><i class="ic hgi hgi-stroke hgi-arrow-down-01" aria-hidden="true"></i></summary>
+            <div class="acc-body"><ul class="card mn-card srows"><li class="srow"><span class="txt"><span class="t-paragraph-l">Profile submitted</span></span><button class="switch" role="switch" aria-checked="true" aria-label="Profile submitted"></button></li><li class="srow"><span class="txt"><span class="t-paragraph-l">Profile approved</span></span><button class="switch" role="switch" aria-checked="true" aria-label="Profile approved"></button></li><li class="srow"><span class="txt"><span class="t-paragraph-l">Changes required</span></span><button class="switch" role="switch" aria-checked="true" aria-label="Changes required"></button></li></ul></div>
+          </details>
+          <details class="acc">
+            <summary><span class="hd"><i class="ic lead-ic hgi hgi-stroke hgi-pulse-01" aria-hidden="true"></i><h2 class="t-sublabel-s">SOCIAL ACTIVITY</h2></span><i class="ic hgi hgi-stroke hgi-arrow-down-01" aria-hidden="true"></i></summary>
+            <div class="acc-body"><ul class="card mn-card srows"><li class="srow"><span class="txt"><span class="t-paragraph-l">Likes on your posts</span></span><button class="switch" role="switch" aria-checked="true" aria-label="Likes on your posts"></button></li><li class="srow"><span class="txt"><span class="t-paragraph-l">Comments and replies</span></span><button class="switch" role="switch" aria-checked="true" aria-label="Comments and replies"></button></li><li class="srow"><span class="txt"><span class="t-paragraph-l">New followers</span></span><button class="switch" role="switch" aria-checked="true" aria-label="New followers"></button></li><li class="srow"><span class="txt"><span class="t-paragraph-l">Mentions</span></span><button class="switch" role="switch" aria-checked="true" aria-label="Mentions"></button></li><li class="srow"><span class="txt"><span class="t-paragraph-l">Posts from people you follow</span></span><button class="switch" role="switch" aria-checked="false" aria-label="Posts from people you follow"></button></li><li class="srow"><span class="txt"><span class="t-paragraph-l">Review received</span></span><button class="switch" role="switch" aria-checked="true" aria-label="Review received"></button></li><li class="srow"><span class="txt"><span class="t-paragraph-l">Review requested</span></span><button class="switch" role="switch" aria-checked="true" aria-label="Review requested"></button></li></ul></div>
+          </details>
+          <details class="acc">
+            <summary><span class="hd"><i class="ic lead-ic hgi hgi-stroke hgi-folder-open" aria-hidden="true"></i><h2 class="t-sublabel-s">PROJECTS</h2></span><i class="ic hgi hgi-stroke hgi-arrow-down-01" aria-hidden="true"></i></summary>
+            <div class="acc-body"><ul class="card mn-card srows"><li class="srow"><span class="txt"><span class="t-paragraph-l">Tagged in a project</span></span><button class="switch" role="switch" aria-checked="true" aria-label="Tagged in a project"></button></li><li class="srow"><span class="txt"><span class="t-paragraph-l">Added as a collaborator</span></span><button class="switch" role="switch" aria-checked="true" aria-label="Added as a collaborator"></button></li></ul></div>
+          </details>
+          <details class="acc">
+            <summary><span class="hd"><i class="ic lead-ic hgi hgi-stroke hgi-invoice-01" aria-hidden="true"></i><h2 class="t-sublabel-s">ORDERS &AMP; QUOTES</h2></span><i class="ic hgi hgi-stroke hgi-arrow-down-01" aria-hidden="true"></i></summary>
+            <div class="acc-body"><ul class="card mn-card srows"><li class="srow"><span class="txt"><span class="t-paragraph-l">New order requests</span></span><button class="switch" role="switch" aria-checked="true" aria-label="New order requests"></button></li><li class="srow"><span class="txt"><span class="t-paragraph-l">Quote received</span></span><button class="switch" role="switch" aria-checked="true" aria-label="Quote received"></button></li><li class="srow"><span class="txt"><span class="t-paragraph-l">Dealer selected</span></span><button class="switch" role="switch" aria-checked="true" aria-label="Dealer selected"></button></li><li class="srow"><span class="txt"><span class="t-paragraph-l">Delivery proof uploaded</span></span><button class="switch" role="switch" aria-checked="true" aria-label="Delivery proof uploaded"></button></li><li class="srow"><span class="txt"><span class="t-paragraph-l">Delivery review reminders</span></span><button class="switch" role="switch" aria-checked="false" aria-label="Delivery review reminders"></button></li><li class="srow"><span class="txt"><span class="t-paragraph-l">Order completed</span></span><button class="switch" role="switch" aria-checked="true" aria-label="Order completed"></button></li><li class="srow"><span class="txt"><span class="t-paragraph-l">Order rejected</span></span><button class="switch" role="switch" aria-checked="true" aria-label="Order rejected"></button></li></ul></div>
+          </details>
+        </div>
+      </div>
+    </main>
+
+    <!-- SEARCH "review": matching items only, every matching section forced open -->
+    <main class="page" data-show="search">
+      <label class="search mn-search" role="search"><i class="ic hgi hgi-stroke hgi-search-01" aria-hidden="true"></i><input class="t-paragraph-l" type="search" placeholder="Search..." aria-label="Search notification settings" value="review"><button class="ibtn ibtn-36 ibtn-plain press" aria-label="Clear search" data-go-state="default"><i class="ic hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></label>
+      <p class="sr-only" role="status">3 settings in 2 sections match</p>
+      <div class="mn">
+          <details class="acc" open>
+            <summary><span class="hd"><i class="ic lead-ic hgi hgi-stroke hgi-pulse-01" aria-hidden="true"></i><h2 class="t-sublabel-s">SOCIAL ACTIVITY</h2></span><i class="ic hgi hgi-stroke hgi-arrow-down-01" aria-hidden="true"></i></summary>
+            <div class="acc-body"><ul class="card mn-card srows"><li class="srow"><span class="txt"><span class="t-paragraph-l">Review received</span></span><button class="switch" role="switch" aria-checked="true" aria-label="Review received"></button></li><li class="srow"><span class="txt"><span class="t-paragraph-l">Review requested</span></span><button class="switch" role="switch" aria-checked="true" aria-label="Review requested"></button></li></ul></div>
+          </details>
+          <details class="acc" open>
+            <summary><span class="hd"><i class="ic lead-ic hgi hgi-stroke hgi-invoice-01" aria-hidden="true"></i><h2 class="t-sublabel-s">ORDERS &AMP; QUOTES</h2></span><i class="ic hgi hgi-stroke hgi-arrow-down-01" aria-hidden="true"></i></summary>
+            <div class="acc-body"><ul class="card mn-card srows"><li class="srow"><span class="txt"><span class="t-paragraph-l">Delivery review reminders</span></span><button class="switch" role="switch" aria-checked="false" aria-label="Delivery review reminders"></button></li></ul></div>
+          </details>
+      </div>
+    </main>
+
+    <!-- EMPTY: the search matches nothing -->
+    <main class="page" data-show="empty">
+      <label class="search mn-search" role="search"><i class="ic hgi hgi-stroke hgi-search-01" aria-hidden="true"></i><input class="t-paragraph-l" type="search" placeholder="Search..." aria-label="Search notification settings" value="invoice reminders"><button class="ibtn ibtn-36 ibtn-plain press" aria-label="Clear search" data-go-state="default"><i class="ic hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></label>
+      <p class="line-empty t-paragraph-m" role="status">No matching settings found</p>
+    </main>
+
+    <!-- LOADING: one section header + 3 switch rows, then 4 collapsed section headers -->
+    <main class="page" aria-busy="true" aria-label="Loading notification settings" data-show="loading">
+      <div class="mn" aria-hidden="true">
+        <span class="skel" style="height:48px;border-radius:var(--radius-full);margin-bottom:var(--spacing-8)"></span>
+        <div class="row" style="min-height:52px"><span class="skel skel-circle" style="width:20px;height:20px"></span><span class="skel" style="width:180px;height:12px"></span><span class="grow"></span><span class="skel" style="width:20px;height:20px"></span></div>
+        <ul class="card mn-card srows"><li class="srow"><span class="skel" style="width:44%;height:16px"></span><span class="grow"></span><span class="skel" style="width:52px;height:28px;border-radius:var(--radius-full)"></span></li><li class="srow"><span class="skel" style="width:28%;height:16px"></span><span class="grow"></span><span class="skel" style="width:52px;height:28px;border-radius:var(--radius-full)"></span></li><li class="srow"><span class="skel" style="width:36%;height:16px"></span><span class="grow"></span><span class="skel" style="width:52px;height:28px;border-radius:var(--radius-full)"></span></li></ul>
+        <div class="row" style="min-height:52px"><span class="skel skel-circle" style="width:20px;height:20px"></span><span class="skel" style="width:150px;height:12px"></span><span class="grow"></span><span class="skel" style="width:20px;height:20px"></span></div><div class="row" style="min-height:52px"><span class="skel skel-circle" style="width:20px;height:20px"></span><span class="skel" style="width:130px;height:12px"></span><span class="grow"></span><span class="skel" style="width:20px;height:20px"></span></div><div class="row" style="min-height:52px"><span class="skel skel-circle" style="width:20px;height:20px"></span><span class="skel" style="width:120px;height:12px"></span><span class="grow"></span><span class="skel" style="width:20px;height:20px"></span></div><div class="row" style="min-height:52px"><span class="skel skel-circle" style="width:20px;height:20px"></span><span class="skel" style="width:140px;height:12px"></span><span class="grow"></span><span class="skel" style="width:20px;height:20px"></span></div>
+      </div>
+    </main>
+
+    <!-- ERROR: message + Retry -->
+    <main class="page" data-show="error">
+      <div class="empty" role="alert">
+        <div class="empty-text"><p class="t-paragraph-m">Something went wrong. Please try again later.</p></div>
+        <button class="btn btn-text t-label-s press" data-go-state="loading">Retry</button>
+      </div>
+    </main>
+  </div>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375</b>: glass back button + title, search field, then collapsible sections: header row (icon, uppercase title, chevron) and, when open, a card of labelled switches divided by hairlines. "Notification Channels" is first and open; one section per backend category follows, collapsed.</li>
+      <li><b>768</b>: the same in a centred column.</li>
+      <li><b>1440</b>: settings layout in two columns: channels pinned on the left, category sections on the right.</li>
+      <li>States: default, search (query "review": only matching items, matching sections forced open), push-blocked (browser permission not granted), loading, empty ("No matching settings found"), error (message + Retry).</li>
+      <li>Channel labels, category titles and item labels come from the backend; the ones here are sample data. Channels the backend marks unavailable are not listed.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Top header · IconButton glass (back) · Search input (with clear)</li>
+      <li>Accordion (section header + card) · Switch (on, off, locked) · Settings rows</li>
+      <li>Info banner (push blocked) · Skeleton · single-line empty text · Button text (Retry) · Toast (failed toggle: "Error" + message)</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Section expand / collapse: <code>--panel-*</code>; switch: <code>--duration-fast</code>; skeleton: <code>--shimmer-*</code>, <code>--skel-*</code>; toast: <code>--toast-*</code>; back: <code>--page-slide-*</code></li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li><code>h1</code> is the title; each section header is a disclosure button with an <code>h2</code> and its expanded state.</li>
+      <li>Every switch has <code>role="switch"</code> and its label; a locked switch is <code>aria-disabled</code>, shows a lock, and says "Always on. This setting cannot be changed.".</li>
+      <li>Search is labelled; the number of matches is announced politely; the error has a focusable Retry; toasts use <code>aria-live</code>.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li><b>Browser push</b> (Q-23, in scope): turning Push on asks for the browser notification permission through OneSignal web push first. If it is not granted the switch stays off. Flutter has no copy for that case; the banner text in state <b>push-blocked</b> is a web addition to approve. The backend push-subscription endpoint still needs a web platform value.</li>
+      <li>The Push switch shows on only when the backend preference is on <b>and</b> this browser is subscribed; the browser state is re-read when the tab regains focus.</li>
+      <li>Search placeholder is "Search...", the default of the shared Flutter search field.</li>
+      <li>Locked switches show a lock and an "always on" explanation for assistive technology; Flutter only dims them.</li>
+      <li>Category glyphs: CheckmarkBadge02 → CheckmarkCircle01, Activity03 → Pulse01, Folder01 → FolderOpen (not in <code>ICONS.md</code>); Settings02, Invoice01 and Notification03 as in Flutter.</li>
+      <li>Navigation highlight: the screen is pushed from My profile, which has no tab of its own; Home is used as the parent tab.</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

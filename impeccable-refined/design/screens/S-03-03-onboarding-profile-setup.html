@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-03-03 Onboarding, profile setup</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-01-04.css">
+</head>
+<body class="t-paragraph-m" data-states="default,filled,invalid,taken,loading,error">
+<div class="screen app on-surface auth" style="--page-bg: var(--home-surface)">
+  <div class="auth-main">
+    <div class="auth-card wide">
+    <main class="ob-step" data-show="default">
+      <div class="ob-bar"><a class="ibtn ibtn-44 ibtn-solid press" data-back href="S-03-01-onboarding-user-type.html" aria-label="Back"><i class="ic hgi hgi-stroke hgi-arrow-left-01" aria-hidden="true"></i></a><div class="segs" aria-hidden="true"><span></span><span></span><span class="on"></span></div><span class="sr-only">Step 3 of 3</span></div>
+      <div class="ob-title"><h1 class="t-label-xxl">Set Up Your Profile</h1><p class="t-paragraph-s text-soft">Your profile helps others understand who you are and what you do.</p></div>
+      <div class="pf">
+        <div class="pf-side"><div class="pf-photo"><span class="avatar" role="img" aria-label="No profile photo"><i class="ic ic-24 hgi hgi-stroke hgi-user" aria-hidden="true"></i></span><button class="pf-add press" data-open="S-03-05-update-photo-sheet.html" aria-haspopup="dialog" aria-label="Add profile photo"><i class="ic ic-16 hgi hgi-stroke hgi-plus-sign" aria-hidden="true"></i></button></div></div>
+        <div class="pf-form">
+          <div class="field">
+            <label class="t-label-small" for="n1">Name <span class="req" aria-hidden="true">*</span></label>
+            <div class="input t-paragraph-m"><i class="ic hgi hgi-stroke hgi-user" aria-hidden="true"></i><input id="n1" type="text" placeholder="Enter your name" value="" autocomplete="name" aria-required="true"></div>
+            
+          </div>
+          <div class="field">
+            <label class="t-label-small" for="u1">Username <span class="req" aria-hidden="true">*</span></label>
+            <div class="input t-paragraph-m"><i class="ic hgi hgi-stroke hgi-user" aria-hidden="true"></i><input id="u1" type="text" placeholder="Choose a username" value="" autocomplete="username" aria-required="true"></div>
+            
+          </div>
+          <div class="field">
+            <span class="t-label-small label" id="l1-l">Current Location <span class="req" aria-hidden="true">*</span></span>
+            <button class="select t-paragraph-m is-empty" id="l1" data-open="S-03-04-location-search-sheet.html" aria-haspopup="dialog" aria-labelledby="l1-l l1"><i class="ic hgi hgi-stroke hgi-city-01" aria-hidden="true"></i><span>Select current location</span><i class="ic hgi hgi-stroke hgi-arrow-down-01" aria-hidden="true"></i></button>
+            
+          </div>
+          <div class="field">
+            <label class="t-label-small" for="e1">Email</label>
+            <div class="input t-paragraph-m"><i class="ic hgi hgi-stroke hgi-mail-01" aria-hidden="true"></i><input id="e1" type="email" placeholder="Enter your email" value="" autocomplete="email"></div>
+            
+          </div>
+        </div>
+      </div>
+      <div class="auth-foot pin"><div class="ob-cta" style="display:flex"><button class="btn btn-filled btn-full t-label-m press" data-go-state="invalid">Submit</button></div></div>
+    </main>
+    <main class="ob-step" data-show="filled">
+      <div class="ob-bar"><a class="ibtn ibtn-44 ibtn-solid press" data-back href="S-03-01-onboarding-user-type.html" aria-label="Back"><i class="ic hgi hgi-stroke hgi-arrow-left-01" aria-hidden="true"></i></a><div class="segs" aria-hidden="true"><span></span><span></span><span class="on"></span></div><span class="sr-only">Step 3 of 3</span></div>
+      <div class="ob-title"><h1 class="t-label-xxl">Set Up Your Profile</h1><p class="t-paragraph-s text-soft">Your profile helps others understand who you are and what you do.</p></div>
+      <div class="pf">
+        <div class="pf-side"><div class="pf-photo"><img class="avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=272&h=272&fit=crop&q=70" alt="Your profile photo" loading="lazy"><button class="pf-add press" data-open="S-03-05-update-photo-sheet.html" aria-haspopup="dialog" aria-label="Add profile photo"><i class="ic ic-16 hgi hgi-stroke hgi-plus-sign" aria-hidden="true"></i></button></div></div>
+        <div class="pf-form">
+          <div class="field">
+            <label class="t-label-small" for="bn">Name <span class="req" aria-hidden="true">*</span></label>
+            <div class="input t-paragraph-m"><i class="ic hgi hgi-stroke hgi-user" aria-hidden="true"></i><input id="bn" type="text" placeholder="Enter your name" value="Aarav Sharma" autocomplete="name" aria-required="true"></div>
+            
+          </div>
+          <div class="field">
+            <label class="t-label-small" for="bu">Username <span class="req" aria-hidden="true">*</span></label>
+            <div class="input t-paragraph-m"><i class="ic hgi hgi-stroke hgi-user" aria-hidden="true"></i><input id="bu" type="text" placeholder="Choose a username" value="aarav.designs" autocomplete="username" aria-required="true"><i class="ic ok hgi hgi-stroke hgi-checkmark-circle-01" aria-hidden="true"></i><span class="sr-only" role="status">Username available</span></div>
+            
+          </div>
+          <div class="field">
+            <span class="t-label-small label" id="bl-l">Current Location <span class="req" aria-hidden="true">*</span></span>
+            <button class="select t-paragraph-m" id="bl" data-open="S-03-04-location-search-sheet.html" data-open-state="selected" aria-haspopup="dialog" aria-labelledby="bl-l bl"><i class="ic hgi hgi-stroke hgi-city-01" aria-hidden="true"></i><span>Bandra West, Mumbai</span><i class="ic hgi hgi-stroke hgi-arrow-down-01" aria-hidden="true"></i></button>
+            
+          </div>
+          <div class="field">
+            <label class="t-label-small" for="be">Email</label>
+            <div class="input t-paragraph-m"><i class="ic hgi hgi-stroke hgi-mail-01" aria-hidden="true"></i><input id="be" type="email" placeholder="Enter your email" value="aarav@studioaarav.in" autocomplete="email"></div>
+            
+          </div>
+        </div>
+      </div>
+      <div class="auth-foot pin"><div class="ob-cta" style="display:flex"><a class="btn btn-filled btn-full t-label-m press" href="S-20-01-home-tab.html">Submit</a></div></div>
+    </main>
+    <main class="ob-step" data-show="invalid">
+      <div class="ob-bar"><a class="ibtn ibtn-44 ibtn-solid press" data-back href="S-03-01-onboarding-user-type.html" aria-label="Back"><i class="ic hgi hgi-stroke hgi-arrow-left-01" aria-hidden="true"></i></a><div class="segs" aria-hidden="true"><span></span><span></span><span class="on"></span></div><span class="sr-only">Step 3 of 3</span></div>
+      <div class="ob-title"><h1 class="t-label-xxl">Set Up Your Profile</h1><p class="t-paragraph-s text-soft">Your profile helps others understand who you are and what you do.</p></div>
+      <div class="pf">
+        <div class="pf-side"><div class="pf-photo"><span class="avatar" role="img" aria-label="No profile photo"><i class="ic ic-24 hgi hgi-stroke hgi-user" aria-hidden="true"></i></span><button class="pf-add press" data-open="S-03-05-update-photo-sheet.html" aria-haspopup="dialog" aria-label="Add profile photo"><i class="ic ic-16 hgi hgi-stroke hgi-plus-sign" aria-hidden="true"></i></button></div></div>
+        <div class="pf-form">
+          <div class="field">
+            <label class="t-label-small" for="n3">Name <span class="req" aria-hidden="true">*</span></label>
+            <div class="input t-paragraph-m is-error"><i class="ic hgi hgi-stroke hgi-user" aria-hidden="true"></i><input id="n3" type="text" placeholder="Enter your name" value="" autocomplete="name" aria-required="true" aria-invalid="true" aria-describedby="n3-e"></div>
+            <p class="helper error t-paragraph-s" id="n3-e" role="alert">Please enter a name</p>
+          </div>
+          <div class="field">
+            <label class="t-label-small" for="u3">Username <span class="req" aria-hidden="true">*</span></label>
+            <div class="input t-paragraph-m is-error"><i class="ic hgi hgi-stroke hgi-user" aria-hidden="true"></i><input id="u3" type="text" placeholder="Choose a username" value="" autocomplete="username" aria-required="true" aria-invalid="true" aria-describedby="u3-e"></div>
+            <p class="helper error t-paragraph-s" id="u3-e" role="alert">Please enter username</p>
+          </div>
+          <div class="field">
+            <span class="t-label-small label" id="l3-l">Current Location <span class="req" aria-hidden="true">*</span></span>
+            <button class="select t-paragraph-m is-empty is-error" id="l3" data-open="S-03-04-location-search-sheet.html" aria-haspopup="dialog" aria-labelledby="l3-l l3"><i class="ic hgi hgi-stroke hgi-city-01" aria-hidden="true"></i><span>Select current location</span><i class="ic hgi hgi-stroke hgi-arrow-down-01" aria-hidden="true"></i></button>
+            <p class="helper error t-paragraph-s" id="l3-e" role="alert">Please select your current location</p>
+          </div>
+          <div class="field">
+            <label class="t-label-small" for="e3">Email</label>
+            <div class="input t-paragraph-m is-error"><i class="ic hgi hgi-stroke hgi-mail-01" aria-hidden="true"></i><input id="e3" type="email" placeholder="Enter your email" value="aarav@studio" autocomplete="email" aria-invalid="true" aria-describedby="e3-e"></div>
+            <p class="helper error t-paragraph-s" id="e3-e" role="alert">Please enter a valid email</p>
+          </div>
+        </div>
+      </div>
+      <div class="auth-foot pin"><div class="ob-cta" style="display:flex"><button class="btn btn-filled btn-full t-label-m press" data-go-state="invalid">Submit</button></div></div>
+    </main>
+    <main class="ob-step" data-show="taken">
+      <div class="ob-bar"><a class="ibtn ibtn-44 ibtn-solid press" data-back href="S-03-01-onboarding-user-type.html" aria-label="Back"><i class="ic hgi hgi-stroke hgi-arrow-left-01" aria-hidden="true"></i></a><div class="segs" aria-hidden="true"><span></span><span></span><span class="on"></span></div><span class="sr-only">Step 3 of 3</span></div>
+      <div class="ob-title"><h1 class="t-label-xxl">Set Up Your Profile</h1><p class="t-paragraph-s text-soft">Your profile helps others understand who you are and what you do.</p></div>
+      <div class="pf">
+        <div class="pf-side"><div class="pf-photo"><img class="avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=272&h=272&fit=crop&q=70" alt="Your profile photo" loading="lazy"><button class="pf-add press" data-open="S-03-05-update-photo-sheet.html" aria-haspopup="dialog" aria-label="Add profile photo"><i class="ic ic-16 hgi hgi-stroke hgi-plus-sign" aria-hidden="true"></i></button></div></div>
+        <div class="pf-form">
+          <div class="field">
+            <label class="t-label-small" for="n4">Name <span class="req" aria-hidden="true">*</span></label>
+            <div class="input t-paragraph-m"><i class="ic hgi hgi-stroke hgi-user" aria-hidden="true"></i><input id="n4" type="text" placeholder="Enter your name" value="Aarav Sharma" autocomplete="name" aria-required="true"></div>
+            
+          </div>
+          <div class="field">
+            <label class="t-label-small" for="u4">Username <span class="req" aria-hidden="true">*</span></label>
+            <div class="input t-paragraph-m is-error"><i class="ic hgi hgi-stroke hgi-user" aria-hidden="true"></i><input id="u4" type="text" placeholder="Choose a username" value="aarav" autocomplete="username" aria-required="true" aria-invalid="true" aria-describedby="u4-e"></div>
+            <p class="helper error t-paragraph-s" id="u4-e" role="alert"><i class="ic ic-16 hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i>This username is already taken.</p>
+          </div>
+          <div class="field">
+            <span class="t-label-small label" id="l4-l">Current Location <span class="req" aria-hidden="true">*</span></span>
+            <button class="select t-paragraph-m" id="l4" data-open="S-03-04-location-search-sheet.html" data-open-state="selected" aria-haspopup="dialog" aria-labelledby="l4-l l4"><i class="ic hgi hgi-stroke hgi-city-01" aria-hidden="true"></i><span>Bandra West, Mumbai</span><i class="ic hgi hgi-stroke hgi-arrow-down-01" aria-hidden="true"></i></button>
+            
+          </div>
+          <div class="field">
+            <label class="t-label-small" for="e4">Email</label>
+            <div class="input t-paragraph-m"><i class="ic hgi hgi-stroke hgi-mail-01" aria-hidden="true"></i><input id="e4" type="email" placeholder="Enter your email" value="" autocomplete="email"></div>
+            
+          </div>
+        </div>
+      </div>
+      <div class="auth-foot pin"><div class="ob-cta" style="display:flex"><button class="btn btn-filled btn-full t-label-m press" data-go-state="taken">Submit</button></div></div>
+    </main>
+    <main class="ob-step" data-show="error">
+      <div class="ob-bar"><a class="ibtn ibtn-44 ibtn-solid press" data-back href="S-03-01-onboarding-user-type.html" aria-label="Back"><i class="ic hgi hgi-stroke hgi-arrow-left-01" aria-hidden="true"></i></a><div class="segs" aria-hidden="true"><span></span><span></span><span class="on"></span></div><span class="sr-only">Step 3 of 3</span></div>
+      <div class="ob-title"><h1 class="t-label-xxl">Set Up Your Profile</h1><p class="t-paragraph-s text-soft">Your profile helps others understand who you are and what you do.</p></div>
+      <div class="pf">
+        <div class="pf-side"><div class="pf-photo"><img class="avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=272&h=272&fit=crop&q=70" alt="Your profile photo" loading="lazy"><button class="pf-add press" data-open="S-03-05-update-photo-sheet.html" aria-haspopup="dialog" aria-label="Add profile photo"><i class="ic ic-16 hgi hgi-stroke hgi-plus-sign" aria-hidden="true"></i></button></div></div>
+        <div class="pf-form">
+          <div class="field">
+            <label class="t-label-small" for="en">Name <span class="req" aria-hidden="true">*</span></label>
+            <div class="input t-paragraph-m"><i class="ic hgi hgi-stroke hgi-user" aria-hidden="true"></i><input id="en" type="text" placeholder="Enter your name" value="Aarav Sharma" autocomplete="name" aria-required="true"></div>
+            
+          </div>
+          <div class="field">
+            <label class="t-label-small" for="eu">Username <span class="req" aria-hidden="true">*</span></label>
+            <div class="input t-paragraph-m"><i class="ic hgi hgi-stroke hgi-user" aria-hidden="true"></i><input id="eu" type="text" placeholder="Choose a username" value="aarav.designs" autocomplete="username" aria-required="true"><i class="ic ok hgi hgi-stroke hgi-checkmark-circle-01" aria-hidden="true"></i><span class="sr-only" role="status">Username available</span></div>
+            
+          </div>
+          <div class="field">
+            <span class="t-label-small label" id="el-l">Current Location <span class="req" aria-hidden="true">*</span></span>
+            <button class="select t-paragraph-m" id="el" data-open="S-03-04-location-search-sheet.html" data-open-state="selected" aria-haspopup="dialog" aria-labelledby="el-l el"><i class="ic hgi hgi-stroke hgi-city-01" aria-hidden="true"></i><span>Bandra West, Mumbai</span><i class="ic hgi hgi-stroke hgi-arrow-down-01" aria-hidden="true"></i></button>
+            
+          </div>
+          <div class="field">
+            <label class="t-label-small" for="ee">Email</label>
+            <div class="input t-paragraph-m"><i class="ic hgi hgi-stroke hgi-mail-01" aria-hidden="true"></i><input id="ee" type="email" placeholder="Enter your email" value="aarav@studioaarav.in" autocomplete="email"></div>
+            
+          </div>
+        </div>
+      </div>
+      <div class="auth-foot pin"><div class="ob-cta" style="display:flex"><button class="btn btn-filled btn-full t-label-m press" data-go-state="loading">Submit</button></div></div>
+    </main>
+    <main class="ob-step" data-show="loading" aria-busy="true">
+      <div class="ob-bar"><a class="ibtn ibtn-44 ibtn-solid press" data-back href="S-03-01-onboarding-user-type.html" aria-label="Back"><i class="ic hgi hgi-stroke hgi-arrow-left-01" aria-hidden="true"></i></a><div class="segs" aria-hidden="true"><span></span><span></span><span class="on"></span></div><span class="sr-only">Step 3 of 3</span></div>
+      <div class="ob-title" aria-hidden="true"><span class="skel" style="height:28px;width:60%"></span><span class="skel" style="height:14px;width:90%"></span></div>
+      <div class="pf" aria-hidden="true"><div class="pf-side"><div class="pf-photo"><span class="skel" style="width:100%;height:100%;border-radius:var(--radius-full)"></span></div></div><div class="pf-form"><span class="stack stack-8"><span class="skel" style="height:14px;width:30%"></span><span class="skel" style="height:48px;border-radius:var(--radius-full)"></span></span><span class="stack stack-8"><span class="skel" style="height:14px;width:30%"></span><span class="skel" style="height:48px;border-radius:var(--radius-full)"></span></span><span class="stack stack-8"><span class="skel" style="height:14px;width:30%"></span><span class="skel" style="height:48px;border-radius:var(--radius-full)"></span></span><span class="stack stack-8"><span class="skel" style="height:14px;width:30%"></span><span class="skel" style="height:48px;border-radius:var(--radius-full)"></span></span></div></div>
+      <div class="auth-foot" aria-hidden="true"><div class="ob-cta"><span class="skel" style="height:48px;border-radius:var(--radius-full)"></span></div></div>
+      <span class="sr-only" role="status">Saving your profile</span>
+    </main>
+    </div>
+  </div>
+  <div class="toast-region static" data-show="error"><div class="toast toast-danger glass glass-panel" role="alert"><i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i><div class="body"><span class="t-label-s">Error</span><p class="t-paragraph-s">Something went wrong. Please try again later.</p></div></div></div>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375:</b> as the app: back + progress (last segment current); title, subtitle; centred circular photo with a "+" badge; labelled fields Name *, Username *, Current Location *, Email; Submit stays pinned under the scrolling form.</li>
+      <li><b>768:</b> centred card with the same single column.</li>
+      <li><b>1440:</b> wider card: photo in a side panel on the left, fields in two columns on the right, Submit right-aligned.</li>
+      <li>States: <b>default</b> (empty, placeholder photo, Submit enabled: validation runs on tap), <b>filled</b> (photo chosen, username available), <b>invalid</b> (per-field errors after Submit), <b>taken</b> (username already taken), <b>loading</b> (skeleton replaces the form during upload / save), <b>error</b> (toast; the form returns with the entered values). No empty state.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>IconButton solid (back)</li>
+      <li>Progress (segmented bar)</li>
+      <li>Avatar with add badge (opens S-03-05)</li>
+      <li>Text field: leading icon, trailing status icon, error text</li>
+      <li>Select (read-only location field, opens S-03-04)</li>
+      <li>Button filled L · Skeleton · Toast danger</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Username status icon: <code>--icon-swap-*</code>; pickers, <code>--panel-*</code>; Submit, <code>--press-*</code>.</li>
+      <li>Loading: <code>--skel-*</code>, <code>--shimmer-*</code>; to the home shell, <code>--page-slide-*</code> under 768, <code>--panel-*</code> from 768; back to step 1, <code>--tab-panel-*</code>.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li><code>h1</code> = title. Every field has a visible, programmatic label; required fields carry <code>aria-required</code> and a visible asterisk.</li>
+      <li>Errors are tied to their field and announced; username availability is announced politely ("Username available") and shown with an icon, not colour alone.</li>
+      <li>The photo control is a button "Add profile photo"; the location field is a button that opens a dialog. Focus order follows the visual order, Submit last.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>Q-04 applied: a taken username blocks Submit; minimum username length is 3 (2–15 characters of a–z, 0–9, ". _ -", forced lowercase, no spaces).</li>
+      <li>Glyph: the app uses User03 for Name and Username (not in the icon font); User is used.</li>
+      <li>The app shows a bundled default-profile image; the mockup shows a neutral avatar placeholder.</li>
+      <li>Progress is drawn with 3 segments (Professional path); other roles have 2.</li>
+      <li>Going back clears every field and the photo (as the app): keep on web?</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

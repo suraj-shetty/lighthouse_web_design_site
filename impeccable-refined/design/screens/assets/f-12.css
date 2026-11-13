@@ -1,0 +1,55 @@
+/* =========================================================================
+   F-12 Notifications — feature styles (tokens only; components from lh.css)
+   ========================================================================= */
+
+/* ---------- Inbox ---------- */
+.ntf-sec { display: flex; flex-direction: column; gap: var(--spacing-8); }
+.ntf-sec > h2 { color: var(--text-subtle); padding: 0 var(--spacing-12); }
+.ntf-list { display: flex; flex-direction: column; gap: var(--spacing-4); }
+.ntf { display: grid; grid-template-columns: 38px minmax(0, 1fr); column-gap: var(--spacing-12); align-items: start; width: 100%; padding: var(--spacing-12); border-radius: var(--radius-20); color: var(--text-default); text-align: left; transition: background-color var(--duration-quick) var(--ease); }
+a.ntf:hover, button.ntf:hover { background: var(--bg-weak); }
+.ntf.unread, a.ntf.unread:hover, button.ntf.unread:hover { background: var(--accent-tonal); }
+.ntf .lead { width: 38px; height: 38px; flex: none; border-radius: var(--radius-full); }
+.ntf span.lead { display: flex; align-items: center; justify-content: center; background: var(--bg-neutral); border: 1px solid var(--stroke-weak); color: var(--icon-default); }
+.ntf .txt { min-width: 0; display: flex; flex-direction: column; gap: var(--spacing-2); }
+.ntf .ttl { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; }
+.ntf .msg { color: var(--text-subtle); }
+.ntf .when { display: inline-flex; align-items: center; gap: var(--spacing-6); color: var(--text-soft); margin-top: var(--spacing-2); }
+.ntf .when i { width: 6px; height: 6px; border-radius: var(--radius-full); background: var(--accent); }
+.ntf .acts { grid-column: 2; display: flex; flex-wrap: wrap; gap: var(--spacing-8); margin-top: var(--spacing-10); }
+.ntf-page .line-empty { min-height: 60vh; }
+@media (min-width: 768px) {
+  .ntf { grid-template-columns: 38px minmax(0, 1fr) auto; padding: var(--spacing-12) var(--spacing-16); }
+  .ntf .acts { grid-column: 3; grid-row: 1; align-self: center; margin-top: 0; flex-wrap: nowrap; }
+}
+
+/* ---------- Manage Notification ---------- */
+.mn { display: flex; flex-direction: column; gap: var(--spacing-8); min-width: 0; }
+.mn .acc { border-bottom: 0; }
+.mn .acc > summary { min-height: 52px; padding: 0 var(--spacing-4); border-radius: var(--radius-12); }
+.mn .acc > summary .hd { display: flex; align-items: center; gap: var(--spacing-10); min-width: 0; }
+.mn .acc[open] > summary .lead-ic { transform: none; }
+.mn .acc > .acc-body { padding: var(--spacing-4) 0 var(--spacing-12); color: var(--text-default); }
+.mn-card { padding: var(--spacing-4) var(--spacing-16); border-radius: var(--radius-20); }
+.mn-card .srow .lock { color: var(--icon-soft); }
+.switch[aria-disabled="true"] { opacity: .5; cursor: not-allowed; pointer-events: none; }
+.mn-search { margin-bottom: var(--spacing-8); }
+.mn-note { align-items: flex-start; margin: 0 0 var(--spacing-12); }
+@media (min-width: 1200px) {
+  .mn-split { grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: var(--spacing-32); }
+}
+
+/* ---------- Loaders (post / project): detail skeleton + centred error ---------- */
+.ldr { display: flex; flex-direction: column; gap: var(--spacing-16); padding-top: var(--spacing-24); }
+.ldr-error { min-height: 80vh; }
+.ldr-error .empty-text { max-width: 320px; }
+
+/* ---------- In-app notification banner: dark neutral surface in both themes ---------- */
+.toast-dark { background: var(--element-bg-tag-dark); color: var(--element-fg-tag-dark); border: 1px solid var(--element-stroke-tag-dark); box-shadow: var(--shadow-sheet); }
+.toast-dark .body p { color: var(--element-fg-tag-dark); opacity: .78; }
+.toast-dark > .ic { color: var(--element-fg-tag-dark); }
+a.toast-dark:hover { box-shadow: var(--shadow-sheet), var(--shadow-products-card); }
+@media (max-width: 767.98px) {
+  /* inline fallback banner sits at the bottom on phones, above the tab bar */
+  .toast-region.at-bottom { --toast-dir: 1; top: auto; bottom: calc(var(--spacing-48) * 2); }
+}

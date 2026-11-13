@@ -1,0 +1,66 @@
+/* =========================================================================
+   F-17 Projects catalogue — feature styles. Tokens only.
+   Loaded after lh.css by the S-17-* screens.
+   ========================================================================= */
+
+/* Pushed screens (types, packages): no floating tab bar under 768, as the app */
+.no-tabbar .tabbar { display: none; }
+.no-tabbar .page { padding-bottom: var(--spacing-32); }
+
+/* Sticky action bar */
+.has-foot .app-main { display: flex; flex-direction: column; min-height: 100dvh; }
+.has-foot .app-main > main { flex: 1 0 auto; width: 100%; }
+.foot-in { display: flex; gap: var(--spacing-12); width: 100%; max-width: var(--page-max); margin: 0 auto; }
+.foot-in > .btn { flex: 1; }
+@media (min-width: 768px) { .foot-in { justify-content: flex-end; } .foot-in > .btn { flex: none; min-width: 240px; } }
+
+/* Header with a second line (breadcrumb) */
+.ohead { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: var(--spacing-2); }
+.ohead h1 { flex: 0 1 auto; }
+.intro { color: var(--text-soft); max-width: 60ch; }
+
+/* ---------- S-17-01 Category cards ---------- */
+.cat-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--spacing-24) var(--spacing-12); }
+.cat { display: flex; flex-direction: column; gap: var(--spacing-6); min-width: 0; color: var(--text-default); border-radius: var(--radius-12); }
+.cat-img { position: relative; display: block; aspect-ratio: 1; margin-bottom: var(--spacing-6); border-radius: var(--radius-12); overflow: hidden; background: var(--element-bg-style-card-placeholder); box-shadow: var(--shadow-products-card); transition: box-shadow var(--duration-fast) var(--ease); }
+.cat-img img { width: 100%; height: 100%; object-fit: cover; }
+.cat-img .pill { position: absolute; z-index: 1; top: var(--spacing-8); right: var(--spacing-8); }
+.cat-img .ph { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: var(--icon-soft); }
+.cat p { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; color: var(--text-subtle); }
+a.cat:hover .cat-img { box-shadow: var(--shadow-shop-card), var(--shadow-products-card); }
+.cat.is-soon .cat-img::after { content: ""; position: absolute; inset: 0; background: var(--page-bg, var(--home-surface)); opacity: .55; }
+.cat.is-soon h2, .cat.is-soon p { color: var(--text-soft); }
+@media (min-width: 768px) { .cat-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--spacing-32) var(--spacing-20); } .cat-img { aspect-ratio: 4 / 3; border-radius: var(--radius-16); } }
+@media (min-width: 1200px) { .cat-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--spacing-24); } }
+
+/* ---------- S-17-02 Renovation type cards ---------- */
+.rgrid, .pgrid { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--spacing-16); }
+.rgrid > li, .pgrid > li { display: flex; min-width: 0; }
+.rcard { flex: 1; display: flex; flex-direction: column; gap: var(--spacing-12); padding: var(--spacing-12); color: var(--text-default); transition: box-shadow var(--duration-fast) var(--ease); }
+a.rcard:hover { box-shadow: var(--shadow-shop-card), var(--shadow-products-card); }
+.rcard-img { position: relative; display: block; aspect-ratio: 16 / 9; border-radius: var(--radius-12); overflow: hidden; background: var(--element-bg-style-card-placeholder); }
+.rcard-img img { width: 100%; height: 100%; object-fit: cover; }
+.rcard-img .ph { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: var(--icon-soft); }
+.rcard-body { flex: 1; display: flex; flex-direction: column; gap: var(--spacing-12); padding: var(--spacing-4) var(--spacing-4) var(--spacing-4); }
+.rcard-body p { flex: 1; color: var(--text-subtle); }
+.rcard-body .ic { color: var(--icon-soft); }
+.rcard-foot { display: flex; align-items: center; justify-content: space-between; gap: var(--spacing-12); }
+.dur { display: inline-flex; align-items: center; gap: var(--spacing-6); color: var(--text-subtle); white-space: nowrap; }
+
+/* ---------- S-17-03 Package cards ---------- */
+.pkg { flex: 1; display: flex; flex-direction: column; min-width: 0; border-radius: var(--radius-20); overflow: hidden; background: var(--element-bg-metric-card-default); border: 1px solid var(--element-stroke-translucent-button-linear-start); }
+.pkg.is-pop { border-color: var(--stroke-default); box-shadow: 0 var(--spacing-8) var(--spacing-24) var(--element-effects-banner-drop-shadow); }
+.pkg-banner { display: flex; align-items: center; justify-content: center; gap: var(--spacing-6); min-height: 36px; background: var(--bg-inverse); color: var(--text-inverse); }
+.pkg-banner .ic { color: var(--star-color); }
+.pkg-body { flex: 1; display: flex; flex-direction: column; gap: var(--spacing-16); padding: var(--spacing-20); }
+.pkg-top { display: flex; align-items: flex-start; justify-content: space-between; gap: var(--spacing-12); }
+.pkg .tag { align-self: flex-start; }
+.pkg-inc { flex: 1; display: flex; flex-direction: column; gap: var(--spacing-12); padding-top: var(--spacing-16); border-top: 1px solid var(--stroke-soft); }
+.pkg-list { display: flex; flex-direction: column; gap: var(--spacing-10); }
+.pkg-list li { display: flex; align-items: flex-start; gap: var(--spacing-8); }
+.pkg-list .ic { color: var(--success-default); margin-top: var(--spacing-2); }
+@media (min-width: 768px) { .rgrid, .pgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--spacing-20); } }
+@media (min-width: 1200px) {
+  .rgrid, .pgrid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--spacing-24); }
+  .pgrid { align-items: stretch; padding-top: var(--spacing-8); }
+}

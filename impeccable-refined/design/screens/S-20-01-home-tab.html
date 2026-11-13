@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-20-01 Home tab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-20.css">
+</head>
+<body class="t-paragraph-m"
+      data-states="default,with-requests,with-suggestions,with-projects,loading,empty,error,profile-incomplete"
+      data-roles="professional,homeowner"
+      data-shell="main" data-nav="home">
+
+<!-- =====================================================================
+     SCREEN: the Home tab. One responsive page; the navigation shell is
+     injected by assets/lh.js. Each section has its own loading, empty and
+     error state, as in the app.
+     ===================================================================== -->
+<div class="screen app on-surface" style="--page-bg: var(--home-surface); --page-max: 1280px">
+  <div class="app-main">
+
+    <header class="top hm-top">
+      <div class="top-inner glass glass-panel">
+        <div class="top-row only-narrow">
+          <a class="hm-me press" href="S-13-01-my-profile.html" aria-label="My Profile"><img class="avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=96&h=96&fit=crop&q=70" alt=""></a>
+          <span class="logo"><img class="logo-light" src="assets/logo_lighthouse_light.png" alt="Lighthouse"><img class="logo-dark" src="assets/logo_lighthouse.png" alt="Lighthouse"></span>
+          <span class="grow"></span>
+          <a class="ibtn ibtn-44 ibtn-plain press" href="S-12-01-notifications.html" aria-label="Notifications, unread"><i class="ic ic-24 hgi hgi-stroke hgi-notification-03" aria-hidden="true"></i><span class="dot"></span></a>
+        </div>
+        <div class="top-row">
+          <button class="loc hm-city press" data-open="S-20-02-home-select-location-sheet.html" aria-haspopup="dialog" aria-label="Location: Bengaluru. Change city" data-show="default with-requests with-suggestions with-projects profile-incomplete error"><i class="ic hgi hgi-stroke hgi-location-01" aria-hidden="true"></i><span class="t-label-m truncate">Bengaluru</span><i class="ic hgi hgi-stroke hgi-arrow-down-01" aria-hidden="true"></i></button>
+          <button class="loc hm-city press" data-open="S-20-02-home-select-location-sheet.html" aria-haspopup="dialog" aria-label="Location: Locating.... Change city" data-show="loading"><i class="ic hgi hgi-stroke hgi-location-01" aria-hidden="true"></i><span class="skel" aria-hidden="true"></span><i class="ic hgi hgi-stroke hgi-arrow-down-01" aria-hidden="true"></i></button>
+          <button class="loc hm-city press" data-open="S-20-02-home-select-location-sheet.html" aria-haspopup="dialog" aria-label="Location: Select city. Change city" data-show="empty"><i class="ic hgi hgi-stroke hgi-location-01" aria-hidden="true"></i><span class="t-label-m truncate">Select city</span><i class="ic hgi hgi-stroke hgi-arrow-down-01" aria-hidden="true"></i></button>
+          <span class="grow only-wide"></span>
+          <button class="ibtn ibtn-44 glass glass-icon press only-wide" aria-label="Refresh" data-go-state="loading"><i class="ic ic-24 hgi hgi-stroke hgi-rotate-01" aria-hidden="true"></i></button>
+        </div>
+      </div>
+    </header>
+
+    <main class="page hm-page stagger">
+      <div class="hm-main">
+        <div class="hm-hero">
+          <h1 class="t-label-xxl">What do you need help with?</h1>
+          <p class="t-paragraph-l">Search professionals, projects, or products</p>
+        </div>
+
+        <!-- Search pill: a button that opens Discover. The example word rotates and is not announced. -->
+        <a class="hm-ask t-paragraph-l press" href="S-08-01-discover.html" aria-label="Search" data-show="default with-requests with-suggestions with-projects profile-incomplete error"><i class="ic ic-24 hgi hgi-stroke hgi-search-01" aria-hidden="true"></i><span>Search</span><span class="hm-ask-words" aria-hidden="true"><span>architects</span><span>contractors</span><span>bathroom tiles</span><span>apartment projects</span></span></a>
+        <a class="hm-ask t-paragraph-l press" href="S-08-01-discover.html" aria-label="Search" data-show="loading empty"><i class="ic ic-24 hgi hgi-stroke hgi-search-01" aria-hidden="true"></i><span>Search</span></a>
+
+        <section class="hm-sec" aria-labelledby="hi">
+          <div class="sec-head"><i class="ic ic-24 hgi hgi-stroke hgi-sparkles" aria-hidden="true"></i><h2 id="hi" class="t-sublabel-m">START WITH WHAT YOU NEED</h2></div>
+          <div class="hm-intents" data-show="default with-requests with-suggestions with-projects profile-incomplete"><a class="hm-tile press" href="S-21-01-home-need-flow-step.html"><img src="assets/home/intent_new_construction.jpg" alt="" loading="lazy"><span class="t-label-s">New construction</span></a><a class="hm-tile press" href="S-21-01-home-need-flow-step.html" data-state="spaces"><img src="assets/home/intent_renovation.jpg" alt="" loading="lazy"><span class="t-label-s">Renovation</span></a><a class="hm-tile press" href="S-21-01-home-need-flow-step.html" data-state="repair"><img src="assets/home/intent_repairs_maintenance.jpg" alt="" loading="lazy"><span class="t-label-s">Repairs &amp; maintenance</span></a><a class="hm-tile press" href="S-21-01-home-need-flow-step.html" data-state="who"><img src="assets/home/intent_find_professionals.jpg" alt="" loading="lazy"><span class="t-label-s">Find professionals</span></a><a class="hm-tile press" href="S-10-01-marketplace-home.html"><img src="assets/home/intent_explore_products.jpg" alt="" loading="lazy"><span class="t-label-s">Explore products</span></a><a class="hm-tile press" href="S-21-01-home-need-flow-step.html" data-state="explore-type"><img src="assets/home/intent_explore_projects.jpg" alt="" loading="lazy"><span class="t-label-s">Explore projects</span></a></div>
+          <div class="hm-intents" aria-busy="true" aria-label="Loading" data-show="loading"><div class="hm-tile-skel"><span class="skel" style="aspect-ratio:1;border-radius:var(--radius-16)"></span><span class="skel" style="width:80px;height:12px"></span><span class="skel" style="width:52px;height:12px"></span></div><div class="hm-tile-skel"><span class="skel" style="aspect-ratio:1;border-radius:var(--radius-16)"></span><span class="skel" style="width:80px;height:12px"></span><span class="skel" style="width:52px;height:12px"></span></div><div class="hm-tile-skel"><span class="skel" style="aspect-ratio:1;border-radius:var(--radius-16)"></span><span class="skel" style="width:80px;height:12px"></span><span class="skel" style="width:52px;height:12px"></span></div><div class="hm-tile-skel"><span class="skel" style="aspect-ratio:1;border-radius:var(--radius-16)"></span><span class="skel" style="width:80px;height:12px"></span><span class="skel" style="width:52px;height:12px"></span></div><div class="hm-tile-skel"><span class="skel" style="aspect-ratio:1;border-radius:var(--radius-16)"></span><span class="skel" style="width:80px;height:12px"></span><span class="skel" style="width:52px;height:12px"></span></div><div class="hm-tile-skel"><span class="skel" style="aspect-ratio:1;border-radius:var(--radius-16)"></span><span class="skel" style="width:80px;height:12px"></span><span class="skel" style="width:52px;height:12px"></span></div></div>
+          <div data-show="error"><div class="err-row" role="status"><p class="t-paragraph-s">Couldn't load suggestions.</p><button class="btn btn-s btn-filled t-label-xs press" data-go-state="loading" aria-label="Retry: suggestions">Retry</button></div></div>
+        </section>
+      </div>
+
+      <div class="hm-aside" data-show="default with-requests with-suggestions with-projects profile-incomplete loading error">
+        <section class="hm-sec" aria-labelledby="hq-build" data-show="with-requests with-suggestions">
+          <div class="sec-head"><i class="ic ic-24 hgi hgi-stroke hgi-file-02" aria-hidden="true"></i><h2 id="hq-build" class="t-sublabel-m">YOUR REQUESTS</h2><a class="t-paragraph-m press" href="S-21-06-home-all-requests.html" aria-label="View All requests">View All<i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></a></div>
+          <ul class="hm-cards">
+            <li class="rq-card">
+              <div class="rq-top"><img src="assets/home/type_residential.jpg" alt="" loading="lazy"><div class="rq-txt"><span class="rq-state t-paragraph-s"><i class="ic hgi hgi-stroke hgi-lock" aria-hidden="true"></i>Private draft · only you see it</span><h3 class="t-label-m truncate">Residential</h3><p class="rq-meta t-paragraph-s">Indiranagar · Next: choose who receives it</p></div></div>
+              <div class="rq-acts"><a class="btn btn-m btn-filled t-label-xs press" href="S-21-03-home-need-results.html" aria-label="Continue: Residential">CONTINUE</a><a class="btn btn-m btn-stroke t-label-xs press" href="S-21-01-home-need-flow-step.html" aria-label="Edit: Residential">EDIT</a></div>
+            </li>
+            <li class="rq-card">
+              <div class="rq-top"><img src="assets/home/type_residential.jpg" alt="" loading="lazy"><div class="rq-txt"><span class="rq-state t-paragraph-s"><i class="ic hgi hgi-stroke hgi-eye" aria-hidden="true"></i>Browsing</span><h3 class="t-label-m truncate">Kitchen renovation</h3><p class="rq-meta t-paragraph-s">Koramangala · Next: save it, or send it to interior designers</p></div></div>
+              <div class="rq-acts"><a class="btn btn-m btn-filled t-label-xs press" href="S-21-03-home-need-results.html" aria-label="Continue: Kitchen renovation">CONTINUE</a><button class="btn btn-m btn-stroke t-label-xs press" data-toast="neutral|Kitchen renovation removed from Home" aria-label="Dismiss: Kitchen renovation">DISMISS</button></div>
+            </li>
+            <li class="rq-card">
+              <div class="rq-top"><img src="assets/home/repair_plumbing.jpg" alt="" loading="lazy"><div class="rq-txt"><span class="rq-state t-paragraph-s"><i class="ic hgi hgi-stroke hgi-navigation-03" aria-hidden="true"></i>Request sent</span><h3 class="t-label-m truncate">Plumbing repair</h3><p class="rq-meta t-paragraph-s">HSR Layout · Sent to Ravi Plumbing Works and AquaFix Services, waiting for responses</p></div></div>
+              <div class="rq-acts"><a class="btn btn-m btn-stroke t-label-xs press" href="S-21-05-home-request-sent.html" data-state="viewing" aria-label="View request: Plumbing repair">VIEW REQUEST</a></div>
+            </li>
+          </ul>
+        </section>
+        <section class="hm-sec" aria-labelledby="hq-reno" data-show="with-projects">
+          <div class="sec-head"><i class="ic ic-24 hgi hgi-stroke hgi-file-02" aria-hidden="true"></i><h2 id="hq-reno" class="t-sublabel-m">YOUR REQUESTS</h2><a class="t-paragraph-m press" href="S-21-06-home-all-requests.html" aria-label="View All requests">View All<i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></a></div>
+          <ul class="hm-cards">
+            <li class="rq-card">
+              <div class="rq-top"><img src="assets/home/type_residential.jpg" alt="" loading="lazy"><div class="rq-txt"><span class="rq-state t-paragraph-s"><i class="ic hgi hgi-stroke hgi-eye" aria-hidden="true"></i>Browsing</span><h3 class="t-label-m truncate">Kitchen renovation</h3><p class="rq-meta t-paragraph-s">Koramangala · Next: save it, or send it to interior designers</p></div></div>
+              <div class="rq-acts"><a class="btn btn-m btn-filled t-label-xs press" href="S-21-03-home-need-results.html" aria-label="Continue: Kitchen renovation">CONTINUE</a><button class="btn btn-m btn-stroke t-label-xs press" data-toast="neutral|Kitchen renovation removed from Home" aria-label="Dismiss: Kitchen renovation">DISMISS</button></div>
+            </li>
+            <li class="rq-card">
+              <div class="rq-top"><img src="assets/home/type_residential.jpg" alt="" loading="lazy"><div class="rq-txt"><span class="rq-state t-paragraph-s"><i class="ic hgi hgi-stroke hgi-lock" aria-hidden="true"></i>Private draft · only you see it</span><h3 class="t-label-m truncate">Residential</h3><p class="rq-meta t-paragraph-s">Indiranagar · Next: choose who receives it</p></div></div>
+              <div class="rq-acts"><a class="btn btn-m btn-filled t-label-xs press" href="S-21-03-home-need-results.html" aria-label="Continue: Residential">CONTINUE</a><a class="btn btn-m btn-stroke t-label-xs press" href="S-21-01-home-need-flow-step.html" aria-label="Edit: Residential">EDIT</a></div>
+            </li>
+            <li class="rq-card">
+              <div class="rq-top"><img src="assets/home/repair_plumbing.jpg" alt="" loading="lazy"><div class="rq-txt"><span class="rq-state t-paragraph-s"><i class="ic hgi hgi-stroke hgi-navigation-03" aria-hidden="true"></i>Request sent</span><h3 class="t-label-m truncate">Plumbing repair</h3><p class="rq-meta t-paragraph-s">HSR Layout · Sent to Ravi Plumbing Works and AquaFix Services, waiting for responses</p></div></div>
+              <div class="rq-acts"><a class="btn btn-m btn-stroke t-label-xs press" href="S-21-05-home-request-sent.html" data-state="viewing" aria-label="View request: Plumbing repair">VIEW REQUEST</a></div>
+            </li>
+          </ul>
+        </section>
+
+        <section class="hm-offer" aria-labelledby="ho-default" data-show="default with-requests with-suggestions with-projects">
+          <img src="assets/home/offer_get_started.jpg" alt="" loading="lazy">
+          <div class="hm-offer-txt"><h2 id="ho-default" class="t-label-xl">Not sure where to begin?</h2><p class="t-paragraph-s">A few questions, then a call from a Lighthouse manager.</p><a class="btn btn-filled t-label-s press" href="S-21-01-home-need-flow-step.html" data-state="assist-notice">HELP ME GET STARTED</a></div>
+        </section>
+        <section class="hm-offer" aria-labelledby="ho-profile-incomplete" data-show="profile-incomplete">
+          <img src="assets/home/offer_get_started.jpg" alt="" loading="lazy">
+          <div class="hm-offer-txt"><h2 id="ho-profile-incomplete" class="t-label-xl">Not sure where to begin?</h2><p class="t-paragraph-s">A few questions, then a call from a Lighthouse manager.</p><button class="btn btn-filled t-label-s press" data-open="S-20-03-home-complete-profile-sheet.html" aria-haspopup="dialog">HELP ME GET STARTED</button></div>
+        </section>
+        <span class="skel hm-offer-skel" aria-hidden="true" data-show="loading"></span>
+        <div data-show="error"><div class="err-row" role="status"><p class="t-paragraph-s">Couldn't load this card.</p><button class="btn btn-s btn-filled t-label-xs press" data-go-state="loading" aria-label="Retry: offer">Retry</button></div></div>
+
+        <!-- Suggestions follow the newest request: professionals, or projects for renovation and explore requests -->
+        <section class="hm-sec" aria-labelledby="hs-p" data-show="with-suggestions">
+          <hr class="sec-rule">
+          <h2 id="hs-p" class="hm-lead t-paragraph-m">Suggestions for: <b>Residential</b></h2>
+          <div class="sec-head"><i class="ic ic-24 hgi hgi-stroke hgi-user-search-01" aria-hidden="true"></i><h3 class="t-sublabel-m">PROFESSIONALS IN BENGALURU</h3><a class="t-paragraph-m press" href="S-21-03-home-need-results.html" aria-label="View All professionals in Bengaluru">View All<i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></a></div>
+          <ul class="hm-cards is-pros">
+            <li><a class="pro-card press" href="S-07-01-public-profile.html" data-as="architect" aria-label="View profile: Vikram Shah">
+              <div class="pro-top"><img class="avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=96&h=96&fit=crop&q=70" alt=""><div class="pro-txt"><span class="pro-name"><h4 class="t-label-s truncate">Vikram Shah</h4><span class="verified" role="img" aria-label="Verified"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></span><p class="pro-line t-paragraph-s"><span class="truncate">Architects · Residential</span></p><p class="pro-line t-paragraph-s"><span class="rating" aria-label="Rating 4.8 out of 5"><b class="tnum">4.8</b><i class="ic ic-16 hgi hgi-stroke hgi-star" aria-hidden="true"></i></span><span aria-hidden="true">·</span><span><b class="tnum">63</b> projects</span></p><p class="pro-line t-paragraph-s"><i class="ic ic-16 hgi hgi-stroke hgi-location-01" aria-hidden="true"></i><span class="tnum">2.4 km away</span></p></div></div>
+              <p class="pro-bio t-paragraph-s">Residential · Institutional · Urban Design</p>
+            </a></li>
+            <li><a class="pro-card press" href="S-07-01-public-profile.html" data-as="architect" aria-label="View profile: Studio Aranya">
+              <div class="pro-top"><img class="avatar" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=96&h=96&fit=crop&q=70" alt=""><div class="pro-txt"><span class="pro-name"><h4 class="t-label-s truncate">Studio Aranya</h4><span class="verified" role="img" aria-label="Verified"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></span><p class="pro-line t-paragraph-s"><span class="truncate">Architects · Hospitality</span></p><p class="pro-line t-paragraph-s"><span class="rating" aria-label="Rating 4.6 out of 5"><b class="tnum">4.6</b><i class="ic ic-16 hgi hgi-stroke hgi-star" aria-hidden="true"></i></span><span aria-hidden="true">·</span><span><b class="tnum">42</b> projects</span></p><p class="pro-line t-paragraph-s"><i class="ic ic-16 hgi hgi-stroke hgi-location-01" aria-hidden="true"></i><span class="tnum">5.1 km away</span></p></div></div>
+              <p class="pro-bio t-paragraph-s">Hospitality · Adaptive Reuse · Residential</p>
+            </a></li>
+            <li><a class="pro-card press" href="S-07-01-public-profile.html" data-as="contractor" aria-label="View profile: Rajesh Patil">
+              <div class="pro-top"><img class="avatar" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=96&h=96&fit=crop&q=70" alt=""><div class="pro-txt"><span class="pro-name"><h4 class="t-label-s truncate">Rajesh Patil</h4><span class="verified" role="img" aria-label="Verified"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></span><p class="pro-line t-paragraph-s"><span class="truncate">Contractors · Civil Construction</span></p><p class="pro-line t-paragraph-s"><span class="rating" aria-label="Rating 4.6 out of 5"><b class="tnum">4.6</b><i class="ic ic-16 hgi hgi-stroke hgi-star" aria-hidden="true"></i></span><span aria-hidden="true">·</span><span><b class="tnum">140</b> projects</span></p><p class="pro-line t-paragraph-s"><i class="ic ic-16 hgi hgi-stroke hgi-location-01" aria-hidden="true"></i><span class="tnum">7.8 km away</span></p></div></div>
+              <p class="pro-bio t-paragraph-s">Civil Construction · Turnkey · Structural</p>
+            </a></li>
+            <li><a class="pro-card press" href="S-07-01-public-profile.html" data-as="architect" aria-label="View profile: Meera Kapoor">
+              <div class="pro-top"><img class="avatar" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=96&h=96&fit=crop&q=70" alt=""><div class="pro-txt"><span class="pro-name"><h4 class="t-label-s truncate">Meera Kapoor</h4></span><p class="pro-line t-paragraph-s"><span class="truncate">Architects · Retail</span></p><p class="pro-line t-paragraph-s"><span><b class="tnum">17</b> projects</span></p><p class="pro-line t-paragraph-s"><i class="ic ic-16 hgi hgi-stroke hgi-location-01" aria-hidden="true"></i><span class="tnum">12 km away</span></p></div></div>
+              <p class="pro-bio t-paragraph-s">Residential · Retail</p>
+            </a></li>
+            <li><a class="pro-card press" href="S-07-01-public-profile.html" data-as="contractor" aria-label="View profile: Keystone Constructions">
+              <div class="pro-top"><img class="avatar" src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=96&h=96&fit=crop&q=70" alt=""><div class="pro-txt"><span class="pro-name"><h4 class="t-label-s truncate">Keystone Constructions</h4><span class="verified" role="img" aria-label="Verified"><i class="ic hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></span><p class="pro-line t-paragraph-s"><span class="truncate">Contractors · Commercial</span></p><p class="pro-line t-paragraph-s"><span class="rating" aria-label="Rating 4.4 out of 5"><b class="tnum">4.4</b><i class="ic ic-16 hgi hgi-stroke hgi-star" aria-hidden="true"></i></span><span aria-hidden="true">·</span><span><b class="tnum">96</b> projects</span></p></div></div>
+              <p class="pro-bio t-paragraph-s">Commercial · Industrial · Interior Fit-Out</p>
+            </a></li>
+          </ul>
+        </section>
+        <section class="hm-sec" aria-labelledby="hs-j" data-show="with-projects">
+          <hr class="sec-rule">
+          <h2 id="hs-j" class="hm-lead t-paragraph-m">Suggestions for: <b>Kitchen renovation</b></h2>
+          <div class="sec-head"><i class="ic ic-24 hgi hgi-stroke hgi-layers-01" aria-hidden="true"></i><h3 class="t-sublabel-m">PROJECTS LIKE IT</h3><a class="t-paragraph-m press" href="S-21-07-home-explore-projects-list.html" aria-label="View All projects like it">View All<i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></a></div>
+          <div class="prj-row" tabindex="0" role="group" aria-label="Projects like it"><a class="prj-card press" href="S-06-01-explore-project.html"><span class="prj-img"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=528&h=352&fit=crop&q=70" alt="" loading="lazy"><span class="prj-count t-label-xs tnum">12 photos</span></span><h4 class="t-label-s truncate">Verandah House kitchen</h4><p class="t-paragraph-s truncate">Indiranagar, Karnataka</p></a><a class="prj-card press" href="S-06-01-explore-project.html"><span class="prj-img"><img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=528&h=352&fit=crop&q=70" alt="" loading="lazy"><span class="prj-count t-label-xs tnum">8 photos</span></span><h4 class="t-label-s truncate">Whitefield Villa kitchen</h4><p class="t-paragraph-s truncate">Whitefield, Karnataka</p></a><a class="prj-card press" href="S-06-01-explore-project.html"><span class="prj-img"><img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?w=528&h=352&fit=crop&q=70" alt="" loading="lazy"><span class="prj-count t-label-xs tnum">1 photo</span></span><h4 class="t-label-s truncate">Compact kitchen refit</h4><p class="t-paragraph-s truncate">Baner, Maharashtra</p></a><a class="prj-card press" href="S-06-01-explore-project.html"><span class="prj-img"><img src="https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?w=528&h=352&fit=crop&q=70" alt="" loading="lazy"><span class="prj-count t-label-xs tnum">5 photos</span></span><h4 class="t-label-s truncate">Subway tile backsplash</h4><p class="t-paragraph-s truncate">Fort Kochi, Kerala</p></a><a class="prj-card press" href="S-06-01-explore-project.html"><span class="prj-img"><img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=528&h=352&fit=crop&q=70" alt="" loading="lazy"><span class="prj-count t-label-xs tnum">9 photos</span></span><h4 class="t-label-s truncate">Open-plan living and kitchen</h4><p class="t-paragraph-s truncate">Alibaug, Maharashtra</p></a></div>
+        </section>
+        <span class="skel hm-sug-skel" aria-hidden="true" data-show="loading"></span>
+        <div data-show="error"><div class="err-row" role="status"><p class="t-paragraph-s">Something went wrong. Please try again.</p><button class="btn btn-s btn-filled t-label-xs press" data-go-state="loading" aria-label="Retry: suggestions for your request">Retry</button></div></div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<!-- ANNOTATIONS (shown on the board, hidden inside the frames) -->
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375:</b> as the app: avatar, wordmark and bell on row 1, city button on row 2; hero, search pill, "START WITH WHAT YOU NEED" with the intent grid 3 across, Your requests, offer card, Suggestions; glass tab bar with Home active.</li>
+      <li><b>768:</b> one centred column. Intent tiles 6 across at phone size, request and professional cards 2 up, project row scrolls. Avatar, wordmark and bell move to the menu, so the header holds the city button and Refresh.</li>
+      <li><b>1024 and up:</b> two columns: the needs (hero, search, intents) stay on the left and stick; requests, the offer and suggestions scroll on the right in the app's order. With nothing to show on the right (empty state) the page stays one column.</li>
+      <li>States: <b>default</b> no requests; <b>with-requests</b> draft, browsing and sent cards; <b>with-suggestions</b> professionals for the newest request; <b>with-projects</b> projects when the newest request is a renovation; <b>loading</b>, <b>empty</b> and <b>error</b> per section; <b>profile-incomplete</b> looks like default but the offer button opens S-20-03.</li>
+      <li>Empty: city reads "Select city", the grid, offer, requests and suggestions are hidden and the section label stays, as in the app. There is no whole-page empty state.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Navigation shell (five tabs), Top header (glass on scroll), Avatar, IconButton with unread dot, Location selector</li>
+      <li>New in f-20.css: search pill (button with rotating examples), intent tile, offer card, section header with action, request card, professional card, project card and row, inline error row</li>
+      <li>Button filled and stroke (M, S), Rating, Verified badge, Skeleton, Toast</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Search example swap: <code>--text-swap-*</code> with <code>--search-example-hold</code> between words (the app holds 2.5 s and fades for 150 ms; nearest tokens). No swap under reduced motion.</li>
+      <li>Tiles, pills and cards press: <code>--press-*</code> (the app scales to 0.97 over 150 ms).</li>
+      <li>Sections: <code>--skel-*</code>, <code>--shimmer-*</code>, <code>--reveal-*</code>; page entrance <code>--stagger-*</code>; sheets <code>--panel-*</code>; pushes <code>--page-slide-*</code>; toast <code>--toast-*</code>.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li>h1 is the hero title. The uppercase section labels are the h2 and h3 headings; card titles sit below them.</li>
+      <li>The search pill is a link named "Search"; the rotating word is hidden from assistive technology.</li>
+      <li>City button: "Location: Bengaluru. Change city". Bell: "Notifications, unread". Request buttons carry the request title ("Continue: Residential"); each View All names its section.</li>
+      <li>Avatar and bell are drawn at the app's size inside 44px targets. Error rows are polite status regions; skeleton groups are marked busy.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>From 1024 the offer sits in the right column under Your requests, keeping the app's order, so the left column is never beside an empty space. The prompt asked for the offer on the left; say if you prefer that.</li>
+      <li>Search pill border and glow use <code>--accent</code>, <code>--palette-purple-700</code> and <code>--palette-pink-700</code> (600 in dark): no gradient token exists (Q-161).</li>
+      <li>Glyphs not approved: FileEdit drawn as File02, ViewOff as Lock, Sent as Navigation03 (Q-162).</li>
+      <li>The bell is dropped from 768 because Notifications is in the menu (Q-165). The search pill opens Discover, as in the app (Q-163).</li>
+      <li>Request, professional and project data are samples. The suggestions error text is whatever the server sends; the line shown is a stand-in.</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

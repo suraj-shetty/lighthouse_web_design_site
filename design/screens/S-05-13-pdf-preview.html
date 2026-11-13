@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-05-13 PDF preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-05.css">
+</head>
+<body class="t-paragraph-m" data-kind="overlay" data-host="S-19-03-reseller-order-details.html" data-states="default,loading,error">
+<div class="screen overlay" data-variant="full">
+  <button class="scrim" data-close aria-label="Close"></button>
+  <section class="sheet pv" role="dialog" aria-modal="true" aria-labelledby="ppt">
+    <header class="pv-head solid"><button class="ibtn ibtn-44 glass glass-icon press only-narrow" data-back aria-label="Back"><i class="ic ic-24 hgi hgi-stroke hgi-arrow-left-01" aria-hidden="true"></i></button><h1 id="ppt" class="t-label-xl truncate">Statuario Vitrified Floor Tile, 600 × 1200 mm, Polished</h1><a class="ibtn ibtn-44 ibtn-plain press" href="#" aria-label="Open document in a new tab"><i class="ic hgi hgi-stroke hgi-link-01" aria-hidden="true"></i></a><button class="ibtn ibtn-44 glass glass-icon press only-wide" data-close aria-label="Close"><i class="ic hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></header>
+    <div class="pv-body" data-show="default"><div class="pv-doc" tabindex="0" role="document" aria-label="PDF document"><article class="paper t-paragraph-s" aria-label="Document page 1 of 1">
+  <div class="row between"><span class="t-label-l">Terra Tiles India Pvt. Ltd.</span><span class="t-sublabel-s">Tax Invoice</span></div>
+  <span class="muted">14, Ceramic Zone, Morbi, Gujarat 363642 · GSTIN 24AAECT4821K1Z6</span>
+  <div class="rule"></div>
+  <div class="row between"><span><span class="muted">Billed to</span><br>Aarav Sharma Design Studio<br>HSR Layout, Bengaluru 560102</span><span style="text-align:right"><span class="muted">Invoice</span><br>TTI/25-26/01184<br>12 Nov 2026</span></div>
+  <table>
+    <thead><tr><th scope="col">Description</th><th scope="col" class="hide-narrow">HSN</th><th scope="col">Qty</th><th scope="col">Amount</th></tr></thead>
+    <tbody>
+      <tr><td>Statuario Vitrified Floor Tile, 600 × 1200 mm, Polished</td><td class="hide-narrow">6907</td><td>120 boxes</td><td class="tnum">₹2,46,000.00</td></tr>
+      <tr><td>Epoxy grout, ivory, 5 kg</td><td class="hide-narrow">3214</td><td>8 packs</td><td class="tnum">₹14,400.00</td></tr>
+      <tr><td>Freight, Morbi to Bengaluru</td><td class="hide-narrow">9965</td><td>1</td><td class="tnum">₹18,500.00</td></tr>
+    </tbody>
+  </table>
+  <div class="sum"><span class="muted">Subtotal</span><span class="tnum">₹2,78,900.00</span><span class="muted">IGST 18%</span><span class="tnum">₹50,202.00</span><span class="t-label-s">Total</span><span class="t-label-s tnum">₹3,29,102.00</span></div>
+</article></div></div>
+    <div class="pv-body" data-show="loading" aria-busy="true"><div class="pv-doc center" role="status" aria-label="Loading document"><span class="spinner" aria-hidden="true"></span></div></div>
+    <div class="pv-body" data-show="error"><div class="pv-doc"></div></div>
+  </section>
+  <div class="toast-region" aria-live="polite" data-show="error"><div class="toast toast-danger glass glass-panel" role="status"><i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i><div class="body"><span class="t-label-s">Error</span><p class="t-paragraph-s">Unable to load PDF preview</p></div></div></div>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375</b> — standard app bar (back, single-line title) above a scrolling document viewer that fills the screen.</li>
+      <li><b>768</b> — large modal: title bar with close, the document scrolls inside.</li>
+      <li><b>1440</b> — web adaptation ("replace" in F-05): the document is shown with the browser's own PDF viewing in an embedded frame under the same title, with a link that opens it in a new tab.</li>
+      <li>The white page in the mockup stands in for the browser's PDF frame; its rendering does not change with the theme.</li>
+      <li>Loading: the viewer's own indicator (a spinner here). Error: toast "Error / Unable to load PDF preview" over an empty viewer, no in-page message or retry.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Top header (solid)</li>
+      <li>IconButton glass — back, close · IconButton plain — open in a new tab</li>
+      <li>Embedded web frame (browser PDF viewer)</li>
+      <li>Spinner · Toast</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Open / close — <code>--page-slide-*</code> under 768 · <code>--modal-*</code> from 768</li>
+      <li>Toast — <code>--toast-*</code></li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li>The title is the dialog heading; Back / Close labelled; Esc closes; focus returns to the opener.</li>
+      <li>The document is also reachable as a link ("Open document in a new tab") for assistive technology.</li>
+      <li>The error toast is in a live region.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>"Open document in a new tab" is a web addition required by the spec's accessibility note; glyph Link01.</li>
+      <li>The viewer's loading indicator and scroll / zoom behaviour are the browser's, not the app's (marked unverified in the spec).</li>
+      <li>Confirm embedded frame versus always opening a new tab on desktop.</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

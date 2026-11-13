@@ -1,0 +1,133 @@
+/* =========================================================================
+   Lighthouse — colour tokens
+   Source of truth: https://lighthouse-nine-delta.vercel.app/foundations
+   (mirrors app/src/ds/tokens/colors.css + accent/surface block of app/app.css)
+   Rules:
+   - Components NEVER read --palette-* directly for surfaces/text.
+     Use semantic (--bg-*, --text-*, --stroke-*, --icon-*) or --element-* tokens.
+   - :root = light theme. [data-theme="dark"] re-points the same names.
+   ========================================================================= */
+
+:root {
+  /* ---------- Palette primitives ---------- */
+  --palette-white: #ffffff;
+  --palette-black: #000000;
+  --Color-Primary-Blue: #0004f5; /* legacy alias = --palette-blue-2-500 */
+
+  --palette-blue-2-50:#e9e9ff; --palette-blue-2-100:#d3d4ff; --palette-blue-2-200:#a8a8ff; --palette-blue-2-300:#7f7fff; --palette-blue-2-400:#4f50ff; --palette-blue-2-500:#0004f5; --palette-blue-2-600:#0003cc; --palette-blue-2-700:#0002a5; --palette-blue-2-800:#000179; --palette-blue-2-900:#000055; --palette-blue-2-950:#00003c;
+  --palette-gray-light-50:#f0f1f2; --palette-gray-light-100:#e0e1e3; --palette-gray-light-200:#d1d1d3; --palette-gray-light-300:#bfc1c5; --palette-gray-light-400:#a0a3aa; --palette-gray-light-500:#83868d; --palette-gray-light-600:#686b70; --palette-gray-light-700:#4e5054; --palette-gray-light-800:#333538; --palette-gray-light-900:#1d1e1f; --palette-gray-light-950:#151515;
+  --palette-gray-dark-50:#f3f3f3; --palette-gray-dark-100:#e5e5e5; --palette-gray-dark-200:#c9c9c9; --palette-gray-dark-300:#aeaeae; --palette-gray-dark-400:#939393; --palette-gray-dark-500:#797979; --palette-gray-dark-600:#616161; --palette-gray-dark-700:#4b4b4b; --palette-gray-dark-800:#353535; --palette-gray-dark-900:#1f1f1f; --palette-gray-dark-950:#151515;
+  --palette-red-50:#fef2f2; --palette-red-100:#ffe2e2; --palette-red-200:#ffc9c9; --palette-red-300:#ffa2a2; --palette-red-400:#ff6467; --palette-red-500:#fb2c36; --palette-red-600:#e7000b; --palette-red-700:#c10007; --palette-red-800:#9f0712; --palette-red-900:#82181a; --palette-red-950:#460809;
+  --palette-rose-50:#fff1f2; --palette-rose-100:#ffe4e6; --palette-rose-200:#ffccd3; --palette-rose-300:#ffa1ad; --palette-rose-400:#ff637e; --palette-rose-500:#ff2056; --palette-rose-600:#ec003f; --palette-rose-700:#c70036; --palette-rose-800:#a50036; --palette-rose-900:#8b0836; --palette-rose-950:#4d0218;
+  --palette-orange-50:#fff7ed; --palette-orange-100:#ffedd4; --palette-orange-200:#ffd6a8; --palette-orange-300:#ffb86a; --palette-orange-400:#ff8904; --palette-orange-500:#ff6900; --palette-orange-600:#f54900; --palette-orange-700:#ca3500; --palette-orange-800:#9f2d00; --palette-orange-900:#7e2a0c; --palette-orange-950:#441306;
+  --palette-amber-50:#fffbeb; --palette-amber-100:#fef3c6; --palette-amber-200:#fee685; --palette-amber-300:#ffd230; --palette-amber-400:#ffb900; --palette-amber-500:#fe9a00; --palette-amber-600:#e17100; --palette-amber-700:#bb4d00; --palette-amber-800:#973c00; --palette-amber-900:#7b3306; --palette-amber-950:#461901;
+  --palette-yellow-50:#fefce8; --palette-yellow-100:#fef9c2; --palette-yellow-200:#fff085; --palette-yellow-300:#ffdf20; --palette-yellow-400:#fdc700; --palette-yellow-500:#f0b100; --palette-yellow-600:#d08700; --palette-yellow-700:#a65f00; --palette-yellow-800:#894b00; --palette-yellow-900:#733e0a; --palette-yellow-950:#432004;
+  --palette-green-50:#f0fdf4; --palette-green-100:#dcfce7; --palette-green-200:#b9f8cf; --palette-green-300:#7bf1a8; --palette-green-400:#05df72; --palette-green-500:#00c950; --palette-green-600:#00a63e; --palette-green-700:#008236; --palette-green-800:#016630; --palette-green-900:#0d542b; --palette-green-950:#032e15;
+  --palette-sky-50:#f0f9ff; --palette-sky-100:#dff2fe; --palette-sky-200:#b8e6fe; --palette-sky-300:#74d4ff; --palette-sky-400:#00bcff; --palette-sky-500:#00a6f4; --palette-sky-600:#0084d1; --palette-sky-700:#0069a8; --palette-sky-800:#00598a; --palette-sky-900:#024a70; --palette-sky-950:#052f4a;
+  --palette-blue-50:#eaf1ff; --palette-blue-100:#d8e5ff; --palette-blue-200:#b9cdff; --palette-blue-300:#8eabff; --palette-blue-400:#627bff; --palette-blue-500:#3e4cff; --palette-blue-600:#1e1cff; --palette-blue-700:#1510f0; --palette-blue-800:#1412c1; --palette-blue-900:#181a97; --palette-blue-950:#0f0e58;
+  --palette-purple-50:#faf5ff; --palette-purple-100:#f3e8ff; --palette-purple-200:#e9d4ff; --palette-purple-300:#dab2ff; --palette-purple-400:#c27aff; --palette-purple-500:#ad46ff; --palette-purple-600:#9810fa; --palette-purple-700:#8200db; --palette-purple-800:#6e11b0; --palette-purple-900:#59168b; --palette-purple-950:#3c0366;
+  --palette-pink-50:#fdf2f8; --palette-pink-100:#fce7f3; --palette-pink-200:#fccee8; --palette-pink-300:#fda5d5; --palette-pink-400:#fb64b6; --palette-pink-500:#f6339a; --palette-pink-600:#e60076; --palette-pink-700:#c6005c; --palette-pink-800:#a3004c; --palette-pink-900:#861043; --palette-pink-950:#510424;
+
+  /* ---------- Brand (does NOT flip with theme) ---------- */
+  --brand-default:#ffffff; --brand-soft:#ffffff4d; --brand-muted:#ffffff33; --brand-weak:#ffffff66; --subtle:#f0f1f2;
+  --static-white:#ffffff; --static-black:#000000;
+
+  /* ---------- Semantic — LIGHT ---------- */
+  --bg-default:#e0e1e3; --bg-subtle:#83868d; --bg-soft:#a0a3aa; --bg-muted:#bfc1c5; --bg-weak:#d1d1d3; --bg-inverse:#151515; --bg-neutral:#ffffff; --bg-button-disabled:#bfc1c5;
+  --text-default:#151515; --text-subtle:#4e5054; --text-soft:#83868d; --text-muted:#a0a3aa; --text-inverse:#ffffff; --text-link:#1e90ff; --text-button-disabled:#83868d;
+  --stroke-default:#151515; --stroke-subtle:#83868d; --stroke-soft:#bfc1c5; --stroke-inverse:#ffffff; --stroke-weak:#0000001a;
+  --icon-default:#151515; --icon-subtle:#4e5054; --icon-soft:#83868d; --icon-muted:#a0a3aa; --icon-inverse:#ffffff;
+  --icon-nav-default:#151515b8; --icon-nav-active:#ffffff; --icon-nav-strong:#151515;
+  --success-strong:#0d542b; --success-default:#008236; --success-soft:#05df72; --success-weak:#dcfce7;
+  --warning-strong:#7e2a0c; --warning-default:#e17100; --warning-soft:#ffb900; --warning-weak:#fef3c6;
+  --danger-strong:#4d0218; --danger-default:#ec003f; --danger-soft:#ff637e; --danger-weak:#ffe4e6;
+  --state-error-base:#fb3748;
+
+  /* App surface & accent (app/app.css) */
+  --home-surface:#ffffff; --accent:#2f6df6; --accent-deep:#1f57d6; --accent-tonal:#e4ecff;
+  --accent-line:rgba(47,109,246,.22); --focus-ring:rgba(47,109,246,.35); --scrim:rgba(15,23,42,.4);
+
+  /* Engagement — raw palette, same in both themes (D-216) */
+  --like-color:#fb2c36; --save-color:#ffb900;
+
+  /* ---------- Element tokens — LIGHT ---------- */
+  /* Button */
+  --element-bg-button-linear-start:#ffffff; --element-bg-button-linear-end:#ffffff;
+  --element-stroke-button-linear-start:#ffffff0a; --element-stroke-button-linear-end:#ffffff33;
+  --element-shine-glass-button:#ffffffe6; --element-shine-glass-button-soft:#ffffff59; --element-stroke-static-white:#ffffff73;
+  /* Translucent button */
+  --element-bg-translucent-button-linear-start:#ffffff99; --element-bg-translucent-button-linear-end:#ffffff99;
+  --element-stroke-translucent-button-linear-start:#0000001a; --element-stroke-translucent-button-linear-end:#0000003d;
+  /* Glass icon button */
+  --element-bg-glass-icon-button:#ffffff8c; --element-shine-glass-icon-button:#ffffffe6; --element-shine-glass-icon-button-soft:#ffffff59; --element-bg-glass-icon-button-success:#089b45;
+  /* Nav bar */
+  --element-bg-nav-default:#ffffff99; --element-bg-nav-glass:#ffffffc7; --element-bg-nav-glass-solid:#ffffff;
+  --element-shine-glass-nav:#ffffffe6; --element-shine-glass-nav-soft:#1515151f; --element-bg-nav-menu-active:#000000; --element-effects-nav-bg-blur:15px;
+  /* Select card */
+  --element-bg-select-card-card-default:#f0f1f2;
+  --element-bg-select-card-icon-default-linear-start:#ffffff33; --element-bg-select-card-icon-default-linear-end:#ffffff;
+  --element-bg-select-card-icon-selected-linear-start:#0000008c; --element-bg-select-card-icon-selected-linear-end:#020202;
+  --element-effects-select-card-drop-shadow:#ffffff2e;
+  /* Header / footer / drawer */
+  --element-bg-top-header-linear-start:#ffffff00; --element-bg-top-header-linear-end:#e0e1e3; --element-effects-top-header-bg-blur:40px;
+  --element-bg-footer-linear-start:#ffffff00; --element-bg-footer-linear-end:#e0e1e3;
+  --element-bg-drawer-linear-start:#ffffff; --element-bg-drawer-linear-end:#e0e1e3;
+  /* Cards, chips, misc */
+  --element-bg-search-input:#ffffff80; --element-bg-metric-card-default:#ffffff80;
+  --element-bg-filter-tags-default:#d1d1d3; --element-stroke-filter-tags-default:#d1d1d3;
+  --element-bg-empty-state-linear-start:#ededed; --element-bg-empty-state-linear-end:#bcbcbc;
+  --element-effects-banner-drop-shadow:#e7e7e799;
+  --element-bg-image-count:rgba(53,53,53,.64); --element-bg-verified:#1d9bf0;
+  --record-ring-track:#ffffff33; --record-ring-progress:#ec003f; --record-ring-scrim:#00000047;
+
+  /* ---------- Local components (theme-independent) ---------- */
+  --element-bg-swipe-neutral:#797979; --element-fg-swipe-neutral:#ffffff;
+  --element-bg-swipe-destructive:#fb2c36; --element-fg-swipe-destructive:#ffffff;
+  --element-bg-availability-available:#0d542b; --element-fg-availability-available:#ffffff;
+  --element-bg-availability-unavailable:#4b4b4b; --element-fg-availability-unavailable:#bfc1c5;
+  --element-bg-open-now:#008236; --element-fg-open-now:#ffffff;
+  --element-bg-tag-dark:#353535; --element-fg-tag-dark:#ffffff; --element-stroke-tag-dark:#ffffff14;
+  --element-bg-tag-recommended:rgba(225,113,0,.35); --element-fg-tag-recommended:#151515;
+  --label-recommended-fg:#f0b100; --label-recommended-bg:rgba(240,177,0,.2);
+  --label-best-match-fg:#7f7fff; --label-best-match-bg:rgba(79,80,255,.2);
+  --label-fits-fg:#ff8904; --label-fits-bg:rgba(240,177,0,.2);
+  --status-available-now:#00a63e; --status-fast-procurement:#0004f5; --status-pre-order:#8200db;
+  --status-made-to-order:#ff6900; --status-limited-stock:#f0b100; --status-out-of-stock:#e7000b; --status-discontinued:#686b70;
+  --element-bg-style-card-placeholder:#e9e0d2; --icon-rating-star:#fdc700;
+}
+
+/* ---------- Semantic + element — DARK ---------- */
+[data-theme="dark"] {
+  --bg-default:#151515; --bg-subtle:#4b4b4b; --bg-soft:#616161; --bg-muted:#939393; --bg-weak:#1f1f1f; --bg-inverse:#ffffff; --bg-neutral:#353535; --bg-button-disabled:#353535;
+  --text-default:#ffffff; --text-subtle:#bfc1c5; --text-soft:#83868d; --text-muted:#e5e5e5; --text-inverse:#151515; --text-link:#1e90ff; --text-button-disabled:#939393;
+  --stroke-default:#ffffff; --stroke-subtle:#616161; --stroke-soft:#353535; --stroke-inverse:#151515; --stroke-weak:#ffffff1a;
+  --icon-default:#ffffff; --icon-subtle:#bfc1c5; --icon-soft:#83868d; --icon-muted:#e5e5e5; --icon-inverse:#151515;
+  --icon-nav-default:#ffffffb8; --icon-nav-active:#ffffff; --icon-nav-strong:#ffffff;
+  --success-strong:#008236; --success-default:#00a63e; --success-soft:#00a63e80; --success-weak:#00a63e4d;
+  --warning-strong:#9f2d00; --warning-default:#e17100; --warning-soft:#e1710080; --warning-weak:#e1710026;
+  --danger-strong:#c70036; --danger-default:#ec003f; --danger-soft:#ec003f80; --danger-weak:#ec003f33;
+  --state-error-base:#fb3748;
+
+  --home-surface:#151515; --accent:#5b8cff; --accent-deep:#90b0ff; --accent-tonal:#1e2740;
+  --accent-line:rgba(144,176,255,.28); --focus-ring:rgba(47,109,246,.35); --scrim:rgba(0,0,0,.55);
+
+  --element-bg-button-linear-start:#000000; --element-bg-button-linear-end:#505050;
+  --element-stroke-button-linear-start:#1515150a; --element-stroke-button-linear-end:#15151533;
+  --element-shine-glass-button:#ffffff73; --element-shine-glass-button-soft:#ffffff26;
+  --element-bg-translucent-button-linear-start:#00000099; --element-bg-translucent-button-linear-end:#00000099;
+  --element-stroke-translucent-button-linear-start:#ffffff1a; --element-stroke-translucent-button-linear-end:#ffffff3d;
+  --element-bg-glass-icon-button:#00000073; --element-shine-glass-icon-button:#ffffff73; --element-shine-glass-icon-button-soft:#ffffff26;
+  --element-bg-nav-default:#9898983d; --element-bg-nav-glass:#151515c7; --element-bg-nav-glass-solid:#151515;
+  --element-shine-glass-nav:#ffffff33; --element-shine-glass-nav-soft:#ffffff11; --element-effects-nav-bg-blur:28px;
+  --element-bg-select-card-card-default:#1f1f1f;
+  --element-bg-select-card-icon-default-linear-start:#ffffff05; --element-bg-select-card-icon-default-linear-end:#ffffff3d;
+  --element-bg-select-card-icon-selected-linear-start:#ffffff8c; --element-bg-select-card-icon-selected-linear-end:#f3f3f3;
+  --element-effects-select-card-drop-shadow:#0000001f;
+  --element-bg-top-header-linear-start:#00000000; --element-bg-top-header-linear-end:#000000; --element-effects-top-header-bg-blur:20px;
+  --element-bg-footer-linear-start:#00000000; --element-bg-footer-linear-end:#000000;
+  --element-bg-drawer-linear-start:#151515ad; --element-bg-drawer-linear-end:#15151594;
+  --element-bg-search-input:#ffffff1a; --element-bg-metric-card-default:#ffffff14;
+  --element-bg-filter-tags-default:#ffffff; --element-stroke-filter-tags-default:#353535;
+  --element-bg-empty-state-linear-start:#000000; --element-bg-empty-state-linear-end:#212121;
+  --element-effects-banner-drop-shadow:#15151599;
+}

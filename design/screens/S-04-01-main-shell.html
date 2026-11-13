@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-04-01 Main shell</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-01-04.css">
+</head>
+<body class="t-paragraph-m" data-states="default,loading" data-roles="professional,reseller,homeowner" data-shell="main" data-nav="home">
+<div class="screen app on-surface" style="--page-bg: var(--home-surface); --page-max: 1120px">
+  <div class="app-main">
+    <header class="top"><div class="top-inner glass glass-panel"><div class="bar"><h1 class="t-label-xl">Main shell</h1></div></div></header>
+    <main class="page stagger" data-show="default">
+      <section class="slot" aria-label="Page content placeholder">
+        <span class="empty-tile"><i class="ic ic-24 hgi hgi-stroke hgi-layers-01" aria-hidden="true"></i></span>
+        <div class="slot-text"><h2 class="t-label-l">Tab page</h2><p class="t-paragraph-m">The selected destination renders here and scrolls behind the floating glass navigation. The shell stays in place while pages change.</p></div>
+      </section>
+      <section class="stack" aria-labelledby="lg">
+        <h2 id="lg" class="t-sublabel-s text-subtle">Destinations</h2>
+        <ul class="legend-grid"><li class="legend-item"><span class="tile on"><i class="ic ic-24 hgi hgi-stroke hgi-home-05" aria-hidden="true"></i></span><span class="txt"><span class="t-label-s">Home</span><span class="t-paragraph-s">What you need · active</span></span></li><li class="legend-item"><span class="tile"><i class="ic ic-24 hgi hgi-stroke hgi-compass" aria-hidden="true"></i></span><span class="txt"><span class="t-label-s">Explore</span><span class="t-paragraph-s">Home feed</span></span></li><li class="legend-item"><span class="tile"><i class="ic ic-24 hgi hgi-stroke hgi-user-search-01" aria-hidden="true"></i></span><span class="txt"><span class="t-label-s">Discover</span><span class="t-paragraph-s">People and businesses</span></span></li><li class="legend-item"><span class="tile"><i class="ic ic-24 hgi hgi-stroke hgi-store-02" aria-hidden="true"></i></span><span class="txt"><span class="t-label-s">Marketplace</span><span class="t-paragraph-s">Refreshes on every visit</span></span></li><li class="legend-item"><span class="tile"><i class="ic ic-24 hgi hgi-stroke hgi-notification-03" aria-hidden="true"></i></span><span class="txt"><span class="t-label-s">Notifications</span><span class="t-paragraph-s">Dot while there are unread items</span></span></li><li class="legend-item" data-role="professional"><span class="tile"><i class="ic ic-24 hgi hgi-stroke hgi-plus-sign" aria-hidden="true"></i></span><span class="txt"><span class="t-label-s">Create</span><span class="t-paragraph-s">Action button · professionals and brands</span></span></li><li class="legend-item" data-role="reseller"><span class="tile"><i class="ic ic-24 hgi hgi-stroke hgi-more-horizontal" aria-hidden="true"></i></span><span class="txt"><span class="t-label-s">More actions</span><span class="t-paragraph-s">Action button · opens the More Actions menu</span></span></li><li class="legend-item" data-role="homeowner"><span class="tile"><i class="ic ic-24 hgi hgi-stroke hgi-user" aria-hidden="true"></i></span><span class="txt"><span class="t-label-s">No action button</span><span class="t-paragraph-s">Homeowners have four destinations only</span></span></li></ul>
+      </section>
+    </main>
+    <main class="page shell-loading" data-show="loading" aria-busy="true">
+      <div class="stack stack-24" aria-hidden="true"><span class="skel" style="height:56vh;border-radius:var(--radius-28)"></span><div class="legend-grid"><span class="skel" style="height:64px;border-radius:var(--radius-20)"></span><span class="skel" style="height:64px;border-radius:var(--radius-20)"></span><span class="skel" style="height:64px;border-radius:var(--radius-20)"></span><span class="skel" style="height:64px;border-radius:var(--radius-20)"></span><span class="skel" style="height:64px;border-radius:var(--radius-20)"></span></div></div>
+      <span class="sr-only" role="status">Loading</span>
+    </main>
+  </div>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375</b> — as the app: floating glass pill centred at the bottom with five icon-only tabs; a separate circular glass action button to its right when the role has one. Content scrolls behind the bar.</li>
+      <li><b>768</b> — floating glass rail on the left: logo mark (expands the menu), five destinations with tooltips, action button, profile at the bottom.</li>
+      <li><b>1440</b> — the same menu expanded to a sidebar with labels; it collapses back to the rail and remembers the choice.</li>
+      <li>Roles: <b>professional</b> — Create "+"; <b>reseller</b> — More actions (opens S-04-03); <b>homeowner</b> — no action button.</li>
+      <li>States: <b>default</b>; <b>loading</b> — five tabs and no action button until the profile (role) has loaded, page area shows the tab's own skeleton. Empty and error belong to the tab pages, not the shell.</li>
+      <li>The content area here is a neutral placeholder; every signed-in screen is drawn inside this shell.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Nav bar (mobile bottom tabs: glass, active pill, unread dot)</li>
+      <li>Sidebar / rail (from 768: glass, collapsible, tooltips)</li>
+      <li>IconButton glass (Create / More actions)</li>
+      <li>Avatar (profile link) · Skeleton</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Tab change — the active pill stretches to the new item and settles: <code>--tabs-*</code>; page content — <code>--tab-panel-*</code> / staggered rise <code>--stagger-*</code>.</li>
+      <li>Unread dot — <code>--badge-pop-*</code>; rail ⇄ sidebar — <code>--resize-*</code>; press — <code>--press-*</code>.</li>
+      <li>More actions menu — <code>--panel-*</code>; Create — <code>--page-slide-*</code>.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li><code>nav</code> landmark labelled "Primary"; each destination is a link with a text label (visually hidden on mobile, tooltip on the rail) and <code>aria-current="page"</code> when active.</li>
+      <li>The Notifications label includes "unread" while the dot shows — not colour alone.</li>
+      <li>Action button is labelled "Create" / "More actions"; all targets are at least 44×44.</li>
+      <li>Page bottom padding keeps the last content clear of the floating bar.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>Web labels "Home", "Explore", "Discover", "Marketplace", "Notifications" are not in the app (icon-only) — confirm.</li>
+      <li>Navigation pattern decided once: floating glass rail ⇄ sidebar from 768 (DESIGN_SPEC §4), not a top header.</li>
+      <li>Glyphs: the app uses Notification01 and Menu01 (not approved); Notification03 and MoreHorizontal are used.</li>
+      <li>Brands get the same "+" as professionals (Q-32); the hidden Projects tab is not shown.</li>
+      <li>Five tabs follow the app branch feature/home-screen-redesign: Home (S-20-01) is new, and the feed moves to Explore with the Compass glyph.</li>
+      <li>The profile link at the foot of the rail is a web addition (the app reaches the profile from the Home header avatar).</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-13-25 File Preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-13b.css">
+</head>
+<body class="t-paragraph-m" data-kind="overlay" data-host="S-13-21-certification-form.html" data-states="default">
+<div class="screen overlay" data-variant="dialog">
+  <button class="scrim" data-close aria-label="Close"></button>
+  <section class="sheet" role="dialog" aria-modal="true" aria-labelledby="t" aria-describedby="d">
+<div class="sheet-head"><div class="txt"><h1 id="t" class="t-label-xl">File Preview</h1><p class="t-label-s text-default">site-supervision-licence.docx</p><p id="d" class="t-paragraph-s f13-break">certifications/aarav.designs/2024/site-supervision-licence.docx</p></div></div>
+    <div class="sheet-foot"><button class="btn btn-m btn-filled t-label-s press" data-close>Close</button></div>
+  </section>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li>Centred dialog at every width: title, the attachment name, its stored value (up to four lines), one button.</li>
+      <li>Single state: text only.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Modal / Dialog</li>
+      <li>Button filled M ("Close")</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Open / close — <code>--modal-*</code>.</li>
+      <li>Button press — <code>--press-*</code>.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li>Dialog named by its title; focus trapped and returned to the attachment row.</li>
+      <li>Esc, the scrim and "Close" all close it.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>Only reached for an attachment that is neither an image nor a PDF. The picker allows only JPEG, PNG and PDF, so this covers older data. Keep on web?</li>
+      <li>The app uses a plain text button; here a filled M button.</li>
+      <li>File name and path are sample data.</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

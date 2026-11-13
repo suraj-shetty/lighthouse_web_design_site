@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-19-04 Submit quote</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-19.css">
+</head>
+<body class="t-paragraph-m no-tabbar has-foot"
+      data-states="default,filled,invalid,submitting,submit-failed,loading,error"
+      data-shell="reseller" data-nav="orders">
+
+<div class="screen app on-surface" style="--page-bg: var(--home-surface); --page-max: 1120px">
+  <div class="app-main">
+    <header class="top"><div class="top-inner glass glass-panel"><div class="bar" data-show="default filled invalid submitting submit-failed"><div class="ohead"><div class="row row-8"><h1 class="t-label-xl truncate">Submit Quote</h1></div><span class="t-paragraph-s text-subtle tnum">Order ORD-10432</span></div><a class="ibtn ibtn-44 glass glass-icon press" data-back href="S-19-01-reseller-order-list.html" aria-label="Close"><i class="ic hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></a></div><div class="bar" data-show="loading error"><div class="ohead"><div class="row row-8"><h1 class="t-label-xl truncate">Submit Quote</h1></div><span class="t-paragraph-s text-subtle tnum">Order </span></div><a class="ibtn ibtn-44 glass glass-icon press" data-back href="S-19-01-reseller-order-list.html" aria-label="Close"><i class="ic hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></a></div></div></header>
+    <main class="page" data-show="default"><div class="split fsplit">
+      <section class="card dcard sum sticky" aria-label="Order summary">
+        <a class="dprod press" href="S-10-12-product-detail.html"><img class="thumb" src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=144&h=144&fit=crop&q=70" alt="" loading="lazy"><span class="txt"><span class="t-label-m">Jaquar Florentine Single Lever Basin Mixer</span><span class="tag t-paragraph-s">Jaquar</span></span></a>
+        <hr class="hr">
+        <dl class="kv dkv t-paragraph-m"><dt>SKU</dt><dd>FLR-CHR-5011B</dd><dt>Quantity</dt><dd>24 Units</dd><dt>Buyer</dt><dd>R**** M*****</dd><dt>Category</dt><dd>Interior Designer</dd><dt class="full">Delivery Location</dt><dd class="full"><span class="t-label-s">Site Office</span><br>No. 214, 12th Main Road, HAL 2nd Stage, Indiranagar, Bengaluru 560038<br><span class="text-subtle">Flat 3B, 3rd Floor, Near ESI Hospital</span></dd><dt>Base MRP</dt><dd>₹6,450</dd><dt class="full">Note from Buyer</dt><dd class="full">Please confirm the chrome finish and share the warranty card along with the invoice.</dd></dl>
+      </section>
+      <div class="stack stack-24" role="form" aria-label="Submit Quote">
+        <div class="card fcardx">
+          <div class="f2">
+            <div class="field"><label class="t-label-small" for="default-ppu">Price per unit <span class="req" aria-hidden="true">*</span></label>
+              <div class="input"><input id="default-ppu" class="t-paragraph-m tnum" type="text" inputmode="numeric" pattern="[0-9]*" required placeholder="Enter Price per unit" value=""></div></div>
+            <div class="field"><label class="t-label-small" for="default-tot">Quote Total Amount <span class="req" aria-hidden="true">*</span></label>
+              <div class="input is-disabled"><input id="default-tot" class="t-paragraph-m tnum" type="text" readonly aria-live="polite" placeholder="Auto-calculated from unit price × quantity" value=""></div>
+              </div>
+          </div>
+          <div class="f2">
+            <div class="field"><span class="label t-label-small" id="default-del-l">Delivery Timeline <span class="req" aria-hidden="true">*</span></span>
+            <button class="select t-paragraph-m is-empty" data-open="S-09-13-date-picker.html" aria-haspopup="dialog" aria-labelledby="default-del-l default-del-v"><span id="default-del-v">Select delivery date</span><i class="ic hgi hgi-stroke hgi-calendar-03" aria-hidden="true"></i></button></div>
+            <div class="field"><span class="label t-label-small" id="default-val-l">Quote Validity <span class="req" aria-hidden="true">*</span></span>
+            <button class="select t-paragraph-m is-empty" data-open="S-09-13-date-picker.html" aria-haspopup="dialog" aria-labelledby="default-val-l default-val-v"><span id="default-val-v">Select validity date</span><i class="ic hgi hgi-stroke hgi-calendar-03" aria-hidden="true"></i></button></div>
+          </div>
+        </div>
+        <div class="card fcardx charges" role="group" aria-labelledby="default-ch">
+          <span class="label t-label-small" id="default-ch">Additional Charges <span class="opt-label">(Optional)</span></span>
+          <div class="ctiles"><button class="scard ctile c-pack t-label-s press" role="checkbox" data-check aria-checked="false"><span class="check"><i class="ic ic-16 hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span><span class="txt">Packing</span></button><button class="scard ctile c-trans t-label-s press" role="checkbox" data-check aria-checked="false"><span class="check"><i class="ic ic-16 hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span><span class="txt">Transport</span></button><button class="scard ctile c-hand t-label-s press" role="checkbox" data-check aria-checked="false"><span class="check"><i class="ic ic-16 hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span><span class="txt">Handling</span></button></div>
+          <div class="field cfield f-pack"><label class="t-label-small" for="default-f-pack">Packing Charge <span class="req" aria-hidden="true">*</span></label>
+            <div class="input"><input id="default-f-pack" class="t-paragraph-m tnum" type="text" inputmode="numeric" pattern="[0-9]*" required placeholder="Enter packing charge" value=""></div></div>
+          <div class="field cfield f-trans"><label class="t-label-small" for="default-f-trans">Transport Charge <span class="req" aria-hidden="true">*</span></label>
+            <div class="input"><input id="default-f-trans" class="t-paragraph-m tnum" type="text" inputmode="numeric" pattern="[0-9]*" required placeholder="Enter transport charge" value=""></div></div>
+          <div class="field cfield f-hand"><label class="t-label-small" for="default-f-hand">Handling Charge <span class="req" aria-hidden="true">*</span></label>
+            <div class="input"><input id="default-f-hand" class="t-paragraph-m tnum" type="text" inputmode="numeric" pattern="[0-9]*" required placeholder="Enter handling charge" value=""></div></div>
+        </div>
+        <div class="card fcardx">
+          <div class="field"><label class="t-label-small" for="default-notes">Notes/Description <span class="opt-label">(Optional)</span></label>
+            <div class="textarea"><textarea id="default-notes" class="t-paragraph-m" rows="5" placeholder="Placeholder text..."></textarea></div></div>
+        </div>
+      </div>
+    </div></main>
+    <main class="page" data-show="filled"><div class="split fsplit">
+      <section class="card dcard sum sticky" aria-label="Order summary">
+        <a class="dprod press" href="S-10-12-product-detail.html"><img class="thumb" src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=144&h=144&fit=crop&q=70" alt="" loading="lazy"><span class="txt"><span class="t-label-m">Jaquar Florentine Single Lever Basin Mixer</span><span class="tag t-paragraph-s">Jaquar</span></span></a>
+        <hr class="hr">
+        <dl class="kv dkv t-paragraph-m"><dt>SKU</dt><dd>FLR-CHR-5011B</dd><dt>Quantity</dt><dd>24 Units</dd><dt>Buyer</dt><dd>R**** M*****</dd><dt>Category</dt><dd>Interior Designer</dd><dt class="full">Delivery Location</dt><dd class="full"><span class="t-label-s">Site Office</span><br>No. 214, 12th Main Road, HAL 2nd Stage, Indiranagar, Bengaluru 560038<br><span class="text-subtle">Flat 3B, 3rd Floor, Near ESI Hospital</span></dd><dt>Base MRP</dt><dd>₹6,450</dd><dt class="full">Note from Buyer</dt><dd class="full">Please confirm the chrome finish and share the warranty card along with the invoice.</dd></dl>
+      </section>
+      <div class="stack stack-24" role="form" aria-label="Submit Quote">
+        <div class="card fcardx">
+          <div class="f2">
+            <div class="field"><label class="t-label-small" for="filled-ppu">Price per unit <span class="req" aria-hidden="true">*</span></label>
+              <div class="input"><input id="filled-ppu" class="t-paragraph-m tnum" type="text" inputmode="numeric" pattern="[0-9]*" required placeholder="Enter Price per unit" value="6200"></div></div>
+            <div class="field"><label class="t-label-small" for="filled-tot">Quote Total Amount <span class="req" aria-hidden="true">*</span></label>
+              <div class="input is-disabled"><input id="filled-tot" class="t-paragraph-m tnum" type="text" readonly aria-live="polite" placeholder="Auto-calculated from unit price × quantity" value="1,48,800"></div>
+              </div>
+          </div>
+          <div class="f2">
+            <div class="field"><span class="label t-label-small" id="filled-del-l">Delivery Timeline <span class="req" aria-hidden="true">*</span></span>
+            <button class="select t-paragraph-m" data-open="S-09-13-date-picker.html" aria-haspopup="dialog" aria-labelledby="filled-del-l filled-del-v"><span id="filled-del-v">28/11/2026</span><i class="ic hgi hgi-stroke hgi-calendar-03" aria-hidden="true"></i></button></div>
+            <div class="field"><span class="label t-label-small" id="filled-val-l">Quote Validity <span class="req" aria-hidden="true">*</span></span>
+            <button class="select t-paragraph-m" data-open="S-09-13-date-picker.html" aria-haspopup="dialog" aria-labelledby="filled-val-l filled-val-v"><span id="filled-val-v">20/11/2026</span><i class="ic hgi hgi-stroke hgi-calendar-03" aria-hidden="true"></i></button></div>
+          </div>
+        </div>
+        <div class="card fcardx charges" role="group" aria-labelledby="filled-ch">
+          <span class="label t-label-small" id="filled-ch">Additional Charges <span class="opt-label">(Optional)</span></span>
+          <div class="ctiles"><button class="scard ctile c-pack t-label-s press" role="checkbox" data-check aria-checked="false"><span class="check"><i class="ic ic-16 hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span><span class="txt">Packing</span></button><button class="scard ctile c-trans t-label-s press" role="checkbox" data-check aria-checked="true"><span class="check"><i class="ic ic-16 hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span><span class="txt">Transport</span></button><button class="scard ctile c-hand t-label-s press" role="checkbox" data-check aria-checked="false"><span class="check"><i class="ic ic-16 hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span><span class="txt">Handling</span></button></div>
+          <div class="field cfield f-pack"><label class="t-label-small" for="filled-f-pack">Packing Charge <span class="req" aria-hidden="true">*</span></label>
+            <div class="input"><input id="filled-f-pack" class="t-paragraph-m tnum" type="text" inputmode="numeric" pattern="[0-9]*" required placeholder="Enter packing charge" value=""></div></div>
+          <div class="field cfield f-trans"><label class="t-label-small" for="filled-f-trans">Transport Charge <span class="req" aria-hidden="true">*</span></label>
+            <div class="input"><input id="filled-f-trans" class="t-paragraph-m tnum" type="text" inputmode="numeric" pattern="[0-9]*" required placeholder="Enter transport charge" value="1200"></div></div>
+          <div class="field cfield f-hand"><label class="t-label-small" for="filled-f-hand">Handling Charge <span class="req" aria-hidden="true">*</span></label>
+            <div class="input"><input id="filled-f-hand" class="t-paragraph-m tnum" type="text" inputmode="numeric" pattern="[0-9]*" required placeholder="Enter handling charge" value=""></div></div>
+        </div>
+        <div class="card fcardx">
+          <div class="field"><label class="t-label-small" for="filled-notes">Notes/Description <span class="opt-label">(Optional)</span></label>
+            <div class="textarea"><textarea id="filled-notes" class="t-paragraph-m" rows="5" placeholder="Placeholder text...">Price includes GST. Dispatch from our Peenya warehouse within two working days of confirmation.</textarea></div></div>
+        </div>
+      </div>
+    </div></main>
+    <main class="page" data-show="invalid"><div class="split fsplit">
+      <section class="card dcard sum sticky" aria-label="Order summary">
+        <a class="dprod press" href="S-10-12-product-detail.html"><img class="thumb" src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=144&h=144&fit=crop&q=70" alt="" loading="lazy"><span class="txt"><span class="t-label-m">Jaquar Florentine Single Lever Basin Mixer</span><span class="tag t-paragraph-s">Jaquar</span></span></a>
+        <hr class="hr">
+        <dl class="kv dkv t-paragraph-m"><dt>SKU</dt><dd>FLR-CHR-5011B</dd><dt>Quantity</dt><dd>24 Units</dd><dt>Buyer</dt><dd>R**** M*****</dd><dt>Category</dt><dd>Interior Designer</dd><dt class="full">Delivery Location</dt><dd class="full"><span class="t-label-s">Site Office</span><br>No. 214, 12th Main Road, HAL 2nd Stage, Indiranagar, Bengaluru 560038<br><span class="text-subtle">Flat 3B, 3rd Floor, Near ESI Hospital</span></dd><dt>Base MRP</dt><dd>₹6,450</dd><dt class="full">Note from Buyer</dt><dd class="full">Please confirm the chrome finish and share the warranty card along with the invoice.</dd></dl>
+      </section>
+      <div class="stack stack-24" role="form" aria-label="Submit Quote">
+        <div class="card fcardx">
+          <div class="f2">
+            <div class="field"><label class="t-label-small" for="invalid-ppu">Price per unit <span class="req" aria-hidden="true">*</span></label>
+              <div class="input"><input id="invalid-ppu" class="t-paragraph-m tnum" type="text" inputmode="numeric" pattern="[0-9]*" required placeholder="Enter Price per unit" value=""></div></div>
+            <div class="field"><label class="t-label-small" for="invalid-tot">Quote Total Amount <span class="req" aria-hidden="true">*</span></label>
+              <div class="input is-disabled is-error"><input id="invalid-tot" class="t-paragraph-m tnum" type="text" readonly aria-live="polite" placeholder="Auto-calculated from unit price × quantity" value="" aria-invalid="true" aria-describedby="invalid-tot-e"></div>
+              <p id="invalid-tot-e" class="helper error t-paragraph-s" role="alert">Please enter a valid quote amount</p></div>
+          </div>
+          <div class="f2">
+            <div class="field"><span class="label t-label-small" id="invalid-del-l">Delivery Timeline <span class="req" aria-hidden="true">*</span></span>
+            <button class="select t-paragraph-m is-empty" data-open="S-09-13-date-picker.html" aria-haspopup="dialog" aria-labelledby="invalid-del-l invalid-del-v"><span id="invalid-del-v">Select delivery date</span><i class="ic hgi hgi-stroke hgi-calendar-03" aria-hidden="true"></i></button></div>
+            <div class="field"><span class="label t-label-small" id="invalid-val-l">Quote Validity <span class="req" aria-hidden="true">*</span></span>
+            <button class="select t-paragraph-m is-empty" data-open="S-09-13-date-picker.html" aria-haspopup="dialog" aria-labelledby="invalid-val-l invalid-val-v"><span id="invalid-val-v">Select validity date</span><i class="ic hgi hgi-stroke hgi-calendar-03" aria-hidden="true"></i></button></div>
+          </div>
+        </div>
+        <div class="card fcardx charges" role="group" aria-labelledby="invalid-ch">
+          <span class="label t-label-small" id="invalid-ch">Additional Charges <span class="opt-label">(Optional)</span></span>
+          <div class="ctiles"><button class="scard ctile c-pack t-label-s press" role="checkbox" data-check aria-checked="false"><span class="check"><i class="ic ic-16 hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span><span class="txt">Packing</span></button><button class="scard ctile c-trans t-label-s press" role="checkbox" data-check aria-checked="false"><span class="check"><i class="ic ic-16 hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span><span class="txt">Transport</span></button><button class="scard ctile c-hand t-label-s press" role="checkbox" data-check aria-checked="false"><span class="check"><i class="ic ic-16 hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span><span class="txt">Handling</span></button></div>
+          <div class="field cfield f-pack"><label class="t-label-small" for="invalid-f-pack">Packing Charge <span class="req" aria-hidden="true">*</span></label>
+            <div class="input"><input id="invalid-f-pack" class="t-paragraph-m tnum" type="text" inputmode="numeric" pattern="[0-9]*" required placeholder="Enter packing charge" value=""></div></div>
+          <div class="field cfield f-trans"><label class="t-label-small" for="invalid-f-trans">Transport Charge <span class="req" aria-hidden="true">*</span></label>
+            <div class="input"><input id="invalid-f-trans" class="t-paragraph-m tnum" type="text" inputmode="numeric" pattern="[0-9]*" required placeholder="Enter transport charge" value=""></div></div>
+          <div class="field cfield f-hand"><label class="t-label-small" for="invalid-f-hand">Handling Charge <span class="req" aria-hidden="true">*</span></label>
+            <div class="input"><input id="invalid-f-hand" class="t-paragraph-m tnum" type="text" inputmode="numeric" pattern="[0-9]*" required placeholder="Enter handling charge" value=""></div></div>
+        </div>
+        <div class="card fcardx">
+          <div class="field"><label class="t-label-small" for="invalid-notes">Notes/Description <span class="opt-label">(Optional)</span></label>
+            <div class="textarea"><textarea id="invalid-notes" class="t-paragraph-m" rows="5" placeholder="Placeholder text..."></textarea></div></div>
+        </div>
+      </div>
+    </div></main>
+    <main class="page" data-show="submitting"><div class="split fsplit">
+      <section class="card dcard sum sticky" aria-label="Order summary">
+        <a class="dprod press" href="S-10-12-product-detail.html"><img class="thumb" src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=144&h=144&fit=crop&q=70" alt="" loading="lazy"><span class="txt"><span class="t-label-m">Jaquar Florentine Single Lever Basin Mixer</span><span class="tag t-paragraph-s">Jaquar</span></span></a>
+        <hr class="hr">
+        <dl class="kv dkv t-paragraph-m"><dt>SKU</dt><dd>FLR-CHR-5011B</dd><dt>Quantity</dt><dd>24 Units</dd><dt>Buyer</dt><dd>R**** M*****</dd><dt>Category</dt><dd>Interior Designer</dd><dt class="full">Delivery Location</dt><dd class="full"><span class="t-label-s">Site Office</span><br>No. 214, 12th Main Road, HAL 2nd Stage, Indiranagar, Bengaluru 560038<br><span class="text-subtle">Flat 3B, 3rd Floor, Near ESI Hospital</span></dd><dt>Base MRP</dt><dd>₹6,450</dd><dt class="full">Note from Buyer</dt><dd class="full">Please confirm the chrome finish and share the warranty card along with the invoice.</dd></dl>
+      </section>
+      <div class="stack stack-24" role="form" aria-label="Submit Quote">
+        <div class="card fcardx">
+          <div class="f2">
+            <div class="field"><label class="t-label-small" for="submitting-ppu">Price per unit <span class="req" aria-hidden="true">*</span></label>
+              <div class="input"><input id="submitting-ppu" class="t-paragraph-m tnum" type="text" inputmode="numeric" pattern="[0-9]*" required placeholder="Enter Price per unit" value="6200" disabled></div></div>
+            <div class="field"><label class="t-label-small" for="submitting-tot">Quote Total Amount <span class="req" aria-hidden="true">*</span></label>
+              <div class="input is-disabled"><input id="submitting-tot" class="t-paragraph-m tnum" type="text" readonly aria-live="polite" placeholder="Auto-calculated from unit price × quantity" value="1,48,800"></div>
+              </div>
+          </div>
+          <div class="f2">
+            <div class="field"><span class="label t-label-small" id="submitting-del-l">Delivery Timeline <span class="req" aria-hidden="true">*</span></span>
+            <button class="select t-paragraph-m" data-open="S-09-13-date-picker.html" aria-haspopup="dialog" aria-labelledby="submitting-del-l submitting-del-v" disabled><span id="submitting-del-v">28/11/2026</span><i class="ic hgi hgi-stroke hgi-calendar-03" aria-hidden="true"></i></button></div>
+            <div class="field"><span class="label t-label-small" id="submitting-val-l">Quote Validity <span class="req" aria-hidden="true">*</span></span>
+            <button class="select t-paragraph-m" data-open="S-09-13-date-picker.html" aria-haspopup="dialog" aria-labelledby="submitting-val-l submitting-val-v" disabled><span id="submitting-val-v">20/11/2026</span><i class="ic hgi hgi-stroke hgi-calendar-03" aria-hidden="true"></i></button></div>
+          </div>
+        </div>
+        <div class="card fcardx charges" role="group" aria-labelledby="submitting-ch">
+          <span class="label t-label-small" id="submitting-ch">Additional Charges <span class="opt-label">(Optional)</span></span>
+          <div class="ctiles"><button class="scard ctile c-pack t-label-s press" role="checkbox" data-check aria-checked="false" disabled><span class="check"><i class="ic ic-16 hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span><span class="txt">Packing</span></button><button class="scard ctile c-trans t-label-s press" role="checkbox" data-check aria-checked="true" disabled><span class="check"><i class="ic ic-16 hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span><span class="txt">Transport</span></button><button class="scard ctile c-hand t-label-s press" role="checkbox" data-check aria-checked="false" disabled><span class="check"><i class="ic ic-16 hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span><span class="txt">Handling</span></button></div>
+          <div class="field cfield f-pack"><label class="t-label-small" for="submitting-f-pack">Packing Charge <span class="req" aria-hidden="true">*</span></label>
+            <div class="input"><input id="submitting-f-pack" class="t-paragraph-m tnum" type="text" inputmode="numeric" pattern="[0-9]*" required placeholder="Enter packing charge" value="" disabled></div></div>
+          <div class="field cfield f-trans"><label class="t-label-small" for="submitting-f-trans">Transport Charge <span class="req" aria-hidden="true">*</span></label>
+            <div class="input"><input id="submitting-f-trans" class="t-paragraph-m tnum" type="text" inputmode="numeric" pattern="[0-9]*" required placeholder="Enter transport charge" value="1200" disabled></div></div>
+          <div class="field cfield f-hand"><label class="t-label-small" for="submitting-f-hand">Handling Charge <span class="req" aria-hidden="true">*</span></label>
+            <div class="input"><input id="submitting-f-hand" class="t-paragraph-m tnum" type="text" inputmode="numeric" pattern="[0-9]*" required placeholder="Enter handling charge" value="" disabled></div></div>
+        </div>
+        <div class="card fcardx">
+          <div class="field"><label class="t-label-small" for="submitting-notes">Notes/Description <span class="opt-label">(Optional)</span></label>
+            <div class="textarea"><textarea id="submitting-notes" class="t-paragraph-m" rows="5" placeholder="Placeholder text..." disabled>Price includes GST. Dispatch from our Peenya warehouse within two working days of confirmation.</textarea></div></div>
+        </div>
+      </div>
+    </div></main>
+    <main class="page" data-show="submit-failed"><div class="split fsplit">
+      <section class="card dcard sum sticky" aria-label="Order summary">
+        <a class="dprod press" href="S-10-12-product-detail.html"><img class="thumb" src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=144&h=144&fit=crop&q=70" alt="" loading="lazy"><span class="txt"><span class="t-label-m">Jaquar Florentine Single Lever Basin Mixer</span><span class="tag t-paragraph-s">Jaquar</span></span></a>
+        <hr class="hr">
+        <dl class="kv dkv t-paragraph-m"><dt>SKU</dt><dd>FLR-CHR-5011B</dd><dt>Quantity</dt><dd>24 Units</dd><dt>Buyer</dt><dd>R**** M*****</dd><dt>Category</dt><dd>Interior Designer</dd><dt class="full">Delivery Location</dt><dd class="full"><span class="t-label-s">Site Office</span><br>No. 214, 12th Main Road, HAL 2nd Stage, Indiranagar, Bengaluru 560038<br><span class="text-subtle">Flat 3B, 3rd Floor, Near ESI Hospital</span></dd><dt>Base MRP</dt><dd>₹6,450</dd><dt class="full">Note from Buyer</dt><dd class="full">Please confirm the chrome finish and share the warranty card along with the invoice.</dd></dl>
+      </section>
+      <div class="stack stack-24" role="form" aria-label="Submit Quote">
+        <div class="card fcardx">
+          <div class="f2">
+            <div class="field"><label class="t-label-small" for="submit-failed-ppu">Price per unit <span class="req" aria-hidden="true">*</span></label>
+              <div class="input"><input id="submit-failed-ppu" class="t-paragraph-m tnum" type="text" inputmode="numeric" pattern="[0-9]*" required placeholder="Enter Price per unit" value="6200"></div></div>
+            <div class="field"><label class="t-label-small" for="submit-failed-tot">Quote Total Amount <span class="req" aria-hidden="true">*</span></label>
+              <div class="input is-disabled"><input id="submit-failed-tot" class="t-paragraph-m tnum" type="text" readonly aria-live="polite" placeholder="Auto-calculated from unit price × quantity" value="1,48,800"></div>
+              </div>
+          </div>
+          <div class="f2">
+            <div class="field"><span class="label t-label-small" id="submit-failed-del-l">Delivery Timeline <span class="req" aria-hidden="true">*</span></span>
+            <button class="select t-paragraph-m" data-open="S-09-13-date-picker.html" aria-haspopup="dialog" aria-labelledby="submit-failed-del-l submit-failed-del-v"><span id="submit-failed-del-v">28/11/2026</span><i class="ic hgi hgi-stroke hgi-calendar-03" aria-hidden="true"></i></button></div>
+            <div class="field"><span class="label t-label-small" id="submit-failed-val-l">Quote Validity <span class="req" aria-hidden="true">*</span></span>
+            <button class="select t-paragraph-m" data-open="S-09-13-date-picker.html" aria-haspopup="dialog" aria-labelledby="submit-failed-val-l submit-failed-val-v"><span id="submit-failed-val-v">20/11/2026</span><i class="ic hgi hgi-stroke hgi-calendar-03" aria-hidden="true"></i></button></div>
+          </div>
+        </div>
+        <div class="card fcardx charges" role="group" aria-labelledby="submit-failed-ch">
+          <span class="label t-label-small" id="submit-failed-ch">Additional Charges <span class="opt-label">(Optional)</span></span>
+          <div class="ctiles"><button class="scard ctile c-pack t-label-s press" role="checkbox" data-check aria-checked="false"><span class="check"><i class="ic ic-16 hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span><span class="txt">Packing</span></button><button class="scard ctile c-trans t-label-s press" role="checkbox" data-check aria-checked="true"><span class="check"><i class="ic ic-16 hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span><span class="txt">Transport</span></button><button class="scard ctile c-hand t-label-s press" role="checkbox" data-check aria-checked="false"><span class="check"><i class="ic ic-16 hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span><span class="txt">Handling</span></button></div>
+          <div class="field cfield f-pack"><label class="t-label-small" for="submit-failed-f-pack">Packing Charge <span class="req" aria-hidden="true">*</span></label>
+            <div class="input"><input id="submit-failed-f-pack" class="t-paragraph-m tnum" type="text" inputmode="numeric" pattern="[0-9]*" required placeholder="Enter packing charge" value=""></div></div>
+          <div class="field cfield f-trans"><label class="t-label-small" for="submit-failed-f-trans">Transport Charge <span class="req" aria-hidden="true">*</span></label>
+            <div class="input"><input id="submit-failed-f-trans" class="t-paragraph-m tnum" type="text" inputmode="numeric" pattern="[0-9]*" required placeholder="Enter transport charge" value="1200"></div></div>
+          <div class="field cfield f-hand"><label class="t-label-small" for="submit-failed-f-hand">Handling Charge <span class="req" aria-hidden="true">*</span></label>
+            <div class="input"><input id="submit-failed-f-hand" class="t-paragraph-m tnum" type="text" inputmode="numeric" pattern="[0-9]*" required placeholder="Enter handling charge" value=""></div></div>
+        </div>
+        <div class="card fcardx">
+          <div class="field"><label class="t-label-small" for="submit-failed-notes">Notes/Description <span class="opt-label">(Optional)</span></label>
+            <div class="textarea"><textarea id="submit-failed-notes" class="t-paragraph-m" rows="5" placeholder="Placeholder text...">Price includes GST. Dispatch from our Peenya warehouse within two working days of confirmation.</textarea></div></div>
+        </div>
+      </div>
+    </div></main>
+    <main class="page" data-show="loading" aria-busy="true" aria-label="Loading order"><div class="split fsplit" aria-hidden="true">
+        <div class="card dcard sum"><div class="dprod"><span class="skel" style="width:72px;height:72px;border-radius:var(--radius-12);flex:none"></span><div class="txt"><span class="skel" style="width:80%;height:16px"></span><span class="skel" style="width:72px;height:24px;border-radius:var(--radius-full)"></span></div></div><span class="skel" style="width:100%;height:14px"></span><span class="skel" style="width:70%;height:14px"></span><span class="skel" style="width:90%;height:14px"></span><span class="skel" style="width:55%;height:14px"></span></div>
+        <div class="card fcardx"><span class="skel" style="width:32%;height:14px"></span><span class="skel" style="width:100%;height:48px;border-radius:var(--radius-full)"></span><span class="skel" style="width:32%;height:14px"></span><span class="skel" style="width:100%;height:48px;border-radius:var(--radius-full)"></span><span class="skel" style="width:32%;height:14px"></span><span class="skel" style="width:100%;height:48px;border-radius:var(--radius-full)"></span><span class="skel" style="width:32%;height:14px"></span><span class="skel" style="width:100%;height:48px;border-radius:var(--radius-full)"></span></div>
+      </div></main>
+    <main class="page" data-show="error">
+      <div class="empty"><div class="empty-tile err-tile" aria-hidden="true"><i class="ic ic-24 hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i></div>
+        <div class="empty-text"><p class="t-paragraph-m" role="alert">Could not load order details</p></div>
+        <button class="btn btn-m btn-filled t-label-s press" data-go-state="loading">RETRY</button></div>
+    </main>
+    <div class="foot-cta foot-flow" data-show="default invalid"><div class="foot-in"><a class="btn glass t-label-m press" data-back href="S-19-01-reseller-order-list.html">CANCEL</a><button class="btn btn-filled t-label-m press" data-go-state="invalid">SUBMIT QUOTE</button></div></div>
+    <div class="foot-cta foot-flow" data-show="filled submit-failed"><div class="foot-in"><a class="btn glass t-label-m press" data-back href="S-19-01-reseller-order-list.html">CANCEL</a><button class="btn btn-filled t-label-m press" data-go-state="submitting">SUBMIT QUOTE</button></div></div>
+    <div class="foot-cta foot-flow" data-show="submitting"><div class="foot-in"><button class="btn glass t-label-m" disabled>CANCEL</button><button class="btn btn-filled t-label-m" disabled aria-busy="true"><span class="spinner" aria-hidden="true"></span><span class="sr-only">Submitting quote</span></button></div></div>
+  </div>
+  <div class="toast-region" aria-live="polite" data-show="invalid"><div class="toast toast-danger glass glass-panel" role="status"><i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i><div class="body"><span class="t-label-s">Missing field</span><p class="t-paragraph-s">Please enter a valid quote amount</p></div></div></div>
+  <div class="toast-region" aria-live="polite" data-show="submit-failed"><div class="toast toast-danger glass glass-panel" role="status"><i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i><div class="body"><span class="t-label-s">Submit failed</span><p class="t-paragraph-s">Something went wrong. Please try again later.</p></div></div></div>
+</div>
+
+<!-- =====================================================================
+     ANNOTATIONS (shown on the board, hidden inside the frames)
+     ===================================================================== -->
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375:</b> mirrors the app: full screen without the reseller tab bar. Header "Submit Quote", "Order {number}", close X. One column: order summary card → Price per unit → Quote Total Amount → Delivery Timeline → Quote Validity → Additional Charges (two tiles per row, amount field under them when ticked) → Notes → "CANCEL" and "SUBMIT QUOTE" side by side at the end of the form (they scroll with it).</li>
+      <li><b>768:</b> same column; price / total and the two dates sit in pairs; three charge tiles in one row; the buttons move to a sticky bar.</li>
+      <li><b>1440:</b> two columns: the form on the left, the order summary sticky on the right so quantity, MRP and the buyer's note stay in view while pricing.</li>
+      <li>Tick a charge tile to reveal its required amount field (works in the mockup). The date fields open the shared date picker (S-09-13); earliest date is today.</li>
+      <li>"filled" shows the total worked out from unit price × quantity (6,200 × 24). <b>Answered (Q-16):</b> charges are not added to the total; they are sent separately.</li>
+      <li>On success the screen closes with no message and the lists refresh.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Top header · IconButton glass (close) · Product card (summary) · Tag · Key / value list</li>
+      <li>Text field (numeric, read-only, error) · Date trigger (Select) · Checkbox tile (Select card) · Textarea</li>
+      <li>Sticky CTA bar · Button translucent L (CANCEL) · Button filled L with loading (SUBMIT QUOTE, RETRY)</li>
+      <li>Skeleton · Empty state (load error) · Toast danger</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Total update: <code>--text-swap-*</code>; charge tile, <code>--select-check-*</code>; amount field reveal, <code>--reveal-*</code></li>
+      <li>Date picker: <code>--panel-*</code>; press, <code>--press-*</code>; toasts, <code>--toast-*</code></li>
+      <li>Push / close: <code>--page-slide-*</code> under 768, <code>--panel-*</code> from 768; skeleton, <code>--skel-*</code></li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li>Form region named "Submit Quote"; required fields carry <code>required</code> as well as the asterisk.</li>
+      <li>The total is read-only and updates through a polite live region.</li>
+      <li>Date fields are buttons that expose the chosen date as their value. Charges are checkboxes grouped under "Additional Charges (Optional)"; each amount field follows its group in focus order.</li>
+      <li>Validation: the app shows toasts only. Here the first failing field is also marked and described ("invalid" state), and announced.</li>
+      <li>Numeric fields use a numeric keyboard; the submit button announces "Submitting quote".</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li><b>Open (Q-129):</b> the Notes hint is literally "Placeholder text..." in the app; kept verbatim. Replace?</li>
+      <li><b>Open (Q-133):</b> validity may be earlier than the delivery date; whole rupees only; currency fixed to INR.</li>
+      <li>Validation order (first failure wins): total → unit price → delivery date → validity date → each ticked charge. Messages: "Please enter a valid quote amount", "Price per unit could not be computed", "Please select a delivery timeline", "Please select a quote validity date", "Please enter the packing / transport / handling charge".</li>
+      <li>No discard confirmation on CANCEL or X (as the app).</li>
+      <li>The load-error icon uses InformationCircle (app: Alert02, not in ICONS.md).</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

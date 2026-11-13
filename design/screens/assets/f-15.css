@@ -1,0 +1,91 @@
+/* =========================================================================
+   F-15 Settings, account & legal — feature styles. Tokens only.
+   Loaded after lh.css by the S-15-* screens.
+   ========================================================================= */
+
+/* Pushed screens: the app pushes these over the tab shell, so there is no
+   floating tab bar under 768. The glass menu stays from 768. */
+.no-tabbar .tabbar { display: none; }
+.no-tabbar .page { padding-bottom: var(--spacing-32); }
+
+/* Header title: centred under 768 (as the app), left in the floating bar from 768 */
+.bar-center h1 { text-align: center; }
+.bar-wrap h1 { white-space: normal; text-wrap: balance; }
+@media (min-width: 768px) { .bar-center h1 { text-align: left; } }
+
+/* Sticky action bar: full-width button under 768, right-aligned from 768 */
+.has-foot .app-main { display: flex; flex-direction: column; min-height: 100dvh; }
+.has-foot .app-main > main { flex: 1 0 auto; width: 100%; }
+.foot-in { display: flex; gap: var(--spacing-12); width: 100%; max-width: var(--page-max); margin: 0 auto; }
+.foot-in > .btn { flex: 1; }
+@media (min-width: 768px) { .foot-in { justify-content: flex-end; } .foot-in > .btn { flex: none; min-width: 220px; } }
+
+/* Centred one-line message (empty / error text the app shows without a CTA) */
+.page-msg, .sheet-msg { display: flex; align-items: center; justify-content: center; text-align: center; color: var(--text-subtle); }
+.page-msg { min-height: 50vh; }
+.sheet-msg { flex: 1; min-height: 240px; }
+
+/* ---------- S-15-02 Blocked users ---------- */
+.avatar-init { display: inline-flex; align-items: center; justify-content: center; color: var(--text-subtle); }
+.blocked .srow { min-height: 64px; }
+.blocked .txt span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* ---------- S-15-03 Update phone number ---------- */
+.sheet > .step { flex: 1; min-height: 0; display: flex; flex-direction: column; }
+.phone-row { display: flex; gap: var(--spacing-8); }
+.phone-row .select { width: auto; flex: none; }
+.step-block { display: flex; flex-direction: column; align-items: center; gap: var(--spacing-24); padding: var(--spacing-16) 0; text-align: center; }
+.step-block p { color: var(--text-subtle); }
+.otp input { padding: 0; }
+.otp input:focus-visible { border-color: var(--stroke-default); }
+.done-badge { display: flex; align-items: center; justify-content: center; width: 72px; height: 72px; border-radius: var(--radius-full); background: var(--success-weak); color: var(--success-default); }
+
+/* ---------- S-15-04 / 05 Delete account ---------- */
+.reasons { padding: var(--spacing-4) var(--spacing-16); }
+.reasons .opt { min-height: 56px; }
+.reasons .opt + .opt { box-shadow: 0 -1px 0 var(--stroke-soft); }
+.del-confirm .sheet-head { align-items: center; }
+.del-confirm .sheet-body { gap: var(--spacing-20); }
+.del-list { display: flex; flex-direction: column; gap: var(--spacing-12); }
+.del-list li { display: flex; align-items: flex-start; gap: var(--spacing-10); color: var(--text-subtle); }
+.del-list .ic { color: var(--icon-soft); margin-top: var(--spacing-2); }
+@media (min-width: 768px) {
+  .del-confirm .sheet { width: min(480px, 100%); height: auto; }
+  .del-confirm .sheet-foot { border-top: 0; }
+}
+
+/* ---------- S-15-06 / 07 FAQ ---------- */
+.faq-links { padding: var(--spacing-4) var(--spacing-16); }
+.faq-links li + li { box-shadow: 0 -1px 0 var(--stroke-soft); }
+.faq-links .end, .faq-master .end { color: var(--icon-soft); flex: none; }
+.faq-md { display: none; }
+.faq-list { display: flex; flex-direction: column; gap: var(--spacing-12); }
+.faq-card { padding: 0 var(--spacing-16); border-bottom: 0; }
+.faq-card > summary { min-height: 64px; padding: var(--spacing-12) 0; }
+.faq-card > .acc-body { padding-bottom: var(--spacing-20); max-width: 68ch; }
+.faq-q { text-transform: uppercase; }
+@media (min-width: 1200px) {
+  .faq-links { display: none; }
+  .faq-md { display: grid; grid-template-columns: 360px minmax(0, 1fr); gap: var(--spacing-24); align-items: start; }
+  .faq-master { position: sticky; top: 96px; display: flex; flex-direction: column; gap: var(--spacing-2); padding: var(--spacing-8); }
+  .faq-master .srow { min-height: 48px; padding: var(--spacing-12); border-radius: var(--radius-12); box-shadow: none; transition: background var(--tabs-dur) var(--tabs-ease), color var(--tabs-dur) var(--tabs-ease); }
+  .faq-master .srow:hover { background: var(--bg-weak); }
+  .faq-master .srow[aria-selected="true"] { background: var(--bg-inverse); color: var(--text-inverse); }
+  .faq-master .srow[aria-selected="true"] .end { color: inherit; }
+  .faq-detail > section { display: flex; flex-direction: column; gap: var(--spacing-16); }
+  .faq-detail h2 { padding: var(--spacing-4) var(--spacing-4) 0; }
+}
+
+/* ---------- S-15-08 … 11 Policy pages (embedded web frame) ---------- */
+.policy-frame { display: flex; flex-direction: column; gap: var(--spacing-24); min-height: 70dvh; }
+.wf-bar { display: flex; align-items: center; gap: var(--spacing-8); min-height: 36px; padding: var(--spacing-6) var(--spacing-12); border-radius: var(--radius-full); background: var(--bg-weak); color: var(--text-subtle); font-family: var(--font-mono); }
+.wf-bar span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
+.wf-ph { display: flex; flex-direction: column; align-items: center; gap: var(--spacing-8); padding: var(--spacing-24) 0 var(--spacing-8); text-align: center; }
+.wf-ph p { color: var(--text-subtle); }
+.wf-doc { display: flex; flex-direction: column; gap: var(--spacing-12); }
+.wf-line { display: block; height: 10px; width: var(--w, 100%); border-radius: var(--radius-full); background: var(--bg-weak); }
+.wf-line.h { height: 16px; margin-top: var(--spacing-16); background: var(--bg-muted); }
+@media (max-width: 767.98px) {
+  .policy .page { padding: 0; }
+  .policy-frame { min-height: calc(100dvh - 92px); border-radius: var(--radius-20) var(--radius-20) 0 0; border-bottom: 0; border-left: 0; border-right: 0; }
+}

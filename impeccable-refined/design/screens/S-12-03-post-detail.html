@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-12-03 Post</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-12.css">
+</head>
+<body class="t-paragraph-m" data-states="default"
+      data-shell="main" data-nav="notifications">
+<div class="screen app on-surface">
+  <div class="app-main">
+    <header class="top">
+      <div class="top-inner glass glass-panel">
+        <div class="bar">
+          <a class="ibtn ibtn-44 glass glass-icon press" data-back href="S-12-01-notifications.html" aria-label="Back"><i class="ic ic-24 hgi hgi-stroke hgi-arrow-left-02" aria-hidden="true"></i></a>
+          <h1 class="t-label-xl" tabindex="-1">Post</h1>
+        </div>
+      </div>
+    </header>
+    <main class="feed">
+      <article class="fcard" aria-labelledby="p1">
+        <div class="fcard-head">
+          <a class="fcard-who" href="S-07-01-public-profile.html">
+            <img class="avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=96&h=96&fit=crop&q=70" alt="">
+            <span class="txt">
+              <span class="fcard-title"><h2 id="p1" class="t-card-title">Aarav Sharma</h2></span>
+              <span class="fcard-time t-paragraph-s">5h ago</span>
+            </span>
+          </a>
+          <button class="ibtn ibtn-44 ibtn-plain press" aria-label="More options" data-open="S-05-03-feed-item-options-sheet.html"><i class="ic ic-24 hgi hgi-stroke hgi-more-horizontal" aria-hidden="true"></i></button>
+        </div>
+        <div class="media" style="--ar: 1"><button class="media-hit" aria-label="Open image" data-open="S-05-10-feed-media-viewer.html"><img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1200&q=75" alt="Living room with a rust sofa and round coffee table" loading="lazy"></button></div>
+        <div class="fcard-acts">
+          <button class="act like press" data-toggle aria-pressed="false" aria-label="Like"><svg class="ic ic-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 8.69444C2 13.0348 7.58942 17.858 10.4107 19.9677C11.3601 20.6776 12.6399 20.6776 13.5893 19.9677C16.4106 17.858 22 13.0348 22 8.69444C22 5.82563 19.8947 3.5 17 3.5C15.5 3.5 14 4 12 6C10 4 8.5 3.5 7 3.5C4.10526 3.5 2 5.82563 2 8.69444Z"/></svg></button>
+          <button class="act act-count t-label-s tnum" aria-label="87 likes, view likes" data-open="S-05-08-likes-sheet.html">87</button>
+          <button class="act act-pair t-label-s tnum press" aria-label="Comments, 9" data-open="S-05-07-comments-sheet.html"><i class="ic ic-24 hgi hgi-stroke hgi-comment-01" aria-hidden="true"></i>9</button>
+          <button class="act press" aria-label="Share" data-toast="neutral|Link copied"><i class="ic ic-24 hgi hgi-stroke hgi-share-03" aria-hidden="true"></i></button>
+          
+          <span class="grow"></span>
+          <button class="act save press" data-toggle aria-pressed="false" aria-label="Save"><svg class="ic ic-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 18.212V8.23515C4.5 5.53157 4.5 4.17979 5.32376 3.33989C6.14752 2.5 7.47335 2.5 10.125 2.5H13.875C16.5267 2.5 17.8525 2.5 18.6762 3.33989C19.5 4.17979 19.5 5.53158 19.5 8.23515V18.212C19.5 20.1274 19.5 21.0852 18.8987 21.4076C18.2975 21.7301 17.5234 21.1875 15.9753 20.1024L14.1245 18.805C13.0964 18.0843 12.5824 17.724 12 17.724C11.4176 17.724 10.9036 18.0843 9.87552 18.805L8.02469 20.1024C6.47657 21.1875 5.70252 21.7301 5.10126 21.4076C4.5 21.0852 4.5 20.1274 4.5 18.212Z"/><path d="M10 7H14"/></svg></button>
+        </div>
+        <div class="fcard-cap"><p class="clamp">Warm neutrals for a 1,200 sq ft apartment in Bandra. Lime-plastered walls, a reclaimed teak console and linen upholstery keep the room calm through the monsoon light. <span class="hash">#interiors</span> <span class="hash">#limeplaster</span> <span class="hash">#mumbai</span></p><button class="btn btn-text t-paragraph-m" data-more aria-expanded="false">more</button></div>
+      </article>
+    </main>
+  </div>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375</b>: glass header (back arrow + "Post") over a page that holds a single feed card, the same card as the Home feed. No adjacent posts.</li>
+      <li><b>768 / 1440</b>: the one card centred at feed width; it is not stretched.</li>
+      <li>Opened from a notification, a push or a shared link (<code>/post/{id}</code>). Loading and failure are the states of S-12-04.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Top header · IconButton glass (back)</li>
+      <li>Feed card from Home feed: media frame, Like / Save, count buttons, avatar</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Back: <code>--page-slide-*</code>; card actions as on Home (<code>--like-*</code>, <code>--icon-swap-*</code>); sheets opened from the card: <code>--panel-*</code></li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li><code>h1</code> "Post"; the card is an article titled by its author; back is labelled; focus starts at the heading.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>Back returns to where the notification or link was opened; the loader is already replaced, so it is never shown again.</li>
+      <li>Back uses ArrowLeft02, as this Flutter screen does.</li>
+      <li>Card copy, actions and their sheets belong to the Home feed (F-05).</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

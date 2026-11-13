@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-11-20 Download complete</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-11.css">
+</head>
+<body class="t-paragraph-m" data-kind="overlay" data-host="S-11-08-order-verification-detail.html" data-states="default,single,failed,no-files">
+<div class="screen overlay toast-layer" data-variant="dialog">
+  <button class="scrim" data-close aria-label="Dismiss"></button>
+  <div class="toast-region" aria-live="polite" data-show="default">
+    <div class="toast toast-success glass glass-panel" role="status"><i class="ic hgi hgi-stroke hgi-checkmark-circle-01" aria-hidden="true"></i><div class="body"><span class="t-label-s">Download complete</span><p class="t-paragraph-s">Saved 2 invoices.</p></div></div>
+  </div>
+  <div class="toast-region" aria-live="polite" data-show="single">
+    <div class="toast toast-success glass glass-panel" role="status"><i class="ic hgi hgi-stroke hgi-checkmark-circle-01" aria-hidden="true"></i><div class="body"><span class="t-label-s">Download complete</span><p class="t-paragraph-s">Saved 1 invoice.</p></div></div>
+  </div>
+  <div class="toast-region" aria-live="polite" data-show="failed">
+    <div class="toast toast-danger glass glass-panel" role="status"><i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i><div class="body"><span class="t-label-s">Download Failed</span><p class="t-paragraph-s">Unable to download all invoice files. Please try again.</p></div></div>
+  </div>
+  <div class="toast-region" aria-live="polite" data-show="no-files">
+    <div class="toast toast-danger glass glass-panel" role="status"><i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i><div class="body"><span class="t-label-s">Invoice</span><p class="t-paragraph-s">No invoice files available to download.</p></div></div>
+  </div>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li>Web replaces the app's bottom sheet with a toast at every width: the browser saves the files and manages its own downloads list, so there is no folder to open.</li>
+      <li><b>375</b> — toast at the top. <b>768 / 1440</b> — toast at the bottom right. It leaves after 3 seconds.</li>
+      <li>States: <b>default</b> "Saved 2 invoices." · <b>single</b> "Saved 1 invoice." · <b>failed</b> "Download Failed" · <b>no-files</b> "Invoice / No invoice files available to download."</li>
+      <li>Canonical for S-10-18 as well. Screens trigger it with the toast attribute; opened as a layer, a click anywhere dismisses it.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Toast success (completion) · Toast danger (failure, no files)</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Toast in / out — <code>--toast-*</code></li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li>The toast is a polite live region, so completion is announced ("Download complete. Saved 2 invoices.").</li>
+      <li>Focus stays on the download button; nothing is trapped.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>"Open Folder" and "Not now" are dropped on web (product-owner note). With no folder to open, the message ends after "Saved 2 invoices." and the question "Open the folder to view them?" is removed.</li>
+      <li>Under 768 the spec keeps a bottom sheet; with both buttons gone it would have no action, so the toast is used at every width. Please confirm.</li>
+      <li>Each invoice is a normal browser download named <code>{product title}_{file name}</code>, as the app names them.</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

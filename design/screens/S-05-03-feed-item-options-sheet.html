@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-05-03 Feed item options</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+</head>
+<body class="t-paragraph-m" data-kind="overlay" data-host="S-05-01-explore-feed.html" data-states="non-author,author">
+<div class="screen overlay" data-variant="popover">
+  <button class="scrim" data-close aria-label="Close"></button>
+  <section class="sheet" role="menu" aria-label="More options">
+    <span class="sheet-grab" aria-hidden="true"></span>
+    <div class="menu" data-show="non-author">
+      <button class="menu-row t-label-s " role="menuitem" data-open="S-05-04-report-reason-sheet.html" data-replace><i class="ic  hgi hgi-stroke hgi-flag-02" aria-hidden="true"></i><span>Report</span><span class="end"><i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button>
+      <button class="menu-row t-label-s " role="menuitem" data-open="S-05-05-block-user-sheet.html" data-replace><i class="ic  hgi hgi-stroke hgi-user-remove-01" aria-hidden="true"></i><span>Block User</span><span class="end"><i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></button>
+    </div>
+    <div class="menu" data-show="author">
+      <a class="menu-row t-label-s" role="menuitem" href="S-09-04-create-post.html"><i class="ic  hgi hgi-stroke hgi-pencil-edit-01" aria-hidden="true"></i><span>Edit</span></a>
+      <button class="menu-row t-label-s danger" role="menuitem" data-open="S-05-06-delete-confirmation-dialog.html"><i class="ic  hgi hgi-stroke hgi-delete-02" aria-hidden="true"></i><span>Delete</span></button>
+    </div>
+  </section>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375</b> — glass bottom sheet sized to content: drag handle, rows with a hairline between them.</li>
+      <li><b>768 / 1440</b> — menu anchored to the "…" button of the card it was opened from.</li>
+      <li>Author sees Edit (post / project only) and Delete; everyone else sees Report and Block User.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Bottom sheet / popover menu</li>
+      <li>Menu row (icon, label, trailing arrow)</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Open / close — <code>--panel-*</code> (sheet slides up on mobile; menu fades and scales from its trigger from 768)</li>
+      <li>Row press — <code>--press-*</code></li>
+      <li>Delete opens S-05-06 on top — <code>--modal-*</code>; Report / Block replace this menu with their sheet — <code>--panel-*</code></li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li>Menu semantics named "More options"; rows are menu items.</li>
+      <li>Esc, scrim tap and (mobile) drag down close it; focus returns to the "…" button.</li>
+      <li>Delete is marked with the danger colour and its label, not colour alone.</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

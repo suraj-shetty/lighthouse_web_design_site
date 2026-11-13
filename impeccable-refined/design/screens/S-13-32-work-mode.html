@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-13-32 Work Mode</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-13b.css">
+</head>
+<body class="t-paragraph-m" data-kind="overlay" data-host="S-13-05-manage-account.html" data-states="default,empty,error">
+<div class="screen overlay" data-variant="sheet">
+  <button class="scrim" data-close aria-label="Close" data-show="default empty"></button>
+  <section class="sheet" role="dialog" aria-modal="true" aria-labelledby="t" data-show="default empty">
+    <span class="sheet-grab" aria-hidden="true"></span>
+<div class="sheet-head"><div class="txt"><h1 id="t" class="t-label-xxl">Work Mode</h1><p class="t-paragraph-m">Choose how you prefer to work.</p></div><button class="ibtn ibtn-44 glass glass-icon press" data-close aria-label="Close"><i class="ic hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></div>
+    <div class="sheet-body">
+      <div class="f13-list" role="radiogroup" aria-label="Work Mode" data-show="default">
+        <button class="opt" role="radio" data-radio aria-checked="false"><span class="txt t-label-s">Remote</span><span class="radio"></span></button>
+        <button class="opt" role="radio" data-radio aria-checked="true"><span class="txt t-label-s">Hybrid</span><span class="radio"></span></button>
+        <button class="opt" role="radio" data-radio aria-checked="false"><span class="txt t-label-s">Both</span><span class="radio"></span></button>
+      </div>
+      <div class="f13-list" role="radiogroup" aria-label="Work Mode" data-show="empty">
+        <button class="opt" role="radio" data-radio aria-checked="false"><span class="txt t-label-s">Remote</span><span class="radio"></span></button>
+        <button class="opt" role="radio" data-radio aria-checked="false"><span class="txt t-label-s">Hybrid</span><span class="radio"></span></button>
+        <button class="opt" role="radio" data-radio aria-checked="false"><span class="txt t-label-s">Both</span><span class="radio"></span></button>
+      </div>
+    </div>
+    <div class="sheet-foot" data-show="default"><button class="btn btn-filled btn-full t-label-m press" data-close>SAVE</button></div>
+    <div class="sheet-foot" data-show="empty"><button class="btn btn-filled btn-full t-label-m" disabled>SAVE</button></div>
+  </section>
+  <div class="toast-region" aria-live="polite" data-show="error"><div class="toast toast-danger glass glass-panel" role="status"><i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i><div class="body"><span class="t-label-s">Error</span><p class="t-paragraph-s">Something went wrong. Please try again later.</p></div></div></div>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375:</b> glass bottom sheet (up to 90% height): handle, title and subtitle, content, full-width button pinned above the safe area.</li>
+      <li><b>768 / 1440:</b> side sheet from the right over Manage Account, same content, button in the sheet footer.</li>
+      <li>Three rows (label, radio on the right, hairline between).</li>
+      <li>States: <b>default</b> saved mode preselected · <b>empty</b> nothing saved yet, "SAVE" disabled · <b>error</b> the sheet has already closed; the toast shows over Manage Account and the row keeps its old value.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Bottom sheet / side sheet · IconButton glass (close)</li>
+      <li>Radio option row</li>
+      <li>Button filled L (enabled / disabled) · Toast (danger)</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Open / close: <code>--panel-*</code> (slides up under 768, slides in from the right from 768).</li>
+      <li>Select: <code>--select-check-*</code>; press, <code>--press-*</code>; toast, <code>--toast-*</code>.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li>Dialog named by the sheet title; focus moves into the sheet, is trapped, and returns to the row it was opened from; Esc and the scrim close it.</li>
+      <li>Radio group named "Work Mode"; the disabled state of SAVE is exposed.</li>
+      <li>The error toast is announced politely after the sheet closes.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>No loading state in the sheet: SAVE closes it and Manage Account saves behind the blocking loader (S-13-09).</li>
+      <li>The app draws square tick boxes for this single choice; here radios, so the control matches its behaviour.</li>
+      <li>Q-109: "Both" can be saved, but About shows only Remote / Hybrid.</li>
+      <li>The row exists only for Architects and Interior Designers.</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-09-01 Create chooser + media gallery</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-09.css">
+</head>
+<body class="t-paragraph-m" data-states="default,selected,drag-over,loading,empty,error-limit,error-video,add-mode" data-roles="professional,brand,reseller" data-shell="main" data-nav="home">
+<div class="screen app on-surface f09" style="--page-bg: var(--home-surface); --page-max: 1120px">
+  <div class="app-main">
+    <header class="top"><div class="top-inner glass glass-panel"><div class="bar f09-bar"><a class="ibtn ibtn-44 glass glass-icon press" data-back href="S-05-01-explore-feed.html" aria-label="Close"><i class="ic ic-24 hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></a><h1 class="t-label-xl"><span data-when="posts">NEW POST</span><span data-when="projects">NEW PROJECT</span></h1><button class="btn btn-s btn-filled t-label-xs" disabled aria-describedby="next-why" data-show="default drag-over loading empty">NEXT</button><span id="next-why" class="sr-only" data-show="default drag-over loading empty">Select at least one photo or video to continue</span><a class="btn btn-s btn-filled t-label-xs press" href="S-09-04-create-post.html" data-when="posts" data-show="selected error-limit error-video">NEXT</a><a class="btn btn-s btn-filled t-label-xs press" href="S-09-08-create-project.html" data-when="projects" data-show="selected error-limit error-video">NEXT</a><button class="btn btn-s btn-filled t-label-xs press" data-back data-show="add-mode">NEXT</button></div></div></header>
+
+    <!-- DEFAULT (nothing added yet) · DRAG-OVER · EMPTY (every picked file was filtered out) -->
+    <main class="page f09-pad stagger" data-show="default drag-over empty">
+      <p class="f09-none slim t-paragraph-m" role="status" data-show="empty">No photos found</p>
+      <div class="drop f09-drop" data-show="default empty"><div class="empty-tile" aria-hidden="true"><i class="ic ic-24 hgi hgi-stroke hgi-image-02" aria-hidden="true"></i></div><div class="empty-text"><h2 class="t-label-xl">Drag photos and videos here</h2><p class="t-paragraph-s">Up to 10 photos or videos. Videos up to 90 seconds.</p></div><button class="btn btn-m btn-filled t-label-s press" data-go-state="selected">Select from device</button></div>
+      <div class="drop f09-drop is-over" data-show="drag-over"><div class="empty-tile" aria-hidden="true"><i class="ic ic-24 hgi hgi-stroke hgi-upload-01" aria-hidden="true"></i></div><div class="empty-text"><h2 class="t-label-xl">Drop to add</h2><p class="t-paragraph-s">Up to 10 photos or videos. Videos up to 90 seconds.</p></div></div>
+      <div class="f09-switch-wrap"><div class="f09-switch" role="tablist" aria-label="Content type"><button class="t-label-s" role="tab" aria-selected="true">Posts</button><button class="t-label-s" role="tab" aria-selected="false" data-f09-tab="projects" data-role="professional">Projects</button></div></div>
+    </main>
+
+    <!-- SELECTED (also behind the limit toasts, and when adding media to an edit) -->
+    <main class="page f09-pad stagger" data-show="selected error-limit error-video add-mode">
+      <div class="f09-cols tight">
+        <div class="f09-sticky">
+          <div class="media f09-preview">
+            <div class="f09-pager" tabindex="0" role="group" aria-label="Selected media preview"><div><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&h=1125&fit=crop&q=70" alt="Selected photo 1 of 4"></div><div><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=900&h=1125&fit=crop&q=70" alt="Selected photo 2 of 4"></div><div><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=900&h=1125&fit=crop&q=70" alt="Selected video 3 of 4"><button class="ibtn glass f09-onmedia f09-play swap press" data-toggle aria-pressed="false" aria-label="Play video"><span class="off"><i class="ic ic-24 hgi hgi-stroke hgi-play" aria-hidden="true"></i></span><span class="on"><i class="ic ic-24 hgi hgi-stroke hgi-pause" aria-hidden="true"></i></span></button></div><div><img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=900&h=1125&fit=crop&q=70" alt="Selected photo 4 of 4"></div></div>
+            <span class="media-count glass t-label-xs tnum">1/4</span>
+          </div>
+          <div class="f09-switch-wrap start"><div class="f09-switch" role="tablist" aria-label="Content type"><button class="t-label-s" role="tab" aria-selected="true">Posts</button><button class="t-label-s" role="tab" aria-selected="false" data-f09-tab="projects" data-role="professional">Projects</button></div></div>
+        </div>
+        <div class="stack">
+          <p class="sr-only" role="status" aria-live="polite">4 of 10 selected</p>
+          <ul class="tiles f09-tiles" aria-label="Added media"><li><button class="f09-add press" data-go-state="loading" aria-label="Add photos or videos"><i class="ic ic-24 hgi hgi-stroke hgi-plus-sign" aria-hidden="true"></i></button></li><li><button class="f09-pick press" data-toggle aria-pressed="true" aria-label="Photo 1, selected, position 1"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=320&h=320&fit=crop&q=70" alt=""><span class="f09-num t-label-xs tnum">1</span></button></li><li><button class="f09-pick press" data-toggle aria-pressed="true" aria-label="Photo 2, selected, position 2"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=320&h=320&fit=crop&q=70" alt=""><span class="f09-num t-label-xs tnum">2</span></button></li><li><button class="f09-pick press" data-toggle aria-pressed="true" aria-label="Video, 0:42, selected, position 3"><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=320&h=320&fit=crop&q=70" alt=""><span class="f09-num t-label-xs tnum">3</span><span class="f09-dur t-label-xs tnum"><i class="ic ic-16 hgi hgi-stroke hgi-play" aria-hidden="true"></i>0:42</span></button></li><li><button class="f09-pick press" data-toggle aria-pressed="true" aria-label="Photo 4, selected, position 4"><img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=320&h=320&fit=crop&q=70" alt=""><span class="f09-num t-label-xs tnum">4</span></button></li><li><button class="f09-pick press" data-toggle aria-pressed="false" aria-label="Photo 5"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=320&h=320&fit=crop&q=70" alt=""><span class="f09-num t-label-xs tnum"></span></button></li><li><button class="f09-pick press" data-toggle aria-pressed="false" aria-label="Video, 1:18"><img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=320&h=320&fit=crop&q=70" alt=""><span class="f09-num t-label-xs tnum"></span><span class="f09-dur t-label-xs tnum"><i class="ic ic-16 hgi hgi-stroke hgi-play" aria-hidden="true"></i>1:18</span></button></li><li><button class="f09-pick press" data-toggle aria-pressed="false" aria-label="Photo 7"><img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=320&h=320&fit=crop&q=70" alt=""><span class="f09-num t-label-xs tnum"></span></button></li></ul>
+        </div>
+      </div>
+    </main>
+
+    <!-- LOADING (the browser is reading and compressing the picked files) -->
+    <main class="page f09-pad" data-show="loading" aria-busy="true">
+      <div class="tiles f09-tiles" aria-hidden="true"><span class="skel"></span><span class="skel"></span><span class="skel"></span><span class="skel"></span><span class="skel"></span><span class="skel"></span><span class="skel"></span><span class="skel"></span><span class="skel"></span><span class="skel"></span><span class="skel"></span><span class="skel"></span><span class="skel"></span><span class="skel"></span><span class="skel"></span></div>
+      <div class="f09-switch-wrap"><div class="f09-switch" role="tablist" aria-label="Content type"><button class="t-label-s" role="tab" aria-selected="true">Posts</button><button class="t-label-s" role="tab" aria-selected="false" data-f09-tab="projects" data-role="professional">Projects</button></div></div>
+    </main>
+  </div>
+  <div class="toast-region" aria-live="polite" data-show="error-limit"><div class="toast toast-danger glass glass-panel" role="status"><i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i><div class="body"><span class="t-label-s">Error!</span><p class="t-paragraph-s">Maximum 10 media allowed</p></div></div></div>
+  <div class="toast-region" aria-live="polite" data-show="error-video"><div class="toast toast-danger glass glass-panel" role="status"><i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i><div class="body"><span class="t-label-s">Error!</span><p class="t-paragraph-s">Video must be less than 90 seconds</p></div></div></div>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>Web adaptation (Q-08, Instagram approach):</b> the device-gallery browser becomes a drop zone / file picker. The picker lists supported photo and video types only; the browser compresses before upload (Q-09).</li>
+      <li><b>375:</b> glass header (close · title · NEXT). Nothing added: drop zone with "Select from device". After a pick: preview pager (40% of the height, <code>n/total</code> badge) → 3-column grid whose first cell is the add tile → floating Posts / Projects pill above the tab bar.</li>
+      <li><b>768:</b> same order in one centred column; the grid gains columns.</li>
+      <li><b>1440:</b> two columns: preview pager + type switch on the left (sticky), added-media grid on the right.</li>
+      <li>Roles: Projects tab only for professionals; brands and resellers see Posts alone; homeowners have no entry.</li>
+      <li>States: default, selected, drag-over, loading (reading / compressing files), empty (every picked file was filtered out, e.g. clips under 3 s), the two limit toasts, and add-mode (opened from an edit carousel: NEXT returns to the form).</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Top header · IconButton glass (close) · Button filled S (NEXT, disabled until a valid selection)</li>
+      <li>File drop zone (<code>.drop</code>) · Empty-state tile</li>
+      <li>Image gallery: preview pager + image count badge · selectable grid tile with order number and video duration</li>
+      <li>Pill switch (Posts / Projects) · Skeleton · Toast</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Type switch: <code>--tabs-*</code>; tile select and order badge, <code>--select-check-*</code></li>
+      <li>Preview page change: <code>--tab-panel-*</code>; play / pause glyph, <code>--icon-swap-*</code></li>
+      <li>Skeleton: <code>--skel-*</code> / <code>--shimmer-*</code>; new tiles, <code>--stagger-*</code></li>
+      <li>Push to the composer: <code>--page-slide-*</code> (desktop <code>--panel-*</code>); toasts, <code>--toast-*</code></li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li>Focus order: close → NEXT → preview → add tile → grid → type switch. The page heading is the title.</li>
+      <li>The drop zone action is a real button that opens the file picker; drag and drop is an enhancement, never the only way.</li>
+      <li>Each tile is a toggle button named with media type, duration and "selected, position n". The selection count is announced in a polite live region.</li>
+      <li>Disabled NEXT is described ("Select at least one photo or video to continue"). Type switch is a two-option tab list.</li>
+      <li>Mockup: the page badge and order numbers are static; the title and NEXT target follow the type switch.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>Drop-zone copy is new (not in the app): "Drag photos and videos here", "Drop to add", "Select from device", "Up to 10 photos or videos. Videos up to 90 seconds."</li>
+      <li>No library filter, albums or camera on web, so S-09-02 and S-09-03 have no entry point here.</li>
+      <li>Clips under 3 s are dropped silently as in the app; "No photos found" is shown when nothing usable remains.</li>
+      <li>Message says "less than 90 seconds" while exactly 90 s is accepted (kept verbatim).</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-18-01 Reseller dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-18.css">
+</head>
+<body class="t-paragraph-m" data-states="default,loading,empty,error"
+      data-shell="reseller" data-nav="dashboard">
+<div class="screen app on-surface" style="--page-bg: var(--home-surface); --page-max: 960px">
+  <div class="app-main">
+    <header class="top">
+      <div class="top-inner glass glass-panel">
+        <div class="top-row only-narrow">
+          <a href="S-13-01-my-profile.html" aria-label="Open profile"><img class="avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=96&h=96&fit=crop&q=70" alt=""></a>
+          <span class="logo"><img class="logo-light" src="assets/logo_lighthouse_light.png" alt="Lighthouse"><img class="logo-dark" src="assets/logo_lighthouse.png" alt="Lighthouse"></span>
+          <h1 class="sr-only">Dashboard</h1>
+        </div>
+        <div class="bar only-wide">
+          <h1 class="t-label-xxl">Dashboard</h1>
+          <button class="ibtn ibtn-44 glass glass-icon press only-wide" aria-label="Refresh" data-go-state="loading"><i class="ic ic-24 hgi hgi-stroke hgi-rotate-01" aria-hidden="true"></i></button>
+        </div>
+      </div>
+    </header>
+
+    <!-- DEFAULT -->
+    <main class="page stagger" data-show="default">
+      <dl class="kpis" style="margin:0"><div class="metric kpi"><dt class="cap"><span class="t-paragraph-m">Active Orders</span><span class="kpi-ico" aria-hidden="true"><i class="ic hgi hgi-stroke hgi-file-02" aria-hidden="true"></i></span></dt><dd class="stack stack-8" style="margin:0"><span class="t-title-h6 tnum">18</span><span class="kpi-trend up t-paragraph-s"><i class="ic ic-16 hgi hgi-stroke hgi-trade-up" aria-hidden="true"></i><span class="sr-only">Up: </span>+4 this week</span></dd></div><div class="metric kpi"><dt class="cap"><span class="t-paragraph-m">Products Available</span><span class="kpi-ico" aria-hidden="true"><i class="ic hgi hgi-stroke hgi-package" aria-hidden="true"></i></span></dt><dd class="stack stack-8" style="margin:0"><span class="t-title-h6 tnum">1,246</span><span class="kpi-trend down t-paragraph-s"><i class="ic ic-16 hgi hgi-stroke hgi-trade-down" aria-hidden="true"></i><span class="sr-only">Down: </span>-2.5% vs last month</span></dd></div></dl>
+      <section class="dash-sec" aria-label="Orders Awaiting Response">
+        <div class="section-head"><h2 class="t-label-xl">Orders Awaiting Response</h2><a class="t-label-s" href="S-19-02-orders-awaiting-response.html">View All<i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></a></div><p class="t-paragraph-s text-subtle" role="status" aria-live="polite">5/8 active requests</p>
+        <ul class="ord-list"><li><div class="ord"><img class="thumb" src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=160&h=160&fit=crop&q=70" alt=""><span class="ord-body"><span class="ord-top t-paragraph-s"><span class="truncate">LH-24817</span><span>New</span></span><span class="ord-title t-card-title">Aquaform Rain Shower Set, 200 mm, Chrome</span><span class="ord-mid"><span class="tag t-paragraph-xs">Aquaform</span><span class="t-label-s tnum">₹3,39,600</span></span><span class="ord-meta t-paragraph-s"><span class="truncate">SKU: AQ-RS-200-CH</span><span class="tnum">Quantity: 40</span></span></span><span class="ord-acts"><a class="btn btn-s btn-stroke t-label-xs press" href="S-19-06-reject-order.html" aria-label="Reject order LH-24817">Reject</a><a class="btn btn-s btn-filled t-label-xs press" href="S-19-04-submit-quote.html" aria-label="Submit quote for order LH-24817">Submit Quote</a></span></div></li><li><div class="ord"><img class="thumb" src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=160&h=160&fit=crop&q=70" alt=""><span class="ord-body"><span class="ord-top t-paragraph-s"><span class="truncate">LH-24809</span><span>New</span></span><span class="ord-title t-card-title">Terra Matte Grey Porcelain Tile, 600 × 1200 mm</span><span class="ord-mid"><span class="tag t-paragraph-xs">Terra tiles</span><span class="t-label-s tnum">₹1,84,500</span></span><span class="ord-meta t-paragraph-s"><span class="truncate">SKU: TT-MG-6012</span><span class="tnum">Quantity: 120</span></span></span><span class="ord-acts"><a class="btn btn-s btn-stroke t-label-xs press" href="S-19-06-reject-order.html" aria-label="Reject order LH-24809">Reject</a><a class="btn btn-s btn-filled t-label-xs press" href="S-19-04-submit-quote.html" aria-label="Submit quote for order LH-24809">Submit Quote</a></span></div></li><li><div class="ord"><img class="thumb" src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=160&h=160&fit=crop&q=70" alt=""><span class="ord-body"><span class="ord-top t-paragraph-s"><span class="truncate">LH-24803</span><span>New</span></span><span class="ord-title t-card-title">Nirvana Wall-Hung WC with Soft-Close Seat</span><span class="ord-mid"><span class="tag t-paragraph-xs">Nirvana</span><span class="t-label-s tnum">On Request</span></span><span class="ord-meta t-paragraph-s"><span class="truncate">SKU: NV-WH-221</span><span class="tnum">Quantity: 06</span></span></span><span class="ord-acts"><a class="btn btn-s btn-stroke t-label-xs press" href="S-19-06-reject-order.html" aria-label="Reject order LH-24803">Reject</a><a class="btn btn-s btn-filled t-label-xs press" href="S-19-04-submit-quote.html" aria-label="Submit quote for order LH-24803">Submit Quote</a></span></div></li><li><a class="ord press" href="S-19-03-reseller-order-details.html" aria-label="Order LH-24790, Won, Stonecraft Quartz Countertop Slab, Calacatta, 20 mm. Open order details"><img class="thumb" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=160&h=160&fit=crop&q=70" alt=""><span class="ord-body"><span class="ord-top t-paragraph-s"><span class="truncate">LH-24790</span><span>Won</span></span><span class="ord-title t-card-title">Stonecraft Quartz Countertop Slab, Calacatta, 20 mm</span><span class="ord-mid"><span class="tag t-paragraph-xs">Stonecraft</span><span class="t-label-s tnum">₹2,12,000</span></span><span class="ord-meta t-paragraph-s"><span class="truncate">SKU: SC-QZ-CAL-20</span><span class="tnum">Quantity: 04</span></span></span><span class="ord-go" aria-hidden="true"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></a></li><li><a class="ord press" href="S-19-03-reseller-order-details.html" aria-label="Order LH-24771, Rejected, Luma Single-Lever Basin Mixer, Brushed Brass. Open order details"><img class="thumb" src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=160&h=160&fit=crop&q=70" alt=""><span class="ord-body"><span class="ord-top t-paragraph-s"><span class="truncate">LH-24771</span><span>Rejected</span></span><span class="ord-title t-card-title">Luma Single-Lever Basin Mixer, Brushed Brass</span><span class="ord-mid"><span class="tag t-paragraph-xs">Luma</span><span class="t-label-s tnum">₹96,400</span></span><span class="ord-meta t-paragraph-s"><span class="truncate">SKU: LM-BM-118-BB</span><span class="tnum">Quantity: 24</span></span></span><span class="ord-go" aria-hidden="true"><i class="ic hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></a></li></ul>
+      </section>
+    </main>
+
+    <!-- LOADING: values show an em dash with no trend (no card skeleton in Flutter); 4 skeleton order rows -->
+    <main class="page" aria-busy="true" data-show="loading">
+      <dl class="kpis" style="margin:0"><div class="metric kpi"><dt class="cap"><span class="t-paragraph-m">Active Orders</span><span class="kpi-ico" aria-hidden="true"><i class="ic hgi hgi-stroke hgi-file-02" aria-hidden="true"></i></span></dt><dd class="stack stack-8" style="margin:0"><span class="t-title-h6 tnum">—</span></dd></div><div class="metric kpi"><dt class="cap"><span class="t-paragraph-m">Products Available</span><span class="kpi-ico" aria-hidden="true"><i class="ic hgi hgi-stroke hgi-package" aria-hidden="true"></i></span></dt><dd class="stack stack-8" style="margin:0"><span class="t-title-h6 tnum">—</span></dd></div></dl>
+      <section class="dash-sec" aria-label="Orders Awaiting Response">
+        <div class="section-head"><h2 class="t-label-xl">Orders Awaiting Response</h2></div><p class="t-paragraph-s text-subtle" role="status" aria-live="polite">Loading requests...</p>
+        <ul class="ord-list" aria-hidden="true"><li><div class="ord"><span class="skel" style="width:72px;height:72px;border-radius:var(--radius-12)"></span><span class="ord-body" style="gap:var(--spacing-8)"><span class="skel" style="width:40%;height:12px"></span><span class="skel" style="width:85%;height:16px"></span><span class="skel" style="width:55%;height:12px"></span><span class="skel" style="width:70%;height:12px"></span></span><span class="ord-acts"><span class="skel" style="flex:1;height:32px;border-radius:var(--radius-full)"></span><span class="skel" style="flex:1;height:32px;border-radius:var(--radius-full)"></span></span></div></li><li><div class="ord"><span class="skel" style="width:72px;height:72px;border-radius:var(--radius-12)"></span><span class="ord-body" style="gap:var(--spacing-8)"><span class="skel" style="width:40%;height:12px"></span><span class="skel" style="width:85%;height:16px"></span><span class="skel" style="width:55%;height:12px"></span><span class="skel" style="width:70%;height:12px"></span></span><span class="ord-acts"><span class="skel" style="flex:1;height:32px;border-radius:var(--radius-full)"></span><span class="skel" style="flex:1;height:32px;border-radius:var(--radius-full)"></span></span></div></li><li><div class="ord"><span class="skel" style="width:72px;height:72px;border-radius:var(--radius-12)"></span><span class="ord-body" style="gap:var(--spacing-8)"><span class="skel" style="width:40%;height:12px"></span><span class="skel" style="width:85%;height:16px"></span><span class="skel" style="width:55%;height:12px"></span><span class="skel" style="width:70%;height:12px"></span></span><span class="ord-acts"><span class="skel" style="flex:1;height:32px;border-radius:var(--radius-full)"></span><span class="skel" style="flex:1;height:32px;border-radius:var(--radius-full)"></span></span></div></li><li><div class="ord"><span class="skel" style="width:72px;height:72px;border-radius:var(--radius-12)"></span><span class="ord-body" style="gap:var(--spacing-8)"><span class="skel" style="width:40%;height:12px"></span><span class="skel" style="width:85%;height:16px"></span><span class="skel" style="width:55%;height:12px"></span><span class="skel" style="width:70%;height:12px"></span></span><span class="ord-acts"><span class="skel" style="flex:1;height:32px;border-radius:var(--radius-full)"></span><span class="skel" style="flex:1;height:32px;border-radius:var(--radius-full)"></span></span></div></li></ul>
+      </section>
+    </main>
+
+    <!-- EMPTY -->
+    <main class="page" data-show="empty">
+      <dl class="kpis" style="margin:0"><div class="metric kpi"><dt class="cap"><span class="t-paragraph-m">Active Orders</span><span class="kpi-ico" aria-hidden="true"><i class="ic hgi hgi-stroke hgi-file-02" aria-hidden="true"></i></span></dt><dd class="stack stack-8" style="margin:0"><span class="t-title-h6 tnum">0</span><span class="kpi-trend up t-paragraph-s"><i class="ic ic-16 hgi hgi-stroke hgi-trade-up" aria-hidden="true"></i><span class="sr-only">Up: </span>No change this week</span></dd></div><div class="metric kpi"><dt class="cap"><span class="t-paragraph-m">Products Available</span><span class="kpi-ico" aria-hidden="true"><i class="ic hgi hgi-stroke hgi-package" aria-hidden="true"></i></span></dt><dd class="stack stack-8" style="margin:0"><span class="t-title-h6 tnum">1,246</span><span class="kpi-trend up t-paragraph-s"><i class="ic ic-16 hgi hgi-stroke hgi-trade-up" aria-hidden="true"></i><span class="sr-only">Up: </span>+3.1% vs last month</span></dd></div></dl>
+      <section class="dash-sec" aria-label="Orders Awaiting Response">
+        <div class="section-head"><h2 class="t-label-xl">Orders Awaiting Response</h2></div><p class="t-paragraph-s text-subtle" role="status" aria-live="polite">0/0 active requests</p>
+        <div class="ord-list"><div class="empty dash-empty" role="status">
+            <div class="empty-tile" aria-hidden="true"><i class="ic ic-24 hgi hgi-stroke hgi-file-02" aria-hidden="true"></i></div>
+            <div class="empty-text"><p class="t-paragraph-m">No Orders awaiting your response right now.</p></div>
+          </div></div>
+      </section>
+    </main>
+
+    <!-- ERROR: the empty layout with the API / repo message; stats failed too, so the cards stay at an em dash -->
+    <main class="page" data-show="error">
+      <dl class="kpis" style="margin:0"><div class="metric kpi"><dt class="cap"><span class="t-paragraph-m">Active Orders</span><span class="kpi-ico" aria-hidden="true"><i class="ic hgi hgi-stroke hgi-file-02" aria-hidden="true"></i></span></dt><dd class="stack stack-8" style="margin:0"><span class="t-title-h6 tnum">—</span></dd></div><div class="metric kpi"><dt class="cap"><span class="t-paragraph-m">Products Available</span><span class="kpi-ico" aria-hidden="true"><i class="ic hgi hgi-stroke hgi-package" aria-hidden="true"></i></span></dt><dd class="stack stack-8" style="margin:0"><span class="t-title-h6 tnum">—</span></dd></div></dl>
+      <section class="dash-sec" aria-label="Orders Awaiting Response">
+        <div class="section-head"><h2 class="t-label-xl">Orders Awaiting Response</h2></div><p class="t-paragraph-s text-subtle" role="status" aria-live="polite">0/0 active requests</p>
+        <div class="ord-list"><div class="empty dash-empty" role="alert">
+            <div class="empty-tile" aria-hidden="true"><i class="ic ic-24 hgi hgi-stroke hgi-file-02" aria-hidden="true"></i></div>
+            <div class="empty-text"><p class="t-paragraph-m">Network error occurred</p></div>
+          </div></div>
+      </section>
+    </main>
+  </div>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375</b> mirrors the Flutter screen: blurred header (profile avatar + Lighthouse logo) over one column: 2 metric cards side by side, "Orders Awaiting Response" with "View All", the caption, and one bordered container of up to 5 order rows divided by hairlines; space below for the floating reseller bar.</li>
+      <li><b>768</b>: the same order beside the reseller rail. The header shows the page name and a Refresh button; each order row puts Reject and Submit Quote on its right.</li>
+      <li><b>1440</b>: a content column (max 960) beside the reseller sidebar: metric cards in one row, then the list. Reject, Submit Quote and order details open the F-19 screens (S-19-06, S-19-04, S-19-03).</li>
+      <li>Order row: 72 thumbnail, order number and status text, product title (2 lines), brand chip and price (or "On Request"), "SKU: {sku}" and "Quantity: {NN}". Requested orders show Reject + Submit Quote and are not tappable; Won and Rejected (delivery rejected) rows open the order details and have no buttons.</li>
+      <li>States: default, loading (values "-", no trend, caption "Loading requests...", 4 skeleton rows), empty, error (API message in the empty layout; cards stay "-").</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Top header · Avatar · IconButton glass (Refresh, from 768)</li>
+      <li>Metric card (label, value, trend with direction icon) · Section header + Button text (View All)</li>
+      <li>Tag (brand chip) · Button stroke S (Reject) · Button filled S (Submit Quote)</li>
+      <li>Skeleton · Empty state (icon + message) · Reseller nav bar / sidebar (F-04)</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Blocks rise in: <code>--stagger-*</code>; skeleton to content: <code>--shimmer-*</code>, <code>--skel-*</code>, <code>--reveal-*</code></li>
+      <li>Press on rows and buttons: <code>--press-*</code>; View All, order details, Reject and Submit Quote: <code>--page-slide-*</code></li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li>Landmarks: banner, main, reseller navigation. The page has no visible title on mobile in Flutter (logo only), so a hidden <code>h1</code> "Dashboard" names it; from 768 the title is visible.</li>
+      <li>Avatar link is labelled "Open profile". Metric cards are a description list read as label, value, trend; the trend states "Up" or "Down" in text, not only by colour or icon.</li>
+      <li>Tappable rows are single links named with order number, status and product; other rows expose only their two buttons, labelled with the order number.</li>
+      <li>The caption is a polite live region, so "{shown}/{total} active requests" is announced after a refresh; the error message is an alert.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li><b>Error</b>: no retry button, as in Flutter (pull to refresh only); from 768 the header Refresh button is the retry. A stats failure is silent: the cards stay at "-".</li>
+      <li><b>"Dashboard" title</b> from 768 is a web addition taken from the proposed nav label (Q-48).</li>
+      <li>Zero change is drawn as positive (up icon, success colour), as in Flutter ("No change this week").</li>
+      <li>Trend glyphs: Flutter uses Material trending icons (Q-34); TradeUp / TradeDown are used. Empty icon: LicenseDraft is not in <code>ICONS.md</code>; File02 is used. Thumbnail placeholder Image01 → Image02.</li>
+      <li>Trend colours: <code>--success-strong</code> / <code>--danger-strong</code>, and the lighter <code>--success-soft</code> / <code>--danger-soft</code> in dark theme.</li>
+      <li>Status is plain text ("New", "Quoted", "Won", "Delivered", "Rejected", "Completed", "Cancelled") as in Flutter, not a status pill.</li>
+      <li>The caption in the empty and error states follows the "{shown}/{total} active requests" pattern with zeros.</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

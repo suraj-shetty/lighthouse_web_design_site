@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-04-02 Reseller shell</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-01-04.css">
+</head>
+<body class="t-paragraph-m" data-states="default,loading" data-shell="reseller" data-nav="dashboard">
+<div class="screen app on-surface" style="--page-bg: var(--home-surface); --page-max: 1120px">
+  <div class="app-main">
+    <header class="top"><div class="top-inner glass glass-panel"><div class="bar"><h1 class="t-label-xl">Reseller shell</h1></div></div></header>
+    <main class="page stagger" data-show="default">
+      <section class="slot" aria-label="Page content placeholder">
+        <span class="empty-tile"><i class="ic ic-24 hgi hgi-stroke hgi-layers-01" aria-hidden="true"></i></span>
+        <div class="slot-text"><h2 class="t-label-l">Reseller tab page</h2><p class="t-paragraph-m">The selected reseller destination renders here. Switching back to the normal account replaces this shell with the main shell.</p></div>
+      </section>
+      <section class="stack" aria-labelledby="lg">
+        <h2 id="lg" class="t-sublabel-s text-subtle">Destinations</h2>
+        <ul class="legend-grid"><li class="legend-item"><span class="tile on"><i class="ic ic-24 hgi hgi-stroke hgi-dashboard-square-01" aria-hidden="true"></i></span><span class="txt"><span class="t-label-s">Dashboard</span><span class="t-paragraph-s">Reseller dashboard · active</span></span></li><li class="legend-item"><span class="tile"><i class="ic ic-24 hgi hgi-stroke hgi-file-02" aria-hidden="true"></i></span><span class="txt"><span class="t-label-s">Orders</span><span class="t-paragraph-s">Order list · reseller-orders links open here</span></span></li><li class="legend-item"><span class="tile"><i class="ic ic-24 hgi hgi-stroke hgi-analytics-up" aria-hidden="true"></i></span><span class="txt"><span class="t-label-s">Analytics</span><span class="t-paragraph-s">Reseller analytics</span></span></li><li class="legend-item"><span class="tile"><i class="ic ic-24 hgi hgi-stroke hgi-notification-03" aria-hidden="true"></i></span><span class="txt"><span class="t-label-s">Notifications</span><span class="t-paragraph-s">Dot while there are unread items</span></span></li><li class="legend-item"><span class="tile"><i class="ic ic-24 hgi hgi-stroke hgi-user-switch" aria-hidden="true"></i></span><span class="txt"><span class="t-label-s">Switch to normal account</span><span class="t-paragraph-s">Always shown · returns to the main shell</span></span></li></ul>
+      </section>
+    </main>
+    <main class="page" data-show="loading" aria-busy="true">
+      <div class="stack stack-24" aria-hidden="true"><span class="skel" style="height:56vh;border-radius:var(--radius-28)"></span><div class="legend-grid"><span class="skel" style="height:64px;border-radius:var(--radius-20)"></span><span class="skel" style="height:64px;border-radius:var(--radius-20)"></span><span class="skel" style="height:64px;border-radius:var(--radius-20)"></span><span class="skel" style="height:64px;border-radius:var(--radius-20)"></span></div></div>
+      <span class="sr-only" role="status">Loading</span>
+    </main>
+  </div>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375:</b> as the app: floating glass pill with four icon-only tabs (Dashboard, Orders, Analytics, Notifications) and a circular glass "switch account" button to its right, always shown.</li>
+      <li><b>768:</b> floating glass rail with the four reseller destinations and the switch control.</li>
+      <li><b>1440:</b> the same menu expanded to a sidebar: labels and a clear "Switch to normal account" control.</li>
+      <li>States: <b>default</b>; <b>loading:</b> owned by the tab pages (skeleton in the content area); the switch button stays. Empty and error belong to the tab pages.</li>
+      <li>No role variants: the shell is only reachable by resellers.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Nav bar (mobile bottom tabs: glass, active pill, unread dot)</li>
+      <li>Sidebar / rail (from 768)</li>
+      <li>IconButton glass (switch account)</li>
+      <li>Skeleton</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Tab change: <code>--tabs-*</code>, <code>--tab-panel-*</code>; unread dot, <code>--badge-pop-*</code>.</li>
+      <li>Switch to the normal account: crossfade <code>--panel-*</code> (700 ms fade in the app).</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li>Destinations are links with text labels and <code>aria-current</code>; the switch button is labelled "Switch to normal account"; the mode change is announced after switching.</li>
+      <li>The spec asks for the landmark name "Reseller"; the shared shell currently names it "Primary": to align at build.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>Web labels "Dashboard", "Orders", "Analytics", "Notifications" are not in the app: confirm.</li>
+      <li>Q-05 applied: reseller mode is not remembered and is never the default landing.</li>
+      <li>Q-41: this shell does not open pending links and does not fetch feature flags (only the main shell does).</li>
+      <li>Glyph: the app uses Notification01 (not approved); Notification03 is used.</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

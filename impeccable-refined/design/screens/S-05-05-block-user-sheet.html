@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-05-05 Block user</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-05.css">
+</head>
+<body class="t-paragraph-m" data-kind="overlay" data-host="S-05-01-explore-feed.html" data-states="default,no-name,loading,error">
+<div class="screen overlay as-dialog" data-variant="sheet">
+  <button class="scrim" data-close aria-label="Cancel"></button>
+  <section class="sheet" role="alertdialog" aria-modal="true" aria-labelledby="bt" aria-describedby="bd" style="--dlg-w: 400px">
+    <span class="sheet-grab" aria-hidden="true"></span>
+    <div class="sheet-head"><div class="txt">
+      <h1 id="bt" class="t-label-xxl"><span data-show="default loading error">Block Meera Kapoor?</span><span data-show="no-name">Block this user?</span></h1>
+      <p id="bd" class="t-paragraph-m">They won’t be able to find your profile or content, and you won’t see theirs. They won’t be notified.</p>
+    </div></div>
+    <div class="sheet-foot row" data-show="default no-name error">
+      <button class="btn btn-stroke t-label-m press" data-close>Cancel</button>
+      <button class="btn btn-danger t-label-m press" data-close="all" data-toast="success|Blocked|You will no longer see their content.">Block</button>
+    </div>
+    <div class="sheet-foot row" data-show="loading">
+      <button class="btn btn-stroke t-label-m" disabled>Cancel</button>
+      <button class="btn btn-danger t-label-m" disabled aria-busy="true"><span class="spinner" aria-hidden="true"></span><span class="sr-only">Blocking</span></button>
+    </div>
+  </section>
+  <div class="toast-region" aria-live="polite" data-show="error"><div class="toast toast-danger glass glass-panel" role="status"><i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i><div class="body"><span class="t-label-s">Error</span><p class="t-paragraph-s">Network error occurred</p></div></div></div>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375:</b> glass bottom sheet sized to its content: drag handle, title, explanatory body, Cancel and Block side by side at equal width.</li>
+      <li><b>768 / 1440:</b> centred destructive-confirm dialog (400 wide) with the same content.</li>
+      <li>Title uses the author's full name, else the user name; with neither it reads "Block this user?" (state <i>no name</i>).</li>
+      <li>Blocking closes the sheet, reloads the feed and shows "Blocked / You will no longer see their content." If the server reports the user is now unblocked the toast reads "Unblocked / You can see their content again."</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Bottom sheet (under 768) / Modal dialog, destructive confirm (from 768)</li>
+      <li>Button stroke L (Cancel) · Button destructive L (Block, with loading)</li>
+      <li>Toast: success, danger</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Open / close: <code>--panel-*</code> (sheet) · <code>--modal-*</code> (dialog)</li>
+      <li>Button press: <code>--press-*</code>; toast, <code>--toast-*</code></li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li><code>alertdialog</code> named by its title and described by its body; initial focus on Cancel; focus trapped.</li>
+      <li>Esc, scrim tap and drag down cancel; focus returns to the card's "…" button, or to the top of the feed after the reload.</li>
+      <li>While sending both buttons are inert and Block announces "Blocking".</li>
+      <li>The destructive action is identified by its label as well as colour.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>Spec lists Cancel as a translucent button with a <code>--stroke-soft</code> outline; the design uses the stroke button from the shared catalogue.</li>
+      <li>The endpoint is a toggle (Q-55): confirm whether "Unblocked" can really be reached from this sheet.</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

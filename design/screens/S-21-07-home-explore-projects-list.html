@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-21-07 Explore projects list</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-20.css">
+<link rel="stylesheet" href="assets/f-21.css">
+</head>
+<body class="t-paragraph-m"
+      data-states="default,type,searching,no-match,empty,error,loading"
+      data-shell="main" data-nav="home">
+
+<!-- =====================================================================
+     SCREEN: published projects with a search field and type chips. The
+     list is loaded once; chips and search filter it on the client.
+     ===================================================================== -->
+<div class="screen app on-surface" style="--page-bg: var(--home-surface); --page-max: 1280px">
+  <div class="app-main">
+
+    <header class="top">
+      <div class="top-inner glass glass-panel">
+        <div class="bar wrap-narrow ne-bar" data-show="default type no-match empty error loading"><a class="ibtn ibtn-44 ibtn-plain press" data-back href="S-20-01-home-tab.html" aria-label="Back"><i class="ic ic-24 hgi hgi-stroke hgi-arrow-left-01" aria-hidden="true"></i></a><h1 class="t-label-xl">Explore projects</h1><label class="input ne-search" role="search" for="ne-q-default"><i class="ic hgi hgi-stroke hgi-search-01" aria-hidden="true"></i><input id="ne-q-default" class="t-paragraph-l" type="search" placeholder="Search projects" aria-label="Search projects"></label><span class="ibtn ibtn-44 ne-filter" aria-hidden="true"><i class="ic ic-24 hgi hgi-stroke hgi-filter-horizontal" aria-hidden="true"></i></span></div>
+        <div class="bar wrap-narrow ne-bar" data-show="searching"><a class="ibtn ibtn-44 ibtn-plain press" data-back href="S-20-01-home-tab.html" aria-label="Back"><i class="ic ic-24 hgi hgi-stroke hgi-arrow-left-01" aria-hidden="true"></i></a><h1 class="t-label-xl">Explore projects</h1><label class="input ne-search" role="search" for="ne-q-searching"><i class="ic hgi hgi-stroke hgi-search-01" aria-hidden="true"></i><input id="ne-q-searching" class="t-paragraph-l" type="search" placeholder="Search projects" aria-label="Search projects" value="villa"></label><span class="ibtn ibtn-44 ne-filter" aria-hidden="true"><i class="ic ic-24 hgi hgi-stroke hgi-filter-horizontal" aria-hidden="true"></i></span></div>
+        <div class="chip-row chip-scroll" role="tablist" aria-label="Project type"><button class="chip glass t-label-s" role="tab" aria-selected="true" data-go-state="default">All projects</button><button class="chip glass t-label-s" role="tab" aria-selected="false" data-go-state="type">Residential</button><button class="chip glass t-label-s" role="tab" aria-selected="false">Commercial and Workplace</button><button class="chip glass t-label-s" role="tab" aria-selected="false">Retail and Food and Beverage</button><button class="chip glass t-label-s" role="tab" aria-selected="false">Hospitality</button><button class="chip glass t-label-s" role="tab" aria-selected="false">Education and Institutional</button><button class="chip glass t-label-s" role="tab" aria-selected="false" data-go-state="no-match">Healthcare</button><button class="chip glass t-label-s" role="tab" aria-selected="false">Industrial Warehousing and Logistics</button><button class="chip glass t-label-s" role="tab" aria-selected="false">Infrastructure and Transportation</button><button class="chip glass t-label-s" role="tab" aria-selected="false">Landscape and Urban Design</button><button class="chip glass t-label-s" role="tab" aria-selected="false">Entertainment Sports and Wellness</button><button class="chip glass t-label-s" role="tab" aria-selected="false">Public Cultural and Civic</button><button class="chip glass t-label-s" role="tab" aria-selected="false">Specialized and Mission Critical Facilities</button></div>
+      </div>
+    </header>
+
+    <main class="page ne-page" data-show="default">
+      <div class="ne-head"><p class="t-paragraph-m text-subtle">Completed work, published by the professionals who made it.</p><p class="t-label-m tnum" role="status" aria-live="polite">All projects · 8 projects</p></div>
+      <ul class="ne-grid stagger">
+        <li><a class="prj-card press" href="S-06-01-explore-project.html" aria-label="Courtyard House, by Rohan Iyer, Indiranagar, Karnataka, 12 photos"><span class="prj-img ne-tall"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=640&h=480&fit=crop&q=70" alt="" loading="lazy"><span class="prj-count nr-tr t-label-xs tnum">12 photos</span></span><h2 class="t-label-m truncate">Courtyard House</h2><p class="t-paragraph-s truncate">By Rohan Iyer</p><p class="t-paragraph-s truncate">Indiranagar, Karnataka</p></a></li>
+        <li><a class="prj-card press" href="S-06-01-explore-project.html" aria-label="Laterite Villa, by Meera Krishnan, Alibaug, Maharashtra, 18 photos"><span class="prj-img ne-tall"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=640&h=480&fit=crop&q=70" alt="" loading="lazy"><span class="prj-count nr-tr t-label-xs tnum">18 photos</span></span><h2 class="t-label-m truncate">Laterite Villa</h2><p class="t-paragraph-s truncate">By Meera Krishnan</p><p class="t-paragraph-s truncate">Alibaug, Maharashtra</p></a></li>
+        <li><a class="prj-card press" href="S-06-01-explore-project.html" aria-label="The Verandah Apartment, by Kavya Menon, Koramangala, Karnataka, 9 photos"><span class="prj-img ne-tall"><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=640&h=480&fit=crop&q=70" alt="" loading="lazy"><span class="prj-count nr-tr t-label-xs tnum">9 photos</span></span><h2 class="t-label-m truncate">The Verandah Apartment</h2><p class="t-paragraph-s truncate">By Kavya Menon</p><p class="t-paragraph-s truncate">Koramangala, Karnataka</p></a></li>
+        <li><a class="prj-card press" href="S-06-01-explore-project.html" aria-label="Brick Vault Studio, by Ananya Rao, Auroville, Tamil Nadu, 1 photo"><span class="prj-img ne-tall"><img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=640&h=480&fit=crop&q=70" alt="" loading="lazy"><span class="prj-count nr-tr t-label-xs tnum">1 photo</span></span><h2 class="t-label-m truncate">Brick Vault Studio</h2><p class="t-paragraph-s truncate">By Ananya Rao</p><p class="t-paragraph-s truncate">Auroville, Tamil Nadu</p></a></li>
+        <li><a class="prj-card press" href="S-06-01-explore-project.html" aria-label="Tea Estate Bungalow, by Arjun Nair, Coonoor, Tamil Nadu, 22 photos"><span class="prj-img ne-tall"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=640&h=480&fit=crop&q=70" alt="" loading="lazy"><span class="prj-count nr-tr t-label-xs tnum">22 photos</span></span><h2 class="t-label-m truncate">Tea Estate Bungalow</h2><p class="t-paragraph-s truncate">By Arjun Nair</p><p class="t-paragraph-s truncate">Coonoor, Tamil Nadu</p></a></li>
+        <li><a class="prj-card press" href="S-06-01-explore-project.html" aria-label="Lakeside Cafe, by Kavya Menon, Powai, Maharashtra, 7 photos"><span class="prj-img ne-tall"><img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=640&h=480&fit=crop&q=70" alt="" loading="lazy"><span class="prj-count nr-tr t-label-xs tnum">7 photos</span></span><h2 class="t-label-m truncate">Lakeside Cafe</h2><p class="t-paragraph-s truncate">By Kavya Menon</p><p class="t-paragraph-s truncate">Powai, Maharashtra</p></a></li>
+        <li><a class="prj-card press" href="S-06-01-explore-project.html" aria-label="Jubilee Hills Villa, by Meera Krishnan, Jubilee Hills, Telangana, 14 photos"><span class="prj-img ne-tall"><img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=640&h=480&fit=crop&q=70" alt="" loading="lazy"><span class="prj-count nr-tr t-label-xs tnum">14 photos</span></span><h2 class="t-label-m truncate">Jubilee Hills Villa</h2><p class="t-paragraph-s truncate">By Meera Krishnan</p><p class="t-paragraph-s truncate">Jubilee Hills, Telangana</p></a></li>
+        <li><a class="prj-card press" href="S-06-01-explore-project.html" aria-label="Sandstone Office, by Vikram Reddy, Jaipur, Rajasthan, 11 photos"><span class="prj-img ne-tall"><img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=640&h=480&fit=crop&q=70" alt="" loading="lazy"><span class="prj-count nr-tr t-label-xs tnum">11 photos</span></span><h2 class="t-label-m truncate">Sandstone Office</h2><p class="t-paragraph-s truncate">By Vikram Reddy</p><p class="t-paragraph-s truncate">Jaipur, Rajasthan</p></a></li>
+      </ul>
+    </main>
+
+    <main class="page ne-page" data-show="type">
+      <div class="ne-head"><p class="t-paragraph-m text-subtle">Completed work, published by the professionals who made it.</p><p class="t-label-m tnum" role="status" aria-live="polite">Residential · 5 projects</p></div>
+      <ul class="ne-grid stagger">
+        <li><a class="prj-card press" href="S-06-01-explore-project.html" aria-label="Courtyard House, by Rohan Iyer, Indiranagar, Karnataka, 12 photos"><span class="prj-img ne-tall"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=640&h=480&fit=crop&q=70" alt="" loading="lazy"><span class="prj-count nr-tr t-label-xs tnum">12 photos</span></span><h2 class="t-label-m truncate">Courtyard House</h2><p class="t-paragraph-s truncate">By Rohan Iyer</p><p class="t-paragraph-s truncate">Indiranagar, Karnataka</p></a></li>
+        <li><a class="prj-card press" href="S-06-01-explore-project.html" aria-label="Laterite Villa, by Meera Krishnan, Alibaug, Maharashtra, 18 photos"><span class="prj-img ne-tall"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=640&h=480&fit=crop&q=70" alt="" loading="lazy"><span class="prj-count nr-tr t-label-xs tnum">18 photos</span></span><h2 class="t-label-m truncate">Laterite Villa</h2><p class="t-paragraph-s truncate">By Meera Krishnan</p><p class="t-paragraph-s truncate">Alibaug, Maharashtra</p></a></li>
+        <li><a class="prj-card press" href="S-06-01-explore-project.html" aria-label="The Verandah Apartment, by Kavya Menon, Koramangala, Karnataka, 9 photos"><span class="prj-img ne-tall"><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=640&h=480&fit=crop&q=70" alt="" loading="lazy"><span class="prj-count nr-tr t-label-xs tnum">9 photos</span></span><h2 class="t-label-m truncate">The Verandah Apartment</h2><p class="t-paragraph-s truncate">By Kavya Menon</p><p class="t-paragraph-s truncate">Koramangala, Karnataka</p></a></li>
+        <li><a class="prj-card press" href="S-06-01-explore-project.html" aria-label="Tea Estate Bungalow, by Arjun Nair, Coonoor, Tamil Nadu, 22 photos"><span class="prj-img ne-tall"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=640&h=480&fit=crop&q=70" alt="" loading="lazy"><span class="prj-count nr-tr t-label-xs tnum">22 photos</span></span><h2 class="t-label-m truncate">Tea Estate Bungalow</h2><p class="t-paragraph-s truncate">By Arjun Nair</p><p class="t-paragraph-s truncate">Coonoor, Tamil Nadu</p></a></li>
+        <li><a class="prj-card press" href="S-06-01-explore-project.html" aria-label="Jubilee Hills Villa, by Meera Krishnan, Jubilee Hills, Telangana, 14 photos"><span class="prj-img ne-tall"><img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=640&h=480&fit=crop&q=70" alt="" loading="lazy"><span class="prj-count nr-tr t-label-xs tnum">14 photos</span></span><h2 class="t-label-m truncate">Jubilee Hills Villa</h2><p class="t-paragraph-s truncate">By Meera Krishnan</p><p class="t-paragraph-s truncate">Jubilee Hills, Telangana</p></a></li>
+      </ul>
+    </main>
+
+    <main class="page ne-page" data-show="searching">
+      <div class="ne-head"><p class="t-paragraph-m text-subtle">Completed work, published by the professionals who made it.</p><p class="t-label-m tnum" role="status" aria-live="polite">All projects · 2 projects</p></div>
+      <ul class="ne-grid stagger">
+        <li><a class="prj-card press" href="S-06-01-explore-project.html" aria-label="Laterite Villa, by Meera Krishnan, Alibaug, Maharashtra, 18 photos"><span class="prj-img ne-tall"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=640&h=480&fit=crop&q=70" alt="" loading="lazy"><span class="prj-count nr-tr t-label-xs tnum">18 photos</span></span><h2 class="t-label-m truncate">Laterite Villa</h2><p class="t-paragraph-s truncate">By Meera Krishnan</p><p class="t-paragraph-s truncate">Alibaug, Maharashtra</p></a></li>
+        <li><a class="prj-card press" href="S-06-01-explore-project.html" aria-label="Jubilee Hills Villa, by Meera Krishnan, Jubilee Hills, Telangana, 14 photos"><span class="prj-img ne-tall"><img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=640&h=480&fit=crop&q=70" alt="" loading="lazy"><span class="prj-count nr-tr t-label-xs tnum">14 photos</span></span><h2 class="t-label-m truncate">Jubilee Hills Villa</h2><p class="t-paragraph-s truncate">By Meera Krishnan</p><p class="t-paragraph-s truncate">Jubilee Hills, Telangana</p></a></li>
+      </ul>
+    </main>
+
+    <main class="page ne-page" data-show="no-match">
+      <div class="ne-head"><p class="t-paragraph-m text-subtle">Completed work, published by the professionals who made it.</p><p class="t-label-m tnum" role="status" aria-live="polite">Healthcare · 0 projects</p></div>
+      <div class="na-none" role="status" aria-live="polite"><p class="t-label-m">No healthcare projects yet</p><p class="t-paragraph-s">Professionals have not published one here yet. Try another type, or browse them all.</p></div>
+    </main>
+
+    <main class="page ne-page" data-show="empty">
+      <div class="na-none" role="status" aria-live="polite"><p class="t-label-m">No any projects yet</p><p class="t-paragraph-s">Professionals have not published one here yet. Try another type, or browse them all.</p></div>
+    </main>
+
+    <main class="page ne-page" data-show="error">
+      <div class="err-row" role="status"><p class="t-paragraph-s">Projects did not load</p><button class="btn btn-s btn-filled t-label-xs press" data-go-state="loading" aria-label="Retry projects">Retry</button></div>
+    </main>
+
+    <main class="page ne-page" data-show="loading" aria-busy="true">
+      <div class="ne-grid" aria-hidden="true"><span class="skel skel-media ne-skel"></span><span class="skel skel-media ne-skel"></span><span class="skel skel-media ne-skel ne-wide"></span><span class="skel skel-media ne-skel ne-wide"></span></div>
+      <span class="sr-only" role="status">Loading projects</span>
+    </main>
+  </div>
+</div>
+
+<!-- ANNOTATIONS (shown on the board, hidden inside the frames) -->
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375:</b> as the app. Back, left-aligned title and the filter glyph on row 1; the 54-high outlined search field on row 2; a scrolling row of 13 type chips; then the lead sentence, the result line and full-width project cards 24 apart (cover, photo count top right, title, "By author", place). No bottom tab bar.</li>
+      <li><b>768:</b> title and search share one row, chips beneath; cards in 2 columns.</li>
+      <li><b>1440:</b> the same bar; 3 or 4 columns of cards as the menu collapses or expands, content capped at 1280.</li>
+      <li>States: <b>default</b> "All projects", 8 projects · <b>type</b> arriving with a type, "Residential" selected · <b>searching</b> "villa" typed, 2 matches · <b>no-match</b> projects loaded but the chip matches none: lead, "Healthcare · 0 projects", empty text · <b>empty</b> the server returned nothing: empty text only · <b>error</b> inline row with Retry, filters kept · <b>loading</b> two blocks (four from 768), header, search and chips stay usable.</li>
+      <li>Three chips are wired in the mockup: All projects, Residential, Healthcare.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Navigation shell · Top header (glass) with Back · Input (outlined, as the app, not the elevated search input) · Chip as single-select tabs</li>
+      <li>Project card (shared, f-20.css) with the author line and a 4:3 cover · Image count badge · Inline error row (shared) · Skeleton · text-only empty lines</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Arrival and Back: <code>--page-slide-*</code>. Cards rise with <code>--stagger-*</code>; a filter change uses <code>--reveal-*</code>.</li>
+      <li>Chip change: <code>--tabs-*</code>. Card press: <code>--press-*</code>. Loading: <code>--shimmer-*</code>, <code>--skel-*</code>.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li><code>h1</code> "Explore projects". The search field is a search landmark labelled "Search projects".</li>
+      <li>Chips are a tablist "Project type". The result line is a polite status that announces the count after each filter change; counts use tabular figures.</li>
+      <li>Each card is one link named "title, by author, place, n photos"; the cover has empty alt text.</li>
+      <li>The filter glyph does nothing in the app, so it is hidden from assistive technology and cannot take focus. The loading list sets <code>aria-busy</code>.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>The filter glyph is kept because the app shows it, but it has no action (Q-181). Drop it on web?</li>
+      <li>With "All projects" and nothing returned the title reads "No any projects yet", as the app prints it (Q-181).</li>
+      <li>Pull to refresh has no web equivalent and no reload control was added. The "Which kind?" answer does not filter the list (Q-181).</li>
+      <li>The search field is the outlined input from the app, not the elevated search input used on Discover.</li>
+      <li>The photo-count badge sits top right as in <code>need_cards.dart</code>; the shared Home card places it bottom left.</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

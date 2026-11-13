@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-07-02 Profile options</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-07.css">
+</head>
+<body class="t-paragraph-m" data-kind="overlay" data-host="S-07-01-public-profile.html" data-states="default">
+<div class="screen overlay" data-variant="popover">
+  <button class="scrim" data-close aria-label="Close"></button>
+  <section class="sheet" role="menu" aria-label="Profile options">
+    <span class="sheet-grab" aria-hidden="true"></span>
+    <div class="menu">
+      <button class="menu-row t-label-s" role="menuitem" data-open="S-07-03-block-confirm-sheet.html" data-replace><i class="ic hgi hgi-stroke hgi-user-remove-01" aria-hidden="true"></i><span>Block User</span></button>
+    </div>
+  </section>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375</b>: glass bottom sheet sized to its content: drag handle and a single row, above the home indicator.</li>
+      <li><b>768 / 1440</b>: menu anchored to the More button of the profile header.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Bottom sheet / popover menu</li>
+      <li>Menu row (icon + label)</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Open / close: <code>--panel-*</code> (sheet slides up on mobile; the menu fades and scales from its trigger from 768)</li>
+      <li>Row press: <code>--press-*</code>. Block User closes this menu, then opens S-07-03.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li>Menu semantics named "Profile options" with one menu item.</li>
+      <li>Focus moves into the sheet; Esc, a scrim tap and (mobile) drag down close it and return focus to the More button.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>Glyph: Flutter uses UserBlock01, which is not in <code>ICONS.md</code>. UserRemove01 is used, matching Block User in the feed options menu (S-05-03).</li>
+      <li>No Report action on a profile, as in Flutter (Q-94).</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

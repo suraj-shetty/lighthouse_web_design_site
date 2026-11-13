@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-04-03 More Actions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-01-04.css">
+</head>
+<body class="t-paragraph-m" data-kind="overlay" data-host="S-05-01-explore-feed.html" data-states="default">
+<div class="screen overlay" data-variant="popover">
+  <button class="scrim" data-close aria-label="Close"></button>
+  <section class="sheet pop-mid" role="dialog" aria-modal="true" aria-labelledby="mt" aria-describedby="md">
+    <span class="sheet-grab" aria-hidden="true"></span>
+    <div class="sheet-head"><div class="txt"><h1 id="mt" class="t-label-xxl">More Actions</h1><p id="md" class="t-paragraph-s">Switch accounts or create a new post</p></div></div>
+    <div class="menu" role="menu" aria-labelledby="mt">
+      <a class="menu-row t-label-s" role="menuitem" href="S-09-01-create-gallery.html"><i class="ic hgi hgi-stroke hgi-plus-sign" aria-hidden="true"></i><span>New Post</span></a>
+      <a class="menu-row t-label-s" role="menuitem" href="S-18-01-reseller-dashboard.html"><i class="ic hgi hgi-stroke hgi-user-switch" aria-hidden="true"></i><span>Switch to Reseller Account</span></a>
+    </div>
+  </section>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375:</b> glass bottom sheet sized to content: drag handle; title; subtitle; two rows (icon + label) separated by a hairline.</li>
+      <li><b>768 / 1440:</b> popover menu anchored to the More actions button of the rail / sidebar.</li>
+      <li>Shown only to resellers. One state; no loading, empty or error state.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Bottom sheet / popover menu</li>
+      <li>Menu row (leading icon + label)</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Open / close: <code>--panel-*</code>; row press, <code>--press-*</code>.</li>
+      <li>"New Post" closes the menu and pushes the create flow: <code>--page-slide-*</code>; "Switch to Reseller Account" crossfades to the reseller shell, <code>--panel-*</code>.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li>Named "More Actions"; the rows are menu items. Focus is trapped and returns to the More actions button; Esc, scrim and drag down close.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>"New Post" opens the create flow at its first screen (S-09-01).</li>
+      <li>Glyph: UserSwitch is "user-switch" in the icon font.</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

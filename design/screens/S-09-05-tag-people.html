@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-09-05 Tag People / Request Review / Collaborators</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-09.css">
+</head>
+<body class="t-paragraph-m" data-kind="overlay" data-host="S-09-04-create-post.html" data-states="default,results,loading,empty,error,blank,review,collaborators">
+<div class="screen overlay f09" data-variant="sheet">
+  <button class="scrim" data-close aria-label="Close"></button>
+  <section class="sheet" role="dialog" aria-modal="true" aria-labelledby="pt">
+    <span class="sheet-grab" aria-hidden="true"></span>
+    <div class="sheet-head"><div class="txt"><h1 id="pt" class="t-label-xxl"><span data-show="default results loading empty error blank">Tag People</span><span data-show="review">Request Review</span><span data-show="collaborators">Collaborators</span></h1><p id="pt-d" class="t-paragraph-m"><span data-show="default results loading empty error blank">Tag people to include them in this content.</span><span data-show="review">Tag people to review your project.</span><span data-show="collaborators">Tag people to collaborate on this project.</span></p></div><button class="ibtn ibtn-44 glass glass-icon press" aria-label="Close" data-close><i class="ic ic-24 hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></div>
+    <div class="sheet-body">
+      <div data-show="default review collaborators blank"><label class="search t-paragraph-m"><i class="ic hgi hgi-stroke hgi-search-01" aria-hidden="true"></i><span class="sr-only">Search people</span><input type="search" placeholder="Search People..." value="" autocomplete="off"></label></div>
+      <div data-show="results loading empty error"><label class="search t-paragraph-m"><i class="ic hgi hgi-stroke hgi-search-01" aria-hidden="true"></i><span class="sr-only">Search people</span><input type="search" placeholder="Search People..." value="me" autocomplete="off"></label></div>
+      <div class="f09-chips" role="group" aria-label="Selected people" data-show="default results loading empty error"><span class="f09-chip t-label-xs"><img class="avatar" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=96&h=96&fit=crop&q=70" alt=""><span class="truncate">Meera Kapoor</span><button aria-label="Remove Meera Kapoor"><i class="ic ic-16 hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></span><span class="f09-chip t-label-xs"><img class="avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=96&h=96&fit=crop&q=70" alt=""><span class="truncate">Rohan Mehta</span><button aria-label="Remove Rohan Mehta"><i class="ic ic-16 hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></span></div>
+      <div class="f09-chips" role="group" aria-label="Selected people" data-show="review"><span class="f09-chip t-label-xs"><img class="avatar" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=96&h=96&fit=crop&q=70" alt=""><span class="truncate">Ananya Iyer</span><button aria-label="Remove Ananya Iyer"><i class="ic ic-16 hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></span></div>
+      <div class="f09-opts" role="group" aria-label="Results" data-show="results"><button class="opt t-paragraph-m" role="checkbox" aria-checked="true" data-check><img class="avatar" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=96&h=96&fit=crop&q=70" alt=""><span class="txt"><span class="t-label-s">Meera Kapoor</span><span class="sub t-paragraph-s">@meera.kapoor</span></span><span class="check f09-round"><i class="ic ic-16 hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></button><button class="opt t-paragraph-m" role="checkbox" aria-checked="false" data-check><img class="avatar" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=96&h=96&fit=crop&q=70" alt=""><span class="txt"><span class="t-label-s">Meenal Deshpande</span><span class="sub t-paragraph-s">@meenal.d</span></span><span class="check f09-round"><i class="ic ic-16 hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></button><button class="opt t-paragraph-m" role="checkbox" aria-checked="true" data-check><img class="avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=96&h=96&fit=crop&q=70" alt=""><span class="txt"><span class="t-label-s">Rohan Mehta</span><span class="sub t-paragraph-s">@rohan.builds</span></span><span class="check f09-round"><i class="ic ic-16 hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></button><button class="opt t-paragraph-m" role="checkbox" aria-checked="false" data-check><img class="avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=96&h=96&fit=crop&q=70" alt=""><span class="txt"><span class="t-label-s">Mehul Shah</span><span class="sub t-paragraph-s">@mehul.shah</span></span><span class="check f09-round"><i class="ic ic-16 hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></button><button class="opt t-paragraph-m" role="checkbox" aria-checked="false" data-check><img class="avatar" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=96&h=96&fit=crop&q=70" alt=""><span class="txt"><span class="t-label-s">Meera Nair Interiors</span><span class="sub t-paragraph-s">@meeranair.in</span></span><span class="check f09-round"><i class="ic ic-16 hgi hgi-stroke hgi-tick-01" aria-hidden="true"></i></span></button></div>
+      <div class="f09-opts" data-show="loading" aria-busy="true"><div class="opt" aria-hidden="true"><span class="skel skel-circle" style="width:44px;height:44px;flex:none"></span><span class="txt"><span class="skel" style="width:55%;height:14px;"></span><span class="skel" style="width:35%;height:12px;"></span></span><span class="skel skel-circle" style="width:24px;height:24px;flex:none"></span></div><div class="opt" aria-hidden="true"><span class="skel skel-circle" style="width:44px;height:44px;flex:none"></span><span class="txt"><span class="skel" style="width:55%;height:14px;"></span><span class="skel" style="width:35%;height:12px;"></span></span><span class="skel skel-circle" style="width:24px;height:24px;flex:none"></span></div><div class="opt" aria-hidden="true"><span class="skel skel-circle" style="width:44px;height:44px;flex:none"></span><span class="txt"><span class="skel" style="width:55%;height:14px;"></span><span class="skel" style="width:35%;height:12px;"></span></span><span class="skel skel-circle" style="width:24px;height:24px;flex:none"></span></div><div class="opt" aria-hidden="true"><span class="skel skel-circle" style="width:44px;height:44px;flex:none"></span><span class="txt"><span class="skel" style="width:55%;height:14px;"></span><span class="skel" style="width:35%;height:12px;"></span></span><span class="skel skel-circle" style="width:24px;height:24px;flex:none"></span></div><div class="opt" aria-hidden="true"><span class="skel skel-circle" style="width:44px;height:44px;flex:none"></span><span class="txt"><span class="skel" style="width:55%;height:14px;"></span><span class="skel" style="width:35%;height:12px;"></span></span><span class="skel skel-circle" style="width:24px;height:24px;flex:none"></span></div><div class="opt" aria-hidden="true"><span class="skel skel-circle" style="width:44px;height:44px;flex:none"></span><span class="txt"><span class="skel" style="width:55%;height:14px;"></span><span class="skel" style="width:35%;height:12px;"></span></span><span class="skel skel-circle" style="width:24px;height:24px;flex:none"></span></div></div>
+      <p class="f09-none t-paragraph-m" role="status" data-show="empty error">No results found</p>
+    </div>
+  </section>
+  <div class="toast-region" aria-live="polite" data-show="error"><div class="toast toast-danger glass glass-panel" role="status"><i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i><div class="body"><span class="t-label-s">Error</span><p class="t-paragraph-s">Network error occurred</p></div></div></div>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375</b> — tall glass sheet: handle → title → subtitle → pill search → wrap of selected-people chips (avatar, name, remove) → results (avatar, name, @username, round check). No confirm button — picks apply live.</li>
+      <li><b>768 / 1440</b> — side sheet, same order.</li>
+      <li>One sheet, three callers: Tag People (default), Request Review and Collaborators change only the title and subtitle. The three lists are independent.</li>
+      <li>States: default (no query → chips only), results, loading, empty, error (toast, list unchanged), blank (nobody tagged yet).</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Side / bottom sheet · IconButton glass (close)</li>
+      <li>Search input · removable chip with avatar</li>
+      <li>Person row with round checkbox · Skeleton rows · Toast</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Open / close — <code>--panel-*</code></li>
+      <li>Row toggle — <code>--select-check-*</code>; chip remove — <code>--press-*</code></li>
+      <li>Results — <code>--skel-*</code> → <code>--reveal-*</code> (400 ms debounce before the request)</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li>Dialog labelled by its title; search labelled "Search people".</li>
+      <li>Results are checkboxes announcing name, username and state; chips have "Remove &lt;name&gt;" buttons.</li>
+      <li>"No results found" and result changes are announced politely.</li>
+      <li>A visible close button is added — the app has no button and relies on drag-down.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>Close button is a web addition.</li>
+      <li>First 30 matches only, no paging and no client cap on people (Q-68).</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

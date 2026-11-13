@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-13-24 Selected File</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-13b.css">
+</head>
+<body class="t-paragraph-m" data-kind="overlay" data-host="S-13-21-certification-form.html" data-states="default">
+<div class="screen overlay" data-variant="dialog">
+  <button class="scrim" data-close aria-label="Close"></button>
+  <section class="sheet" role="dialog" aria-modal="true" aria-labelledby="t" aria-describedby="d">
+<div class="sheet-head"><div class="txt"><h1 id="t" class="t-label-xl">Selected File</h1><p id="d" class="t-paragraph-m f13-break">igbc-ap-scorecard.pdf</p></div></div>
+    <div class="sheet-foot"><button class="btn btn-m btn-stroke t-label-s press" data-close>Cancel</button><button class="btn btn-m btn-filled t-label-s press" data-close>Add</button></div>
+  </section>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li>Centred dialog at every width: title, the picked file name, two buttons.</li>
+      <li>Single state.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Modal / Dialog (confirm)</li>
+      <li>Button stroke M ("Cancel") · Button filled M ("Add")</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Open / close: <code>--modal-*</code>.</li>
+      <li>Button press: <code>--press-*</code>.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li>Dialog named by its title and described by the file name.</li>
+      <li>Focus trapped and returned to "Browse file"; Esc and the scrim act as Cancel.</li>
+      <li>Long file names wrap, never truncate mid-word without the full name being read.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>The app uses two plain text buttons (Material alert). Here: stroke + filled, to match the other dialogs. Approve?</li>
+      <li>"Add" attaches the PDF to the draft in S-13-21; "Cancel" discards it.</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

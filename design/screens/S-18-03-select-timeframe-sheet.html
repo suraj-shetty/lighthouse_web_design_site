@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-18-03 Select a timeframe</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-18.css">
+</head>
+<body class="t-paragraph-m" data-kind="overlay" data-host="S-18-02-reseller-analytics.html" data-states="monthly,weekly,quarterly,yearly">
+<div class="screen overlay" data-variant="popover">
+  <button class="scrim" data-close aria-label="Close"></button>
+  <section class="sheet" role="dialog" aria-modal="true" aria-labelledby="tf">
+    <span class="sheet-grab" aria-hidden="true"></span>
+    <div class="sheet-head"><div class="txt"><h1 id="tf" class="t-label-xl">Select a timeframe</h1></div></div>
+    <div class="sheet-body tf-opts" role="radiogroup" aria-labelledby="tf" data-show="monthly"><button class="opt t-paragraph-l" role="radio" data-radio aria-checked="false"><span class="radio"></span><span class="txt">Weekly</span></button><button class="opt t-paragraph-l" role="radio" data-radio aria-checked="true"><span class="radio"></span><span class="txt">Monthly</span></button><button class="opt t-paragraph-l" role="radio" data-radio aria-checked="false"><span class="radio"></span><span class="txt">Quarterly</span></button><button class="opt t-paragraph-l" role="radio" data-radio aria-checked="false"><span class="radio"></span><span class="txt">Yearly</span></button></div>
+    <div class="sheet-body tf-opts" role="radiogroup" aria-labelledby="tf" data-show="weekly"><button class="opt t-paragraph-l" role="radio" data-radio aria-checked="true"><span class="radio"></span><span class="txt">Weekly</span></button><button class="opt t-paragraph-l" role="radio" data-radio aria-checked="false"><span class="radio"></span><span class="txt">Monthly</span></button><button class="opt t-paragraph-l" role="radio" data-radio aria-checked="false"><span class="radio"></span><span class="txt">Quarterly</span></button><button class="opt t-paragraph-l" role="radio" data-radio aria-checked="false"><span class="radio"></span><span class="txt">Yearly</span></button></div>
+    <div class="sheet-body tf-opts" role="radiogroup" aria-labelledby="tf" data-show="quarterly"><button class="opt t-paragraph-l" role="radio" data-radio aria-checked="false"><span class="radio"></span><span class="txt">Weekly</span></button><button class="opt t-paragraph-l" role="radio" data-radio aria-checked="false"><span class="radio"></span><span class="txt">Monthly</span></button><button class="opt t-paragraph-l" role="radio" data-radio aria-checked="true"><span class="radio"></span><span class="txt">Quarterly</span></button><button class="opt t-paragraph-l" role="radio" data-radio aria-checked="false"><span class="radio"></span><span class="txt">Yearly</span></button></div>
+    <div class="sheet-body tf-opts" role="radiogroup" aria-labelledby="tf" data-show="yearly"><button class="opt t-paragraph-l" role="radio" data-radio aria-checked="false"><span class="radio"></span><span class="txt">Weekly</span></button><button class="opt t-paragraph-l" role="radio" data-radio aria-checked="false"><span class="radio"></span><span class="txt">Monthly</span></button><button class="opt t-paragraph-l" role="radio" data-radio aria-checked="false"><span class="radio"></span><span class="txt">Quarterly</span></button><button class="opt t-paragraph-l" role="radio" data-radio aria-checked="true"><span class="radio"></span><span class="txt">Yearly</span></button></div>
+    <div class="sheet-foot"><button class="btn btn-filled btn-full t-label-m press" data-close>APPLY</button></div>
+  </section>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375</b>: bottom sheet with rounded top corners: drag handle, title, 4 radio rows, full-width primary button. Height wraps the content.</li>
+      <li><b>768 / 1440</b>: popover anchored to the timeframe pill that was tapped, same content.</li>
+      <li>The state switch shows which period the originating card had applied (Monthly by default); that option is pre-selected.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Bottom sheet / popover</li>
+      <li>Radio (4 options)</li>
+      <li>Button filled L (APPLY)</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Open / close: <code>--panel-*</code>; radio change: <code>--select-check-*</code>; button press: <code>--press-*</code></li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li>Dialog named by its title; focus moves in and returns to the originating pill on close.</li>
+      <li>Options form a radio group moved through with the arrow keys; Esc, the scrim and (mobile) drag down close without applying.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>Tapping an option only selects it; APPLY closes and returns the choice, and the card updates only if the period changed (no network call).</li>
+      <li>Loading, empty and error do not apply (no network).</li>
+      <li>The spec names <code>--accent</code> for the selected radio; the kit's Radio component fills with <code>--bg-inverse</code>, and that component is used unchanged.</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-20-03 Complete profile (sheet)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-20.css">
+</head>
+<body class="t-paragraph-m" data-kind="overlay" data-host="S-20-01-home-tab.html" data-states="default">
+<div class="screen overlay hm-cp" data-variant="sheet">
+  <button class="scrim" data-close aria-label="Close"></button>
+  <section class="sheet" role="dialog" aria-modal="true" aria-labelledby="cpt" aria-describedby="cpd">
+    <span class="sheet-grab" aria-hidden="true"></span>
+    <div class="sheet-head"><div class="txt"><h1 id="cpt" class="t-label-xxl">Complete your profile to continue</h1><p id="cpd" class="t-paragraph-m">Add your name so professionals know who they're talking to.</p></div></div>
+    <div class="sheet-foot">
+      <a class="btn btn-filled btn-full t-label-m press" href="S-13-05-manage-account.html">COMPLETE PROFILE</a>
+      <button class="btn btn-stroke btn-full t-label-m press" data-close>LATER</button>
+    </div>
+  </section>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375:</b> glass bottom sheet at content height: drag handle, title (2 lines at this width), body text, filled "COMPLETE PROFILE", then outlined "LATER", both full width.</li>
+      <li><b>768 / 1440:</b> centred dialog, compact width, no drag handle; the two buttons stay stacked and fill the dialog.</li>
+      <li>One state: the sheet loads no data, so there is no loading, empty or error state.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Bottom sheet (under 768), Dialog (from 768)</li>
+      <li>Button filled L, Button stroke L</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Sheet: <code>--panel-*</code>; dialog: <code>--modal-*</code>; buttons press: <code>--press-*</code> (the app scales to 0.97 over 150 ms).</li>
+      <li>"COMPLETE PROFILE" closes the sheet and pushes Manage Account: <code>--page-slide-*</code>.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li>Dialog labelled by the title and described by the body. Focus moves to "COMPLETE PROFILE" on open, is trapped, and returns to the offer button on close. Esc, the scrim and a drag down all act as "LATER".</li>
+      <li>Both controls carry their visible text as the name; the drag handle is decorative.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>After the profile is completed the offer flow does not resume by itself, as in the app: the user taps the offer button again.</li>
+      <li>"COMPLETE PROFILE" opens Manage Account (S-13-05); the app falls back to My Profile when the profile has not loaded, which is not drawn as a separate state.</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

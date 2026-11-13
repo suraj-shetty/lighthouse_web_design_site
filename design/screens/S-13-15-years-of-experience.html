@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-13-15 Year of Experience</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-13a.css">
+</head>
+<body class="t-paragraph-m" data-kind="overlay" data-host="S-13-05-manage-account.html" data-states="default,empty,max,loading,error">
+<div class="screen overlay" data-variant="sheet">
+  <button class="scrim" data-close aria-label="Close"></button>
+  <section class="sheet" role="dialog" aria-modal="true" aria-labelledby="et">
+    <span class="sheet-grab" aria-hidden="true"></span>
+    <div class="sheet-head"><div class="txt"><h1 id="et" class="t-label-xxl">Year of Experience</h1><p class="t-paragraph-m">Update your work experience.</p></div><button class="ibtn ibtn-44 glass glass-icon press" data-close aria-label="Close"><i class="ic hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></div>
+    <div class="sheet-body">
+      <div class="ed-step" role="group" aria-label="Years of experience" data-show="default error"><button class="ibtn glass glass-icon press" aria-label="Decrease"><i class="ic ic-24 hgi hgi-stroke hgi-minus-sign" aria-hidden="true"></i></button><div class="ed-step-val" role="spinbutton" tabindex="0" aria-label="Years of experience" aria-valuemin="0" aria-valuemax="100" aria-valuenow="12" aria-valuetext="12 Years"><span class="t-label-xxl tnum">12</span><span class="t-paragraph-m">Years</span></div><button class="ibtn glass glass-icon press" aria-label="Increase"><i class="ic ic-24 hgi hgi-stroke hgi-plus-sign" aria-hidden="true"></i></button></div>
+      <div class="ed-step" role="group" aria-label="Years of experience" data-show="empty"><button class="ibtn glass glass-icon press" aria-label="Decrease" disabled><i class="ic ic-24 hgi hgi-stroke hgi-minus-sign" aria-hidden="true"></i></button><div class="ed-step-val" role="spinbutton" tabindex="0" aria-label="Years of experience" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-valuetext="0 Years"><span class="t-label-xxl tnum">00</span><span class="t-paragraph-m">Years</span></div><button class="ibtn glass glass-icon press" aria-label="Increase"><i class="ic ic-24 hgi hgi-stroke hgi-plus-sign" aria-hidden="true"></i></button></div>
+      <div class="ed-step" role="group" aria-label="Years of experience" data-show="max"><button class="ibtn glass glass-icon press" aria-label="Decrease"><i class="ic ic-24 hgi hgi-stroke hgi-minus-sign" aria-hidden="true"></i></button><div class="ed-step-val" role="spinbutton" tabindex="0" aria-label="Years of experience" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100" aria-valuetext="100 Years"><span class="t-label-xxl tnum">100</span><span class="t-paragraph-m">Years</span></div><button class="ibtn glass glass-icon press" aria-label="Increase" disabled><i class="ic ic-24 hgi hgi-stroke hgi-plus-sign" aria-hidden="true"></i></button></div>
+      <div class="ed-step" role="group" aria-label="Years of experience" data-show="loading"><button class="ibtn glass glass-icon press" aria-label="Decrease" disabled><i class="ic ic-24 hgi hgi-stroke hgi-minus-sign" aria-hidden="true"></i></button><div class="ed-step-val" role="spinbutton" tabindex="0" aria-label="Years of experience" aria-valuemin="0" aria-valuemax="100" aria-valuenow="12" aria-valuetext="12 Years"><span class="t-label-xxl tnum">12</span><span class="t-paragraph-m">Years</span></div><button class="ibtn glass glass-icon press" aria-label="Increase" disabled><i class="ic ic-24 hgi hgi-stroke hgi-plus-sign" aria-hidden="true"></i></button></div>
+    </div>
+    <div class="sheet-foot" data-show="default empty max error"><button class="btn btn-filled btn-full t-label-m press" data-go-state="loading">Update</button></div>
+    <div class="sheet-foot" data-show="loading"><button class="btn btn-filled btn-full t-label-m" disabled aria-busy="true"><span class="spinner" aria-hidden="true"></span><span class="sr-only">Saving</span></button></div>
+  </section>
+  <div class="toast-region" aria-live="polite" data-show="error">
+  <div class="toast toast-danger glass glass-panel" role="status"><i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i><div class="body"><span class="t-label-s">Error</span><p class="t-paragraph-s">Something went wrong. Please try again later.</p></div></div>
+</div>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375</b> — glass bottom sheet: handle, title, subtitle, a stepper row (round minus, large two-digit number with "Years" under it, round plus), full-width Update pinned above the safe area.</li>
+      <li><b>768 / 1440</b> — 440 wide side sheet from the right with the same content; the primary button sits in the sheet footer.</li>
+      <li>States: <b>default</b> (seeded with the saved value, "12") · <b>empty</b> ("00", minus disabled) · <b>max</b> ("100", plus disabled) · <b>loading</b> (button spinner) · <b>error</b> (toast; the sheet stays open).</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Bottom sheet / side sheet · IconButton glass (close, minus, plus)</li>
+      <li>Stepper (Qty stepper pattern at sheet size)</li>
+      <li>Button filled L (Update, loading) · Toast (danger)</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Open / close — <code>--panel-*</code> (slides up on mobile, slides in from the right from 768)</li>
+      <li>Button and row press — <code>--press-*</code></li>
+      <li>Error toast — <code>--toast-*</code></li>
+      <li>Number change — <code>--text-swap-*</code></li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li>Dialog named by its title; focus moves into the sheet, is trapped, and returns to the row that opened it.</li>
+      <li>Esc, the close button, scrim tap and (mobile) drag down close it; the primary button is last in tab order.</li>
+      <li>While saving the button is disabled and announces "Saving"; errors are announced in a polite live region.</li>
+      <li>The number is a spinbutton (0 – 100) named "Years of experience" with value text "12 Years"; arrow keys change it; − / + are labelled Decrease / Increase and disable at the ends.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>Values under 10 are zero-padded to two digits ("00", "07") as the app.</li>
+      <li>Unlike the other edit sheets this one stays open when the save fails (closes only on success), as the app.</li>
+      <li>Title is "Year of Experience" (singular) while the row reads "Years of Experience" — both verbatim.</li>
+      <li>A close button is added in the header (the app closes by drag or tapping outside only).</li>
+      <li>The stepper buttons are static in this mockup (no script).</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-15-04 Delete Account, choose reason</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-15.css">
+</head>
+<body class="t-paragraph-m no-tabbar has-foot"
+      data-states="default,selected,loading,empty,error"
+      data-shell="main" data-nav="home">
+
+<div class="screen app on-surface" style="--page-bg: var(--home-surface); --page-max: 640px">
+  <div class="app-main">
+    <header class="top"><div class="top-inner glass glass-panel">
+      <div class="bar bar-center"><a class="ibtn ibtn-44 ibtn-plain press" data-back href="S-13-05-manage-account.html" aria-label="Back"><i class="ic ic-24 hgi hgi-stroke hgi-arrow-left-01" aria-hidden="true"></i></a><h1 class="t-label-xl">Delete Account</h1><span class="ibtn ibtn-44 only-narrow" aria-hidden="true"></span></div>
+    </div></header>
+    <main class="page stagger" data-show="default">
+      <p id="intro" class="t-paragraph-l text-subtle">We’re sorry to see you go. Please let us know why you’re deleting your account, as we may be able to help with common issues.</p>
+      <div class="card reasons" role="radiogroup" aria-labelledby="intro"><button class="opt t-paragraph-m" role="radio" data-radio aria-checked="false"><span class="radio"></span><span class="txt">I no longer need this account</span></button><button class="opt t-paragraph-m" role="radio" data-radio aria-checked="false"><span class="radio"></span><span class="txt">I have privacy concerns</span></button><button class="opt t-paragraph-m" role="radio" data-radio aria-checked="false"><span class="radio"></span><span class="txt">I receive too many notifications</span></button><button class="opt t-paragraph-m" role="radio" data-radio aria-checked="false"><span class="radio"></span><span class="txt">I could not find what I was looking for</span></button><button class="opt t-paragraph-m" role="radio" data-radio aria-checked="false"><span class="radio"></span><span class="txt">I have another account</span></button><button class="opt t-paragraph-m" role="radio" data-radio aria-checked="false"><span class="radio"></span><span class="txt">Other</span></button></div>
+    </main>
+    <main class="page stagger" data-show="selected">
+      <p class="t-paragraph-l text-subtle">We’re sorry to see you go. Please let us know why you’re deleting your account, as we may be able to help with common issues.</p>
+      <div class="card reasons" role="radiogroup" aria-label="Reason for deleting your account"><button class="opt t-paragraph-m" role="radio" data-radio aria-checked="false"><span class="radio"></span><span class="txt">I no longer need this account</span></button><button class="opt t-paragraph-m" role="radio" data-radio aria-checked="true"><span class="radio"></span><span class="txt">I have privacy concerns</span></button><button class="opt t-paragraph-m" role="radio" data-radio aria-checked="false"><span class="radio"></span><span class="txt">I receive too many notifications</span></button><button class="opt t-paragraph-m" role="radio" data-radio aria-checked="false"><span class="radio"></span><span class="txt">I could not find what I was looking for</span></button><button class="opt t-paragraph-m" role="radio" data-radio aria-checked="false"><span class="radio"></span><span class="txt">I have another account</span></button><button class="opt t-paragraph-m" role="radio" data-radio aria-checked="false"><span class="radio"></span><span class="txt">Other</span></button></div>
+    </main>
+    <main class="page" data-show="loading" aria-busy="true" aria-label="Loading reasons">
+      <div class="stack stack-8" aria-hidden="true"><span class="skel" style="width:100%;height:16px"></span><span class="skel" style="width:100%;height:16px"></span><span class="skel" style="width:60%;height:16px"></span></div>
+      <div class="card reasons" aria-hidden="true"><div class="opt"><span class="skel skel-circle" style="width:24px;height:24px;flex:none"></span><span class="skel" style="width:62%;height:14px"></span></div><div class="opt"><span class="skel skel-circle" style="width:24px;height:24px;flex:none"></span><span class="skel" style="width:48%;height:14px"></span></div><div class="opt"><span class="skel skel-circle" style="width:24px;height:24px;flex:none"></span><span class="skel" style="width:70%;height:14px"></span></div><div class="opt"><span class="skel skel-circle" style="width:24px;height:24px;flex:none"></span><span class="skel" style="width:56%;height:14px"></span></div><div class="opt"><span class="skel skel-circle" style="width:24px;height:24px;flex:none"></span><span class="skel" style="width:44%;height:14px"></span></div><div class="opt"><span class="skel skel-circle" style="width:24px;height:24px;flex:none"></span><span class="skel" style="width:20%;height:14px"></span></div></div>
+      <div aria-hidden="true"><span class="skel" style="width:100%;height:48px;border-radius:var(--radius-full)"></span></div>
+    </main>
+    <main class="page" data-show="empty error">
+      <p class="page-msg t-paragraph-m">No reasons available.</p>
+    </main>
+    <div class="foot-cta" data-show="default selected"><div class="foot-in">
+      <button class="btn btn-filled t-label-m press" data-open="S-15-05-delete-account-confirm.html" aria-haspopup="dialog">CONTINUE</button>
+    </div></div>
+  </div>
+  <div class="toast-region" aria-live="polite" data-show="error"><div class="toast toast-danger glass glass-panel" role="status"><i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i><div class="body"><span class="t-label-s">Error</span><p class="t-paragraph-s">Network error occurred</p></div></div></div>
+</div>
+
+<!-- =====================================================================
+     ANNOTATIONS (shown on the board, hidden inside the frames)
+     ===================================================================== -->
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375:</b> mirrors the app: centred title with back, intro paragraph, one card of radio rows, "CONTINUE" pinned at the bottom. No tab bar (pushed screen).</li>
+      <li><b>768:</b> same column, reading width 640, glass menu on the left; the button sits right-aligned in the sticky bar.</li>
+      <li><b>1440:</b> same column beside the expanded menu. "CONTINUE" opens the confirmation (S-15-05) as a centred dialog over this page.</li>
+      <li>Empty and error show only "No reasons available.": no button, as the app.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Top header (back) · Card · Radio rows (single choice)</li>
+      <li>Sticky CTA bar · Button filled L · Skeleton · Toast danger</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Route push: <code>--page-slide-*</code> under 768, <code>--panel-*</code> crossfade from 768</li>
+      <li>Radio: <code>--select-check-*</code>; press, <code>--press-*</code></li>
+      <li>Skeleton to content: <code>--skel-*</code>, <code>--shimmer-*</code>, <code>--reveal-*</code>; confirmation, <code>--modal-*</code></li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li><code>main</code> landmark; "Delete Account" is the <code>h1</code>; back button labelled "Back".</li>
+      <li>Reasons are one radio group labelled by the intro text; arrow keys move the choice.</li>
+      <li>Error toast is a polite live region; every row is at least 56 high.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li><b>Open (Q-120):</b> the app lets the user continue with no reason (it would send "null"). This design follows the app; requiring a reason is recommended.</li>
+      <li>Intro and reason labels come from the API. The intro shown is the fallback text in the app code; the six reasons are sample data.</li>
+      <li>Error has no retry control in the app.</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

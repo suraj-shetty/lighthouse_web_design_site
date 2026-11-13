@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-02-03 Verify Your Number</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-01-04.css">
+</head>
+<body class="t-paragraph-m" data-states="default,filled,loading,error,resend-ready">
+<div class="screen app on-surface auth has-art" style="--page-bg: var(--home-surface)">
+  <aside class="auth-art" aria-hidden="true"><img class="bg" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&h=1600&fit=crop&q=70" alt="" loading="lazy"><img class="mark" src="assets/logo_lighthouse.png" alt="" style="align-self:flex-start"><p class="t-sublabel-s">The brighter side of architecture</p></aside>
+  <main class="auth-main">
+    <div class="auth-card">
+      <div class="auth-bar"><a class="ibtn ibtn-44 ibtn-solid press" data-back href="S-02-01-sign-in.html" aria-label="Back"><i class="ic hgi hgi-stroke hgi-arrow-left-01" aria-hidden="true"></i></a><h1 class="t-label-m">Verify Your Number</h1><span></span></div>
+      <div class="auth-body" style="padding-top: var(--spacing-24); gap: var(--spacing-24)">
+        <div data-show="default"><div class="otp" role="group" aria-label="Verification code, 4 digits"><input class="t-label-xl tnum is-focus" type="text" inputmode="numeric" maxlength="1" placeholder="-" value="" aria-label="Digit 1" autocomplete="one-time-code"><input class="t-label-xl tnum" type="text" inputmode="numeric" maxlength="1" placeholder="-" value="" aria-label="Digit 2"><input class="t-label-xl tnum" type="text" inputmode="numeric" maxlength="1" placeholder="-" value="" aria-label="Digit 3"><input class="t-label-xl tnum" type="text" inputmode="numeric" maxlength="1" placeholder="-" value="" aria-label="Digit 4"></div></div>
+        <div data-show="filled loading"><div class="otp" role="group" aria-label="Verification code, 4 digits"><input class="t-label-xl tnum is-filled" type="text" inputmode="numeric" maxlength="1" placeholder="-" value="4" aria-label="Digit 1" autocomplete="one-time-code"><input class="t-label-xl tnum is-filled" type="text" inputmode="numeric" maxlength="1" placeholder="-" value="7" aria-label="Digit 2"><input class="t-label-xl tnum is-filled" type="text" inputmode="numeric" maxlength="1" placeholder="-" value="2" aria-label="Digit 3"><input class="t-label-xl tnum is-filled" type="text" inputmode="numeric" maxlength="1" placeholder="-" value="9" aria-label="Digit 4"></div></div>
+        <div data-show="error"><div class="otp" role="group" aria-label="Verification code, 4 digits"><input class="t-label-xl tnum is-focus is-error" type="text" inputmode="numeric" maxlength="1" placeholder="-" value="" aria-label="Digit 1" autocomplete="one-time-code" aria-invalid="true"><input class="t-label-xl tnum is-error" type="text" inputmode="numeric" maxlength="1" placeholder="-" value="" aria-label="Digit 2" aria-invalid="true"><input class="t-label-xl tnum is-error" type="text" inputmode="numeric" maxlength="1" placeholder="-" value="" aria-label="Digit 3" aria-invalid="true"><input class="t-label-xl tnum is-error" type="text" inputmode="numeric" maxlength="1" placeholder="-" value="" aria-label="Digit 4" aria-invalid="true"></div></div>
+        <div data-show="resend-ready"><div class="otp" role="group" aria-label="Verification code, 4 digits"><input class="t-label-xl tnum" type="text" inputmode="numeric" maxlength="1" placeholder="-" value="" aria-label="Digit 1" autocomplete="one-time-code"><input class="t-label-xl tnum" type="text" inputmode="numeric" maxlength="1" placeholder="-" value="" aria-label="Digit 2"><input class="t-label-xl tnum" type="text" inputmode="numeric" maxlength="1" placeholder="-" value="" aria-label="Digit 3"><input class="t-label-xl tnum" type="text" inputmode="numeric" maxlength="1" placeholder="-" value="" aria-label="Digit 4"></div></div>
+        <p class="t-paragraph-m center-text">We have sent a verification code to<br><span class="tnum">+91*** *** **12</span></p>
+        <p class="sr-only" aria-live="polite" data-show="resend-ready">You can resend the code now</p>
+      </div>
+      <div class="auth-foot">
+        <button class="btn btn-full t-label-m" data-show="default error resend-ready" disabled>VERIFY</button>
+        <a class="btn btn-filled btn-full t-label-m press" data-show="filled" href="S-03-01-onboarding-user-type.html">VERIFY</a>
+        <button class="btn btn-filled btn-full t-label-m" data-show="loading" aria-busy="true"><span class="spinner" aria-hidden="true"></span><span class="sr-only">Verifying</span></button>
+        <div data-show="default"><button class="btn glass btn-full t-label-m resend-wait" aria-disabled="true"><span class="tnum">RESEND CODE IN 00 : 52</span></button></div>
+        <div data-show="filled loading"><button class="btn glass btn-full t-label-m resend-wait" aria-disabled="true"><span class="tnum">RESEND CODE IN 00 : 41</span></button></div>
+        <div data-show="error"><button class="btn glass btn-full t-label-m resend-wait" aria-disabled="true"><span class="tnum">RESEND CODE IN 00 : 18</span></button></div>
+        <button class="btn glass btn-full t-label-m press" data-show="resend-ready" data-go-state="default">RESEND CODE</button>
+      </div>
+    </div>
+  </main>
+  <div class="toast-region static" data-show="error"><div class="toast toast-danger glass glass-panel" role="alert"><i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i><div class="body"><span class="t-label-s">Error</span><p class="t-paragraph-s">Invalid OTP. Please try again.</p></div></div></div>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375:</b> as the app: circular back button and centred title; four pill code boxes; two-line message with the masked number; VERIFY then the glass resend button pinned to the bottom.</li>
+      <li><b>768:</b> the same content in a centred card; buttons follow the message.</li>
+      <li><b>1440:</b> the same auth card as Sign in with the brand artwork beside it; back sits top-left of the card.</li>
+      <li>States: <b>default</b> (empty, first box focused, countdown running, VERIFY inactive), <b>filled</b> (4 digits, VERIFY active), <b>loading</b> (spinner in VERIFY), <b>error</b> (code cleared, error stroke on every box, toast), <b>resend-ready</b> (countdown finished, "RESEND CODE"). No empty state.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>IconButton solid (back)</li>
+      <li>One-time-code input (4 boxes, hint "-")</li>
+      <li>Button filled L (VERIFY: inactive, active, loading)</li>
+      <li>Button glass L (resend: counting, ready)</li>
+      <li>Toast danger</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Countdown digits and the label change to "RESEND CODE": <code>--text-swap-*</code>.</li>
+      <li>Toast: <code>--toast-*</code>; buttons, <code>--press-*</code>; back / forward, <code>--page-slide-*</code> under 768, <code>--panel-*</code> from 768.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li><code>h1</code> = title; back is labelled "Back".</li>
+      <li>The four boxes are one group "Verification code, 4 digits" with <code>inputmode=numeric</code> and <code>autocomplete=one-time-code</code> (browser SMS autofill where supported); paste fills all boxes.</li>
+      <li>A failed verify is announced by the toast and the boxes are marked invalid: not by colour alone.</li>
+      <li>The countdown is not announced every second; "You can resend the code now" is announced once.</li>
+      <li>Focus order: back → code → VERIFY → resend.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>Q-03 applied: "RESEND CODE" is kept as in the app; the build adds the resend method with its API call left commented out.</li>
+      <li>The error toast message is sample server text ("Invalid OTP. Please try again."); the real message comes from the API.</li>
+      <li>While counting, the resend button keeps its glass look and is exposed as disabled.</li>
+      <li>OTP expiry and attempt limits are not shown: the app has none on the client.</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

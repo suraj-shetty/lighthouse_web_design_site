@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-19-06 Reject order</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-19.css">
+</head>
+<body class="t-paragraph-m no-tabbar has-foot"
+      data-states="default,selected,submitting,submit-failed,loading,error"
+      data-shell="reseller" data-nav="orders">
+
+<div class="screen app on-surface" style="--page-bg: var(--home-surface); --page-max: 1120px">
+  <div class="app-main">
+    <header class="top"><div class="top-inner glass glass-panel"><div class="bar" data-show="default selected submitting submit-failed"><div class="ohead"><div class="row row-8"><h1 class="t-label-xl truncate">Reject Order?</h1></div><span class="t-paragraph-s text-subtle tnum">ORD-10432</span></div><a class="ibtn ibtn-44 glass glass-icon press" data-back href="S-19-01-reseller-order-list.html" aria-label="Close"><i class="ic hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></a></div><div class="bar" data-show="loading error"><div class="ohead"><div class="row row-8"><h1 class="t-label-xl truncate">Reject Order?</h1></div><span class="t-paragraph-s text-subtle tnum">&nbsp;</span></div><a class="ibtn ibtn-44 glass glass-icon press" data-back href="S-19-01-reseller-order-list.html" aria-label="Close"><i class="ic hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></a></div></div></header>
+    <main class="page" data-show="default"><div class="split fsplit">
+      <section class="card dcard sum sticky" aria-label="Order summary">
+        <a class="dprod press" href="S-10-12-product-detail.html"><img class="thumb" src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=144&h=144&fit=crop&q=70" alt="" loading="lazy"><span class="txt"><span class="t-label-m">Jaquar Florentine Single Lever Basin Mixer</span><span class="tag t-paragraph-s">Jaquar</span></span></a>
+        <hr class="hr">
+        <dl class="kv dkv t-paragraph-m"><dt>SKU</dt><dd>FLR-CHR-5011B</dd><dt>Quantity</dt><dd>24 Units</dd><dt>Buyer</dt><dd>R**** M*****</dd><dt>Category</dt><dd>Interior Designer</dd><dt class="full">Delivery Location</dt><dd class="full"><span class="t-label-s">Site Office</span><br>No. 214, 12th Main Road, HAL 2nd Stage, Indiranagar, Bengaluru 560038<br><span class="text-subtle">Flat 3B, 3rd Floor, Near ESI Hospital</span></dd><dt>Base MRP</dt><dd>₹6,450</dd><dt class="full">Note from Buyer</dt><dd class="full">Please confirm the chrome finish and share the warranty card along with the invoice.</dd></dl>
+      </section>
+      <div class="stack stack-24" role="form" aria-label="Reject order">
+        <div class="note warning" role="note"><i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i><div class="txt"><span class="t-label-s">This action cannot be undone</span><span class="t-paragraph-s">Once you pass on this Order, you won't be able to submit a quote for it. The buyer will be notified that you're not interested.</span></div></div>
+        <div class="card fcardx">
+          <div class="field"><span class="label t-label-small" id="default-rl">Why are you rejecting this order? <span class="req" aria-hidden="true">*</span></span>
+            <button class="select t-paragraph-m is-empty" data-open="S-19-07-reject-reason-sheet.html" aria-haspopup="dialog" aria-required="true" aria-labelledby="default-rl default-rv"><span id="default-rv">Select a reason</span><i class="ic hgi hgi-stroke hgi-arrow-down-01" aria-hidden="true"></i></button></div>
+          <div class="field"><label class="t-label-small" for="default-note">Additional Note <span class="opt-label">(Optional)</span></label>
+            <div class="textarea"><textarea id="default-note" class="t-paragraph-m" rows="5" placeholder="Add note here..."></textarea></div></div>
+        </div>
+      </div>
+    </div></main>
+    <main class="page" data-show="selected"><div class="split fsplit">
+      <section class="card dcard sum sticky" aria-label="Order summary">
+        <a class="dprod press" href="S-10-12-product-detail.html"><img class="thumb" src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=144&h=144&fit=crop&q=70" alt="" loading="lazy"><span class="txt"><span class="t-label-m">Jaquar Florentine Single Lever Basin Mixer</span><span class="tag t-paragraph-s">Jaquar</span></span></a>
+        <hr class="hr">
+        <dl class="kv dkv t-paragraph-m"><dt>SKU</dt><dd>FLR-CHR-5011B</dd><dt>Quantity</dt><dd>24 Units</dd><dt>Buyer</dt><dd>R**** M*****</dd><dt>Category</dt><dd>Interior Designer</dd><dt class="full">Delivery Location</dt><dd class="full"><span class="t-label-s">Site Office</span><br>No. 214, 12th Main Road, HAL 2nd Stage, Indiranagar, Bengaluru 560038<br><span class="text-subtle">Flat 3B, 3rd Floor, Near ESI Hospital</span></dd><dt>Base MRP</dt><dd>₹6,450</dd><dt class="full">Note from Buyer</dt><dd class="full">Please confirm the chrome finish and share the warranty card along with the invoice.</dd></dl>
+      </section>
+      <div class="stack stack-24" role="form" aria-label="Reject order">
+        <div class="note warning" role="note"><i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i><div class="txt"><span class="t-label-s">This action cannot be undone</span><span class="t-paragraph-s">Once you pass on this Order, you won't be able to submit a quote for it. The buyer will be notified that you're not interested.</span></div></div>
+        <div class="card fcardx">
+          <div class="field"><span class="label t-label-small" id="selected-rl">Why are you rejecting this order? <span class="req" aria-hidden="true">*</span></span>
+            <button class="select t-paragraph-m" data-open="S-19-07-reject-reason-sheet.html" data-open-state="selected" aria-haspopup="dialog" aria-required="true" aria-labelledby="selected-rl selected-rv"><span id="selected-rv">Cannot meet the required timeline</span><i class="ic hgi hgi-stroke hgi-arrow-down-01" aria-hidden="true"></i></button></div>
+          <div class="field"><label class="t-label-small" for="selected-note">Additional Note <span class="opt-label">(Optional)</span></label>
+            <div class="textarea"><textarea id="selected-note" class="t-paragraph-m" rows="5" placeholder="Add note here...">Earliest dispatch from the factory is mid-December.</textarea></div></div>
+        </div>
+      </div>
+    </div></main>
+    <main class="page" data-show="submitting"><div class="split fsplit">
+      <section class="card dcard sum sticky" aria-label="Order summary">
+        <a class="dprod press" href="S-10-12-product-detail.html"><img class="thumb" src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=144&h=144&fit=crop&q=70" alt="" loading="lazy"><span class="txt"><span class="t-label-m">Jaquar Florentine Single Lever Basin Mixer</span><span class="tag t-paragraph-s">Jaquar</span></span></a>
+        <hr class="hr">
+        <dl class="kv dkv t-paragraph-m"><dt>SKU</dt><dd>FLR-CHR-5011B</dd><dt>Quantity</dt><dd>24 Units</dd><dt>Buyer</dt><dd>R**** M*****</dd><dt>Category</dt><dd>Interior Designer</dd><dt class="full">Delivery Location</dt><dd class="full"><span class="t-label-s">Site Office</span><br>No. 214, 12th Main Road, HAL 2nd Stage, Indiranagar, Bengaluru 560038<br><span class="text-subtle">Flat 3B, 3rd Floor, Near ESI Hospital</span></dd><dt>Base MRP</dt><dd>₹6,450</dd><dt class="full">Note from Buyer</dt><dd class="full">Please confirm the chrome finish and share the warranty card along with the invoice.</dd></dl>
+      </section>
+      <div class="stack stack-24" role="form" aria-label="Reject order">
+        <div class="note warning" role="note"><i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i><div class="txt"><span class="t-label-s">This action cannot be undone</span><span class="t-paragraph-s">Once you pass on this Order, you won't be able to submit a quote for it. The buyer will be notified that you're not interested.</span></div></div>
+        <div class="card fcardx">
+          <div class="field"><span class="label t-label-small" id="submitting-rl">Why are you rejecting this order? <span class="req" aria-hidden="true">*</span></span>
+            <button class="select t-paragraph-m" data-open="S-19-07-reject-reason-sheet.html" data-open-state="selected" aria-haspopup="dialog" aria-required="true" aria-labelledby="submitting-rl submitting-rv" disabled><span id="submitting-rv">Cannot meet the required timeline</span><i class="ic hgi hgi-stroke hgi-arrow-down-01" aria-hidden="true"></i></button></div>
+          <div class="field"><label class="t-label-small" for="submitting-note">Additional Note <span class="opt-label">(Optional)</span></label>
+            <div class="textarea"><textarea id="submitting-note" class="t-paragraph-m" rows="5" placeholder="Add note here..." disabled>Earliest dispatch from the factory is mid-December.</textarea></div></div>
+        </div>
+      </div>
+    </div></main>
+    <main class="page" data-show="submit-failed"><div class="split fsplit">
+      <section class="card dcard sum sticky" aria-label="Order summary">
+        <a class="dprod press" href="S-10-12-product-detail.html"><img class="thumb" src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=144&h=144&fit=crop&q=70" alt="" loading="lazy"><span class="txt"><span class="t-label-m">Jaquar Florentine Single Lever Basin Mixer</span><span class="tag t-paragraph-s">Jaquar</span></span></a>
+        <hr class="hr">
+        <dl class="kv dkv t-paragraph-m"><dt>SKU</dt><dd>FLR-CHR-5011B</dd><dt>Quantity</dt><dd>24 Units</dd><dt>Buyer</dt><dd>R**** M*****</dd><dt>Category</dt><dd>Interior Designer</dd><dt class="full">Delivery Location</dt><dd class="full"><span class="t-label-s">Site Office</span><br>No. 214, 12th Main Road, HAL 2nd Stage, Indiranagar, Bengaluru 560038<br><span class="text-subtle">Flat 3B, 3rd Floor, Near ESI Hospital</span></dd><dt>Base MRP</dt><dd>₹6,450</dd><dt class="full">Note from Buyer</dt><dd class="full">Please confirm the chrome finish and share the warranty card along with the invoice.</dd></dl>
+      </section>
+      <div class="stack stack-24" role="form" aria-label="Reject order">
+        <div class="note warning" role="note"><i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i><div class="txt"><span class="t-label-s">This action cannot be undone</span><span class="t-paragraph-s">Once you pass on this Order, you won't be able to submit a quote for it. The buyer will be notified that you're not interested.</span></div></div>
+        <div class="card fcardx">
+          <div class="field"><span class="label t-label-small" id="submit-failed-rl">Why are you rejecting this order? <span class="req" aria-hidden="true">*</span></span>
+            <button class="select t-paragraph-m" data-open="S-19-07-reject-reason-sheet.html" data-open-state="selected" aria-haspopup="dialog" aria-required="true" aria-labelledby="submit-failed-rl submit-failed-rv"><span id="submit-failed-rv">Cannot meet the required timeline</span><i class="ic hgi hgi-stroke hgi-arrow-down-01" aria-hidden="true"></i></button></div>
+          <div class="field"><label class="t-label-small" for="submit-failed-note">Additional Note <span class="opt-label">(Optional)</span></label>
+            <div class="textarea"><textarea id="submit-failed-note" class="t-paragraph-m" rows="5" placeholder="Add note here...">Earliest dispatch from the factory is mid-December.</textarea></div></div>
+        </div>
+      </div>
+    </div></main>
+    <main class="page" data-show="loading" aria-busy="true" aria-label="Loading order"><div class="split fsplit" aria-hidden="true">
+        <div class="card dcard sum"><div class="dprod"><span class="skel" style="width:72px;height:72px;border-radius:var(--radius-12);flex:none"></span><div class="txt"><span class="skel" style="width:80%;height:16px"></span><span class="skel" style="width:72px;height:24px;border-radius:var(--radius-full)"></span></div></div><span class="skel" style="width:100%;height:14px"></span><span class="skel" style="width:70%;height:14px"></span><span class="skel" style="width:90%;height:14px"></span><span class="skel" style="width:55%;height:14px"></span></div>
+        <div class="card fcardx"><span class="skel" style="width:32%;height:14px"></span><span class="skel" style="width:100%;height:48px;border-radius:var(--radius-full)"></span><span class="skel" style="width:32%;height:14px"></span><span class="skel" style="width:100%;height:48px;border-radius:var(--radius-full)"></span><span class="skel" style="width:32%;height:14px"></span><span class="skel" style="width:100%;height:48px;border-radius:var(--radius-full)"></span><span class="skel" style="width:32%;height:14px"></span><span class="skel" style="width:100%;height:48px;border-radius:var(--radius-full)"></span></div>
+      </div></main>
+    <main class="page" data-show="error">
+      <div class="empty"><div class="empty-tile err-tile" aria-hidden="true"><i class="ic ic-24 hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i></div>
+        <div class="empty-text"><p class="t-paragraph-m" role="alert">Could not load order details</p></div>
+        <button class="btn btn-m btn-filled t-label-s press" data-go-state="loading">RETRY</button></div>
+    </main>
+    <div class="foot-cta" data-show="default"><div class="foot-in"><a class="btn glass t-label-m press" data-back href="S-19-01-reseller-order-list.html">CANCEL</a><button class="btn btn-danger t-label-m" disabled aria-describedby="why">REJECT ORDER</button><span id="why" class="sr-only">Choose a reason to enable this button</span></div></div>
+    <div class="foot-cta" data-show="selected submit-failed"><div class="foot-in"><a class="btn glass t-label-m press" data-back href="S-19-01-reseller-order-list.html">CANCEL</a><button class="btn btn-danger t-label-m press" data-go-state="submitting">REJECT ORDER</button></div></div>
+    <div class="foot-cta" data-show="submitting"><div class="foot-in"><button class="btn glass t-label-m" disabled>CANCEL</button><button class="btn btn-danger t-label-m" disabled aria-busy="true"><span class="spinner" aria-hidden="true"></span><span class="sr-only">Rejecting order</span></button></div></div>
+  </div>
+  <div class="toast-region" aria-live="polite" data-show="submit-failed"><div class="toast toast-danger glass glass-panel" role="status"><i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i><div class="body"><span class="t-label-s">Reject failed</span><p class="t-paragraph-s">Something went wrong. Please try again later.</p></div></div></div>
+</div>
+
+<!-- =====================================================================
+     ANNOTATIONS (shown on the board, hidden inside the frames)
+     ===================================================================== -->
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375</b> — mirrors the app: full screen without the reseller tab bar. Header "Reject Order?", the order number (no "Order" prefix here), close X. Column: order summary → amber warning → required reason selector → optional note. Blurred bottom bar with "CANCEL" and "REJECT ORDER" (hidden until the order has loaded).</li>
+      <li><b>768</b> — same column beside the glass menu; buttons right-aligned in the sticky bar.</li>
+      <li><b>1440</b> — two columns: warning, reason and note on the left; order summary sticky on the right.</li>
+      <li>"REJECT ORDER" is disabled until a reason is chosen. The reason field opens S-19-07 (a bottom sheet on mobile, a menu anchored to the field from 768).</li>
+      <li>No extra confirmation step. On success the screen closes with no message and the lists refresh.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Top header · IconButton glass (close) · Product card (summary) · Tag · Key / value list</li>
+      <li>Note / banner (warning) · Select (reason trigger) · Textarea</li>
+      <li>Sticky CTA bar · Button translucent L (CANCEL) · Button destructive L with loading (REJECT ORDER) · Button filled M (RETRY)</li>
+      <li>Skeleton · Empty state (load error) · Toast danger</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Reason menu — <code>--panel-*</code>; press — <code>--press-*</code>; toast — <code>--toast-*</code></li>
+      <li>Push / close — <code>--page-slide-*</code> under 768, <code>--panel-*</code> from 768; skeleton — <code>--skel-*</code></li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li>"Reject Order?" is the <code>h1</code>. The warning is icon + text, read once on open; never colour alone.</li>
+      <li>The reason control is labelled and marked required; the disabled submit button is described by "Choose a reason to enable this button".</li>
+      <li>Focus starts on the reason field, not on the destructive button. While submitting the button announces "Rejecting order" and the reason field is disabled.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>Choosing "Other" does not make the note required (as the app).</li>
+      <li>There are no validation messages in the app for this form.</li>
+      <li>The comment sent is "Reason: {reason}" or "Reason: {reason}, additional comments: {note}".</li>
+      <li>The load-error icon uses InformationCircle (app: Alert02, not in ICONS.md).</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

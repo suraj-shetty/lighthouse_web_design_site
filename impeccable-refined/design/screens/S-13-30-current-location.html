@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-13-30 Current Location</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-13b.css">
+</head>
+<body class="t-paragraph-m" data-kind="overlay" data-host="S-13-05-manage-account.html" data-states="default,results,loading,no-results,empty,validation,saving,error">
+<div class="screen overlay" data-variant="sheet">
+  <button class="scrim" data-close aria-label="Close"></button>
+  <section class="sheet" role="dialog" aria-modal="true" aria-labelledby="t">
+    <span class="sheet-grab" aria-hidden="true"></span>
+<div class="sheet-head"><div class="txt"><h1 id="t" class="t-label-xxl">Current Location</h1><p class="t-paragraph-m">Select your current location.</p></div><button class="ibtn ibtn-44 glass glass-icon press" data-close aria-label="Close"><i class="ic hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></div>
+    <div class="sheet-body">
+      <div class="search" data-show="default empty validation error"><i class="ic hgi hgi-stroke hgi-search-01" aria-hidden="true"></i><input class="t-paragraph-m" type="text" role="combobox" aria-expanded="false" aria-controls="loc-list" aria-label="Search for location..." autocomplete="off" placeholder="Search for location..."></div>
+      <div class="search" data-show="results loading"><i class="ic hgi hgi-stroke hgi-search-01" aria-hidden="true"></i><input class="t-paragraph-m" type="text" role="combobox" aria-expanded="true" aria-controls="loc-list" aria-label="Search for location..." autocomplete="off" placeholder="Search for location..." value="Kora"><button class="ibtn ibtn-36 ibtn-plain press" data-go-state="default" aria-label="Clear search"><i class="ic ic-16 hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></div>
+      <div class="search" data-show="no-results"><i class="ic hgi hgi-stroke hgi-search-01" aria-hidden="true"></i><input class="t-paragraph-m" type="text" role="combobox" aria-expanded="true" aria-controls="loc-list" aria-label="Search for location..." autocomplete="off" placeholder="Search for location..." value="Zzyx"><button class="ibtn ibtn-36 ibtn-plain press" data-go-state="default" aria-label="Clear search"><i class="ic ic-16 hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></div>
+      <div class="search" data-show="saving"><i class="ic hgi hgi-stroke hgi-search-01" aria-hidden="true"></i><input class="t-paragraph-m" type="text" role="combobox" aria-expanded="false" aria-controls="loc-list" aria-label="Search for location..." autocomplete="off" placeholder="Search for location..." disabled></div>
+      <section class="stack stack-8" data-show="results"><h2 class="t-label-xs f13-cap">SEARCH RESULTS</h2><div class="f13-results" id="loc-list" role="listbox" aria-label="Search results"><button class="menu-row" role="option" data-go-state="default"><i class="ic hgi hgi-stroke hgi-location-01" aria-hidden="true"></i><span class="f13-txt"><span class="t-label-s truncate">Koramangala</span><span class="t-paragraph-s truncate">Bengaluru, Karnataka, India</span></span></button><button class="menu-row" role="option" data-go-state="default"><i class="ic hgi hgi-stroke hgi-location-01" aria-hidden="true"></i><span class="f13-txt"><span class="t-label-s truncate">Koramangala 4th Block</span><span class="t-paragraph-s truncate">Koramangala, Bengaluru, Karnataka, India</span></span></button><button class="menu-row" role="option" data-go-state="default"><i class="ic hgi hgi-stroke hgi-location-01" aria-hidden="true"></i><span class="f13-txt"><span class="t-label-s truncate">Korattur</span><span class="t-paragraph-s truncate">Chennai, Tamil Nadu, India</span></span></button><button class="menu-row" role="option" data-go-state="default"><i class="ic hgi hgi-stroke hgi-location-01" aria-hidden="true"></i><span class="f13-txt"><span class="t-label-s truncate">Koraput</span><span class="t-paragraph-s truncate">Odisha, India</span></span></button></div></section>
+      <section class="stack stack-8" data-show="loading" aria-busy="true"><h2 class="t-label-xs f13-cap">SEARCH RESULTS</h2><div class="f13-results" aria-label="Searching"><span class="skel" style="width:58%"></span><span class="skel" style="width:72%"></span><span class="skel" style="width:46%"></span><span class="skel" style="width:64%"></span></div></section>
+      <section class="stack stack-8" data-show="no-results"><h2 class="t-label-xs f13-cap">SEARCH RESULTS</h2><p class="t-paragraph-m f13-line" role="status">No results found</p></section>
+      <section class="stack stack-8" data-show="default error"><h2 class="t-label-xs f13-cap">SELECTED LOCATION</h2><ul class="f13-tiles"><li class="f13-tile"><span class="f13-ico"><i class="ic hgi hgi-stroke hgi-location-01" aria-hidden="true"></i></span><span class="f13-txt"><span class="t-label-s truncate">Indiranagar</span><span class="t-paragraph-s truncate">Bengaluru, Karnataka, India</span></span><button class="ibtn ibtn-44 ibtn-plain f13-danger press" aria-label="Remove Indiranagar"><i class="ic hgi hgi-stroke hgi-delete-02" aria-hidden="true"></i></button></li></ul></section>
+      <section class="stack stack-8" data-show="saving"><h2 class="t-label-xs f13-cap">SELECTED LOCATION</h2><ul class="f13-tiles"><li class="f13-tile"><span class="f13-ico"><i class="ic hgi hgi-stroke hgi-location-01" aria-hidden="true"></i></span><span class="f13-txt"><span class="t-label-s truncate">Koramangala</span><span class="t-paragraph-s truncate">Bengaluru, Karnataka, India</span></span><button class="ibtn ibtn-44 ibtn-plain f13-danger press" aria-label="Remove Koramangala" disabled><i class="ic hgi hgi-stroke hgi-delete-02" aria-hidden="true"></i></button></li></ul></section>
+      <div class="empty" data-show="empty validation"><span class="empty-tile"><i class="ic ic-24 hgi hgi-stroke hgi-location-offline-01" aria-hidden="true"></i></span><div class="empty-text"><h2 class="t-label-m">No Primary Base Selected</h2><p class="t-paragraph-s">Search and select your primary base city.</p></div></div>
+    </div>
+    <div class="sheet-foot" data-show="default results loading no-results error"><button class="btn btn-filled btn-full t-label-m press" data-go-state="saving">SAVE</button></div>
+    <div class="sheet-foot" data-show="empty validation"><button class="btn btn-filled btn-full t-label-m press" data-go-state="validation">SAVE</button></div>
+    <div class="sheet-foot" data-show="saving"><button class="btn btn-filled btn-full t-label-m" disabled aria-busy="true"><span class="spinner" aria-hidden="true"></span><span class="sr-only">Saving</span></button></div>
+  </section>
+  <div class="toast-region f13-toast" aria-live="polite" data-show="validation"><div class="toast toast-danger glass glass-panel" role="status"><i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i><div class="body"><span class="t-label-s">Error</span><p class="t-paragraph-s">Please select a city</p></div></div></div>
+  <div class="toast-region f13-toast" aria-live="polite" data-show="error"><div class="toast toast-danger glass glass-panel" role="status"><i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i><div class="body"><span class="t-label-s">Error</span><p class="t-paragraph-s">Failed to fetch suggestion</p></div></div></div>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375:</b> glass bottom sheet (up to 90% height): handle, title and subtitle, content, full-width button pinned above the safe area.</li>
+      <li><b>768 / 1440:</b> side sheet from the right over Manage Account, same content, button in the sheet footer.</li>
+      <li>Search input (auto-focused, with clear button); below it either the search results, the empty prompt, or the "SELECTED LOCATION" block with one tile (name, sub-address, remove).</li>
+      <li>States: <b>default</b> saved location · <b>results</b> suggestions for "Kora" (they replace the selected block) · <b>loading</b> skeleton rows while searching · <b>no-results</b> · <b>empty</b> nothing selected, no query · <b>validation</b> SAVE with nothing selected → toast "Please select a city" · <b>saving</b> · <b>error</b> toast, sheet stays open.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Bottom sheet / side sheet · IconButton glass (close)</li>
+      <li>Search input with clear IconButton</li>
+      <li>Result list rows · Skeleton</li>
+      <li>Location tile with remove IconButton · Empty state</li>
+      <li>Button filled L, with loading · Toast (danger)</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Open / close: <code>--panel-*</code> (slides up under 768, slides in from the right from 768).</li>
+      <li>Suggestions: <code>--stagger-*</code>; pick, <code>--select-check-*</code>; remove, <code>--icon-swap-*</code>.</li>
+      <li>Press: <code>--press-*</code>; toast, <code>--toast-*</code>.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li>Dialog named by the sheet title; focus moves into the sheet, is trapped, and returns to the row it was opened from; Esc and the scrim close it.</li>
+      <li>Search is a combobox with a results listbox; "No results found" is announced.</li>
+      <li>Each selected tile has a remove button named "Remove &lt;place&gt;"; list changes are announced politely.</li>
+      <li>While saving, search and remove are disabled and the button announces "Saving".</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>Empty prompt says "Primary Base" while the sheet is titled "Current Location" (verbatim from the app). Align the wording?</li>
+      <li>Validation toast says "Please select a city" although any place can be picked (verbatim).</li>
+      <li>Other error fallbacks: "Failed to fetch place details", "Invalid response format".</li>
+      <li>Suggestions appear 300 ms after the last keystroke; place names are sample data.</li>
+      <li>Remove uses Delete02 in the danger colour, as the app.</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

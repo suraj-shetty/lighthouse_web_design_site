@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-09-10 Project sub-type</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-09.css">
+</head>
+<body class="t-paragraph-m" data-kind="overlay" data-host="S-09-08-create-project.html" data-states="default,selected,type-changed,empty">
+<div class="screen overlay f09" data-variant="sheet">
+  <button class="scrim" data-close aria-label="Close"></button>
+  <section class="sheet f09-gate" role="dialog" aria-modal="true" aria-labelledby="st" aria-describedby="st-d">
+    <span class="sheet-grab" aria-hidden="true"></span>
+    <div class="sheet-head"><button class="ibtn ibtn-44 ibtn-plain press" aria-label="Back to project type" data-open="S-09-09-project-type.html" data-open-state="selected" data-replace><i class="ic ic-24 hgi hgi-stroke hgi-arrow-left-01" aria-hidden="true"></i></button><div class="txt"><h1 id="st" class="t-label-xxl"><span data-show="default selected type-changed empty">What type of residential project is this?</span></h1><p id="st-d" class="t-paragraph-m"><span data-show="default selected type-changed empty">Please select a residential project type.</span></p></div><button class="ibtn ibtn-44 glass glass-icon press" aria-label="Close" data-close><i class="ic ic-24 hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i></button></div>
+    <div class="sheet-body" data-show="default"><div class="f09-opts" role="radiogroup" aria-label="Project sub-type" ><button class="opt t-paragraph-m" role="radio" data-radio aria-checked="false" ><span class="radio"></span><span class="txt"><span>Apartment</span></span></button><button class="opt t-paragraph-m" role="radio" data-radio aria-checked="false" ><span class="radio"></span><span class="txt"><span>Villa</span></span></button><button class="opt t-paragraph-m" role="radio" data-radio aria-checked="false" ><span class="radio"></span><span class="txt"><span>Bungalow</span></span></button><button class="opt t-paragraph-m" role="radio" data-radio aria-checked="false" ><span class="radio"></span><span class="txt"><span>Farmhouse</span></span></button><button class="opt t-paragraph-m" role="radio" data-radio aria-checked="false" ><span class="radio"></span><span class="txt"><span>Row House</span></span></button><button class="opt t-paragraph-m" role="radio" data-radio aria-checked="false" ><span class="radio"></span><span class="txt"><span>Penthouse</span></span></button><button class="opt t-paragraph-m" role="radio" data-radio aria-checked="false" ><span class="radio"></span><span class="txt"><span>Holiday Home</span></span></button></div></div>
+    <div class="sheet-body" data-show="selected"><div class="f09-opts" role="radiogroup" aria-label="Project sub-type" ><button class="opt t-paragraph-m" role="radio" data-radio aria-checked="false" ><span class="radio"></span><span class="txt"><span>Apartment</span></span></button><button class="opt t-paragraph-m" role="radio" data-radio aria-checked="true" ><span class="radio"></span><span class="txt"><span>Villa</span></span></button><button class="opt t-paragraph-m" role="radio" data-radio aria-checked="false" ><span class="radio"></span><span class="txt"><span>Bungalow</span></span></button><button class="opt t-paragraph-m" role="radio" data-radio aria-checked="false" ><span class="radio"></span><span class="txt"><span>Farmhouse</span></span></button><button class="opt t-paragraph-m" role="radio" data-radio aria-checked="false" ><span class="radio"></span><span class="txt"><span>Row House</span></span></button><button class="opt t-paragraph-m" role="radio" data-radio aria-checked="false" ><span class="radio"></span><span class="txt"><span>Penthouse</span></span></button><button class="opt t-paragraph-m" role="radio" data-radio aria-checked="false" ><span class="radio"></span><span class="txt"><span>Holiday Home</span></span></button></div></div>
+    <div class="sheet-body" data-show="type-changed"><div class="f09-opts" role="radiogroup" aria-label="Project sub-type" ><button class="opt t-paragraph-m" role="radio" data-radio aria-checked="false" ><span class="radio"></span><span class="txt"><span>Apartment</span></span></button><button class="opt t-paragraph-m" role="radio" data-radio aria-checked="false" ><span class="radio"></span><span class="txt"><span>Villa</span></span></button><button class="opt t-paragraph-m" role="radio" data-radio aria-checked="false" ><span class="radio"></span><span class="txt"><span>Bungalow</span></span></button><button class="opt t-paragraph-m" role="radio" data-radio aria-checked="true" ><span class="radio"></span><span class="txt"><span>Farmhouse</span></span></button><button class="opt t-paragraph-m" role="radio" data-radio aria-checked="false" ><span class="radio"></span><span class="txt"><span>Row House</span></span></button><button class="opt t-paragraph-m" role="radio" data-radio aria-checked="false" ><span class="radio"></span><span class="txt"><span>Penthouse</span></span></button><button class="opt t-paragraph-m" role="radio" data-radio aria-checked="false" ><span class="radio"></span><span class="txt"><span>Holiday Home</span></span></button></div></div>
+    <div class="sheet-body" data-show="empty"><p class="f09-none t-paragraph-m" role="status">No options found</p></div>
+    <div class="sheet-foot" data-show="default selected"><button class="btn btn-filled btn-full t-label-m press f09-needs-pick" data-close>ADD</button></div>
+    <div class="sheet-foot" data-show="type-changed"><button class="btn btn-filled btn-full t-label-m press f09-needs-pick" data-close data-toast="neutral|Spaces cleared|Spaces covered depend on the project type. Pick them again for Residential.">ADD</button></div>
+    <div class="sheet-foot" data-show="empty"><button class="btn btn-filled btn-full t-label-m" disabled>ADD</button></div>
+  </section>
+</div>
+
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375</b> — tall glass sheet: handle → title → subtitle → single-select rows → full-width ADD.</li>
+      <li><b>768 / 1440</b> — side sheet; the second step of the type pick, in the same place as S-09-09.</li>
+      <li>The title and subtitle carry the chosen type, lower-cased ("residential"). ADD commits type and sub-type together as two chips on the Project Type row.</li>
+      <li>States: default (nothing picked → ADD disabled), selected (reopened for the same type), type-changed (ADD also raises the "Spaces cleared" toast), empty ("No options found" — the type cannot be committed). No loading: sub-types arrive with their type.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Side / bottom sheet · IconButton (back, close)</li>
+      <li>Radio rows · Button filled L (ADD) · Toast</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Step change and close — <code>--panel-*</code></li>
+      <li>Radio — <code>--select-check-*</code>; toast — <code>--toast-*</code></li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li>Dialog labelled by its title; radio group; ADD exposes its disabled state.</li>
+      <li>A Back control returns to step 1 with the type still selected.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li>Back and close buttons are web additions (the app has neither).</li>
+      <li>Sub-type names are sample data.</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>

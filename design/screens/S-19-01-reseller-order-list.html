@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-19-01 Orders</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="../tokens/index.css">
+<link rel="stylesheet" href="assets/lh.css">
+<link rel="stylesheet" href="assets/f-19.css">
+</head>
+<body class="t-paragraph-m"
+      data-states="default,loading,empty,error"
+      data-shell="reseller" data-nav="orders">
+
+<div class="screen app on-surface" style="--page-bg: var(--home-surface); --page-max: 1280px">
+  <div class="app-main">
+    <header class="top"><div class="top-inner glass glass-panel">
+      <div class="top-row"><h1 class="t-label-xxl">Orders</h1><span class="grow"></span>
+        <button class="ibtn ibtn-44 glass glass-icon press only-wide" aria-label="Refresh" data-go-state="loading"><i class="ic ic-24 hgi hgi-stroke hgi-rotate-01" aria-hidden="true"></i></button></div>
+      <div class="chip-row chip-scroll" role="tablist" aria-label="Order status"><button class="chip glass t-label-s" role="tab" id="tab-new" aria-selected="true" aria-controls="tp-new">New</button><button class="chip glass t-label-s" role="tab" id="tab-quoted" aria-selected="false" aria-controls="tp-quoted">Quoted</button><button class="chip glass t-label-s" role="tab" id="tab-won" aria-selected="false" aria-controls="tp-won">Won</button><button class="chip glass t-label-s" role="tab" id="tab-delivered" aria-selected="false" aria-controls="tp-delivered">Delivered</button><button class="chip glass t-label-s" role="tab" id="tab-rejected" aria-selected="false" aria-controls="tp-rejected">Rejected</button><button class="chip glass t-label-s" role="tab" id="tab-completed" aria-selected="false" aria-controls="tp-completed">Completed</button><button class="chip glass t-label-s" role="tab" id="tab-cancelled" aria-selected="false" aria-controls="tp-cancelled">Cancelled</button><button class="chip glass t-label-s" role="tab" id="tab-declined" aria-selected="false" aria-controls="tp-declined">Declined</button></div>
+    </div></header>
+
+    <!-- DEFAULT — one panel per status. From 1200 each panel is master–detail. -->
+    <main class="page" data-show="default">
+      <section role="tabpanel" id="tp-new" aria-labelledby="tab-new"><ul class="olist is-grid stagger"><li><article class="card ocard" aria-labelledby="n0">
+        <div class="row between"><span class="t-label-s tnum">ORD-10432</span><span class="pill t-label-xs">New</span></div>
+        <div class="ocard-prod"><img class="thumb" src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=128&h=128&fit=crop&q=70" alt="" loading="lazy"><div class="txt">
+          <h2 id="n0" class="t-card-title clamp-2">Jaquar Florentine Single Lever Basin Mixer</h2>
+          <div class="row row-8 wrap"><span class="tag t-paragraph-s">Jaquar</span><span class="t-label-s tnum">₹1,54,800</span></div>
+          <span class="t-paragraph-s text-subtle">SKU: FLR-CHR-5011B</span>
+          <span class="t-paragraph-s text-subtle tnum">Quantity: 24</span>
+        </div></div>
+        <div class="ocard-acts">
+          <a class="btn btn-s glass t-label-xs press" href="S-19-06-reject-order.html" aria-label="Reject order ORD-10432">Reject</a>
+          <a class="btn btn-s btn-filled t-label-xs press" href="S-19-04-submit-quote.html" aria-label="Submit quote for order ORD-10432">Submit Quote</a>
+        </div>
+      </article></li><li><article class="card ocard" aria-labelledby="n1">
+        <div class="row between"><span class="t-label-s tnum">ORD-10431</span><span class="pill t-label-xs">New</span></div>
+        <div class="ocard-prod"><img class="thumb" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=128&h=128&fit=crop&q=70" alt="" loading="lazy"><div class="txt">
+          <h2 id="n1" class="t-card-title clamp-2">Kajaria Eternity Vitrified Floor Tile 600 × 1200 mm</h2>
+          <div class="row row-8 wrap"><span class="tag t-paragraph-s">Kajaria</span><span class="t-label-s tnum">₹2,12,400</span></div>
+          <span class="t-paragraph-s text-subtle">SKU: ET-6012-STB</span>
+          <span class="t-paragraph-s text-subtle tnum">Quantity: 180</span>
+        </div></div>
+        <div class="ocard-acts">
+          <a class="btn btn-s glass t-label-xs press" href="S-19-06-reject-order.html" aria-label="Reject order ORD-10431">Reject</a>
+          <a class="btn btn-s btn-filled t-label-xs press" href="S-19-04-submit-quote.html" aria-label="Submit quote for order ORD-10431">Submit Quote</a>
+        </div>
+      </article></li><li><article class="card ocard" aria-labelledby="n2">
+        <div class="row between"><span class="t-label-s tnum">ORD-10429</span><span class="pill t-label-xs">New</span></div>
+        <div class="ocard-prod"><img class="thumb" src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=128&h=128&fit=crop&q=70" alt="" loading="lazy"><div class="txt">
+          <h2 id="n2" class="t-card-title clamp-2">Custom Teak Veneer Wall Panel</h2>
+          <div class="row row-8 wrap"><span class="tag t-paragraph-s">Durian</span><span class="t-label-s tnum">On Request</span></div>
+          
+          <span class="t-paragraph-s text-subtle tnum">Quantity: 06</span>
+        </div></div>
+        <div class="ocard-acts">
+          <a class="btn btn-s glass t-label-xs press" href="S-19-06-reject-order.html" aria-label="Reject order ORD-10429">Reject</a>
+          <a class="btn btn-s btn-filled t-label-xs press" href="S-19-04-submit-quote.html" aria-label="Submit quote for order ORD-10429">Submit Quote</a>
+        </div>
+      </article></li><li><article class="card ocard" aria-labelledby="n3">
+        <div class="row between"><span class="t-label-s tnum">ORD-10426</span><span class="pill t-label-xs">New</span></div>
+        <div class="ocard-prod"><img class="thumb" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=128&h=128&fit=crop&q=70" alt="" loading="lazy"><div class="txt">
+          <h2 id="n3" class="t-card-title clamp-2">Hettich Sensys 110° Soft-Close Hinge</h2>
+          <div class="row row-8 wrap"><span class="tag t-paragraph-s">Hettich</span><span class="t-label-s tnum">₹78,400</span></div>
+          <span class="t-paragraph-s text-subtle">SKU: 9071205</span>
+          <span class="t-paragraph-s text-subtle tnum">Quantity: 320</span>
+        </div></div>
+        <div class="ocard-acts">
+          <a class="btn btn-s glass t-label-xs press" href="S-19-06-reject-order.html" aria-label="Reject order ORD-10426">Reject</a>
+          <a class="btn btn-s btn-filled t-label-xs press" href="S-19-04-submit-quote.html" aria-label="Submit quote for order ORD-10426">Submit Quote</a>
+        </div>
+      </article></li></ul></section><section role="tabpanel" id="tp-quoted" aria-labelledby="tab-quoted" hidden><div class="md">
+      <ul class="olist"><li><a class="card ocard press" href="S-19-03-reseller-order-details.html" data-state="quoted" aria-current="true" aria-label="Order ORD-10424, Asian Paints Royale Luxury Emulsion 20 L, Quoted">
+        <div class="row between"><span class="t-label-s tnum">ORD-10424</span><span class="pill warning t-label-xs">Quoted</span></div>
+        <div class="ocard-prod"><img class="thumb" src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=128&h=128&fit=crop&q=70" alt="" loading="lazy"><div class="txt">
+          <h2 class="t-card-title clamp-2">Asian Paints Royale Luxury Emulsion 20 L</h2>
+          <dl class="ometa t-paragraph-s"><dt>Brand:</dt><dd>Asian Paints</dd><dt>SKU:</dt><dd>RLE-20L-WHT</dd><dt>Location:</dt><dd>Bengaluru</dd></dl>
+        </div></div>
+        <div class="oboxes"><div class="obox"><span class="t-paragraph-xs">Quantity</span><span class="t-label-s tnum">12 Units</span></div><div class="obox"><span class="t-paragraph-xs">Required By</span><span class="t-label-s tnum">02 Dec 2026</span></div></div>
+        <div class="ofoot"><div class="price"><span class="t-paragraph-s">Total Price</span><span class="t-label-m tnum">₹1,12,800</span></div><span class="more t-label-s">View Details<i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></div>
+      </a></li><li><a class="card ocard press" href="S-19-03-reseller-order-details.html" data-state="quoted" aria-label="Order ORD-10421, Philips 12W Round LED Downlighter, Quoted">
+        <div class="row between"><span class="t-label-s tnum">ORD-10421</span><span class="pill warning t-label-xs">Quoted</span></div>
+        <div class="ocard-prod"><img class="thumb" src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=128&h=128&fit=crop&q=70" alt="" loading="lazy"><div class="txt">
+          <h2 class="t-card-title clamp-2">Philips 12W Round LED Downlighter</h2>
+          <dl class="ometa t-paragraph-s"><dt>Brand:</dt><dd>Philips</dd><dt>SKU:</dt><dd>PH-DL-12W-CW</dd><dt>Location:</dt><dd>Tumakuru</dd></dl>
+        </div></div>
+        <div class="oboxes"><div class="obox"><span class="t-paragraph-xs">Quantity</span><span class="t-label-s tnum">150 Units</span></div><div class="obox"><span class="t-paragraph-xs">Required By</span><span class="t-label-s tnum">30 Nov 2026</span></div></div>
+        <div class="ofoot"><div class="price"><span class="t-paragraph-s">Total Price</span><span class="t-label-m tnum">₹74,700</span></div><span class="more t-label-s">View Details<i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></div>
+      </a></li><li><a class="card ocard press" href="S-19-03-reseller-order-details.html" data-state="quoted" aria-label="Order ORD-10419, Greenply Club Plus 19 mm BWP Plywood 8 × 4 ft, Quoted">
+        <div class="row between"><span class="t-label-s tnum">ORD-10419</span><span class="pill warning t-label-xs">Quoted</span></div>
+        <div class="ocard-prod"><img class="thumb" src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=128&h=128&fit=crop&q=70" alt="" loading="lazy"><div class="txt">
+          <h2 class="t-card-title clamp-2">Greenply Club Plus 19 mm BWP Plywood 8 × 4 ft</h2>
+          <dl class="ometa t-paragraph-s"><dt>Brand:</dt><dd>Greenply</dd><dt>SKU:</dt><dd>GP-CP-19-84</dd><dt>Location:</dt><dd>Bengaluru</dd></dl>
+        </div></div>
+        <div class="oboxes"><div class="obox"><span class="t-paragraph-xs">Quantity</span><span class="t-label-s tnum">60 Units</span></div><div class="obox"><span class="t-paragraph-xs">Required By</span><span class="t-label-s tnum">05 Dec 2026</span></div></div>
+        <div class="ofoot"><div class="price"><span class="t-paragraph-s">Total Price</span><span class="t-label-m tnum">₹2,23,200</span></div><span class="more t-label-s">View Details<i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></div>
+      </a></li></ul>
+      <aside class="md-pane" aria-label="Order details, ORD-10424">
+        <div class="pane-head"><div class="ohead"><div class="row row-8"><h2 class="t-label-xl truncate">Quoted Order</h2><span class="pill warning t-label-xs">Quoted</span></div><span class="t-paragraph-s text-subtle tnum">Order ORD-10424</span></div></div>
+        <div class="pane-body"><div class="dgrid"><div class="col"><section class="card dcard o1" aria-label="Product and buyer">
+        <a class="dprod press" href="S-10-12-product-detail.html"><img class="thumb" src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=144&h=144&fit=crop&q=70" alt="" loading="lazy"><span class="txt"><span class="t-label-m">Asian Paints Royale Luxury Emulsion 20 L</span><span class="tag t-paragraph-s">Asian Paints</span></span></a>
+        <hr class="hr">
+        <dl class="kv dkv t-paragraph-m"><dt>Buyer</dt><dd>R**** M*****</dd><dt>Profession</dt><dd>Interior Designer</dd><dt class="full">Delivery Location</dt><dd class="full"><span class="t-label-s">Site Office</span><br>No. 214, 12th Main Road, HAL 2nd Stage, Indiranagar, Bengaluru 560038<br><span class="text-subtle">Flat 3B, 3rd Floor, Near ESI Hospital</span></dd><dt>SKU</dt><dd>RLE-20L-WHT</dd><dt>Required Quantity</dt><dd>12 Units</dd><dt>Base MRP</dt><dd>₹9,850</dd><dt class="full">Note from Buyer</dt><dd class="full">Please confirm the chrome finish and share the warranty card along with the invoice.</dd></dl>
+      </section></div><div class="col"><section class="card dcard o2"><h2 class="t-sublabel-s text-soft">QUOTE DETAILS</h2>
+        <dl class="kv dkv t-paragraph-m"><dt>Accepted Amount</dt><dd><span class="t-label-m tnum">₹1,12,800</span></dd><dt>Price per Unit</dt><dd>₹9,400</dd><dt>Delivery Timeline</dt><dd>02 Dec 2026</dd><dt>Quote Validity</dt><dd>20 Nov 2026</dd><dt>Additional Charges</dt><dd>Transport 1200, Handling</dd><dt>Date Submitted</dt><dd>09 Nov 2026, 11:42 AM</dd><dt>Date Approved</dt><dd>—</dd><dt class="full">Note</dt><dd class="full">Price includes GST. Dispatch from our Peenya warehouse within two working days of confirmation.</dd></dl>
+      </section></div></div></div>
+        
+      </aside>
+    </div></section><section role="tabpanel" id="tp-won" aria-labelledby="tab-won" hidden><div class="md">
+      <ul class="olist"><li><a class="card ocard press" href="S-19-03-reseller-order-details.html" data-state="default" aria-current="true" aria-label="Order ORD-10418, Jaquar Florentine Single Lever Basin Mixer, Won">
+        <div class="row between"><span class="t-label-s tnum">ORD-10418</span><span class="pill success t-label-xs">Won</span></div>
+        <div class="ocard-prod"><img class="thumb" src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=128&h=128&fit=crop&q=70" alt="" loading="lazy"><div class="txt">
+          <h2 class="t-card-title clamp-2">Jaquar Florentine Single Lever Basin Mixer</h2>
+          <dl class="ometa t-paragraph-s"><dt>Brand:</dt><dd>Jaquar</dd><dt>SKU:</dt><dd>FLR-CHR-5011B</dd><dt>Location:</dt><dd>Bengaluru</dd></dl>
+        </div></div>
+        <div class="oboxes"><div class="obox"><span class="t-paragraph-xs">Quantity</span><span class="t-label-s tnum">24 Units</span></div><div class="obox"><span class="t-paragraph-xs">Required By</span><span class="t-label-s tnum">28 Nov 2026</span></div></div>
+        <div class="ofoot"><div class="price"><span class="t-paragraph-s">Total Price</span><span class="t-label-m tnum">₹1,48,800</span></div><span class="more t-label-s">View Details<i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></div>
+      </a></li><li><a class="card ocard press" href="S-19-03-reseller-order-details.html" data-state="default" aria-label="Order ORD-10415, Hettich Sensys 110° Soft-Close Hinge, Won">
+        <div class="row between"><span class="t-label-s tnum">ORD-10415</span><span class="pill success t-label-xs">Won</span></div>
+        <div class="ocard-prod"><img class="thumb" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=128&h=128&fit=crop&q=70" alt="" loading="lazy"><div class="txt">
+          <h2 class="t-card-title clamp-2">Hettich Sensys 110° Soft-Close Hinge</h2>
+          <dl class="ometa t-paragraph-s"><dt>Brand:</dt><dd>Hettich</dd><dt>SKU:</dt><dd>9071205</dd><dt>Location:</dt><dd>Mysuru</dd></dl>
+        </div></div>
+        <div class="oboxes"><div class="obox"><span class="t-paragraph-xs">Quantity</span><span class="t-label-s tnum">320 Units</span></div><div class="obox"><span class="t-paragraph-xs">Required By</span><span class="t-label-s tnum">24 Nov 2026</span></div></div>
+        <div class="ofoot"><div class="price"><span class="t-paragraph-s">Total Price</span><span class="t-label-m tnum">₹72,960</span></div><span class="more t-label-s">View Details<i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></div>
+      </a></li></ul>
+      <aside class="md-pane" aria-label="Order details, ORD-10418">
+        <div class="pane-head"><div class="ohead"><div class="row row-8"><h2 class="t-label-xl truncate">Accepted Order</h2><span class="pill success t-label-xs">Won</span></div><span class="t-paragraph-s text-subtle tnum">Order ORD-10418</span></div></div>
+        <div class="pane-body"><div class="dgrid"><div class="col"><section class="card dcard o1" aria-label="Product and buyer">
+        <a class="dprod press" href="S-10-12-product-detail.html"><img class="thumb" src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=144&h=144&fit=crop&q=70" alt="" loading="lazy"><span class="txt"><span class="t-label-m">Jaquar Florentine Single Lever Basin Mixer</span><span class="tag t-paragraph-s">Jaquar</span></span></a>
+        <hr class="hr">
+        <dl class="kv dkv t-paragraph-m"><dt>Buyer</dt><dd>R**** M*****</dd><dt>Profession</dt><dd>Interior Designer</dd><dt class="full">Delivery Location</dt><dd class="full"><span class="t-label-s">Site Office</span><br>No. 214, 12th Main Road, HAL 2nd Stage, Indiranagar, Bengaluru 560038<br><span class="text-subtle">Flat 3B, 3rd Floor, Near ESI Hospital</span></dd><dt>Phone</dt><dd><span class="phone"><span aria-label="Hidden">••••••••••</span><button class="ibtn ibtn-36 glass glass-icon ibtn-success press" data-go-state="calling" aria-label="Call buyer (masked number)"><i class="ic hgi hgi-stroke hgi-call-02" aria-hidden="true"></i></button></span></dd><dt>SKU</dt><dd>FLR-CHR-5011B</dd><dt>Required Quantity</dt><dd>24 Units</dd><dt>Accepted Date</dt><dd>12 Nov 2026</dd><dt>Base MRP</dt><dd>₹6,450</dd><dt class="full">Note from Buyer</dt><dd class="full">Please confirm the chrome finish and share the warranty card along with the invoice.</dd></dl>
+      </section></div><div class="col"><section class="card dcard o2"><h2 class="t-sublabel-s text-soft">QUOTE DETAILS</h2>
+        <dl class="kv dkv t-paragraph-m"><dt>Accepted Amount</dt><dd><span class="t-label-m tnum">₹1,48,800</span></dd><dt>Price per Unit</dt><dd>₹6,200</dd><dt>Delivery Timeline</dt><dd>28 Nov 2026</dd><dt>Quote Validity</dt><dd>20 Nov 2026</dd><dt>Additional Charges</dt><dd>Transport 1200, Handling</dd><dt>Date Submitted</dt><dd>09 Nov 2026, 11:42 AM</dd><dt>Date Approved</dt><dd>12 Nov 2026, 04:15 PM</dd><dt class="full">Note</dt><dd class="full">Price includes GST. Dispatch from our Peenya warehouse within two working days of confirmation.</dd></dl>
+      </section></div></div></div>
+        <div class="pane-foot"><a class="btn btn-m btn-filled t-label-s press" href="S-19-08-mark-completed.html">MARK AS COMPLETED</a></div>
+      </aside>
+    </div></section><section role="tabpanel" id="tp-delivered" aria-labelledby="tab-delivered" hidden><div class="md">
+      <ul class="olist"><li><a class="card ocard press" href="S-19-03-reseller-order-details.html" data-state="delivered" aria-current="true" aria-label="Order ORD-10409, Kajaria Eternity Vitrified Floor Tile 600 × 1200 mm, Delivered">
+        <div class="row between"><span class="t-label-s tnum">ORD-10409</span><span class="pill warning t-label-xs">Delivered</span></div>
+        <div class="ocard-prod"><img class="thumb" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=128&h=128&fit=crop&q=70" alt="" loading="lazy"><div class="txt">
+          <h2 class="t-card-title clamp-2">Kajaria Eternity Vitrified Floor Tile 600 × 1200 mm</h2>
+          <dl class="ometa t-paragraph-s"><dt>Brand:</dt><dd>Kajaria</dd><dt>SKU:</dt><dd>ET-6012-STB</dd><dt>Location:</dt><dd>Bengaluru</dd></dl>
+        </div></div>
+        <div class="oboxes"><div class="obox"><span class="t-paragraph-xs">Quantity</span><span class="t-label-s tnum">180 Units</span></div><div class="obox"><span class="t-paragraph-xs">Required By</span><span class="t-label-s tnum">10 Nov 2026</span></div></div>
+        <div class="ofoot"><div class="price"><span class="t-paragraph-s">Total Price</span><span class="t-label-m tnum">₹1,97,100</span></div><span class="more t-label-s">View Details<i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></div>
+      </a></li><li><a class="card ocard press" href="S-19-03-reseller-order-details.html" data-state="delivered" aria-label="Order ORD-10405, Philips 12W Round LED Downlighter, Delivered">
+        <div class="row between"><span class="t-label-s tnum">ORD-10405</span><span class="pill warning t-label-xs">Delivered</span></div>
+        <div class="ocard-prod"><img class="thumb" src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=128&h=128&fit=crop&q=70" alt="" loading="lazy"><div class="txt">
+          <h2 class="t-card-title clamp-2">Philips 12W Round LED Downlighter</h2>
+          <dl class="ometa t-paragraph-s"><dt>Brand:</dt><dd>Philips</dd><dt>SKU:</dt><dd>PH-DL-12W-CW</dd><dt>Location:</dt><dd>Mandya</dd></dl>
+        </div></div>
+        <div class="oboxes"><div class="obox"><span class="t-paragraph-xs">Quantity</span><span class="t-label-s tnum">150 Units</span></div><div class="obox"><span class="t-paragraph-xs">Required By</span><span class="t-label-s tnum">08 Nov 2026</span></div></div>
+        <div class="ofoot"><div class="price"><span class="t-paragraph-s">Total Price</span><span class="t-label-m tnum">₹75,750</span></div><span class="more t-label-s">View Details<i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></div>
+      </a></li></ul>
+      <aside class="md-pane" aria-label="Order details, ORD-10409">
+        <div class="pane-head"><div class="ohead"><div class="row row-8"><h2 class="t-label-xl truncate">Delivered Order</h2><span class="pill warning t-label-xs">Delivered</span></div><span class="t-paragraph-s text-subtle tnum">Order ORD-10409</span></div></div>
+        <div class="pane-body"><div class="dgrid"><div class="col"><section class="card dcard o1" aria-label="Product and buyer">
+        <a class="dprod press" href="S-10-12-product-detail.html"><img class="thumb" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=144&h=144&fit=crop&q=70" alt="" loading="lazy"><span class="txt"><span class="t-label-m">Kajaria Eternity Vitrified Floor Tile 600 × 1200 mm</span><span class="tag t-paragraph-s">Kajaria</span></span></a>
+        <hr class="hr">
+        <dl class="kv dkv t-paragraph-m"><dt>Buyer</dt><dd>R**** M*****</dd><dt>Profession</dt><dd>Interior Designer</dd><dt class="full">Delivery Location</dt><dd class="full"><span class="t-label-s">Site Office</span><br>No. 214, 12th Main Road, HAL 2nd Stage, Indiranagar, Bengaluru 560038<br><span class="text-subtle">Flat 3B, 3rd Floor, Near ESI Hospital</span></dd><dt>Phone</dt><dd><span class="phone"><span aria-label="Hidden">••••••••••</span><button class="ibtn ibtn-36 glass glass-icon ibtn-success press" data-go-state="calling" aria-label="Call buyer (masked number)"><i class="ic hgi hgi-stroke hgi-call-02" aria-hidden="true"></i></button></span></dd><dt>SKU</dt><dd>ET-6012-STB</dd><dt>Required Quantity</dt><dd>180 Units</dd><dt>Accepted Date</dt><dd>12 Nov 2026</dd><dt>Base MRP</dt><dd>₹1,180</dd><dt class="full">Note from Buyer</dt><dd class="full">Please confirm the chrome finish and share the warranty card along with the invoice.</dd></dl>
+      </section><section class="card dcard o4"><h2 class="t-sublabel-s text-soft">DELIVERY PROOF IMAGES</h2><div class="proof"><button class="press" data-open="S-05-12-image-gallery-preview.html" aria-haspopup="dialog"><img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=320&h=320&fit=crop&q=70" alt="Delivery proof image 1 of 3" loading="lazy"></button><button class="press" data-open="S-05-12-image-gallery-preview.html" aria-haspopup="dialog"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=320&h=320&fit=crop&q=70" alt="Delivery proof image 2 of 3" loading="lazy"></button><button class="press" data-open="S-05-12-image-gallery-preview.html" aria-haspopup="dialog"><img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=320&h=320&fit=crop&q=70" alt="Delivery proof image 3 of 3" loading="lazy"></button></div></section><section class="card dcard o5"><h2 class="t-sublabel-s text-soft">INVOICES</h2><ul class="invs"><li><button class="inv press" data-open="S-05-13-pdf-preview.html" aria-haspopup="dialog" aria-label="tax-invoice-INV-2291.pdf, PDF file, open preview"><span class="ext t-label-xs">PDF</span><span class="grow truncate t-label-s">tax-invoice-INV-2291.pdf</span><i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></button></li><li><button class="inv press" data-open="S-05-13-pdf-preview.html" aria-haspopup="dialog" aria-label="warranty-card-kajaria.pdf, PDF file, open preview"><span class="ext t-label-xs">PDF</span><span class="grow truncate t-label-s">warranty-card-kajaria.pdf</span><i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></button></li><li><button class="inv press" data-open="S-05-11-image-preview.html" aria-haspopup="dialog" aria-label="delivery-challan.jpg, JPG file, open preview"><span class="ext t-label-xs">JPG</span><span class="grow truncate t-label-s">delivery-challan.jpg</span><i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></button></li></ul></section></div><div class="col"><section class="card dcard o2"><h2 class="t-sublabel-s text-soft">QUOTE DETAILS</h2>
+        <dl class="kv dkv t-paragraph-m"><dt>Accepted Amount</dt><dd><span class="t-label-m tnum">₹1,97,100</span></dd><dt>Price per Unit</dt><dd>₹1,095</dd><dt>Delivery Timeline</dt><dd>10 Nov 2026</dd><dt>Quote Validity</dt><dd>20 Nov 2026</dd><dt>Additional Charges</dt><dd>Transport 1200, Handling</dd><dt>Date Submitted</dt><dd>09 Nov 2026, 11:42 AM</dd><dt>Date Approved</dt><dd>12 Nov 2026, 04:15 PM</dd><dt class="full">Note</dt><dd class="full">Price includes GST. Dispatch from our Peenya warehouse within two working days of confirmation.</dd></dl>
+      </section></div></div></div>
+        
+      </aside>
+    </div></section><section role="tabpanel" id="tp-rejected" aria-labelledby="tab-rejected" hidden><div class="md">
+      <ul class="olist"><li><a class="card ocard press" href="S-19-03-reseller-order-details.html" data-state="rejected" aria-current="true" aria-label="Order ORD-10402, Kajaria Eternity Vitrified Floor Tile 600 × 1200 mm, Rejected">
+        <div class="row between"><span class="t-label-s tnum">ORD-10402</span><span class="pill danger t-label-xs">Rejected</span></div>
+        <div class="ocard-prod"><img class="thumb" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=128&h=128&fit=crop&q=70" alt="" loading="lazy"><div class="txt">
+          <h2 class="t-card-title clamp-2">Kajaria Eternity Vitrified Floor Tile 600 × 1200 mm</h2>
+          <dl class="ometa t-paragraph-s"><dt>Brand:</dt><dd>Kajaria</dd><dt>SKU:</dt><dd>ET-6012-STB</dd><dt>Location:</dt><dd>Bengaluru</dd></dl>
+        </div></div>
+        <div class="oboxes"><div class="obox"><span class="t-paragraph-xs">Quantity</span><span class="t-label-s tnum">96 Units</span></div><div class="obox"><span class="t-paragraph-xs">Required By</span><span class="t-label-s tnum">06 Nov 2026</span></div></div>
+        <div class="ofoot"><div class="price"><span class="t-paragraph-s">Total Price</span><span class="t-label-m tnum">₹1,06,560</span></div><span class="more t-label-s">View Details<i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></div>
+      </a></li></ul>
+      <aside class="md-pane" aria-label="Order details, ORD-10402">
+        <div class="pane-head"><div class="ohead"><div class="row row-8"><h2 class="t-label-xl truncate">Rejected Order</h2><span class="pill danger t-label-xs">Rejected</span></div><span class="t-paragraph-s text-subtle tnum">Order ORD-10402</span></div></div>
+        <div class="pane-body"><div class="dgrid"><div class="col"><section class="card dcard o1" aria-label="Product and buyer">
+        <a class="dprod press" href="S-10-12-product-detail.html"><img class="thumb" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=144&h=144&fit=crop&q=70" alt="" loading="lazy"><span class="txt"><span class="t-label-m">Kajaria Eternity Vitrified Floor Tile 600 × 1200 mm</span><span class="tag t-paragraph-s">Kajaria</span></span></a>
+        <hr class="hr">
+        <dl class="kv dkv t-paragraph-m"><dt>Buyer</dt><dd>R**** M*****</dd><dt>Profession</dt><dd>Interior Designer</dd><dt class="full">Delivery Location</dt><dd class="full"><span class="t-label-s">Site Office</span><br>No. 214, 12th Main Road, HAL 2nd Stage, Indiranagar, Bengaluru 560038<br><span class="text-subtle">Flat 3B, 3rd Floor, Near ESI Hospital</span></dd><dt>Phone</dt><dd><span class="phone"><span aria-label="Hidden">••••••••••</span><button class="ibtn ibtn-36 glass glass-icon ibtn-success press" data-go-state="calling" aria-label="Call buyer (masked number)"><i class="ic hgi hgi-stroke hgi-call-02" aria-hidden="true"></i></button></span></dd><dt>SKU</dt><dd>ET-6012-STB</dd><dt>Required Quantity</dt><dd>96 Units</dd><dt>Accepted Date</dt><dd>12 Nov 2026</dd><dt>Base MRP</dt><dd>₹1,180</dd><dt class="full">Note from Buyer</dt><dd class="full">Please confirm the chrome finish and share the warranty card along with the invoice.</dd></dl>
+      </section><section class="card dcard o4"><h2 class="t-sublabel-s text-soft">DELIVERY PROOF IMAGES</h2><div class="proof"><button class="press" data-open="S-05-12-image-gallery-preview.html" aria-haspopup="dialog"><img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=320&h=320&fit=crop&q=70" alt="Delivery proof image 1 of 3" loading="lazy"></button><button class="press" data-open="S-05-12-image-gallery-preview.html" aria-haspopup="dialog"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=320&h=320&fit=crop&q=70" alt="Delivery proof image 2 of 3" loading="lazy"></button><button class="press" data-open="S-05-12-image-gallery-preview.html" aria-haspopup="dialog"><img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=320&h=320&fit=crop&q=70" alt="Delivery proof image 3 of 3" loading="lazy"></button></div></section><section class="card dcard o5"><h2 class="t-sublabel-s text-soft">INVOICES</h2><ul class="invs"><li><button class="inv press" data-open="S-05-13-pdf-preview.html" aria-haspopup="dialog" aria-label="tax-invoice-INV-2291.pdf, PDF file, open preview"><span class="ext t-label-xs">PDF</span><span class="grow truncate t-label-s">tax-invoice-INV-2291.pdf</span><i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></button></li><li><button class="inv press" data-open="S-05-13-pdf-preview.html" aria-haspopup="dialog" aria-label="warranty-card-kajaria.pdf, PDF file, open preview"><span class="ext t-label-xs">PDF</span><span class="grow truncate t-label-s">warranty-card-kajaria.pdf</span><i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></button></li><li><button class="inv press" data-open="S-05-11-image-preview.html" aria-haspopup="dialog" aria-label="delivery-challan.jpg, JPG file, open preview"><span class="ext t-label-xs">JPG</span><span class="grow truncate t-label-s">delivery-challan.jpg</span><i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></button></li></ul></section></div><div class="col"><section class="card dcard o2"><h2 class="t-sublabel-s text-soft">QUOTE DETAILS</h2>
+        <dl class="kv dkv t-paragraph-m"><dt>Accepted Amount</dt><dd><span class="t-label-m tnum">₹1,06,560</span></dd><dt>Price per Unit</dt><dd>₹1,110</dd><dt>Delivery Timeline</dt><dd>06 Nov 2026</dd><dt>Quote Validity</dt><dd>20 Nov 2026</dd><dt>Additional Charges</dt><dd>Transport 1200, Handling</dd><dt>Date Submitted</dt><dd>09 Nov 2026, 11:42 AM</dd><dt>Date Approved</dt><dd>12 Nov 2026, 04:15 PM</dd><dt class="full">Note</dt><dd class="full">Price includes GST. Dispatch from our Peenya warehouse within two working days of confirmation.</dd></dl>
+      </section><section class="card dcard o3"><h2 class="t-sublabel-s text-soft">REJECTION DETAILS</h2>
+        <p class="note danger t-paragraph-m"><i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i><span>This quote was rejected by the buyer on 11 Nov 2026</span></p>
+        <dl class="kv dkv t-paragraph-m"><dt class="full">Rejection Reason</dt><dd class="full">Damaged on arrival — Two cartons had cracked tiles and the batch number does not match the invoice.</dd></dl>
+      </section></div></div></div>
+        <div class="pane-foot"><a class="btn btn-m btn-filled t-label-s press" href="S-19-08-mark-completed.html">RESOLVE ISSUE</a></div>
+      </aside>
+    </div></section><section role="tabpanel" id="tp-completed" aria-labelledby="tab-completed" hidden><div class="md">
+      <ul class="olist"><li><a class="card ocard press" href="S-19-03-reseller-order-details.html" data-state="completed" aria-current="true" aria-label="Order ORD-10396, Greenply Club Plus 19 mm BWP Plywood 8 × 4 ft, Completed">
+        <div class="row between"><span class="t-label-s tnum">ORD-10396</span><span class="pill success t-label-xs">Completed</span></div>
+        <div class="ocard-prod"><img class="thumb" src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=128&h=128&fit=crop&q=70" alt="" loading="lazy"><div class="txt">
+          <h2 class="t-card-title clamp-2">Greenply Club Plus 19 mm BWP Plywood 8 × 4 ft</h2>
+          <dl class="ometa t-paragraph-s"><dt>Brand:</dt><dd>Greenply</dd><dt>SKU:</dt><dd>GP-CP-19-84</dd><dt>Location:</dt><dd>Bengaluru</dd></dl>
+        </div></div>
+        <div class="oboxes"><div class="obox"><span class="t-paragraph-xs">Quantity</span><span class="t-label-s tnum">60 Units</span></div><div class="obox"><span class="t-paragraph-xs">Required By</span><span class="t-label-s tnum">30 Oct 2026</span></div></div>
+        <div class="ofoot"><div class="price"><span class="t-paragraph-s">Total Price</span><span class="t-label-m tnum">₹2,24,400</span></div><span class="more t-label-s">View Details<i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></div>
+      </a></li><li><a class="card ocard press" href="S-19-03-reseller-order-details.html" data-state="completed" aria-label="Order ORD-10391, Asian Paints Royale Luxury Emulsion 20 L, Completed">
+        <div class="row between"><span class="t-label-s tnum">ORD-10391</span><span class="pill success t-label-xs">Completed</span></div>
+        <div class="ocard-prod"><img class="thumb" src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=128&h=128&fit=crop&q=70" alt="" loading="lazy"><div class="txt">
+          <h2 class="t-card-title clamp-2">Asian Paints Royale Luxury Emulsion 20 L</h2>
+          <dl class="ometa t-paragraph-s"><dt>Brand:</dt><dd>Asian Paints</dd><dt>SKU:</dt><dd>RLE-20L-WHT</dd><dt>Location:</dt><dd>Hosur</dd></dl>
+        </div></div>
+        <div class="oboxes"><div class="obox"><span class="t-paragraph-xs">Quantity</span><span class="t-label-s tnum">12 Units</span></div><div class="obox"><span class="t-paragraph-xs">Required By</span><span class="t-label-s tnum">26 Oct 2026</span></div></div>
+        <div class="ofoot"><div class="price"><span class="t-paragraph-s">Total Price</span><span class="t-label-m tnum">₹1,13,400</span></div><span class="more t-label-s">View Details<i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></div>
+      </a></li></ul>
+      <aside class="md-pane" aria-label="Order details, ORD-10396">
+        <div class="pane-head"><div class="ohead"><div class="row row-8"><h2 class="t-label-xl truncate">Completed Order</h2><span class="pill success t-label-xs">Completed</span></div><span class="t-paragraph-s text-subtle tnum">Order ORD-10396</span></div></div>
+        <div class="pane-body"><div class="dgrid"><div class="col"><section class="card dcard o1" aria-label="Product and buyer">
+        <a class="dprod press" href="S-10-12-product-detail.html"><img class="thumb" src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=144&h=144&fit=crop&q=70" alt="" loading="lazy"><span class="txt"><span class="t-label-m">Greenply Club Plus 19 mm BWP Plywood 8 × 4 ft</span><span class="tag t-paragraph-s">Greenply</span></span></a>
+        <hr class="hr">
+        <dl class="kv dkv t-paragraph-m"><dt>Buyer</dt><dd>R**** M*****</dd><dt>Profession</dt><dd>Interior Designer</dd><dt class="full">Delivery Location</dt><dd class="full"><span class="t-label-s">Site Office</span><br>No. 214, 12th Main Road, HAL 2nd Stage, Indiranagar, Bengaluru 560038<br><span class="text-subtle">Flat 3B, 3rd Floor, Near ESI Hospital</span></dd><dt>Phone</dt><dd><span class="phone"><span aria-label="Hidden">••••••••••</span><button class="ibtn ibtn-36 glass glass-icon ibtn-success press" data-go-state="calling" aria-label="Call buyer (masked number)"><i class="ic hgi hgi-stroke hgi-call-02" aria-hidden="true"></i></button></span></dd><dt>SKU</dt><dd>GP-CP-19-84</dd><dt>Required Quantity</dt><dd>60 Units</dd><dt>Accepted Date</dt><dd>12 Nov 2026</dd><dt>Base MRP</dt><dd>₹3,960</dd><dt class="full">Note from Buyer</dt><dd class="full">Please confirm the chrome finish and share the warranty card along with the invoice.</dd></dl>
+      </section><section class="card dcard o4"><h2 class="t-sublabel-s text-soft">DELIVERY PROOF IMAGES</h2><div class="proof"><button class="press" data-open="S-05-12-image-gallery-preview.html" aria-haspopup="dialog"><img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=320&h=320&fit=crop&q=70" alt="Delivery proof image 1 of 3" loading="lazy"></button><button class="press" data-open="S-05-12-image-gallery-preview.html" aria-haspopup="dialog"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=320&h=320&fit=crop&q=70" alt="Delivery proof image 2 of 3" loading="lazy"></button><button class="press" data-open="S-05-12-image-gallery-preview.html" aria-haspopup="dialog"><img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=320&h=320&fit=crop&q=70" alt="Delivery proof image 3 of 3" loading="lazy"></button></div></section><section class="card dcard o5"><h2 class="t-sublabel-s text-soft">INVOICES</h2><ul class="invs"><li><button class="inv press" data-open="S-05-13-pdf-preview.html" aria-haspopup="dialog" aria-label="tax-invoice-INV-2291.pdf, PDF file, open preview"><span class="ext t-label-xs">PDF</span><span class="grow truncate t-label-s">tax-invoice-INV-2291.pdf</span><i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></button></li><li><button class="inv press" data-open="S-05-13-pdf-preview.html" aria-haspopup="dialog" aria-label="warranty-card-kajaria.pdf, PDF file, open preview"><span class="ext t-label-xs">PDF</span><span class="grow truncate t-label-s">warranty-card-kajaria.pdf</span><i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></button></li><li><button class="inv press" data-open="S-05-11-image-preview.html" aria-haspopup="dialog" aria-label="delivery-challan.jpg, JPG file, open preview"><span class="ext t-label-xs">JPG</span><span class="grow truncate t-label-s">delivery-challan.jpg</span><i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></button></li></ul></section></div><div class="col"><section class="card dcard o2"><h2 class="t-sublabel-s text-soft">QUOTE DETAILS</h2>
+        <dl class="kv dkv t-paragraph-m"><dt>Accepted Amount</dt><dd><span class="t-label-m tnum">₹2,24,400</span></dd><dt>Price per Unit</dt><dd>₹3,740</dd><dt>Delivery Timeline</dt><dd>30 Oct 2026</dd><dt>Quote Validity</dt><dd>20 Nov 2026</dd><dt>Additional Charges</dt><dd>Transport 1200, Handling</dd><dt>Date Submitted</dt><dd>09 Nov 2026, 11:42 AM</dd><dt>Date Approved</dt><dd>12 Nov 2026, 04:15 PM</dd><dt class="full">Note</dt><dd class="full">Price includes GST. Dispatch from our Peenya warehouse within two working days of confirmation.</dd></dl>
+      </section><section class="card dcard o6"><h2 class="t-sublabel-s text-soft">CLIENT REVIEW &amp; RATING</h2><div class="review"><p class="t-paragraph-m">Ask R**** M***** for a rating &amp; a few words about the delivery experience</p><button class="btn btn-m btn-filled t-label-s press" data-go-state="review-requested">Request Review</button></div></section></div></div></div>
+        
+      </aside>
+    </div></section><section role="tabpanel" id="tp-cancelled" aria-labelledby="tab-cancelled" hidden><div class="md">
+      <ul class="olist"><li><a class="card ocard press" href="S-19-03-reseller-order-details.html" data-state="cancelled" aria-current="true" aria-label="Order ORD-10388, Hettich Sensys 110° Soft-Close Hinge, Cancelled">
+        <div class="row between"><span class="t-label-s tnum">ORD-10388</span><span class="pill danger t-label-xs">Cancelled</span></div>
+        <div class="ocard-prod"><img class="thumb" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=128&h=128&fit=crop&q=70" alt="" loading="lazy"><div class="txt">
+          <h2 class="t-card-title clamp-2">Hettich Sensys 110° Soft-Close Hinge</h2>
+          <dl class="ometa t-paragraph-s"><dt>Brand:</dt><dd>Hettich</dd><dt>SKU:</dt><dd>9071205</dd><dt>Location:</dt><dd>Bengaluru</dd></dl>
+        </div></div>
+        <div class="oboxes"><div class="obox"><span class="t-paragraph-xs">Quantity</span><span class="t-label-s tnum">200 Units</span></div><div class="obox"><span class="t-paragraph-xs">Required By</span><span class="t-label-s tnum">22 Oct 2026</span></div></div>
+        <div class="ofoot"><div class="price"><span class="t-paragraph-s">Total Price</span><span class="t-label-m tnum">₹46,400</span></div><span class="more t-label-s">View Details<i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></div>
+      </a></li></ul>
+      <aside class="md-pane" aria-label="Order details, ORD-10388">
+        <div class="pane-head"><div class="ohead"><div class="row row-8"><h2 class="t-label-xl truncate">Cancelled Order</h2><span class="pill danger t-label-xs">Cancelled</span></div><span class="t-paragraph-s text-subtle tnum">Order ORD-10388</span></div></div>
+        <div class="pane-body"><div class="dgrid"><div class="col"><section class="card dcard o1" aria-label="Product and buyer">
+        <a class="dprod press" href="S-10-12-product-detail.html"><img class="thumb" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=144&h=144&fit=crop&q=70" alt="" loading="lazy"><span class="txt"><span class="t-label-m">Hettich Sensys 110° Soft-Close Hinge</span><span class="tag t-paragraph-s">Hettich</span></span></a>
+        <hr class="hr">
+        <dl class="kv dkv t-paragraph-m"><dt>Buyer</dt><dd>R**** M*****</dd><dt>Profession</dt><dd>Interior Designer</dd><dt class="full">Delivery Location</dt><dd class="full"><span class="t-label-s">Site Office</span><br>No. 214, 12th Main Road, HAL 2nd Stage, Indiranagar, Bengaluru 560038<br><span class="text-subtle">Flat 3B, 3rd Floor, Near ESI Hospital</span></dd><dt>Phone</dt><dd><span class="phone"><span aria-label="Hidden">••••••••••</span><button class="ibtn ibtn-36 glass glass-icon ibtn-success press" data-go-state="calling" aria-label="Call buyer (masked number)"><i class="ic hgi hgi-stroke hgi-call-02" aria-hidden="true"></i></button></span></dd><dt>SKU</dt><dd>9071205</dd><dt>Required Quantity</dt><dd>200 Units</dd><dt>Accepted Date</dt><dd>12 Nov 2026</dd><dt>Base MRP</dt><dd>₹245</dd><dt class="full">Note from Buyer</dt><dd class="full">Please confirm the chrome finish and share the warranty card along with the invoice.</dd></dl>
+      </section></div><div class="col"><section class="card dcard o2"><h2 class="t-sublabel-s text-soft">QUOTE DETAILS</h2>
+        <dl class="kv dkv t-paragraph-m"><dt>Accepted Amount</dt><dd><span class="t-label-m tnum">₹46,400</span></dd><dt>Price per Unit</dt><dd>₹232</dd><dt>Delivery Timeline</dt><dd>22 Oct 2026</dd><dt>Quote Validity</dt><dd>20 Nov 2026</dd><dt>Additional Charges</dt><dd>Transport 1200, Handling</dd><dt>Date Submitted</dt><dd>09 Nov 2026, 11:42 AM</dd><dt>Date Approved</dt><dd>12 Nov 2026, 04:15 PM</dd><dt class="full">Note</dt><dd class="full">Price includes GST. Dispatch from our Peenya warehouse within two working days of confirmation.</dd></dl>
+      </section></div></div></div>
+        
+      </aside>
+    </div></section><section role="tabpanel" id="tp-declined" aria-labelledby="tab-declined" hidden><div class="md">
+      <ul class="olist"><li><a class="card ocard press" href="S-19-03-reseller-order-details.html" data-state="declined" aria-current="true" aria-label="Order ORD-10385, Philips 12W Round LED Downlighter, Declined">
+        <div class="row between"><span class="t-label-s tnum">ORD-10385</span><span class="pill danger t-label-xs">Declined</span></div>
+        <div class="ocard-prod"><img class="thumb" src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=128&h=128&fit=crop&q=70" alt="" loading="lazy"><div class="txt">
+          <h2 class="t-card-title clamp-2">Philips 12W Round LED Downlighter</h2>
+          <dl class="ometa t-paragraph-s"><dt>Brand:</dt><dd>Philips</dd><dt>SKU:</dt><dd>PH-DL-12W-CW</dd><dt>Location:</dt><dd>Hubballi</dd></dl>
+        </div></div>
+        <div class="oboxes"><div class="obox"><span class="t-paragraph-xs">Quantity</span><span class="t-label-s tnum">400 Units</span></div><div class="obox"><span class="t-paragraph-xs">Required By</span><span class="t-label-s tnum">—</span></div></div>
+        <div class="ofoot"><div class="price"><span class="t-paragraph-s">Total Price</span><span class="t-label-m tnum">₹2,16,000</span></div><span class="more t-label-s">View Details<i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></div>
+      </a></li><li><a class="card ocard press" href="S-19-03-reseller-order-details.html" data-state="declined" aria-label="Order ORD-10379, Asian Paints Royale Luxury Emulsion 20 L, Declined">
+        <div class="row between"><span class="t-label-s tnum">ORD-10379</span><span class="pill danger t-label-xs">Declined</span></div>
+        <div class="ocard-prod"><img class="thumb" src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=128&h=128&fit=crop&q=70" alt="" loading="lazy"><div class="txt">
+          <h2 class="t-card-title clamp-2">Asian Paints Royale Luxury Emulsion 20 L</h2>
+          <dl class="ometa t-paragraph-s"><dt>Brand:</dt><dd>Asian Paints</dd><dt>SKU:</dt><dd>RLE-20L-WHT</dd><dt>Location:</dt><dd>—</dd></dl>
+        </div></div>
+        <div class="oboxes"><div class="obox"><span class="t-paragraph-xs">Quantity</span><span class="t-label-s tnum">40 Units</span></div><div class="obox"><span class="t-paragraph-xs">Required By</span><span class="t-label-s tnum">—</span></div></div>
+        <div class="ofoot"><div class="price"><span class="t-paragraph-s">Total Price</span><span class="t-label-m tnum">₹3,94,000</span></div><span class="more t-label-s">View Details<i class="ic ic-16 hgi hgi-stroke hgi-arrow-right-01" aria-hidden="true"></i></span></div>
+      </a></li></ul>
+      <aside class="md-pane" aria-label="Order details, ORD-10385">
+        <div class="pane-head"><div class="ohead"><div class="row row-8"><h2 class="t-label-xl truncate">Declined Order</h2><span class="pill danger t-label-xs">Declined</span></div><span class="t-paragraph-s text-subtle tnum">Order ORD-10385</span></div></div>
+        <div class="pane-body"><div class="dgrid"><div class="col"><section class="card dcard o1" aria-label="Product and buyer">
+        <a class="dprod press" href="S-10-12-product-detail.html"><img class="thumb" src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=144&h=144&fit=crop&q=70" alt="" loading="lazy"><span class="txt"><span class="t-label-m">Philips 12W Round LED Downlighter</span><span class="tag t-paragraph-s">Philips</span></span></a>
+        <hr class="hr">
+        <dl class="kv dkv t-paragraph-m"><dt>Buyer</dt><dd>R**** M*****</dd><dt>Profession</dt><dd>Interior Designer</dd><dt class="full">Delivery Location</dt><dd class="full"><span class="t-label-s">Site Office</span><br>No. 214, 12th Main Road, HAL 2nd Stage, Indiranagar, Bengaluru 560038<br><span class="text-subtle">Flat 3B, 3rd Floor, Near ESI Hospital</span></dd><dt>SKU</dt><dd>PH-DL-12W-CW</dd><dt>Required Quantity</dt><dd>400 Units</dd><dt>Base MRP</dt><dd>₹540</dd><dt class="full">Note from Buyer</dt><dd class="full">Please confirm the chrome finish and share the warranty card along with the invoice.</dd></dl>
+      </section></div><div class="col"><section class="card dcard o3"><h2 class="t-sublabel-s text-soft">DECLINE DETAILS</h2>
+        <p class="note danger t-paragraph-m"><i class="ic hgi hgi-stroke hgi-information-circle" aria-hidden="true"></i><span>You declined this order on 10 Nov 2026</span></p>
+        <dl class="kv dkv t-paragraph-m"><dt>Reason</dt><dd>Cannot meet the required timeline</dd><dt class="full">Additional Comments</dt><dd class="full">Earliest dispatch from the factory is mid-December.</dd></dl>
+      </section></div></div></div>
+        
+      </aside>
+    </div></section>
+    </main>
+
+    <!-- LOADING — 4 skeleton cards (shown on every chip change and refresh) -->
+    <main class="page" data-show="loading" aria-busy="true" aria-label="Loading orders">
+      <div class="olist is-grid"><div class="card ocard" aria-hidden="true">
+        <div class="row between"><span class="skel" style="width:120px;height:14px"></span><span class="skel" style="width:64px;height:24px;border-radius:var(--radius-full)"></span></div>
+        <div class="ocard-prod"><span class="skel" style="width:64px;height:64px;border-radius:var(--radius-12);flex:none"></span><div class="txt"><span class="skel" style="width:90%;height:14px"></span><span class="skel" style="width:60%;height:12px"></span></div></div>
+        <div class="oboxes"><span class="skel" style="width:100%;height:52px;border-radius:var(--radius-12)"></span><span class="skel" style="width:100%;height:52px;border-radius:var(--radius-12)"></span></div>
+      </div><div class="card ocard" aria-hidden="true">
+        <div class="row between"><span class="skel" style="width:120px;height:14px"></span><span class="skel" style="width:64px;height:24px;border-radius:var(--radius-full)"></span></div>
+        <div class="ocard-prod"><span class="skel" style="width:64px;height:64px;border-radius:var(--radius-12);flex:none"></span><div class="txt"><span class="skel" style="width:90%;height:14px"></span><span class="skel" style="width:60%;height:12px"></span></div></div>
+        <div class="oboxes"><span class="skel" style="width:100%;height:52px;border-radius:var(--radius-12)"></span><span class="skel" style="width:100%;height:52px;border-radius:var(--radius-12)"></span></div>
+      </div><div class="card ocard" aria-hidden="true">
+        <div class="row between"><span class="skel" style="width:120px;height:14px"></span><span class="skel" style="width:64px;height:24px;border-radius:var(--radius-full)"></span></div>
+        <div class="ocard-prod"><span class="skel" style="width:64px;height:64px;border-radius:var(--radius-12);flex:none"></span><div class="txt"><span class="skel" style="width:90%;height:14px"></span><span class="skel" style="width:60%;height:12px"></span></div></div>
+        <div class="oboxes"><span class="skel" style="width:100%;height:52px;border-radius:var(--radius-12)"></span><span class="skel" style="width:100%;height:52px;border-radius:var(--radius-12)"></span></div>
+      </div><div class="card ocard" aria-hidden="true">
+        <div class="row between"><span class="skel" style="width:120px;height:14px"></span><span class="skel" style="width:64px;height:24px;border-radius:var(--radius-full)"></span></div>
+        <div class="ocard-prod"><span class="skel" style="width:64px;height:64px;border-radius:var(--radius-12);flex:none"></span><div class="txt"><span class="skel" style="width:90%;height:14px"></span><span class="skel" style="width:60%;height:12px"></span></div></div>
+        <div class="oboxes"><span class="skel" style="width:100%;height:52px;border-radius:var(--radius-12)"></span><span class="skel" style="width:100%;height:52px;border-radius:var(--radius-12)"></span></div>
+      </div></div>
+    </main>
+
+    <!-- EMPTY -->
+    <main class="page" data-show="empty">
+      <div class="empty"><div class="empty-tile" aria-hidden="true"><i class="ic ic-24 hgi hgi-stroke hgi-file-02" aria-hidden="true"></i></div><div class="empty-text"><p class="t-paragraph-m" role="status">No Orders to show for this status.</p></div></div>
+    </main>
+
+    <!-- ERROR — same layout, message from the API; no retry button in the app -->
+    <main class="page" data-show="error">
+      <div class="empty"><div class="empty-tile" aria-hidden="true"><i class="ic ic-24 hgi hgi-stroke hgi-file-02" aria-hidden="true"></i></div><div class="empty-text"><p class="t-paragraph-m" role="alert">Network error occurred</p></div></div>
+    </main>
+  </div>
+</div>
+
+<!-- =====================================================================
+     ANNOTATIONS (shown on the board, hidden inside the frames)
+     ===================================================================== -->
+<aside class="mk-notes" aria-label="Design annotations">
+  <section>
+    <h2 class="t-label-m">Layout</h2>
+    <ul class="t-paragraph-s">
+      <li><b>375</b> — mirrors the app: "Orders" title, one scrolling row of 8 status chips, single column of order cards, floating reseller tab bar.</li>
+      <li><b>768</b> — glass menu on the left. New cards flow into a 2-column grid; other statuses stay one column and a card opens Order details (S-19-03).</li>
+      <li><b>1440</b> — master–detail for every status except New: order list on the left, the selected order's details in a sticky pane on the right, with its primary action ("MARK AS COMPLETED" / "RESOLVE ISSUE") in the pane footer. New cards are not tappable in the app, so New is a 3-column grid of cards with "Reject" and "Submit Quote".</li>
+      <li>Chips switch the list in place (try them). The pane shows the first order of the status; in the build, choosing another card swaps the pane.</li>
+      <li>New and Declined cards price = MRP × quantity ("On Request" when there is no MRP); other statuses show this seller's quote total. Missing values show "—".</li>
+      <li>A refresh button replaces pull-to-refresh from 768.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Components used</h2>
+    <ul class="t-paragraph-s">
+      <li>Nav bar / Sidebar (reseller) · Top header · Chip tablist (8 statuses)</li>
+      <li>Order card (list layout): status pill, thumbnail, brand tag or Brand / SKU / Location lines, two metric boxes, total, "View Details"</li>
+      <li>Button translucent S (Reject) · Button filled S (Submit Quote)</li>
+      <li>Detail pane (from 1200): status pill, key / value lists, proof grid, invoice rows, review card</li>
+      <li>Skeleton (4 cards) · Empty state</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Motion</h2>
+    <ul class="t-paragraph-s">
+      <li>Chip change — <code>--tabs-*</code>; list swap — <code>--tab-panel-*</code>; the selected chip scrolls to the centre of the strip</li>
+      <li>Card press — <code>--press-*</code>; skeleton to cards — <code>--skel-*</code>, <code>--shimmer-*</code>, <code>--reveal-*</code></li>
+      <li>Push to details / forms — <code>--page-slide-*</code> under 768; pane content swap from 1200 — <code>--tab-panel-*</code></li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Accessibility</h2>
+    <ul class="t-paragraph-s">
+      <li>Landmarks: header, main, reseller nav. "Orders" is the <code>h1</code>.</li>
+      <li>Chips are a tablist; each panel is labelled by its chip.</li>
+      <li>A tappable card is one link named "Order {number}, {product}, {status}". New cards expose two buttons named with the order number.</li>
+      <li>Status is always pill text plus a dot, never colour alone. From 1200 the open order's card carries <code>aria-current</code>.</li>
+      <li>Loading is a busy region; empty and error text are announced.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="t-label-m">Decisions to confirm</h2>
+    <ul class="t-paragraph-s">
+      <li><b>Open (Q-128):</b> status lists load the first 20 orders only, with no paging. Paginate on web?</li>
+      <li>Error has no retry control in the app; from 768 the Refresh button covers it.</li>
+      <li>The empty and error layouts use File02; the app uses LicenseDraft, which is not in ICONS.md.</li>
+      <li>Pane footer leaves out "CANCEL" / "CLOSE": in a docked pane there is nothing to close.</li>
+      <li>Order cards link to S-19-03 with the matching variant through a mockup-only query string.</li>
+    </ul>
+  </section>
+</aside>
+
+<script src="assets/lh.js"></script>
+</body>
+</html>
